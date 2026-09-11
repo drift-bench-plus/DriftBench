@@ -1,0 +1,102 @@
+{
+ "sample_id": "4aacbf60cafd17ab__irrelevant_information",
+ "domain": "retail",
+ "tree_id": "4aacbf60cafd17ab",
+ "query": "Hi, I recently bought a waterproof phone pouch with a detachable lanyard from your store, and I need to cancel two pending orders first: order #W9373487 and order #W5481803, both for the reason that they're no longer needed. Then I'd like to process a return for item 6477915553 from delivered order #W7449508, please refund the money to my payment method gift_card_7711863.",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "irrelevant_information",
+  "family": "parameter",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "waterproof phone pouch with a detachable lanyard",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason",
+   "arg:2:return_delivered_order_items:item_ids",
+   "arg:2:return_delivered_order_items:order_id",
+   "arg:2:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "9aa2671e4ae9408b"
+ },
+ "signature": {
+  "verdict": "ok_pragmatic_extra",
+  "executable": false,
+  "readings": 0,
+  "note": "extra detail is not expressible as a condition in this domain; string checks only"
+ },
+ "executable_admission": false,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W9373487\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:1:cancel_pending_order:order_id",
+    "=",
+    "\"#W5481803\""
+   ],
+   [
+    "arg:1:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:item_ids",
+    "=",
+    "[\"6477915553\"]"
+   ],
+   [
+    "arg:2:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7449508\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7711863\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

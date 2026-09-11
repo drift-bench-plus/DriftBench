@@ -1,0 +1,85 @@
+{
+ "sample_id": "fae8b7868a1379f1__referential_ambiguity",
+ "domain": "telecom",
+ "tree_id": "fae8b7868a1379f1",
+ "query": "Hey, I can't get any cellular service on my phone right now, I already checked that airplane mode is on, and I think the usual one isn't seated right, can you help me fix this?",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "fault:unseat_sim_card",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on"
+  ],
+  "hidden_slots": [
+   "fault:unseat_sim_card"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d6cd255ba6993c6e"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:unseat_sim_card"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,124 @@
+{
+ "sample_id": "ce1c71d74d8686fb__factual_error",
+ "domain": "retail",
+ "tree_id": "ce1c71d74d8686fb",
+ "query": "Hi there, I need to cancel my pending order #W9373987 for the reason that I no longer need it, and I also want to return the item 6477915553 from my delivered order #W7449508, please process the refund to my payment method gift_card_7711863.",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "factual_error",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "factual_error"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "\"#W9373487\"",
+    "#W9373987"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:return_delivered_order_items:item_ids",
+   "arg:1:return_delivered_order_items:order_id",
+   "arg:1:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [
+   "arg:0:cancel_pending_order:order_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "#W9373987"
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:item_ids",
+     "=",
+     "[\"6477915553\"]"
+    ],
+    [
+     "arg:1:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7449508\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7711863\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "bd02bd90e81f5114"
+ },
+ "signature": {
+  "rule": "substituted",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W9373487\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:item_ids",
+    "=",
+    "[\"6477915553\"]"
+   ],
+   [
+    "arg:1:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7449508\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7711863\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:cancel_pending_order:order_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

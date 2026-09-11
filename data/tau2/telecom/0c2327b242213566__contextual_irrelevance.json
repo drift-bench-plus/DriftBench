@@ -1,0 +1,82 @@
+{
+ "sample_id": "0c2327b242213566__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "0c2327b242213566",
+ "query": "Last weekend I went to a local cat caf\u00e9 and met the sweetest little orange tabby that curled up in my lap the whole time I was there, it even let me give it little chin scratches and ate a piece of tuna treat right out of my palm. I ended up staying three hours longer than I planned, and now I\u2019ve been thinking about maybe adopting a cat of my own, I even started looking up affordable cat trees and vet clinics near my apartment this morning. Oh right, I called because my network connection has been really bad lately, it keeps cutting out when I\u2019m trying to use apps, and also both of the permissions I enabled for this app keep getting broken all of a sudden, I can\u2019t get them to stay turned on no matter what I do.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I went to a local cat caf\u00e9 and met the sweetest little orange tabby that curled up in my lap the whole time I was there, it even let me give it little chin scratches and ate a piece of tuna treat right out of my palm. I ended up staying three hours longer than I planned, and now I\u2019ve been thinking about maybe adopting a cat of my own, I even started looking up affordable cat trees and vet clinics near my apartment this morning. Oh right, I called because ",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:break_app_both_permissions"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

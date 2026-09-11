@@ -1,0 +1,180 @@
+{
+ "adapter": "webshop",
+ "cluster": "meat snacks",
+ "fidelity_notes": [],
+ "goal_idx": 441,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "8d8ad75449ed1ad745095896d105d3eb",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B06Y3C628Q\",[[\"flavor name\",\"italian\"]]]",
+   "[\"B08T5SBG7K\",[[\"flavor name\",\"italian herb\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "option:0",
+    "=",
+    "italian herb"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "58d6d4ba4d866875"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low carb",
+     "=",
+     "italian herb"
+    ],
+    [
+     "option:0",
+     "=",
+     "italian herb"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:low carb",
+     "low carb"
+    ],
+    "alternative": [
+     "attr:low carb",
+     "italian herb"
+    ],
+    "condition": null,
+    "text": "Since you probably don’t have low carb options in the meat snacks section"
+   }
+  ],
+  "retained": [
+   "attr:low carb",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "de4db1f370c427cf",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don’t have low carb options in the meat snacks section, could you find me an Italian herb meat snack that’s under $30 instead?",
+ "render_attempts": 1,
+ "sample_id": "68fb6e9c471dc9d4",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the meat snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5fdb1dc9e6bfb0dd"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the meat snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "cbbeebf3d04c65a0"
+  },
+  {
+   "announcement": "Also, it needs to be artificial ingredients.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "111f22faca8d90f0"
+  },
+  {
+   "announcement": "Also, it needs to be beef jerky.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bdc18db8b3a78b30"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1cb800049b7b2f4c"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8309b668f9b7a88e"
+  },
+  {
+   "announcement": "Actually, make it 0.39 ounce (pack of 28) instead of italian herb.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "119fa52a6b2343b7"
+  },
+  {
+   "announcement": "Actually, make it 0.8 ounce (pack of 20) instead of italian herb.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9770522825ccc81b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want to find italian herb-flavored parmesan cheese crisps that are low in carbs.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "ccd36ab90b742e30",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

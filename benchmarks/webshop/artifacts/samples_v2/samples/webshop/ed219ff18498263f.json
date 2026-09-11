@@ -1,0 +1,203 @@
+{
+ "adapter": "webshop",
+ "cluster": "breakfast foods",
+ "fidelity_notes": [],
+ "goal_idx": 420,
+ "ground_truth": {
+  "cardinality": 35,
+  "hash": "b1e590d1edb4852e21b28e41ddfd65f0",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B001ELL3DM\",[[\"size\",\"2 pound (pack of 6)\"]]]",
+   "[\"B00EO74IIK\",[[\"size\",\"2 pound (pack of 1)\"]]]",
+   "[\"B00HVLBSH0\",[[\"size\",\"1.65 pound (pack of 6)\"]]]",
+   "[\"B016D9IGRA\",[[\"size\",\"1.8 pound (pack of 1)\"]]]",
+   "[\"B016D9IHZG\",[[\"size\",\"1.84 pound (pack of 1)\"]]]",
+   "[\"B074N97M4G\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B0759FLG71\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B077JGYFKM\",[[\"number of items\",\"1\"]]]",
+   "[\"B078N2XRNB\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B079DFHWZ9\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07CW2NZK4\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07DMXQP5P\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07FYK6773\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07GY4FK2W\",[[\"size\",\"1 count (pack of 1)\"]]]",
+   "[\"B07HJBMFSR\",[[\"size\",\"1.5 pound (pack of 1)\"]]]",
+   "[\"B07MFN6QHM\",[[\"size\",\"2 pound (pack of 1)\"]]]",
+   "[\"B07NPVVTT8\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07TYS4L2Q\",[[\"size\",\"2 pound (pack of 4)\"]]]",
+   "[\"B07X13VS51\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B085TQLTF9\",[[\"size\",\"pack of 1\"]]]",
+   "[\"B08DJB2BSZ\",[[\"size\",\"1.5 pound (pack of 1)\"]]]",
+   "[\"B08F3SLZZM\",[[\"size\",\"1.5 pound\"]]]",
+   "[\"B08PZGK48W\",[[\"style\",\"25 pound (pack of 1)\"]]]",
+   "[\"B08R2BJLDY\",[[\"size\",\"1 pack\"]]]",
+   "[\"B093HGK91R\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B095R3YYW7\",[[\"size\",\"1 pound\"]]]",
+   "[\"B0987WKWJT\",[[\"size\",\"1.5 pound\"]]]",
+   "[\"B098JZBTQP\",[[\"size\",\"1 pound\"]]]",
+   "[\"B099X4CK6C\",[[\"size\",\"pack of 1\"]]]",
+   "[\"B09BBZDKMR\",[[\"size\",\"10 pounds (pack of 1)\"]]]",
+   "[\"B09D9CHVNW\",[[\"size\",\"pack of 1\"]]]",
+   "[\"B09F1L7WTP\",[[\"size\",\"pack of 1\"]]]",
+   "[\"B09KWHH4DV\",[[\"size\",\"1.5 pound\"]]]",
+   "[\"B09PRMMTCX\",[[\"size\",\"1 pound\"]]]",
+   "[\"B09S54NXGM\",[[\"size\",\"2.25 pound (pack of 1)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:non gmo",
+    "=",
+    "non gmo"
+   ],
+   [
+    "option:0",
+    "=",
+    "1 pound (pack of 1)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "4b5b56b7f7f8afbb"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "1 pound (pack of 1)"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:non gmo",
+   "option:0"
+  ],
+  "spec_id": "45034283175eebd4",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for non-GMO breakfast foods that are 1 pound (pack of 1), and they need to stay within that one I always stick to for budget.",
+ "render_attempts": 1,
+ "sample_id": "ed219ff18498263f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the breakfast foods instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "20dd7cfec853f571"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the breakfast foods instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "c7ffade20e378f4e"
+  },
+  {
+   "announcement": "Also, it needs to be high protein.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5884270c9bea2ffd"
+  },
+  {
+   "announcement": "Also, it needs to be keto friendly.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "809996ceabee6441"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7ddf8db248ba5a2f"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8e28fc1fceb1bc3c"
+  },
+  {
+   "announcement": "Actually, make it \"chocolate dessert instead of 1 pound (pack of 1).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "17ba5ad6e5afdf5d"
+  },
+  {
+   "announcement": "Actually, make it 0.75 pound instead of 1 pound (pack of 1).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5c32a021d007d756"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 49,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 35,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like a pound of non gmo oatmeal",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "e006a456321da4a1",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,200 @@
+{
+ "sample_id": "a9212e7ae47aac26",
+ "tree_id": "18b7c772e95bbf3e",
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "goal_idx": 310,
+ "split": "test",
+ "source_instruction": "i am looking for a high speed coaxial cable that is 135 ft long.",
+ "query": "I heard that the 135ft high speed satellite TV accessories people rave about are usually priced right around the $40 mark, and I was thinking earlier that since the actual high speed signal models seem to be totally out of stock in this section right now, the slower speed 135ft options that folks still mention working for basic setups are the only ones people have been talking about in the satellite television aisle lately. All the little reviews I\u2019ve seen posted on the shelf tags say those 135ft picks sit right under that $40 price point, which lines up with all the random bits of feedback I\u2019ve picked up from other people browsing here this week.",
+ "strategy_ids": [
+  "indirect_intent",
+  "false_presupposition"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+false_presupposition",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "false_presupposition"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "the actual high speed signal models seem to be totally out of stock in this section right now",
+    "condition": null,
+    "about": [
+     "attr:high speed",
+     "high speed"
+    ],
+    "alternative": [
+     "attr:high speed",
+     "slower speed"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:high speed",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:high speed",
+     "=",
+     "slower speed"
+    ],
+    [
+     "option:0",
+     "=",
+     "135ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "aa8ca1a66dedfaae"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 9,
+  "lit_card": 0,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 9,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "b9abd5f3ef6187cf",
+  "conditions": [
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "135ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 9,
+  "value": [
+   "[\"B00WD017GQ\",[[\"size\",\"15ft\"]]]",
+   "[\"B0171EUOZI\",[[\"size\",\"15ft\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"135ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"135ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"135ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"size\",\"135ft\"]]]",
+   "[\"B07CQB2FZK\",[[\"size\",\"135ft\"]]]",
+   "[\"B07HC46N93\",[[\"size\",\"135ft\"]]]",
+   "[\"B099RJGRRZ\",[[\"size\",\"15ft\"]]]"
+  ],
+  "hash": "51585a7483d19d81ea0afd27a2c0fed5"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0d4271e27a5b21d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7845bdf8528c5ec1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d244a3a5feb61e8b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be plug play."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e8c0472ce9ba02a1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be tv antenna."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e05fdcce4645d715",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "fd0fcccb0007eca5",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "18789ead90bd1547",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it 150 ft instead of 135ft."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "672fc4fef32e57cb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it 50 ft instead of 135ft."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

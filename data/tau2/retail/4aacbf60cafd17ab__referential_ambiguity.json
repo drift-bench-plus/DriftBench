@@ -1,0 +1,140 @@
+{
+ "sample_id": "4aacbf60cafd17ab__referential_ambiguity",
+ "domain": "retail",
+ "tree_id": "4aacbf60cafd17ab",
+ "query": "Hi, I need to cancel two pending orders, #W9373487 and #W5481803, both for the reason that they're no longer needed. Also, could you help me process a return for item 6477915553 in order #W7449508, and refund it to that one?",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "arg:2:return_delivered_order_items:payment_method_id",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason",
+   "arg:2:return_delivered_order_items:item_ids",
+   "arg:2:return_delivered_order_items:order_id"
+  ],
+  "hidden_slots": [
+   "arg:2:return_delivered_order_items:payment_method_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W9373487\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:1:cancel_pending_order:order_id",
+     "=",
+     "\"#W5481803\""
+    ],
+    [
+     "arg:1:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:item_ids",
+     "=",
+     "[\"6477915553\"]"
+    ],
+    [
+     "arg:2:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7449508\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "5772250dd9c6f68f"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W9373487\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:1:cancel_pending_order:order_id",
+    "=",
+    "\"#W5481803\""
+   ],
+   [
+    "arg:1:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:item_ids",
+    "=",
+    "[\"6477915553\"]"
+   ],
+   [
+    "arg:2:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7449508\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7711863\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:2:return_delivered_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,181 @@
+{
+ "adapter": "webshop",
+ "cluster": "window coverings",
+ "fidelity_notes": [],
+ "goal_idx": 60,
+ "ground_truth": {
+  "cardinality": 13,
+  "hash": "838aecdb9be359da2d6a1d3d1781d507",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B091XX9F78\",[[\"color\",\"multi-1224\"]]]",
+   "[\"B0929CV1XF\",[[\"color\",\"multi-13512\"]]]",
+   "[\"B092B2XQ5G\",[[\"color\",\"multi-14124\"]]]",
+   "[\"B095Z2KMRR\",[[\"color\",\"multi-03124\"]]]",
+   "[\"B095Z2WRFD\",[[\"color\",\"multi-13324\"]]]",
+   "[\"B095Z2YWWG\",[[\"color\",\"multi-15312\"]]]",
+   "[\"B095Z32ZF9\",[[\"color\",\"multi-11284\"]]]",
+   "[\"B095Z3G41R\",[[\"color\",\"multi-11312\"]]]",
+   "[\"B095Z5338N\",[[\"color\",\"multi-13312\"]]]",
+   "[\"B096NRM6FB\",[[\"color\",\"multi-11284\"]]]",
+   "[\"B096NSDQ9F\",[[\"color\",\"multi-11624\"]]]",
+   "[\"B09MCXBFW1\",[[\"color\",\"multi-13124\"]]]",
+   "[\"B09MCYB7G6\",[[\"color\",\"multi-11724\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "multi-13124"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "115f47412496f431"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "multi-13124"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:living room",
+   "option:0"
+  ],
+  "spec_id": "052a6af8410e4ae7",
+  "strategy_id": "vagueness_subjectivity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a good window covering for my living room, and the option should be multi-13124.",
+ "render_attempts": 1,
+ "sample_id": "ecadbc96da7f8242",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the window coverings instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4320bc1a7db3f1da"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the window coverings instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "55eaa6a799a5c634"
+  },
+  {
+   "announcement": "Also, it needs to be home decor.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c90a01747033a52b"
+  },
+  {
+   "announcement": "Also, it needs to be eco friendly.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e85bcbbd72236c20"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5ee6c639583aba79"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "efb2e4e69d176653"
+  },
+  {
+   "announcement": "Actually, make it (16.5\"x39.4\")42x100cm instead of multi-13124.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5efc82a3406b19f7"
+  },
+  {
+   "announcement": "Actually, make it #04 instead of multi-13124.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c90db58fd64d68e2"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 17,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 13,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a multi-colored blackout window film for my living room.",
+ "split": "test",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "tree_id": "8f9f336765aba521",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

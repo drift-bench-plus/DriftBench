@@ -1,0 +1,186 @@
+{
+ "sample_id": "40072bbf93003522",
+ "tree_id": "4944911280127eae",
+ "adapter": "webshop",
+ "cluster": "video surveillance",
+ "goal_idx": 184,
+ "split": "test",
+ "source_instruction": "i am looking for 3mp motion detection security camera.",
+ "query": "Ugh, I\u2019ve spent all morning troubleshooting my sprinkler system, it keeps dousing my potted mint every other hour and I think the timer\u2019s busted, plus my cat knocked over my favorite ceramic planter yesterday so I\u2019ve been sweeping shards off the porch nonstop. I was also thinking I should pick up some more strawberry jam this weekend since I finished the last jar at breakfast. Oh right, I need a video surveillance camera that has motion detection, 3mp resolution, for a reasonable price.",
+ "strategy_ids": [
+  "vagueness_subjectivity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "vagueness_subjectivity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "vagueness_subjectivity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I\u2019ve spent all morning troubleshooting my sprinkler system, it keeps dousing my potted mint every other hour and I think the timer\u2019s busted, plus my cat knocked over my favorite ceramic planter yesterday so I\u2019ve been sweeping shards off the porch nonstop. I was also thinking I should pick up some more strawberry jam this weekend since I finished the last jar at breakfast.",
+  "retained": [
+   "attr:motion detection",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:motion detection",
+     "=",
+     "motion detection"
+    ],
+    [
+     "option:0",
+     "=",
+     "3mp"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "a72bf8967d78077a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 8,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 8,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "7278ebab2e56407b",
+  "conditions": [
+   [
+    "attr:motion detection",
+    "=",
+    "motion detection"
+   ],
+   [
+    "option:0",
+    "=",
+    "3mp"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B08B7TXXWF\",[[\"color\",\"3mp\"]]]",
+   "[\"B08W57SX4J\",[[\"size\",\"3mp camera\"]]]",
+   "[\"B08ZN3Q4DN\",[[\"color\",\"3mp\"]]]"
+  ],
+  "hash": "6ec2e226b6b811002787153ab9ba1992"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "18a6cd52da3d2b94",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the video surveillance instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6a0c0bc79e73076",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the video surveillance instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "267155914c5d4abe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mobile phone."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "876e17877673602d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be rechargeable battery."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "353171591dacb3bf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8c7e8e0461c8e66b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "6d3ee0bb9e3d45f9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 female to 4 male (1 pack) instead of 3mp."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "dcb428f641864c08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pc instead of 3mp."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

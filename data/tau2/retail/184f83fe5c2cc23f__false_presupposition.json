@@ -1,0 +1,119 @@
+{
+ "sample_id": "184f83fe5c2cc23f__false_presupposition",
+ "domain": "retail",
+ "tree_id": "184f83fe5c2cc23f",
+ "query": "Since the item 2060066974 I want to exchange for seems to be out of stock right now, I need to process an exchange for my delivered order #W3388163, replace the item 9354168549 with whatever the closest available alternative to 2060066974 you have, and charge the difference to my paypal_5334408.",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "false_presupposition",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "false_presupposition"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since the item 2060066974 I want to exchange for seems to be out of stock right now",
+    "condition": null,
+    "about": [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "[\"2060066974\"]"
+    ],
+    "alternative": [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "the closest available alternative to 2060066974"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"9354168549\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "the closest available alternative to 2060066974"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W3388163\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_5334408\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "1035bdd0eef27419"
+ },
+ "signature": {
+  "rule": "presupposed",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"9354168549\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"2060066974\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W3388163\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_5334408\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:exchange_delivered_order_items:new_item_ids"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

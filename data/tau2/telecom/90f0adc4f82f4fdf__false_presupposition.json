@@ -1,0 +1,89 @@
+{
+ "sample_id": "90f0adc4f82f4fdf__false_presupposition",
+ "domain": "telecom",
+ "tree_id": "90f0adc4f82f4fdf",
+ "query": "Now that I just updated my operating system an hour ago, my airplane mode is stuck turned on and this app I use keeps telling me it doesn't have the two permissions it needs to run even though I already granted them before.",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "false_presupposition",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "false_presupposition"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "I already granted them before",
+    "condition": null,
+    "about": [
+     "fault:break_app_both_permissions",
+     "break_app_both_permissions"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_app_both_permissions"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "483adb958e9d81a0"
+ },
+ "signature": {
+  "rule": "presupposed",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:break_app_both_permissions"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

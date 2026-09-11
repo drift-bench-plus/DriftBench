@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "refillable containers",
+ "fidelity_notes": [],
+ "goal_idx": 111,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "475d6f51ba7ab07fbaeaab9a287d053d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0842CFRWY\",[[\"color\",\"silver\"]]]",
+   "[\"B085W67P7L\",[[\"color\",\"silver pump head\"]]]",
+   "[\"B08GY8991Y\",[[\"color\",\"silver\"]]]",
+   "[\"B08HGSVDZ6\",[[\"color\",\"silver\"]]]",
+   "[\"B08HQCBLL5\",[[\"color\",\"silver\"]]]",
+   "[\"B08J6R2CM4\",[[\"color\",\"silver\"]]]",
+   "[\"B08JBXDSW3\",[[\"color\",\"silver\"]]]",
+   "[\"B08LDLRJ7Y\",[[\"color\",\"silver\"]]]",
+   "[\"B09172HG6F\",[[\"color\",\"silver\"]]]",
+   "[\"B09GB2JXL7\",[[\"color\",\"silver\"]]]",
+   "[\"B09PLD5NWJ\",[[\"color\",\"silver ball\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:rose gold",
+    "=",
+    "rose gold"
+   ],
+   [
+    "option:0",
+    "=",
+    "silver pump head"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "b01a8f2276717361"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:rose gold",
+     "=",
+     "rose gold"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:rose gold",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for refillable containers that are rose gold with that one, and I don't want to spend more than 30 dollars total.",
+ "render_attempts": 1,
+ "sample_id": "a4d952a13a04980b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the refillable containers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "38761bc5eb7aeb9a"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the refillable containers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "523e1485ba534c14"
+  },
+  {
+   "announcement": "Also, it needs to be quality materials.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "84853f59cf236428"
+  },
+  {
+   "announcement": "Also, it needs to be shampoo conditioner.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a953ad96d18c095e"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "755e44492b494502"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d3bf42b4b826c60b"
+  },
+  {
+   "announcement": "Actually, make it 100 count (pack of 1) instead of silver pump head.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "57e065657e5b8bef"
+  },
+  {
+   "announcement": "Actually, make it 10 count (pack of 1) instead of silver pump head.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bb8de87feede8b85"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 112,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for travel foaming dispenser for hand soap. please choose rose gold and silver pump head.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "4d24bdf435a70c92",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

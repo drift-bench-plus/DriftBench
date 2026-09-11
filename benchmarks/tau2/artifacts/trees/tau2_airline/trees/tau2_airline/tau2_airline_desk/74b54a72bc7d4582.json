@@ -1,0 +1,973 @@
+{
+ "adapter": "tau2_airline",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [],
+    "writes": [
+     "update_reservation_flights",
+     "update_reservation_flights",
+     "update_reservation_flights",
+     "update_reservation_flights",
+     "update_reservation_flights"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:update_reservation_flights:cabin",
+    "arg:0:update_reservation_flights:flights",
+    "arg:0:update_reservation_flights:payment_id",
+    "arg:0:update_reservation_flights:reservation_id",
+    "arg:1:update_reservation_flights:cabin",
+    "arg:1:update_reservation_flights:flights",
+    "arg:1:update_reservation_flights:payment_id",
+    "arg:1:update_reservation_flights:reservation_id",
+    "arg:2:update_reservation_flights:cabin",
+    "arg:2:update_reservation_flights:flights",
+    "arg:2:update_reservation_flights:payment_id",
+    "arg:2:update_reservation_flights:reservation_id",
+    "arg:3:update_reservation_flights:cabin",
+    "arg:3:update_reservation_flights:flights",
+    "arg:3:update_reservation_flights:payment_id",
+    "arg:3:update_reservation_flights:reservation_id",
+    "arg:4:update_reservation_flights:cabin",
+    "arg:4:update_reservation_flights:flights",
+    "arg:4:update_reservation_flights:payment_id",
+    "arg:4:update_reservation_flights:reservation_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-21\",\"flight_number\":\"HAT028\"},{\"date\":\"2024-05-21\",\"flight_number\":\"HAT277\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"credit_card_2929732\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"JG7FMM\""
+    ],
+    [
+     "arg:1:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:1:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-28\",\"flight_number\":\"HAT080\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT076\"},{\"date\":\"2024-05-30\",\"flight_number\":\"HAT255\"},{\"date\":\"2024-05-30\",\"flight_number\":\"HAT148\"}]"
+    ],
+    [
+     "arg:1:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_3481935\""
+    ],
+    [
+     "arg:1:update_reservation_flights:reservation_id",
+     "=",
+     "\"2FBBAH\""
+    ],
+    [
+     "arg:2:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:2:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-24\",\"flight_number\":\"HAT232\"},{\"date\":\"2024-05-24\",\"flight_number\":\"HAT228\"}]"
+    ],
+    [
+     "arg:2:update_reservation_flights:payment_id",
+     "=",
+     "\"credit_card_2929732\""
+    ],
+    [
+     "arg:2:update_reservation_flights:reservation_id",
+     "=",
+     "\"X7BYG1\""
+    ],
+    [
+     "arg:3:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:3:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-23\",\"flight_number\":\"HAT084\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT175\"}]"
+    ],
+    [
+     "arg:3:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6847880\""
+    ],
+    [
+     "arg:3:update_reservation_flights:reservation_id",
+     "=",
+     "\"EQ1G6C\""
+    ],
+    [
+     "arg:4:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:4:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-21\",\"flight_number\":\"HAT276\"},{\"date\":\"2024-05-22\",\"flight_number\":\"HAT279\"}]"
+    ],
+    [
+     "arg:4:update_reservation_flights:payment_id",
+     "=",
+     "\"credit_card_9525117\""
+    ],
+    [
+     "arg:4:update_reservation_flights:reservation_id",
+     "=",
+     "\"BOH180\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1c2ce2d6e09b2edfccb546531c7c0bc3",
+    "kind": "statehash",
+    "value": "{\"db\":\"361a067372a4d57d23d10cfc560ba8d24cfd10862bb079be2c0e180459cefbbf\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "70c6383a9cb6cfc9",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-21",
+         "flight_number": "HAT028"
+        },
+        {
+         "date": "2024-05-21",
+         "flight_number": "HAT277"
+        }
+       ],
+       "payment_id": "credit_card_2929732",
+       "reservation_id": "JG7FMM"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT080"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT076"
+        },
+        {
+         "date": "2024-05-30",
+         "flight_number": "HAT255"
+        },
+        {
+         "date": "2024-05-30",
+         "flight_number": "HAT148"
+        }
+       ],
+       "payment_id": "gift_card_3481935",
+       "reservation_id": "2FBBAH"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-24",
+         "flight_number": "HAT232"
+        },
+        {
+         "date": "2024-05-24",
+         "flight_number": "HAT228"
+        }
+       ],
+       "payment_id": "credit_card_2929732",
+       "reservation_id": "X7BYG1"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-23",
+         "flight_number": "HAT084"
+        },
+        {
+         "date": "2024-05-23",
+         "flight_number": "HAT175"
+        }
+       ],
+       "payment_id": "gift_card_6847880",
+       "reservation_id": "EQ1G6C"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-21",
+         "flight_number": "HAT276"
+        },
+        {
+         "date": "2024-05-22",
+         "flight_number": "HAT279"
+        }
+       ],
+       "payment_id": "credit_card_9525117",
+       "reservation_id": "BOH180"
+      },
+      "name": "update_reservation_flights"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "18",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details",
+     "search_direct_flight"
+    ],
+    "writes": [
+     "update_reservation_flights"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:update_reservation_flights:cabin",
+    "arg:0:update_reservation_flights:flights",
+    "arg:0:update_reservation_flights:payment_id",
+    "arg:0:update_reservation_flights:reservation_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT266\"},{\"date\":\"2024-05-27\",\"flight_number\":\"HAT112\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_5634230\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"1N99U6\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1e503557c925b7950c522cf1ec0b0d9d",
+    "kind": "statehash",
+    "value": "{\"db\":\"dc171787dd84f7436c2ad66827f301e6cbdbe72167fcc1e3133dd08eb36778a5\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "d1bcffdd69b0ab17",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-19",
+         "flight_number": "HAT266"
+        },
+        {
+         "date": "2024-05-27",
+         "flight_number": "HAT112"
+        }
+       ],
+       "payment_id": "gift_card_5634230",
+       "reservation_id": "1N99U6"
+      },
+      "name": "update_reservation_flights"
+     }
+    ],
+    "reads": [
+     "get_reservation_details",
+     "search_direct_flight"
+    ]
+   },
+   "source_record": "30",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details",
+     "get_reservation_details"
+    ],
+    "writes": [
+     "update_reservation_flights",
+     "cancel_reservation",
+     "cancel_reservation"
+    ]
+   },
+   "bound_slots": [
+    "also:0:update_reservation_baggages",
+    "arg:0:update_reservation_flights:cabin",
+    "arg:0:update_reservation_flights:flights",
+    "arg:0:update_reservation_flights:payment_id",
+    "arg:0:update_reservation_flights:reservation_id",
+    "arg:1:cancel_reservation:reservation_id",
+    "arg:2:cancel_reservation:reservation_id"
+   ],
+   "conditions": [
+    [
+     "also:0:update_reservation_baggages",
+     "=",
+     "{\"nonfree_baggages\":0,\"payment_id\":\"credit_card_2408938\",\"reservation_id\":\"7WPL39\",\"total_baggages\":1}"
+    ],
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"business\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-20\",\"flight_number\":\"HAT005\"},{\"date\":\"2024-05-30\",\"flight_number\":\"HAT178\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"credit_card_2408938\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"XEHM4B\""
+    ],
+    [
+     "arg:1:cancel_reservation:reservation_id",
+     "=",
+     "\"XEHM4B\""
+    ],
+    [
+     "arg:2:cancel_reservation:reservation_id",
+     "=",
+     "\"59XX6W\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "178dac39a69997ab2f4b170e3dc7a8d8",
+    "kind": "statehash",
+    "value": "{\"db\":\"5a7a53c3590b5cbba524484729a75bd7d50bc07a37a3468337aa4982eca0384a\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "05167aa0e81d32d0",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "business",
+       "flights": [
+        {
+         "date": "2024-05-20",
+         "flight_number": "HAT005"
+        },
+        {
+         "date": "2024-05-30",
+         "flight_number": "HAT178"
+        }
+       ],
+       "payment_id": "credit_card_2408938",
+       "reservation_id": "XEHM4B"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "reservation_id": "XEHM4B"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "reservation_id": "59XX6W"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "nonfree_baggages": 0,
+       "payment_id": "credit_card_2408938",
+       "reservation_id": "7WPL39",
+       "total_baggages": 1
+      },
+      "name": "update_reservation_baggages"
+     }
+    ],
+    "reads": [
+     "get_reservation_details",
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details",
+     "get_reservation_details"
+    ],
+    "writes": [
+     "update_reservation_flights",
+     "cancel_reservation",
+     "cancel_reservation"
+    ]
+   },
+   "bound_slots": [
+    "also:2:update_reservation_baggages",
+    "arg:0:update_reservation_flights:cabin",
+    "arg:0:update_reservation_flights:flights",
+    "arg:0:update_reservation_flights:payment_id",
+    "arg:0:update_reservation_flights:reservation_id",
+    "arg:1:cancel_reservation:reservation_id",
+    "arg:2:cancel_reservation:reservation_id"
+   ],
+   "conditions": [
+    [
+     "also:2:update_reservation_baggages",
+     "=",
+     "{\"nonfree_baggages\":0,\"payment_id\":\"credit_card_2408938\",\"reservation_id\":\"3EMQJ6\",\"total_baggages\":1}"
+    ],
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"business\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-20\",\"flight_number\":\"HAT005\"},{\"date\":\"2024-05-30\",\"flight_number\":\"HAT178\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"credit_card_2408938\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"XEHM4B\""
+    ],
+    [
+     "arg:1:cancel_reservation:reservation_id",
+     "=",
+     "\"XEHM4B\""
+    ],
+    [
+     "arg:2:cancel_reservation:reservation_id",
+     "=",
+     "\"59XX6W\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "49885070b15fca3f985ad7aa1fa8ee81",
+    "kind": "statehash",
+    "value": "{\"db\":\"06d3fbdf1974ae19f6816b8cb29b4ccc3f275a36647e60190eadf13c39de0b0b\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "5f750d258619bbc4",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "business",
+       "flights": [
+        {
+         "date": "2024-05-20",
+         "flight_number": "HAT005"
+        },
+        {
+         "date": "2024-05-30",
+         "flight_number": "HAT178"
+        }
+       ],
+       "payment_id": "credit_card_2408938",
+       "reservation_id": "XEHM4B"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "reservation_id": "XEHM4B"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "reservation_id": "59XX6W"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "nonfree_baggages": 0,
+       "payment_id": "credit_card_2408938",
+       "reservation_id": "3EMQJ6",
+       "total_baggages": 1
+      },
+      "name": "update_reservation_baggages"
+     }
+    ],
+    "reads": [
+     "get_reservation_details",
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details",
+     "get_reservation_details"
+    ],
+    "writes": [
+     "update_reservation_flights",
+     "cancel_reservation",
+     "cancel_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:update_reservation_flights:cabin",
+    "arg:0:update_reservation_flights:flights",
+    "arg:0:update_reservation_flights:payment_id",
+    "arg:0:update_reservation_flights:reservation_id",
+    "arg:1:cancel_reservation:reservation_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"business\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-20\",\"flight_number\":\"HAT005\"},{\"date\":\"2024-05-30\",\"flight_number\":\"HAT178\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"credit_card_2408938\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"XEHM4B\""
+    ],
+    [
+     "arg:1:cancel_reservation:reservation_id",
+     "=",
+     "\"XEHM4B\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "7def1a06374270a1f3a6fd1edfdccf18",
+    "kind": "statehash",
+    "value": "{\"db\":\"b0328c07d341ce0cb90e730470cb479887e133126ddfcf661e8ca5d68bc0e732\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "d1aa3cf562c6a512",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "business",
+       "flights": [
+        {
+         "date": "2024-05-20",
+         "flight_number": "HAT005"
+        },
+        {
+         "date": "2024-05-30",
+         "flight_number": "HAT178"
+        }
+       ],
+       "payment_id": "credit_card_2408938",
+       "reservation_id": "XEHM4B"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "reservation_id": "XEHM4B"
+      },
+      "name": "cancel_reservation"
+     }
+    ],
+    "reads": [
+     "get_reservation_details",
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details",
+     "get_reservation_details"
+    ],
+    "writes": [
+     "update_reservation_flights",
+     "cancel_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:update_reservation_flights:cabin",
+    "arg:0:update_reservation_flights:flights",
+    "arg:0:update_reservation_flights:payment_id",
+    "arg:0:update_reservation_flights:reservation_id",
+    "arg:1:cancel_reservation:reservation_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"business\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-20\",\"flight_number\":\"HAT005\"},{\"date\":\"2024-05-30\",\"flight_number\":\"HAT178\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"credit_card_2408938\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"XEHM4B\""
+    ],
+    [
+     "arg:1:cancel_reservation:reservation_id",
+     "=",
+     "\"XEHM4B\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "7def1a06374270a1f3a6fd1edfdccf18",
+    "kind": "statehash",
+    "value": "{\"db\":\"b0328c07d341ce0cb90e730470cb479887e133126ddfcf661e8ca5d68bc0e732\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "a23e00fe03d75c95",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "business",
+       "flights": [
+        {
+         "date": "2024-05-20",
+         "flight_number": "HAT005"
+        },
+        {
+         "date": "2024-05-30",
+         "flight_number": "HAT178"
+        }
+       ],
+       "payment_id": "credit_card_2408938",
+       "reservation_id": "XEHM4B"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "reservation_id": "XEHM4B"
+      },
+      "name": "cancel_reservation"
+     }
+    ],
+    "reads": [
+     "get_reservation_details",
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "min_gt_moved_edges": 1,
+  "require_full_quota": false,
+  "seed": 7
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "airline_request",
+     "reads": [],
+     "writes": [
+      "update_reservation_flights",
+      "update_reservation_flights",
+      "update_reservation_flights",
+      "update_reservation_flights",
+      "update_reservation_flights"
+     ]
+    }
+   },
+   "dst": "70c6383a9cb6cfc9",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "18",
+   "src": "bac230e97381d5bf"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "airline_request",
+     "reads": [
+      "get_reservation_details",
+      "search_direct_flight"
+     ],
+     "writes": [
+      "update_reservation_flights"
+     ]
+    }
+   },
+   "dst": "d1bcffdd69b0ab17",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "30",
+   "src": "bac230e97381d5bf"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "also:0:update_reservation_baggages",
+      "=",
+      "{\"nonfree_baggages\":0,\"payment_id\":\"credit_card_2408938\",\"reservation_id\":\"7WPL39\",\"total_baggages\":1}"
+     ]
+    ]
+   },
+   "dst": "05167aa0e81d32d0",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "bac230e97381d5bf"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "also:2:update_reservation_baggages",
+      "=",
+      "{\"nonfree_baggages\":0,\"payment_id\":\"credit_card_2408938\",\"reservation_id\":\"3EMQJ6\",\"total_baggages\":1}"
+     ]
+    ]
+   },
+   "dst": "5f750d258619bbc4",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "bac230e97381d5bf"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "arg:2:cancel_reservation:reservation_id",
+      "=",
+      "\"59XX6W\""
+     ]
+    ]
+   },
+   "dst": "d1aa3cf562c6a512",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "bac230e97381d5bf"
+  },
+  {
+   "delta": {
+    "removed_request": "cancel_reservation"
+   },
+   "dst": "a23e00fe03d75c95",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "bac230e97381d5bf"
+  }
+ ],
+ "env_id": "tau2_airline_desk",
+ "env_spec": {
+  "domain": "airline",
+  "env_id": "tau2_airline_desk",
+  "env_key": "tau2_airline_desk",
+  "initialization": {},
+  "solo_mode": false
+ },
+ "root": {
+  "base": {
+   "kind": "airline_request",
+   "reads": [
+    "get_reservation_details",
+    "get_reservation_details"
+   ],
+   "writes": [
+    "update_reservation_flights",
+    "cancel_reservation",
+    "cancel_reservation"
+   ]
+  },
+  "bound_slots": [
+   "arg:0:update_reservation_flights:cabin",
+   "arg:0:update_reservation_flights:flights",
+   "arg:0:update_reservation_flights:payment_id",
+   "arg:0:update_reservation_flights:reservation_id",
+   "arg:1:cancel_reservation:reservation_id",
+   "arg:2:cancel_reservation:reservation_id"
+  ],
+  "conditions": [
+   [
+    "arg:0:update_reservation_flights:cabin",
+    "=",
+    "\"business\""
+   ],
+   [
+    "arg:0:update_reservation_flights:flights",
+    "=",
+    "[{\"date\":\"2024-05-20\",\"flight_number\":\"HAT005\"},{\"date\":\"2024-05-30\",\"flight_number\":\"HAT178\"}]"
+   ],
+   [
+    "arg:0:update_reservation_flights:payment_id",
+    "=",
+    "\"credit_card_2408938\""
+   ],
+   [
+    "arg:0:update_reservation_flights:reservation_id",
+    "=",
+    "\"XEHM4B\""
+   ],
+   [
+    "arg:1:cancel_reservation:reservation_id",
+    "=",
+    "\"XEHM4B\""
+   ],
+   [
+    "arg:2:cancel_reservation:reservation_id",
+    "=",
+    "\"59XX6W\""
+   ]
+  ],
+  "ground_truth": {
+   "hash": "fb591016c7ae31872c9397472dc4df2f",
+   "kind": "statehash",
+   "value": "{\"db\":\"0087f8266f0f2fc2091ee4fabd9c137ed8b6c8751df09ec4f650756e4ae0ccf7\",\"errors\":[]}"
+  },
+  "gt_extensional": false,
+  "intent_id": "bac230e97381d5bf",
+  "is_seed": true,
+  "recipe": {
+   "actions": [
+    {
+     "arguments": {
+      "cabin": "business",
+      "flights": [
+       {
+        "date": "2024-05-20",
+        "flight_number": "HAT005"
+       },
+       {
+        "date": "2024-05-30",
+        "flight_number": "HAT178"
+       }
+      ],
+      "payment_id": "credit_card_2408938",
+      "reservation_id": "XEHM4B"
+     },
+     "name": "update_reservation_flights"
+    },
+    {
+     "arguments": {
+      "reservation_id": "XEHM4B"
+     },
+     "name": "cancel_reservation"
+    },
+    {
+     "arguments": {
+      "reservation_id": "59XX6W"
+     },
+     "name": "cancel_reservation"
+    }
+   ],
+   "reads": [
+    "get_reservation_details",
+    "get_reservation_details"
+   ]
+  },
+  "source_record": "7",
+  "unbound_slots": [
+   "also:0:update_reservation_baggages",
+   "also:2:update_reservation_baggages",
+   "arg:2:cancel_reservation:reservation_id"
+  ]
+ },
+ "tree_id": "74b54a72bc7d4582"
+}

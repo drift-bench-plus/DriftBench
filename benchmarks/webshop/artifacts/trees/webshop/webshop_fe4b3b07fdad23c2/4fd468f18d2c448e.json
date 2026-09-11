@@ -1,0 +1,825 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B01LPCLEWY",
+    "cluster": "breakfast foods",
+    "name": "Quest Nutrition Protein Bar Low Carb Gluten Free, Blueberry Muffin 12 Count",
+    "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars"
+   },
+   "bound_slots": [
+    "attr:low carb",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "option:0",
+     "=",
+     "12 count"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "29fdd54f5ee7fe83e5591d3eac7f8638",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B016MEN14O\",[[\"size\",\"12 count\"]]]",
+     "[\"B01LPCLEWY\",[[\"size\",\"12 count\"]]]",
+     "[\"B07GY4FK2W\",[[\"size\",\"12 count (pack of 1)\"]]]",
+     "[\"B07YSWT2N1\",[[\"size\",\"12 count (pack of 1)\"]]]",
+     "[\"B082X86HD5\",[[\"size\",\"12 count (pack of 1)\"]]]",
+     "[\"B084JRK94V\",[[\"size\",\"12 count (pack of 1)\"]]]",
+     "[\"B08BW4HZ7R\",[[\"size\",\"12 count (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "20dd7cfec853f571",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breakfast foods",
+    "goal": {
+     "asin": "B01LPCLEWY",
+     "attributes": [
+      "low carb"
+     ],
+     "category": "",
+     "goal_options": [
+      "12 count"
+     ],
+     "name": "Quest Nutrition Protein Bar Low Carb Gluten Free, Blueberry Muffin 12 Count",
+     "price_upper": 40,
+     "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars",
+     "query": "breakfast foods"
+    }
+   },
+   "source_record": "2fed98346e23df31",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B0186F92JU",
+    "cluster": "breakfast foods",
+    "name": "Paleo Grain-Free Granola | Bubbas Fine Foods Bourbon Vanilla | Gluten-Free Breakfast Cereal | 6 Ounce | Pack of 1",
+    "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals"
+   },
+   "bound_slots": [
+    "attr:grain free",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:grain free",
+     "=",
+     "grain free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "568cfc319cadc707f8cfff5af5aecfe0",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000CROPGG\",[]]",
+     "[\"B00JL6LTLI\",[]]",
+     "[\"B00NKMZ08C\",[]]",
+     "[\"B00TUDK48Q\",[]]",
+     "[\"B00ZCL4F6W\",[]]",
+     "[\"B0170AZ4WG\",[]]",
+     "[\"B0186F92JU\",[]]",
+     "[\"B01APWH60O\",[]]",
+     "[\"B01APX56LY\",[]]",
+     "[\"B01APX94YE\",[]]",
+     "[\"B01D6DM6EK\",[]]",
+     "[\"B01IMT36LU\",[]]",
+     "[\"B01J5EDLGQ\",[]]",
+     "[\"B06X9C348Z\",[]]",
+     "[\"B06Y4XHXX5\",[]]",
+     "[\"B074R6DQ3C\",[]]",
+     "[\"B074XGC5QL\",[]]",
+     "[\"B075766S21\",[]]",
+     "[\"B075C9R56S\",[]]",
+     "[\"B075J7573L\",[]]",
+     "[\"B07DDP55CQ\",[]]",
+     "[\"B07NYNTJDX\",[]]",
+     "[\"B07PHVCJPV\",[]]",
+     "[\"B07PJLPWBQ\",[]]",
+     "[\"B07Q4M873M\",[]]",
+     "[\"B07T1GD7MH\",[]]",
+     "[\"B07V1CR4HS\",[]]",
+     "[\"B07V9PLYP7\",[]]",
+     "[\"B07VB5PWGK\",[]]",
+     "[\"B07W62NNYH\",[]]",
+     "[\"B07WHFF8QX\",[]]",
+     "[\"B07WLP3VQF\",[]]",
+     "[\"B07X6KKZ61\",[]]",
+     "[\"B07X96HT8B\",[]]",
+     "[\"B07ZG1GV9R\",[]]",
+     "[\"B082FT8VX7\",[]]",
+     "[\"B083TL1NNB\",[]]",
+     "[\"B084RY9XH8\",[]]",
+     "[\"B085B3G971\",[]]",
+     "[\"B086187BRM\",[]]",
+     "[\"B0876GL62F\",[]]",
+     "[\"B0877TQXQD\",[]]",
+     "[\"B087QVYR6G\",[]]",
+     "[\"B088JV4LJK\",[]]",
+     "[\"B08BW4HZ7R\",[]]",
+     "[\"B08BX571XN\",[]]",
+     "[\"B08CZ5BMMC\",[]]",
+     "[\"B08D1W1NQB\",[]]",
+     "[\"B08DDJP9BL\",[]]",
+     "[\"B08DF67JV7\",[]]",
+     "[\"B08DFBVH4R\",[]]",
+     "[\"B08HR51RPM\",[]]",
+     "[\"B08JHCP86S\",[]]",
+     "[\"B08JHDZCFN\",[]]",
+     "[\"B08QRPGBVZ\",[]]",
+     "[\"B08TZFF2JX\",[]]",
+     "[\"B08VNQDSHH\",[]]",
+     "[\"B08WYP4H2J\",[]]",
+     "[\"B08ZQBNVVJ\",[]]",
+     "[\"B08ZQHBM3S\",[]]",
+     "[\"B092SZT7TX\",[]]",
+     "[\"B094DVT6BN\",[]]",
+     "[\"B096PWM3V7\",[]]",
+     "[\"B09785T9FV\",[]]",
+     "[\"B097HQSZG1\",[]]",
+     "[\"B097HTPGTT\",[]]",
+     "[\"B098PPYP13\",[]]",
+     "[\"B099X4CK6C\",[]]",
+     "[\"B09B4L3371\",[]]",
+     "[\"B09CDWC5QY\",[]]",
+     "[\"B09HN49YJR\",[]]",
+     "[\"B09HV9K23K\",[]]",
+     "[\"B09KMCH12G\",[]]",
+     "[\"B09M7KWJT3\",[]]",
+     "[\"B09M7LBXQ3\",[]]",
+     "[\"B09ND85YB4\",[]]",
+     "[\"B09NQFSNKH\",[]]",
+     "[\"B09NQJD9XH\",[]]",
+     "[\"B09NQKJ11L\",[]]",
+     "[\"B09P1Y3T4S\",[]]",
+     "[\"B09P4541S7\",[]]",
+     "[\"B09P471Q14\",[]]",
+     "[\"B09PC66SYX\",[]]",
+     "[\"B09QBRVVBN\",[]]",
+     "[\"B09QHDXBR1\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "85251a87f89861a6",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breakfast foods",
+    "goal": {
+     "asin": "B0186F92JU",
+     "attributes": [
+      "grain free"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Paleo Grain-Free Granola | Bubbas Fine Foods Bourbon Vanilla | Gluten-Free Breakfast Cereal | 6 Ounce | Pack of 1",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals",
+     "query": "breakfast foods"
+    }
+   },
+   "source_record": "424b4f9d9099d316",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B077JGYFKM",
+    "cluster": "breakfast foods",
+    "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks"
+   },
+   "bound_slots": [
+    "attr:resealable bag",
+    "attr:snack mix",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "attr:snack mix",
+     "=",
+     "snack mix"
+    ],
+    [
+     "option:0",
+     "=",
+     "1"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "42143e9facf88fdb956bc2eba2c497df",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B077JGYFKM\",[[\"number of items\",\"1\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "fe2f6b3ee8b1a993",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breakfast foods",
+    "goal": {
+     "asin": "B077JGYFKM",
+     "attributes": [
+      "resealable bag",
+      "snack mix"
+     ],
+     "category": "",
+     "goal_options": [
+      "1"
+     ],
+     "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks",
+     "query": "breakfast foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B077JGYFKM",
+    "cluster": "breakfast foods",
+    "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "attr:resealable bag",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "option:0",
+     "=",
+     "1"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "49f753b7a9b431bce2ee5ee6b1fdde0b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07WHFF8QX\",[[\"size\",\"8 ounce (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f142c6eae024df7d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breakfast foods",
+    "goal": {
+     "asin": "B077JGYFKM",
+     "attributes": [
+      "certified organic",
+      "resealable bag"
+     ],
+     "category": "",
+     "goal_options": [
+      "1"
+     ],
+     "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks",
+     "query": "breakfast foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B077JGYFKM",
+    "cluster": "breakfast foods",
+    "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks"
+   },
+   "bound_slots": [
+    "attr:resealable bag",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ab3b5ba8778221c2795b552c8140fb33",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B077JGYFKM\",[]]",
+     "[\"B078J67GQW\",[]]",
+     "[\"B07DCY2VHK\",[]]",
+     "[\"B07DL1BRHY\",[]]",
+     "[\"B07WHFF8QX\",[]]",
+     "[\"B07X6KKZ61\",[]]",
+     "[\"B08156PM2B\",[]]",
+     "[\"B08J44X5FH\",[]]",
+     "[\"B0916CYRWJ\",[]]",
+     "[\"B094K2QG68\",[]]",
+     "[\"B095YZT3VD\",[]]",
+     "[\"B09HR1DWBR\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "8fd06777a768e843",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breakfast foods",
+    "goal": {
+     "asin": "B077JGYFKM",
+     "attributes": [
+      "resealable bag"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks",
+     "query": "breakfast foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B077JGYFKM",
+    "cluster": "breakfast foods",
+    "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks"
+   },
+   "bound_slots": [
+    "attr:resealable bag",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "option:0",
+     "=",
+     "1"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "368e5721b471e6bcffc9ba6fa4ef4704",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00O6DHOCY\",[[\"size\",\"7.5 ounce (pack of 1)\"]]]",
+     "[\"B077JGYFKM\",[[\"number of items\",\"1\"]]]",
+     "[\"B07DCY2VHK\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+     "[\"B07TRXFHHG\",[[\"size\",\"3.17 ounce (pack of 1)\"]]]",
+     "[\"B07WHFF8QX\",[[\"size\",\"8 ounce (pack of 1)\"]]]",
+     "[\"B095YZT3VD\",[[\"size\",\"1 pack of 5 ounce\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "5cfb92e29c013f16",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breakfast foods",
+    "goal": {
+     "asin": "B077JGYFKM",
+     "attributes": [
+      "resealable bag"
+     ],
+     "category": "",
+     "goal_options": [
+      "1"
+     ],
+     "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+     "price_upper": 1000000,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks",
+     "query": "breakfast foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B077JGYFKM",
+    "cluster": "breakfast foods",
+    "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks"
+   },
+   "bound_slots": [
+    "attr:resealable bag",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "option:0",
+     "=",
+     ".3 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "60544de918e6b64b776c8831d432ea88",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B077JGYFKM\",[[\"number of items\",\"3\"]]]",
+     "[\"B07WHFF8QX\",[[\"size\",\"8 ounce (pack of 3)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "394d30925d0d8828",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breakfast foods",
+    "goal": {
+     "asin": "B077JGYFKM",
+     "attributes": [
+      "resealable bag"
+     ],
+     "category": "",
+     "goal_options": [
+      ".3 pack"
+     ],
+     "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks",
+     "query": "breakfast foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B077JGYFKM",
+    "cluster": "breakfast foods",
+    "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks"
+   },
+   "bound_slots": [
+    "attr:resealable bag",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "option:0",
+     "=",
+     ".2 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "9bfd912edee28f0f062dd24235e1360c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07WHFF8QX\",[[\"size\",\"8 ounce (pack of 2)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c921ca8299b69272",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breakfast foods",
+    "goal": {
+     "asin": "B077JGYFKM",
+     "attributes": [
+      "resealable bag"
+     ],
+     "category": "",
+     "goal_options": [
+      ".2 pack"
+     ],
+     "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks",
+     "query": "breakfast foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B01LPCLEWY",
+     "cluster": "breakfast foods",
+     "name": "Quest Nutrition Protein Bar Low Carb Gluten Free, Blueberry Muffin 12 Count",
+     "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars"
+    }
+   },
+   "dst": "20dd7cfec853f571",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "2fed98346e23df31",
+   "src": "08483e7a6b2bf441"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B0186F92JU",
+     "cluster": "breakfast foods",
+     "name": "Paleo Grain-Free Granola | Bubbas Fine Foods Bourbon Vanilla | Gluten-Free Breakfast Cereal | 6 Ounce | Pack of 1",
+     "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals"
+    }
+   },
+   "dst": "85251a87f89861a6",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "424b4f9d9099d316",
+   "src": "08483e7a6b2bf441"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:snack mix",
+      "=",
+      "snack mix"
+     ]
+    ]
+   },
+   "dst": "fe2f6b3ee8b1a993",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "08483e7a6b2bf441"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:certified organic",
+      "=",
+      "certified organic"
+     ]
+    ]
+   },
+   "dst": "f142c6eae024df7d",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "08483e7a6b2bf441"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "1"
+     ]
+    ]
+   },
+   "dst": "8fd06777a768e843",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "08483e7a6b2bf441"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      30
+     ]
+    ]
+   },
+   "dst": "5cfb92e29c013f16",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "08483e7a6b2bf441"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "1",
+      ".3 pack"
+     ]
+    ]
+   },
+   "dst": "394d30925d0d8828",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "08483e7a6b2bf441"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "1",
+      ".2 pack"
+     ]
+    ]
+   },
+   "dst": "c921ca8299b69272",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "08483e7a6b2bf441"
+  }
+ ],
+ "env_id": "webshop_fe4b3b07fdad23c2",
+ "env_spec": {
+  "cluster": "breakfast foods",
+  "env_id": "webshop_fe4b3b07fdad23c2",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B077JGYFKM",
+   "cluster": "breakfast foods",
+   "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+   "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks"
+  },
+  "bound_slots": [
+   "attr:resealable bag",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:resealable bag",
+    "=",
+    "resealable bag"
+   ],
+   [
+    "option:0",
+    "=",
+    "1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "ground_truth": {
+   "hash": "b6a896b13c57556f69289b1a823b2955",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B077JGYFKM\",[[\"number of items\",\"1\"]]]",
+    "[\"B07DCY2VHK\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+    "[\"B07WHFF8QX\",[[\"size\",\"8 ounce (pack of 1)\"]]]",
+    "[\"B095YZT3VD\",[[\"size\",\"1 pack of 5 ounce\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "08483e7a6b2bf441",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "breakfast foods",
+   "goal": {
+    "asin": "B077JGYFKM",
+    "attributes": [
+     "resealable bag"
+    ],
+    "category": "",
+    "goal_options": [
+     "1"
+    ],
+    "name": "Cream of the West, 100% Natural Snack Mix, Montana Crunch, Healthy and Delicious Breakfast or Snack, Rolled Oats, Cranberries, Coconut, Almonds - 12 oz. Single Resealable Bag",
+    "price_upper": 30,
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks",
+    "query": "breakfast foods"
+   }
+  },
+  "source_record": "d62d045d352926f6",
+  "unbound_slots": [
+   "attr:certified organic",
+   "attr:snack mix",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "4fd468f18d2c448e"
+}

@@ -1,0 +1,178 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's activewear",
+ "fidelity_notes": [],
+ "goal_idx": 217,
+ "ground_truth": {
+  "cardinality": 13,
+  "hash": "04fd9564000833b8ae904dc074abc740",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00L8LXSG8\",[[\"color\",\"lagoon camo palm\"]]]",
+   "[\"B081PBSJCQ\",[[\"color\",\"ojog128  |  153 camo\"]]]",
+   "[\"B08F3GG7R4\",[[\"color\",\"camouflage\"]]]",
+   "[\"B08GPS1Q34\",[[\"color\",\"army green camo\"]]]",
+   "[\"B08JYGZZ8C\",[[\"color\",\"camo\"]]]",
+   "[\"B08K89ZK4Q\",[[\"color\",\"a-camo gray\"]]]",
+   "[\"B08MLLGHPH\",[[\"color\",\"kdf201-grey camo\"]]]",
+   "[\"B08N3XLLC3\",[[\"color\",\"camo multi 6-c\"]]]",
+   "[\"B08R9TJPK6\",[[\"color\",\"camo\"]]]",
+   "[\"B08TQQC152\",[[\"color\",\"08-camo army\"]]]",
+   "[\"B08VDDMTHD\",[[\"color\",\"army green camo\"]]]",
+   "[\"B09J2Y79WS\",[[\"color\",\"green camo\"]]]",
+   "[\"B09QC3MDM9\",[[\"color\",\"b-camouflage\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:elastic waistband",
+    "=",
+    "elastic waistband"
+   ],
+   [
+    "option:0",
+    "=",
+    "camo"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "3a0ea8182a83c78a"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:elastic waistband",
+     "=",
+     "elastic waistband"
+    ],
+    [
+     "option:0",
+     "=",
+     "camo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning planting cherry tomato seedlings in my balcony garden, and I’m already daydreaming about the sweet, sun-ripened fruit I’ll harvest this summer. I even picked up a set of tiny terracotta plant markers to label each variety so I don’t mix up the sweet millions with the heirloom black cherries. Later, I’m planning to bake a loaf of sourdough bread to go with a fresh tomato salad once the plants start producing.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:elastic waistband",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning planting cherry tomato seedlings in my balcony garden, and I’m already daydreaming about the sweet, sun-ripened fruit I’ll harvest this summer. I even picked up a set of tiny terracotta plant markers to label each variety so I don’t mix up the sweet millions with the heirloom black cherries. Later, I’m planning to bake a loaf of sourdough bread to go with a fresh tomato salad once the plants start producing. Now that I’m wrapping up my garden prep for the day, I’m shopping in the women's activewear section and looking for items with an elastic waistband, a camo pattern is a nice option to have, and I need the price to stay under $30.",
+ "render_attempts": 1,
+ "sample_id": "f25a731bee6d0b55",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's activewear instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "8ea567891c2117c8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's activewear instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e834125cf8ec9848"
+  },
+  {
+   "announcement": "Also, it needs to be drawstring waist.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "20a9af9e2b8cfddd"
+  },
+  {
+   "announcement": "Also, it needs to be athletic shorts.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fcad5883709f6e26"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4ca46e5cfae189bd"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d4f566e1b2b81abe"
+  },
+  {
+   "announcement": "Actually, make it #4 green instead of camo.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3f45315a07dfc50a"
+  },
+  {
+   "announcement": "Actually, make it #2 black instead of camo.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ea212883d44807dd"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 13,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 13,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for camo colored women's running shorts with an elastic waistband.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "0f4133136a896b20",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

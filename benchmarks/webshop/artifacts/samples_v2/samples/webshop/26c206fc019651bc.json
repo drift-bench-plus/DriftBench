@@ -1,0 +1,228 @@
+{
+ "adapter": "webshop",
+ "cluster": "analog audio cables",
+ "fidelity_notes": [],
+ "goal_idx": 499,
+ "ground_truth": {
+  "cardinality": 25,
+  "hash": "d3f23e60def2ec260b79420bf1eae4f1",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B002XVYZ82\",[[\"color\",\"black\"]]]",
+   "[\"B013G4BXZ2\",[[\"color\",\"black (abs)\"]]]",
+   "[\"B01CJ5SCGW\",[[\"color\",\"black\"]]]",
+   "[\"B01ESINRAY\",[[\"color\",\"black\"]]]",
+   "[\"B01J7MV2KI\",[[\"color\",\"black & gold\"]]]",
+   "[\"B01MTZ2H7Z\",[[\"color\",\"2pack dvi to vga adapter black\"]]]",
+   "[\"B06XKYCTBZ\",[[\"color\",\"5rca-black & red\"]]]",
+   "[\"B0793HQQNX\",[[\"color\",\"black\"]]]",
+   "[\"B0793KY997\",[[\"color\",\"black\"]]]",
+   "[\"B07G6Q8DRV\",[[\"color\",\"black\"]]]",
+   "[\"B07KRGRPCY\",[[\"color\",\"rectangle black\"]]]",
+   "[\"B07L62JBF6\",[[\"color\",\"black\"]]]",
+   "[\"B07PTQ13BB\",[[\"color\",\"black [4k@30hz]\"]]]",
+   "[\"B07ZC3GQMD\",[[\"color\",\"black\"]]]",
+   "[\"B081DM5FX5\",[[\"color\",\"black-2\"]]]",
+   "[\"B082X66YD1\",[[\"color\",\"black\"]]]",
+   "[\"B085MS9DHK\",[[\"color\",\"black\"]]]",
+   "[\"B088686SKJ\",[[\"color\",\"black\"]]]",
+   "[\"B088FQTWL5\",[[\"color\",\"black\"]]]",
+   "[\"B08DFDJ551\",[[\"color\",\"black\"]]]",
+   "[\"B08N6NTBBB\",[[\"color\",\"black\"]]]",
+   "[\"B08X3MQ9H3\",[[\"color\",\"black\"]]]",
+   "[\"B092CZC4K2\",[[\"color\",\"black\"]]]",
+   "[\"B0937LPD61\",[[\"color\",\"black\"]]]",
+   "[\"B09CKWVWS8\",[[\"color\",\"black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:gold plated",
+    "=",
+    "gold plated"
+   ],
+   [
+    "option:0",
+    "=",
+    "black [4k@30hz]"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:gold plated"
+  ],
+  "intent_id": "822fda05f5927708"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "attr:gold plated",
+      "gold plated"
+     ],
+     [
+      "attr:gold plated",
+      "silver plated"
+     ]
+    ],
+    "surface": "plated"
+   }
+  ],
+  "attempt": 5,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:gold plated"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gold plated",
+     "=",
+     "gold plated"
+    ],
+    [
+     "option:0",
+     "=",
+     "black [4k@30hz]"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   [
+    [
+     "attr:gold plated",
+     "=",
+     "silver plated"
+    ],
+    [
+     "option:0",
+     "=",
+     "black [4k@30hz]"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "1c5645ebbe67eff7",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for an analog audio cable that's plated, with the black option that does 4k@30hz, and I won't pay more than 30 for it.",
+ "render_attempts": 5,
+ "sample_id": "26c206fc019651bc",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the analog audio cables instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "028cdd121cbd8dd4"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the analog audio cables instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "d4097077dcc22afa"
+  },
+  {
+   "announcement": "Also, it needs to be charging cable.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2e1defd3088b79ab"
+  },
+  {
+   "announcement": "Also, it needs to be compatible apple.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3c3a6b7f840cd537"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "178dbb0cbed7e52a"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dbb0143484b482c3"
+  },
+  {
+   "announcement": "Actually, make it 1.5m instead of black [4k@30hz].",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "44d44f1d9139be47"
+  },
+  {
+   "announcement": "Actually, make it 100ft-b*4 instead of black [4k@30hz].",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "eb7cfe3e7bbfdc08"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   25,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 25,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a gold plated hdmi adapter that is capable of 4k.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "b626a814619d2bbf",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

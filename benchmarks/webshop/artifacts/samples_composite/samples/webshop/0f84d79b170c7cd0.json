@@ -1,0 +1,195 @@
+{
+ "sample_id": "0f84d79b170c7cd0",
+ "tree_id": "0a67dc92d85066c8",
+ "adapter": "webshop",
+ "cluster": "pantry staples",
+ "goal_idx": 9,
+ "split": "test",
+ "source_instruction": "place order for a pack of 12 blue diamond almonds that is gluten free and has the pecan flavor",
+ "query": "Ugh, my neighbor\u2019s tabby cat keeps sneaking onto my fire escape to knock over my potted succulents, I swear I\u2019ve had to replant that tiny jade plant three times in the last month. I spent twenty minutes last night watching TikTok tutorials for DIY cat deterrent sprays that use citrus peels, but I\u2019m worried the smell will stick to my apartment curtains and bother my roommate who\u2019s super sensitive to strong scents. I also stopped at the corner bodega on my walk home yesterday and they were out of my usual lemon seltzer, so I had to get the lime one which tastes way too tart for my liking. Anyway, I\u2019m looking for pantry staples right now: I need gluten-reduced pecan items, and my budget is $50 max.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "factual_error"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+factual_error",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:gluten free"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:gluten free",
+    "gluten free",
+    "gluten-reduced"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, my neighbor\u2019s tabby cat keeps sneaking onto my fire escape to knock over my potted succulents, I swear I\u2019ve had to replant that tiny jade plant three times in the last month. I spent twenty minutes last night watching TikTok tutorials for DIY cat deterrent sprays that use citrus peels, but I\u2019m worried the smell will stick to my apartment curtains and bother my roommate who\u2019s super sensitive to strong scents. I also stopped at the corner bodega on my walk home yesterday and they were out of my usual lemon seltzer, so I had to get the lime one which tastes way too tart for my liking.",
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:gluten free"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten-reduced"
+    ],
+    [
+     "option:0",
+     "=",
+     "pecan"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "fe33174ae44d3387"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "1e678eee4eed310f",
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "option:0",
+    "=",
+    "pecan"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "attr:gluten free"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B000ZH04KY\",[[\"flavor name\",\"maple pecan\"]]]",
+   "[\"B003I567W4\",[[\"flavor name\",\"pecan\"]]]",
+   "[\"B01JKMPZ8U\",[[\"flavor name\",\"almond pecan\"]]]",
+   "[\"B072MHDHDY\",[[\"flavor name\",\"crunchy cookies - toasted pecan\"]]]",
+   "[\"B07NQZFPDV\",[[\"flavor name\",\"pecan shortbread\"]]]",
+   "[\"B09913B3WZ\",[[\"flavor name\",\"pecan\"]]]"
+  ],
+  "hash": "f287045db01c4839c004b2f70003e7be"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7e8bafccb35e5707",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6215ee8575f5182",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "696728e528328c9d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be protein serving."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ccfc2c2c30a5ae8d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be sea salt."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "0d748175aacf964b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4427342e33c1a30c",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "04d77a6b572808c8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .10 pack - 1 pound instead of pecan."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "a7c18dabbfee9b26",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it \"cheeze\" variety puffs instead of pecan."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,190 @@
+{
+ "adapter": "webshop",
+ "cluster": "home office chairs",
+ "fidelity_notes": [],
+ "goal_idx": 387,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "7088edd52cdddf9f73f55aa114f53364",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0843SFXGL\",[[\"color\",\"3011-grey\"]]]",
+   "[\"B08JTRCSR2\",[[\"color\",\"light grey\"]]]",
+   "[\"B08QV9M623\",[[\"color\",\"grey\"]]]",
+   "[\"B08S3LDF8K\",[[\"color\",\"grey\"]]]",
+   "[\"B098L6VVZK\",[[\"color\",\"grey\"]]]",
+   "[\"B09KC4VQWG\",[[\"color\",\"fossil grey\"]]]",
+   "[\"B09KLWDXWQ\",[[\"color\",\"grey\"]]]",
+   "[\"B09L41ZP46\",[[\"color\",\"grey\"]]]",
+   "[\"B09MW1RFVQ\",[[\"color\",\"grey-3\"]]]",
+   "[\"B09NRDW9ZK\",[[\"color\",\"grey\"]]]",
+   "[\"B09PN9WXPB\",[[\"color\",\"grey\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy assemble",
+    "=",
+    "easy assemble"
+   ],
+   [
+    "attr:mid century",
+    "=",
+    "mid century"
+   ],
+   [
+    "option:0",
+    "=",
+    "grey"
+   ],
+   [
+    "price_upper",
+    "<=",
+    160
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "7d3190a0898ecd17"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy assemble",
+     "=",
+     "easy assemble"
+    ],
+    [
+     "attr:mid century",
+     "=",
+     "mid century"
+    ],
+    [
+     "price_upper",
+     "<=",
+     160
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy assemble",
+   "attr:mid century",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for home office chairs that are easy to assemble and have a mid-century style, with a price limit of $160, and I want it in that one color I always go for.",
+ "render_attempts": 1,
+ "sample_id": "21d2e8e7b4af0482",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office chairs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1410d19fdd6bf8b2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office chairs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a8a0e1fd3281152f"
+  },
+  {
+   "announcement": "Also, it needs to be non slip.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7705bff68cd9fd8a"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e81c3c6963bcf206"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "20fad2416e9881e2"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f22bc499ecb7427d"
+  },
+  {
+   "announcement": "Actually, make it 6030blue instead of grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "53f712376a2da3d7"
+  },
+  {
+   "announcement": "Actually, make it 6422yellow instead of grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c3b357773a299a9b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 30,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a mid century home office desk chair that is easy to assemble. please choose the grey velvet one.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "ad256d2ea858759d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

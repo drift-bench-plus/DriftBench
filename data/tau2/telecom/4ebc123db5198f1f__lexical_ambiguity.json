@@ -1,0 +1,189 @@
+{
+ "sample_id": "4ebc123db5198f1f__lexical_ambiguity",
+ "domain": "telecom",
+ "tree_id": "4ebc123db5198f1f",
+ "query": "I'm abroad right now and my mobile service is totally down, I already checked my data mode is off, airplane mode is on, I went over my data limit, my network preference is acting off, my APN MMS settings are messed up, all the app permissions are broken, and I didn't turn on roaming so I can't even load a simple page.",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "lexical_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "acting off",
+    "placements": [
+     [
+      "fault:bad_network_preference",
+      "bad_network_preference"
+     ],
+     [
+      "fault:bad_network_preference",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_mms_setting",
+   "fault:break_app_both_permissions",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [
+   "fault:bad_network_preference"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ],
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "1485e71c7c3e4ba5"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:bad_network_preference"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

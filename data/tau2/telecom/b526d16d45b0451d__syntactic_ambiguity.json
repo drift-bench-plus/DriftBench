@@ -1,0 +1,125 @@
+{
+ "sample_id": "b526d16d45b0451d__syntactic_ambiguity",
+ "domain": "telecom",
+ "tree_id": "b526d16d45b0451d",
+ "query": "Hi, I'm currently abroad with roaming turned off, I can't send any SMS messages and got a data usage exceeded alert for my main line and the secondary add-on number attached to my account that I only use for verification texts.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "that I only use for verification texts",
+    "placements": [
+     [
+      "fault:break_app_sms_permission",
+      "break_app_sms_permission"
+     ],
+     [
+      "fault:break_app_sms_permission",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [
+   "fault:break_app_sms_permission"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ],
+   [
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "c87c5ba9bf144ebc"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_app_sms_permission",
+    "=",
+    "break_app_sms_permission"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:break_app_sms_permission"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

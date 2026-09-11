@@ -1,0 +1,137 @@
+{
+ "sample_id": "564e12531fc63b03__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "564e12531fc63b03",
+ "query": "Hey there, I just wanted to say I absolutely love the new cat bed I ordered last week\u2014my tabby Mochi has been curled up in it nonstop ever since it arrived, she even stopped napping on my laptop keyboard when I work from home. Oh, and I also wanted to mention I tried the lavender laundry detergent sample you included in my last order, it smells so good I just ordered a full bottle of it this morning actually. The delivery driver who dropped off my last package was so nice too, he even waited a minute when I had to run to grab my ID from the kitchen so I didn't have to reschedule the dropoff. Anyway, I need to update the shipping address on my most recent order, could you help me modify it for user ID fatima_taylor_3452? The new address is 157 Oak Street, Suite 258, Phoenix, AZ 85033, USA.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey there, I just wanted to say I absolutely love the new cat bed I ordered last week\u2014my tabby Mochi has been curled up in it nonstop ever since it arrived, she even stopped napping on my laptop keyboard when I work from home. Oh, and I also wanted to mention I tried the lavender laundry detergent sample you included in my last order, it smells so good I just ordered a full bottle of it this morning actually. The delivery driver who dropped off my last package was so nice too, he even waited a minute when I had to run to grab my ID from the kitchen so I didn't have to reschedule the dropoff. Anyway, ",
+  "retained": [
+   "arg:0:modify_user_address:address1",
+   "arg:0:modify_user_address:address2",
+   "arg:0:modify_user_address:city",
+   "arg:0:modify_user_address:country",
+   "arg:0:modify_user_address:state",
+   "arg:0:modify_user_address:user_id",
+   "arg:0:modify_user_address:zip"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_user_address:address1",
+     "=",
+     "\"157 Oak Street\""
+    ],
+    [
+     "arg:0:modify_user_address:address2",
+     "=",
+     "\"Suite 258\""
+    ],
+    [
+     "arg:0:modify_user_address:city",
+     "=",
+     "\"Phoenix\""
+    ],
+    [
+     "arg:0:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_user_address:state",
+     "=",
+     "\"AZ\""
+    ],
+    [
+     "arg:0:modify_user_address:user_id",
+     "=",
+     "\"fatima_taylor_3452\""
+    ],
+    [
+     "arg:0:modify_user_address:zip",
+     "=",
+     "\"85033\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_user_address:address1",
+    "=",
+    "\"157 Oak Street\""
+   ],
+   [
+    "arg:0:modify_user_address:address2",
+    "=",
+    "\"Suite 258\""
+   ],
+   [
+    "arg:0:modify_user_address:city",
+    "=",
+    "\"Phoenix\""
+   ],
+   [
+    "arg:0:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_user_address:state",
+    "=",
+    "\"AZ\""
+   ],
+   [
+    "arg:0:modify_user_address:user_id",
+    "=",
+    "\"fatima_taylor_3452\""
+   ],
+   [
+    "arg:0:modify_user_address:zip",
+    "=",
+    "\"85033\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

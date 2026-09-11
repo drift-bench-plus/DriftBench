@@ -1,0 +1,250 @@
+{
+ "sample_id": "cd7ef22dbe458f62",
+ "tree_id": "d874232a2b086326",
+ "adapter": "webshop",
+ "cluster": "men's jeans",
+ "goal_idx": 20,
+ "split": "test",
+ "source_instruction": "i am looking for standard sized levi strauss & co. men's carpenter jeans that are machine washable.",
+ "query": "Hey, I swung by that little community park on my walk over here earlier and ended up stopping for almost 20 minutes to watch a group of retired folks run a tiny model sailboat regatta on the pond. One guy had a hand-built wooden sloop he\u2019d spent three months carving, with tiny linen sails he\u2019d stitched himself, and it kept zipping past all the store-bought plastic boats like they were standing still. A couple of kids who were there feeding ducks got so hyped up watching the races they started cheering every time that little wooden boat pulled ahead, and one of the retirees even let the smallest kid help him adjust the rudder before the next heat. It was such a nice, unplanned little moment that it almost made me late getting over to browse today.\nI\u2019m looking for men\u2019s jeans in the standard fit, first off. I need them to be dry clean only, no exceptions, and I\u2019d also like them to come with a removable utility cell phone pocket stitched to the right thigh. Can you show me all the options that fit what I\u2019m looking for? I\u2019ve got a pretty tight budget I\u2019m sticking to for this, so don\u2019t pull anything that goes over the amount I\u2019m comfortable spending, yeah?",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance",
+  "insufficient_information",
+  "irrelevant_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance+insufficient_information+irrelevant_information",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance",
+   "insufficient_information",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:machine wash",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:machine wash",
+    "machine wash",
+    "dry clean only"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "I need them to be dry clean only, no exceptions",
+    "condition": [
+     "attr:care instruction",
+     "=",
+     "dry clean only"
+    ]
+   },
+   {
+    "text": "I\u2019d also like them to come with a removable utility cell phone pocket stitched to the right thigh",
+    "condition": [
+     "attr:pocket",
+     "=",
+     "removable utility cell phone pocket stitched to the right thigh"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey, I swung by that little community park on my walk over here earlier and ended up stopping for almost 20 minutes to watch a group of retired folks run a tiny model sailboat regatta on the pond. One guy had a hand-built wooden sloop he\u2019d spent three months carving, with tiny linen sails he\u2019d stitched himself, and it kept zipping past all the store-bought plastic boats like they were standing still. A couple of kids who were there feeding ducks got so hyped up watching the races they started cheering every time that little wooden boat pulled ahead, and one of the retirees even let the smallest kid help him adjust the rudder before the next heat. It was such a nice, unplanned little moment that it almost made me late getting over to browse today.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:machine wash",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:machine wash",
+     "=",
+     "dry clean only"
+    ],
+    [
+     "option:0",
+     "=",
+     "standard"
+    ],
+    [
+     "attr:care instruction",
+     "=",
+     "dry clean only"
+    ],
+    [
+     "attr:pocket",
+     "=",
+     "removable utility cell phone pocket stitched to the right thigh"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "a1e3e27df6acc6b3"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 14,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 14,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 20,
+    "true_card": 14,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 14,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "033d403b63d1f58f",
+  "conditions": [
+   [
+    "attr:machine wash",
+    "=",
+    "machine wash"
+   ],
+   [
+    "option:0",
+    "=",
+    "standard"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:machine wash",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 14,
+  "value": [
+   "[\"B000IBH612\",[[\"color\",\"tan\"]]]",
+   "[\"B005DIGPNA\",[[\"color\",\"tan\"]]]",
+   "[\"B01H7ENCMO\",[[\"special size\",\"standard\"]]]",
+   "[\"B07336HLSP\",[[\"special size\",\"standard\"]]]",
+   "[\"B07336W4MP\",[[\"color\",\"titan - waterless\"]]]",
+   "[\"B073V4382Z\",[[\"fit type\",\"standard\"]]]",
+   "[\"B074KJ5LD3\",[[\"special size\",\"standard\"]]]",
+   "[\"B075CQ3FG6\",[[\"special size\",\"standard\"]]]",
+   "[\"B077PHGLJN\",[[\"fit type\",\"standard\"]]]",
+   "[\"B077R99SVL\",[[\"special size\",\"standard\"]]]",
+   "[\"B07HNYC7W4\",[[\"special size\",\"standard\"]]]",
+   "[\"B07PJ2YHKM\",[[\"color\",\"tan\"]]]",
+   "[\"B082QPZXC6\",[[\"color\",\"tan\"]]]",
+   "[\"B08Q8QYG1L\",[[\"color\",\"tan\"]]]"
+  ],
+  "hash": "b83112cd83b7624bd23c7ca16b0826a4"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1f3b01e202185b13",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's jeans instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "cc0c20dc6378e118",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's jeans instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e5d073cd91daae11",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy care."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "eb6744886f262701",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be elastic waist."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5756aafb894501ad",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "913d4bc8df615ab6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0be7b820456a4ada",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #3357 camo m instead of standard."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "825b85dd870decff",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #3357 z green instead of standard."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

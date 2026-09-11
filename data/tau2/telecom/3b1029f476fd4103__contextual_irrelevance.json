@@ -1,0 +1,93 @@
+{
+ "sample_id": "3b1029f476fd4103__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "3b1029f476fd4103",
+ "query": "I just tried the new matcha latte at the caf\u00e9 down the street this morning, it was so creamy and had just the right amount of sweetness, I\u2019m definitely going back for another one tomorrow. I also finally finished that cozy mystery novel I\u2019ve been reading for weeks, the ending was such a fun twist I never saw the villain coming at all. My cat also knocked over my potted succulent last night, I spent half an hour cleaning up soil off the kitchen floor, I think I need to move all the plants to a higher shelf now. Anyway, I\u2019m having some trouble with my phone right now: my APN MMS settings aren\u2019t working at all, my data mode is turned off, I\u2019m currently abroad and I have roaming switched off, can you help me figure out what\u2019s going on?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just tried the new matcha latte at the caf\u00e9 down the street this morning, it was so creamy and had just the right amount of sweetness, I\u2019m definitely going back for another one tomorrow. I also finally finished that cozy mystery novel I\u2019ve been reading for weeks, the ending was such a fun twist I never saw the villain coming at all. My cat also knocked over my potted succulent last night, I spent half an hour cleaning up soil off the kitchen floor, I think I need to move all the plants to a higher shelf now. Anyway,",
+  "retained": [
+   "fault:break_apn_mms_setting",
+   "fault:data_mode_off",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

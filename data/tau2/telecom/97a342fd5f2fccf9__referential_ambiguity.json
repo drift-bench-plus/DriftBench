@@ -1,0 +1,85 @@
+{
+ "sample_id": "97a342fd5f2fccf9__referential_ambiguity",
+ "domain": "telecom",
+ "tree_id": "97a342fd5f2fccf9",
+ "query": "I'm abroad right now and I have roaming turned off, but my picture messages won't send. I think there's an issue with that one setting related to them, can you help me fix it?",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "fault:break_apn_mms_setting",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [
+   "fault:break_apn_mms_setting"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "5078719820676ff3"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:break_apn_mms_setting"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

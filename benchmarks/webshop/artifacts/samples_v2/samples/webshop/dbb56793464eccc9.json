@@ -1,0 +1,240 @@
+{
+ "adapter": "webshop",
+ "cluster": "frozen",
+ "fidelity_notes": [],
+ "goal_idx": 498,
+ "ground_truth": {
+  "cardinality": 42,
+  "hash": "733f0e27bf0e452fef32c62eec68f585",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B001DIH3A8\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B0038B1DEU\",[[\"size\",\"8.9 ounce (pack of 1)\"]]]",
+   "[\"B003SBZDJQ\",[[\"size\",\"5 ounce (pack of 1)\"]]]",
+   "[\"B0049K99RW\",[[\"size\",\"3 ounce (pack of 1)\"]]]",
+   "[\"B007HQNIFO\",[[\"style\",\"1 pack\"]]]",
+   "[\"B007HRFOXM\",[[\"style\",\"1 pack\"]]]",
+   "[\"B008P0BKG0\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B0099LQN0W\",[[\"size\",\"2 ounce (pack of 12)\"]]]",
+   "[\"B00AO7HUSO\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B00BT0LRW0\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+   "[\"B01B1X7R8C\",[[\"size\",\"1 pack\"]]]",
+   "[\"B01B6LJL5Q\",[[\"size\",\"10.5 ounce (pack of 1)\"]]]",
+   "[\"B01HQ6T36M\",[[\"size\",\"1 pack\"]]]",
+   "[\"B01LYHIL99\",[[\"size\",\"14.4 ounce (pack of 12)\"]]]",
+   "[\"B071SM7RLP\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+   "[\"B0773QFLQG\",[[\"size\",\"2.29 ounce (pack of 4)\"]]]",
+   "[\"B079QPZ8KN\",[[\"size\",\"1.4 ounce (pack of 1)\"]]]",
+   "[\"B07H8SVYBR\",[[\"size\",\"4.22 ounce (pack of 12)\"]]]",
+   "[\"B07KBDGVQ1\",[[\"size\",\"8.8 ounce (pack of 1)\"]]]",
+   "[\"B07N1WVS33\",[[\"size\",\"1 pack\"]]]",
+   "[\"B07QGFF2T9\",[[\"size\",\"3.52 ounce (pack of 1)\"]]]",
+   "[\"B07R92BDXS\",[[\"size\",\"pack of 3\"]]]",
+   "[\"B07T15BBGP\",[[\"size\",\"0.52 ounce (pack of 4)\"]]]",
+   "[\"B07T25FKZF\",[[\"size\",\"8 ounce (pack of 2)\"]]]",
+   "[\"B07W7TZ551\",[[\"size\",\"16 ounce (pack of 1)\"]]]",
+   "[\"B07Z34WBR5\",[[\"size\",\"12 pack\"]]]",
+   "[\"B08B8ZRWR1\",[[\"size\",\"7 ounce (pack of 1)\"]]]",
+   "[\"B08DL6BRT9\",[[\"size\",\"4.22 ounce (pack of 12)\"]]]",
+   "[\"B08M4GX3NK\",[[\"size\",\"12 pack\"]]]",
+   "[\"B08MV8ZBC4\",[[\"size\",\"2 ounce (pack of 5)\"]]]",
+   "[\"B08PDQNBPB\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+   "[\"B08WVQT5Y5\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B093G5YTHT\",[[\"size\",\"1\"]]]",
+   "[\"B093SPF3N6\",[[\"size\",\"12.5 ounce (pack of 1)\"]]]",
+   "[\"B09584LKHV\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B0964MKTLH\",[[\"size\",\"pack of 3\"]]]",
+   "[\"B096L9TDBF\",[[\"size\",\"4-pack\"]]]",
+   "[\"B09719XSDT\",[[\"size\",\"7 ounce (pack of 1)\"]]]",
+   "[\"B09BD1QKWG\",[[\"size\",\"1 pack\"]]]",
+   "[\"B09F1WXDMH\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B09NFWR6WD\",[[\"size\",\"2.5 ounce (pack of 18)\"]]]",
+   "[\"B09PRSCYJY\",[[\"size\",\"5 ounce (pack of 4)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "option:0",
+    "=",
+    "1.4 ounce (pack of 12)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "e5239a6e2618f00f"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "1.4 ounce (pack of 12)"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "in the 1.4 ounce pack of 12 size"
+   }
+  ],
+  "attempt": 1,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "1.4 ounce (pack of 12)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:gluten free",
+   "price_upper"
+  ],
+  "spec_id": "b950b1eab2f42641",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for gluten-free frozen snacks and a small pack of frozen fruit cups in the 1.4 ounce pack of 12 size under $40.",
+ "render_attempts": 1,
+ "sample_id": "dbb56793464eccc9",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the frozen instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1583fd9ac3ead4cb"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the frozen instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4e92be244bc86a29"
+  },
+  {
+   "announcement": "Also, it needs to be dietary fiber.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "646ed137da186de1"
+  },
+  {
+   "announcement": "Also, it needs to be drink mix.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d5c46677fbb47368"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2bee18d9a6388808"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cdbaa0dccd35effb"
+  },
+  {
+   "announcement": "Actually, make it 10\" round instead of 1.4 ounce (pack of 12).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8a5cb4531f82ea4e"
+  },
+  {
+   "announcement": "Actually, make it 10-count instead of 1.4 ounce (pack of 12).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fb77f714d2742fec"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   42,
+   226
+  ],
+  "rule": "ambiguous",
+  "true_card": 42,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need this product for afternoon snack with friends .rhythm superfoods carrot sticks,1.4 oz (pack of 12), vegan/gluten-free superfood snacks",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "d10615fa3a0d5317",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

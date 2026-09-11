@@ -1,0 +1,93 @@
+{
+ "sample_id": "7ba9281341f76141__insufficient_information",
+ "domain": "retail",
+ "tree_id": "7ba9281341f76141",
+ "query": "Hi there, I need to return a few items from my delivered order #W5490111 and would like the refund sent to credit_card_3124723, can you help me with that?",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "insufficient_information",
+  "family": "parameter",
+  "mask_kind": "withhold",
+  "kinds": [
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "arg:0:return_delivered_order_items:item_ids"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [
+   "arg:0:return_delivered_order_items:item_ids"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W5490111\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3124723\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d0b900a59bef20eb"
+ },
+ "signature": {
+  "rule": "withheld",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"4579334072\",\"6117189161\",\"4947717507\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W5490111\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_3124723\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:return_delivered_order_items:item_ids"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

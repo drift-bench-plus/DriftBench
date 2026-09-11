@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intent-tree"
+version = "0.1.0"
+description = "Generate intent trees with executable ground truth from verified benchmark tasks"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "pyarrow",
+    "ijson",
+    "thefuzz",
+    "python-Levenshtein",
+    "spacy",
+    "pyyaml",
+    "typer",
+    "rich",
+    "tqdm",
+    "loguru",
+    "flask",
+    "mysql-connector-python",
+    "openai",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+it = "intent_graph.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m unit"
+markers = [
+    "unit: pure logic, no datasets and no docker",
+    "data: needs the local benchmark datasets",
+    "docker: needs a running colima/docker daemon",
+    "battery: consistency battery over emitted trees",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = [
+    "E501",
+    # typer's documented idiom is calling typer.Option() in the signature
+    "B008",
+]

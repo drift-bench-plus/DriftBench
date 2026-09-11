@@ -1,0 +1,173 @@
+{
+ "adapter": "webshop",
+ "cluster": "mac",
+ "fidelity_notes": [],
+ "goal_idx": 231,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "12903d92318deec364dc218689684c69",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01DVLB1I4\",[[\"color\",\"gold\"]]]",
+   "[\"B07N2VZ17K\",[[\"color\",\"rose gold\"]]]",
+   "[\"B07S33PBY9\",[[\"color\",\"rose gold\"]]]",
+   "[\"B07XJGDPSY\",[[\"color\",\"rose gold\"]]]",
+   "[\"B08GR13XHR\",[[\"color\",\"rose gold\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:usb port",
+    "=",
+    "usb port"
+   ],
+   [
+    "option:0",
+    "=",
+    "rose gold"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "19e1de0a02a51222"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:usb port",
+     "=",
+     "usb port"
+    ],
+    [
+     "option:0",
+     "=",
+     "rose gold"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:usb port",
+   "option:0"
+  ],
+  "spec_id": "45034283175eebd4",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a Mac with a USB port in rose gold, and it needs to stay under the usual one for price.",
+ "render_attempts": 1,
+ "sample_id": "67bff51abf125e1f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the mac instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "411c57812f3c1052"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the mac instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "8212a2ec83c03b17"
+  },
+  {
+   "announcement": "Also, it needs to be power supply.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3b58841608f3b511"
+  },
+  {
+   "announcement": "Also, it needs to be compatible apple.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e733fd17f35ab459"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "81db95263756c277"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8631c5ddd3c41cc1"
+  },
+  {
+   "announcement": "Actually, make it #darkblue instead of rose gold.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "599d49d638118574"
+  },
+  {
+   "announcement": "Actually, make it (a1278) macbook pro 13\" with cd-rom instead of rose gold.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cb77fc737d71cb1e"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 9,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want to find a 10-foot long usb cable with a usb port in rose gold color.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "27b27fb19891b3ad",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "sample_id": "039da4465dcc345e__irrelevant_information",
+ "domain": "telecom",
+ "tree_id": "039da4465dcc345e",
+ "query": "I bought my phone with that official scratch-resistant tempered glass screen protector bundle last month, but I can't get any mobile data to work right now even though I'm overseas, I already checked that airplane mode is on, data mode is turned off, data saver is active, I used up all my data allowance for the month, and roaming is disabled.",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "irrelevant_information",
+  "family": "parameter",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "bought my phone with that official scratch-resistant tempered glass screen protector bundle last month",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:data_mode_off",
+   "fault:data_saver_mode_on",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "760473a37b0944ab"
+ },
+ "signature": {
+  "verdict": "ok_pragmatic_extra",
+  "executable": false,
+  "readings": 0,
+  "note": "extra detail is not expressible as a condition in this domain; string checks only"
+ },
+ "executable_admission": false,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

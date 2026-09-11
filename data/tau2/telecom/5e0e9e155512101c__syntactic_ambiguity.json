@@ -1,0 +1,221 @@
+{
+ "sample_id": "5e0e9e155512101c__syntactic_ambiguity",
+ "domain": "telecom",
+ "tree_id": "5e0e9e155512101c",
+ "query": "I\u2019m abroad right now and my mobile data and text messages won\u2019t send with roaming disabled.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "with roaming disabled",
+    "placements": [
+     [
+      "fault:user_abroad_roaming_disabled_off",
+      "user_abroad_roaming_disabled_off"
+     ],
+     [
+      "fault:user_abroad_roaming_disabled_off",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:break_app_storage_permission",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ],
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "74a00dab97817f6c"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:user_abroad_roaming_disabled_off"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

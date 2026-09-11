@@ -1,0 +1,235 @@
+{
+ "sample_id": "4fd74738b73e9cc2",
+ "tree_id": "4bf3161f1925a51d",
+ "adapter": "webshop",
+ "cluster": "digital cameras",
+ "goal_idx": 181,
+ "split": "test",
+ "source_instruction": "i'm looking for a ultra hd digital camera with optical zoom lens.",
+ "query": "Hey, I\u2019m looking for a digital camera that has solid optical zoom and ultra HD capture, plus a tiny silicone lens cap cover for under $20? Oh and make sure the camera comes with a built-in LED fill light for selfies too, that\u2019d be great. Wait, yeah, just pull up whatever options you have that fit what I\u2019m asking for, thanks.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "syntactic_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+syntactic_ambiguity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information",
+   "syntactic_ambiguity"
+  ],
+  "assigned_slots": {
+   "syntactic_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "for under $20",
+    "placements": [
+     [
+      "price_upper",
+      "20"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "text": "tiny silicone lens cap cover",
+    "condition": [
+     "attr:accessory",
+     "=",
+     "tiny silicone lens cap cover"
+    ]
+   },
+   {
+    "text": "built-in LED fill light for selfies",
+    "condition": [
+     "attr:built-in feature",
+     "=",
+     "LED fill light for selfies"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:optical zoom",
+   "attr:ultra hd"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:optical zoom",
+     "=",
+     "optical zoom"
+    ],
+    [
+     "attr:ultra hd",
+     "=",
+     "ultra hd"
+    ],
+    [
+     "attr:accessory",
+     "=",
+     "tiny silicone lens cap cover"
+    ],
+    [
+     "attr:built-in feature",
+     "=",
+     "LED fill light for selfies"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d2277435547873f7"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 5,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 5,
+    "readings": 1
+   },
+   "syntactic_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     5,
+     27
+    ],
+    "true_card": 5,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "58b28923f0df7081",
+  "conditions": [
+   [
+    "attr:optical zoom",
+    "=",
+    "optical zoom"
+   ],
+   [
+    "attr:ultra hd",
+    "=",
+    "ultra hd"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 5,
+  "value": [
+   "[\"B07KTCSG5C\",[]]",
+   "[\"B07N96YVSW\",[]]",
+   "[\"B07S5CVRM3\",[]]",
+   "[\"B07T7399JK\",[]]",
+   "[\"B08L5ZGKCZ\",[]]"
+  ],
+  "hash": "9cc52a7e15ea915683b85712867bad44"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "02f79fc486665f81",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the digital cameras instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "0fbdc21648c3ecd2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the digital cameras instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "2ab436ac9c205950",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be memory card."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "da2f908b79213029",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ac adapter."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1e0f6db5b43d27f9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2fc57d4f8542e40f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5e6bd26b4654fa66",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 80 instead of 20."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "eea9da11b80f248b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 instead of 20."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,148 @@
+{
+ "sample_id": "7b8bbc0c888a1c8f__indirect_intent",
+ "domain": "telecom",
+ "tree_id": "7b8bbc0c888a1c8f",
+ "query": "I\u2019ve been abroad for the past few days, and just noticed my phone has airplane mode turned on, the roaming setting is off, my SIM card feels like it\u2019s not sitting right in the tray, I already used up all my mobile data for the month, the apps I have installed can\u2019t access their storage, my APN MMS settings seem all messed up, the Wi-Fi calling cuts out every time I try to use it, and the network mode I have selected never connects to a strong signal at all.",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "indirect_intent",
+  "family": "intention",
+  "mask_kind": "oblique",
+  "kinds": [
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:break_app_storage_permission",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "8d9ebde1bce95b92"
+ },
+ "signature": {
+  "rule": "oblique",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

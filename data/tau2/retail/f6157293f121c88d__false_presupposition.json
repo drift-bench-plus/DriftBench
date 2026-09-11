@@ -1,0 +1,188 @@
+{
+ "sample_id": "f6157293f121c88d__false_presupposition",
+ "domain": "retail",
+ "tree_id": "f6157293f121c88d",
+ "query": "Hi there, since I figure the payment method paypal_7529813 might not be able to be applied to pending order updates, could you help me modify order #W2466703? I need to change item 9385662952 to item 8733974883, and also update my address under user id yusuf_hernandez_6785 to 565 Maple Drive, Suite 501, Washington, DC, USA 20307.",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "false_presupposition",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "false_presupposition"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "since I figure the payment method paypal_7529813 might not be able to be applied to pending order updates",
+    "condition": null,
+    "about": [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "\"paypal_7529813\""
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id",
+   "arg:1:modify_user_address:address1",
+   "arg:1:modify_user_address:address2",
+   "arg:1:modify_user_address:city",
+   "arg:1:modify_user_address:country",
+   "arg:1:modify_user_address:state",
+   "arg:1:modify_user_address:user_id",
+   "arg:1:modify_user_address:zip"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"9385662952\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"8733974883\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W2466703\""
+    ],
+    [
+     "arg:1:modify_user_address:address1",
+     "=",
+     "\"565 Maple Drive\""
+    ],
+    [
+     "arg:1:modify_user_address:address2",
+     "=",
+     "\"Suite 501\""
+    ],
+    [
+     "arg:1:modify_user_address:city",
+     "=",
+     "\"Washington\""
+    ],
+    [
+     "arg:1:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_user_address:state",
+     "=",
+     "\"DC\""
+    ],
+    [
+     "arg:1:modify_user_address:user_id",
+     "=",
+     "\"yusuf_hernandez_6785\""
+    ],
+    [
+     "arg:1:modify_user_address:zip",
+     "=",
+     "\"20307\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "ebb2d1bf9352f003"
+ },
+ "signature": {
+  "rule": "presupposed",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"9385662952\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"8733974883\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W2466703\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_7529813\""
+   ],
+   [
+    "arg:1:modify_user_address:address1",
+    "=",
+    "\"565 Maple Drive\""
+   ],
+   [
+    "arg:1:modify_user_address:address2",
+    "=",
+    "\"Suite 501\""
+   ],
+   [
+    "arg:1:modify_user_address:city",
+    "=",
+    "\"Washington\""
+   ],
+   [
+    "arg:1:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_user_address:state",
+    "=",
+    "\"DC\""
+   ],
+   [
+    "arg:1:modify_user_address:user_id",
+    "=",
+    "\"yusuf_hernandez_6785\""
+   ],
+   [
+    "arg:1:modify_user_address:zip",
+    "=",
+    "\"20307\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

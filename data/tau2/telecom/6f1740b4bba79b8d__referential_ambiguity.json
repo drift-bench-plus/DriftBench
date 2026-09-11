@@ -1,0 +1,107 @@
+{
+ "sample_id": "6f1740b4bba79b8d__referential_ambiguity",
+ "domain": "telecom",
+ "tree_id": "6f1740b4bba79b8d",
+ "query": "Hi, my mobile data isn't working at all right now. I already checked that airplane mode is turned on, my network preference is messed up, I messed up the APN MMS settings, and I hit that one limit too.",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "fault:data_usage_exceeded",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:break_apn_mms_setting"
+  ],
+  "hidden_slots": [
+   "fault:data_usage_exceeded"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "39c0394356b088f5"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:data_usage_exceeded"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "sample_id": "b8af4e6b9fdd8c79__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "b8af4e6b9fdd8c79",
+ "query": "I just spent the whole morning trying out the new sourdough bakery that opened up down the street, their lavender honey loaf is so fluffy and sweet I ended up buying two extra loaves to drop off for my neighbors later. On my walk back I saw a group of kids setting up a lemonade stand in the park, they had little hand-drawn signs and were giving out free dog treats to anyone who stopped by, it was so cute I stopped for a cup even though I don\u2019t usually drink lemonade. I also just remembered my favorite podcast is dropping a new episode this afternoon about vintage camera restoration, I\u2019ve been waiting for weeks to listen to it since I just picked up an old 35mm film camera at a flea market last weekend. Anyway, I\u2019m having some issues with my phone right now: my mobile data isn\u2019t working at all even though I tried adjusting my APN settings, I can\u2019t send or receive calls or texts, I was also told there might be an overdue bill holding up my service, and I think the SIM card might have come loose when I dropped my phone earlier, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the whole morning trying out the new sourdough bakery that opened up down the street, their lavender honey loaf is so fluffy and sweet I ended up buying two extra loaves to drop off for my neighbors later. On my walk back I saw a group of kids setting up a lemonade stand in the park, they had little hand-drawn signs and were giving out free dog treats to anyone who stopped by, it was so cute I stopped for a cup even though I don't usually drink lemonade. I also just remembered my favorite podcast is dropping a new episode this afternoon about vintage camera restoration, I've been waiting for weeks to listen to it since I just picked up an old 35mm film camera at a flea market last weekend.",
+  "retained": [
+   "fault:break_apn_settings",
+   "fault:overdue_bill_suspension",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:overdue_bill_suspension",
+     "=",
+     "overdue_bill_suspension"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

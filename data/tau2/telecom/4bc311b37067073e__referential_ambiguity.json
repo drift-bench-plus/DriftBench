@@ -1,0 +1,107 @@
+{
+ "sample_id": "4bc311b37067073e__referential_ambiguity",
+ "domain": "telecom",
+ "tree_id": "4bc311b37067073e",
+ "query": "Hi, I've been having really bad issues with wifi calling lately, I broke my APN MMS settings, my data usage is over the limit, and I also messed up that one so I can't send or receive text messages through my messaging app right now.",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "fault:break_app_sms_permission",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:data_usage_exceeded"
+  ],
+  "hidden_slots": [
+   "fault:break_app_sms_permission"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "505e6a65265fa1b5"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:break_app_sms_permission",
+    "=",
+    "break_app_sms_permission"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:break_app_sms_permission"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

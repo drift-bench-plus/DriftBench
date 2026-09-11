@@ -1,0 +1,157 @@
+{
+ "sample_id": "897d69cb035037dd__lexical_ambiguity",
+ "domain": "telecom",
+ "tree_id": "897d69cb035037dd",
+ "query": "Hi there, I\u2019m having really poor Wi-Fi calling, my MMS won\u2019t send at all, my data is off, I went over my limit last month, and I think there might be an issue with my card.",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "lexical_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "my card",
+    "placements": [
+     [
+      "fault:unseat_sim_card",
+      "unseat_sim_card"
+     ],
+     [
+      "fault:unseat_sim_card",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded"
+  ],
+  "hidden_slots": [
+   "fault:unseat_sim_card"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ],
+   [
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "735cea9e6b547218"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:unseat_sim_card"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

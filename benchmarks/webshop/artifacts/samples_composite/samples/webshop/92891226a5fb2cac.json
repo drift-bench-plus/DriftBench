@@ -1,0 +1,194 @@
+{
+ "sample_id": "92891226a5fb2cac",
+ "tree_id": "8beb5f007cd49886",
+ "adapter": "webshop",
+ "cluster": "deodorants & antiperspirants",
+ "goal_idx": 358,
+ "split": "test",
+ "source_instruction": "what deodorants do you have that are alcohol free and very long lasting?",
+ "query": "Ugh, I spent all last night binging that new coastal foraging documentary and now I can\u2019t stop thinking about how to identify wild blackberries without mixing them up with the toxic lookalikes, plus I need to remember to pick up extra cat litter on my way home because my tabby keeps kicking half the current bag all over the laundry room floor, and I swear my neighbor\u2019s lawn gnome moved three feet closer to my driveway overnight which is low-key stressing me out. Anyway, I\u2019m browsing the deodorants & antiperspirants right now, can you help me find a good option that\u2019s alcohol free and long lasting? I don\u2019t want anything over a reasonable price, obviously.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+vagueness_subjectivity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I spent all last night binging that new coastal foraging documentary and now I can\u2019t stop thinking about how to identify wild blackberries without mixing them up with the toxic lookalikes, plus I need to remember to pick up extra cat litter on my way home because my tabby keeps kicking half the current bag all over the laundry room floor, and I swear my neighbor\u2019s lawn gnome moved three feet closer to my driveway overnight which is low-key stressing me out.",
+  "retained": [
+   "attr:alcohol free",
+   "attr:long lasting"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:alcohol free",
+     "=",
+     "alcohol free"
+    ],
+    [
+     "attr:long lasting",
+     "=",
+     "long lasting"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "efaa396caa32a58e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 11,
+  "lit_card": 16,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 16,
+    "true_card": 11,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "9e4803fe86169ce2",
+  "conditions": [
+   [
+    "attr:alcohol free",
+    "=",
+    "alcohol free"
+   ],
+   [
+    "attr:long lasting",
+    "=",
+    "long lasting"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 11,
+  "value": [
+   "[\"B00BN9OW6K\",[]]",
+   "[\"B013UKOWAA\",[]]",
+   "[\"B01N7E0O2P\",[]]",
+   "[\"B076391VVY\",[]]",
+   "[\"B07PTVLHDT\",[]]",
+   "[\"B07SV8N5JW\",[]]",
+   "[\"B0874W6L83\",[]]",
+   "[\"B08TNZK3ZM\",[]]",
+   "[\"B094NXKBT6\",[]]",
+   "[\"B09MZKP5ZT\",[]]",
+   "[\"B09MZL9CMT\",[]]"
+  ],
+  "hash": "100c49ccd741d272926cad1335034ae6"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1e74e8c9f7b4475b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the deodorants & antiperspirants instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "d445613bda664ed7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the deodorants & antiperspirants instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "5575f5845cbead32",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dermatologist tested."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "dc12910e077290f8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be sulfate free."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "7bfb9a59e93c19a3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a8ffeff40ee86d3c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "88e226262c673689",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 20."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d9178178ff28c649",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 instead of 20."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

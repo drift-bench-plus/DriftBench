@@ -1,0 +1,140 @@
+{
+ "sample_id": "197d4144aa6b0da8__vagueness_subjectivity",
+ "domain": "telecom",
+ "tree_id": "197d4144aa6b0da8",
+ "query": "Hi there, I'm abroad right now with roaming turned off, airplane mode is on, my mobile data is turned off entirely, I already exceeded my monthly data limit, my SIM card isn't seated properly, the Break app has all its permissions disabled, and my Wi-Fi calling is really wonky.",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "vagueness_subjectivity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "fault:bad_wifi_calling",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_app_both_permissions",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [
+   "fault:bad_wifi_calling"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "0e99083592144477"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:bad_wifi_calling"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

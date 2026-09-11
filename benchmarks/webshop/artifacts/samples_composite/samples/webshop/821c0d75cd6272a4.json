@@ -1,0 +1,200 @@
+{
+ "sample_id": "821c0d75cd6272a4",
+ "tree_id": "12d5734d35c6cd87",
+ "adapter": "webshop",
+ "cluster": "pantry staples",
+ "goal_idx": 489,
+ "split": "test",
+ "source_instruction": "i'm looking for a 32 ounce package of gluten free almond flour.",
+ "query": "I swear the barista at the corner caf\u00e9 remembered my order today even though I haven\u2019t stopped by in three whole weeks\u2014they had my iced oat milk latte with an extra shot and just a dash of cinnamon waiting on the counter before I even finished pulling my wallet out of my bag. On the walk over, I passed that little community garden plot I\u2019ve been watching all spring, and the first sunflower seedlings finally pushed up through the dirt, all bright and fuzzy with tiny little leaves, and someone had stuck a tiny hand-painted ladybug rock right next to the biggest sprout. I also noticed the stray tabby that hangs out by the laundromat was curled up on top of the warm dryer vent, napping so hard it didn\u2019t even twitch when a kid zoomed by on a sparkly pink scooter yelling about ice cream. I\u2019ve heard the pantry staples section carries options that are totally gluten free, that there\u2019s that one size I always go for available there too. I\u2019ve heard none of the picks there run too pricey, that none of them go over whatever I was comfortable with last time I picked this up, that they all stick to what makes sense for my budget.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "indirect_intent",
+  "insufficient_information",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+indirect_intent+insufficient_information+referential_ambiguity",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "indirect_intent",
+   "insufficient_information",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I swear the barista at the corner caf\u00e9 remembered my order today even though I haven\u2019t stopped by in three whole weeks\u2014they had my iced oat milk latte with an extra shot and just a dash of cinnamon waiting on the counter before I even finished pulling my wallet out of my bag. On the walk over, I passed that little community garden plot I\u2019ve been watching all spring, and the first sunflower seedlings finally pushed up through the dirt, all bright and fuzzy with tiny little leaves, and someone had stuck a tiny hand-painted ladybug rock right next to the biggest sprout. I also noticed the stray tabby that hangs out by the laundromat was curled up on top of the warm dryer vent, napping so hard it didn\u2019t even twitch when a kid zoomed by on a sparkly pink scooter yelling about ice cream.",
+  "retained": [
+   "attr:gluten free"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "65009009d94ae150"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 4,
+  "lit_card": 528,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 6,
+    "true_card": 4,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 363,
+    "true_card": 4,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "08486ec40a329416",
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "option:0",
+    "=",
+    "32 ounce"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 4,
+  "value": [
+   "[\"B001EO5S1C\",[[\"size\",\"32 ounce (pack of 6)\"]]]",
+   "[\"B00S5AZRYG\",[[\"size\",\"24 ounce\"]]]",
+   "[\"B013PTSCWU\",[[\"size\",\"21 ounce\"]]]",
+   "[\"B09913B3WZ\",[[\"size\",\"32 ounce\"]]]"
+  ],
+  "hash": "af976802a7a2caac58116a098c8b9e4b"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7e8bafccb35e5707",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6215ee8575f5182",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "65f2292138e4b7f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be great gift."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bd35a16081691216",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gift basket."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5b80cf5427dfc468",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ce695cf84de8b47c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1bc641492c1156bd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .2 pack - 1 pound instead of 32 ounce."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5f959bce39642f69",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .10 set(2 ounce (pack of 1)) instead of 32 ounce."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

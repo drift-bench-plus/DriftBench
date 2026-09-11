@@ -1,0 +1,306 @@
+{
+ "sample_id": "cbbc6b54d001031c",
+ "tree_id": "43aa8760f6697065",
+ "adapter": "webshop",
+ "cluster": "toothpicks",
+ "goal_idx": 425,
+ "split": "test",
+ "source_instruction": "i want pink cupcake toppers for my baby shower",
+ "query": "Ugh, I just spent ten minutes digging through my junk drawer looking for the tiny cocktail umbrella picks I swore I stashed after last summer\u2019s taco night, only to find my cat chewed half the frills to bits and the rest are crusted with old lime salt. I also remembered I need to pick up extra paper plates for the potluck at work next week, the kind with the little sunflower prints that don\u2019t get soggy when you load them up with potato salad. Oh, and my neighbor dropped off a jar of homemade pickles yesterday that I still haven\u2019t found a spot for in my fridge because the top shelf is crammed full of leftover takeout containers. Since you probably don\u2019t have any baby shower-themed toothpicks in stock right now, can you show me pink ones that are under $20?",
+ "strategy_ids": [
+  "false_presupposition",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "false_presupposition",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you probably don\u2019t have any baby shower-themed toothpicks in stock right now",
+    "condition": null,
+    "about": [
+     "attr:baby shower",
+     "baby shower"
+    ],
+    "alternative": [
+     "attr:baby shower",
+     "pink"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I just spent ten minutes digging through my junk drawer looking for the tiny cocktail umbrella picks I swore I stashed after last summer\u2019s taco night, only to find my cat chewed half the frills to bits and the rest are crusted with old lime salt. I also remembered I need to pick up extra paper plates for the potluck at work next week, the kind with the little sunflower prints that don\u2019t get soggy when you load them up with potato salad. Oh, and my neighbor dropped off a jar of homemade pickles yesterday that I still haven\u2019t found a spot for in my fridge because the top shelf is crammed full of leftover takeout containers.",
+  "retained": [
+   "attr:baby shower",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:baby shower",
+     "=",
+     "pink"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "e197f1fc160481d8"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 115,
+  "lit_card": 65,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 65,
+    "true_card": 115,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "b08c9482357b34f1",
+  "conditions": [
+   [
+    "attr:baby shower",
+    "=",
+    "baby shower"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 115,
+  "value": [
+   "[\"B071ZGHKZM\",[[\"color\",\"pink\"]]]",
+   "[\"B07BL1SGCZ\",[[\"color\",\"pink\"]]]",
+   "[\"B07DTC16Y9\",[[\"color\",\"pink\"]]]",
+   "[\"B07F9NMSH3\",[[\"color\",\"pink\"]]]",
+   "[\"B07H36X8MN\",[[\"color\",\"pink\"]]]",
+   "[\"B07HMKW52H\",[[\"color\",\"pink\"]]]",
+   "[\"B07KRD4GMY\",[[\"color\",\"rose pink\"]]]",
+   "[\"B07LFC5VVG\",[[\"color\",\"pink\"]]]",
+   "[\"B07RMG3261\",[[\"color\",\"pink\"]]]",
+   "[\"B07RX4XJ6R\",[[\"color\",\"pink\"]]]",
+   "[\"B07S8S1SX2\",[[\"color\",\"baby &pink silver glitter\"]]]",
+   "[\"B07T35ZQCD\",[[\"color\",\"pink\"]]]",
+   "[\"B07TT9TJGM\",[[\"color\",\"pink - bold\"]]]",
+   "[\"B07V5YQN93\",[[\"color\",\"pink\"]]]",
+   "[\"B07Z5L7YYS\",[[\"color\",\"pink\"]]]",
+   "[\"B07ZKSBLD1\",[[\"color\",\"pink\"]]]",
+   "[\"B07ZRQVW2Y\",[[\"color\",\"pink\"]]]",
+   "[\"B08213FW4M\",[[\"color\",\"pink\"]]]",
+   "[\"B082DZ9ZBX\",[[\"color\",\"pink\"]]]",
+   "[\"B083NZ7CFK\",[[\"color\",\"pink\"]]]",
+   "[\"B083XW4V2Y\",[[\"color\",\"pink\"]]]",
+   "[\"B083XYLGWZ\",[[\"color\",\"pink\"]]]",
+   "[\"B0855R8WHV\",[[\"color\",\"pink\"]]]",
+   "[\"B0863X3X4K\",[[\"color\",\"pink\"]]]",
+   "[\"B086LD711Y\",[[\"color\",\"pink\"]]]",
+   "[\"B086PMJHW7\",[[\"color\",\"pink\"]]]",
+   "[\"B086PNPW3Q\",[[\"color\",\"pink\"]]]",
+   "[\"B086XB31L2\",[[\"color\",\"pink\"]]]",
+   "[\"B0871VSLGP\",[[\"color\",\"pink\"]]]",
+   "[\"B0871W388T\",[[\"color\",\"pink\"]]]",
+   "[\"B0892Q8FDF\",[[\"color\",\"pink\"]]]",
+   "[\"B0893SZKNW\",[[\"color\",\"pink\"]]]",
+   "[\"B08B5RNLRF\",[[\"color\",\"pink\"]]]",
+   "[\"B08C5LJ2W9\",[[\"color\",\"pink\"]]]",
+   "[\"B08H25PKYR\",[[\"color\",\"pink\"]]]",
+   "[\"B08JCCGYHX\",[[\"color\",\"pink\"]]]",
+   "[\"B08KVZZPL4\",[[\"color\",\"pink\"]]]",
+   "[\"B08LDBFKMS\",[[\"color\",\"pink\"]]]",
+   "[\"B08LVH32PB\",[[\"color\",\"pink\"]]]",
+   "[\"B08M9Q7987\",[[\"color\",\"pink\"]]]",
+   "[\"B08N4T81LQ\",[[\"color\",\"pink\"]]]",
+   "[\"B08N6PFHCP\",[[\"color\",\"pink\"]]]",
+   "[\"B08NX9XVMY\",[[\"color\",\"pink\"]]]",
+   "[\"B08PZ8WNNW\",[[\"color\",\"pink\"]]]",
+   "[\"B08PZFFXJH\",[[\"color\",\"pink\"]]]",
+   "[\"B08TWMJ79F\",[[\"color\",\"pink\"]]]",
+   "[\"B092LPH666\",[[\"color\",\"pink\"]]]",
+   "[\"B092SKSKQS\",[[\"color\",\"xmixed styles pink\"]]]",
+   "[\"B093CYRXY4\",[[\"color\",\"pink\"]]]",
+   "[\"B093D7GSTZ\",[[\"color\",\"pink\"]]]",
+   "[\"B093GNXNX4\",[[\"color\",\"pink\"]]]",
+   "[\"B093L1RC8P\",[[\"color\",\"pink\"]]]",
+   "[\"B093LRJPYV\",[[\"color\",\"pink\"]]]",
+   "[\"B094G4N9M7\",[[\"color\",\"pink\"]]]",
+   "[\"B0952WVXNC\",[[\"color\",\"pink\"]]]",
+   "[\"B0953GH8YJ\",[[\"color\",\"pink\"]]]",
+   "[\"B0953Q9DVP\",[[\"color\",\"pink\"]]]",
+   "[\"B095PP9B1Q\",[[\"color\",\"pink lollipop\"]]]",
+   "[\"B096SSQTQ6\",[[\"color\",\"pink\"]]]",
+   "[\"B096Y9R9C5\",[[\"color\",\"pink\"]]]",
+   "[\"B096ZS5SP7\",[[\"color\",\"pink\"]]]",
+   "[\"B0971CLP2F\",[[\"color\",\"pink\"]]]",
+   "[\"B09772HXZR\",[[\"color\",\"pink\"]]]",
+   "[\"B097PVYJH9\",[[\"color\",\"pink\"]]]",
+   "[\"B097Q817GJ\",[[\"color\",\"pink\"]]]",
+   "[\"B097Y96FYN\",[[\"color\",\"pink\"]]]",
+   "[\"B097ZN2ZH5\",[[\"color\",\"pink\"]]]",
+   "[\"B0982TX6M9\",[[\"color\",\"pink\"]]]",
+   "[\"B098XW3QL8\",[[\"color\",\"pink\"]]]",
+   "[\"B098XXQ4FL\",[[\"color\",\"pink\"]]]",
+   "[\"B09B4YGR8K\",[[\"color\",\"pink\"]]]",
+   "[\"B09BMB8VR7\",[[\"color\",\"pink\"]]]",
+   "[\"B09DL6QNTK\",[[\"color\",\"pink\"]]]",
+   "[\"B09DL8HYG2\",[[\"pattern name\",\"pink\"]]]",
+   "[\"B09DL9Z5VR\",[[\"color\",\"pink\"]]]",
+   "[\"B09DLB2KNX\",[[\"color\",\"pink\"]]]",
+   "[\"B09F6Q9WBL\",[[\"color\",\"pink\"]]]",
+   "[\"B09F9VMW16\",[[\"color\",\"pink\"]]]",
+   "[\"B09HPMDHZK\",[[\"color\",\"pink\"]]]",
+   "[\"B09HPNLRGS\",[[\"color\",\"pink\"]]]",
+   "[\"B09HPP7LSL\",[[\"color\",\"pink\"]]]",
+   "[\"B09JG67TTZ\",[[\"color\",\"pink\"]]]",
+   "[\"B09JGP46P3\",[[\"color\",\"pink\"]]]",
+   "[\"B09JLXZHSX\",[[\"color\",\"pink\"]]]",
+   "[\"B09JMWT4HD\",[[\"color\",\"pink\"]]]",
+   "[\"B09JSH5J95\",[[\"color\",\"pink\"]]]",
+   "[\"B09KHB2QS7\",[[\"color\",\"pink\"]]]",
+   "[\"B09KRBSG36\",[[\"size\",\"glitter pink\"]]]",
+   "[\"B09KS1ZDSX\",[[\"color\",\"pink\"]]]",
+   "[\"B09KS27ZN6\",[[\"color\",\"pink\"]]]",
+   "[\"B09L53KZ64\",[[\"color\",\"pink\"]]]",
+   "[\"B09LQP92MW\",[[\"color\",\"pink\"]]]",
+   "[\"B09M48XFQX\",[[\"color\",\"pink\"]]]",
+   "[\"B09M74RY5C\",[[\"color\",\"pink\"]]]",
+   "[\"B09MHQM11F\",[[\"color\",\"pink\"]]]",
+   "[\"B09MS43TQ6\",[[\"color\",\"pink\"]]]",
+   "[\"B09MVQCR68\",[[\"color\",\"pink\"]]]",
+   "[\"B09MVRLY59\",[[\"color\",\"pink\"]]]",
+   "[\"B09N9LCNPM\",[[\"color\",\"pink\"]]]",
+   "[\"B09N9QHVHK\",[[\"pattern name\",\"1-pink\"]]]",
+   "[\"B09NDG3WCR\",[[\"color\",\"pink love\"]]]",
+   "[\"B09NNB4L1T\",[[\"pattern name\",\"girl pink\"]]]",
+   "[\"B09P52C1RM\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q68FW2F\",[[\"pattern name\",\"a pink\"]]]",
+   "[\"B09QCRS557\",[[\"color\",\"pink butterfly\"]]]",
+   "[\"B09QHVPV4L\",[[\"color\",\"pink\"]]]",
+   "[\"B09QHZDXRT\",[[\"color\",\"pink\"]]]",
+   "[\"B09R1HJ3JT\",[[\"color\",\"pink\"]]]",
+   "[\"B09R4NH2GS\",[[\"color\",\"pink\"]]]",
+   "[\"B09RZRT8HP\",[[\"color\",\"pink\"]]]",
+   "[\"B09S5SMD13\",[[\"color\",\"pink\"]]]",
+   "[\"B09S5VCF9Q\",[[\"color\",\"pink\"]]]",
+   "[\"B09SHZ239R\",[[\"pattern name\",\"baby-pink\"]]]",
+   "[\"B09SJ2QZHP\",[[\"pattern name\",\"ear-pink\"]]]",
+   "[\"B09SJ38DY7\",[[\"pattern name\",\"baby-pink\"]]]"
+  ],
+  "hash": "8d32cf8c5478df2924d7edfafc2d6f17"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "a5e2a9ac63b5d573",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpicks instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f3db182cc6b0c0d3",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpicks instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7dd4f659a6d5ebf4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be baked goods."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9f2931d9b66b3612",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cream cheese."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ae4f8a2c5a03d970",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e41460a12a4c43c4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5f1c0d044be92e6c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1st birthday instead of pink."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d57f629cc59107c6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 21 - centerpiece sticks instead of pink."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

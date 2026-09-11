@@ -1,0 +1,125 @@
+{
+ "sample_id": "f50774ae0bd0bd13__syntactic_ambiguity",
+ "domain": "telecom",
+ "tree_id": "f50774ae0bd0bd13",
+ "query": "I'm abroad right now and I can't get my app permissions and SIM card to work properly with roaming turned off.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "with roaming turned off",
+    "placements": [
+     [
+      "fault:user_abroad_roaming_disabled_on",
+      "user_abroad_roaming_disabled_on"
+     ],
+     [
+      "fault:user_abroad_roaming_disabled_on",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:break_app_both_permissions",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ],
+   [
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "0c1662288388f5aa"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:user_abroad_roaming_disabled_on"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

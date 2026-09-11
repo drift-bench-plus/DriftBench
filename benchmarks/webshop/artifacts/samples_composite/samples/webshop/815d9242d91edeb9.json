@@ -1,0 +1,229 @@
+{
+ "sample_id": "815d9242d91edeb9",
+ "tree_id": "bacbd00bdb8e0384",
+ "adapter": "webshop",
+ "cluster": "bathing accessories",
+ "goal_idx": 4,
+ "split": "test",
+ "source_instruction": "i want a pink niuta 2 pack hair towel wrap for dry hair.",
+ "query": "Oh man, my goldfish Bubbles has been knocking over his floating plant decor nonstop this week, I even had to fish the little plastic lily pad out of the filter twice yesterday. My roommate\u2019s been on a huge sour candy kick too, she left a half-eaten bag of neon gummy worms on the coffee table that\u2019s been attracting tiny fruit flies for three days straight. I also noticed the hallway doormat\u2019s fraying so bad the loose fibers keep getting tracked onto the bathmat every time someone steps out of the shower. I\u2019ve heard those pink ones that dry hair work really well for under $20 when you\u2019re browsing the bathing accessories section.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+indirect_intent",
+  "family": "intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "indirect_intent"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "Oh man, my goldfish Bubbles has been knocking over his floating plant decor nonstop this week, I even had to fish the little plastic lily pad out of the filter twice yesterday. My roommate\u2019s been on a huge sour candy kick too, she left a half-eaten bag of neon gummy worms on the coffee table that\u2019s been attracting tiny fruit flies for three days straight. I also noticed the hallway doormat\u2019s fraying so bad the loose fibers keep getting tracked onto the bathmat every time someone steps out of the shower.",
+  "retained": [
+   "attr:dry hair",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:dry hair",
+     "=",
+     "dry hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "02bc26d92e3e4721"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 60,
+  "lit_card": 60,
+  "components": {}
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "582c2b30d496ee68",
+  "conditions": [
+   [
+    "attr:dry hair",
+    "=",
+    "dry hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 60,
+  "value": [
+   "[\"B01C2EF5NS\",[[\"color\",\"pink\"]]]",
+   "[\"B01MT8781S\",[[\"color\",\"pink\"]]]",
+   "[\"B074J97DWG\",[[\"color\",\"baby pink\"]]]",
+   "[\"B075JFCNH3\",[[\"color\",\"pink\"]]]",
+   "[\"B07CFKV2GL\",[[\"color\",\"# pink\"]]]",
+   "[\"B07CP6TP2G\",[[\"color\",\"purple+pink + rainbow\"]]]",
+   "[\"B07G573JXM\",[[\"color\",\"pink\"]]]",
+   "[\"B07PHQ3GJY\",[[\"color\",\"pink\"]]]",
+   "[\"B07QNJDXJ4\",[[\"color\",\"pink\"]]]",
+   "[\"B07YNC9JCG\",[[\"color\",\"pale pink\"]]]",
+   "[\"B07Z66YLSF\",[[\"color\",\"pink dot\"]]]",
+   "[\"B07Z673LK1\",[[\"color\",\"pink\"]]]",
+   "[\"B07Z8ZGFN2\",[[\"color\",\"pink\"]]]",
+   "[\"B083LGYX6R\",[[\"color\",\"pink\"]]]",
+   "[\"B083LNXMCZ\",[[\"color\",\"pink\"]]]",
+   "[\"B083LP53WT\",[[\"color\",\"pink\"]]]",
+   "[\"B0861MR1M1\",[[\"color\",\"pink\"]]]",
+   "[\"B087JZ3NWG\",[[\"color\",\"pink\"]]]",
+   "[\"B087JZZ954\",[[\"color\",\"pink\"]]]",
+   "[\"B088WCH7Q9\",[[\"color\",\"pink\"]]]",
+   "[\"B08DK2XM9K\",[[\"color\",\"c-pink\"]]]",
+   "[\"B08G14B779\",[[\"color\",\"pink\"]]]",
+   "[\"B08G4MV1MD\",[[\"color\",\"pink\"]]]",
+   "[\"B08G5RRKK6\",[[\"color\",\"pink | palms\"]]]",
+   "[\"B08G82GD3L\",[[\"color\",\"pink\"]]]",
+   "[\"B08GQFYSZQ\",[[\"color\",\"pink\"]]]",
+   "[\"B08HY6KF66\",[[\"color\",\"pink& purple\"]]]",
+   "[\"B08PCQK4BQ\",[[\"color\",\"pink\"]]]",
+   "[\"B08PKY8TBP\",[[\"color\",\"pink\"]]]",
+   "[\"B08PYQ1WT5\",[[\"color\",\"pink\"]]]",
+   "[\"B08XZ3SDBL\",[[\"color\",\"2 pcs classic style (1 pink and 1 white)\"]]]",
+   "[\"B08Y8HR163\",[[\"color\",\"pink\"]]]",
+   "[\"B08YFJB6FY\",[[\"color\",\"pink\"]]]",
+   "[\"B08YP5WFMN\",[[\"color\",\"pink\"]]]",
+   "[\"B0919G5KJK\",[[\"color\",\"pink\"]]]",
+   "[\"B092J8143K\",[[\"color\",\"pink1\"]]]",
+   "[\"B093D4HGT7\",[[\"color\",\"pink\"]]]",
+   "[\"B093XZZBNQ\",[[\"color\",\"pink\"]]]",
+   "[\"B093YB1CJT\",[[\"color\",\"pink\"]]]",
+   "[\"B094D5KDNC\",[[\"color\",\"pink\"]]]",
+   "[\"B0969X3XW8\",[[\"color\",\"cloud pink\"]]]",
+   "[\"B096TWLSBZ\",[[\"color\",\"pink\"]]]",
+   "[\"B09B1QHSPB\",[[\"color\",\"pink\"]]]",
+   "[\"B09BJ7YWCZ\",[[\"color\",\"pink\"]]]",
+   "[\"B09BLT1QYC\",[[\"color\",\"pink\"]]]",
+   "[\"B09BWYJVX8\",[[\"color\",\"hot pink\"]]]",
+   "[\"B09DCKV81G\",[[\"color\",\"hot pink\"]]]",
+   "[\"B09DTLXMXR\",[[\"color\",\"hot pink\"]]]",
+   "[\"B09GK425QY\",[[\"color\",\"pink\"]]]",
+   "[\"B09JZQGNWZ\",[[\"color\",\"hot pink\"]]]",
+   "[\"B09K39RXKG\",[[\"size\",\"pink\"]]]",
+   "[\"B09L64HZTF\",[[\"color\",\"pink floral\"]]]",
+   "[\"B09L82Y1CD\",[[\"color\",\"pink\"]]]",
+   "[\"B09MBM6RX1\",[[\"color\",\"pink | silver-white\"]]]",
+   "[\"B09N3S1PX4\",[[\"color\",\"pink polka dot\"]]]",
+   "[\"B09NCYKJP2\",[[\"color\",\"pink\"]]]",
+   "[\"B09NQNHYQ2\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q1WTWJB\",[[\"color\",\"pink\"]]]",
+   "[\"B09R1WZXN7\",[[\"color\",\"pink\"]]]",
+   "[\"B09R9BV6J2\",[[\"color\",\"pink mouth\"]]]"
+  ],
+  "hash": "270f92ef121a5a364bfd858f3bb713e9"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "874df47adf6060c1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bathing accessories instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "af15b930ca3ad6b5",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bathing accessories instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "472103b15b8a3ac3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a2b02c9e32eb263e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be beauty salon."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "76c6c8523e867b44",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "aee48ac70b51da7d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "12cc81fb67461c0c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1pack-blue towel instead of pink."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "efcf005866dc8b31",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #4 instead of pink."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

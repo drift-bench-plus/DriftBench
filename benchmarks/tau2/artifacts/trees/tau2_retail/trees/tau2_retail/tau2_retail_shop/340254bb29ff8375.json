@@ -1,0 +1,895 @@
+{
+ "adapter": "tau2_retail",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_items",
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_items:item_ids",
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "arg:0:modify_pending_order_items:order_id",
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "arg:1:modify_pending_order_address:address1",
+    "arg:1:modify_pending_order_address:address2",
+    "arg:1:modify_pending_order_address:city",
+    "arg:1:modify_pending_order_address:country",
+    "arg:1:modify_pending_order_address:order_id",
+    "arg:1:modify_pending_order_address:state",
+    "arg:1:modify_pending_order_address:zip",
+    "arg:2:modify_pending_order_items:item_ids",
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "arg:2:modify_pending_order_items:order_id",
+    "arg:2:modify_pending_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"1355937109\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"9949163720\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W9810810\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7252880\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address1",
+     "=",
+     "\"555 Highland Drive\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 872\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:order_id",
+     "=",
+     "\"#W3730488\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:zip",
+     "=",
+     "\"10116\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:item_ids",
+     "=",
+     "[\"2913673670\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"2216662955\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:order_id",
+     "=",
+     "\"#W3730488\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7252880\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "a1d49ce73abe66b63e0a58c20ac84bcb",
+    "kind": "statehash",
+    "value": "{\"db\":\"1301e5413c383b7647b710051c6526553b0cec3836432cc3e93e3cbbafeb0a7d\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "c3212cde37ad5b36",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "item_ids": [
+        "1355937109"
+       ],
+       "new_item_ids": [
+        "9949163720"
+       ],
+       "order_id": "#W9810810",
+       "payment_method_id": "gift_card_7252880"
+      },
+      "name": "modify_pending_order_items"
+     },
+     {
+      "arguments": {
+       "address1": "555 Highland Drive",
+       "address2": "Suite 872",
+       "city": "New York",
+       "country": "USA",
+       "order_id": "#W3730488",
+       "state": "NY",
+       "zip": "10116"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "2913673670"
+       ],
+       "new_item_ids": [
+        "2216662955"
+       ],
+       "order_id": "#W3730488",
+       "payment_method_id": "gift_card_7252880"
+      },
+      "name": "modify_pending_order_items"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "111",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "exchange_delivered_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip",
+    "arg:1:modify_pending_order_items:item_ids",
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "arg:1:modify_pending_order_items:order_id",
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "arg:2:exchange_delivered_order_items:item_ids",
+    "arg:2:exchange_delivered_order_items:new_item_ids",
+    "arg:2:exchange_delivered_order_items:order_id",
+    "arg:2:exchange_delivered_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"144 Lakeview Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 925\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W4219264\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"10228\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"8886009523\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"2407258246\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4219264\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_1620755\""
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"6341716129\"]"
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"8302289002\"]"
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W3445693\""
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_1620755\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "039bf3bd60eef21b03d02860430fcb8b",
+    "kind": "statehash",
+    "value": "{\"db\":\"0089a38140d5fb73906b4984b8742ce6e6a73bd08894ee370274fc84adfcb44c\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "1558966fb77683b5",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "144 Lakeview Drive",
+       "address2": "Suite 925",
+       "city": "New York",
+       "country": "USA",
+       "order_id": "#W4219264",
+       "state": "NY",
+       "zip": "10228"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "8886009523"
+       ],
+       "new_item_ids": [
+        "2407258246"
+       ],
+       "order_id": "#W4219264",
+       "payment_method_id": "credit_card_1620755"
+      },
+      "name": "modify_pending_order_items"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "6341716129"
+       ],
+       "new_item_ids": [
+        "8302289002"
+       ],
+       "order_id": "#W3445693",
+       "payment_method_id": "credit_card_1620755"
+      },
+      "name": "exchange_delivered_order_items"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "102",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "calculate"
+    ],
+    "writes": [
+     "return_delivered_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:return_delivered_order_items:item_ids",
+    "arg:0:return_delivered_order_items:order_id",
+    "arg:0:return_delivered_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"2872451762\",\"9534205511\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W9502127\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_2433177\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "041291d6059408a6c70f2d06be9c42c9",
+    "kind": "statehash",
+    "value": "{\"db\":\"3e78643a771521156d2d2422415af35b76ec58d69bb832cc943f09b66b68aaa9\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "a8844bc2f8a581b1",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "item_ids": [
+        "2872451762",
+        "9534205511"
+       ],
+       "order_id": "#W9502127",
+       "payment_method_id": "paypal_2433177"
+      },
+      "name": "return_delivered_order_items"
+     }
+    ],
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "calculate"
+    ]
+   },
+   "source_record": "47",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip",
+    "arg:1:modify_pending_order_items:item_ids",
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "arg:1:modify_pending_order_items:order_id",
+    "arg:1:modify_pending_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"555 Highland Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 872\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W3730488\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"10116\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"2913673670\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"9844888101\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W3730488\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7252880\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "5fcbea3dc009c94278ba750d91a74d6f",
+    "kind": "statehash",
+    "value": "{\"db\":\"740780a3145b0da6b13789ba615399e2d5230111234ad0c624cbc53542760301\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "c79cf8b040419c6c",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "555 Highland Drive",
+       "address2": "Suite 872",
+       "city": "New York",
+       "country": "USA",
+       "order_id": "#W3730488",
+       "state": "NY",
+       "zip": "10116"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "2913673670"
+       ],
+       "new_item_ids": [
+        "9844888101"
+       ],
+       "order_id": "#W3730488",
+       "payment_method_id": "gift_card_7252880"
+      },
+      "name": "modify_pending_order_items"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_items",
+     "modify_pending_order_address"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_items:item_ids",
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "arg:0:modify_pending_order_items:order_id",
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "arg:1:modify_pending_order_address:address1",
+    "arg:1:modify_pending_order_address:address2",
+    "arg:1:modify_pending_order_address:city",
+    "arg:1:modify_pending_order_address:country",
+    "arg:1:modify_pending_order_address:order_id",
+    "arg:1:modify_pending_order_address:state",
+    "arg:1:modify_pending_order_address:zip"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"1355937109\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"9949163720\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W9810810\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7252880\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address1",
+     "=",
+     "\"555 Highland Drive\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 872\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:order_id",
+     "=",
+     "\"#W3730488\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:zip",
+     "=",
+     "\"10116\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "7a4af4c8277d48ee55d7704784aee333",
+    "kind": "statehash",
+    "value": "{\"db\":\"33a67b2f8312ede4219fe83da256b4d07f0cfc6493d529a8a06ba2218f0b0c77\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "c8e52b9fdcb27d75",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "item_ids": [
+        "1355937109"
+       ],
+       "new_item_ids": [
+        "9949163720"
+       ],
+       "order_id": "#W9810810",
+       "payment_method_id": "gift_card_7252880"
+      },
+      "name": "modify_pending_order_items"
+     },
+     {
+      "arguments": {
+       "address1": "555 Highland Drive",
+       "address2": "Suite 872",
+       "city": "New York",
+       "country": "USA",
+       "order_id": "#W3730488",
+       "state": "NY",
+       "zip": "10116"
+      },
+      "name": "modify_pending_order_address"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "min_gt_moved_edges": 1,
+  "require_full_quota": false,
+  "seed": 7
+ },
+ "edges": [
+  {
+   "delta": {
+    "changed": [
+     [
+      "arg:2:modify_pending_order_items:new_item_ids",
+      "=",
+      "[\"9844888101\"]",
+      "[\"2216662955\"]"
+     ]
+    ]
+   },
+   "dst": "c3212cde37ad5b36",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "source_record": "111",
+   "src": "8f4be9a7381a680e"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "retail_request",
+     "reads": [],
+     "writes": [
+      "modify_pending_order_address",
+      "modify_pending_order_items",
+      "exchange_delivered_order_items"
+     ]
+    }
+   },
+   "dst": "1558966fb77683b5",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "102",
+   "src": "8f4be9a7381a680e"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "retail_request",
+     "reads": [
+      "find_user_id_by_name_zip",
+      "get_order_details",
+      "get_order_details",
+      "get_order_details",
+      "calculate",
+      "calculate"
+     ],
+     "writes": [
+      "return_delivered_order_items"
+     ]
+    }
+   },
+   "dst": "a8844bc2f8a581b1",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "47",
+   "src": "8f4be9a7381a680e"
+  },
+  {
+   "delta": {
+    "removed_request": "modify_pending_order_items"
+   },
+   "dst": "c79cf8b040419c6c",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "8f4be9a7381a680e"
+  },
+  {
+   "delta": {
+    "removed_request": "modify_pending_order_items"
+   },
+   "dst": "c8e52b9fdcb27d75",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "8f4be9a7381a680e"
+  }
+ ],
+ "env_id": "tau2_retail_shop",
+ "env_spec": {
+  "domain": "retail",
+  "env_id": "tau2_retail_shop",
+  "env_key": "tau2_retail_shop",
+  "initialization": {},
+  "solo_mode": false
+ },
+ "root": {
+  "base": {
+   "kind": "retail_request",
+   "reads": [],
+   "writes": [
+    "modify_pending_order_items",
+    "modify_pending_order_address",
+    "modify_pending_order_items"
+   ]
+  },
+  "bound_slots": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id",
+   "arg:1:modify_pending_order_address:address1",
+   "arg:1:modify_pending_order_address:address2",
+   "arg:1:modify_pending_order_address:city",
+   "arg:1:modify_pending_order_address:country",
+   "arg:1:modify_pending_order_address:order_id",
+   "arg:1:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_address:zip",
+   "arg:2:modify_pending_order_items:item_ids",
+   "arg:2:modify_pending_order_items:new_item_ids",
+   "arg:2:modify_pending_order_items:order_id",
+   "arg:2:modify_pending_order_items:payment_method_id"
+  ],
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"1355937109\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"9949163720\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W9810810\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7252880\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address1",
+    "=",
+    "\"555 Highland Drive\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 872\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:city",
+    "=",
+    "\"New York\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "=",
+    "\"#W3730488\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:state",
+    "=",
+    "\"NY\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:zip",
+    "=",
+    "\"10116\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:item_ids",
+    "=",
+    "[\"2913673670\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"9844888101\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:order_id",
+    "=",
+    "\"#W3730488\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7252880\""
+   ]
+  ],
+  "ground_truth": {
+   "hash": "265f419875b45d2ad65cb37e83b987d0",
+   "kind": "statehash",
+   "value": "{\"db\":\"6eb2be1662a3ddae310baf9b4a6ce65a3ef63b6f6885285463c7bcaed978dfdc\",\"errors\":[]}"
+  },
+  "gt_extensional": false,
+  "intent_id": "8f4be9a7381a680e",
+  "is_seed": true,
+  "recipe": {
+   "actions": [
+    {
+     "arguments": {
+      "item_ids": [
+       "1355937109"
+      ],
+      "new_item_ids": [
+       "9949163720"
+      ],
+      "order_id": "#W9810810",
+      "payment_method_id": "gift_card_7252880"
+     },
+     "name": "modify_pending_order_items"
+    },
+    {
+     "arguments": {
+      "address1": "555 Highland Drive",
+      "address2": "Suite 872",
+      "city": "New York",
+      "country": "USA",
+      "order_id": "#W3730488",
+      "state": "NY",
+      "zip": "10116"
+     },
+     "name": "modify_pending_order_address"
+    },
+    {
+     "arguments": {
+      "item_ids": [
+       "2913673670"
+      ],
+      "new_item_ids": [
+       "9844888101"
+      ],
+      "order_id": "#W3730488",
+      "payment_method_id": "gift_card_7252880"
+     },
+     "name": "modify_pending_order_items"
+    }
+   ],
+   "reads": []
+  },
+  "source_record": "112",
+  "unbound_slots": [
+   "arg:2:modify_pending_order_items:new_item_ids"
+  ]
+ },
+ "tree_id": "340254bb29ff8375"
+}

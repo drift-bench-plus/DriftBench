@@ -1,0 +1,129 @@
+{
+ "sample_id": "fc35e696a65c3750__vagueness_subjectivity",
+ "domain": "telecom",
+ "tree_id": "fc35e696a65c3750",
+ "query": "Hi, I'm abroad right now and roaming is off, my APN MMS settings are broken, both of the app's permissions are messed up, data mode is turned off, and I've exceeded my data usage limit, also my Wi-Fi calling is being really weird lately.",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "vagueness_subjectivity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "fault:bad_wifi_calling",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:break_apn_mms_setting",
+   "fault:break_app_both_permissions",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [
+   "fault:bad_wifi_calling"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "0e99083592144477"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:bad_wifi_calling"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

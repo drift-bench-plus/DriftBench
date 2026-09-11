@@ -1,0 +1,96 @@
+{
+ "sample_id": "c859a2a91f7d31b4__referential_ambiguity",
+ "domain": "telecom",
+ "tree_id": "c859a2a91f7d31b4",
+ "query": "Hey, I'm currently abroad and I have roaming turned off, but my network keeps cutting out really badly, plus I can't get that one to connect properly so I can't load any pages at all.",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "fault:bad_vpn",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [
+   "fault:bad_vpn"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "510cd755cdffc4e0"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_vpn",
+    "=",
+    "bad_vpn"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:bad_vpn"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

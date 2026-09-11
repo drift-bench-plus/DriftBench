@@ -1,0 +1,146 @@
+{
+ "sample_id": "6758a87324bc7a59__factual_error",
+ "domain": "telecom",
+ "tree_id": "6758a87324bc7a59",
+ "query": "I can't send MMS messages, my apps keep glitching because they can't access their stored data, mobile data won't turn on at all, I got an alert saying I used up all my data for the month, and my phone keeps saying there's no SIM card detected, plus my Wi-Fi calls keep dropping mid-call. Oh and I'm out of the country right now, I think roaming might still be off which is probably part of the issue.",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "factual_error",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "factual_error"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [
+   [
+    "fault:bad_network_preference",
+    "bad_network_preference",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:break_app_storage_permission",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [
+   "fault:bad_network_preference"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "cb40c7e087b0bc1f"
+ },
+ "signature": {
+  "rule": "substituted",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:bad_network_preference"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

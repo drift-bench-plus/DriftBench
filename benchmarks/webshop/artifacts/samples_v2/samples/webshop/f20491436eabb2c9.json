@@ -1,0 +1,200 @@
+{
+ "adapter": "webshop",
+ "cluster": "wall art",
+ "fidelity_notes": [],
+ "goal_idx": 470,
+ "ground_truth": {
+  "cardinality": 32,
+  "hash": "9e78c11c1970f629d54c64f18d9b2fc5",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B076263GKX\",[[\"size\",\"24x30\"]]]",
+   "[\"B07628R531\",[[\"size\",\"24x30\"]]]",
+   "[\"B07629T5ZV\",[[\"size\",\"24x30\"]]]",
+   "[\"B0762FJM71\",[[\"size\",\"24x30\"]]]",
+   "[\"B0762G4N8B\",[[\"size\",\"24x30\"]]]",
+   "[\"B079TKZ615\",[[\"size\",\"24x30\"]]]",
+   "[\"B07F3DP6Y8\",[[\"size\",\"24x30\"]]]",
+   "[\"B07F3FVWXP\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRHFHSS\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRHZ9WT\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRKYB28\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRPP334\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRQ165L\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRSTTVP\",[[\"size\",\"24x30\"]]]",
+   "[\"B07N2XRWZ4\",[[\"size\",\"24x30\"]]]",
+   "[\"B07N2XYJNH\",[[\"size\",\"24x30\"]]]",
+   "[\"B07N2XZMBZ\",[[\"size\",\"24x30\"]]]",
+   "[\"B07N2YV7ZL\",[[\"size\",\"24x30\"]]]",
+   "[\"B07PYLF6LJ\",[[\"size\",\"24x30\"]]]",
+   "[\"B07PZQF14Z\",[[\"size\",\"24x30\"]]]",
+   "[\"B07TTV7CLK\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YND718B\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YNDBQCK\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YNDM1BX\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YNF9FM1\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YNFJF3V\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YNFMLJW\",[[\"size\",\"24x30\"]]]",
+   "[\"B082JMDPXT\",[[\"size\",\"24x30\"]]]",
+   "[\"B0886L3L47\",[[\"size\",\"24x30\"]]]",
+   "[\"B089RS4K3G\",[[\"size\",\"24x30\"]]]",
+   "[\"B08C3TJWBT\",[[\"size\",\"24x30\"]]]",
+   "[\"B08C3X6X2W\",[[\"size\",\"24x30\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:ready hang",
+    "=",
+    "ready hang"
+   ],
+   [
+    "option:0",
+    "=",
+    "24x30"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "ca93d2952e5e9a11"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ready hang",
+     "=",
+     "ready hang"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:ready hang",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for wall art that’s ready to hang, fits the usual one size, and costs no more than $30.",
+ "render_attempts": 1,
+ "sample_id": "f20491436eabb2c9",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the wall art instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1c0e3d17cba331da"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the wall art instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "61d09d4438f77caa"
+  },
+  {
+   "announcement": "Also, it needs to be white item.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3523f84fcf881d9b"
+  },
+  {
+   "announcement": "Also, it needs to be wood finish.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "74b901c3489427c4"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "18f9debe4bd88d7b"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "76e3781c81ff3286"
+  },
+  {
+   "announcement": "Actually, make it 1 instead of 24x30.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "91a5d4373a5d3c3a"
+  },
+  {
+   "announcement": "Actually, make it #02 instead of 24x30.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ae37d5d06c8cd578"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 1026,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 32,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'd like to buy a ready to hang toilet paper holder for size 24 by 30 rolls.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "912962a8a6cdcc1d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,148 @@
+{
+ "sample_id": "71c1fb155b9e4b62__indirect_intent",
+ "domain": "retail",
+ "tree_id": "71c1fb155b9e4b62",
+ "query": "I have two delivered orders, #W2905754 and #W4073673, the first has item 3478699712 and the second has item 2216662955, and my saved payment method on file is credit_card_3677959. I was told that item 9844888101 is a suitable alternative for both of those items I received in the two orders.",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "indirect_intent",
+  "family": "intention",
+  "mask_kind": "oblique",
+  "kinds": [
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id",
+   "arg:1:exchange_delivered_order_items:item_ids",
+   "arg:1:exchange_delivered_order_items:new_item_ids",
+   "arg:1:exchange_delivered_order_items:order_id",
+   "arg:1:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"3478699712\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"9844888101\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W2905754\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3677959\""
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"2216662955\"]"
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"9844888101\"]"
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W4073673\""
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3677959\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "8d9ebde1bce95b92"
+ },
+ "signature": {
+  "rule": "oblique",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"3478699712\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"9844888101\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W2905754\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_3677959\""
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"2216662955\"]"
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"9844888101\"]"
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W4073673\""
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_3677959\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

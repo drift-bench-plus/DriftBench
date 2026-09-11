@@ -1,0 +1,106 @@
+{
+ "sample_id": "711530a5de7b00b1__insufficient_information",
+ "domain": "telecom",
+ "tree_id": "711530a5de7b00b1",
+ "query": "Hi, I'm abroad right now and my mobile data isn't working at all, can you help me figure out what's going wrong?",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "insufficient_information",
+  "family": "parameter",
+  "mask_kind": "withhold",
+  "kinds": [
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "1c076b697eb69c77"
+ },
+ "signature": {
+  "rule": "withheld",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

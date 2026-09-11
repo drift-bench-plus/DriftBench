@@ -1,0 +1,180 @@
+{
+ "adapter": "webshop",
+ "cluster": "hdmi cables",
+ "fidelity_notes": [],
+ "goal_idx": 392,
+ "ground_truth": {
+  "cardinality": 15,
+  "hash": "71745af29623bd567751f80bee01b2a0",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01CZVEUIE\",[[\"color\",\"blue\"]]]",
+   "[\"B01GJC4WRO\",[[\"color\",\"blue\"]]]",
+   "[\"B071GK8XM1\",[[\"color\",\"blue blue\"]]]",
+   "[\"B07FX7G4M9\",[[\"color\",\"blue\"]]]",
+   "[\"B07KMC3DTL\",[[\"color\",\"blue\"]]]",
+   "[\"B07L7421JF\",[[\"color\",\"blue\"]]]",
+   "[\"B07N3Z4PHD\",[[\"color\",\"blue\"]]]",
+   "[\"B07SBPS58S\",[[\"color\",\"3 in 1 blue(6ft)\"]]]",
+   "[\"B07T54754H\",[[\"color\",\"blue\"]]]",
+   "[\"B07V1WHDKL\",[[\"color\",\"blue\"]]]",
+   "[\"B0828WMRFX\",[[\"color\",\"blue\"]]]",
+   "[\"B088FK2XTV\",[[\"color\",\"blue\"]]]",
+   "[\"B094XXRBFK\",[[\"color\",\"blue\"]]]",
+   "[\"B09DSB3XZM\",[[\"color\",\"blue\"]]]",
+   "[\"B09L1475T3\",[[\"color\",\"blue\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:usb port",
+    "=",
+    "usb port"
+   ],
+   [
+    "option:0",
+    "=",
+    "blue"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "f83fdb6aabac65c2"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:usb port",
+     "=",
+     "usb port"
+    ],
+    [
+     "option:0",
+     "=",
+     "blue"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the afternoon planting cherry tomato seedlings in my balcony garden, and I’m already daydreaming about the sweet, sun-ripened fruit I’ll harvest this summer. I even picked up a cute terracotta pot with a hand-painted sunflower design to hold one of the smaller plants, and I’m trying to figure out the best spot to hang it so it gets enough light. My neighbor’s cat stopped by to investigate the new greenery, and it took me ten minutes to gently shoo it away before it could nibble on the tender leaves.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:usb port",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the afternoon planting cherry tomato seedlings in my balcony garden, and I’m already daydreaming about the sweet, sun-ripened fruit I’ll harvest this summer. I even picked up a cute terracotta pot with a hand-painted sunflower design to hold one of the smaller plants, and I’m trying to figure out the best spot to hang it so it gets enough light. My neighbor’s cat stopped by to investigate the new greenery, and it took me ten minutes to gently shoo it away before it could nibble on the tender leaves. I’m looking for an HDMI cable that has a USB port, comes in blue, and costs no more than $30.",
+ "render_attempts": 3,
+ "sample_id": "9363fbd9e541e16f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hdmi cables instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "024281688ee7612e"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hdmi cables instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "857ccfb5d204e736"
+  },
+  {
+   "announcement": "Also, it needs to be easy use.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "677f64f3044bc139"
+  },
+  {
+   "announcement": "Also, it needs to be apple watch.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fbedf5ff727c7626"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dd9c1a5efd4168ff"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ed8aa6e83f853f64"
+  },
+  {
+   "announcement": "Actually, make it 0.6 meters instead of blue.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ae8d8e3f1396736a"
+  },
+  {
+   "announcement": "Actually, make it 0.9m | 3ft instead of blue.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e8a44becb4c018f1"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 15,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 15,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a blue usb port cables",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "4f837a369eabbf3a",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

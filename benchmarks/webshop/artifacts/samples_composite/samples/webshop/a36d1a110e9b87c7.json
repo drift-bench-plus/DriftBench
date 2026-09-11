@@ -1,0 +1,319 @@
+{
+ "sample_id": "a36d1a110e9b87c7",
+ "tree_id": "a7fd9f9de2febcb5",
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "goal_idx": 318,
+ "split": "test",
+ "source_instruction": "i am looking for a 200ft coaxial cable black in color. indoor/outdoor use.",
+ "query": "I just got back from taking my rescue beagle Mabel to the neighborhood dog park a little while ago, and the whole trip was way more chaotic than I ever expected it to be. She somehow managed to sniff out a half-eaten peanut butter sandwich tucked under a park bench before I could catch up to her, then proceeded to zoom straight through a giant mud puddle right as a group of regulars I chat with every weekend walked over to say hi. I had to wrap her in my favorite faded hoodie to get her in the car without getting mud all over the seats, and now that hoodie\u2019s in the wash on the hottest cycle possible while Mabel\u2019s curled up on the couch napping like she didn\u2019t cause a whole scene. Hey, I\u2019m looking through the satellite television section right now for a 3ft optical audio cable to hook up my new dish setup, it\u2019d be great if it came bundled with a pack of color-coded cable labels too, can you show me what options you have that fit? I don\u2019t want anything that costs too much, just whatever works for my basic setup without going over a price that makes sense for a small part like this. I don\u2019t need any fancy extra-long lengths or premium upgrades, just the standard short length I mentioned to tuck neatly behind my TV stand.",
+ "strategy_ids": [
+  "insufficient_information",
+  "contextual_irrelevance",
+  "irrelevant_information",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+contextual_irrelevance+irrelevant_information+factual_error",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "contextual_irrelevance",
+   "irrelevant_information",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:coaxial cable",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:coaxial cable",
+    "coaxial cable",
+    "optical audio cable"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "it\u2019d be great if it came bundled with a pack of color-coded cable labels too",
+    "condition": null
+   },
+   {
+    "text": "optical audio cable",
+    "condition": [
+     "attr:coaxial cable",
+     "=",
+     "optical audio cable"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from taking my rescue beagle Mabel to the neighborhood dog park a little while ago, and the whole trip was way more chaotic than I ever expected it to be. She somehow managed to sniff out a half-eaten peanut butter sandwich tucked under a park bench before I could catch up to her, then proceeded to zoom straight through a giant mud puddle right as a group of regulars I chat with every weekend walked over to say hi. I had to wrap her in my favorite faded hoodie to get her in the car without getting mud all over the seats, and now that hoodie\u2019s in the wash on the hottest cycle possible while Mabel\u2019s curled up on the couch napping like she didn\u2019t cause a whole scene.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:coaxial cable",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:coaxial cable",
+     "=",
+     "optical audio cable"
+    ],
+    [
+     "option:0",
+     "=",
+     "3ft"
+    ],
+    [
+     "attr:coaxial cable",
+     "=",
+     "optical audio cable"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "aee133978c224e3b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 92,
+  "lit_card": 3,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 147,
+    "true_card": 92,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 92,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 3,
+    "true_card": 92,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "b060a90c2c0fa0e3",
+  "conditions": [
+   [
+    "attr:coaxial cable",
+    "=",
+    "coaxial cable"
+   ],
+   [
+    "option:0",
+    "=",
+    "3ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:coaxial cable",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 92,
+  "value": [
+   "[\"B003VBA33E\",[[\"size\",\"3ft\"]]]",
+   "[\"B003ZZSVIK\",[[\"size\",\"3ft\"]]]",
+   "[\"B071Y7JGV2\",[[\"size\",\"3 ft\"]]]",
+   "[\"B073KRBFSV\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KRCZPZ\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KRGXKV\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KS45WW\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KSFT82\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KSKPS1\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KT97P6\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KT97PL\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KV3QM5\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KV3QPX\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KVDN75\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KVHWN3\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KVHWP6\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KWB1CH\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KX9B82\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KXN9G6\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KXY1HX\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KY92N6\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KYC8R3\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KYH41C\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KYNSDP\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KYSF7V\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZ5SJL\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZ7ZDW\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZ8V5T\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZFZZS\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZTXYF\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZW4RW\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L19GGM\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L1B9W3\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L1KSMQ\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L1RPYT\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L1TR5F\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L23SL9\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L26QNP\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2CX5Y\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2K3S1\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2LCH5\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2R6YL\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2RDKV\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2TRC1\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2VVP4\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L368RR\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3HDHZ\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3SNW4\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3SNWW\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3VNCG\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3VWN7\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3WYTS\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3XPNN\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L434XB\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L44ZBG\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L4KBVJ\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L4WH86\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L56VL8\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L7K1XN\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L9BGZN\",[[\"size\",\"3ft\"]]]",
+   "[\"B073LB3ZW6\",[[\"size\",\"3ft\"]]]",
+   "[\"B073LBXJ9T\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VB832J\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VBKQ97\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VBNQFG\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VBRQSN\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VBV3RQ\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VBZJYL\",[[\"size\",\"3ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"3ft (3 pack)\"]]]",
+   "[\"B079K7FMS9\",[[\"size\",\"3 ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"size\",\"3ft\"]]]",
+   "[\"B07CQB2FZK\",[[\"size\",\"3ft\"]]]",
+   "[\"B07MHQJ8ZZ\",[[\"size\",\"3 ft\"]]]",
+   "[\"B07TDP7W6C\",[[\"size\",\"3 ft\"]]]",
+   "[\"B07WYKSZZF\",[[\"size\",\"3ft(1m)\"]]]",
+   "[\"B081DQLVK5\",[[\"size\",\"3ft\"]]]",
+   "[\"B08352NCDN\",[[\"size\",\"3ft\"]]]",
+   "[\"B0861KSF5B\",[[\"size\",\"3ft\"]]]",
+   "[\"B08C5KGR5R\",[[\"size\",\"3ft\"]]]",
+   "[\"B08LKZ6H1L\",[[\"size\",\"3ft\"]]]",
+   "[\"B08M3MPD7S\",[[\"size\",\"3ft\"]]]",
+   "[\"B091CKYSVL\",[[\"size\",\"3ft tv cable+3ft ethernet cat6a cable\"]]]",
+   "[\"B096KVYFN5\",[[\"size\",\"3 ft\"]]]",
+   "[\"B097H3973N\",[[\"size\",\"3ft\"]]]",
+   "[\"B097H4JBTX\",[[\"size\",\"3ft\"]]]",
+   "[\"B097H5734C\",[[\"size\",\"3ft\"]]]",
+   "[\"B097H5V8FR\",[[\"size\",\"3ft\"]]]",
+   "[\"B09876WT1T\",[[\"size\",\"3ft-2pk\"]]]",
+   "[\"B099RJGRRZ\",[[\"size\",\"3ft\"]]]",
+   "[\"B09DVSLDPB\",[[\"size\",\"3ft | 1m\"]]]"
+  ],
+  "hash": "c00ccabc3d5438eb0a06f291a22e9bf6"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0d4271e27a5b21d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7845bdf8528c5ec1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "19b799e6bc0ad377",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be plug play."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "96a6978f78d25296",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be audio cable."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2cda361b98b2802e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c0f2b37f0ac737be",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "17e7b8e6374b8de9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pack instead of 3ft."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4625a3c9c0f7cb4a",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it 3ghz dual w |  ground - black instead of 3ft."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

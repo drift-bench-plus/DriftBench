@@ -1,0 +1,125 @@
+{
+ "sample_id": "3d1436e97a0c5348__lexical_ambiguity",
+ "domain": "telecom",
+ "tree_id": "3d1436e97a0c5348",
+ "query": "I was trying to stream a video just now but it keeps buffering nonstop, and I realized my data cap\u2019s been hit while I have data saver mode running, could you help me check why my service is so spotty?",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "lexical_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "spotty",
+    "placements": [
+     [
+      "fault:bad_network_preference",
+      "bad_network_preference"
+     ],
+     [
+      "fault:bad_network_preference",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:data_saver_mode_on",
+   "fault:data_usage_exceeded"
+  ],
+  "hidden_slots": [
+   "fault:bad_network_preference"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ],
+   [
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "7287afe40dcb53db"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:bad_network_preference"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

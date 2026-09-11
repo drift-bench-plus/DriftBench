@@ -1,0 +1,100 @@
+{
+ "sample_id": "d44b29a6b02cb119__false_presupposition",
+ "domain": "retail",
+ "tree_id": "d44b29a6b02cb119",
+ "query": "Since the payment method credit_card_8105988 is probably not available for returns, can you tell me how to process the return for item 5996159312 from my order #W4689314, and let me know what other refund methods I can use instead?",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "false_presupposition",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "false_presupposition"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since the payment method credit_card_8105988 is probably not available for returns",
+    "condition": null,
+    "about": [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "\"credit_card_8105988\""
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"5996159312\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W4689314\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "8d074f3523db14be"
+ },
+ "signature": {
+  "rule": "presupposed",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"5996159312\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W4689314\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_8105988\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

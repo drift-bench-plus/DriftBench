@@ -1,0 +1,182 @@
+{
+ "adapter": "webshop",
+ "cluster": "video surveillance",
+ "fidelity_notes": [],
+ "goal_idx": 184,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "6ec2e226b6b811002787153ab9ba1992",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08B7TXXWF\",[[\"color\",\"3mp\"]]]",
+   "[\"B08W57SX4J\",[[\"size\",\"3mp camera\"]]]",
+   "[\"B08ZN3Q4DN\",[[\"color\",\"3mp\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:motion detection",
+    "=",
+    "motion detection"
+   ],
+   [
+    "option:0",
+    "=",
+    "3mp"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "7278ebab2e56407b"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "irrelevant_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [
+   {
+    "condition": [
+     "attr:tamper alarm",
+     "=",
+     "built-in tamper alarm"
+    ],
+    "text": "built-in tamper alarm"
+   }
+  ],
+  "family": "parameter",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:motion detection",
+     "=",
+     "motion detection"
+    ],
+    [
+     "option:0",
+     "=",
+     "3mp"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ],
+    [
+     "attr:tamper alarm",
+     "=",
+     "built-in tamper alarm"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:motion detection",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "04666e7e19098858",
+  "strategy_id": "irrelevant_information",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for video surveillance gear with motion detection, 3mp resolution, a built-in tamper alarm, and a price limit of 70.",
+ "render_attempts": 3,
+ "sample_id": "64e9b1ce7061587c",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the video surveillance instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "18a6cd52da3d2b94"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the video surveillance instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b6a0c0bc79e73076"
+  },
+  {
+   "announcement": "Also, it needs to be mobile phone.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "267155914c5d4abe"
+  },
+  {
+   "announcement": "Also, it needs to be rechargeable battery.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "876e17877673602d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "353171591dacb3bf"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8c7e8e0461c8e66b"
+  },
+  {
+   "announcement": "Actually, make it 1 female to 4 male (1 pack) instead of 3mp.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6d3ee0bb9e3d45f9"
+  },
+  {
+   "announcement": "Actually, make it 1 pc instead of 3mp.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dcb428f641864c08"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "extras",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for 3mp motion detection security camera.",
+ "split": "test",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "tree_id": "4944911280127eae",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

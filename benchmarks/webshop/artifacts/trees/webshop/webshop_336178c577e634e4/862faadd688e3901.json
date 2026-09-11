@@ -1,0 +1,802 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B00PUEV4CE",
+    "cluster": "snack crackers",
+    "name": "Back to Nature Crackers, Non-GMO Crispy Wheat, 1 Ounce Grab & Go Bags, 100 Count",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Wheat"
+   },
+   "bound_slots": [
+    "attr:high fructose",
+    "attr:non gmo",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:high fructose",
+     "=",
+     "high fructose"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "wheat crackers"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2f201b94b9b1ffd0b646f09f0c23ef69",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000I1PZNI\",[[\"flavor name\",\"crispy wheat\"]]]",
+     "[\"B00PUEV4CE\",[[\"flavor\",\"wheat crackers\"]]]",
+     "[\"B08FRM4SCW\",[[\"pattern name\",\"cookies + crispy wheat crackers\"]]]",
+     "[\"B09QQT2R53\",[[\"flavor name\",\"wheat bread\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "28a7f51b4d9a6cc2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "snack crackers",
+    "goal": {
+     "asin": "B00PUEV4CE",
+     "attributes": [
+      "non gmo",
+      "high fructose"
+     ],
+     "category": "",
+     "goal_options": [
+      "wheat crackers"
+     ],
+     "name": "Back to Nature Crackers, Non-GMO Crispy Wheat, 1 Ounce Grab & Go Bags, 100 Count",
+     "price_upper": 70,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Wheat",
+     "query": "snack crackers"
+    }
+   },
+   "source_record": "0c62628ca5759b9c",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B0086UI36O",
+    "cluster": "snack crackers",
+    "name": "Kay's Naturals Protein Cookie Bites, Cinnamon Almond, Gluten-Free, Low Fat, Diabetes Friendly, All Natural Flavorings, 1.2 Ounce (Pack of 6)",
+    "product_category": "Health & Household › Diet & Sports Nutrition"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:low fat",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:low fat",
+     "=",
+     "low fat"
+    ],
+    [
+     "option:0",
+     "=",
+     "protein chips - chili nacho cheese"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "5c6b416418a3378bfef3c048b8c336a3",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0086UI36O\",[[\"flavor\",\"chili nacho cheese\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "575719c4dd47a4cf",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "snack crackers",
+    "goal": {
+     "asin": "B0086UI36O",
+     "attributes": [
+      "gluten free",
+      "low fat"
+     ],
+     "category": "",
+     "goal_options": [
+      "protein chips - chili nacho cheese"
+     ],
+     "name": "Kay's Naturals Protein Cookie Bites, Cinnamon Almond, Gluten-Free, Low Fat, Diabetes Friendly, All Natural Flavorings, 1.2 Ounce (Pack of 6)",
+     "price_upper": 20,
+     "product_category": "Health & Household › Diet & Sports Nutrition",
+     "query": "snack crackers"
+    }
+   },
+   "source_record": "0bfe65d90c5c6a9b",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B093CLC753",
+    "cluster": "snack crackers",
+    "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich"
+   },
+   "bound_slots": [
+    "attr:artificial colors",
+    "attr:low calorie",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:artificial colors",
+     "=",
+     "artificial colors"
+    ],
+    [
+     "attr:low calorie",
+     "=",
+     "low calorie"
+    ],
+    [
+     "option:0",
+     "=",
+     "lemon,chocolate,cream cheese"
+    ],
+    [
+     "option:1",
+     "=",
+     "1 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "02e189cde19d6b6c899c24961d87de7b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09QNXZQT2\",[[\"flavor name\",\"chocolate\"],[\"size\",\"12 pack\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "2443186f14ced29b",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "snack crackers",
+    "goal": {
+     "asin": "B093CLC753",
+     "attributes": [
+      "artificial colors",
+      "low calorie"
+     ],
+     "category": "",
+     "goal_options": [
+      "lemon,chocolate,cream cheese",
+      "1 pack"
+     ],
+     "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich",
+     "query": "snack crackers"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B093CLC753",
+    "cluster": "snack crackers",
+    "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich"
+   },
+   "bound_slots": [
+    "attr:brown rice",
+    "attr:low calorie",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:brown rice",
+     "=",
+     "brown rice"
+    ],
+    [
+     "attr:low calorie",
+     "=",
+     "low calorie"
+    ],
+    [
+     "option:0",
+     "=",
+     "lemon,chocolate,cream cheese"
+    ],
+    [
+     "option:1",
+     "=",
+     "1 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "02e189cde19d6b6c899c24961d87de7b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09QNXZQT2\",[[\"flavor name\",\"chocolate\"],[\"size\",\"12 pack\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "dd4733caf4a63373",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "snack crackers",
+    "goal": {
+     "asin": "B093CLC753",
+     "attributes": [
+      "brown rice",
+      "low calorie"
+     ],
+     "category": "",
+     "goal_options": [
+      "lemon,chocolate,cream cheese",
+      "1 pack"
+     ],
+     "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich",
+     "query": "snack crackers"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B093CLC753",
+    "cluster": "snack crackers",
+    "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich"
+   },
+   "bound_slots": [
+    "attr:low calorie",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:low calorie",
+     "=",
+     "low calorie"
+    ],
+    [
+     "option:0",
+     "=",
+     "lemon,chocolate,cream cheese"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "e6c9f3e6611e09ae560c75789fc32a89",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B087YHVCQH\",[[\"flavor name\",\"keto chocolate chip\"]]]",
+     "[\"B08L2ZH9L1\",[[\"color\",\"chocolate chip\"]]]",
+     "[\"B08TFJ4QCJ\",[[\"flavor name\",\"chocolate chip pecan\"]]]",
+     "[\"B093CLC753\",[[\"flavor name\",\"chocolate\"]]]",
+     "[\"B094KYRH7N\",[[\"color\",\"chocolate almond\"]]]",
+     "[\"B09KMGY2DL\",[[\"flavor name\",\"chocolate\"]]]",
+     "[\"B09QNXZQT2\",[[\"flavor name\",\"chocolate\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "92ef28655709698f",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "snack crackers",
+    "goal": {
+     "asin": "B093CLC753",
+     "attributes": [
+      "low calorie"
+     ],
+     "category": "",
+     "goal_options": [
+      "lemon,chocolate,cream cheese"
+     ],
+     "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich",
+     "query": "snack crackers"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B093CLC753",
+    "cluster": "snack crackers",
+    "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich"
+   },
+   "bound_slots": [
+    "attr:low calorie",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:low calorie",
+     "=",
+     "low calorie"
+    ],
+    [
+     "option:1",
+     "=",
+     "1 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "f9b092da22abb9e9bd8e112cefbcb44d",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08TFJ4QCJ\",[[\"size\",\"6 ounce (pack of 1)\"]]]",
+     "[\"B08YGKBLR8\",[[\"size\",\"1 count (pack of 1)\"]]]",
+     "[\"B093CLC753\",[[\"size\",\"1 pack\"]]]",
+     "[\"B09FYJ3QPH\",[[\"size\",\"12 count (pack of 1)\"]]]",
+     "[\"B09J9WF3GL\",[[\"size\",\"1 pack\"]]]",
+     "[\"B09QNXZQT2\",[[\"size\",\"12 pack\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "cbf4f3e418500da5",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "snack crackers",
+    "goal": {
+     "asin": "B093CLC753",
+     "attributes": [
+      "low calorie"
+     ],
+     "category": "",
+     "goal_options": [
+      "1 pack"
+     ],
+     "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich",
+     "query": "snack crackers"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B093CLC753",
+    "cluster": "snack crackers",
+    "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich"
+   },
+   "bound_slots": [
+    "attr:low calorie",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:low calorie",
+     "=",
+     "low calorie"
+    ],
+    [
+     "option:0",
+     "=",
+     ".2 set (4.15 ounce (pack of 3))"
+    ],
+    [
+     "option:1",
+     "=",
+     "1 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "388f48fcaf17d472d58f214f4f4fd35f",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08TFJ4QCJ\",[[\"size\",\"6 ounce (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "bf402128ec7b86b5",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "snack crackers",
+    "goal": {
+     "asin": "B093CLC753",
+     "attributes": [
+      "low calorie"
+     ],
+     "category": "",
+     "goal_options": [
+      ".2 set (4.15 ounce (pack of 3))",
+      "1 pack"
+     ],
+     "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich",
+     "query": "snack crackers"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B093CLC753",
+    "cluster": "snack crackers",
+    "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich"
+   },
+   "bound_slots": [
+    "attr:low calorie",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:low calorie",
+     "=",
+     "low calorie"
+    ],
+    [
+     "option:0",
+     "=",
+     ".4 set (4.15 ounce (pack of 3))"
+    ],
+    [
+     "option:1",
+     "=",
+     "1 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "388f48fcaf17d472d58f214f4f4fd35f",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08TFJ4QCJ\",[[\"size\",\"6 ounce (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "df5fef21c98869d5",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "snack crackers",
+    "goal": {
+     "asin": "B093CLC753",
+     "attributes": [
+      "low calorie"
+     ],
+     "category": "",
+     "goal_options": [
+      ".4 set (4.15 ounce (pack of 3))",
+      "1 pack"
+     ],
+     "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich",
+     "query": "snack crackers"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B00PUEV4CE",
+     "cluster": "snack crackers",
+     "name": "Back to Nature Crackers, Non-GMO Crispy Wheat, 1 Ounce Grab & Go Bags, 100 Count",
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Wheat"
+    }
+   },
+   "dst": "28a7f51b4d9a6cc2",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "0c62628ca5759b9c",
+   "src": "3333d3bf6b11b5b0"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B0086UI36O",
+     "cluster": "snack crackers",
+     "name": "Kay's Naturals Protein Cookie Bites, Cinnamon Almond, Gluten-Free, Low Fat, Diabetes Friendly, All Natural Flavorings, 1.2 Ounce (Pack of 6)",
+     "product_category": "Health & Household › Diet & Sports Nutrition"
+    }
+   },
+   "dst": "575719c4dd47a4cf",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "0bfe65d90c5c6a9b",
+   "src": "3333d3bf6b11b5b0"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:artificial colors",
+      "=",
+      "artificial colors"
+     ]
+    ]
+   },
+   "dst": "2443186f14ced29b",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3333d3bf6b11b5b0"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:brown rice",
+      "=",
+      "brown rice"
+     ]
+    ]
+   },
+   "dst": "dd4733caf4a63373",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3333d3bf6b11b5b0"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:1",
+      "=",
+      "1 pack"
+     ]
+    ]
+   },
+   "dst": "92ef28655709698f",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3333d3bf6b11b5b0"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "lemon,chocolate,cream cheese"
+     ]
+    ]
+   },
+   "dst": "cbf4f3e418500da5",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3333d3bf6b11b5b0"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "lemon,chocolate,cream cheese",
+      ".2 set (4.15 ounce (pack of 3))"
+     ]
+    ]
+   },
+   "dst": "bf402128ec7b86b5",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3333d3bf6b11b5b0"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "lemon,chocolate,cream cheese",
+      ".4 set (4.15 ounce (pack of 3))"
+     ]
+    ]
+   },
+   "dst": "df5fef21c98869d5",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3333d3bf6b11b5b0"
+  }
+ ],
+ "env_id": "webshop_336178c577e634e4",
+ "env_spec": {
+  "cluster": "snack crackers",
+  "env_id": "webshop_336178c577e634e4",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B093CLC753",
+   "cluster": "snack crackers",
+   "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+   "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich"
+  },
+  "bound_slots": [
+   "attr:low calorie",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:low calorie",
+    "=",
+    "low calorie"
+   ],
+   [
+    "option:0",
+    "=",
+    "lemon,chocolate,cream cheese"
+   ],
+   [
+    "option:1",
+    "=",
+    "1 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "ground_truth": {
+   "hash": "a0224d570f7df2c3223eacbb797fd00e",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B08TFJ4QCJ\",[[\"flavor name\",\"chocolate chip pecan\"],[\"size\",\"6 ounce (pack of 1)\"]]]",
+    "[\"B093CLC753\",[[\"flavor name\",\"chocolate\"],[\"size\",\"1 pack\"]]]",
+    "[\"B09QNXZQT2\",[[\"flavor name\",\"chocolate\"],[\"size\",\"12 pack\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "3333d3bf6b11b5b0",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "snack crackers",
+   "goal": {
+    "asin": "B093CLC753",
+    "attributes": [
+     "low calorie"
+    ],
+    "category": "",
+    "goal_options": [
+     "lemon,chocolate,cream cheese",
+     "1 pack"
+    ],
+    "name": "Zess Wheat Flour Snack Sandwich Cracker Cookie, Chocolate, Cream Cheese, Lemon, Whipped Cream, Sugar. Low Calorie, Asian, 162g / 5.7oz. Sampler 9 Small Packs",
+    "price_upper": 20,
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Crackers › Sandwich",
+    "query": "snack crackers"
+   }
+  },
+  "source_record": "880b7d3f56c67dca",
+  "unbound_slots": [
+   "attr:artificial colors",
+   "attr:brown rice",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "tree_id": "862faadd688e3901"
+}

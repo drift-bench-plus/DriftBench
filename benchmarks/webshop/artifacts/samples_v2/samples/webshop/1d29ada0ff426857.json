@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "digital cameras",
+ "fidelity_notes": [],
+ "goal_idx": 181,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "9cc52a7e15ea915683b85712867bad44",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07KTCSG5C\",[]]",
+   "[\"B07N96YVSW\",[]]",
+   "[\"B07S5CVRM3\",[]]",
+   "[\"B07T7399JK\",[]]",
+   "[\"B08L5ZGKCZ\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:optical zoom",
+    "=",
+    "optical zoom"
+   ],
+   [
+    "attr:ultra hd",
+    "=",
+    "ultra hd"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:ultra hd"
+  ],
+  "intent_id": "58b28923f0df7081"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "attr:ultra hd"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:optical zoom",
+     "=",
+     "optical zoom"
+    ],
+    [
+     "attr:ultra hd",
+     "=",
+     "super HD"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:optical zoom",
+   "price_upper"
+  ],
+  "spec_id": "33929b61a44ccee3",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "attr:ultra hd",
+    "ultra hd",
+    "super HD"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for a digital camera with optical zoom and super HD, and my budget is $20.",
+ "render_attempts": 2,
+ "sample_id": "1d29ada0ff426857",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the digital cameras instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "02f79fc486665f81"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the digital cameras instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0fbdc21648c3ecd2"
+  },
+  {
+   "announcement": "Also, it needs to be memory card.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2ab436ac9c205950"
+  },
+  {
+   "announcement": "Also, it needs to be ac adapter.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "da2f908b79213029"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1e0f6db5b43d27f9"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2fc57d4f8542e40f"
+  },
+  {
+   "announcement": "Actually, make it 80 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5e6bd26b4654fa66"
+  },
+  {
+   "announcement": "Actually, make it 100 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "eea9da11b80f248b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a ultra hd digital camera with optical zoom lens.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "4bf3161f1925a51d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "sample_id": "0c9644b26c478377__insufficient_information",
+ "domain": "retail",
+ "tree_id": "0c9644b26c478377",
+ "query": "Hi, I need to exchange an item in my order #W4073673. I want to swap the item for 9844888101 and use credit_card_3677959 for any additional payments needed for the exchange.",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "insufficient_information",
+  "family": "parameter",
+  "mask_kind": "withhold",
+  "kinds": [
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "arg:0:exchange_delivered_order_items:item_ids"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [
+   "arg:0:exchange_delivered_order_items:item_ids"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"9844888101\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W4073673\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3677959\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b618ef065061557f"
+ },
+ "signature": {
+  "rule": "withheld",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"2216662955\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"9844888101\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W4073673\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_3677959\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:exchange_delivered_order_items:item_ids"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

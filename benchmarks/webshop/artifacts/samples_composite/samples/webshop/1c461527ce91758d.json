@@ -1,0 +1,211 @@
+{
+ "sample_id": "1c461527ce91758d",
+ "tree_id": "ca3b22b5b50b5046",
+ "adapter": "webshop",
+ "cluster": "men's pants",
+ "goal_idx": 2,
+ "split": "test",
+ "source_instruction": "hello, i'm looking for a pair of cargo pants for everyday casual wear? but also hiking-friendly. also, i want an orange pair please",
+ "query": "Since you probably don\u2019t have men\u2019s everyday wear pants that are nice enough for casual outings, can you show me some orange pairs? I don\u2019t want to spend too much, so keep it under that price cap I usually stick to, yeah?",
+ "strategy_ids": [
+  "false_presupposition",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+insufficient_information",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "false_presupposition",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "attr:relaxed fit"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you probably don\u2019t have men\u2019s everyday wear pants that are nice enough for casual outings",
+    "condition": null,
+    "about": [
+     "attr:everyday wear",
+     "everyday wear"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [
+   "attr:relaxed fit"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:everyday wear",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:relaxed fit"
+  ],
+  "literal_readings": [
+   [
+    [
+     "option:0",
+     "=",
+     "orange"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "42bd619b80591a0a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 7,
+  "lit_card": null,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 41,
+    "true_card": 7,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 20,
+    "true_card": 7,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "4daabf1e1f26c0d6",
+  "conditions": [
+   [
+    "attr:everyday wear",
+    "=",
+    "everyday wear"
+   ],
+   [
+    "attr:relaxed fit",
+    "=",
+    "relaxed fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "orange"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:relaxed fit"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 7,
+  "value": [
+   "[\"B099231V35\",[[\"color\",\"orange\"]]]",
+   "[\"B09KLJTXM1\",[[\"color\",\"orange\"]]]",
+   "[\"B09M8BWN35\",[[\"color\",\"d06-orange\"]]]",
+   "[\"B09N3CGBPM\",[[\"color\",\"orange\"]]]",
+   "[\"B09NW4J43Z\",[[\"color\",\"orange\"]]]",
+   "[\"B09PBPXNQV\",[[\"color\",\"a-orange\"]]]",
+   "[\"B09PDRLVGH\",[[\"color\",\"orange\"]]]"
+  ],
+  "hash": "7a3ae46eb035f1c120bb6756f47a27b9"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "354b3a976ed3b528",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's pants instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "4ee5bcb65c855728",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's pants instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3cad581498d1d5cc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be athletic shorts."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9edf06491897e6bb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be daily casual."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "124cfc0048c389e6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c0ec30c3b3242899",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4c4361cccf851f0c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1black instead of orange."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "84665cb2adf6beb2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 black instead of orange."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "sample_id": "a2590458fb787349__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "a2590458fb787349",
+ "query": "I just got back from walking my golden retriever this morning and he was so excited to chase a squirrel that he dragged me straight through a puddle, I had to change my socks as soon as I got home. Then I remembered I forgot to water my pothos plant that's been sitting on my windowsill, I think it's been looking a little wilted lately because I've been so busy with work this week. Oh, and I also need to pick up a new pack of my favorite peach iced tea from the grocery store later, the one I usually get has been out of stock for two weeks now. Anyway, I need to modify my pending order #W5061109, please change the item 3694871183 to item 6077640618, and use paypal_3742148 as the payment method for this adjustment.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from walking my golden retriever this morning and he was so excited to chase a squirrel that he dragged me straight through a puddle, I had to change my socks as soon as I got home. Then I remembered I forgot to water my pothos plant that's been sitting on my windowsill, I think it's been looking a little wilted lately because I've been so busy with work this week. Oh, and I also need to pick up a new pack of my favorite peach iced tea from the grocery store later, the one I usually get has been out of stock for two weeks now.",
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"3694871183\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"6077640618\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W5061109\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_3742148\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"3694871183\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"6077640618\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W5061109\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_3742148\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,229 @@
+{
+ "sample_id": "5d893b5ffcab3fce",
+ "tree_id": "0dace2897e600df4",
+ "adapter": "webshop",
+ "cluster": "men's athletic shoes",
+ "goal_idx": 254,
+ "split": "test",
+ "source_instruction": "i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men",
+ "query": "I swear I spent ten minutes this morning chasing my neighbor\u2019s runaway tabby cat all up and down the apartment complex parking lot, because the little guy snuck out when his owner was hauling in a giant bag of cat litter and bolted straight for the wooded edge by the dumpster. I tripped over a loose curb chunk at one point and scuffed the knee of my favorite faded work pants, and I was fully ready to give up until he curled up under a parked pickup and let me scoop him up like he hadn\u2019t just made me run a full 5k for no reason. The neighbor brought over a still-warm loaf of banana bread as a thank you an hour later, and it\u2019s got chocolate chips and walnut chunks baked right in, so I\u2019m already halfway through slicing off a second piece even though I told myself I\u2019d skip extra sweets this week. I\u2019m looking through the men\u2019s athletic shoes here, and I need a pair made with ethylene propylene for sure, my budget max is $120. I want the colorway that\u2019s dark denim with red orange accents, obviously. Oh and don\u2019t forget to grab me that one too, yeah?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "insufficient_information",
+  "factual_error",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+insufficient_information+factual_error+referential_ambiguity",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "insufficient_information",
+   "factual_error",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:1",
+   "factual_error": "attr:ethylene vinyl",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:ethylene vinyl",
+    "ethylene vinyl",
+    "ethylene propylene"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "option:1",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I swear I spent ten minutes this morning chasing my neighbor\u2019s runaway tabby cat all up and down the apartment complex parking lot, because the little guy snuck out when his owner was hauling in a giant bag of cat litter and bolted straight for the wooded edge by the dumpster. I tripped over a loose curb chunk at one point and scuffed the knee of my favorite faded work pants, and I was fully ready to give up until he curled up under a parked pickup and let me scoop him up like he hadn\u2019t just made me run a full 5k for no reason. The neighbor brought over a still-warm loaf of banana bread as a thank you an hour later, and it\u2019s got chocolate chips and walnut chunks baked right in, so I\u2019m already halfway through slicing off a second piece even though I told myself I\u2019d skip extra sweets this week.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:ethylene vinyl",
+   "option:0",
+   "option:1"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ethylene vinyl",
+     "=",
+     "ethylene propylene"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d9350cd3054ba49a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 0,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 58,
+    "true_card": 6,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 6,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 7,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "bb4678ed5513f5d0",
+  "conditions": [
+   [
+    "attr:ethylene vinyl",
+    "=",
+    "ethylene vinyl"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark denim | red orange"
+   ],
+   [
+    "option:1",
+    "=",
+    "10"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "attr:ethylene vinyl",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B07L5DX8GP\",[[\"color\",\"02 | dark | grey\"],[\"size\",\"10\"]]]",
+   "[\"B07SHWM3BX\",[[\"color\",\"white | dark silver metallic\"],[\"size\",\"10\"]]]",
+   "[\"B08B1MCFKL\",[[\"color\",\"dark denim | red orange\"],[\"size\",\"10\"]]]",
+   "[\"B08QBHDRC1\",[[\"color\",\"dark gray | red\"],[\"size\",\"10\"]]]",
+   "[\"B097R39VPH\",[[\"color\",\"dark green022\"],[\"size\",\"10\"]]]",
+   "[\"B09BFMY58R\",[[\"color\",\"dark grey\"],[\"size\",\"10\"]]]"
+  ],
+  "hash": "c5bf660792b81a9dc40598124a5c8177"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "36e60c9cbfb05597",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's athletic shoes instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "5464523a27a90747",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's athletic shoes instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "4917911363dffea9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be anti slip."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e7ceba1fead480e6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be arch support."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "0aea792080e4756e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b408ba44b9a10e4c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "32a041a56ad124c2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 women | 10 men instead of dark denim | red orange."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "a30ce134fa3d3734",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10-11 women | 8-9 men instead of dark denim | red orange."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

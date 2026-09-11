@@ -1,0 +1,109 @@
+{
+ "sample_id": "28bd559acf34fcd1__lexical_ambiguity",
+ "domain": "telecom",
+ "tree_id": "28bd559acf34fcd1",
+ "query": "Hi, I'm currently out of the country and I have roaming turned off, but my mobile data keeps cutting out even when I'm trying to load light pages, can you help me figure out what's wrong?",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "lexical_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "mobile data keeps cutting out even when I'm trying to load light pages",
+    "placements": [
+     [
+      "fault:bad_network_preference",
+      "bad_network_preference"
+     ],
+     [
+      "fault:bad_network_preference",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [
+   "fault:bad_network_preference"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ],
+   [
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 8,
+  "spec_id": "6be09bd2a6d101ab"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:bad_network_preference"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "sample_id": "3d85c63e51a6336e__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "3d85c63e51a6336e",
+ "query": "I was out walking my golden retriever this morning and he ended up chasing a squirrel right into a patch of dandelions, I spent half an hour brushing seeds out of his fur when I got back home. I also just tried the new matcha latte at the caf\u00e9 down the street, it was way too sweet even when I asked for less sugar, I probably won\u2019t order it again. Oh and I finally got around to rearranging the bookshelf in my living room, I sorted all my fiction books by color and it looks so much nicer now. Anyway, I\u2019m having some issues with my phone right now\u2014airplane mode is turned on, my network preference is acting up and giving me bad connections, my data mode is off, and data saver mode is enabled, and I can\u2019t get anything that needs internet to work properly, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was out walking my golden retriever this morning and he ended up chasing a squirrel right into a patch of dandelions, I spent half an hour brushing seeds out of his fur when I got back home. I also just tried the new matcha latte at the caf\u00e9 down the street, it was way too sweet even when I asked for less sugar, I probably won\u2019t order it again. Oh and I finally got around to rearranging the bookshelf in my living room, I sorted all my fiction books by color and it looks so much nicer now.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:data_mode_off",
+   "fault:data_saver_mode_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

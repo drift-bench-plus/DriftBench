@@ -1,0 +1,140 @@
+{
+ "sample_id": "f98e3cf7d61659bd__referential_ambiguity",
+ "domain": "telecom",
+ "tree_id": "f98e3cf7d61659bd",
+ "query": "I'm abroad right now and roaming is off, my wifi calling isn't working, my SMS app permission seems broken, data mode is turned off, I already got the notification that my data usage is exceeded, my SIM card feels like it's not seated right, I have that one network preference issue too, and now I can't send texts or load anything at all. Can you help me figure out what's going on?",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "fault:bad_network_preference",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:bad_wifi_calling",
+   "fault:break_app_sms_permission",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [
+   "fault:bad_network_preference"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "62f7e13e2b8665c4"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_app_sms_permission",
+    "=",
+    "break_app_sms_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:bad_network_preference"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

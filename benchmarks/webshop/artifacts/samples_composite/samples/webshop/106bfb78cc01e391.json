@@ -1,0 +1,302 @@
+{
+ "sample_id": "106bfb78cc01e391",
+ "tree_id": "5d4e48f3d38bbe20",
+ "adapter": "webshop",
+ "cluster": "sconces",
+ "goal_idx": 264,
+ "split": "test",
+ "source_instruction": "i need a chrome wall lamp that is brushed nickel.",
+ "query": "Hey, I\u2019m looking at sconces right now and need one with a brushed bronze finish, plus it should come with a matching wall mounting hardware kit. I also want to check out the other available finish option too, can you pull those up for me? I\u2019m looking for a sconce and a set of replacement LED bulbs under $80, so nothing over that price point works for me, I don\u2019t want to blow my budget on this little hallway update.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "syntactic_ambiguity",
+  "factual_error",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+syntactic_ambiguity+factual_error+insufficient_information",
+  "family": "expression+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "syntactic_ambiguity",
+   "factual_error",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "syntactic_ambiguity": "price_upper",
+   "factual_error": "attr:brushed nickel",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:brushed nickel",
+    "brushed nickel",
+    "brushed bronze"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "under $80",
+    "placements": [
+     [
+      "price_upper",
+      "80"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "text": "brushed bronze finish",
+    "condition": [
+     "attr:finish",
+     "=",
+     "brushed bronze"
+    ]
+   },
+   {
+    "text": "come with a matching wall mounting hardware kit",
+    "condition": [
+     "attr:accessory",
+     "=",
+     "matching wall mounting hardware kit"
+    ]
+   },
+   {
+    "text": "a set of replacement LED bulbs",
+    "condition": [
+     "product_type",
+     "=",
+     "replacement LED bulbs"
+    ]
+   },
+   {
+    "text": "little hallway update",
+    "condition": [
+     "usage_scenario",
+     "=",
+     "hallway update"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [],
+  "hidden_slots": [
+   "attr:brushed nickel",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:brushed nickel",
+     "=",
+     "brushed bronze"
+    ],
+    [
+     "attr:finish",
+     "=",
+     "brushed bronze"
+    ],
+    [
+     "attr:accessory",
+     "=",
+     "matching wall mounting hardware kit"
+    ],
+    [
+     "product_type",
+     "=",
+     "replacement LED bulbs"
+    ],
+    [
+     "usage_scenario",
+     "=",
+     "hallway update"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 8,
+  "spec_id": "e8dc5b3caf0040c6"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 18,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 18,
+    "readings": 1
+   },
+   "syntactic_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     18,
+     31
+    ],
+    "true_card": 18,
+    "readings": 2
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 18,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 275,
+    "true_card": 18,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 8,
+ "hidden_intent": {
+  "intent_id": "1f1fadbafe27260e",
+  "conditions": [
+   [
+    "attr:brushed nickel",
+    "=",
+    "brushed nickel"
+   ],
+   [
+    "option:0",
+    "=",
+    "chrome"
+   ],
+   [
+    "price_upper",
+    "<=",
+    80
+   ]
+  ],
+  "hidden_slots": [
+   "attr:brushed nickel",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 18,
+  "value": [
+   "[\"B000K7DHT4\",[[\"color\",\"chrome\"]]]",
+   "[\"B001DY8482\",[[\"color\",\"chrome\"]]]",
+   "[\"B00HM1Z0I2\",[[\"color\",\"chrome\"]]]",
+   "[\"B00IO2X0VC\",[[\"color\",\"polished chrome\"]]]",
+   "[\"B00L1IPCZI\",[[\"color\",\"amber | chrome\"]]]",
+   "[\"B01MZ82PKM\",[[\"color\",\"chrome\"]]]",
+   "[\"B073V6RT1G\",[[\"color\",\"chrome\"]]]",
+   "[\"B073V73YG2\",[[\"color\",\"polished chrome\"]]]",
+   "[\"B07F6W3DWH\",[[\"color\",\"chrome\"]]]",
+   "[\"B07F6YGQZK\",[[\"color\",\"chrome\"]]]",
+   "[\"B07MDZRH5B\",[[\"color\",\"chrome\"]]]",
+   "[\"B07SK2MXZT\",[[\"color\",\"chrome\"]]]",
+   "[\"B07SS54KX2\",[[\"color\",\"chrome\"]]]",
+   "[\"B083ZQ7VFL\",[[\"color\",\"chrome\"]]]",
+   "[\"B083ZRCCXD\",[[\"color\",\"chrome\"]]]",
+   "[\"B089CZM41P\",[[\"color\",\"chrome polished\"]]]",
+   "[\"B08FCTGP3K\",[[\"color\",\"chrome\"]]]",
+   "[\"B08ZWZVDRD\",[[\"color\",\"chrome\"]]]"
+  ],
+  "hash": "2425e4f2e4d16e762b3fc9b46d692ce5"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "40c5b96a18899c02",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the sconces instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "62b93e1ad314dbdc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the sconces instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "0cb27a3eb4f42469",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mid century."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "6a53a602eefa255f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be eco friendly."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c75514f9f45c34c0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cfbc864c028e7abe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3d4c6d3b3dbe3e8a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 instead of chrome."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "9e3c5a835e5f89fe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1-light-gd instead of chrome."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

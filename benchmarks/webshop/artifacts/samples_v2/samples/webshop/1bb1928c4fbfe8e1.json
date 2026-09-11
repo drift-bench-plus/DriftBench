@@ -1,0 +1,197 @@
+{
+ "adapter": "webshop",
+ "cluster": "eyes care",
+ "fidelity_notes": [],
+ "goal_idx": 265,
+ "ground_truth": {
+  "cardinality": 19,
+  "hash": "4a772c28c92bce21972228164dbc5b8e",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08RDFQXHN\",[[\"color\",\"black\"]]]",
+   "[\"B09DCPYVTS\",[[\"color\",\"black\"]]]",
+   "[\"B09HZT1MWD\",[[\"color\",\"black\"]]]",
+   "[\"B09L1F8W92\",[[\"color\",\"black\"]]]",
+   "[\"B09LSSQY4D\",[[\"color\",\"black\"]]]",
+   "[\"B09LXWKTTG\",[[\"color\",\"black\"]]]",
+   "[\"B09M465KJ8\",[[\"color\",\"black\"]]]",
+   "[\"B09MNPT1RT\",[[\"color\",\"black\"]]]",
+   "[\"B09MPK2MDW\",[[\"color\",\"black\"]]]",
+   "[\"B09MT3DVHR\",[[\"color\",\"black\"]]]",
+   "[\"B09NQVJPK3\",[[\"color\",\"black\"]]]",
+   "[\"B09NSR9VZ8\",[[\"color\",\"black\"]]]",
+   "[\"B09P3VL44D\",[[\"color\",\"blackset 1\"]]]",
+   "[\"B09P88SVSR\",[[\"color\",\"black\"]]]",
+   "[\"B09PHK694P\",[[\"color\",\"black\"]]]",
+   "[\"B09QKKHV9Q\",[[\"color\",\"black\"]]]",
+   "[\"B09QKYVLG3\",[[\"color\",\"black\"]]]",
+   "[\"B09SQ6G73Z\",[[\"color\",\"black for face\"]]]",
+   "[\"B09SXRJYN6\",[[\"color\",\"black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:green tea",
+    "=",
+    "green tea"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "9e362248c18ad1ea"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:green tea",
+     "=",
+     "black"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:green tea",
+     "green tea"
+    ],
+    "alternative": [
+     "attr:green tea",
+     "black"
+    ],
+    "condition": null,
+    "text": "Since you probably don't have green tea eye care products in stock"
+   }
+  ],
+  "retained": [
+   "attr:green tea",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "29d0d387804797d0",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don't have green tea eye care products in stock, could you help me find black tea eye care items that are under $30?",
+ "render_attempts": 2,
+ "sample_id": "1bb1928c4fbfe8e1",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the eyes care instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "31199fda12e2aa6d"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the eyes care instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "46731b0f0bd7fc74"
+  },
+  {
+   "announcement": "Also, it needs to be hyaluronic acid.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "623863fd2c42d5d7"
+  },
+  {
+   "announcement": "Also, it needs to be leak proof.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "96d7bcb5073146b7"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5e22c30090be9bd8"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b5affd0dc8bd18cb"
+  },
+  {
+   "announcement": "Actually, make it 1 count instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4d884a3c2c4fb847"
+  },
+  {
+   "announcement": "Actually, make it 1 count (pack of 16) instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7f55581f17e7a936"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 20,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 19,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like a black face kit with green tea.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "e2691abcb04c2ec8",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

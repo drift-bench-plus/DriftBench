@@ -1,0 +1,236 @@
+{
+ "sample_id": "c2cb670e0d32ba11",
+ "tree_id": "1cef1282d58c59b6",
+ "adapter": "webshop",
+ "cluster": "dairy, cheese & eggs",
+ "goal_idx": 266,
+ "split": "test",
+ "source_instruction": "i am looking for a individual wrapped birthday cakes and chocolate chip blondies that come in a 12 pack.",
+ "query": "Ugh, you won\u2019t believe what just happened by the front entrance two minutes ago! That golden retriever that\u2019s always napping tied to the bike rack out front broke free when a squirrel darted past, bolted straight into the sample table by the produce department, and sent little cups of mango salsa flying everywhere. The poor sample lady was laughing so hard she could barely stand up, half the people nearby were handing the dog tiny bits of tortilla chip instead of chasing him, and I swear he ate three full cups of salsa before his owner caught him, tail wagging like he\u2019d just won the best prize of the whole day. I even stopped to help wipe salsa off a little kid\u2019s rain boot that got splattered, and the kid just kept saying the dog was \u201cthe best party ever\u201d so that totally made my whole trip worth it before I even started grabbing what we need. Hey, I\u2019m grabbing stuff over in the dairy, cheese & eggs section right now. I need those treats that come individually wrapped, y\u2019know the ones, and make sure they\u2019re certified kosher for Passover too, right? Don\u2019t go over that one for the total cost, yeah? Oh, and grab the kind we always pick for the party, you know the flavors, don\u2019t mess that up. Wait, make sure none of the packages are crushed either when you pull \u2019em off the shelf.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance",
+  "insufficient_information",
+  "irrelevant_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance+insufficient_information+irrelevant_information",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance",
+   "insufficient_information",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "make sure they're certified kosher for Passover too",
+    "condition": [
+     "attr:kosher_certification",
+     "=",
+     "kosher for Passover"
+    ]
+   },
+   {
+    "text": "make sure none of the packages are crushed either when you pull 'em off the shelf",
+    "condition": [
+     "attr:package_condition",
+     "=",
+     "not crushed"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, you won\u2019t believe what just happened by the front entrance two minutes ago! That golden retriever that\u2019s always napping tied to the bike rack out front broke free when a squirrel darted past, bolted straight into the sample table by the produce department, and sent little cups of mango salsa flying everywhere. The poor sample lady was laughing so hard she could barely stand up, half the people nearby were handing the dog tiny bits of tortilla chip instead of chasing him, and I swear he ate three full cups of salsa before his owner caught him, tail wagging like he\u2019d just won the best prize of the whole day. I even stopped to help wipe salsa off a little kid\u2019s rain boot that got splattered, and the kid just kept saying the dog was \u201cthe best party ever\u201d so that totally made my whole trip worth it before I even started grabbing what we need.",
+  "retained": [
+   "attr:individually wrapped"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:individually wrapped",
+     "=",
+     "individually wrapped"
+    ],
+    [
+     "attr:kosher_certification",
+     "=",
+     "kosher for Passover"
+    ],
+    [
+     "attr:package_condition",
+     "=",
+     "not crushed"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "facd17381b3f40a2"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 0,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 7,
+    "true_card": 6,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 19,
+    "true_card": 6,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "0b2e52ba71bde3ef",
+  "conditions": [
+   [
+    "attr:individually wrapped",
+    "=",
+    "individually wrapped"
+   ],
+   [
+    "option:0",
+    "=",
+    "birthday cake & chocolate chip blondie"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B01B22W5JS\",[[\"flavor name\",\"oatmeal chocolate chip\"]]]",
+   "[\"B07B7BV15N\",[[\"flavor name\",\"birthday cake & chocolate chip blondie\"]]]",
+   "[\"B0863J835N\",[[\"flavor name\",\"chocolate\"]]]",
+   "[\"B08R3V9K9B\",[[\"flavor name\",\"cocoa & chocolate\"]]]",
+   "[\"B08VZWT34G\",[[\"flavor name\",\"peanut butter dark chocolate\"]]]",
+   "[\"B08XB8SQ4P\",[[\"flavor name\",\"peanut butter dark chocolate\"]]]"
+  ],
+  "hash": "f074c901efae68ce48cc14dce424c33a"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "31593c3e27e9c9a1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the dairy, cheese & eggs instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ea20cb6fefb97a92",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the dairy, cheese & eggs instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "020d455a76a5d3b2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dietary fiber."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e5cee811883bc46d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be low calorie."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "413dc7dfbc38420e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c34bdc093142353b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "024c6584d82202ef",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1.6 ounce (pack of 12) instead of birthday cake & chocolate chip blondie."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d3d534ee1db13989",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pound (pack of 2) instead of birthday cake & chocolate chip blondie."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

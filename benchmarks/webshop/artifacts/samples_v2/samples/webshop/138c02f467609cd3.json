@@ -1,0 +1,188 @@
+{
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "fidelity_notes": [],
+ "goal_idx": 299,
+ "ground_truth": {
+  "cardinality": 9,
+  "hash": "e81fe6ee894677304ad7f936066ca58b",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0171EUOZI\",[[\"size\",\"10ft (2 pack)\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"1ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"1ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"1ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"material type\",\"1ft - 3 pack\"]]]",
+   "[\"B07CQB2FZK\",[[\"material type\",\"1ft - 3 pack\"]]]",
+   "[\"B07HC46N93\",[[\"size\",\"1ft\"]]]",
+   "[\"B099RJGRRZ\",[[\"size\",\"1ft\"]]]",
+   "[\"B09MV8B4PK\",[[\"item package quantity\",\"3\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "1ft - 3 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "91474c75ad5d4e6f"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "irrelevant_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [
+   {
+    "condition": [
+     "attr:weatherproof cable tie accessory",
+     "=",
+     "included"
+    ],
+    "text": "weatherproof cable tie accessory"
+   }
+  ],
+  "family": "parameter",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "option:0",
+     "=",
+     "1ft - 3 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ],
+    [
+     "attr:weatherproof cable tie accessory",
+     "=",
+     "included"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high speed",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "db3b35a859c34bec",
+  "strategy_id": "irrelevant_information",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m shopping in the satellite television section and I need a high-speed option with a 1ft - 3 pack, under $40, and it has to come with a weatherproof cable tie accessory.",
+ "render_attempts": 2,
+ "sample_id": "138c02f467609cd3",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0d4271e27a5b21d4"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7845bdf8528c5ec1"
+  },
+  {
+   "announcement": "Also, it needs to be high performance.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "47488dd1d7b025ea"
+  },
+  {
+   "announcement": "Also, it needs to be smart tv.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "49738ef791abe26a"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e05fdcce4645d715"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f400a0f986c9f63f"
+  },
+  {
+   "announcement": "Actually, make it 150 ft instead of 1ft - 3 pack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "18789ead90bd1547"
+  },
+  {
+   "announcement": "Actually, make it 50 ft instead of 1ft - 3 pack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "672fc4fef32e57cb"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "extras",
+  "true_card": 9,
+  "verdict": "ok"
+ },
+ "source_instruction": "look for a high speed coaxial cable that is about 1 foot. three per pack would be nice.",
+ "split": "test",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "tree_id": "262ba9c552d0626c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "sample_id": "24b5a68da098c0be__vagueness_subjectivity",
+ "domain": "retail",
+ "tree_id": "24b5a68da098c0be",
+ "query": "Hi there, I need to exchange an item from my delivered order #W7181492. The item I want to exchange is 8118291112, I want to swap it for a better version, and please use paypal_3024827 to handle any related payment adjustments for this exchange.",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "vagueness_subjectivity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [
+   "arg:0:exchange_delivered_order_items:new_item_ids"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"8118291112\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W7181492\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_3024827\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "1456476c940787d4"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"8118291112\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"8277474082\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W7181492\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_3024827\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:exchange_delivered_order_items:new_item_ids"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

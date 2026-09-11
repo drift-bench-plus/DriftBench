@@ -1,0 +1,104 @@
+{
+ "sample_id": "28e8867ba20c7f5d__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "28e8867ba20c7f5d",
+ "query": "I just spent the whole morning baking chocolate chip cookies for my kid\u2019s school bake sale, and I\u2019m really proud of how they turned out\u2014they\u2019re perfectly chewy in the middle with crispy edges, and I even added a dash of sea salt on top. I also had to stop by the pet store on my way home to pick up a new scratching post for my cat, who\u2019s been tearing up the couch lately, and the staff there gave me a free sample of salmon treats that he went crazy for as soon as I walked in the door. I also finally got around to planting the sunflower seeds I bought last month in the backyard, and I\u2019m already excited to see how tall they grow by the end of summer. I\u2019m having an issue with my phone right now, I can\u2019t use any mobile services at all. I checked and airplane mode is turned on, my SIM card is locked with a PIN that I haven\u2019t been able to get past, my line was suspended a few days ago because I have an overdue bill, and I think the SIM card might be unseated too, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the whole morning baking chocolate chip cookies for my kid\u2019s school bake sale, and I\u2019m really proud of how they turned out\u2014they\u2019re perfectly chewy in the middle with crispy edges, and I even added a dash of sea salt on top. I also had to stop by the pet store on my way home to pick up a new scratching post for my cat, who\u2019s been tearing up the couch lately, and the staff there gave me a free sample of salmon treats that he went crazy for as soon as I walked in the door. I also finally got around to planting the sunflower seeds I bought last month in the backyard, and I\u2019m already excited to see how tall they grow by the end of summer.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:lock_sim_card_pin",
+   "fault:overdue_bill_suspension",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ],
+    [
+     "fault:overdue_bill_suspension",
+     "=",
+     "overdue_bill_suspension"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

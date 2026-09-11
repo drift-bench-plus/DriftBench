@@ -1,0 +1,90 @@
+{
+ "sample_id": "b8af4e6b9fdd8c79__insufficient_information",
+ "domain": "telecom",
+ "tree_id": "b8af4e6b9fdd8c79",
+ "query": "My mobile data won't connect at all, and my phone keeps saying there's no SIM card detected. Can you help me figure out what's wrong?",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "insufficient_information",
+  "family": "parameter",
+  "mask_kind": "withhold",
+  "kinds": [
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "fault:break_apn_settings",
+   "fault:overdue_bill_suspension"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [
+   "fault:break_apn_settings",
+   "fault:overdue_bill_suspension"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "6fbf41cbda385276"
+ },
+ "signature": {
+  "rule": "withheld",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:break_apn_settings",
+   "fault:overdue_bill_suspension"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

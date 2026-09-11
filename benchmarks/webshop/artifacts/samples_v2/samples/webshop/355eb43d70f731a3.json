@@ -1,0 +1,178 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair loss products",
+ "fidelity_notes": [],
+ "goal_idx": 158,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "c69eaa912388ecbea54de5864fc533d0",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07SKN25VL\",[[\"color\",\"ash blonde-straight(new)\"]]]",
+   "[\"B08Q3P75B4\",[[\"color\",\"3 clips-#18p613 ash blonde&bleach blonde\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "attr:natural hair",
+    "=",
+    "natural hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "ash blonde-straight(new)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "987efa7e02bec6dd"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "ash blonde-straight(new)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning trying to perfect a homemade sourdough loaf, and it came out with such a crispy crust and soft, tangy crumb that I’ve already sliced three pieces to slather with salted butter. My neighbor dropped by with a jar of their homemade wild blackberry jam too, so we ended up sitting on the porch for an hour swapping baking tips while watching a group of sparrows hop around the bird feeder. I’ve also been meaning to start a small windowsill herb garden, and I’m trying to decide between basil, cilantro, and mint to grow first.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair extensions",
+   "attr:natural hair",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning trying to perfect a homemade sourdough loaf, and it came out with such a crispy crust and soft, tangy crumb that I’ve already sliced three pieces to slather with salted butter. My neighbor dropped by with a jar of their homemade wild blackberry jam too, so we ended up sitting on the porch for an hour swapping baking tips while watching a group of sparrows hop around the bird feeder. I’ve also been meaning to start a small windowsill herb garden, and I’m trying to decide between basil, cilantro, and mint to grow first. Anyway, I’m shopping in the hair loss products section right now, and I’m looking for hair extensions made with natural hair, specifically the ash blonde-straight (new) option, with a price limit of $30.",
+ "render_attempts": 1,
+ "sample_id": "355eb43d70f731a3",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair loss products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e0918b55ee9dfe8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair loss products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f0bfa433247a8172"
+  },
+  {
+   "announcement": "Also, it needs to be easy apply.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5973a8db332a940d"
+  },
+  {
+   "announcement": "Also, it needs to be synthetic hair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a284e41e512d47f2"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0d76b3e8809e0095"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "30746340711aa1b8"
+  },
+  {
+   "announcement": "Actually, make it #1b | 18 | 60 black to ash blonde with platinum blonde instead of ash blonde-straight(new).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9148a38d70370cb4"
+  },
+  {
+   "announcement": "Actually, make it #1b | 4 | 27 black to dark brown with caramel blonde instead of ash blonde-straight(new).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9438334d193f4ce5"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 2,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for hair extensions for natural hair and straight hair so need to buy it.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "4da7bb9708eab174",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,173 @@
+{
+ "sample_id": "d9c9dbe4d21ff923__syntactic_ambiguity",
+ "domain": "telecom",
+ "tree_id": "d9c9dbe4d21ff923",
+ "query": "Hi, I\u2019m abroad right now and I can\u2019t get any mobile data to work on my phone and my messaging app even when I\u2019ve got airplane mode off, I checked my settings and I have roaming off, data mode disabled, data saver turned on, a wonky network preference and a faulty VPN set up that keeps dropping out.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "that keeps dropping out",
+    "placements": [
+     [
+      "fault:bad_vpn",
+      "bad_vpn"
+     ],
+     [
+      "fault:bad_vpn",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:data_mode_off",
+   "fault:data_saver_mode_on",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [
+   "fault:bad_vpn"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_vpn",
+     "=",
+     "bad_vpn"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ],
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 6,
+  "spec_id": "08d576a140ae8bb3"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_vpn",
+    "=",
+    "bad_vpn"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:bad_vpn"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

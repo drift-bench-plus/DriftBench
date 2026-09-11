@@ -1,0 +1,137 @@
+{
+ "sample_id": "17f5d0f32694e307__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "17f5d0f32694e307",
+ "query": "I was walking my golden retriever puppy this morning and he stopped to sniff a patch of wild dandelions that had popped up by the sidewalk, and he ended up rolling in them so much his fur is covered in little yellow petals now. I also tried the new matcha croissant from the bakery down the street on my way home, and it was so flaky and perfectly sweet, I\u2019m already planning to go back tomorrow to get another one. Oh, I also finally got around to hanging up those string lights I bought for my balcony last month, they make the whole space feel so cozy when I sit out there in the evening. Anyway, I\u2019m having some issues with my mobile connection right now\u2014airplane mode is turned on, my network preference settings are off, there\u2019s something wrong with my VPN, my data mode is disabled, data saver mode is active, I\u2019ve exceeded my data usage limit, I\u2019m currently abroad and roaming is turned off, so I need help figuring out how to fix this so my mobile service works properly.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever puppy this morning and he stopped to sniff a patch of wild dandelions that had popped up by the sidewalk, and he ended up rolling in them so much his fur is covered in little yellow petals now. I also tried the new matcha croissant from the bakery down the street on my way home, and it was so flaky and perfectly sweet, I\u2019m already planning to go back tomorrow to get another one. Oh, I also finally got around to hanging up those string lights I bought for my balcony last month, they make the whole space feel so cozy when I sit out there in the evening.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:bad_vpn",
+   "fault:data_mode_off",
+   "fault:data_saver_mode_on",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_vpn",
+     "=",
+     "bad_vpn"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_vpn",
+    "=",
+    "bad_vpn"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

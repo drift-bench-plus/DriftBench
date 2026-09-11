@@ -1,0 +1,91 @@
+{
+ "sample_id": "6dc22c74878761f1__factual_error",
+ "domain": "telecom",
+ "tree_id": "6dc22c74878761f1",
+ "query": "I've been getting constant alerts that my data usage has exceeded my plan limit, and for some reason my app SMS permission seems to be messed up so none of my messaging apps can send texts right now. Can you help me fix these issues?",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "factual_error",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "factual_error"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [
+   [
+    "fault:break_app_storage_permission",
+    "break_app_storage_permission",
+    "break_app_sms_permission"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:data_usage_exceeded"
+  ],
+  "hidden_slots": [
+   "fault:break_app_storage_permission"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_sms_permission"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "b4d61f2aedd4fead"
+ },
+ "signature": {
+  "rule": "substituted",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:break_app_storage_permission"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,209 @@
+{
+ "adapter": "webshop",
+ "cluster": "deodorants & antiperspirants",
+ "fidelity_notes": [],
+ "goal_idx": 358,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "100c49ccd741d272926cad1335034ae6",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00BN9OW6K\",[]]",
+   "[\"B013UKOWAA\",[]]",
+   "[\"B01N7E0O2P\",[]]",
+   "[\"B076391VVY\",[]]",
+   "[\"B07PTVLHDT\",[]]",
+   "[\"B07SV8N5JW\",[]]",
+   "[\"B0874W6L83\",[]]",
+   "[\"B08TNZK3ZM\",[]]",
+   "[\"B094NXKBT6\",[]]",
+   "[\"B09MZKP5ZT\",[]]",
+   "[\"B09MZL9CMT\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:alcohol free",
+    "=",
+    "alcohol free"
+   ],
+   [
+    "attr:long lasting",
+    "=",
+    "long lasting"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "9e4803fe86169ce2"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "price_upper",
+      "20"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ],
+    "surface": "under $20"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:alcohol free",
+     "=",
+     "alcohol free"
+    ],
+    [
+     "attr:long lasting",
+     "=",
+     "long lasting"
+    ],
+    [
+     "price_upper",
+     "<=",
+     "20"
+    ]
+   ],
+   [
+    [
+     "attr:alcohol free",
+     "=",
+     "alcohol free"
+    ],
+    [
+     "attr:long lasting",
+     "=",
+     "long lasting"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:alcohol free",
+   "attr:long lasting"
+  ],
+  "spec_id": "72f25981197f1cf2",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need an alcohol free, long lasting deodorant and a mini travel-sized deodorant wipe pack under $20.",
+ "render_attempts": 2,
+ "sample_id": "13bd90c6041a145a",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the deodorants & antiperspirants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1e74e8c9f7b4475b"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the deodorants & antiperspirants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "d445613bda664ed7"
+  },
+  {
+   "announcement": "Also, it needs to be dermatologist tested.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5575f5845cbead32"
+  },
+  {
+   "announcement": "Also, it needs to be sulfate free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dc12910e077290f8"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7bfb9a59e93c19a3"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a8ffeff40ee86d3c"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "88e226262c673689"
+  },
+  {
+   "announcement": "Actually, make it 100 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d9178178ff28c649"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   11,
+   16
+  ],
+  "rule": "ambiguous",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "what deodorants do you have that are alcohol free and very long lasting?",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "8beb5f007cd49886",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

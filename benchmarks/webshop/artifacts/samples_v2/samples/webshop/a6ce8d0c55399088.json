@@ -1,0 +1,190 @@
+{
+ "adapter": "webshop",
+ "cluster": "face makeup",
+ "fidelity_notes": [],
+ "goal_idx": 417,
+ "ground_truth": {
+  "cardinality": 22,
+  "hash": "6c529312b2c2e78f1b2d183bcc8448fa",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0017KCM44\",[]]",
+   "[\"B001LFKCD8\",[]]",
+   "[\"B002U664AM\",[]]",
+   "[\"B0039UTUU4\",[]]",
+   "[\"B004QOPH6I\",[]]",
+   "[\"B00DRHKPHQ\",[]]",
+   "[\"B00I50QVAU\",[]]",
+   "[\"B00IITVHLG\",[]]",
+   "[\"B00KBBKM7Y\",[]]",
+   "[\"B015EVG8EG\",[]]",
+   "[\"B07DN1TZ96\",[]]",
+   "[\"B07HB63JLL\",[]]",
+   "[\"B07QD1DBSH\",[]]",
+   "[\"B07R4C3DMZ\",[]]",
+   "[\"B07R5CGSXH\",[]]",
+   "[\"B07ZTS485Q\",[]]",
+   "[\"B08BX44VQV\",[]]",
+   "[\"B08L5LNRLB\",[]]",
+   "[\"B08ZHXSM2R\",[]]",
+   "[\"B09BG86YPD\",[]]",
+   "[\"B09BGGLY51\",[]]",
+   "[\"B09PFBBDFG\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:cruelty free",
+    "=",
+    "cruelty free"
+   ],
+   [
+    "attr:fragrance free",
+    "=",
+    "fragrance free"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "0199d13ad410cb7d"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:cruelty free",
+     "=",
+     "cruelty free"
+    ],
+    [
+     "attr:fragrance free",
+     "=",
+     "fragrance free"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:cruelty free",
+   "attr:fragrance free"
+  ],
+  "spec_id": "052a6af8410e4ae7",
+  "strategy_id": "vagueness_subjectivity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for cruelty free, fragrance free face makeup with a good price limit, and I don't have any specific product options in mind.",
+ "render_attempts": 2,
+ "sample_id": "a6ce8d0c55399088",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the face makeup instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a8e44c73234cf3cc"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the face makeup instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e545ba2f106aa687"
+  },
+  {
+   "announcement": "Also, it needs to be eye makeup.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3b85f4836b8a4675"
+  },
+  {
+   "announcement": "Also, it needs to be aloe vera.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "feb62c93aacbdf2c"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "165c828e1d513831"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f4465f627b01a2d6"
+  },
+  {
+   "announcement": "Actually, make it 20 instead of 30.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0ca7352c554ec973"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of 30.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "76ff731e0a6ee9c4"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 23,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 22,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want  hydration undereye & smile line jelly patches fragrance free cruelty free cream for eyes",
+ "split": "test",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "tree_id": "94df79886ddacf02",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

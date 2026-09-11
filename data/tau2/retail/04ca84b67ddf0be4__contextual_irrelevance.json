@@ -1,0 +1,82 @@
+{
+ "sample_id": "04ca84b67ddf0be4__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "04ca84b67ddf0be4",
+ "query": "I was walking my golden retriever this morning and he chased a squirrel right into a neighbor's rose bush, I had to spend ten minutes gently pulling thorns out of his fur and he still has a tiny pink scratch on his nose that he keeps trying to lick. Then on my way home I popped into the corner bakery and they just restocked their matcha croissants, I grabbed two and ate one while walking, it was still warm and the filling oozed out a little onto my jacket. Speaking of things I need to sort out, I want to cancel my pending order #W9284598, the reason is that I ordered it by mistake.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever this morning and he chased a squirrel right into a neighbor's rose bush, I had to spend ten minutes gently pulling thorns out of his fur and he still has a tiny pink scratch on his nose that he keeps trying to lick. Then on my way home I popped into the corner bakery and they just restocked their matcha croissants, I grabbed two and ate one while walking, it was still warm and the filling oozed out a little onto my jacket. Speaking of things I need to sort out,",
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W9284598\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"ordered by mistake\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W9284598\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"ordered by mistake\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

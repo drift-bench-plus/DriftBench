@@ -1,0 +1,137 @@
+{
+ "sample_id": "166bf8aa525485ca__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "166bf8aa525485ca",
+ "query": "Last weekend I took my rescue golden retriever to the new off-leash dog park near the downtown community center, and he ended up making so many new puppy friends that he refused to leave when it was time to go, even dragging his leash behind him when I tried to herd him toward the car. On the way home we stopped at that little homemade ice cream shop on Oak Street, and I got him a tiny pup cup of peanut butter flavored ice cream that he ate so fast he had cream all over his nose and ears for the rest of the afternoon. When I got home I noticed my garden tomato plants that I planted last month had finally sprouted their first little green tomatoes, I\u2019m so excited to pick them once they ripen in a few weeks. Now I need a hand with my recent orders: for delivered order #W8528674, I\u2019d like to return item 6704763132, with the refund going to paypal_7664977. And for my pending order #W9672333, could you modify item 1684786391 to item 5052031638, with the payment method still being paypal_7664977?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I took my rescue golden retriever to the new off-leash dog park near the downtown community center, and he ended up making so many new puppy friends that he refused to leave when it was time to go, even dragging his leash behind him when I tried to herd him toward the car. On the way home we stopped at that little homemade ice cream shop on Oak Street, and I got him a tiny pup cup of peanut butter flavored ice cream that he ate so fast he had cream all over his nose and ears for the rest of the afternoon. When I got home I noticed my garden tomato plants that I planted last month had finally sprouted their first little green tomatoes, I\u2019m so excited to pick them once they ripen in a few weeks.",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id",
+   "arg:1:modify_pending_order_items:item_ids",
+   "arg:1:modify_pending_order_items:new_item_ids",
+   "arg:1:modify_pending_order_items:order_id",
+   "arg:1:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"6704763132\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W8528674\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_7664977\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"1684786391\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"5052031638\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W9672333\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_7664977\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"6704763132\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W8528674\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_7664977\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:item_ids",
+    "=",
+    "[\"1684786391\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"5052031638\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:order_id",
+    "=",
+    "\"#W9672333\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_7664977\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

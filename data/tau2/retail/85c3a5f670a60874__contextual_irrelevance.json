@@ -1,0 +1,148 @@
+{
+ "sample_id": "85c3a5f670a60874__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "85c3a5f670a60874",
+ "query": "Hey, have you tried the new matcha boba shop that opened up downtown last week? I went yesterday and their taro milk tea with golden boba was so good, the pearls were perfectly chewy and not too sweet at all. I also just adopted a tiny tabby kitten over the weekend, she\u2019s already figured out how to climb onto my kitchen counter and steal bits of my sandwich, it\u2019s equal parts adorable and chaotic. Oh right, I actually need to make a couple changes to my pending orders. For order #W6247578, please swap item 3799046073 to item 9647292434, and charge the difference to credit_card_9513926. For order #W4776164, please swap item 8349118980 to item 9647292434 as well, also charging the difference to credit_card_9513926.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey, have you tried the new matcha boba shop that opened up downtown last week? I went yesterday and their taro milk tea with golden boba was so good, the pearls were perfectly chewy and not too sweet at all. I also just adopted a tiny tabby kitten over the weekend, she\u2019s already figured out how to climb onto my kitchen counter and steal bits of my sandwich, it\u2019s equal parts adorable and chaotic. Oh right, I actually need to make a couple changes to my pending orders.",
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id",
+   "arg:1:modify_pending_order_items:item_ids",
+   "arg:1:modify_pending_order_items:new_item_ids",
+   "arg:1:modify_pending_order_items:order_id",
+   "arg:1:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"3799046073\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"9647292434\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W6247578\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_9513926\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"8349118980\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"9647292434\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4776164\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_9513926\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"3799046073\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"9647292434\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W6247578\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_9513926\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:item_ids",
+    "=",
+    "[\"8349118980\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"9647292434\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:order_id",
+    "=",
+    "\"#W4776164\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_9513926\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

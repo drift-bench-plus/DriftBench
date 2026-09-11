@@ -1,0 +1,240 @@
+{
+ "sample_id": "24650b9bd91b2beb",
+ "tree_id": "0f4133136a896b20",
+ "adapter": "webshop",
+ "cluster": "women's activewear",
+ "goal_idx": 217,
+ "split": "test",
+ "source_instruction": "i am looking for camo colored women's running shorts with an elastic waistband.",
+ "query": "Ugh, I swear the community garden plot I signed up for back in spring is testing every last bit of my patience this week. I showed up yesterday morning thinking I\u2019d just pluck a few ripe cherry tomatoes and pull the scraggly weeds that popped up after last week\u2019s random thunderstorm, only to find that a family of squirrels had chewed through half my sunflower stalks and dug up the three zinnia seedlings I\u2019d babied for two months after starting them on my fire escape. I stood there for a solid ten minutes holding my little trowel just staring at the mess, watching one of the squirrels perch on the split-rail fence like it owned the place, munching on a sunflower seed it had definitely stolen from my plot. I even brought a little container of the homemade lemon poppyseed muffins I baked on Sunday to share with the other regular garden folks, and I was so flustered I left the whole container sitting on the park bench on my walk home, so I didn\u2019t even get a snack to make the whole frustrating morning worth it.\nHey, can you help me pick something out from the women\u2019s activewear section? I\u2019m looking for pieces with a rubberized drawstring waistband, and I\u2019d also love options that come with a matching detachable water bottle holder, all under $30. I don\u2019t have a super specific look I\u2019m going for as long as it fits well for my weekend walks, just pull whatever fits those other marks and I\u2019ll sort through the options.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "insufficient_information",
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+insufficient_information+factual_error+contextual_irrelevance",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "insufficient_information",
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:elastic waistband",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:elastic waistband",
+    "elastic waistband",
+    "rubberized drawstring waistband"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "rubberized drawstring waistband",
+    "condition": [
+     "attr:elastic waistband",
+     "=",
+     "rubberized drawstring waistband"
+    ]
+   },
+   {
+    "text": "come with a matching detachable water bottle holder",
+    "condition": null
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear the community garden plot I signed up for back in spring is testing every last bit of my patience this week. I showed up yesterday morning thinking I\u2019d just pluck a few ripe cherry tomatoes and pull the scraggly weeds that popped up after last week\u2019s random thunderstorm, only to find that a family of squirrels had chewed through half my sunflower stalks and dug up the three zinnia seedlings I\u2019d babied for two months after starting them on my fire escape. I stood there for a solid ten minutes holding my little trowel just staring at the mess, watching one of the squirrels perch on the split-rail fence like it owned the place, munching on a sunflower seed it had definitely stolen from my plot. I even brought a little container of the homemade lemon poppyseed muffins I baked on Sunday to share with the other regular garden folks, and I was so flustered I left the whole container sitting on the park bench on my walk home, so I didn\u2019t even get a snack to make the whole frustrating morning worth it.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:elastic waistband",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:elastic waistband",
+     "=",
+     "rubberized drawstring waistband"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:elastic waistband",
+     "=",
+     "rubberized drawstring waistband"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "13278d4bb30213d4"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 13,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 13,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 212,
+    "true_card": 13,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 13,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "3a0ea8182a83c78a",
+  "conditions": [
+   [
+    "attr:elastic waistband",
+    "=",
+    "elastic waistband"
+   ],
+   [
+    "option:0",
+    "=",
+    "camo"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:elastic waistband",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 13,
+  "value": [
+   "[\"B00L8LXSG8\",[[\"color\",\"lagoon camo palm\"]]]",
+   "[\"B081PBSJCQ\",[[\"color\",\"ojog128  |  153 camo\"]]]",
+   "[\"B08F3GG7R4\",[[\"color\",\"camouflage\"]]]",
+   "[\"B08GPS1Q34\",[[\"color\",\"army green camo\"]]]",
+   "[\"B08JYGZZ8C\",[[\"color\",\"camo\"]]]",
+   "[\"B08K89ZK4Q\",[[\"color\",\"a-camo gray\"]]]",
+   "[\"B08MLLGHPH\",[[\"color\",\"kdf201-grey camo\"]]]",
+   "[\"B08N3XLLC3\",[[\"color\",\"camo multi 6-c\"]]]",
+   "[\"B08R9TJPK6\",[[\"color\",\"camo\"]]]",
+   "[\"B08TQQC152\",[[\"color\",\"08-camo army\"]]]",
+   "[\"B08VDDMTHD\",[[\"color\",\"army green camo\"]]]",
+   "[\"B09J2Y79WS\",[[\"color\",\"green camo\"]]]",
+   "[\"B09QC3MDM9\",[[\"color\",\"b-camouflage\"]]]"
+  ],
+  "hash": "04fd9564000833b8ae904dc074abc740"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "8ea567891c2117c8",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's activewear instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e834125cf8ec9848",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's activewear instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "20a9af9e2b8cfddd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be drawstring waist."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "fcad5883709f6e26",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be athletic shorts."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4ca46e5cfae189bd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d4f566e1b2b81abe",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3f45315a07dfc50a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #4 green instead of camo."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "ea212883d44807dd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #2 black instead of camo."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

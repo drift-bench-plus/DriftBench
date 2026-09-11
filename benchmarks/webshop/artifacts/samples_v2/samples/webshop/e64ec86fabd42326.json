@@ -1,0 +1,249 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's boots",
+ "fidelity_notes": [],
+ "goal_idx": 249,
+ "ground_truth": {
+  "cardinality": 19,
+  "hash": "edd86f062f77dc8c5ef9994ab7429e96",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B008J5F8GE\",[[\"color\",\"slate black | harvest gold\"],[\"size\",\"10\"]]]",
+   "[\"B079DDHSZ8\",[[\"color\",\"black wr | black\"],[\"size\",\"10.5\"]]]",
+   "[\"B07GYJSMW3\",[[\"color\",\"black | black\"],[\"size\",\"10\"]]]",
+   "[\"B07KRJP6K8\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B07LB5G878\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B07MC1Q3XX\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B07T3ZC4F5\",[[\"color\",\"dk.brown black\"],[\"size\",\"10\"]]]",
+   "[\"B08Q8QPCFR\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B08Q8TLWJC\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B08R7KKTJZ\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B08R7M2WPK\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B08SQ738PR\",[[\"color\",\"black water resistant | micro chip\"],[\"size\",\"10\"]]]",
+   "[\"B08SQRZQKF\",[[\"color\",\"black water resistant | black\"],[\"size\",\"10\"]]]",
+   "[\"B08SQYDFDN\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B08SW3M9RQ\",[[\"color\",\"black leather | quilted stretch\"],[\"size\",\"5\"]]]",
+   "[\"B08Y2SSNWJ\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+   "[\"B0931VPY1K\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B095S946QN\",[[\"color\",\"black milled leather\"],[\"size\",\"10\"]]]",
+   "[\"B09L29JQP7\",[[\"color\",\"black\"],[\"size\",\"10\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:rubber outsole",
+    "=",
+    "rubber outsole"
+   ],
+   [
+    "attr:water resistant",
+    "=",
+    "water resistant"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark coffee | black"
+   ],
+   [
+    "option:1",
+    "=",
+    "10.5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    110
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "60e19d3dbe7900f1"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "dark coffee | black"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "in dark coffee or black"
+   }
+  ],
+  "attempt": 5,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:rubber outsole",
+     "=",
+     "rubber outsole"
+    ],
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark coffee | black"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ],
+   [
+    [
+     "attr:rubber outsole",
+     "=",
+     "rubber outsole"
+    ],
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:rubber outsole",
+   "attr:water resistant",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "74cd7d4e7174cae3",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for men’s boots with a rubber outsole that are water resistant, plus a pair of thick wool boot socks, in dark coffee or black, size 10.5, under $110 total.",
+ "render_attempts": 5,
+ "sample_id": "e64ec86fabd42326",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's boots instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "3ca6249d4622f681"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's boots instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5f18ea6ec89f4634"
+  },
+  {
+   "announcement": "Also, it needs to be ankle boots.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9f8c2cd4eadf64a2"
+  },
+  {
+   "announcement": "Also, it needs to be shoes men.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f692008da3d58819"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "255db2f6ecc3ed8d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d4ed623bcbc1d0c3"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of dark coffee | black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2b3642a31f1c8dfa"
+  },
+  {
+   "announcement": "Actually, make it 03-dark brown instead of dark coffee | black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f3c78ba93f78f089"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   19,
+   32
+  ],
+  "rule": "ambiguous",
+  "true_card": 19,
+  "verdict": "ok"
+ },
+ "source_instruction": "searching to purchase a men's zerogrand hiker boot that is water resistant with rubber outsole in a size 10 1/2, either dark coffee or black in coloring.  cole haan.",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "e277f5aff48a3a3d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "sample_id": "923de7293d800bbc__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "923de7293d800bbc",
+ "query": "I finally managed to finish that 1000-piece landscape jigsaw puzzle I\u2019ve been working on for three weeks last night, the mountain sunset section was so tricky I almost gave up three separate times. I also picked up a new matcha scone from the bakery down the street this morning, it had just the right amount of sweetness and a really flaky crust that didn\u2019t crumble everywhere when I bit into it. My cat even knocked over my potted succulent earlier, luckily the plant was totally fine and I only had to sweep up a little bit of dirt off the floor. Anyway, my mobile service isn\u2019t working right now, I have airplane mode turned on, I got a notification that my line is suspended because I have an overdue bill, and I think my SIM card might be unseated too, can you help me figure out what I need to do to fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I finally managed to finish that 1000-piece landscape jigsaw puzzle I\u2019ve been working on for three weeks last night, the mountain sunset section was so tricky I almost gave up three separate times. I also picked up a new matcha scone from the bakery down the street this morning, it had just the right amount of sweetness and a really flaky crust that didn\u2019t crumble everywhere when I bit into it. My cat even knocked over my potted succulent earlier, luckily the plant was totally fine and I only had to sweep up a little bit of dirt off the floor. Anyway,",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:overdue_bill_suspension",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:overdue_bill_suspension",
+     "=",
+     "overdue_bill_suspension"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,190 @@
+{
+ "sample_id": "94c6f5437b313419",
+ "tree_id": "1efd6434839f8d4f",
+ "adapter": "webshop",
+ "cluster": "breakfast foods",
+ "goal_idx": 388,
+ "split": "test",
+ "source_instruction": "i am looking for a low carbohydrates protein bar with package of 12 counts.",
+ "query": "I\u2019ve been browsing the breakfast foods section lately, trying to stick to low carb options to keep my energy steady through morning meetings, and I\u2019ve heard the 12 count packs of those items are perfect for portioning out quick weekday meals without going overboard. I remember my roommate mentioning the good price points for those packs never leave you feeling like you overspent for the whole month\u2019s breakfast stash.",
+ "strategy_ids": [
+  "indirect_intent",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+vagueness_subjectivity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:low carb",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "option:0",
+     "=",
+     "12 count"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "bd049b0a6247a1b8"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 7,
+  "lit_card": 8,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 8,
+    "true_card": 7,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "20dd7cfec853f571",
+  "conditions": [
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "option:0",
+    "=",
+    "12 count"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 7,
+  "value": [
+   "[\"B016MEN14O\",[[\"size\",\"12 count\"]]]",
+   "[\"B01LPCLEWY\",[[\"size\",\"12 count\"]]]",
+   "[\"B07GY4FK2W\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B07YSWT2N1\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B082X86HD5\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B084JRK94V\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B08BW4HZ7R\",[[\"size\",\"12 count (pack of 1)\"]]]"
+  ],
+  "hash": "29fdd54f5ee7fe83e5591d3eac7f8638"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "85251a87f89861a6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breakfast foods instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "c7ffade20e378f4e",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breakfast foods instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "665882adf42ee6f7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be artificial flavors."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "db6b38f24984e87b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be brown rice."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4ffca32d859a1bed",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "aa9208beee49f9fc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3ccd70b7d7c46649",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pound instead of 12 count."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f2d1ebc23dc8b8e0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pack instead of 12 count."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

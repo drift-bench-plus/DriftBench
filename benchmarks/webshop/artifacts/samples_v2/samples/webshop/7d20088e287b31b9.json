@@ -1,0 +1,173 @@
+{
+ "adapter": "webshop",
+ "cluster": "headphones",
+ "fidelity_notes": [],
+ "goal_idx": 213,
+ "ground_truth": {
+  "cardinality": 8,
+  "hash": "abd81fb3989f261d17dfcea304be12ad",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07TYTJ5M1\",[[\"color\",\"silver\"]]]",
+   "[\"B083ZQGG4R\",[[\"color\",\"silver\"]]]",
+   "[\"B089W5RDKV\",[[\"color\",\"silver\"]]]",
+   "[\"B08Y8G1YZN\",[[\"color\",\"silver\"]]]",
+   "[\"B091DXBFFQ\",[[\"color\",\"silver\"]]]",
+   "[\"B09GJZZDQP\",[[\"color\",\"white-silver\"]]]",
+   "[\"B09LXNRQVZ\",[[\"color\",\"silver\"]]]",
+   "[\"B09S5L57D5\",[[\"color\",\"silver\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:noise cancelling",
+    "=",
+    "noise cancelling"
+   ],
+   [
+    "option:0",
+    "=",
+    "white-silver"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "8bc5949360d672c9"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "insufficient_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "parameter",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "withhold"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:noise cancelling",
+     "=",
+     "noise cancelling"
+    ],
+    [
+     "option:0",
+     "=",
+     "white-silver"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "withhold",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:noise cancelling",
+   "option:0"
+  ],
+  "spec_id": "c823de44de5012d2",
+  "strategy_id": "insufficient_information",
+  "substituted": [],
+  "withheld": [
+   "price_upper"
+  ]
+ },
+ "misalignments": 1,
+ "query": "I’m looking for noise cancelling headphones in the white-silver color option, can you help me find some good options?",
+ "render_attempts": 3,
+ "sample_id": "7d20088e287b31b9",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the headphones instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7f764ac432fe9619"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the headphones instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a378bd1c6a654d36"
+  },
+  {
+   "announcement": "Also, it needs to be wireless earbuds.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "073c9f6121813974"
+  },
+  {
+   "announcement": "Also, it needs to be audio cable.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7ee209cc2f948a74"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4b6493956c64e7c4"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e6ad588664e893bb"
+  },
+  {
+   "announcement": "Actually, make it 3 pack instead of white-silver.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7973db25f4efdd9e"
+  },
+  {
+   "announcement": "Actually, make it 7-black1 instead of white-silver.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8890af7279bdaa58"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 18,
+  "ok": true,
+  "rule": "withheld",
+  "true_card": 8,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want silver and noise cancelling earbuds.",
+ "split": "test",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "tree_id": "0e753744b15f4583",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

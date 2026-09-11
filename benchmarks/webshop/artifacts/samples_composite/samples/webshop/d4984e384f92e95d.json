@@ -1,0 +1,210 @@
+{
+ "sample_id": "d4984e384f92e95d",
+ "tree_id": "862faadd688e3901",
+ "adapter": "webshop",
+ "cluster": "snack crackers",
+ "goal_idx": 295,
+ "split": "test",
+ "source_instruction": "can you find me 1 pack of low calorie wheat flour sandwich crackers that are lemon, chocolate, and cream cheese flavored?",
+ "query": "Hey, can you help me pick out something from the snack crackers section? I\u2019m looking for low-sugar ones with flavor options of lemon, chocolate, or cream cheese, and my budget is under $20. I don\u2019t have a specific pack size preference, just whatever you\u2019d recommend that fits the bill.",
+ "strategy_ids": [
+  "insufficient_information",
+  "factual_error"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+factual_error",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:low calorie",
+   "insufficient_information": "option:1"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:low calorie",
+    "low calorie",
+    "low-sugar"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:1"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:low calorie",
+   "option:1"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low calorie",
+     "=",
+     "low-sugar"
+    ],
+    [
+     "option:0",
+     "=",
+     "lemon,chocolate,cream cheese"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "377dadf9963677b7"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 5,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 7,
+    "true_card": 3,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "3333d3bf6b11b5b0",
+  "conditions": [
+   [
+    "attr:low calorie",
+    "=",
+    "low calorie"
+   ],
+   [
+    "option:0",
+    "=",
+    "lemon,chocolate,cream cheese"
+   ],
+   [
+    "option:1",
+    "=",
+    "1 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:low calorie",
+   "option:1"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B08TFJ4QCJ\",[[\"flavor name\",\"chocolate chip pecan\"],[\"size\",\"6 ounce (pack of 1)\"]]]",
+   "[\"B093CLC753\",[[\"flavor name\",\"chocolate\"],[\"size\",\"1 pack\"]]]",
+   "[\"B09QNXZQT2\",[[\"flavor name\",\"chocolate\"],[\"size\",\"12 pack\"]]]"
+  ],
+  "hash": "a0224d570f7df2c3223eacbb797fd00e"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "28a7f51b4d9a6cc2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the snack crackers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "575719c4dd47a4cf",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the snack crackers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "2443186f14ced29b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be artificial colors."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "dd4733caf4a63373",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be brown rice."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "92ef28655709698f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cbf4f3e418500da5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "bf402128ec7b86b5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .2 set (4.15 ounce (pack of 3)) instead of lemon,chocolate,cream cheese."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "df5fef21c98869d5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .4 set (4.15 ounce (pack of 3)) instead of lemon,chocolate,cream cheese."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,115 @@
+{
+ "sample_id": "cbafeb2cf50aa17c__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "cbafeb2cf50aa17c",
+ "query": "I just got back from taking my golden retriever to the dog park this afternoon, he had so much fun chasing after a frisbee and even made friends with a little poodle puppy that kept stealing his tennis ball. On the way home I stopped at that new bakery on 5th Street and picked up a lemon blueberry scone, it was still warm and tasted so much better than the ones I usually get at the grocery store. I was actually in the middle of texting my friend to tell her about the scone when I realized my mobile service isn\u2019t working at all. I have airplane mode turned on right now, my APN settings seem to be messed up, my SIM card is locked with a PIN I can\u2019t remember, the line is probably suspended because I forgot to pay my last bill, and I think the SIM card might have gotten unseated when I dropped my phone earlier this week.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from taking my golden retriever to the dog park this afternoon, he had so much fun chasing after a frisbee and even made friends with a little poodle puppy that kept stealing his tennis ball. On the way home I stopped at that new bakery on 5th Street and picked up a lemon blueberry scone, it was still warm and tasted so much better than the ones I usually get at the grocery store. I was actually in the middle of texting my friend to tell her about the scone when I realized my mobile service isn\u2019t working at all.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_settings",
+   "fault:lock_sim_card_pin",
+   "fault:overdue_bill_suspension",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ],
+    [
+     "fault:overdue_bill_suspension",
+     "=",
+     "overdue_bill_suspension"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

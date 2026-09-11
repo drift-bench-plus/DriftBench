@@ -1,0 +1,273 @@
+{
+ "sample_id": "cbb5dfb06a186f66",
+ "tree_id": "9cfee87f9d3a9079",
+ "adapter": "webshop",
+ "cluster": "women's shorts",
+ "goal_idx": 189,
+ "split": "test",
+ "source_instruction": "i'm looking for high waisted denim shorts distressed jeans for women.",
+ "query": "I stopped at the little community farmers\u2019 market on my walk over to my apartment this morning, and the air smelled so good\u2014like fresh baked peach cobbler from the stand run by the retired high school baking teacher, and cut sunflowers that were so bright they looked like little bits of sun stuck in buckets right by the entrance. I ended up chatting for ten minutes with the older woman who grows heirloom tomatoes a few miles outside town, and she gave me a free handful of the sweetest cherry tomatoes I\u2019ve ever tasted, all warm from sitting out in the sun. I also ran into my neighbor who brings her fluffy golden retriever, Muffin, to the market every weekend, and Muffin kept shoving her wet nose into my palm until I gave her a tiny scratch behind the ears, which made her whole body wiggle so hard she almost knocked over a jar of wildflower honey. I\u2019m browsing the women\u2019s shorts section right now and hoping you can help me track down a pair that works for me! I really need them to have a drawstring closure and be slim fit, nothing baggy or loose around the thighs at all. I don\u2019t want to spend a crazy amount, just something with a good price point that feels worth the cost. Oh, and I have a specific size I need, can you make sure to only show me options that come in that size?",
+ "strategy_ids": [
+  "insufficient_information",
+  "vagueness_subjectivity",
+  "contextual_irrelevance",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+vagueness_subjectivity+contextual_irrelevance+factual_error",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "vagueness_subjectivity",
+   "contextual_irrelevance",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "factual_error": "attr:button closure",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:button closure",
+    "button closure",
+    "drawstring closure"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I stopped at the little community farmers\u2019 market on my walk over to my apartment this morning, and the air smelled so good\u2014like fresh baked peach cobbler from the stand run by the retired high school baking teacher, and cut sunflowers that were so bright they looked like little bits of sun stuck in buckets right by the entrance. I ended up chatting for ten minutes with the older woman who grows heirloom tomatoes a few miles outside town, and she gave me a free handful of the sweetest cherry tomatoes I\u2019ve ever tasted, all warm from sitting out in the sun. I also ran into my neighbor who brings her fluffy golden retriever, Muffin, to the market every weekend, and Muffin kept shoving her wet nose into my palm until I gave her a tiny scratch behind the ears, which made her whole body wiggle so hard she almost knocked over a jar of wildflower honey.",
+  "retained": [
+   "attr:slim fit"
+  ],
+  "hidden_slots": [
+   "attr:button closure",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:button closure",
+     "=",
+     "drawstring closure"
+    ],
+    [
+     "attr:slim fit",
+     "=",
+     "slim fit"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "29298d21c45154a6"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 50,
+  "lit_card": 75,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 56,
+    "true_card": 50,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 65,
+    "true_card": 50,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 54,
+    "true_card": 50,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "aa65457558c46e24",
+  "conditions": [
+   [
+    "attr:button closure",
+    "=",
+    "button closure"
+   ],
+   [
+    "attr:slim fit",
+    "=",
+    "slim fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:button closure",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 50,
+  "value": [
+   "[\"B072BYKXHD\",[[\"size\",\"large\"]]]",
+   "[\"B07BHG46RP\",[[\"size\",\"large\"]]]",
+   "[\"B07KL4BMJG\",[[\"size\",\"large\"]]]",
+   "[\"B07PYTZ7Z5\",[[\"size\",\"large\"]]]",
+   "[\"B07PYZ9RN7\",[[\"size\",\"large\"]]]",
+   "[\"B07R8KC9MM\",[[\"size\",\"large\"]]]",
+   "[\"B07RPNJXQQ\",[[\"size\",\"large\"]]]",
+   "[\"B082TKHMVN\",[[\"size\",\"large\"]]]",
+   "[\"B086JQZTJR\",[[\"size\",\"large\"]]]",
+   "[\"B089DVSFXZ\",[[\"size\",\"x-large\"]]]",
+   "[\"B08BBY1QSC\",[[\"size\",\"large\"]]]",
+   "[\"B08BR2QXF4\",[[\"size\",\"large\"]]]",
+   "[\"B08MJW1K9B\",[[\"size\",\"large\"]]]",
+   "[\"B08Q77RYN8\",[[\"size\",\"large\"]]]",
+   "[\"B08RB6R2Q9\",[[\"size\",\"large\"]]]",
+   "[\"B08SBM9636\",[[\"size\",\"large\"]]]",
+   "[\"B08SBMGKQD\",[[\"size\",\"large\"]]]",
+   "[\"B08SJ7C9VW\",[[\"size\",\"large\"]]]",
+   "[\"B08XMQXW7K\",[[\"size\",\"x-large\"]]]",
+   "[\"B08ZXMF6HN\",[[\"size\",\"xx-large\"]]]",
+   "[\"B091CTCMFQ\",[[\"size\",\"large\"]]]",
+   "[\"B091FGZY28\",[[\"size\",\"large\"]]]",
+   "[\"B091L8MDZZ\",[[\"size\",\"large\"]]]",
+   "[\"B0925SJJD3\",[[\"size\",\"large\"]]]",
+   "[\"B093H9TCF8\",[[\"size\",\"large\"]]]",
+   "[\"B096LQSTVM\",[[\"size\",\"large\"]]]",
+   "[\"B096LRPJYR\",[[\"size\",\"large\"]]]",
+   "[\"B096LRWC7X\",[[\"size\",\"large\"]]]",
+   "[\"B096S435NG\",[[\"size\",\"large\"]]]",
+   "[\"B096SNC5DJ\",[[\"size\",\"large\"]]]",
+   "[\"B0976T9DY8\",[[\"size\",\"large\"]]]",
+   "[\"B097HMYRFM\",[[\"size\",\"large\"]]]",
+   "[\"B097HN61Y3\",[[\"size\",\"large\"]]]",
+   "[\"B097N7CMV8\",[[\"size\",\"large\"]]]",
+   "[\"B097N8C2RW\",[[\"size\",\"large\"]]]",
+   "[\"B097NFY74J\",[[\"size\",\"large\"]]]",
+   "[\"B098PXYQK8\",[[\"size\",\"large\"]]]",
+   "[\"B09F5Q16WG\",[[\"size\",\"large\"]]]",
+   "[\"B09KRVBSG6\",[[\"size\",\"large\"]]]",
+   "[\"B09NR5SH6C\",[[\"size\",\"large\"]]]",
+   "[\"B09PZYPVP7\",[[\"size\",\"large\"]]]",
+   "[\"B09Q3KJKW1\",[[\"size\",\"large\"]]]",
+   "[\"B09QFVG8P6\",[[\"size\",\"large\"]]]",
+   "[\"B09QFX2G29\",[[\"size\",\"large\"]]]",
+   "[\"B09QKBR7LG\",[[\"size\",\"large\"]]]",
+   "[\"B09QL3D2HD\",[[\"size\",\"large\"]]]",
+   "[\"B09RZVC64G\",[[\"size\",\"large\"]]]",
+   "[\"B09SGG1PSK\",[[\"size\",\"large\"]]]",
+   "[\"B09STMDJ8J\",[[\"size\",\"large\"]]]",
+   "[\"B09SYKXKP4\",[[\"size\",\"large\"]]]"
+  ],
+  "hash": "287d099a552a7d970f3873cf379e6c30"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "b53410b3de234fbb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f908266184f596e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "033af430dd5e19f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be relaxed fit."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9cb85c427584c708",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cargo pants."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2adecee36a55cdcc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "501a949367f70ba5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4b8fc187311d922f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01 beige instead of large."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c11ca83c08dd730e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #03 gray instead of large."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

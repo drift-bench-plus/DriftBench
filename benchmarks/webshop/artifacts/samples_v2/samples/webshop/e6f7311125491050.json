@@ -1,0 +1,171 @@
+{
+ "adapter": "webshop",
+ "cluster": "book cases",
+ "fidelity_notes": [],
+ "goal_idx": 402,
+ "ground_truth": {
+  "cardinality": 6,
+  "hash": "8e71371c5beb7ff469df28c7aa670ff7",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07CFMX5BZ\",[[\"color\",\"anthracite\"]]]",
+   "[\"B07CYK25W8\",[[\"color\",\"anthracite\"]]]",
+   "[\"B082XGSSFZ\",[[\"color\",\"anthracite\"]]]",
+   "[\"B08KXMF99D\",[[\"color\",\"oak & anthracite\"]]]",
+   "[\"B08KYFNXS3\",[[\"color\",\"anthracite\"]]]",
+   "[\"B08KZNCNPC\",[[\"color\",\"anthracite\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:long lasting",
+    "=",
+    "long lasting"
+   ],
+   [
+    "option:0",
+    "=",
+    "anthracite"
+   ],
+   [
+    "price_upper",
+    "<=",
+    230
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "2678ab901d98d556"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "insufficient_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "parameter",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "withhold"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:long lasting",
+     "=",
+     "long lasting"
+    ],
+    [
+     "option:0",
+     "=",
+     "anthracite"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "withhold",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:long lasting",
+   "option:0"
+  ],
+  "spec_id": "c823de44de5012d2",
+  "strategy_id": "insufficient_information",
+  "substituted": [],
+  "withheld": [
+   "price_upper"
+  ]
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a long-lasting anthracite bookcase, can you help me find options?",
+ "render_attempts": 1,
+ "sample_id": "e6f7311125491050",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the book cases instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "198a92208e4d83b8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the book cases instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "914fd2f575c67194"
+  },
+  {
+   "announcement": "Also, it needs to be wall mounted.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3bc1d47723b5d90a"
+  },
+  {
+   "announcement": "Also, it needs to be white item.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ed434e1d42622b27"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "096ada41b42c0dbe"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6dbf0e7e4b7693a9"
+  },
+  {
+   "announcement": "Actually, make it 2-shelf instead of anthracite.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4407216053600497"
+  },
+  {
+   "announcement": "Actually, make it 2 instead of anthracite.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9da390117257f382"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 13,
+  "ok": true,
+  "rule": "withheld",
+  "true_card": 6,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am interested in acquiring a bookcase which will last me a long time and i prefer to have it in anthracite color.",
+ "split": "test",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "tree_id": "36687b6412a3d083",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

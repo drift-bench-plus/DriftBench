@@ -1,0 +1,187 @@
+{
+ "sample_id": "830999e4551d7093",
+ "tree_id": "5d4e48f3d38bbe20",
+ "adapter": "webshop",
+ "cluster": "sconces",
+ "goal_idx": 264,
+ "split": "test",
+ "source_instruction": "i need a chrome wall lamp that is brushed nickel.",
+ "query": "Oh man, I spent twenty minutes this morning chasing my neighbor\u2019s escaped tabby cat all around the apartment complex, it bolted right past me when I was taking out the recycling and darted up a oak tree by the mailboxes. I also burned my oatmeal for the third time this week because I got distracted scrolling through old vacation photos from that beach trip two summers ago, the ones where my friend tripped over a sandcastle and face-planted into a cooler of lemonade. I even realized halfway to the subway that I\u2019d put on two different socks, one striped with neon yellow and one plain gray, and had to run back up three flights of stairs to change before I missed my train. I\u2019ve heard that for the wall sconces I\u2019ve been eyeing for the hallway, brushed nickel is the standard finish most people go for, though chrome is a nice alternate option to consider, and all the picks I\u2019ve glanced at so far sit right under an $80 price point.",
+ "strategy_ids": [
+  "indirect_intent",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "Oh man, I spent twenty minutes this morning chasing my neighbor\u2019s escaped tabby cat all around the apartment complex, it bolted right past me when I was taking out the recycling and darted up a oak tree by the mailboxes. I also burned my oatmeal for the third time this week because I got distracted scrolling through old vacation photos from that beach trip two summers ago, the ones where my friend tripped over a sandcastle and face-planted into a cooler of lemonade. I even realized halfway to the subway that I\u2019d put on two different socks, one striped with neon yellow and one plain gray, and had to run back up three flights of stairs to change before I missed my train.",
+  "retained": [
+   "attr:brushed nickel",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:brushed nickel",
+     "=",
+     "brushed nickel"
+    ],
+    [
+     "option:0",
+     "=",
+     "chrome"
+    ],
+    [
+     "price_upper",
+     "<=",
+     80
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "75a95a36daae8081"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 18,
+  "lit_card": 18,
+  "components": {}
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "1f1fadbafe27260e",
+  "conditions": [
+   [
+    "attr:brushed nickel",
+    "=",
+    "brushed nickel"
+   ],
+   [
+    "option:0",
+    "=",
+    "chrome"
+   ],
+   [
+    "price_upper",
+    "<=",
+    80
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 18,
+  "value": [
+   "[\"B000K7DHT4\",[[\"color\",\"chrome\"]]]",
+   "[\"B001DY8482\",[[\"color\",\"chrome\"]]]",
+   "[\"B00HM1Z0I2\",[[\"color\",\"chrome\"]]]",
+   "[\"B00IO2X0VC\",[[\"color\",\"polished chrome\"]]]",
+   "[\"B00L1IPCZI\",[[\"color\",\"amber | chrome\"]]]",
+   "[\"B01MZ82PKM\",[[\"color\",\"chrome\"]]]",
+   "[\"B073V6RT1G\",[[\"color\",\"chrome\"]]]",
+   "[\"B073V73YG2\",[[\"color\",\"polished chrome\"]]]",
+   "[\"B07F6W3DWH\",[[\"color\",\"chrome\"]]]",
+   "[\"B07F6YGQZK\",[[\"color\",\"chrome\"]]]",
+   "[\"B07MDZRH5B\",[[\"color\",\"chrome\"]]]",
+   "[\"B07SK2MXZT\",[[\"color\",\"chrome\"]]]",
+   "[\"B07SS54KX2\",[[\"color\",\"chrome\"]]]",
+   "[\"B083ZQ7VFL\",[[\"color\",\"chrome\"]]]",
+   "[\"B083ZRCCXD\",[[\"color\",\"chrome\"]]]",
+   "[\"B089CZM41P\",[[\"color\",\"chrome polished\"]]]",
+   "[\"B08FCTGP3K\",[[\"color\",\"chrome\"]]]",
+   "[\"B08ZWZVDRD\",[[\"color\",\"chrome\"]]]"
+  ],
+  "hash": "2425e4f2e4d16e762b3fc9b46d692ce5"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "40c5b96a18899c02",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the sconces instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "62b93e1ad314dbdc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the sconces instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "0cb27a3eb4f42469",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mid century."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "6a53a602eefa255f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be eco friendly."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c75514f9f45c34c0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cfbc864c028e7abe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3d4c6d3b3dbe3e8a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 instead of chrome."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "9e3c5a835e5f89fe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1-light-gd instead of chrome."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

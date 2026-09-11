@@ -1,0 +1,184 @@
+{
+ "sample_id": "b21c8af7e03cfcb1__vagueness_subjectivity",
+ "domain": "retail",
+ "tree_id": "b21c8af7e03cfcb1",
+ "query": "Hi, I need to update my pending order #W5270061: change the shipping address to 159 Hickory Lane, Suite 995, Charlotte, NC 28243, USA, and for the item with SKU 2492465580, swap it for a better version, using payment method paypal_7729105 to process any adjustments needed.",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "vagueness_subjectivity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_pending_order_items:item_ids",
+   "arg:1:modify_pending_order_items:order_id",
+   "arg:1:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [
+   "arg:1:modify_pending_order_items:new_item_ids"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"159 Hickory Lane\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 995\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"Charlotte\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W5270061\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NC\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"28243\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"2492465580\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W5270061\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_7729105\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "9fe63eb57c2a1e6b"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"159 Hickory Lane\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 995\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"Charlotte\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W5270061\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"NC\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"28243\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:item_ids",
+    "=",
+    "[\"2492465580\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"5917587651\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:order_id",
+    "=",
+    "\"#W5270061\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_7729105\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:1:modify_pending_order_items:new_item_ids"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

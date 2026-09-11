@@ -1,0 +1,243 @@
+{
+ "sample_id": "d2b8d4acab7d26eb",
+ "tree_id": "0f4133136a896b20",
+ "adapter": "webshop",
+ "cluster": "women's activewear",
+ "goal_idx": 217,
+ "split": "test",
+ "source_instruction": "i am looking for camo colored women's running shorts with an elastic waistband.",
+ "query": "Ugh, you wouldn\u2019t believe how chaotic my morning commute was today! The local bus was running 20 minutes late because a flock of wild turkeys decided to camp out right in the middle of the main road, and none of the drivers wanted to nudge them out of the way. I ended up sprinting three blocks from the next closest stop to make it to my desk right as my 9 a.m. team check-in started, and I spilled half my iced oat milk latte down the front of my old hoodie in the process. I swear, the neighborhood wildlife has been getting bolder by the week lately\u2014last night I even caught a raccoon trying to pry open the lid of my balcony compost bin like it was cracking a safe. Hey, I\u2019m browsing the women\u2019s activewear section right now and need to grab a new pair of bottoms for my weekend hikes. Can you show me options that have a drawstring waistband, that usual print I always grab, and come with a matching detachable phone wristlet? Oh, and make sure none of them go over $30, I don\u2019t want to blow my small clothing budget for this month on just one item.",
+ "strategy_ids": [
+  "factual_error",
+  "referential_ambiguity",
+  "contextual_irrelevance",
+  "irrelevant_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+referential_ambiguity+contextual_irrelevance+irrelevant_information",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "referential_ambiguity",
+   "contextual_irrelevance",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:elastic waistband"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:elastic waistband",
+    "elastic waistband",
+    "drawstring waistband"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "drawstring waistband",
+    "condition": [
+     "attr:elastic waistband",
+     "=",
+     "drawstring waistband"
+    ]
+   },
+   {
+    "text": "come with a matching detachable phone wristlet",
+    "condition": null
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, you wouldn\u2019t believe how chaotic my morning commute was today! The local bus was running 20 minutes late because a flock of wild turkeys decided to camp out right in the middle of the main road, and none of the drivers wanted to nudge them out of the way. I ended up sprinting three blocks from the next closest stop to make it to my desk right as my 9 a.m. team check-in started, and I spilled half my iced oat milk latte down the front of my old hoodie in the process. I swear, the neighborhood wildlife has been getting bolder by the week lately\u2014last night I even caught a raccoon trying to pry open the lid of my balcony compost bin like it was cracking a safe.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:elastic waistband",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:elastic waistband",
+     "=",
+     "drawstring waistband"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:elastic waistband",
+     "=",
+     "drawstring waistband"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "53b17c80ce6a0f13"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 13,
+  "lit_card": 30,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 2,
+    "true_card": 13,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 212,
+    "true_card": 13,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 13,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "3a0ea8182a83c78a",
+  "conditions": [
+   [
+    "attr:elastic waistband",
+    "=",
+    "elastic waistband"
+   ],
+   [
+    "option:0",
+    "=",
+    "camo"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:elastic waistband",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 13,
+  "value": [
+   "[\"B00L8LXSG8\",[[\"color\",\"lagoon camo palm\"]]]",
+   "[\"B081PBSJCQ\",[[\"color\",\"ojog128  |  153 camo\"]]]",
+   "[\"B08F3GG7R4\",[[\"color\",\"camouflage\"]]]",
+   "[\"B08GPS1Q34\",[[\"color\",\"army green camo\"]]]",
+   "[\"B08JYGZZ8C\",[[\"color\",\"camo\"]]]",
+   "[\"B08K89ZK4Q\",[[\"color\",\"a-camo gray\"]]]",
+   "[\"B08MLLGHPH\",[[\"color\",\"kdf201-grey camo\"]]]",
+   "[\"B08N3XLLC3\",[[\"color\",\"camo multi 6-c\"]]]",
+   "[\"B08R9TJPK6\",[[\"color\",\"camo\"]]]",
+   "[\"B08TQQC152\",[[\"color\",\"08-camo army\"]]]",
+   "[\"B08VDDMTHD\",[[\"color\",\"army green camo\"]]]",
+   "[\"B09J2Y79WS\",[[\"color\",\"green camo\"]]]",
+   "[\"B09QC3MDM9\",[[\"color\",\"b-camouflage\"]]]"
+  ],
+  "hash": "04fd9564000833b8ae904dc074abc740"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "8ea567891c2117c8",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's activewear instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e834125cf8ec9848",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's activewear instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "20a9af9e2b8cfddd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be drawstring waist."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "fcad5883709f6e26",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be athletic shorts."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4ca46e5cfae189bd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d4f566e1b2b81abe",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3f45315a07dfc50a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #4 green instead of camo."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "ea212883d44807dd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #2 black instead of camo."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

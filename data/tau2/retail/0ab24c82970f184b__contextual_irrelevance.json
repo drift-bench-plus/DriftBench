@@ -1,0 +1,247 @@
+{
+ "sample_id": "0ab24c82970f184b__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "0ab24c82970f184b",
+ "query": "I just got back from walking my golden retriever this afternoon, he chased a squirrel all the way across the community park and even knocked over a kid's bubble machine by accident, I felt so bad I ended up buying the family a pack of strawberry ice lollies to apologize. Oh, and this morning I tried making matcha latte at home for the first time, I added way too much matcha powder so it was bitter and I had to dump half of it out and mix in extra oat milk to make it drinkable. Also I was watching a home organization show last night and they had the coolest under-sink storage hacks, I'm already planning to go pick up some of those stackable bins this weekend. But anyway, I need to handle a few order issues: first, for delivered order #W6239298 I need to return items [\"4900661478\",\"3614853563\"] with refund to credit_card_2112420, for delivered order #W9218746 I need to return item [\"7824298782\"] with refund to the same credit card credit_card_2112420. Then for pending order #W4860251, I need to update the shipping address to 921 Park Avenue, Suite 892, Chicago, IL 60612, USA, and also modify the items in this order: replace item [\"5209958006\"] with [\"8964750292\"], charge the price difference to credit_card_2112420 as well.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from walking my golden retriever this afternoon, he chased a squirrel all the way across the community park and even knocked over a kid's bubble machine by accident, I felt so bad I ended up buying the family a pack of strawberry ice lollies to apologize. Oh, and this morning I tried making matcha latte at home for the first time, I added way too much matcha powder so it was bitter and I had to dump half of it out and mix in extra oat milk to make it drinkable. Also I was watching a home organization show last night and they had the coolest under-sink storage hacks, I'm already planning to go pick up some of those stackable bins this weekend. But anyway, ",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id",
+   "arg:1:return_delivered_order_items:item_ids",
+   "arg:1:return_delivered_order_items:order_id",
+   "arg:1:return_delivered_order_items:payment_method_id",
+   "arg:2:modify_pending_order_address:address1",
+   "arg:2:modify_pending_order_address:address2",
+   "arg:2:modify_pending_order_address:city",
+   "arg:2:modify_pending_order_address:country",
+   "arg:2:modify_pending_order_address:order_id",
+   "arg:2:modify_pending_order_address:state",
+   "arg:2:modify_pending_order_address:zip",
+   "arg:3:modify_pending_order_items:item_ids",
+   "arg:3:modify_pending_order_items:new_item_ids",
+   "arg:3:modify_pending_order_items:order_id",
+   "arg:3:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"4900661478\",\"3614853563\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W6239298\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_2112420\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:item_ids",
+     "=",
+     "[\"7824298782\"]"
+    ],
+    [
+     "arg:1:return_delivered_order_items:order_id",
+     "=",
+     "\"#W9218746\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_2112420\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:address1",
+     "=",
+     "\"921 Park Avenue\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 892\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:city",
+     "=",
+     "\"Chicago\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:order_id",
+     "=",
+     "\"#W4860251\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:state",
+     "=",
+     "\"IL\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:zip",
+     "=",
+     "\"60612\""
+    ],
+    [
+     "arg:3:modify_pending_order_items:item_ids",
+     "=",
+     "[\"5209958006\"]"
+    ],
+    [
+     "arg:3:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"8964750292\"]"
+    ],
+    [
+     "arg:3:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4860251\""
+    ],
+    [
+     "arg:3:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_2112420\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"4900661478\",\"3614853563\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W6239298\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_2112420\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:item_ids",
+    "=",
+    "[\"7824298782\"]"
+   ],
+   [
+    "arg:1:return_delivered_order_items:order_id",
+    "=",
+    "\"#W9218746\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_2112420\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:address1",
+    "=",
+    "\"921 Park Avenue\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 892\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:city",
+    "=",
+    "\"Chicago\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:order_id",
+    "=",
+    "\"#W4860251\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:state",
+    "=",
+    "\"IL\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:zip",
+    "=",
+    "\"60612\""
+   ],
+   [
+    "arg:3:modify_pending_order_items:item_ids",
+    "=",
+    "[\"5209958006\"]"
+   ],
+   [
+    "arg:3:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"8964750292\"]"
+   ],
+   [
+    "arg:3:modify_pending_order_items:order_id",
+    "=",
+    "\"#W4860251\""
+   ],
+   [
+    "arg:3:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_2112420\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

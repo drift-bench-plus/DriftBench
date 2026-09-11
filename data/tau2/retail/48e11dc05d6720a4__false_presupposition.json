@@ -1,0 +1,119 @@
+{
+ "sample_id": "48e11dc05d6720a4__false_presupposition",
+ "domain": "retail",
+ "tree_id": "48e11dc05d6720a4",
+ "query": "Since it looks like the paypal_5364164 payment method can't be applied to order modifications, can you please help me modify pending order #W5199551 by changing item 1615379700 to 3613716226, and just use whatever the default available payment method is for this change?",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "false_presupposition",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "false_presupposition"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "it looks like the paypal_5364164 payment method can't be applied to order modifications",
+    "condition": null,
+    "about": [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "\"paypal_5364164\""
+    ],
+    "alternative": [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "default available payment method"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"1615379700\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"3613716226\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W5199551\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "default available payment method"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "a9f71ee43d1fcbfe"
+ },
+ "signature": {
+  "rule": "presupposed",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"1615379700\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"3613716226\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W5199551\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_5364164\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

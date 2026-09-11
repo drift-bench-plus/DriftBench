@@ -1,0 +1,109 @@
+{
+ "sample_id": "04ca84b67ddf0be4__lexical_ambiguity",
+ "domain": "retail",
+ "tree_id": "04ca84b67ddf0be4",
+ "query": "Hi there, I need to cancel my pending order #W9284598, the reason is I made a slip when I was checking out.",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "lexical_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "made a slip when I was checking out",
+    "placements": [
+     [
+      "arg:0:cancel_pending_order:reason",
+      "\"ordered by mistake\""
+     ],
+     [
+      "arg:0:cancel_pending_order:reason",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:cancel_pending_order:order_id"
+  ],
+  "hidden_slots": [
+   "arg:0:cancel_pending_order:reason"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W9284598\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"ordered by mistake\""
+    ]
+   ],
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W9284598\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "5c7af2c8d96692ef"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W9284598\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"ordered by mistake\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:cancel_pending_order:reason"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

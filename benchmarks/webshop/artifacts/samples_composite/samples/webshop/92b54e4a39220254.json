@@ -1,0 +1,214 @@
+{
+ "sample_id": "92b54e4a39220254",
+ "tree_id": "1630e71d8eaa84b7",
+ "adapter": "webshop",
+ "cluster": "men's work & safety footwear",
+ "goal_idx": 340,
+ "split": "test",
+ "source_instruction": "i am looking for light weight safety shoes for men of black color.",
+ "query": "Hey, I\u2019m looking through the men\u2019s work & safety footwear section right now and need a little help. I want a pair that\u2019s black, has that super heavy, thick reinforced weight that feels super sturdy on rough job sites, and I don\u2019t have a super strict budget so just pull whatever options fit the look, yeah? Wait, actually, I don\u2019t have a set number I\u2019m sticking to for cost at all, as long as it feels solid and comes in that black color I like for work.",
+ "strategy_ids": [
+  "insufficient_information",
+  "factual_error"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+factual_error",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:light weight",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:light weight",
+    "light weight",
+    "super heavy, thick reinforced weight that feels super sturdy"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:light weight",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:light weight",
+     "=",
+     "super heavy, thick reinforced weight that feels super sturdy"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "0c70b9835ef7bbf0"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 18,
+  "lit_card": 0,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 31,
+    "true_card": 18,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 18,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "b3421f41fdef2b80",
+  "conditions": [
+   [
+    "attr:light weight",
+    "=",
+    "light weight"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "attr:light weight",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 18,
+  "value": [
+   "[\"B074PFPGHC\",[[\"color\",\"black\"]]]",
+   "[\"B07T8JJV8T\",[[\"color\",\"black\"]]]",
+   "[\"B08BP3FY3J\",[[\"color\",\"797-black\"]]]",
+   "[\"B08W3CNDLD\",[[\"color\",\"black | red\"]]]",
+   "[\"B0957JDVLS\",[[\"color\",\"023-black\"]]]",
+   "[\"B096JQX63Z\",[[\"color\",\"black-21\"]]]",
+   "[\"B097PJ8ZRF\",[[\"color\",\"a01_black\"]]]",
+   "[\"B098JSTV4D\",[[\"color\",\"black\"]]]",
+   "[\"B09B1M5RHG\",[[\"color\",\"black b\"]]]",
+   "[\"B09JPDCKBX\",[[\"color\",\"striped black\"]]]",
+   "[\"B09NPXK3BZ\",[[\"color\",\"black\"]]]",
+   "[\"B09NPXTCGX\",[[\"color\",\"black\"]]]",
+   "[\"B09NPXVGHG\",[[\"color\",\"black\"]]]",
+   "[\"B09NPXWNMY\",[[\"color\",\"black\"]]]",
+   "[\"B09NPXZC6S\",[[\"color\",\"black\"]]]",
+   "[\"B09NY645T9\",[[\"color\",\"black\"]]]",
+   "[\"B09PG34DTS\",[[\"color\",\"black\"]]]",
+   "[\"B09PG36QGC\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "909c95fbf925cae324aca1b511a05f4c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7dea39dd9a077edd",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's work & safety footwear instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ecd05ee6ce66071b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's work & safety footwear instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "166babd4693798cf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be quick drying."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c631d84d33eb22a5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be memory foam."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4d6b71b29d81c8bb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "72f12476cf3e136a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "38229d04ab5c6a70",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10.5 wide instead of black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "bc2f9add26b21668",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 11 narrow instead of black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,209 @@
+{
+ "sample_id": "9f4208e54f51a91c",
+ "tree_id": "d8635b8c1de27ad3",
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "goal_idx": 409,
+ "split": "test",
+ "source_instruction": "i am looking for tulua apple cider vinegar lemon ginger flavored fruit juice that is certified organic.",
+ "query": "The barista at the corner caf\u00e9 I stopped at ten minutes ago just told me the weirdest, most charming story about a sparrow that\u2019s been sneaking into their shop every morning this week. The little bird hops right up to the pastry case, tilts its head like it\u2019s weighing every scone and croissant on display, and waits for someone to drop a tiny crumb of blueberry muffin before it flits back out to the oak tree out front. I stood there for a full two minutes watching it perch on the edge of the outdoor table, pecking at a crumb someone left, while my iced oat latte got just a little more watery in the spring sun. I\u2019m browsing the beverages section right now, certified organic apple cider vinegar is the specific variety that lines the shelves here, that one that\u2019s always the familiar pick. I\u2019ve heard that overspending on that sort of item is never ideal, and all the matching options for that exact product are visible when you cut out all the unrelated listings. I\u2019ve heard scrolling through random picks for ages is a total waste of time, and the narrow set of items that line up exactly with that exact preferred product is the only set that lines up with that exact fit.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "indirect_intent",
+  "insufficient_information",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+indirect_intent+insufficient_information+contextual_irrelevance",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "indirect_intent",
+   "insufficient_information",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "The barista at the corner caf\u00e9 I stopped at ten minutes ago just told me the weirdest, most charming story about a sparrow that\u2019s been sneaking into their shop every morning this week. The little bird hops right up to the pastry case, tilts its head like it\u2019s weighing every scone and croissant on display, and waits for someone to drop a tiny crumb of blueberry muffin before it flits back out to the oak tree out front. I stood there for a full two minutes watching it perch on the edge of the outdoor table, pecking at a crumb someone left, while my iced oat latte got just a little more watery in the spring sun.",
+  "retained": [
+   "attr:certified organic"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "9ad6d0e9083c2a18"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 13,
+  "lit_card": 84,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 64,
+    "true_card": 13,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 15,
+    "true_card": 13,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "9abc84ff04905971",
+  "conditions": [
+   [
+    "attr:certified organic",
+    "=",
+    "certified organic"
+   ],
+   [
+    "option:0",
+    "=",
+    "tulua apple cider vinegar lemon ginger"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 13,
+  "value": [
+   "[\"B007PY8M9A\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B078Y9KGCD\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B07C63XYP4\",[[\"flavor name\",\"lemon-lime\"]]]",
+   "[\"B07GBGZZLC\",[[\"flavor\",\"apple cider vinegar lemon ginger\"]]]",
+   "[\"B07S6ZTGLY\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B087MBRQ51\",[[\"flavor name\",\"ginger lemon\"]]]",
+   "[\"B08DYDRTV1\",[[\"flavor name\",\"ginger lemonade\"]]]",
+   "[\"B08FV8RR9Y\",[[\"flavor name\",\"lemon\"]]]",
+   "[\"B08HTR6M9M\",[[\"flavor name\",\"ginger lemon\"]]]",
+   "[\"B08LP34HMM\",[[\"flavor name\",\"ginger lemon honey (pack of 2)\"]]]",
+   "[\"B08XZXPK93\",[[\"flavor name\",\"lemon pepper chicken\"]]]",
+   "[\"B0936QYZ8K\",[[\"flavor name\",\"lemon\"]]]",
+   "[\"B09BK4W8GB\",[[\"flavor name\",\"ginger lemon\"]]]"
+  ],
+  "hash": "b498997477baf2189a9bcf9d017cf856"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2398dab1f90987e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "38b64bfd9d3bf2d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bdef8c355e557c44",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cane sugar."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f18b778e27fff9a6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be natural flavors."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "09e1f35be0713809",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "af12f9b9de3bb07b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "681e7aa62244ea97",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.23 ounce (pack of 75) instead of tulua apple cider vinegar lemon ginger."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7fab184d8b90ce08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.21 ounce (pack of 10) instead of tulua apple cider vinegar lemon ginger."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "sample_id": "8162a1efd6b231bd__irrelevant_information",
+ "domain": "telecom",
+ "tree_id": "8162a1efd6b231bd",
+ "query": "Hi there, I just bought this phone with the official IP67 waterproof certification last month, but right now even though I need to use my apps, they aren't connecting at all\u2014airplane mode is on, I already revoked both of the app's permissions, my data usage is over the monthly limit, I'm currently abroad and roaming is turned off, can you help me figure out how to fix this?",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "irrelevant_information",
+  "family": "parameter",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "bought this phone with the official IP67 waterproof certification last month",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_app_both_permissions",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "99361bfc16bda6cb"
+ },
+ "signature": {
+  "verdict": "ok_pragmatic_extra",
+  "executable": false,
+  "readings": 0,
+  "note": "extra detail is not expressible as a condition in this domain; string checks only"
+ },
+ "executable_admission": false,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

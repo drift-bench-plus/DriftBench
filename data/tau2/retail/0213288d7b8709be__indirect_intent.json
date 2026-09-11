@@ -1,0 +1,192 @@
+{
+ "sample_id": "0213288d7b8709be__indirect_intent",
+ "domain": "retail",
+ "tree_id": "0213288d7b8709be",
+ "query": "I\u2019ve had two delivered orders recently, the first one is #W3947049 where I have the item 3358616356 and there\u2019s another item 8573379326 I noticed, I used credit_card_7901829 to pay for that order, and the second delivered order is #W6876713 with item 6301799585 and there\u2019s the item 8926329222 I saw, I also paid for that one with credit_card_7901829. I also have a pending order #W3561391 that I paid for with credit_card_7901829, it has the item 5946177616 in it and there\u2019s the item 7082455361 listed on the site too.",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "indirect_intent",
+  "family": "intention",
+  "mask_kind": "oblique",
+  "kinds": [
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id",
+   "arg:1:exchange_delivered_order_items:item_ids",
+   "arg:1:exchange_delivered_order_items:new_item_ids",
+   "arg:1:exchange_delivered_order_items:order_id",
+   "arg:1:exchange_delivered_order_items:payment_method_id",
+   "arg:2:modify_pending_order_items:item_ids",
+   "arg:2:modify_pending_order_items:new_item_ids",
+   "arg:2:modify_pending_order_items:order_id",
+   "arg:2:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"3358616356\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"8573379326\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W3947049\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_7901829\""
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"6301799585\"]"
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"8926329222\"]"
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W6876713\""
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_7901829\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:item_ids",
+     "=",
+     "[\"5946177616\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"7082455361\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:order_id",
+     "=",
+     "\"#W3561391\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_7901829\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "8d9ebde1bce95b92"
+ },
+ "signature": {
+  "rule": "oblique",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"3358616356\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"8573379326\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W3947049\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_7901829\""
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"6301799585\"]"
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"8926329222\"]"
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W6876713\""
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_7901829\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:item_ids",
+    "=",
+    "[\"5946177616\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"7082455361\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:order_id",
+    "=",
+    "\"#W3561391\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_7901829\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

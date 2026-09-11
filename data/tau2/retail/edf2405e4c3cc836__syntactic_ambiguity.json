@@ -1,0 +1,141 @@
+{
+ "sample_id": "edf2405e4c3cc836__syntactic_ambiguity",
+ "domain": "retail",
+ "tree_id": "edf2405e4c3cc836",
+ "query": "Hi, I need to exchange item 6259501109 for item 7958300294 from order #W9502127, and please process the price difference using paypal_2433177 without extra processing fees.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "without extra processing fees",
+    "placements": [
+     [
+      "arg:0:exchange_delivered_order_items:payment_method_id",
+      "\"paypal_2433177\""
+     ],
+     [
+      "arg:0:exchange_delivered_order_items:payment_method_id",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id"
+  ],
+  "hidden_slots": [
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"6259501109\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"7958300294\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W9502127\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_2433177\""
+    ]
+   ],
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"6259501109\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"7958300294\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W9502127\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "6b6b7cd063a04855"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"6259501109\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"7958300294\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W9502127\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_2433177\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

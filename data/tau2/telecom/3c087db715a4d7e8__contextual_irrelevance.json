@@ -1,0 +1,104 @@
+{
+ "sample_id": "3c087db715a4d7e8__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "3c087db715a4d7e8",
+ "query": "I\u2019ve been trying to perfect my homemade sourdough recipe lately, and I just can\u2019t get the crust to turn out as crispy as the ones I get from the little bakery down the street. I even bought a specialty Dutch oven last week, but so far the loaves are still coming out way too soft on the outside. Also, my cat just figured out how to open the kitchen cabinet where I keep the flour, so I\u2019ve had to hide all my baking supplies on the top shelf to keep her from making a mess. Anyway, I\u2019m having some issues with my phone right now: my WiFi calling quality is really bad, my APN MMS settings seem to be broken so I can\u2019t send picture messages, I think my SIM card might be unseated, and I\u2019m currently abroad but I have roaming turned off so I can\u2019t connect to the local network at all. I need help figuring out how to fix these problems.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I\u2019ve been trying to perfect my homemade sourdough recipe lately, and I just can\u2019t get the crust to turn out as crispy as the ones I get from the little bakery down the street. I even bought a specialty Dutch oven last week, but so far the loaves are still coming out way too soft on the outside. Also, my cat just figured out how to open the kitchen cabinet where I keep the flour, so I\u2019ve had to hide all my baking supplies on the top shelf to keep her from making a mess.",
+  "retained": [
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,232 @@
+{
+ "sample_id": "0fddf884893381ca",
+ "tree_id": "8d3283e157f8c800",
+ "adapter": "webshop",
+ "cluster": "hair loss products",
+ "goal_idx": 491,
+ "split": "test",
+ "source_instruction": "i'm looking for synthetic hair care for hair loss .",
+ "query": "Hey there, I\u2019m looking around this section for something with synthetic hair that works well, y\u2019know? I don\u2019t wanna spend a crazy amount, just something with a good, fair price point that makes sense for what I\u2019m after. Can you point me to options that fit what I\u2019m looking for? I don\u2019t have any extra little add-ons or preferences beyond that, just the stuff I mentioned.",
+ "strategy_ids": [
+  "vagueness_subjectivity",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "vagueness_subjectivity+insufficient_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "vagueness_subjectivity",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "insufficient_information": "attr:hair loss"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:hair loss"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:synthetic hair"
+  ],
+  "hidden_slots": [
+   "attr:hair loss",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "62af0b4afd5fcec5"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 42,
+  "lit_card": 166,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 77,
+    "true_card": 42,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 90,
+    "true_card": 42,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "7e0918b55ee9dfe8",
+  "conditions": [
+   [
+    "attr:hair loss",
+    "=",
+    "hair loss"
+   ],
+   [
+    "attr:synthetic hair",
+    "=",
+    "synthetic hair"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "attr:hair loss",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 42,
+  "value": [
+   "[\"B01N8YVP43\",[]]",
+   "[\"B07427VMRZ\",[]]",
+   "[\"B07429L7WZ\",[]]",
+   "[\"B0742BV2JG\",[]]",
+   "[\"B0742JH3JT\",[]]",
+   "[\"B07K328CPH\",[]]",
+   "[\"B07L3QNWB6\",[]]",
+   "[\"B07MQ8G1LC\",[]]",
+   "[\"B07P8VYDGL\",[]]",
+   "[\"B07PPHZPRV\",[]]",
+   "[\"B07PR7ZNBD\",[]]",
+   "[\"B07PYH7ZVF\",[]]",
+   "[\"B07QXCWLHS\",[]]",
+   "[\"B089M937YX\",[]]",
+   "[\"B089QL1SVF\",[]]",
+   "[\"B08DX5J739\",[]]",
+   "[\"B08FY3WDDJ\",[]]",
+   "[\"B08NYMVR1D\",[]]",
+   "[\"B08PC8QTFB\",[]]",
+   "[\"B08QCL4SB5\",[]]",
+   "[\"B08XND7S6M\",[]]",
+   "[\"B08XNDHHRF\",[]]",
+   "[\"B08ZNR6GW1\",[]]",
+   "[\"B0928MJQCN\",[]]",
+   "[\"B092MJ5ZY3\",[]]",
+   "[\"B095B9DNLL\",[]]",
+   "[\"B095N8WX77\",[]]",
+   "[\"B098DPBD42\",[]]",
+   "[\"B098T89QPQ\",[]]",
+   "[\"B09917NLTG\",[]]",
+   "[\"B09925FV26\",[]]",
+   "[\"B09BCFNMMJ\",[]]",
+   "[\"B09C2L8FFC\",[]]",
+   "[\"B09FXQBB5J\",[]]",
+   "[\"B09HK1C5W5\",[]]",
+   "[\"B09J14LSR4\",[]]",
+   "[\"B09KRXCPP1\",[]]",
+   "[\"B09KX8NW3T\",[]]",
+   "[\"B09MHV1G8W\",[]]",
+   "[\"B09P51BFWM\",[]]",
+   "[\"B09PQQHBS1\",[]]",
+   "[\"B09QLW8N3Z\",[]]"
+  ],
+  "hash": "1af03ccc77c0fb9ccbf19163362a6e2a"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "20cd3e9d9a0c5ee1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair loss products instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f0bfa433247a8172",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair loss products instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b71fdc88f5fcd3ad",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy apply."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e65f1241a6f51d06",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair dryer."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "37c049cf0e61cc49",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a19689aaff681cf2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "a314f3d0acaf0b24",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 60."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "fd0a7a80e77cf09e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 60."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

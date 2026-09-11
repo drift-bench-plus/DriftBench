@@ -1,0 +1,98 @@
+{
+ "sample_id": "5bc957fd1bc51b52__insufficient_information",
+ "domain": "telecom",
+ "tree_id": "5bc957fd1bc51b52",
+ "query": "Hi, I can\u2019t connect to my mobile network at all, and my APN settings seem to be acting up. Can you help me figure out what\u2019s going wrong with my phone service?",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "insufficient_information",
+  "family": "parameter",
+  "mask_kind": "withhold",
+  "kinds": [
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "fault:airplane_mode_on",
+   "fault:lock_sim_card_pin",
+   "fault:overdue_bill_suspension"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:break_apn_settings"
+  ],
+  "hidden_slots": [
+   "fault:airplane_mode_on",
+   "fault:lock_sim_card_pin",
+   "fault:overdue_bill_suspension"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "578e27b4bf446637"
+ },
+ "signature": {
+  "rule": "withheld",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:airplane_mode_on",
+   "fault:lock_sim_card_pin",
+   "fault:overdue_bill_suspension"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

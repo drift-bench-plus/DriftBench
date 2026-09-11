@@ -1,0 +1,202 @@
+{
+ "sample_id": "674d39d4088ef398",
+ "tree_id": "e2691abcb04c2ec8",
+ "adapter": "webshop",
+ "cluster": "eyes care",
+ "goal_idx": 265,
+ "split": "test",
+ "source_instruction": "i would like a black face kit with green tea.",
+ "query": "Ugh, I swear the bus ride over here was a nightmare\u2014some guy spilled his iced coffee all over my canvas tote, my headphones died right when my favorite true crime podcast got to the big reveal, and I swear the street outside smelled like burnt popcorn for three whole blocks. Also, I still can\u2019t believe my neighbor\u2019s cat snuck into my apartment last night and knocked over my potted succulent, I had to sweep soil off the rug for ten minutes before I left. Anyway, I\u2019m in the eyes care section right now, I need something with green tea in it, make sure it\u2019s that one, and don\u2019t grab anything over $30, yeah?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+referential_ambiguity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear the bus ride over here was a nightmare\u2014some guy spilled his iced coffee all over my canvas tote, my headphones died right when my favorite true crime podcast got to the big reveal, and I swear the street outside smelled like burnt popcorn for three whole blocks. Also, I still can\u2019t believe my neighbor\u2019s cat snuck into my apartment last night and knocked over my potted succulent, I had to sweep soil off the rug for ten minutes before I left.",
+  "retained": [
+   "attr:green tea",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:green tea",
+     "=",
+     "green tea"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 6,
+  "spec_id": "4edbd8c9426fb8a0"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 19,
+  "lit_card": 56,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 56,
+    "true_card": 19,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 6,
+ "hidden_intent": {
+  "intent_id": "9e362248c18ad1ea",
+  "conditions": [
+   [
+    "attr:green tea",
+    "=",
+    "green tea"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 19,
+  "value": [
+   "[\"B08RDFQXHN\",[[\"color\",\"black\"]]]",
+   "[\"B09DCPYVTS\",[[\"color\",\"black\"]]]",
+   "[\"B09HZT1MWD\",[[\"color\",\"black\"]]]",
+   "[\"B09L1F8W92\",[[\"color\",\"black\"]]]",
+   "[\"B09LSSQY4D\",[[\"color\",\"black\"]]]",
+   "[\"B09LXWKTTG\",[[\"color\",\"black\"]]]",
+   "[\"B09M465KJ8\",[[\"color\",\"black\"]]]",
+   "[\"B09MNPT1RT\",[[\"color\",\"black\"]]]",
+   "[\"B09MPK2MDW\",[[\"color\",\"black\"]]]",
+   "[\"B09MT3DVHR\",[[\"color\",\"black\"]]]",
+   "[\"B09NQVJPK3\",[[\"color\",\"black\"]]]",
+   "[\"B09NSR9VZ8\",[[\"color\",\"black\"]]]",
+   "[\"B09P3VL44D\",[[\"color\",\"blackset 1\"]]]",
+   "[\"B09P88SVSR\",[[\"color\",\"black\"]]]",
+   "[\"B09PHK694P\",[[\"color\",\"black\"]]]",
+   "[\"B09QKKHV9Q\",[[\"color\",\"black\"]]]",
+   "[\"B09QKYVLG3\",[[\"color\",\"black\"]]]",
+   "[\"B09SQ6G73Z\",[[\"color\",\"black for face\"]]]",
+   "[\"B09SXRJYN6\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "4a772c28c92bce21972228164dbc5b8e"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "31199fda12e2aa6d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the eyes care instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "46731b0f0bd7fc74",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the eyes care instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "623863fd2c42d5d7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hyaluronic acid."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "96d7bcb5073146b7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be leak proof."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5e22c30090be9bd8",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b5affd0dc8bd18cb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4d884a3c2c4fb847",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 count instead of black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7f55581f17e7a936",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 count (pack of 16) instead of black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

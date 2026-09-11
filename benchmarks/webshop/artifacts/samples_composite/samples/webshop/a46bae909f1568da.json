@@ -1,0 +1,203 @@
+{
+ "sample_id": "a46bae909f1568da",
+ "tree_id": "91fe57209e8b9164",
+ "adapter": "webshop",
+ "cluster": "bedroom sets",
+ "goal_idx": 494,
+ "split": "test",
+ "source_instruction": "i am searching for a wall mounted floating shelf for my living room. it should be 24 inch size and natural color.",
+ "query": "Ugh, I spent 20 minutes this morning trying to get my cat to stop knocking over my potted succulents on the windowsill, she keeps batting at the leaves like they\u2019re tiny toys and I\u2019ve already had to sweep up potting soil twice this week. I also stopped by the corner bakeshop on my walk over and they were out of my favorite lemon poppyseed muffins, which put me in such a grumpy mood I almost forgot why I came in the first place. Oh right, I\u2019m looking for a 24 inch wall mounted option for the living room, and the most I want to spend is that one.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I spent 20 minutes this morning trying to get my cat to stop knocking over my potted succulents on the windowsill, she keeps batting at the leaves like they\u2019re tiny toys and I\u2019ve already had to sweep up potting soil twice this week. I also stopped by the corner bakeshop on my walk over and they were out of my favorite lemon poppyseed muffins, which put me in such a grumpy mood I almost forgot why I came in the first place.",
+  "retained": [
+   "attr:living room",
+   "attr:wall mounted",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "attr:wall mounted",
+     "=",
+     "wall mounted"
+    ],
+    [
+     "option:0",
+     "=",
+     "24 inch"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "20cb95785fad166d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 9,
+  "lit_card": 11,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 11,
+    "true_card": 9,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "bb4b97aa766ba3b9",
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "attr:wall mounted",
+    "=",
+    "wall mounted"
+   ],
+   [
+    "option:0",
+    "=",
+    "24 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    80
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 9,
+  "value": [
+   "[\"B084MMGH45\",[[\"size\",\"24 inch\"]]]",
+   "[\"B084MN7WRR\",[[\"size\",\"24 inch\"]]]",
+   "[\"B08JHW4QS1\",[[\"size\",\"24 inch, 3 pack\"]]]",
+   "[\"B08SBJ26K6\",[[\"size\",\"24-inch\"]]]",
+   "[\"B08T1T8VLS\",[[\"size\",\"24-inch\"]]]",
+   "[\"B091T7D9G4\",[[\"size\",\"24 inch,set of 3\"]]]",
+   "[\"B09C1DZYH7\",[[\"size\",\"24\\\"\"]]]",
+   "[\"B09J9WW8TK\",[[\"size\",\"24\"]]]",
+   "[\"B09N8HVQMV\",[[\"size\",\"24 inch\"]]]"
+  ],
+  "hash": "f96511199a3f0e0756a126bdf1801884"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "071b7fafdced26f0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bedroom sets instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "6814f2e833d7f41e",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bedroom sets instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "11fbf9e0b09cbd93",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be heavy duty."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "5c62ecee35bd1407",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be fully assembled."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "68e041285c41860a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a2bfde865c639da0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "652b6c155b269538",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pack instead of 24 inch."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "92533d7b1f305671",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1#gold (no comforter) instead of 24 inch."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

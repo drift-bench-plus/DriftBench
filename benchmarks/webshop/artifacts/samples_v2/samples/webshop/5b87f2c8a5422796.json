@@ -1,0 +1,192 @@
+{
+ "adapter": "webshop",
+ "cluster": "lenses",
+ "fidelity_notes": [],
+ "goal_idx": 72,
+ "ground_truth": {
+  "cardinality": 14,
+  "hash": "53cf4e61fb6363827245ff0c5cc6db81",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B09BB8CWYN\",[[\"color\",\"pink\"]]]",
+   "[\"B09DSHDKC5\",[[\"color\",\"diamond pink\"]]]",
+   "[\"B09FF7TJ67\",[[\"color\",\"pink\"]]]",
+   "[\"B09FFF942K\",[[\"color\",\"pink\"]]]",
+   "[\"B09FHHWNQ8\",[[\"color\",\"[for iphone 13  |  13 mini] - pink\"]]]",
+   "[\"B09H7RLPXK\",[[\"color\",\"pink\"]]]",
+   "[\"B09HXL86QD\",[[\"color\",\"pink\"]]]",
+   "[\"B09J7LZBN8\",[[\"color\",\"pink\"]]]",
+   "[\"B09JBL4FQG\",[[\"color\",\"pink\"]]]",
+   "[\"B09JC4Q9BM\",[[\"color\",\"pink\"]]]",
+   "[\"B09JZ8PZ1S\",[[\"color\",\"pink\"]]]",
+   "[\"B09LHV4X28\",[[\"color\",\"pink purple\"]]]",
+   "[\"B09LRPSGXV\",[[\"color\",\"pink\"]]]",
+   "[\"B09QRNDK13\",[[\"*\",\"pink\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:aluminum alloy",
+    "=",
+    "aluminum alloy"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "85f39e39db8e90bf"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:aluminum alloy",
+     "=",
+     "aluminum alloy"
+    ],
+    [
+     "option:0",
+     "=",
+     "red"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "option:0",
+     "pink"
+    ],
+    "alternative": [
+     "option:0",
+     "red"
+    ],
+    "condition": null,
+    "text": "Since you probably don't have pink aluminum alloy lenses within my $30 price limit"
+   }
+  ],
+  "retained": [
+   "attr:aluminum alloy",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "9fb65e3e9adbe57e",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don't have pink aluminum alloy lenses within my $30 price limit, could you show me red aluminum alloy lenses in the lenses section that cost no more than $30?",
+ "render_attempts": 1,
+ "sample_id": "5b87f2c8a5422796",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the lenses instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1517a244d9504ae9"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the lenses instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a30a8a150afddc1b"
+  },
+  {
+   "announcement": "Also, it needs to be wireless charging.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0f316feb9fee34a2"
+  },
+  {
+   "announcement": "Also, it needs to be cell phone.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d4acfc5df3b3125f"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "691b2eb556016aa5"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7497f2c7fdf0fcc7"
+  },
+  {
+   "announcement": "Actually, make it 150mm handheld kaleidoscope instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "04351f70df4a600f"
+  },
+  {
+   "announcement": "Actually, make it -crystal instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "794b3a3fde41830f"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 23,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 14,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a camera lens protector for iphone 13 made up of aluminum alloy. also choose pink color.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "8dfccd58f5038c2a",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

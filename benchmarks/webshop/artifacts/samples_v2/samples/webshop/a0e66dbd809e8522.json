@@ -1,0 +1,198 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's jeans",
+ "fidelity_notes": [],
+ "goal_idx": 166,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "66d128db0aa822caa4752a58f9b63c92",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B074N9DJFF\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+   "[\"B081W6BP2Q\",[[\"color\",\"#1 navy\"],[\"size\",\"large\"]]]",
+   "[\"B08BZ6124N\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+   "[\"B0999L6J9X\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+   "[\"B09BBP1TFR\",[[\"color\",\"bp0591az- navy w red diagonal side\"],[\"size\",\"large\"]]]",
+   "[\"B09KH43JP8\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+   "[\"B09NL6VC77\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+   "[\"B09NQ8DMHG\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+   "[\"B09P7VPPBK\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+   "[\"B09QL7RXQW\",[[\"color\",\"b-navy\"],[\"size\",\"large\"]]]",
+   "[\"B09RH335T1\",[[\"color\",\"b-navy\"],[\"size\",\"large\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:elastic waist",
+    "=",
+    "elastic waist"
+   ],
+   [
+    "attr:machine washable",
+    "=",
+    "machine washable"
+   ],
+   [
+    "option:0",
+    "=",
+    "navy"
+   ],
+   [
+    "option:1",
+    "=",
+    "x-large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "1f3b01e202185b13"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:elastic waist",
+     "=",
+     "elastic waist"
+    ],
+    [
+     "attr:machine washable",
+     "=",
+     "machine washable"
+    ],
+    [
+     "option:0",
+     "=",
+     "navy"
+    ],
+    [
+     "option:1",
+     "=",
+     "x-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:elastic waist",
+   "attr:machine washable",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve got a pair of old men’s jeans with an elastic waist that I can just toss in the washing machine, and I picked up a navy x-large one for under 40 bucks the other day that’s been holding up great.",
+ "render_attempts": 1,
+ "sample_id": "a0e66dbd809e8522",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "51e814878395a864"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "cc0c20dc6378e118"
+  },
+  {
+   "announcement": "Also, it needs to be cotton spandex.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e344e8a2b9d05b8c"
+  },
+  {
+   "announcement": "Also, it needs to be high waist.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ee5f1da28268f00d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "909804d1dd9019db"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9705922be17bfa19"
+  },
+  {
+   "announcement": "Actually, make it #3357 camo 169 instead of navy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "34b2fb4ed0ddb50c"
+  },
+  {
+   "announcement": "Actually, make it #3357 camo m instead of navy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e3359de4c3fb3c9b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 11,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for men's ripped jeans denim pants with an elastic waist. pick a navy color and get x-large.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "5e6b3d8cdafadd01",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "sample_id": "4c0cbb8d9342ae56__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "4c0cbb8d9342ae56",
+ "query": "Last weekend I took my golden retriever to the new dog park near downtown, and he had so much fun chasing a frisbee that he ended up falling asleep as soon as we got in the car to go home. I also tried that viral matcha latte recipe from TikTok the other day, and while it was a little too sweet for my taste, it was still way better than the one I bought at the caf\u00e9 down the street. Oh, and I finally got around to planting the tomato seedlings I bought last month, and they already have tiny little buds on them! I need to modify my pending order #W4776164: please change item 8349118980 to item 9647292434, and use my saved payment method credit_card_9513926 for any price adjustment.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I took my golden retriever to the new dog park near downtown, and he had so much fun chasing a frisbee that he ended up falling asleep as soon as we got in the car to go home. I also tried that viral matcha latte recipe from TikTok the other day, and while it was a little too sweet for my taste, it was still way better than the one I bought at the caf\u00e9 down the street. Oh, and I finally got around to planting the tomato seedlings I bought last month, and they already have tiny little buds on them!",
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"8349118980\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"9647292434\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4776164\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_9513926\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"8349118980\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"9647292434\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W4776164\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_9513926\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

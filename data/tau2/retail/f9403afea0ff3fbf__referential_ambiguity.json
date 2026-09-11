@@ -1,0 +1,129 @@
+{
+ "sample_id": "f9403afea0ff3fbf__referential_ambiguity",
+ "domain": "retail",
+ "tree_id": "f9403afea0ff3fbf",
+ "query": "Hi, I need to return items from two delivered orders. For order #W5490111, the items are [\"4579334072\",\"1421289881\",\"6117189161\",\"4947717507\"], and use credit_card_3124723 for the refund. For the other order #W7387996, the item to return is [\"5796612084\"], and use that one for the refund method, thanks.",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "arg:1:return_delivered_order_items:payment_method_id",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id",
+   "arg:1:return_delivered_order_items:item_ids",
+   "arg:1:return_delivered_order_items:order_id"
+  ],
+  "hidden_slots": [
+   "arg:1:return_delivered_order_items:payment_method_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"4579334072\",\"1421289881\",\"6117189161\",\"4947717507\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W5490111\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3124723\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:item_ids",
+     "=",
+     "[\"5796612084\"]"
+    ],
+    [
+     "arg:1:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7387996\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "a3bbbcacb874eb9f"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"4579334072\",\"1421289881\",\"6117189161\",\"4947717507\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W5490111\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_3124723\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:item_ids",
+    "=",
+    "[\"5796612084\"]"
+   ],
+   [
+    "arg:1:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7387996\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_9497703\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:1:return_delivered_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

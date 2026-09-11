@@ -1,0 +1,217 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's pants",
+ "fidelity_notes": [],
+ "goal_idx": 165,
+ "ground_truth": {
+  "cardinality": 49,
+  "hash": "598e6a2511c867cea1a68b0416028a6e",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01MV7262D\",[[\"color\",\"neon pink\"]]]",
+   "[\"B07YS937VZ\",[[\"color\",\"pink happy 1\"]]]",
+   "[\"B082425YMV\",[[\"color\",\"pink\"]]]",
+   "[\"B087RD9HFG\",[[\"color\",\"l-pink\"]]]",
+   "[\"B088BY1HHD\",[[\"color\",\"pink\"]]]",
+   "[\"B08DQYKVW7\",[[\"color\",\"shocking pink\"]]]",
+   "[\"B08F9X5SCQ\",[[\"color\",\"02 pink\"]]]",
+   "[\"B08FHT441F\",[[\"color\",\"purple pink\"]]]",
+   "[\"B08JYRNB1Q\",[[\"color\",\"#0 dot contouring - pink\"]]]",
+   "[\"B08M6FCPH2\",[[\"color\",\"pink\"]]]",
+   "[\"B08R7G7NXG\",[[\"color\",\"04-pink\"]]]",
+   "[\"B08SMK8QWG\",[[\"color\",\"c-pink\"]]]",
+   "[\"B08XJX8HNF\",[[\"color\",\"c-pink\"]]]",
+   "[\"B08YN8BHTF\",[[\"color\",\"l-pink\"]]]",
+   "[\"B091CYJLW6\",[[\"color\",\"pk_01pink\"]]]",
+   "[\"B091SXM6KB\",[[\"color\",\"pink\"]]]",
+   "[\"B09377GB8T\",[[\"color\",\"hot pink\"]]]",
+   "[\"B094Y3788J\",[[\"color\",\"pink\"]]]",
+   "[\"B09F91D1S2\",[[\"color\",\"pink\"]]]",
+   "[\"B09GM514NH\",[[\"color\",\"pink\"]]]",
+   "[\"B09J1HBN54\",[[\"color\",\"b1- hot pink\"]]]",
+   "[\"B09J8WZXHK\",[[\"color\",\"pink\"]]]",
+   "[\"B09N78Z4L7\",[[\"color\",\"pink\"]]]",
+   "[\"B09NVZFJNQ\",[[\"color\",\"hot pink\"]]]",
+   "[\"B09PJ6SMRH\",[[\"color\",\"pink\"]]]",
+   "[\"B09PJ6VHGM\",[[\"color\",\"hot pink\"]]]",
+   "[\"B09PJ6WMXS\",[[\"color\",\"pink\"]]]",
+   "[\"B09PJ74FN6\",[[\"color\",\"hot pink\"]]]",
+   "[\"B09PJ76YTC\",[[\"color\",\"pink\"]]]",
+   "[\"B09PJ792FP\",[[\"color\",\"pink\"]]]",
+   "[\"B09PJ7BXPZ\",[[\"color\",\"pink\"]]]",
+   "[\"B09PJ7DTNY\",[[\"color\",\"pink\"]]]",
+   "[\"B09PJ7KHGG\",[[\"color\",\"hot pink\"]]]",
+   "[\"B09PJFSJDJ\",[[\"color\",\"pink\"]]]",
+   "[\"B09PK6T48B\",[[\"color\",\"c-pink\"]]]",
+   "[\"B09PVHP8HY\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q5TSK86\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q8PTHB1\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q93MX1W\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q93QHSK\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q93X9X7\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q93ZRQ6\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q946KZ4\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q94C5Z3\",[[\"color\",\"pink\"]]]",
+   "[\"B09Q956HDJ\",[[\"color\",\"pink\"]]]",
+   "[\"B09QCSXT1X\",[[\"color\",\"hot pink\"]]]",
+   "[\"B09QCTLR52\",[[\"color\",\"pink\"]]]",
+   "[\"B09R4V3CDD\",[[\"color\",\"pink\"]]]",
+   "[\"B09R7Q5XN8\",[[\"color\",\"pink\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:gym workout",
+    "=",
+    "gym workout"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "68514c12a13b4120"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gym workout",
+     "=",
+     "gym workout"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:gym workout",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for women's pants for gym workouts under $30, and I want that one color I usually go for.",
+ "render_attempts": 2,
+ "sample_id": "689a49283e273ac6",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's pants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0459ef6c313962b8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's pants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e3cac59d0b62acd"
+  },
+  {
+   "announcement": "Also, it needs to be long sleeve.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3b72495adb9ae1bb"
+  },
+  {
+   "announcement": "Also, it needs to be gym shorts.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9e44f212d4efd72e"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1be2cc86326fa7ce"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d666062b675e548a"
+  },
+  {
+   "announcement": "Actually, make it #01-red instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1a11e9d56f8e7465"
+  },
+  {
+   "announcement": "Actually, make it #12 instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "52ec89d27b900018"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 160,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 49,
+  "verdict": "ok"
+ },
+ "source_instruction": "find for gift: comfortable women's pink drawstring sweatpants high waist with pockets aragone my friend's favorite brand to train at the gym workout.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "3997f7af3e2f2bf3",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

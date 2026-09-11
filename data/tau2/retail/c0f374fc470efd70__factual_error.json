@@ -1,0 +1,168 @@
+{
+ "sample_id": "c0f374fc470efd70__factual_error",
+ "domain": "retail",
+ "tree_id": "c0f374fc470efd70",
+ "query": "Hi there, I need to cancel my pending order #W8268690 because the items are no longer needed, and could you also update the shipping address for my pending order #W2702727 to 1234 Elm St, Springfield, IL 62701, USA? There's no second address line for that order.",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "factual_error",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "factual_error"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "\"#W8268610\"",
+    "#W8268690"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:modify_pending_order_address:address1",
+   "arg:1:modify_pending_order_address:address2",
+   "arg:1:modify_pending_order_address:city",
+   "arg:1:modify_pending_order_address:country",
+   "arg:1:modify_pending_order_address:order_id",
+   "arg:1:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_address:zip"
+  ],
+  "hidden_slots": [
+   "arg:0:cancel_pending_order:order_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "#W8268690"
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address1",
+     "=",
+     "\"1234 Elm St\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address2",
+     "=",
+     "\"\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:city",
+     "=",
+     "\"Springfield\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:order_id",
+     "=",
+     "\"#W2702727\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:state",
+     "=",
+     "\"IL\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:zip",
+     "=",
+     "\"62701\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d6ecadc2f97e3978"
+ },
+ "signature": {
+  "rule": "substituted",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W8268610\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address1",
+    "=",
+    "\"1234 Elm St\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address2",
+    "=",
+    "\"\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:city",
+    "=",
+    "\"Springfield\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "=",
+    "\"#W2702727\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:state",
+    "=",
+    "\"IL\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:zip",
+    "=",
+    "\"62701\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:cancel_pending_order:order_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

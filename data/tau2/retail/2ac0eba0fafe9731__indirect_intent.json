@@ -1,0 +1,104 @@
+{
+ "sample_id": "2ac0eba0fafe9731__indirect_intent",
+ "domain": "retail",
+ "tree_id": "2ac0eba0fafe9731",
+ "query": "I received order #W2378156 a few days ago, and the items in it are 1151293680 and 4983901480. I have credit_card_9513926 saved as my payment method on the account, and I was looking at item listings for 7706410293 and 7747408585 just now.",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "indirect_intent",
+  "family": "intention",
+  "mask_kind": "oblique",
+  "kinds": [
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"1151293680\",\"4983901480\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"7706410293\",\"7747408585\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W2378156\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_9513926\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "8d9ebde1bce95b92"
+ },
+ "signature": {
+  "rule": "oblique",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"1151293680\",\"4983901480\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"7706410293\",\"7747408585\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W2378156\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_9513926\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

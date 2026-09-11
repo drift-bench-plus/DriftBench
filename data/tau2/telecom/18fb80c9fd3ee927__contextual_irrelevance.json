@@ -1,0 +1,104 @@
+{
+ "sample_id": "18fb80c9fd3ee927__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "18fb80c9fd3ee927",
+ "query": "I picked up a really cute stray kitten near my apartment this morning, she's got fluffy orange fur and a little white paw, and I've already bought her a tiny cat bed and some tuna treats to make her feel at home. I was going to call the vet to ask about getting her set up with her first round of vaccinations when I noticed I couldn't get any signal on my phone at all. Oh right, I forgot to mention, my phone has airplane mode turned on, my APN settings seem to be messed up, my SIM card is locked with a PIN, and I think the SIM card might not be seated properly, can you help me figure out how to get my mobile service working again?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I picked up a really cute stray kitten near my apartment this morning, she's got fluffy orange fur and a little white paw, and I've already bought her a tiny cat bed and some tuna treats to make her feel at home. I was going to call the vet to ask about getting her set up with her first round of vaccinations when I noticed I couldn't get any signal on my phone at all.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_settings",
+   "fault:lock_sim_card_pin",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

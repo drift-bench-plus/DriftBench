@@ -1,0 +1,243 @@
+{
+ "sample_id": "9ebc2dcb072959ca",
+ "tree_id": "4fd468f18d2c448e",
+ "adapter": "webshop",
+ "cluster": "breakfast foods",
+ "goal_idx": 205,
+ "split": "test",
+ "source_instruction": "i'm looking for 1 resealed bag of puffed snacks",
+ "query": "Oh man, I just got stuck waiting for the crosswalk light for a full five minutes because a group of baby geese decided to waddle straight across the intersection right in front of a line of cars, and every driver was totally stopped just grinning and watching them instead of honking. The mom goose was hissing at a cyclist who got too close trying to snap a photo, and one tiny gosling kept tripping over its own feet and falling into the curb grass before scrambling to catch up. I swear that little detour made me almost miss the pre-work window to grab the stuff I came here for, and now I\u2019m rushing a little because I still have to swing by the coffee shop before I head into the office.\nHey, can you help me grab a breakfast food from this section for me? I need it to come in a self-sealing can, I want that one I always pick, and make sure it\u2019s under $30, oh and also it has to be certified kosher for Passover even though I don\u2019t keep that dietary rule at all, I just like the little sticker on the packaging. Wait, no, hold on, actually just make sure it fits those things I said, yeah?",
+ "strategy_ids": [
+  "factual_error",
+  "referential_ambiguity",
+  "contextual_irrelevance",
+  "irrelevant_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+referential_ambiguity+contextual_irrelevance+irrelevant_information",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "referential_ambiguity",
+   "contextual_irrelevance",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:resealable bag"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:resealable bag",
+    "resealable bag",
+    "self-sealing can"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "it has to be certified kosher for Passover even though I don\u2019t keep that dietary rule at all, I just like the little sticker on the packaging",
+    "condition": [
+     "attr:kosher for Passover certification",
+     "=",
+     "certified kosher for Passover"
+    ]
+   },
+   {
+    "text": "come in a self-sealing can",
+    "condition": [
+     "attr:package type",
+     "=",
+     "self-sealing can"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh man, I just got stuck waiting for the crosswalk light for a full five minutes because a group of baby geese decided to waddle straight across the intersection right in front of a line of cars, and every driver was totally stopped just grinning and watching them instead of honking. The mom goose was hissing at a cyclist who got too close trying to snap a photo, and one tiny gosling kept tripping over its own feet and falling into the curb grass before scrambling to catch up. I swear that little detour made me almost miss the pre-work window to grab the stuff I came here for, and now I\u2019m rushing a little because I still have to swing by the coffee shop before I head into the office.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:resealable bag",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:resealable bag",
+     "=",
+     "self-sealing can"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:kosher for Passover certification",
+     "=",
+     "certified kosher for Passover"
+    ],
+    [
+     "attr:package type",
+     "=",
+     "self-sealing can"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "a9578c6072e95dcd"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 4,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 4,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 12,
+    "true_card": 4,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 4,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "08483e7a6b2bf441",
+  "conditions": [
+   [
+    "attr:resealable bag",
+    "=",
+    "resealable bag"
+   ],
+   [
+    "option:0",
+    "=",
+    "1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:resealable bag",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 4,
+  "value": [
+   "[\"B077JGYFKM\",[[\"number of items\",\"1\"]]]",
+   "[\"B07DCY2VHK\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B07WHFF8QX\",[[\"size\",\"8 ounce (pack of 1)\"]]]",
+   "[\"B095YZT3VD\",[[\"size\",\"1 pack of 5 ounce\"]]]"
+  ],
+  "hash": "b6a896b13c57556f69289b1a823b2955"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "20dd7cfec853f571",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breakfast foods instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "85251a87f89861a6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breakfast foods instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f142c6eae024df7d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be certified organic."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "fe2f6b3ee8b1a993",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be snack mix."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5cfb92e29c013f16",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8fd06777a768e843",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "394d30925d0d8828",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .3 pack instead of 1."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c921ca8299b69272",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .2 pack instead of 1."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,762 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B079S8B9SF",
+    "cluster": "deli & prepared foods",
+    "name": "Aahana’s Lentil & Rice Bowls Vegan Meals | Gluten-Free Meals Ready To Eat, Non-GMO |15g Plant Based Protein | Indian Vegetarian Meal | Kosher| Just Add Water | Shelf Stable Freeze Dried Meals (4 Pack)",
+    "product_category": "Grocery & Gourmet Food › Deli & Prepared Foods › Side Dishes"
+   },
+   "bound_slots": [
+    "attr:ready eat",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:ready eat",
+     "=",
+     "ready eat"
+    ],
+    [
+     "option:0",
+     "=",
+     "jaipur millet & lentil"
+    ],
+    [
+     "option:1",
+     "=",
+     "2.3 ounce (pack of 8)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "082ca51fece0ebc7d4f0b65ddd75d232",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B079S8B9SF\",[[\"flavor\",\"jaipur millet & lentil\"],[\"size\",\"pack of 8\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9f4ec545c1d51ffa",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "deli & prepared foods",
+    "goal": {
+     "asin": "B079S8B9SF",
+     "attributes": [
+      "ready eat"
+     ],
+     "category": "",
+     "goal_options": [
+      "jaipur millet & lentil",
+      "2.3 ounce (pack of 8)"
+     ],
+     "name": "Aahana’s Lentil & Rice Bowls Vegan Meals | Gluten-Free Meals Ready To Eat, Non-GMO |15g Plant Based Protein | Indian Vegetarian Meal | Kosher| Just Add Water | Shelf Stable Freeze Dried Meals (4 Pack)",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Deli & Prepared Foods › Side Dishes",
+     "query": "deli & prepared foods"
+    }
+   },
+   "source_record": "2673eb3bf66ebf93",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B000V1JVAI",
+    "cluster": "deli & prepared foods",
+    "name": "HORMEL COMPLEATS Meatloaf & Gravy With Mashed Potatoes Microwave Tray, 9 oz. (6 Pack)",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Packaged Meals & Side Dishes › Potatoes & Stuffings › Potato Side Dishes"
+   },
+   "bound_slots": [
+    "attr:shelf stable",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:shelf stable",
+     "=",
+     "shelf stable"
+    ],
+    [
+     "option:0",
+     "=",
+     "microwave meals"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "544cd0164cdb7557525c52fd413086d6",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000V1JVAI\",[[\"style\",\"microwave meals\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f3fa665e15e37d6c",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "deli & prepared foods",
+    "goal": {
+     "asin": "B000V1JVAI",
+     "attributes": [
+      "shelf stable"
+     ],
+     "category": "",
+     "goal_options": [
+      "microwave meals"
+     ],
+     "name": "HORMEL COMPLEATS Meatloaf & Gravy With Mashed Potatoes Microwave Tray, 9 oz. (6 Pack)",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Packaged Meals & Side Dishes › Potatoes & Stuffings › Potato Side Dishes",
+     "query": "deli & prepared foods"
+    }
+   },
+   "source_record": "3e3767d2ade705d1",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003RWVFEI",
+    "cluster": "deli & prepared foods",
+    "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon"
+   },
+   "bound_slots": [
+    "attr:fat free",
+    "attr:ready eat",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:fat free",
+     "=",
+     "fat free"
+    ],
+    [
+     "attr:ready eat",
+     "=",
+     "ready eat"
+    ],
+    [
+     "option:0",
+     "=",
+     "sweet & spicy"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "f02a43dc0d2972a7942c0351857d4197",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003RWVFEI\",[[\"flavor name\",\"sweet & spicy\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7399910ca29f99b7",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "deli & prepared foods",
+    "goal": {
+     "asin": "B003RWVFEI",
+     "attributes": [
+      "fat free",
+      "ready eat"
+     ],
+     "category": "",
+     "goal_options": [
+      "sweet & spicy"
+     ],
+     "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon",
+     "query": "deli & prepared foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003RWVFEI",
+    "cluster": "deli & prepared foods",
+    "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:ready eat",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:ready eat",
+     "=",
+     "ready eat"
+    ],
+    [
+     "option:0",
+     "=",
+     "sweet & spicy"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "fefc63c1c53e381e031ae37a7537e7c0",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0037507EE\",[[\"flavor name\",\"sweet & spicy\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c68b04e6e27349eb",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "deli & prepared foods",
+    "goal": {
+     "asin": "B003RWVFEI",
+     "attributes": [
+      "gluten free",
+      "ready eat"
+     ],
+     "category": "",
+     "goal_options": [
+      "sweet & spicy"
+     ],
+     "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon",
+     "query": "deli & prepared foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003RWVFEI",
+    "cluster": "deli & prepared foods",
+    "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon"
+   },
+   "bound_slots": [
+    "attr:ready eat",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:ready eat",
+     "=",
+     "ready eat"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "f77437adde5c4bc54e15789da01b92d7",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000HDGCX4\",[]]",
+     "[\"B000N8N45W\",[]]",
+     "[\"B001EQ5S2E\",[]]",
+     "[\"B0037507EE\",[]]",
+     "[\"B003H10M5M\",[]]",
+     "[\"B003RWVFEI\",[]]",
+     "[\"B004GCUWAQ\",[]]",
+     "[\"B005F5K8PM\",[]]",
+     "[\"B005HJ2LSS\",[]]",
+     "[\"B0083UWT94\",[]]",
+     "[\"B00CQ77XB4\",[]]",
+     "[\"B0173GV8ZY\",[]]",
+     "[\"B01FJJPCCW\",[]]",
+     "[\"B01K9WQFXY\",[]]",
+     "[\"B079RMJRJ8\",[]]",
+     "[\"B079S8B9SF\",[]]",
+     "[\"B07TMDGLR7\",[]]",
+     "[\"B07WLRJJKS\",[]]",
+     "[\"B08F41RT7H\",[]]",
+     "[\"B08HR77XNM\",[]]",
+     "[\"B08RZBFJND\",[]]",
+     "[\"B096YRYZ57\",[]]",
+     "[\"B096YSYXW8\",[]]",
+     "[\"B09NF2SVJJ\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f7ee1ea771e28f3d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "deli & prepared foods",
+    "goal": {
+     "asin": "B003RWVFEI",
+     "attributes": [
+      "ready eat"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon",
+     "query": "deli & prepared foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003RWVFEI",
+    "cluster": "deli & prepared foods",
+    "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon"
+   },
+   "bound_slots": [
+    "attr:ready eat",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:ready eat",
+     "=",
+     "ready eat"
+    ],
+    [
+     "option:0",
+     "=",
+     "12"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "06989e5452adb9632574db5cf2d0efd3",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0037507EE\",[[\"size\",\"2.6 ounce (pack of 12)\"]]]",
+     "[\"B0083UWT94\",[[\"style\",\"pack of 12\"]]]",
+     "[\"B079RMJRJ8\",[[\"style\",\"pack of 12\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "be84d1202e6eb480",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "deli & prepared foods",
+    "goal": {
+     "asin": "B003RWVFEI",
+     "attributes": [
+      "ready eat"
+     ],
+     "category": "",
+     "goal_options": [
+      "12"
+     ],
+     "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon",
+     "query": "deli & prepared foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003RWVFEI",
+    "cluster": "deli & prepared foods",
+    "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon"
+   },
+   "bound_slots": [
+    "attr:ready eat",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:ready eat",
+     "=",
+     "ready eat"
+    ],
+    [
+     "option:0",
+     "=",
+     ".10 pack.--30 fl oz (pack of 2)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1cdf17094831e3da0a9f361bec509dda",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0083UWT94\",[[\"style\",\"2 pack\"]]]",
+     "[\"B079RMJRJ8\",[[\"style\",\"2 pack\"]]]",
+     "[\"B079S8B9SF\",[[\"size\",\"pack of 8\"]]]",
+     "[\"B08HR77XNM\",[[\"size\",\"pack of 2\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "0bf9d482353cdff3",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "deli & prepared foods",
+    "goal": {
+     "asin": "B003RWVFEI",
+     "attributes": [
+      "ready eat"
+     ],
+     "category": "",
+     "goal_options": [
+      ".10 pack.--30 fl oz (pack of 2)"
+     ],
+     "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon",
+     "query": "deli & prepared foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003RWVFEI",
+    "cluster": "deli & prepared foods",
+    "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon"
+   },
+   "bound_slots": [
+    "attr:ready eat",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:ready eat",
+     "=",
+     "ready eat"
+    ],
+    [
+     "option:0",
+     "=",
+     "sweet & spicy"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "5e5d2b95ef0626f66d23e8276b3a6dfb",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0037507EE\",[[\"flavor name\",\"sweet & spicy\"]]]",
+     "[\"B003RWVFEI\",[[\"flavor name\",\"sweet & spicy\"]]]",
+     "[\"B0173GV8ZY\",[[\"flavor name\",\"sweet and spicy tuna salad\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "a26a1475dafd3fc1",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "deli & prepared foods",
+    "goal": {
+     "asin": "B003RWVFEI",
+     "attributes": [
+      "ready eat"
+     ],
+     "category": "",
+     "goal_options": [
+      "sweet & spicy"
+     ],
+     "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+     "price_upper": 1000000,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon",
+     "query": "deli & prepared foods"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B079S8B9SF",
+     "cluster": "deli & prepared foods",
+     "name": "Aahana’s Lentil & Rice Bowls Vegan Meals | Gluten-Free Meals Ready To Eat, Non-GMO |15g Plant Based Protein | Indian Vegetarian Meal | Kosher| Just Add Water | Shelf Stable Freeze Dried Meals (4 Pack)",
+     "product_category": "Grocery & Gourmet Food › Deli & Prepared Foods › Side Dishes"
+    }
+   },
+   "dst": "9f4ec545c1d51ffa",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "2673eb3bf66ebf93",
+   "src": "3aefe6af3116e824"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B000V1JVAI",
+     "cluster": "deli & prepared foods",
+     "name": "HORMEL COMPLEATS Meatloaf & Gravy With Mashed Potatoes Microwave Tray, 9 oz. (6 Pack)",
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Packaged Meals & Side Dishes › Potatoes & Stuffings › Potato Side Dishes"
+    }
+   },
+   "dst": "f3fa665e15e37d6c",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "3e3767d2ade705d1",
+   "src": "3aefe6af3116e824"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:fat free",
+      "=",
+      "fat free"
+     ]
+    ]
+   },
+   "dst": "7399910ca29f99b7",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3aefe6af3116e824"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:gluten free",
+      "=",
+      "gluten free"
+     ]
+    ]
+   },
+   "dst": "c68b04e6e27349eb",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3aefe6af3116e824"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "sweet & spicy"
+     ]
+    ]
+   },
+   "dst": "f7ee1ea771e28f3d",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3aefe6af3116e824"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "sweet & spicy",
+      "12"
+     ]
+    ]
+   },
+   "dst": "be84d1202e6eb480",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3aefe6af3116e824"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "sweet & spicy",
+      ".10 pack.--30 fl oz (pack of 2)"
+     ]
+    ]
+   },
+   "dst": "0bf9d482353cdff3",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3aefe6af3116e824"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      30
+     ]
+    ]
+   },
+   "dst": "a26a1475dafd3fc1",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3aefe6af3116e824"
+  }
+ ],
+ "env_id": "webshop_b2b6ca8c3f6abf8a",
+ "env_spec": {
+  "cluster": "deli & prepared foods",
+  "env_id": "webshop_b2b6ca8c3f6abf8a",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B003RWVFEI",
+   "cluster": "deli & prepared foods",
+   "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+   "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon"
+  },
+  "bound_slots": [
+   "attr:ready eat",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:ready eat",
+    "=",
+    "ready eat"
+   ],
+   [
+    "option:0",
+    "=",
+    "sweet & spicy"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "ground_truth": {
+   "hash": "5e5d2b95ef0626f66d23e8276b3a6dfb",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B0037507EE\",[[\"flavor name\",\"sweet & spicy\"]]]",
+    "[\"B003RWVFEI\",[[\"flavor name\",\"sweet & spicy\"]]]",
+    "[\"B0173GV8ZY\",[[\"flavor name\",\"sweet and spicy tuna salad\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "3aefe6af3116e824",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "deli & prepared foods",
+   "goal": {
+    "asin": "B003RWVFEI",
+    "attributes": [
+     "ready eat"
+    ],
+    "category": "",
+    "goal_options": [
+     "sweet & spicy"
+    ],
+    "name": "Chicken of the Sea Premium Skinless & Boneless Pink Salmon, 2.5 oz. (Pack of 12)",
+    "price_upper": 30,
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Canned, Jarred & Packaged Foods › Meat, Poultry & Seafood › Seafood › Salmon",
+    "query": "deli & prepared foods"
+   }
+  },
+  "source_record": "0bd5ed44fd8faac5",
+  "unbound_slots": [
+   "attr:fat free",
+   "attr:gluten free",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "bf9ae0dc92dd221e"
+}

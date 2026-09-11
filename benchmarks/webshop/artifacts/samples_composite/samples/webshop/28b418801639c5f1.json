@@ -1,0 +1,316 @@
+{
+ "sample_id": "28b418801639c5f1",
+ "tree_id": "2009a766aa9b150e",
+ "adapter": "webshop",
+ "cluster": "women's shorts",
+ "goal_idx": 17,
+ "split": "test",
+ "source_instruction": "i would like a pair of small blue shorts made of nylon spandex.",
+ "query": "I took my golden retriever to the new community off-leash park this morning, and it was way more chaotic and fun than I expected. He found a half-eaten peanut butter popsicle under a picnic table within two minutes of us walking through the gate, and then trotted right over to a group of toddlers having a bubble party to show off his sticky, goopy prize. The kids thought he was the best thing ever, swarming him to pet his soft fur and blow bubbles straight at his face until he was sneezing little sudsy flecks all over the grass. By the time we herded him back to the car, he had grass stains all over his white chest fur and I had a pocket full of dandelion crowns one of the little girls pressed on me before we left. Hey, I\u2019m looking for women\u2019s shorts right now, can you help me find some nice pairs? I really want ones made of polyester elastane, that fabric blend fits so comfortably for summer walks and errand runs. I\u2019d like them in blue, and I only want to spend a reasonable amount on them, nothing over what feels like a fair price for casual everyday wear.",
+ "strategy_ids": [
+  "insufficient_information",
+  "contextual_irrelevance",
+  "vagueness_subjectivity",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+contextual_irrelevance+vagueness_subjectivity+factual_error",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "contextual_irrelevance",
+   "vagueness_subjectivity",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "factual_error": "attr:nylon spandex",
+   "insufficient_information": "option:1"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:nylon spandex",
+    "nylon spandex",
+    "polyester elastane"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:1"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I took my golden retriever to the new community off-leash park this morning, and it was way more chaotic and fun than I expected. He found a half-eaten peanut butter popsicle under a picnic table within two minutes of us walking through the gate, and then trotted right over to a group of toddlers having a bubble party to show off his sticky, goopy prize. The kids thought he was the best thing ever, swarming him to pet his soft fur and blow bubbles straight at his face until he was sneezing little sudsy flecks all over the grass. By the time we herded him back to the car, he had grass stains all over his white chest fur and I had a pocket full of dandelion crowns one of the little girls pressed on me before we left.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:nylon spandex",
+   "option:1",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:nylon spandex",
+     "=",
+     "polyester elastane"
+    ],
+    [
+     "option:0",
+     "=",
+     "blue"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "f82766df03d28f2e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 93,
+  "lit_card": 0,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 101,
+    "true_card": 93,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 119,
+    "true_card": 93,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 93,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "f908266184f596e2",
+  "conditions": [
+   [
+    "attr:nylon spandex",
+    "=",
+    "nylon spandex"
+   ],
+   [
+    "option:0",
+    "=",
+    "blue"
+   ],
+   [
+    "option:1",
+    "=",
+    "small"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:nylon spandex",
+   "option:1",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 93,
+  "value": [
+   "[\"B01CYXUU1E\",[[\"color\",\"royal blue\"],[\"size\",\"small\"]]]",
+   "[\"B075DL8NTG\",[[\"color\",\"blue anaconda\"],[\"size\",\"x-small\"]]]",
+   "[\"B07H8CDHCP\",[[\"color\",\"blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B07MP6PM3Q\",[[\"color\",\"5\\\" inseam | side pockets-tie dye blue gray\"],[\"size\",\"small\"]]]",
+   "[\"B07QG5T3CP\",[[\"color\",\"light blue\"],[\"size\",\"small\"]]]",
+   "[\"B07QJD7WDR\",[[\"color\",\"blue m skull\"],[\"size\",\"x-small\"]]]",
+   "[\"B07QKVNJTP\",[[\"color\",\"light blue\"],[\"size\",\"small\"]]]",
+   "[\"B07QP2LNMH\",[[\"color\",\"anaconda blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B07QP6Q8C7\",[[\"color\",\"ink blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B07SR393ZJ\",[[\"color\",\"lake blue\"],[\"size\",\"small\"]]]",
+   "[\"B07T4KG4VH\",[[\"color\",\"gray blue\"],[\"size\",\"small\"]]]",
+   "[\"B07VH3M8SS\",[[\"color\",\"ink blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B07WWN5LK7\",[[\"color\",\"dusty blue\"],[\"size\",\"small\"]]]",
+   "[\"B0816S872N\",[[\"color\",\"side pocket 5\\\" inseam--blue leopard\"],[\"size\",\"small\"]]]",
+   "[\"B081P6RSYW\",[[\"color\",\"fantasy blue\"],[\"size\",\"small\"]]]",
+   "[\"B083TNR4SZ\",[[\"color\",\"navy blue\"],[\"size\",\"small\"]]]",
+   "[\"B086X4XY3F\",[[\"color\",\"z03c-blue\"],[\"size\",\"small\"]]]",
+   "[\"B087F5W93C\",[[\"color\",\"blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B088679PQC\",[[\"color\",\"navy blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B088FC7Y64\",[[\"color\",\"8\\\" petrol blue\"],[\"size\",\"small\"]]]",
+   "[\"B088FNJL8H\",[[\"color\",\"a sky blue\"],[\"size\",\"small\"]]]",
+   "[\"B088WP8VBC\",[[\"color\",\"lake blue\"],[\"size\",\"small\"]]]",
+   "[\"B08976Y1KZ\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B089R13W7H\",[[\"color\",\"dark blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B089VLJ6N4\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B08C4Z2VBK\",[[\"color\",\"ink blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B08DK98TKS\",[[\"color\",\"grey blue\"],[\"size\",\"small\"]]]",
+   "[\"B08F4GS4VX\",[[\"color\",\"2\\\" blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B08FTD9N4J\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B08G1PSKT7\",[[\"color\",\"a-blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B08N5XDNB4\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B08Q2TKCCD\",[[\"color\",\"darkblue\"],[\"size\",\"x-small\"]]]",
+   "[\"B08R5MFH9V\",[[\"color\",\"fringed shorts: medium blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B08RYBFZCL\",[[\"color\",\"navy blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B08TWSNRTM\",[[\"color\",\"blue  | heather grey\"],[\"size\",\"small\"]]]",
+   "[\"B08V1H9V2Y\",[[\"color\",\"navy blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B08V1Q88FL\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B08Y91DN7H\",[[\"color\",\"airy blue\"],[\"size\",\"small\"]]]",
+   "[\"B08YFBB2LS\",[[\"color\",\"blue tie-dyed\"],[\"size\",\"x-small\"]]]",
+   "[\"B08ZKCXY82\",[[\"color\",\"2# blue\"],[\"size\",\"small\"]]]",
+   "[\"B08ZRXX8YT\",[[\"color\",\"0006dark blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B08ZXZF3FF\",[[\"color\",\"#13 blue\"],[\"size\",\"small\"]]]",
+   "[\"B091CXRTW7\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B091GQZ4GQ\",[[\"color\",\"grey blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B091JRL2CH\",[[\"color\",\"navy blue\"],[\"size\",\"small\"]]]",
+   "[\"B091T3QBYP\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B091YN27HS\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B09228LF14\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B092CVW8JS\",[[\"color\",\"light heather blue\"],[\"size\",\"small\"]]]",
+   "[\"B092VKMT52\",[[\"color\",\"blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B092VMM8HZ\",[[\"color\",\"wi-blue\"],[\"size\",\"small\"]]]",
+   "[\"B093D5GQ86\",[[\"color\",\"dark blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B093KKFQKC\",[[\"color\",\"814 blue\"],[\"size\",\"small\"]]]",
+   "[\"B093SNC4Y4\",[[\"color\",\"denim blue_8\\\"\"],[\"size\",\"x-small\"]]]",
+   "[\"B093T78R7D\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B093T9CW5M\",[[\"color\",\"5\\\" dusty blue\"],[\"size\",\"small\"]]]",
+   "[\"B093WQT3ZD\",[[\"color\",\"blue sport bra\"],[\"size\",\"small\"]]]",
+   "[\"B0948XCDCJ\",[[\"color\",\"2# dark blue\"],[\"size\",\"small\"]]]",
+   "[\"B094Y2W71K\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B0963452V2\",[[\"color\",\"dark blue\"],[\"size\",\"small\"]]]",
+   "[\"B096B2QW9J\",[[\"color\",\"4-navy blue\"],[\"size\",\"small\"]]]",
+   "[\"B096M4HF1H\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B096QKRTBL\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B096X9M581\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B097SYB1RQ\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B097YBFCH3\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B0989P835Z\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B098JPNQS2\",[[\"color\",\"8\\\" upgraded blue\"],[\"size\",\"small\"]]]",
+   "[\"B098NWSMVT\",[[\"color\",\"baby blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B098P6N2KM\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B098PWVPLZ\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B0992134DF\",[[\"color\",\"teal blue\"],[\"size\",\"small\"]]]",
+   "[\"B0995MDKKZ\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B0998XVNFT\",[[\"color\",\"light blue\"],[\"size\",\"small\"]]]",
+   "[\"B099DHZN6K\",[[\"color\",\"light blue\"],[\"size\",\"small\"]]]",
+   "[\"B099YXGZDD\",[[\"color\",\"blue-short\"],[\"size\",\"small\"]]]",
+   "[\"B09B1PWMN8\",[[\"color\",\"dark blue\"],[\"size\",\"small\"]]]",
+   "[\"B09BFMP6R4\",[[\"color\",\"a racerback bra blue\"],[\"size\",\"small\"]]]",
+   "[\"B09BKMNY9H\",[[\"color\",\"5\\\" dusty blue\"],[\"size\",\"x-small\"]]]",
+   "[\"B09BN6CZJ3\",[[\"color\",\"navy blue x 2\"],[\"size\",\"x-small\"]]]",
+   "[\"B09BTRXPZ2\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B09C8WQLNT\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B09M8PNFH7\",[[\"color\",\"#2 blue\"],[\"size\",\"small\"]]]",
+   "[\"B09NPMRWBC\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B09NY9WK5D\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B09PGGTRB8\",[[\"color\",\"light blue\"],[\"size\",\"small\"]]]",
+   "[\"B09QKG69HM\",[[\"color\",\"army blue\"],[\"size\",\"small\"]]]",
+   "[\"B09QMCQBFM\",[[\"color\",\"navy blue\"],[\"size\",\"small\"]]]",
+   "[\"B09QQJQWN6\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B09QRW25JX\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B09QSRSZCK\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B09QYRC7R7\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]",
+   "[\"B09T33MHYV\",[[\"color\",\"blue\"],[\"size\",\"small\"]]]"
+  ],
+  "hash": "01eb3ba4d9b7d85c9c1e5514f6e1a52c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "aa65457558c46e24",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b53410b3de234fbb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "8a6aed0ad9308fc7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wash cold."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a7877e31bb64c705",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gym shorts."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d7c1c5e5dafa8364",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e4c04dfef8473cac",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "359b5eb0e8886534",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #03 red instead of blue."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "586960e9106e38ce",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #03 black instead of blue."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

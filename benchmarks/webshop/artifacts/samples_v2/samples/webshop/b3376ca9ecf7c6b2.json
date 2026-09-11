@@ -1,0 +1,174 @@
+{
+ "adapter": "webshop",
+ "cluster": "dairy, cheese & eggs",
+ "fidelity_notes": [],
+ "goal_idx": 266,
+ "ground_truth": {
+  "cardinality": 6,
+  "hash": "f074c901efae68ce48cc14dce424c33a",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01B22W5JS\",[[\"flavor name\",\"oatmeal chocolate chip\"]]]",
+   "[\"B07B7BV15N\",[[\"flavor name\",\"birthday cake & chocolate chip blondie\"]]]",
+   "[\"B0863J835N\",[[\"flavor name\",\"chocolate\"]]]",
+   "[\"B08R3V9K9B\",[[\"flavor name\",\"cocoa & chocolate\"]]]",
+   "[\"B08VZWT34G\",[[\"flavor name\",\"peanut butter dark chocolate\"]]]",
+   "[\"B08XB8SQ4P\",[[\"flavor name\",\"peanut butter dark chocolate\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:individually wrapped",
+    "=",
+    "individually wrapped"
+   ],
+   [
+    "option:0",
+    "=",
+    "birthday cake & chocolate chip blondie"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "0b2e52ba71bde3ef"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:individually wrapped",
+     "=",
+     "individually wrapped"
+    ],
+    [
+     "option:0",
+     "=",
+     "birthday cake & chocolate chip blondie"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:individually wrapped",
+   "option:0"
+  ],
+  "spec_id": "052a6af8410e4ae7",
+  "strategy_id": "vagueness_subjectivity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for individually wrapped birthday cake & chocolate chip blondies in the dairy, cheese & eggs section, with a reasonable price.",
+ "render_attempts": 1,
+ "sample_id": "b3376ca9ecf7c6b2",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the dairy, cheese & eggs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "31593c3e27e9c9a1"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the dairy, cheese & eggs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "ea20cb6fefb97a92"
+  },
+  {
+   "announcement": "Also, it needs to be dietary fiber.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "020d455a76a5d3b2"
+  },
+  {
+   "announcement": "Also, it needs to be low calorie.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e5cee811883bc46d"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "413dc7dfbc38420e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c34bdc093142353b"
+  },
+  {
+   "announcement": "Actually, make it 1.6 ounce (pack of 12) instead of birthday cake & chocolate chip blondie.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "024c6584d82202ef"
+  },
+  {
+   "announcement": "Actually, make it 1 pound (pack of 2) instead of birthday cake & chocolate chip blondie.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d3d534ee1db13989"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 7,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 6,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a individual wrapped birthday cakes and chocolate chip blondies that come in a 12 pack.",
+ "split": "test",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "tree_id": "1cef1282d58c59b6",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

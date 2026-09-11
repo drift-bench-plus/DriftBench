@@ -1,0 +1,148 @@
+{
+ "sample_id": "d67ec26c8eebd4cd__indirect_intent",
+ "domain": "retail",
+ "tree_id": "d67ec26c8eebd4cd",
+ "query": "I had two delivered orders before, one is order #W1304208 where the item is 1615379700, and I noted the number 8106223139 down for it, the payment method I used for this order is paypal_1679017. The other order is #W8353027 with the item 6245746168, and I also noted 3112842858 down for that one, it was paid with paypal_1679017 too.",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "indirect_intent",
+  "family": "intention",
+  "mask_kind": "oblique",
+  "kinds": [
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id",
+   "arg:1:exchange_delivered_order_items:item_ids",
+   "arg:1:exchange_delivered_order_items:new_item_ids",
+   "arg:1:exchange_delivered_order_items:order_id",
+   "arg:1:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"1615379700\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"8106223139\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W1304208\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_1679017\""
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"6245746168\"]"
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"3112842858\"]"
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W8353027\""
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_1679017\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "8d9ebde1bce95b92"
+ },
+ "signature": {
+  "rule": "oblique",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"1615379700\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"8106223139\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W1304208\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_1679017\""
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"6245746168\"]"
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"3112842858\"]"
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W8353027\""
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_1679017\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

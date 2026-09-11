@@ -1,0 +1,219 @@
+{
+ "sample_id": "a30c5958521c73c5",
+ "tree_id": "0e753744b15f4583",
+ "adapter": "webshop",
+ "cluster": "headphones",
+ "goal_idx": 213,
+ "split": "test",
+ "source_instruction": "i want silver and noise cancelling earbuds.",
+ "query": "Oh my gosh, you will not believe what happened on my walk over here today! I stopped to grab an iced lavender latte from that little corner spot by the park, and a tiny fluffy golden retriever puppy waddled right up to my table, stole the last bite of my lemon poppyseed muffin off my plate, then immediately rolled over for belly scritches like he hadn\u2019t just committed a full-on pastry heist. The owner was so apologetic, but I couldn\u2019t even be mad\u2014he had little white sock markings on his paws and was wearing a tiny knit sweater covered in daisies, and he kept nudging my hand with his wet nose like he was proud of his heist. I ended up sitting there for ten extra minutes just petting him while his owner told me he\u2019s only three months old and already has a rap sheet for stealing baked goods from every outdoor patio within a two-block radius. Hey, can you help me find a pair of headphones from this section? I need them to have static muting for when I\u2019m studying in busy cafes, and I only want to pay a reasonable amount for them, nothing that feels like a total ripoff. I definitely have a specific colorway I\u2019m set on, you know, the one I always go for that matches my phone case and laptop sleeve? I don\u2019t want any other random features I\u2019ll never use, just that core functionality I mentioned, and I\u2019m not open to going higher than what feels like a fair price point for what I\u2019m getting.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "factual_error",
+  "vagueness_subjectivity",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+factual_error+vagueness_subjectivity+insufficient_information",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "factual_error",
+   "vagueness_subjectivity",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "factual_error": "attr:noise cancelling",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:noise cancelling",
+    "noise cancelling",
+    "static muting"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh my gosh, you will not believe what happened on my walk over here today! I stopped to grab an iced lavender latte from that little corner spot by the park, and a tiny fluffy golden retriever puppy waddled right up to my table, stole the last bite of my lemon poppyseed muffin off my plate, then immediately rolled over for belly scritches like he hadn\u2019t just committed a full-on pastry heist. The owner was so apologetic, but I couldn\u2019t even be mad\u2014he had little white sock markings on his paws and was wearing a tiny knit sweater covered in daisies, and he kept nudging my hand with his wet nose like he was proud of his heist. I ended up sitting there for ten extra minutes just petting him while his owner told me he\u2019s only three months old and already has a rap sheet for stealing baked goods from every outdoor patio within a two-block radius.",
+  "retained": [],
+  "hidden_slots": [
+   "attr:noise cancelling",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:noise cancelling",
+     "=",
+     "static muting"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "18365001d1b996f0"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 8,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 8,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 18,
+    "true_card": 8,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 592,
+    "true_card": 8,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "8bc5949360d672c9",
+  "conditions": [
+   [
+    "attr:noise cancelling",
+    "=",
+    "noise cancelling"
+   ],
+   [
+    "option:0",
+    "=",
+    "white-silver"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:noise cancelling",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 8,
+  "value": [
+   "[\"B07TYTJ5M1\",[[\"color\",\"silver\"]]]",
+   "[\"B083ZQGG4R\",[[\"color\",\"silver\"]]]",
+   "[\"B089W5RDKV\",[[\"color\",\"silver\"]]]",
+   "[\"B08Y8G1YZN\",[[\"color\",\"silver\"]]]",
+   "[\"B091DXBFFQ\",[[\"color\",\"silver\"]]]",
+   "[\"B09GJZZDQP\",[[\"color\",\"white-silver\"]]]",
+   "[\"B09LXNRQVZ\",[[\"color\",\"silver\"]]]",
+   "[\"B09S5L57D5\",[[\"color\",\"silver\"]]]"
+  ],
+  "hash": "abd81fb3989f261d17dfcea304be12ad"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7f764ac432fe9619",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the headphones instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a378bd1c6a654d36",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the headphones instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "073c9f6121813974",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wireless earbuds."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7ee209cc2f948a74",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be audio cable."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4b6493956c64e7c4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e6ad588664e893bb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7973db25f4efdd9e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 3 pack instead of white-silver."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "8890af7279bdaa58",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 7-black1 instead of white-silver."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

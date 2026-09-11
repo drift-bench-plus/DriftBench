@@ -1,0 +1,104 @@
+{
+ "sample_id": "f5cc04389e8de0f2__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "f5cc04389e8de0f2",
+ "query": "My neighbor's golden retriever just had the cutest litter of puppies last weekend, I went over to see them yesterday and one of the little cream-colored ones kept curling up in my lap, I\u2019m already trying to convince my roommate to let me adopt one. Also, the community garden down the street just started their summer planting sign-ups, I\u2019m thinking of getting a plot to grow some tomatoes and basil this year. Oh, right, I wanted to ask about exchanging an item from my delivered order #W4689314, I need to swap the item 5996159312 for item 9228757377, and I'd like to use paypal_8194385 for any additional payment needed for the exchange.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "My neighbor's golden retriever just had the cutest litter of puppies last weekend, I went over to see them yesterday and one of the little cream-colored ones kept curling up in my lap, I\u2019m already trying to convince my roommate to let me adopt one. Also, the community garden down the street just started their summer planting sign-ups, I\u2019m thinking of getting a plot to grow some tomatoes and basil this year.",
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"5996159312\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"9228757377\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W4689314\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_8194385\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"5996159312\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"9228757377\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W4689314\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_8194385\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

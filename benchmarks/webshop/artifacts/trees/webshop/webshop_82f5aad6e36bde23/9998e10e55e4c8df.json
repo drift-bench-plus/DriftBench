@@ -1,0 +1,914 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B09C91R8Q8",
+    "cluster": "women's flats",
+    "name": "RQWEIN Flat Shoes Women Pointed Toe Shoes for Women Women’s Flats Women Pumps Pointed Toe Flats Slip on Shoes Ballet Flats",
+    "product_category": "Clothing, Shoes & Jewelry › Women › Shoes › Flats"
+   },
+   "bound_slots": [
+    "attr:leather sole",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:leather sole",
+     "=",
+     "leather sole"
+    ],
+    [
+     "option:0",
+     "=",
+     "8"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "12661a56f262c7f8596a2feded4c6951",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0002UNNTS\",[[\"size\",\"8 toddler\"]]]",
+     "[\"B01IVUKWMQ\",[[\"size\",\"7-8\"]]]",
+     "[\"B06XRLQV5K\",[[\"size\",\"8\"]]]",
+     "[\"B06XRXY2WW\",[[\"size\",\"8\"]]]",
+     "[\"B06XS38F7F\",[[\"size\",\"8\"]]]",
+     "[\"B076BSTJTN\",[[\"size\",\"8\"]]]",
+     "[\"B076CNN7V2\",[[\"size\",\"8\"]]]",
+     "[\"B07CRF64R2\",[[\"size\",\"us:8\"]]]",
+     "[\"B07F8SWMM4\",[[\"size\",\"8\"]]]",
+     "[\"B07J62BR5W\",[[\"size\",\"7-8\"]]]",
+     "[\"B07J9LTBNL\",[[\"size\",\"8 wide\"]]]",
+     "[\"B07KD7CFWF\",[[\"size\",\"8\"]]]",
+     "[\"B07NCBGM52\",[[\"size\",\"8\"]]]",
+     "[\"B07PPV7NM8\",[[\"size\",\"8\"]]]",
+     "[\"B07R9M3ZVB\",[[\"size\",\"8\"]]]",
+     "[\"B07SJDY8WL\",[[\"size\",\"8\"]]]",
+     "[\"B07Z7RJTDN\",[[\"size\",\"8\"]]]",
+     "[\"B084HFS5LF\",[[\"size\",\"8\"]]]",
+     "[\"B087GH8F4S\",[[\"size\",\"8\"]]]",
+     "[\"B091TRB5HS\",[[\"size\",\"8\"]]]",
+     "[\"B0954DNC4X\",[[\"size\",\"8\"]]]",
+     "[\"B098TNJK2C\",[[\"size\",\"8 wide\"]]]",
+     "[\"B099GHV2TL\",[[\"size\",\"8\"]]]",
+     "[\"B099PQX55F\",[[\"size\",\"8 wide\"]]]",
+     "[\"B099RJD36H\",[[\"size\",\"8 wide\"]]]",
+     "[\"B09C8XWNMJ\",[[\"size\",\"8\"]]]",
+     "[\"B09C91R8Q8\",[[\"size\",\"8\"]]]",
+     "[\"B09DRPZTDK\",[[\"size\",\"8 wide\"]]]",
+     "[\"B09H437RYT\",[[\"size\",\"8\"]]]",
+     "[\"B09P1QPHHJ\",[[\"size\",\"8\"]]]",
+     "[\"B09P88ZVF2\",[[\"size\",\"8\"]]]",
+     "[\"B09PD9ZVYT\",[[\"size\",\"8\"]]]",
+     "[\"B09PGZMYZW\",[[\"size\",\"8\"]]]",
+     "[\"B09PH13R4J\",[[\"size\",\"8\"]]]",
+     "[\"B09PH19GB5\",[[\"size\",\"8\"]]]",
+     "[\"B09PLGPQTP\",[[\"size\",\"8\"]]]",
+     "[\"B09PLH3C8X\",[[\"size\",\"8\"]]]",
+     "[\"B09PQ6RVRT\",[[\"size\",\"8\"]]]",
+     "[\"B09PVJQXQP\",[[\"size\",\"8\"]]]",
+     "[\"B09QCXVT41\",[[\"size\",\"8\"]]]",
+     "[\"B09QD17C3J\",[[\"size\",\"8\"]]]",
+     "[\"B09QL4YYNM\",[[\"size\",\"8\"]]]",
+     "[\"B09R21Z8NK\",[[\"size\",\"8\"]]]",
+     "[\"B09R6LKGNG\",[[\"size\",\"us:8\"]]]",
+     "[\"B09R7R7YBM\",[[\"size\",\"us:8\"]]]",
+     "[\"B09RMMHVPX\",[[\"size\",\"us:8\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "646f70b4c5c8559d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "women's flats",
+    "goal": {
+     "asin": "B09C91R8Q8",
+     "attributes": [
+      "leather sole"
+     ],
+     "category": "",
+     "goal_options": [
+      "8"
+     ],
+     "name": "RQWEIN Flat Shoes Women Pointed Toe Shoes for Women Women’s Flats Women Pumps Pointed Toe Flats Slip on Shoes Ballet Flats",
+     "price_upper": 20,
+     "product_category": "Clothing, Shoes & Jewelry › Women › Shoes › Flats",
+     "query": "women's flats"
+    }
+   },
+   "source_record": "f31ae6ea01b63985",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09PLH5ZF6",
+    "cluster": "women's flats",
+    "name": "Dress Short Boots Shoes For Women Ladies Black Sheer Lace Flower Rhinestones Sadals Retro Ethnic Style Casual Chunky Block High Heels Ankle Booties Zip Comfort Sexy Dressy Ballet Flats For Wedding",
+    "product_category": "Clothing, Shoes & Jewelry › Women › Shoes › Boots › Ankle & Bootie"
+   },
+   "bound_slots": [
+    "attr:slip resistant",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:slip resistant",
+     "=",
+     "slip resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "red"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2cb747eda7141e6cb6eba307cbd45c51",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B015TTK3OE\",[[\"color\",\"red pu\"],[\"size\",\"5\"]]]",
+     "[\"B0771YVBQJ\",[[\"color\",\"premium red pu\"],[\"size\",\"5\"]]]",
+     "[\"B07RX9NS3Y\",[[\"color\",\"8807 red\"],[\"size\",\"5.5\"]]]",
+     "[\"B082WWKN7P\",[[\"color\",\"red\"],[\"size\",\"5.5\"]]]",
+     "[\"B08574R6ZV\",[[\"color\",\"a | red\"],[\"size\",\"10.5\"]]]",
+     "[\"B087938GY9\",[[\"color\",\"red\"],[\"size\",\"5.5\"]]]",
+     "[\"B08N19BQJF\",[[\"color\",\"red\"],[\"size\",\"10\"]]]",
+     "[\"B08T1CYDHZ\",[[\"color\",\"red\"],[\"size\",\"5\"]]]",
+     "[\"B0995XLWYH\",[[\"color\",\"z3 red\"],[\"size\",\"9.5-10\"]]]",
+     "[\"B09HC7FPDC\",[[\"color\",\"z24 red\"],[\"size\",\"9.5-10\"]]]",
+     "[\"B09JNVLVJL\",[[\"color\",\"b red\"],[\"size\",\"5\"]]]",
+     "[\"B09MZGL7QP\",[[\"color\",\"red\"],[\"size\",\"10\"]]]",
+     "[\"B09N353B3M\",[[\"color\",\"red\"],[\"size\",\"5\"]]]",
+     "[\"B09P8C1L89\",[[\"color\",\"red\"],[\"size\",\"10\"]]]",
+     "[\"B09PLH5ZF6\",[[\"color\",\"red\"],[\"size\",\"10.5\"]]]",
+     "[\"B09PVJQXQP\",[[\"color\",\"red\"],[\"size\",\"5\"]]]",
+     "[\"B09PZWNG5S\",[[\"color\",\"red\"],[\"size\",\"5\"]]]",
+     "[\"B09S3TC93G\",[[\"color\",\"red\"],[\"size\",\"5\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9ec03bda172208c6",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "women's flats",
+    "goal": {
+     "asin": "B09PLH5ZF6",
+     "attributes": [
+      "slip resistant"
+     ],
+     "category": "",
+     "goal_options": [
+      "red",
+      "10.5"
+     ],
+     "name": "Dress Short Boots Shoes For Women Ladies Black Sheer Lace Flower Rhinestones Sadals Retro Ethnic Style Casual Chunky Block High Heels Ankle Booties Zip Comfort Sexy Dressy Ballet Flats For Wedding",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Women › Shoes › Boots › Ankle & Bootie",
+     "query": "women's flats"
+    }
+   },
+   "source_record": "767422da5c691c0d",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09HC7FPDC",
+    "cluster": "women's flats",
+    "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+    "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage"
+   },
+   "bound_slots": [
+    "attr:ankle strap",
+    "attr:winter warm",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:ankle strap",
+     "=",
+     "ankle strap"
+    ],
+    [
+     "attr:winter warm",
+     "=",
+     "winter warm"
+    ],
+    [
+     "option:0",
+     "=",
+     "7.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "60aa08d17c620b8f875f26e2c2fc7bf1",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07RRND2YB\",[[\"size\",\"5\"]]]",
+     "[\"B09NRRZ1T1\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B09QSW7LZ3\",[[\"size\",\"7\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "581542e413602d22",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "women's flats",
+    "goal": {
+     "asin": "B09HC7FPDC",
+     "attributes": [
+      "ankle strap",
+      "winter warm"
+     ],
+     "category": "",
+     "goal_options": [
+      "7.5"
+     ],
+     "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+     "price_upper": 30,
+     "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage",
+     "query": "women's flats"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09HC7FPDC",
+    "cluster": "women's flats",
+    "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+    "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage"
+   },
+   "bound_slots": [
+    "attr:dress shoes",
+    "attr:winter warm",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dress shoes",
+     "=",
+     "dress shoes"
+    ],
+    [
+     "attr:winter warm",
+     "=",
+     "winter warm"
+    ],
+    [
+     "option:0",
+     "=",
+     "7.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ade2c72292370f3a31114a54b7491908",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07RRND2YB\",[[\"size\",\"5\"]]]",
+     "[\"B08TMTGPV6\",[[\"size\",\"5.5\"]]]",
+     "[\"B08W3D5642\",[[\"size\",\"7\"]]]",
+     "[\"B09NRRZ1T1\",[[\"size\",\"6.5-7\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "21ba9ea19270a5ad",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "women's flats",
+    "goal": {
+     "asin": "B09HC7FPDC",
+     "attributes": [
+      "dress shoes",
+      "winter warm"
+     ],
+     "category": "",
+     "goal_options": [
+      "7.5"
+     ],
+     "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+     "price_upper": 30,
+     "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage",
+     "query": "women's flats"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09HC7FPDC",
+    "cluster": "women's flats",
+    "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+    "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage"
+   },
+   "bound_slots": [
+    "attr:winter warm",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:winter warm",
+     "=",
+     "winter warm"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "d13c3a1f8c06edfeda3f206489444286",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07BMLVX16\",[]]",
+     "[\"B07HF57J75\",[]]",
+     "[\"B07RRND2YB\",[]]",
+     "[\"B07VHNQXYD\",[]]",
+     "[\"B081M1632W\",[]]",
+     "[\"B081T63T3Z\",[]]",
+     "[\"B081T7ZCYM\",[]]",
+     "[\"B0888Q78QC\",[]]",
+     "[\"B08BXMR79H\",[]]",
+     "[\"B08BXNGCP4\",[]]",
+     "[\"B08TMTGPV6\",[]]",
+     "[\"B08W3D5642\",[]]",
+     "[\"B0995XLWYH\",[]]",
+     "[\"B09B3ZGXK6\",[]]",
+     "[\"B09DQ6VYGT\",[]]",
+     "[\"B09HC7FPDC\",[]]",
+     "[\"B09JCDQ9FD\",[]]",
+     "[\"B09K74T4LZ\",[]]",
+     "[\"B09LCNVMBV\",[]]",
+     "[\"B09LSWJ2Z6\",[]]",
+     "[\"B09M2B4NZ9\",[]]",
+     "[\"B09MLTB56D\",[]]",
+     "[\"B09MMYV8M8\",[]]",
+     "[\"B09MZGL7QP\",[]]",
+     "[\"B09NRRZ1T1\",[]]",
+     "[\"B09PNKGWYX\",[]]",
+     "[\"B09PNLX519\",[]]",
+     "[\"B09Q3HJSNH\",[]]",
+     "[\"B09QSW7LZ3\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "1184f8f88f0e0b08",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "women's flats",
+    "goal": {
+     "asin": "B09HC7FPDC",
+     "attributes": [
+      "winter warm"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+     "price_upper": 30,
+     "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage",
+     "query": "women's flats"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09HC7FPDC",
+    "cluster": "women's flats",
+    "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+    "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage"
+   },
+   "bound_slots": [
+    "attr:winter warm",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:winter warm",
+     "=",
+     "winter warm"
+    ],
+    [
+     "option:0",
+     "=",
+     "7.5"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "acb9d242c899aa167d4214365a52271f",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07BMLVX16\",[[\"size\",\"us:7.5(cn:37)\"]]]",
+     "[\"B07FTGYYM5\",[[\"size\",\"7\"]]]",
+     "[\"B07HF57J75\",[[\"size\",\"5.5\"]]]",
+     "[\"B07RRND2YB\",[[\"size\",\"5\"]]]",
+     "[\"B07VHNQXYD\",[[\"size\",\"7.5\"]]]",
+     "[\"B081M1632W\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B081T63T3Z\",[[\"size\",\"us:6.5-7=cn:37\"]]]",
+     "[\"B081T7ZCYM\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B082FTDTVJ\",[[\"size\",\"5.5\"]]]",
+     "[\"B08BXMR79H\",[[\"size\",\"7\"]]]",
+     "[\"B08BXNGCP4\",[[\"size\",\"7\"]]]",
+     "[\"B08TMTGPV6\",[[\"size\",\"5.5\"]]]",
+     "[\"B08W3D5642\",[[\"size\",\"7\"]]]",
+     "[\"B0995XLWYH\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B09B3ZGXK6\",[[\"size\",\"7\"]]]",
+     "[\"B09CYFSXFX\",[[\"size\",\"7\"]]]",
+     "[\"B09DQ6VYGT\",[[\"size\",\"7\"]]]",
+     "[\"B09DYL5FCP\",[[\"size\",\"7.5 wide\"]]]",
+     "[\"B09HC7FPDC\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B09JCDQ9FD\",[[\"size\",\"7\"]]]",
+     "[\"B09JVTGLD6\",[[\"size\",\"7\"]]]",
+     "[\"B09K74T4LZ\",[[\"size\",\"7.5 wide\"]]]",
+     "[\"B09KH32XLH\",[[\"size\",\"7\"]]]",
+     "[\"B09LCNVMBV\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B09LH6YF6Y\",[[\"size\",\"7\"]]]",
+     "[\"B09LHM1KB7\",[[\"size\",\"7\"]]]",
+     "[\"B09LSWJ2Z6\",[[\"size\",\"7\"]]]",
+     "[\"B09M2B4NZ9\",[[\"size\",\"7\"]]]",
+     "[\"B09M6FVP4C\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B09MLTB56D\",[[\"size\",\"5.5\"]]]",
+     "[\"B09MLYPDX9\",[[\"size\",\"5\"]]]",
+     "[\"B09MMYV8M8\",[[\"size\",\"5.5\"]]]",
+     "[\"B09MWFWSLF\",[[\"size\",\"5\"]]]",
+     "[\"B09MZGL7QP\",[[\"size\",\"7\"]]]",
+     "[\"B09NLV41MR\",[[\"size\",\"5.5\"]]]",
+     "[\"B09NNLFGQK\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B09NRRZ1T1\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B09PNKGWYX\",[[\"size\",\"5.5\"]]]",
+     "[\"B09PNL1L82\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B09PNLX519\",[[\"size\",\"5.5\"]]]",
+     "[\"B09Q3HJSNH\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B09QCW1JK7\",[[\"size\",\"6.5-7\"]]]",
+     "[\"B09QSW7LZ3\",[[\"size\",\"7\"]]]",
+     "[\"B09SD4SKCR\",[[\"size\",\"5\"]]]",
+     "[\"B09SD9QCZ1\",[[\"size\",\"5\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "ceb2d92dc22e7e53",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "women's flats",
+    "goal": {
+     "asin": "B09HC7FPDC",
+     "attributes": [
+      "winter warm"
+     ],
+     "category": "",
+     "goal_options": [
+      "7.5"
+     ],
+     "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+     "price_upper": 1000000,
+     "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage",
+     "query": "women's flats"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09HC7FPDC",
+    "cluster": "women's flats",
+    "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+    "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage"
+   },
+   "bound_slots": [
+    "attr:winter warm",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:winter warm",
+     "=",
+     "winter warm"
+    ],
+    [
+     "option:0",
+     "=",
+     "005 grey"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "01a90e99069e3b4f6aa7145f330bd6d0",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07HF57J75\",[[\"color\",\"grey\"]]]",
+     "[\"B07VHNQXYD\",[[\"color\",\"grey#\"]]]",
+     "[\"B081M1632W\",[[\"color\",\"grey\"]]]",
+     "[\"B081T7ZCYM\",[[\"color\",\"z-grey\"]]]",
+     "[\"B09B3ZGXK6\",[[\"color\",\"01#-grey\"]]]",
+     "[\"B09HC7FPDC\",[[\"color\",\"grey\"]]]",
+     "[\"B09M2B4NZ9\",[[\"color\",\"grey\"]]]",
+     "[\"B09PNLX519\",[[\"color\",\"grey\"]]]",
+     "[\"B09Q3HJSNH\",[[\"color\",\"grey\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "294b895897f50415",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "women's flats",
+    "goal": {
+     "asin": "B09HC7FPDC",
+     "attributes": [
+      "winter warm"
+     ],
+     "category": "",
+     "goal_options": [
+      "005 grey"
+     ],
+     "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+     "price_upper": 30,
+     "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage",
+     "query": "women's flats"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09HC7FPDC",
+    "cluster": "women's flats",
+    "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+    "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage"
+   },
+   "bound_slots": [
+    "attr:winter warm",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:winter warm",
+     "=",
+     "winter warm"
+    ],
+    [
+     "option:0",
+     "=",
+     "#01-khaki"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "07456aa4c2ea2c01ba0f5eb65cdae031",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07HF57J75\",[[\"color\",\"h khaki\"]]]",
+     "[\"B07RRND2YB\",[[\"color\",\"a01#khaki\"]]]",
+     "[\"B081T63T3Z\",[[\"color\",\"z1-khaki\"]]]",
+     "[\"B081T7ZCYM\",[[\"color\",\"khaki\"]]]",
+     "[\"B0888Q78QC\",[[\"color\",\"khaki\"]]]",
+     "[\"B08BXNGCP4\",[[\"color\",\"khaki\"]]]",
+     "[\"B0995XLWYH\",[[\"color\",\"khaki\"]]]",
+     "[\"B09DQ6VYGT\",[[\"color\",\"z02-khaki\"]]]",
+     "[\"B09HC7FPDC\",[[\"color\",\"khaki\"]]]",
+     "[\"B09K74T4LZ\",[[\"color\",\"khaki\"]]]",
+     "[\"B09Q3HJSNH\",[[\"color\",\"h02-khaki\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "e04a87be2f029d6f",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "women's flats",
+    "goal": {
+     "asin": "B09HC7FPDC",
+     "attributes": [
+      "winter warm"
+     ],
+     "category": "",
+     "goal_options": [
+      "#01-khaki"
+     ],
+     "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+     "price_upper": 30,
+     "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage",
+     "query": "women's flats"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B09C91R8Q8",
+     "cluster": "women's flats",
+     "name": "RQWEIN Flat Shoes Women Pointed Toe Shoes for Women Women’s Flats Women Pumps Pointed Toe Flats Slip on Shoes Ballet Flats",
+     "product_category": "Clothing, Shoes & Jewelry › Women › Shoes › Flats"
+    }
+   },
+   "dst": "646f70b4c5c8559d",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "f31ae6ea01b63985",
+   "src": "78ce867d31453fa0"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B09PLH5ZF6",
+     "cluster": "women's flats",
+     "name": "Dress Short Boots Shoes For Women Ladies Black Sheer Lace Flower Rhinestones Sadals Retro Ethnic Style Casual Chunky Block High Heels Ankle Booties Zip Comfort Sexy Dressy Ballet Flats For Wedding",
+     "product_category": "Clothing, Shoes & Jewelry › Women › Shoes › Boots › Ankle & Bootie"
+    }
+   },
+   "dst": "9ec03bda172208c6",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "767422da5c691c0d",
+   "src": "78ce867d31453fa0"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:ankle strap",
+      "=",
+      "ankle strap"
+     ]
+    ]
+   },
+   "dst": "581542e413602d22",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "78ce867d31453fa0"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:dress shoes",
+      "=",
+      "dress shoes"
+     ]
+    ]
+   },
+   "dst": "21ba9ea19270a5ad",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "78ce867d31453fa0"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "7.5"
+     ]
+    ]
+   },
+   "dst": "1184f8f88f0e0b08",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "78ce867d31453fa0"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      30
+     ]
+    ]
+   },
+   "dst": "ceb2d92dc22e7e53",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "78ce867d31453fa0"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "7.5",
+      "005 grey"
+     ]
+    ]
+   },
+   "dst": "294b895897f50415",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "78ce867d31453fa0"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "7.5",
+      "#01-khaki"
+     ]
+    ]
+   },
+   "dst": "e04a87be2f029d6f",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "78ce867d31453fa0"
+  }
+ ],
+ "env_id": "webshop_82f5aad6e36bde23",
+ "env_spec": {
+  "cluster": "women's flats",
+  "env_id": "webshop_82f5aad6e36bde23",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B09HC7FPDC",
+   "cluster": "women's flats",
+   "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+   "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage"
+  },
+  "bound_slots": [
+   "attr:winter warm",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:winter warm",
+    "=",
+    "winter warm"
+   ],
+   [
+    "option:0",
+    "=",
+    "7.5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "ground_truth": {
+   "hash": "10780f8862e30169f606b5787d3c3c9c",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B07BMLVX16\",[[\"size\",\"us:7.5(cn:37)\"]]]",
+    "[\"B07HF57J75\",[[\"size\",\"5.5\"]]]",
+    "[\"B07RRND2YB\",[[\"size\",\"5\"]]]",
+    "[\"B07VHNQXYD\",[[\"size\",\"7.5\"]]]",
+    "[\"B081M1632W\",[[\"size\",\"6.5-7\"]]]",
+    "[\"B081T63T3Z\",[[\"size\",\"us:6.5-7=cn:37\"]]]",
+    "[\"B081T7ZCYM\",[[\"size\",\"6.5-7\"]]]",
+    "[\"B08BXMR79H\",[[\"size\",\"7\"]]]",
+    "[\"B08BXNGCP4\",[[\"size\",\"7\"]]]",
+    "[\"B08TMTGPV6\",[[\"size\",\"5.5\"]]]",
+    "[\"B08W3D5642\",[[\"size\",\"7\"]]]",
+    "[\"B0995XLWYH\",[[\"size\",\"6.5-7\"]]]",
+    "[\"B09B3ZGXK6\",[[\"size\",\"7\"]]]",
+    "[\"B09DQ6VYGT\",[[\"size\",\"7\"]]]",
+    "[\"B09HC7FPDC\",[[\"size\",\"6.5-7\"]]]",
+    "[\"B09JCDQ9FD\",[[\"size\",\"7\"]]]",
+    "[\"B09K74T4LZ\",[[\"size\",\"7.5 wide\"]]]",
+    "[\"B09LCNVMBV\",[[\"size\",\"6.5-7\"]]]",
+    "[\"B09LSWJ2Z6\",[[\"size\",\"7\"]]]",
+    "[\"B09M2B4NZ9\",[[\"size\",\"7\"]]]",
+    "[\"B09MLTB56D\",[[\"size\",\"5.5\"]]]",
+    "[\"B09MMYV8M8\",[[\"size\",\"5.5\"]]]",
+    "[\"B09MZGL7QP\",[[\"size\",\"7\"]]]",
+    "[\"B09NRRZ1T1\",[[\"size\",\"6.5-7\"]]]",
+    "[\"B09PNKGWYX\",[[\"size\",\"5.5\"]]]",
+    "[\"B09PNLX519\",[[\"size\",\"5.5\"]]]",
+    "[\"B09Q3HJSNH\",[[\"size\",\"6.5-7\"]]]",
+    "[\"B09QSW7LZ3\",[[\"size\",\"7\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "78ce867d31453fa0",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "women's flats",
+   "goal": {
+    "asin": "B09HC7FPDC",
+    "attributes": [
+     "winter warm"
+    ],
+    "category": "",
+    "goal_options": [
+     "7.5"
+    ],
+    "name": "NOLDARES Boots for Women Winter Fashion Leopard Zip Up Pointed Toe Ankle Boots Winter Low Chunky Square Heel Booties",
+    "price_upper": 30,
+    "product_category": "Sports & Outdoors › Sports & Outdoor Recreation Accessories › Ball Storage",
+    "query": "women's flats"
+   }
+  },
+  "source_record": "ea22b200f237e58d",
+  "unbound_slots": [
+   "attr:ankle strap",
+   "attr:dress shoes",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "9998e10e55e4c8df"
+}

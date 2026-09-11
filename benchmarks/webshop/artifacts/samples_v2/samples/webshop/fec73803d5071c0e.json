@@ -1,0 +1,230 @@
+{
+ "adapter": "webshop",
+ "cluster": "underwater photography",
+ "fidelity_notes": [],
+ "goal_idx": 485,
+ "ground_truth": {
+  "cardinality": 27,
+  "hash": "0de90b645ea7053fe85ebf67383ee212",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00ODQQGCI\",[[\"size\",\"6x9\"]]]",
+   "[\"B076YPKB9T\",[[\"size\",\"6x9ft\"]]]",
+   "[\"B07NSKRG6R\",[[\"size\",\"6x9ft\"]]]",
+   "[\"B07T84JK49\",[[\"size\",\"6x9ft\"]]]",
+   "[\"B08QS4162X\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08R92G3DR\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08R943X4Y\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08RDGLGWX\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08RDGR2NV\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08RDH5HBV\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08RDH5JZ3\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08S77K3KN\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08S77S42N\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08S7FJ1PR\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08S7K5DQK\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08S7MD3HY\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08T21G734\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08TX29T65\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08TX29XY9\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08TX2CWCP\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08TX2FLWS\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B08TX2MD34\",[[\"size\",\"6x9 ft\"]]]",
+   "[\"B099Z27S6Y\",[[\"size\",\"6x9ft\"]]]",
+   "[\"B09QPZSZC4\",[[\"size\",\"6x9ft\"]]]",
+   "[\"B09STT2PN5\",[[\"size\",\"6x9ft\"]]]",
+   "[\"B09SWLCKJG\",[[\"size\",\"6x9ft\"]]]",
+   "[\"B09T6DDZ5G\",[[\"size\",\"6x9ft\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:light weight",
+    "=",
+    "light weight"
+   ],
+   [
+    "option:0",
+    "=",
+    "6x9 ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "attr:light weight"
+  ],
+  "intent_id": "e4a7869b6f13e5f0"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "attr:light weight",
+      "light weight"
+     ],
+     [
+      "attr:light weight",
+      "light in color/brightness"
+     ]
+    ],
+    "surface": "light"
+   }
+  ],
+  "attempt": 1,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:light weight"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:light weight",
+     "=",
+     "light weight"
+    ],
+    [
+     "option:0",
+     "=",
+     "6x9 ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   [
+    [
+     "attr:light weight",
+     "=",
+     "light in color/brightness"
+    ],
+    [
+     "option:0",
+     "=",
+     "6x9 ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "cd774fe214a2d904",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a light option sized 6x9 ft for my underwater photography trips, and it has to cost no more than $120.",
+ "render_attempts": 1,
+ "sample_id": "fec73803d5071c0e",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the underwater photography instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2cc84b38cec80f49"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the underwater photography instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e425596787362339"
+  },
+  {
+   "announcement": "Also, it needs to be easy carry.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3ad4a591b5ba6b86"
+  },
+  {
+   "announcement": "Also, it needs to be digital photography.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d2d311edcab4e222"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "72e01f63da18202d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "eb56d09c34459e0e"
+  },
+  {
+   "announcement": "Actually, make it #2 instead of 6x9 ft.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "80b1c82193609a32"
+  },
+  {
+   "announcement": "Actually, make it 10x6.5ft-vinyl instead of 6x9 ft.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "92c8eb64526635fd"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   27,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 27,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for an underwater themed 6 foot by 9 foot light weight vinyl photography backdrop.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "b00332c3736208eb",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,177 @@
+{
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "fidelity_notes": [],
+ "goal_idx": 299,
+ "ground_truth": {
+  "cardinality": 9,
+  "hash": "e81fe6ee894677304ad7f936066ca58b",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0171EUOZI\",[[\"size\",\"10ft (2 pack)\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"1ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"1ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"1ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"material type\",\"1ft - 3 pack\"]]]",
+   "[\"B07CQB2FZK\",[[\"material type\",\"1ft - 3 pack\"]]]",
+   "[\"B07HC46N93\",[[\"size\",\"1ft\"]]]",
+   "[\"B099RJGRRZ\",[[\"size\",\"1ft\"]]]",
+   "[\"B09MV8B4PK\",[[\"item package quantity\",\"3\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "1ft - 3 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "91474c75ad5d4e6f"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high speed",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for high speed options in the satellite television section, and I want the usual one, with a price limit of $40.",
+ "render_attempts": 1,
+ "sample_id": "942ce56fa9e1624d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0d4271e27a5b21d4"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7845bdf8528c5ec1"
+  },
+  {
+   "announcement": "Also, it needs to be high performance.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "47488dd1d7b025ea"
+  },
+  {
+   "announcement": "Also, it needs to be smart tv.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "49738ef791abe26a"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e05fdcce4645d715"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f400a0f986c9f63f"
+  },
+  {
+   "announcement": "Actually, make it 150 ft instead of 1ft - 3 pack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "18789ead90bd1547"
+  },
+  {
+   "announcement": "Actually, make it 50 ft instead of 1ft - 3 pack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "672fc4fef32e57cb"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 544,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 9,
+  "verdict": "ok"
+ },
+ "source_instruction": "look for a high speed coaxial cable that is about 1 foot. three per pack would be nice.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "262ba9c552d0626c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,189 @@
+{
+ "adapter": "webshop",
+ "cluster": "bags & cases",
+ "fidelity_notes": [],
+ "goal_idx": 337,
+ "ground_truth": {
+  "cardinality": 24,
+  "hash": "deacd35f4dfa55a0545b37e401bce1b8",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07F45NBF2\",[[\"color\",\"mermaid scale 1\"]]]",
+   "[\"B07GSXR6FM\",[[\"color\",\"c\"]]]",
+   "[\"B07P5WR8X6\",[[\"color\",\"c\"]]]",
+   "[\"B07X6NTRY1\",[[\"color\",\"mermaid scale\"]]]",
+   "[\"B07ZF67KZD\",[[\"color\",\"mermaid\"]]]",
+   "[\"B07ZVQ4P6N\",[[\"color\",\"c\"]]]",
+   "[\"B081N41FZ7\",[[\"color\",\"c\"]]]",
+   "[\"B082FVNHWH\",[[\"color\",\"mermaid\"]]]",
+   "[\"B082YMS9LN\",[[\"color\",\"c mermaid scales\"]]]",
+   "[\"B084GQVTL8\",[[\"color\",\"c\"]]]",
+   "[\"B086MH7GQK\",[[\"style\",\"mermaid b\"]]]",
+   "[\"B08P1JPFWD\",[[\"color\",\"c\"]]]",
+   "[\"B08X27J1KL\",[[\"color\",\"mermaid scale\"]]]",
+   "[\"B08Y925DDH\",[[\"color\",\"mermaid scales\"]]]",
+   "[\"B094NTV8G4\",[[\"color\",\"mermaid\"]]]",
+   "[\"B095BKFRM2\",[[\"color\",\"mermaid\"]]]",
+   "[\"B095YPPQTQ\",[[\"color\",\"c\"]]]",
+   "[\"B09836Y43J\",[[\"color\",\"c\"]]]",
+   "[\"B0991Q1STV\",[[\"color\",\"mermaid fish scales\"]]]",
+   "[\"B09BQ62W4S\",[[\"color\",\"mermaid scales\"]]]",
+   "[\"B09C4T3XBB\",[[\"color\",\"mermaid scales\"]]]",
+   "[\"B09C5D96FT\",[[\"color\",\"mermaid shining scales\"]]]",
+   "[\"B09CP91H6J\",[[\"color\",\"mermaid\"]]]",
+   "[\"B09MCF64RM\",[[\"color\",\"c\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "option:0",
+    "=",
+    "c mermaid scales"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "c123b853f0cb44fe"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "c mermaid scales"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the whole afternoon repotting my succulent collection, and I swear my favorite zebra haworthia is finally putting out new baby offsets after months of looking totally dormant. I also found a tiny spotted ladybug crawling on one of the echeveria leaves, so I carefully moved it over to the mint planter on my windowsill where there are more aphids for it to eat. I even mixed up a new batch of well-draining cactus soil with extra perlite to make sure none of the plants get root rot now that the weather’s getting more humid.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high quality",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the whole afternoon repotting my succulent collection, and I swear my favorite zebra haworthia is finally putting out new baby offsets after months of looking totally dormant. I also found a tiny spotted ladybug crawling on one of the echeveria leaves, so I carefully moved it over to the mint planter on my windowsill where there are more aphids for it to eat. I even mixed up a new batch of well-draining cactus soil with extra perlite to make sure none of the plants get root rot now that the weather’s getting more humid. I’m looking for a high quality bag with a mermaid scales pattern, and my budget is $20.",
+ "render_attempts": 1,
+ "sample_id": "6ff9d3bdd97b9131",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bags & cases instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5022045ab82ac014"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bags & cases instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "ddf874ccce3c6424"
+  },
+  {
+   "announcement": "Also, it needs to be hair dryer.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2847491f9874db48"
+  },
+  {
+   "announcement": "Also, it needs to be heavy duty.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c9f5a59555916f6e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "38c3096be757f540"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e1eb7c7d15d9f991"
+  },
+  {
+   "announcement": "Actually, make it #flower instead of c mermaid scales.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "121458914261deaf"
+  },
+  {
+   "announcement": "Actually, make it #flower_1 instead of c mermaid scales.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8d07ed51a46b9816"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 24,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 24,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a high quality cosmetic bag. also the c mermaid scales color is what i prefer.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "a32a6803f92d78b8",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

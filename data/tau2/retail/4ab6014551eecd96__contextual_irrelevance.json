@@ -1,0 +1,104 @@
+{
+ "sample_id": "4ab6014551eecd96__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "4ab6014551eecd96",
+ "query": "I just got back from walking my dog this afternoon, he stopped to sniff every single dandelion on the sidewalk and even tried to carry a half-eaten french fry he found home with him. I was also planning out my weekend gardening schedule earlier, I need to pick up some new potting soil and a few packets of marigold seeds to plant along the edge of my balcony. Oh, and I finished that mystery novel I\u2019ve been reading for the past week last night, the ending had such a wild twist I never saw coming. Anyway, I need to modify my pending order #W9911714, please change the items 9791469541 and 1340995114 to 4107812777 and 1421289881, and use gift_card_4332117 as the payment method for the adjustment.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from walking my dog this afternoon, he stopped to sniff every single dandelion on the sidewalk and even tried to carry a half-eaten french fry he found home with him. I was also planning out my weekend gardening schedule earlier, I need to pick up some new potting soil and a few packets of marigold seeds to plant along the edge of my balcony. Oh, and I finished that mystery novel I\u2019ve been reading for the past week last night, the ending had such a wild twist I never saw coming.",
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"9791469541\",\"1340995114\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"4107812777\",\"1421289881\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W9911714\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"gift_card_4332117\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"9791469541\",\"1340995114\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"4107812777\",\"1421289881\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W9911714\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"gift_card_4332117\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "sample_id": "48e11dc05d6720a4__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "48e11dc05d6720a4",
+ "query": "I just planted a new batch of tomato seedlings on my balcony yesterday, and I\u2019m so excited to see if they\u2019ll produce sweet, juicy fruit this summer. I\u2019ve been looking up all kinds of care tips lately, like how much sunlight they need and the best organic fertilizer to use, I even bought a little moisture meter to make sure I don\u2019t overwater them. Oh, and I tried a new matcha latte recipe this morning that turned out way better than the ones I get at the caf\u00e9 down the street, I\u2019m definitely going to make it part of my daily routine now. Anyway, I need to modify my pending order #W5199551: replace item 1615379700 with item 3613716226, and use paypal_5364164 as the payment method for the adjustment.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just planted a new batch of tomato seedlings on my balcony yesterday, and I\u2019m so excited to see if they\u2019ll produce sweet, juicy fruit this summer. I\u2019ve been looking up all kinds of care tips lately, like how much sunlight they need and the best organic fertilizer to use, I even bought a little moisture meter to make sure I don\u2019t overwater them. Oh, and I tried a new matcha latte recipe this morning that turned out way better than the ones I get at the caf\u00e9 down the street, I\u2019m definitely going to make it part of my daily routine now.",
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"1615379700\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"3613716226\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W5199551\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_5364164\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"1615379700\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"3613716226\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W5199551\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_5364164\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

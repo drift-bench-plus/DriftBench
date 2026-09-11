@@ -1,0 +1,104 @@
+{
+ "sample_id": "3db37620d0bbd3de__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "3db37620d0bbd3de",
+ "query": "Oh, the new limited-edition matcha mochi snacks I tried yesterday were so good, I ended up eating the whole pack in one sitting and now I'm thinking about ordering another box to share with my roommates later. Also, my neighbor's cat wandered into my apartment this morning, it's such a fluffy orange tabby that kept rubbing against my ankle while I was making coffee, I almost was late to my work from home shift because I was playing with it. And I just saw the announcement that the fantasy drama I've been waiting for half a year is finally going to premiere next Friday, I've already set a reminder on my phone so I don't miss the first two episodes.\n\nAnyway, I need to modify some items in my pending order #W9911714. Please change the items 2366567022, 1340995114, 9791469541, and 1763705424 to 4579334072, 1151293680, 4107812777, and 2882812427, and use gift_card_4332117 as the payment method for this modification.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh, the new limited-edition matcha mochi snacks I tried yesterday were so good, I ended up eating the whole pack in one sitting and now I'm thinking about ordering another box to share with my roommates later. Also, my neighbor's cat wandered into my apartment this morning, it's such a fluffy orange tabby that kept rubbing against my ankle while I was making coffee, I almost was late to my work from home shift because I was playing with it. And I just saw the announcement that the fantasy drama I've been waiting for half a year is finally going to premiere next Friday, I've already set a reminder on my phone so I don't miss the first two episodes.",
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"2366567022\",\"1340995114\",\"9791469541\",\"1763705424\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"4579334072\",\"1151293680\",\"4107812777\",\"2882812427\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W9911714\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"gift_card_4332117\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"2366567022\",\"1340995114\",\"9791469541\",\"1763705424\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"4579334072\",\"1151293680\",\"4107812777\",\"2882812427\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W9911714\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"gift_card_4332117\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "sample_id": "564e12531fc63b03__insufficient_information",
+ "domain": "retail",
+ "tree_id": "564e12531fc63b03",
+ "query": "Hi, I need to update the address for my account, my user ID is fatima_taylor_3452, the new address is 157 Oak Street, Suite 258, Phoenix, AZ, USA. Can you help me make that change?",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "insufficient_information",
+  "family": "parameter",
+  "mask_kind": "withhold",
+  "kinds": [
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "arg:0:modify_user_address:zip"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_user_address:address1",
+   "arg:0:modify_user_address:address2",
+   "arg:0:modify_user_address:city",
+   "arg:0:modify_user_address:country",
+   "arg:0:modify_user_address:state",
+   "arg:0:modify_user_address:user_id"
+  ],
+  "hidden_slots": [
+   "arg:0:modify_user_address:zip"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_user_address:address1",
+     "=",
+     "\"157 Oak Street\""
+    ],
+    [
+     "arg:0:modify_user_address:address2",
+     "=",
+     "\"Suite 258\""
+    ],
+    [
+     "arg:0:modify_user_address:city",
+     "=",
+     "\"Phoenix\""
+    ],
+    [
+     "arg:0:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_user_address:state",
+     "=",
+     "\"AZ\""
+    ],
+    [
+     "arg:0:modify_user_address:user_id",
+     "=",
+     "\"fatima_taylor_3452\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "61c3eea677f36e62"
+ },
+ "signature": {
+  "rule": "withheld",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_user_address:address1",
+    "=",
+    "\"157 Oak Street\""
+   ],
+   [
+    "arg:0:modify_user_address:address2",
+    "=",
+    "\"Suite 258\""
+   ],
+   [
+    "arg:0:modify_user_address:city",
+    "=",
+    "\"Phoenix\""
+   ],
+   [
+    "arg:0:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_user_address:state",
+    "=",
+    "\"AZ\""
+   ],
+   [
+    "arg:0:modify_user_address:user_id",
+    "=",
+    "\"fatima_taylor_3452\""
+   ],
+   [
+    "arg:0:modify_user_address:zip",
+    "=",
+    "\"85033\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:modify_user_address:zip"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

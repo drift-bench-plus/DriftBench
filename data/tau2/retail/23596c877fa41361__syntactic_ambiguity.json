@@ -1,0 +1,253 @@
+{
+ "sample_id": "23596c877fa41361__syntactic_ambiguity",
+ "domain": "retail",
+ "tree_id": "23596c877fa41361",
+ "query": "Hi there, I need to modify my pending order #W6750959 first by updating the shipping address to 476 Maple Drive, Suite 432, New York, NY 10093, USA, then swap out item 3254583681 and update the payment method to paypal_8080730 for the replacement item 9440686670 to complete the adjustment.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "for the replacement item 9440686670",
+    "placements": [
+     [
+      "arg:1:modify_pending_order_items:payment_method_id",
+      "\"paypal_8080730\""
+     ],
+     [
+      "arg:1:modify_pending_order_items:payment_method_id",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_pending_order_items:item_ids",
+   "arg:1:modify_pending_order_items:new_item_ids",
+   "arg:1:modify_pending_order_items:order_id"
+  ],
+  "hidden_slots": [
+   "arg:1:modify_pending_order_items:payment_method_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"476 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 432\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W6750959\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"10093\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"3254583681\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"9440686670\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W6750959\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_8080730\""
+    ]
+   ],
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"476 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 432\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W6750959\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"10093\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"3254583681\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"9440686670\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W6750959\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 6,
+  "spec_id": "3503e75564e5d4c8"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"476 Maple Drive\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 432\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"New York\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W6750959\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"NY\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"10093\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:item_ids",
+    "=",
+    "[\"3254583681\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"9440686670\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:order_id",
+    "=",
+    "\"#W6750959\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_8080730\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:1:modify_pending_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

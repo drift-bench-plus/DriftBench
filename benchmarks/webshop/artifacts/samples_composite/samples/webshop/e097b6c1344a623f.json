@@ -1,0 +1,190 @@
+{
+ "sample_id": "e097b6c1344a623f",
+ "tree_id": "f5dec86434e60f9e",
+ "adapter": "webshop",
+ "cluster": "hair cutting tools",
+ "goal_idx": 215,
+ "split": "test",
+ "source_instruction": "i would like a pink hair cutting kit that is easy to use",
+ "query": "I was browsing through the hair cutting tools section earlier, and I\u2019ve heard the pink options are usually super easy to use for regular at-home trims. My friend mentioned picking up something for a really low amount not too long ago, said it worked perfectly for her quick touch-ups between salon visits. I remember seeing a bunch of brightly colored tools lined up on the lower shelf when I walked past this aisle ten minutes ago.",
+ "strategy_ids": [
+  "indirect_intent",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+insufficient_information",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "indirect_intent",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:easy use",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "ecb18e262673080d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 10,
+  "lit_card": 13,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 13,
+    "true_card": 10,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "a0bea4fdf149ac03",
+  "conditions": [
+   [
+    "attr:easy use",
+    "=",
+    "easy use"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 10,
+  "value": [
+   "[\"B07VFRQ36N\",[[\"color\",\"pink-10\"]]]",
+   "[\"B0894SXBXP\",[[\"color\",\"8pcs,pink\"]]]",
+   "[\"B08TT1VPZ8\",[[\"color\",\"pink glitter texture\"]]]",
+   "[\"B0911NQGLK\",[[\"color\",\"pink\"]]]",
+   "[\"B091BSPMBZ\",[[\"color\",\"pink\"]]]",
+   "[\"B09DK5CX6P\",[[\"color\",\"pink\"]]]",
+   "[\"B09MMYNZ8C\",[[\"color\",\"pink\"]]]",
+   "[\"B09N1F99Y3\",[[\"color\",\"pink\"]]]",
+   "[\"B09N94FQJW\",[[\"color\",\"pink\"]]]",
+   "[\"B09QG4YDTN\",[[\"color\",\"floral butterfly pink art\"]]]"
+  ],
+  "hash": "50e7d5f23e70722e8b584520e4ab7dcc"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1c6b31c348bc9e75",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair cutting tools instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "54e362539dd95968",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair cutting tools instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "063e511d3d9b66be",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be non toxic."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f3f9127410a16dec",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair clipper."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "be59714d4249da84",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e6b56d276648aa4e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "08aeb0cead30c2f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 # instead of pink."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4f70cea56d06f1d4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 02# instead of pink."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,222 @@
+{
+ "sample_id": "e1a62a59ec54bd35",
+ "tree_id": "52f3182b25d07fc5",
+ "adapter": "webshop",
+ "cluster": "makeup sets",
+ "goal_idx": 79,
+ "split": "test",
+ "source_instruction": "i'm looking for a set of makeup brushes in the color peaceful purple to help me with my eyeshadow makeup.",
+ "query": "Ugh, my cat just knocked over my favorite lavender candle all over my desk this morning, I spent 20 minutes picking wax out of my keyboard, and I still haven\u2019t figured out if I should sign up for that weekend pottery class my roommate keeps raving about. Oh, and I saw a guy walking a pet duck on the sidewalk on my way here, it kept quacking at every dog that passed by, it was so funny I almost tripped over a fire hydrant. Anyway, since you probably don\u2019t have standalone eye shadow in stock right now, can you show me alternatives from the makeup sets section in that nice peaceful purple shade, and make sure they\u2019re under $30? Wait, no, actually, hold on\u2014wait, no, I definitely want eye shadow, right? Wait no, no, the thing is, since eye shadow seems totally unavailable here, just grab me whatever close match you have in those sets, peaceful purple, under 30 bucks, yeah?",
+ "strategy_ids": [
+  "false_presupposition",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "false_presupposition",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "since you probably don\u2019t have standalone eye shadow in stock right now",
+    "condition": null,
+    "about": [
+     "attr:eye shadow",
+     "eye shadow"
+    ],
+    "alternative": [
+     "attr:eye shadow",
+     "makeup sets"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, my cat just knocked over my favorite lavender candle all over my desk this morning, I spent 20 minutes picking wax out of my keyboard, and I still haven\u2019t figured out if I should sign up for that weekend pottery class my roommate keeps raving about. Oh, and I saw a guy walking a pet duck on the sidewalk on my way here, it kept quacking at every dog that passed by, it was so funny I almost tripped over a fire hydrant.",
+  "retained": [
+   "attr:eye shadow",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:eye shadow",
+     "=",
+     "makeup sets"
+    ],
+    [
+     "option:0",
+     "=",
+     "peaceful purple"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "7f8fe2cb3c4e756f"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 31,
+  "lit_card": 0,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 31,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "141a43f4ed09923f",
+  "conditions": [
+   [
+    "attr:eye shadow",
+    "=",
+    "eye shadow"
+   ],
+   [
+    "option:0",
+    "=",
+    "peaceful purple"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 31,
+  "value": [
+   "[\"B002GEHN8U\",[[\"color\",\"purple storm\"]]]",
+   "[\"B07RHS5STR\",[[\"color\",\"purple\"]]]",
+   "[\"B07RKP9ZNR\",[[\"color\",\"purple\"]]]",
+   "[\"B07TTL47W6\",[[\"color\",\"eyeshadow palette-dream purple\"]]]",
+   "[\"B07TWRMR11\",[[\"color\",\"purple\"]]]",
+   "[\"B07W5CSYN7\",[[\"color\",\"purple\"]]]",
+   "[\"B07WR8CF1C\",[[\"color\",\"purple\"]]]",
+   "[\"B07Z1D43L9\",[[\"color\",\"purple\"]]]",
+   "[\"B07Z327WPV\",[[\"color\",\"purple clear\"]]]",
+   "[\"B07ZPP2RT9\",[[\"color\",\"purple\"]]]",
+   "[\"B07ZR3PG55\",[[\"color\",\"dpurple\"]]]",
+   "[\"B083GN5R3L\",[[\"color\",\"purple\"]]]",
+   "[\"B083VSPMS5\",[[\"color\",\"purple\"]]]",
+   "[\"B08CB6CZQS\",[[\"color\",\"purple\"]]]",
+   "[\"B08GHY1SGJ\",[[\"color\",\"purple\"]]]",
+   "[\"B08TTRJHSC\",[[\"color\",\"purple\"]]]",
+   "[\"B092D3214H\",[[\"color\",\"neon purple\"]]]",
+   "[\"B092HVC11D\",[[\"color\",\"purple\"]]]",
+   "[\"B0936J9YZS\",[[\"color\",\"purple\"]]]",
+   "[\"B094QYJRSM\",[[\"color\",\"purple\"]]]",
+   "[\"B095TWK6H7\",[[\"color\",\"peaceful purple\"]]]",
+   "[\"B096FBZMKB\",[[\"color\",\"purple\"]]]",
+   "[\"B098CXPRT1\",[[\"style\",\"purple-12pcs\"]]]",
+   "[\"B098KXFL7C\",[[\"color\",\"purple\"]]]",
+   "[\"B0991RTYH3\",[[\"color\",\"18 pcs purple\"]]]",
+   "[\"B099VX8KP6\",[[\"color\",\"purple\"]]]",
+   "[\"B09C1L7D4D\",[[\"color\",\"purple\"]]]",
+   "[\"B09GG7KVW9\",[[\"color\",\"purple\"]]]",
+   "[\"B09JJSF3LG\",[[\"color\",\"purple\"]]]",
+   "[\"B09L86BY3P\",[[\"color\",\"neon purple\"]]]",
+   "[\"B09MQ93DN8\",[[\"color\",\"purple\"]]]"
+  ],
+  "hash": "aace0bc4f62f74f5c8d68ee5ad1c40d9"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "3c4aca41b8fb98f6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup sets instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "4a58c89b8d2e01ea",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup sets instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ef975830c90023fd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy apply."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f423ab59d9e290c9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be animal testing."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "557a1291b84ccbf9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8a9af56e302a9b9a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0f1ae4a56b37ea96",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it \" dusty rose (large) instead of peaceful purple."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3c3fcafbff031d1f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #02 sunset instead of peaceful purple."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

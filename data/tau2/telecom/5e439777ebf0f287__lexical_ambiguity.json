@@ -1,0 +1,130 @@
+{
+ "sample_id": "5e439777ebf0f287__lexical_ambiguity",
+ "domain": "telecom",
+ "tree_id": "5e439777ebf0f287",
+ "query": "I was trying to save some photos I took while I'm out of the country right now, but my storage access is acting up, and my service is completely dead even though I didn't turn roaming on. I think my card might be loose, could you help me figure out what's wrong?",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "lexical_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "didn't turn roaming on",
+    "placements": [
+     [
+      "fault:user_abroad_roaming_disabled_on",
+      "user_abroad_roaming_disabled_on"
+     ],
+     [
+      "fault:user_abroad_roaming_disabled_on",
+      "user_abroad_roaming_disabled_off"
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:break_app_storage_permission",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ],
+   [
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "21b279bc4ce184dd"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:user_abroad_roaming_disabled_on"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

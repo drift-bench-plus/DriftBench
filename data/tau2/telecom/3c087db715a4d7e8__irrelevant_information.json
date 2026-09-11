@@ -1,0 +1,84 @@
+{
+ "sample_id": "3c087db715a4d7e8__irrelevant_information",
+ "domain": "telecom",
+ "tree_id": "3c087db715a4d7e8",
+ "query": "Hey, I picked up that limited-edition neon phone popsocket from your store last week, and right now I'm abroad having a bunch of issues: my wifi calling is really bad, I can't send or receive MMS messages, my phone keeps saying there's no SIM card detected, and I just realized roaming is turned off too, can you help me fix these?",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "irrelevant_information",
+  "family": "parameter",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "picked up that limited-edition neon phone popsocket from your store last week",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d24b8995ebd2b794"
+ },
+ "signature": {
+  "verdict": "ok_pragmatic_extra",
+  "executable": false,
+  "readings": 0,
+  "note": "extra detail is not expressible as a condition in this domain; string checks only"
+ },
+ "executable_admission": false,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

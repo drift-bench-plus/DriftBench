@@ -1,0 +1,102 @@
+{
+ "sample_id": "b26b3f08f6676dea__irrelevant_information",
+ "domain": "retail",
+ "tree_id": "b26b3f08f6676dea",
+ "query": "I received a waterproof phone pouch as a free bonus with my last purchase and I\u2019ve been really happy with it, but right now I need to update the shipping address for my pending order #W1845024 to 224 Elm Street, Suite 491, New York, NY 10108, USA.",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "irrelevant_information",
+  "family": "parameter",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "I received a waterproof phone pouch as a free bonus with my last purchase and I\u2019ve been really happy with it",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "9c4a542d2697cf44"
+ },
+ "signature": {
+  "verdict": "ok_pragmatic_extra",
+  "executable": false,
+  "readings": 0,
+  "note": "extra detail is not expressible as a condition in this domain; string checks only"
+ },
+ "executable_admission": false,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"224 Elm Street\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 491\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"New York\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W1845024\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"NY\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"10108\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

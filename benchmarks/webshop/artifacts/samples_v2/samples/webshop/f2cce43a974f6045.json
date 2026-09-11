@@ -1,0 +1,234 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's shorts",
+ "fidelity_notes": [],
+ "goal_idx": 207,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "f6bc05443edabed0fef2cecf2f46d980",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B071SFW7LF\",[[\"color\",\"tower grey\"],[\"size\",\"38\"]]]",
+   "[\"B075WKSB6K\",[[\"color\",\"grey\"],[\"size\",\"38\"]]]",
+   "[\"B0938B3JJ1\",[[\"color\",\"dk grey htr\"],[\"size\",\"38\"]]]",
+   "[\"B095CSL3SY\",[[\"color\",\"grey - recycled fabric\"],[\"size\",\"38\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:machine washable",
+    "=",
+    "machine washable"
+   ],
+   [
+    "attr:polyester cotton",
+    "=",
+    "polyester cotton"
+   ],
+   [
+    "option:0",
+    "=",
+    "grey - recycled fabric"
+   ],
+   [
+    "option:1",
+    "=",
+    "38"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "a62021b45363d35d"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "grey - recycled fabric"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "grey recycled fabric"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:machine washable",
+     "=",
+     "machine washable"
+    ],
+    [
+     "attr:polyester cotton",
+     "=",
+     "polyester cotton"
+    ],
+    [
+     "option:0",
+     "=",
+     "grey - recycled fabric"
+    ],
+    [
+     "option:1",
+     "=",
+     "38"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ],
+   [
+    [
+     "attr:machine washable",
+     "=",
+     "machine washable"
+    ],
+    [
+     "attr:polyester cotton",
+     "=",
+     "polyester cotton"
+    ],
+    [
+     "option:1",
+     "=",
+     "38"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:machine washable",
+   "attr:polyester cotton",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "029a7b6960a78ac5",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for men’s polyester cotton machine washable shorts and a matching fabric belt in grey recycled fabric, size 38, under $50.",
+ "render_attempts": 2,
+ "sample_id": "f2cce43a974f6045",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's shorts instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e372c3d3c7568715"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's shorts instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "fdbd442349bbb1e0"
+  },
+  {
+   "announcement": "Also, it needs to be stretch fabric.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "090c7a625ad7ef59"
+  },
+  {
+   "announcement": "Also, it needs to be regular fit.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bd05861e37895a12"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2fd49760e51f25cc"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d6561627177a5376"
+  },
+  {
+   "announcement": "Actually, make it #185 dark gray instead of grey - recycled fabric.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "38a0740920bb6f7e"
+  },
+  {
+   "announcement": "Actually, make it #d01 blue instead of grey - recycled fabric.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f78db4d8e696cdee"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   4,
+   10
+  ],
+  "rule": "ambiguous",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a polyester cotton board short which is washable in machine. also choose grey one and 38 size.",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "f8289feb191ad185",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

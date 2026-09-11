@@ -1,0 +1,109 @@
+{
+ "sample_id": "b2ca8567f0d1b67d__syntactic_ambiguity",
+ "domain": "retail",
+ "tree_id": "b2ca8567f0d1b67d",
+ "query": "I need to cancel my pending order #W8835847 for the wireless earbuds and the protective case I ordered by mistake.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "I ordered by mistake",
+    "placements": [
+     [
+      "arg:0:cancel_pending_order:reason",
+      "\"ordered by mistake\""
+     ],
+     [
+      "arg:0:cancel_pending_order:reason",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:cancel_pending_order:order_id"
+  ],
+  "hidden_slots": [
+   "arg:0:cancel_pending_order:reason"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W8835847\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"ordered by mistake\""
+    ]
+   ],
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W8835847\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 8,
+  "spec_id": "0e687db288442f63"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W8835847\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"ordered by mistake\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:cancel_pending_order:reason"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "sample_id": "24b5a68da098c0be__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "24b5a68da098c0be",
+ "query": "Last weekend I took my golden retriever to the new dog park downtown, and he had so much fun chasing after a frisbee that he ended up covered in mud and had to get a full bath as soon as we got home. I also tried that new matcha bakery that opened up on the corner of 5th Street yesterday, their red bean mochi is so soft and flavorful I already went back to buy a second box this morning. Oh, and I just finished rearranging my balcony herb garden, the basil and mint are growing so fast I think I\u2019ll be able to harvest enough to make pesto next week. Anyway, I need to exchange an item from my delivered order #W7181492: I want to swap the item 8118291112 for item 8277474082, and use paypal_3024827 as the payment method for any extra costs related to this exchange.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I took my golden retriever to the new dog park downtown, and he had so much fun chasing after a frisbee that he ended up covered in mud and had to get a full bath as soon as we got home. I also tried that new matcha bakery that opened up on the corner of 5th Street yesterday, their red bean mochi is so soft and flavorful I already went back to buy a second box this morning. Oh, and I just finished rearranging my balcony herb garden, the basil and mint are growing so fast I think I\u2019ll be able to harvest enough to make pesto next week.",
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"8118291112\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"8277474082\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W7181492\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_3024827\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"8118291112\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"8277474082\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W7181492\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_3024827\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

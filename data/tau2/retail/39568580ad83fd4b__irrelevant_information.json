@@ -1,0 +1,150 @@
+{
+ "sample_id": "39568580ad83fd4b__irrelevant_information",
+ "domain": "retail",
+ "tree_id": "39568580ad83fd4b",
+ "query": "Hi there, I recently bought a set of waterproof phone pouches for my upcoming beach trip, and I need to make a couple changes to my pending orders. First, for order #W9810810, please change item 1355937109 to 9949163720, and use gift_card_7252880 as the payment method for this adjustment. Second, for order #W3730488, first update the shipping address to 555 Highland Drive, Suite 872, New York, NY 10116, USA, and also change item 2913673670 to 2216662955, again using gift_card_7252880 for the payment for this item change, and just to note, I'd like the replacement items to have the IPX8 waterproof certification if possible.",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "irrelevant_information",
+  "family": "parameter",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "I'd like the replacement items to have the IPX8 waterproof certification if possible",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id",
+   "arg:1:modify_pending_order_address:address1",
+   "arg:1:modify_pending_order_address:address2",
+   "arg:1:modify_pending_order_address:city",
+   "arg:1:modify_pending_order_address:country",
+   "arg:1:modify_pending_order_address:order_id",
+   "arg:1:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_address:zip",
+   "arg:2:modify_pending_order_items:item_ids",
+   "arg:2:modify_pending_order_items:new_item_ids",
+   "arg:2:modify_pending_order_items:order_id",
+   "arg:2:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "c5440903073bc563"
+ },
+ "signature": {
+  "verdict": "ok_pragmatic_extra",
+  "executable": false,
+  "readings": 0,
+  "note": "extra detail is not expressible as a condition in this domain; string checks only"
+ },
+ "executable_admission": false,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"1355937109\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"9949163720\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W9810810\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7252880\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address1",
+    "=",
+    "\"555 Highland Drive\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 872\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:city",
+    "=",
+    "\"New York\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "=",
+    "\"#W3730488\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:state",
+    "=",
+    "\"NY\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:zip",
+    "=",
+    "\"10116\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:item_ids",
+    "=",
+    "[\"2913673670\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"2216662955\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:order_id",
+    "=",
+    "\"#W3730488\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7252880\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

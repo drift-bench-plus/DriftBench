@@ -1,0 +1,244 @@
+{
+ "sample_id": "f6972c53ea69ddb6",
+ "tree_id": "6766f6d5dc98f2d1",
+ "adapter": "webshop",
+ "cluster": "men's slippers",
+ "goal_idx": 289,
+ "split": "test",
+ "source_instruction": "i'm looking for some non-slip black vinyls.",
+ "query": "Ugh, I spent all morning trying to fix my leaky kitchen faucet, the old washer crumbled to bits when I took it apart and I had to run to the hardware store twice just to get the right size replacement, plus my cat knocked over my favorite mug right as I was walking out the door so I\u2019ve got coffee grounds all over the entryway rug I still need to vacuum up later. Anyway, I\u2019m looking for men\u2019s slippers here, right? I need the new black ones made with ethylene vinyl and vinyl acetate, they\u2019ve got to have non-slip soles, and I want them at a really good price that makes total sense for what they are.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+vagueness_subjectivity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I spent all morning trying to fix my leaky kitchen faucet, the old washer crumbled to bits when I took it apart and I had to run to the hardware store twice just to get the right size replacement, plus my cat knocked over my favorite mug right as I was walking out the door so I\u2019ve got coffee grounds all over the entryway rug I still need to vacuum up later.",
+  "retained": [
+   "attr:ethylene vinyl",
+   "attr:non slip",
+   "attr:vinyl acetate",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ethylene vinyl",
+     "=",
+     "ethylene vinyl"
+    ],
+    [
+     "attr:non slip",
+     "=",
+     "non slip"
+    ],
+    [
+     "attr:vinyl acetate",
+     "=",
+     "vinyl acetate"
+    ],
+    [
+     "option:0",
+     "=",
+     "new black"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "efaa396caa32a58e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 39,
+  "lit_card": 40,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 40,
+    "true_card": 39,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "2e883960e5ec6b68",
+  "conditions": [
+   [
+    "attr:ethylene vinyl",
+    "=",
+    "ethylene vinyl"
+   ],
+   [
+    "attr:non slip",
+    "=",
+    "non slip"
+   ],
+   [
+    "attr:vinyl acetate",
+    "=",
+    "vinyl acetate"
+   ],
+   [
+    "option:0",
+    "=",
+    "new black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 39,
+  "value": [
+   "[\"B08DCFW5CT\",[[\"color\",\"black\"]]]",
+   "[\"B08K4Q97MR\",[[\"color\",\"black\"]]]",
+   "[\"B08MMQH84M\",[[\"color\",\"new black\"]]]",
+   "[\"B08T8YGHSG\",[[\"color\",\"black\"]]]",
+   "[\"B08T8YRFQ2\",[[\"color\",\"black\"]]]",
+   "[\"B08TQSDG8B\",[[\"color\",\"black\"]]]",
+   "[\"B08VDBY711\",[[\"color\",\"black\"]]]",
+   "[\"B08XQVF55R\",[[\"color\",\"black\"]]]",
+   "[\"B08YDTTBV2\",[[\"color\",\"black\"]]]",
+   "[\"B08YJM2BQ9\",[[\"color\",\"black\"]]]",
+   "[\"B08ZHVRP4V\",[[\"color\",\"black\"]]]",
+   "[\"B08ZN8RQCH\",[[\"color\",\"black\"]]]",
+   "[\"B091FNNZRP\",[[\"color\",\"black\"]]]",
+   "[\"B091SHWLB9\",[[\"color\",\"black\"]]]",
+   "[\"B092HNMC2K\",[[\"color\",\"black\"]]]",
+   "[\"B092VF2RWZ\",[[\"color\",\"a-black\"]]]",
+   "[\"B093QBKLVS\",[[\"color\",\"black\"]]]",
+   "[\"B096M7YX9G\",[[\"color\",\"black\"]]]",
+   "[\"B0972VJ681\",[[\"color\",\"black\"]]]",
+   "[\"B097BFBG1L\",[[\"color\",\"black\"]]]",
+   "[\"B097K1N9JN\",[[\"color\",\"black\"]]]",
+   "[\"B098W9BKDG\",[[\"color\",\"black\"]]]",
+   "[\"B0993Q8MYW\",[[\"color\",\"black\"]]]",
+   "[\"B099ZRW22F\",[[\"color\",\"black\"]]]",
+   "[\"B09B1YP4VW\",[[\"color\",\"black\"]]]",
+   "[\"B09C1DN7YC\",[[\"color\",\"black\"]]]",
+   "[\"B09C4DFS8S\",[[\"color\",\"black\"]]]",
+   "[\"B09CDPT3NH\",[[\"color\",\"black\"]]]",
+   "[\"B09DD8KHVN\",[[\"color\",\"black\"]]]",
+   "[\"B09KC6PYXD\",[[\"color\",\"black\"]]]",
+   "[\"B09KCB5MB2\",[[\"color\",\"black\"]]]",
+   "[\"B09L64FTNF\",[[\"color\",\"black\"]]]",
+   "[\"B09M82C1H8\",[[\"color\",\"black\"]]]",
+   "[\"B09MTKZJNL\",[[\"color\",\"black-3\"]]]",
+   "[\"B09NDSCGJD\",[[\"color\",\"black\"]]]",
+   "[\"B09NFMHVS8\",[[\"color\",\"black\"]]]",
+   "[\"B09P4ZW3CT\",[[\"color\",\"black\"]]]",
+   "[\"B09QK1Z3DG\",[[\"color\",\"black\"]]]",
+   "[\"B09QSLGV5T\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "d0f7627814267005b4cbee70bd931864"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "43214916f8a9cc81",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's slippers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "aa8882388e062e56",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's slippers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ded7fbd62fd90117",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be platform sandals."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e80554dd9e50a73a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be casual shoes."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "05f1b85dc19485d5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cb26a12cc4da5829",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "39e17cc156fb1c9b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it (us11-12) instead of new black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "67b6220c0b8b88ae",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10-11 instead of new black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

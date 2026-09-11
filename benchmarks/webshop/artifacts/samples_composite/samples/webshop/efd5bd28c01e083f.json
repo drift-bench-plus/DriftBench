@@ -1,0 +1,207 @@
+{
+ "sample_id": "efd5bd28c01e083f",
+ "tree_id": "cb5d8167a948b471",
+ "adapter": "webshop",
+ "cluster": "pantry staples",
+ "goal_idx": 449,
+ "split": "test",
+ "source_instruction": "i am looking for  30 fl oz (pack of 1) - set of 2 new (two... size simple ingredients mayonnaise",
+ "query": "Hey there, I\u2019m browsing the pantry staples section and looking for items with simple ingredients, specifically the 30 fl oz (pack of 1) - set of 2 new option, priced at a good rate that works for what I\u2019m comfortable spending right now. Oh, and make sure it\u2019s labeled as gluten-free too, that\u2019s something I definitely want included when you pull up options for me.",
+ "strategy_ids": [
+  "vagueness_subjectivity",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "vagueness_subjectivity+irrelevant_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "vagueness_subjectivity",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "make sure it\u2019s labeled as gluten-free too, that\u2019s something I definitely want included when you pull up options for me",
+    "condition": [
+     "attr:gluten-free",
+     "=",
+     "gluten-free"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:simple ingredients",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:simple ingredients",
+     "=",
+     "simple ingredients"
+    ],
+    [
+     "option:0",
+     "=",
+     "30 fl oz (pack of 1) - set of 2 new (two..."
+    ],
+    [
+     "attr:gluten-free",
+     "=",
+     "gluten-free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 6,
+  "spec_id": "ab0a0c2e90361043"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 2,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 4,
+    "true_card": 2,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 2,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 6,
+ "hidden_intent": {
+  "intent_id": "6b650a927e8cac22",
+  "conditions": [
+   [
+    "attr:simple ingredients",
+    "=",
+    "simple ingredients"
+   ],
+   [
+    "option:0",
+    "=",
+    "30 fl oz (pack of 1) - set of 2 new (two..."
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B002ZOPTGY\",[[\"size\",\"18 fl oz (pack of 1)\"]]]",
+   "[\"B010NBE6HI\",[[\"size\",\"30 fl oz (pack of 1)\"]]]"
+  ],
+  "hash": "d47d6235cf44a431fc54d8e9a1f48589"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7e8bafccb35e5707",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6215ee8575f5182",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "363c79dfc7aecb31",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be price_band under_10."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bc8e210d05d2c92a",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be price_band under_25."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2ff9904880d9a03a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "43f6e904fbc9c94d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "28818dacab33f05c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .2 set(36 count (pack of 1)) instead of 30 fl oz (pack of 1) - set of 2 new (two...."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3397645244841134",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .3 set(36 count (pack of 1)) instead of 30 fl oz (pack of 1) - set of 2 new (two...."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "snack crackers",
+ "fidelity_notes": [],
+ "goal_idx": 295,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "a0224d570f7df2c3223eacbb797fd00e",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08TFJ4QCJ\",[[\"flavor name\",\"chocolate chip pecan\"],[\"size\",\"6 ounce (pack of 1)\"]]]",
+   "[\"B093CLC753\",[[\"flavor name\",\"chocolate\"],[\"size\",\"1 pack\"]]]",
+   "[\"B09QNXZQT2\",[[\"flavor name\",\"chocolate\"],[\"size\",\"12 pack\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:low calorie",
+    "=",
+    "low calorie"
+   ],
+   [
+    "option:0",
+    "=",
+    "lemon,chocolate,cream cheese"
+   ],
+   [
+    "option:1",
+    "=",
+    "1 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "3333d3bf6b11b5b0"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low calorie",
+     "=",
+     "low calorie"
+    ],
+    [
+     "option:0",
+     "=",
+     "lemon,chocolate,cream cheese"
+    ],
+    [
+     "option:1",
+     "=",
+     "1 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:low calorie",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve been trying to stick to low calorie snacks lately, and I remember hearing that lemon, chocolate, and cream cheese flavored snack crackers sold in 1 pack size usually cost under 20.",
+ "render_attempts": 1,
+ "sample_id": "ccc962e3df0235ab",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the snack crackers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "28a7f51b4d9a6cc2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the snack crackers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "575719c4dd47a4cf"
+  },
+  {
+   "announcement": "Also, it needs to be artificial colors.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2443186f14ced29b"
+  },
+  {
+   "announcement": "Also, it needs to be brown rice.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dd4733caf4a63373"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "92ef28655709698f"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cbf4f3e418500da5"
+  },
+  {
+   "announcement": "Actually, make it .2 set (4.15 ounce (pack of 3)) instead of lemon,chocolate,cream cheese.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bf402128ec7b86b5"
+  },
+  {
+   "announcement": "Actually, make it .4 set (4.15 ounce (pack of 3)) instead of lemon,chocolate,cream cheese.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "df5fef21c98869d5"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "can you find me 1 pack of low calorie wheat flour sandwich crackers that are lemon, chocolate, and cream cheese flavored?",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "862faadd688e3901",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

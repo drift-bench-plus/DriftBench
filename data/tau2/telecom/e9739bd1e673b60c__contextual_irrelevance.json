@@ -1,0 +1,93 @@
+{
+ "sample_id": "e9739bd1e673b60c__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "e9739bd1e673b60c",
+ "query": "I spent the whole weekend baking sourdough, I finally got the starter just right so the loaf had that perfect crispy crust and soft, airy crumb, and I even brought a slice in to share with my coworker this morning. On the way to the office, I saw a golden retriever puppy wearing a tiny raincoat, it was so cute I stopped to pet it for five whole minutes, and the owner said it\u2019s only 12 weeks old and still learning to walk on a leash. I\u2019m having trouble with my phone service right now, I realized airplane mode is turned on, my APN settings seem to be broken, and my SIM card is locked with a PIN so I can\u2019t get any network connection, I hope you can help me fix this.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent the whole weekend baking sourdough, I finally got the starter just right so the loaf had that perfect crispy crust and soft, airy crumb, and I even brought a slice in to share with my coworker this morning. On the way to the office, I saw a golden retriever puppy wearing a tiny raincoat, it was so cute I stopped to pet it for five whole minutes, and the owner said it\u2019s only 12 weeks old and still learning to walk on a leash.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_settings",
+   "fault:lock_sim_card_pin"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

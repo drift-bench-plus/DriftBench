@@ -1,0 +1,140 @@
+{
+ "sample_id": "166bf8aa525485ca__vagueness_subjectivity",
+ "domain": "retail",
+ "tree_id": "166bf8aa525485ca",
+ "query": "Hi there, I need to return item 6704763132 from order #W8528674, with the refund going to paypal_7664977, and also modify my pending order #W9672333 to swap item 1684786391 for a nicer version, using paypal_7664977 for any payment adjustments needed.",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "vagueness_subjectivity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id",
+   "arg:1:modify_pending_order_items:item_ids",
+   "arg:1:modify_pending_order_items:order_id",
+   "arg:1:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [
+   "arg:1:modify_pending_order_items:new_item_ids"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"6704763132\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W8528674\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_7664977\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"1684786391\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W9672333\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_7664977\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "9fe63eb57c2a1e6b"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"6704763132\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W8528674\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_7664977\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:item_ids",
+    "=",
+    "[\"1684786391\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"5052031638\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:order_id",
+    "=",
+    "\"#W9672333\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_7664977\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:1:modify_pending_order_items:new_item_ids"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

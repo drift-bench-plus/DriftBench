@@ -1,0 +1,181 @@
+{
+ "adapter": "webshop",
+ "cluster": "iphone accessories",
+ "fidelity_notes": [],
+ "goal_idx": 246,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "9f922a65c847bce1a6968376521b3107",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B081ZJKF2F\",[[\"color\",\"c-grey\"]]]",
+   "[\"B08BP6P1TM\",[[\"color\",\"grey | white marble\"]]]",
+   "[\"B08GP9KQ2L\",[[\"color\",\"grey | rose\"]]]",
+   "[\"B09KZ4FFDP\",[[\"color\",\"d-grey\"]]]",
+   "[\"B09KZNFD8T\",[[\"color\",\"d-grey\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:case cover",
+    "=",
+    "case cover"
+   ],
+   [
+    "attr:compatible apple",
+    "=",
+    "compatible apple"
+   ],
+   [
+    "option:0",
+    "=",
+    "d-grey"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "b28b8518a196ebfb"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:case cover",
+     "=",
+     "case cover"
+    ],
+    [
+     "attr:compatible apple",
+     "=",
+     "compatible apple"
+    ],
+    [
+     "option:0",
+     "=",
+     "d-grey"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:case cover",
+   "attr:compatible apple",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard dark grey case covers that work with Apple devices are usually under twenty dollars in the iPhone accessories section.",
+ "render_attempts": 1,
+ "sample_id": "5aa06e6e0c4e65d6",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the iphone accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "14b2abfb13d4ee17"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the iphone accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e2332715c61df1bb"
+  },
+  {
+   "announcement": "Also, it needs to be dust proof.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1c3a64b5cea3865b"
+  },
+  {
+   "announcement": "Also, it needs to be easy carry.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b33efdf173634046"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "126d738cf41914b3"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "76eba0de596a9cfd"
+  },
+  {
+   "announcement": "Actually, make it 1. black instead of d-grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "99b1f35e4ede5728"
+  },
+  {
+   "announcement": "Actually, make it 3. black+multicolor ties instead of d-grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "aeffce7ddd6eb7bd"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 5,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a  grey protective airpods 3  case cover which is compatible with apple.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "7369755e5ef71902",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "sample_id": "ac3c2b6be6346e16__syntactic_ambiguity",
+ "domain": "telecom",
+ "tree_id": "ac3c2b6be6346e16",
+ "query": "My mobile data and my work messaging app aren\u2019t working after I got the notification that I went over my usage limit this month.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "after I got the notification that I went over my usage limit this month",
+    "placements": [
+     [
+      "fault:data_usage_exceeded",
+      "data_usage_exceeded"
+     ],
+     [
+      "fault:data_usage_exceeded",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:data_mode_off"
+  ],
+  "hidden_slots": [
+   "fault:data_usage_exceeded"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ],
+   [
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "1c086596db189032"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:data_usage_exceeded"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

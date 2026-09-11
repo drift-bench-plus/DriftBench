@@ -1,0 +1,155 @@
+{
+ "sample_id": "d67ec26c8eebd4cd__false_presupposition",
+ "domain": "retail",
+ "tree_id": "d67ec26c8eebd4cd",
+ "query": "Hi there, since it seems like the replacement item 8106223139 might be out of stock right now, I need to process two exchanges for my delivered orders: for order #W1304208, exchange item 1615379700 to 8106223139, and for order #W8353027, exchange item 6245746168 to 3112842858, with both exchanges charged to paypal_1679017 please.",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "false_presupposition",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "false_presupposition"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "since it seems like the replacement item 8106223139 might be out of stock right now",
+    "condition": null,
+    "about": [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "[\"8106223139\"]"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id",
+   "arg:1:exchange_delivered_order_items:item_ids",
+   "arg:1:exchange_delivered_order_items:new_item_ids",
+   "arg:1:exchange_delivered_order_items:order_id",
+   "arg:1:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"1615379700\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W1304208\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_1679017\""
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"6245746168\"]"
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"3112842858\"]"
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W8353027\""
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_1679017\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "78f6c89aa78830f3"
+ },
+ "signature": {
+  "rule": "presupposed",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"1615379700\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"8106223139\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W1304208\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_1679017\""
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"6245746168\"]"
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"3112842858\"]"
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W8353027\""
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_1679017\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:exchange_delivered_order_items:new_item_ids"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

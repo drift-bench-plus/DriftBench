@@ -1,0 +1,196 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's pants",
+ "fidelity_notes": [],
+ "goal_idx": 2,
+ "ground_truth": {
+  "cardinality": 7,
+  "hash": "7a3ae46eb035f1c120bb6756f47a27b9",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B099231V35\",[[\"color\",\"orange\"]]]",
+   "[\"B09KLJTXM1\",[[\"color\",\"orange\"]]]",
+   "[\"B09M8BWN35\",[[\"color\",\"d06-orange\"]]]",
+   "[\"B09N3CGBPM\",[[\"color\",\"orange\"]]]",
+   "[\"B09NW4J43Z\",[[\"color\",\"orange\"]]]",
+   "[\"B09PBPXNQV\",[[\"color\",\"a-orange\"]]]",
+   "[\"B09PDRLVGH\",[[\"color\",\"orange\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:everyday wear",
+    "=",
+    "everyday wear"
+   ],
+   [
+    "attr:relaxed fit",
+    "=",
+    "relaxed fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "orange"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "4daabf1e1f26c0d6"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:everyday wear",
+     "=",
+     "everyday wear"
+    ],
+    [
+     "attr:relaxed fit",
+     "=",
+     "relaxed fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "warm neutral color"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "option:0",
+     "orange"
+    ],
+    "alternative": [
+     "option:0",
+     "warm neutral color"
+    ],
+    "condition": null,
+    "text": "Since you probably don’t have orange men’s pants that fit my needs"
+   }
+  ],
+  "retained": [
+   "attr:everyday wear",
+   "attr:relaxed fit",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "1d72c4ff69a4165a",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don’t have orange men’s pants that fit my needs, I’m looking for relaxed fit everyday men’s pants in a warm neutral color, with a price limit of $30.",
+ "render_attempts": 1,
+ "sample_id": "5da328805a9ea05d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's pants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "354b3a976ed3b528"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's pants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4ee5bcb65c855728"
+  },
+  {
+   "announcement": "Also, it needs to be athletic shorts.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3cad581498d1d5cc"
+  },
+  {
+   "announcement": "Also, it needs to be daily casual.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9edf06491897e6bb"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "124cfc0048c389e6"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c0ec30c3b3242899"
+  },
+  {
+   "announcement": "Actually, make it #1black instead of orange.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4c4361cccf851f0c"
+  },
+  {
+   "announcement": "Actually, make it #1 black instead of orange.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "84665cb2adf6beb2"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 7,
+  "verdict": "ok"
+ },
+ "source_instruction": "hello, i'm looking for a pair of cargo pants for everyday casual wear? but also hiking-friendly. also, i want an orange pair please",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "ca3b22b5b50b5046",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

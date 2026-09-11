@@ -1,0 +1,171 @@
+{
+ "sample_id": "91ec12bfb7700ddf",
+ "tree_id": "cb5d8167a948b471",
+ "adapter": "webshop",
+ "cluster": "pantry staples",
+ "goal_idx": 449,
+ "split": "test",
+ "source_instruction": "i am looking for  30 fl oz (pack of 1) - set of 2 new (two... size simple ingredients mayonnaise",
+ "query": "I spent twenty minutes this morning chasing my escaped house rabbit around the backyard, he\u2019d dug a tiny tunnel under the fence and made it all the way to the neighbor\u2019s tomato patch before I caught him, and now I have little muddy paw prints all over my favorite hoodie that I\u2019ve been meaning to wash for three days. I also remembered I left my favorite ceramic travel mug on the bus yesterday, and the transit lost and found said they haven\u2019t turned anything matching its description in yet. I\u2019ve heard that pantry staple picks with super simple, no-fuss ingredients work really well for quick weeknight meals, that the 30 fl oz (pack of 1) - set of 2 new option is the one most people grab off these shelves, and that anything priced under $20 fits the casual budget I\u2019ve been sticking to for grocery runs lately.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+indirect_intent",
+  "family": "intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "indirect_intent"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I spent twenty minutes this morning chasing my escaped house rabbit around the backyard, he\u2019d dug a tiny tunnel under the fence and made it all the way to the neighbor\u2019s tomato patch before I caught him, and now I have little muddy paw prints all over my favorite hoodie that I\u2019ve been meaning to wash for three days. I also remembered I left my favorite ceramic travel mug on the bus yesterday, and the transit lost and found said they haven\u2019t turned anything matching its description in yet.",
+  "retained": [
+   "attr:simple ingredients",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:simple ingredients",
+     "=",
+     "simple ingredients"
+    ],
+    [
+     "option:0",
+     "=",
+     "30 fl oz (pack of 1) - set of 2 new (two..."
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "02bc26d92e3e4721"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 2,
+  "components": {}
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "6b650a927e8cac22",
+  "conditions": [
+   [
+    "attr:simple ingredients",
+    "=",
+    "simple ingredients"
+   ],
+   [
+    "option:0",
+    "=",
+    "30 fl oz (pack of 1) - set of 2 new (two..."
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B002ZOPTGY\",[[\"size\",\"18 fl oz (pack of 1)\"]]]",
+   "[\"B010NBE6HI\",[[\"size\",\"30 fl oz (pack of 1)\"]]]"
+  ],
+  "hash": "d47d6235cf44a431fc54d8e9a1f48589"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7e8bafccb35e5707",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6215ee8575f5182",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "363c79dfc7aecb31",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be price_band under_10."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bc8e210d05d2c92a",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be price_band under_25."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2ff9904880d9a03a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "43f6e904fbc9c94d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "28818dacab33f05c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .2 set(36 count (pack of 1)) instead of 30 fl oz (pack of 1) - set of 2 new (two...."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3397645244841134",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .3 set(36 count (pack of 1)) instead of 30 fl oz (pack of 1) - set of 2 new (two...."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

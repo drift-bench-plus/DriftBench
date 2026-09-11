@@ -1,0 +1,882 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B07MWML5S1",
+    "cluster": "men's jeans",
+    "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:comfortable fit",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:comfortable fit",
+     "=",
+     "comfortable fit"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ea386a7dde5409429f58234f6313416a",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B004OQ5JZM\",[]]",
+     "[\"B00XKXVDC8\",[]]",
+     "[\"B01J6Q3UE6\",[]]",
+     "[\"B01MRNDYVF\",[]]",
+     "[\"B01N1IZEXC\",[]]",
+     "[\"B01N97KVM8\",[]]",
+     "[\"B01N97KZLN\",[]]",
+     "[\"B071G1K4SS\",[]]",
+     "[\"B073S69JPJ\",[]]",
+     "[\"B074KKZ29W\",[]]",
+     "[\"B0763X6TQR\",[]]",
+     "[\"B07C2DXQTP\",[]]",
+     "[\"B07C2DXR19\",[]]",
+     "[\"B07C2DXSBQ\",[]]",
+     "[\"B07C2F29CP\",[]]",
+     "[\"B07HNYC7W4\",[]]",
+     "[\"B07MTQK38T\",[]]",
+     "[\"B07MWML5S1\",[]]",
+     "[\"B07MWT9GKP\",[]]",
+     "[\"B07MWTMFX1\",[]]",
+     "[\"B07ZQQ3M8G\",[]]",
+     "[\"B0863JD4CR\",[]]",
+     "[\"B08HVZC9Q5\",[]]",
+     "[\"B08J4F6167\",[]]",
+     "[\"B08LVKYJ4X\",[]]",
+     "[\"B08M49LFRB\",[]]",
+     "[\"B08MB79ZRT\",[]]",
+     "[\"B08S6VMWT1\",[]]",
+     "[\"B09N274RWS\",[]]",
+     "[\"B09P4BPQCR\",[]]",
+     "[\"B09QMJ33QM\",[]]",
+     "[\"B09S5MRL1D\",[]]",
+     "[\"B09S5PLTNS\",[]]",
+     "[\"B09S5Q3966\",[]]",
+     "[\"B09S5SF6BR\",[]]",
+     "[\"B09S5TN6V3\",[]]",
+     "[\"B09S63XYFB\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "540052e3acfa8998",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B07MWML5S1",
+     "attributes": [
+      "comfortable fit"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": "d5ea89e4f32b5a3a",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NL6VC77",
+    "cluster": "men's jeans",
+    "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:elastic waist",
+    "attr:machine washable",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:elastic waist",
+     "=",
+     "elastic waist"
+    ],
+    [
+     "attr:machine washable",
+     "=",
+     "machine washable"
+    ],
+    [
+     "option:0",
+     "=",
+     "navy"
+    ],
+    [
+     "option:1",
+     "=",
+     "x-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "66d128db0aa822caa4752a58f9b63c92",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B074N9DJFF\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+     "[\"B081W6BP2Q\",[[\"color\",\"#1 navy\"],[\"size\",\"large\"]]]",
+     "[\"B08BZ6124N\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+     "[\"B0999L6J9X\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+     "[\"B09BBP1TFR\",[[\"color\",\"bp0591az- navy w red diagonal side\"],[\"size\",\"large\"]]]",
+     "[\"B09KH43JP8\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+     "[\"B09NL6VC77\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+     "[\"B09NQ8DMHG\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+     "[\"B09P7VPPBK\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+     "[\"B09QL7RXQW\",[[\"color\",\"b-navy\"],[\"size\",\"large\"]]]",
+     "[\"B09RH335T1\",[[\"color\",\"b-navy\"],[\"size\",\"large\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "1f3b01e202185b13",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B09NL6VC77",
+     "attributes": [
+      "machine washable",
+      "elastic waist"
+     ],
+     "category": "",
+     "goal_options": [
+      "navy",
+      "x-large"
+     ],
+     "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": "791268f360a1aabe",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07JB7VQBY",
+    "cluster": "men's jeans",
+    "name": "Lavnis Men’s Vintage Casual Ripped Slim fit Denim Jeans",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:button closure",
+    "attr:slim fit",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:button closure",
+     "=",
+     "button closure"
+    ],
+    [
+     "attr:slim fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "red"
+    ],
+    [
+     "option:1",
+     "=",
+     "28"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "77e6ac71757478b1117ead0794d70bbd",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07JB7VQBY\",[[\"color\",\"red\"],[\"size\",\"28\"]]]",
+     "[\"B07M9CFT8W\",[[\"color\",\"red\"],[\"size\",\"28\"]]]",
+     "[\"B07PJ263YK\",[[\"color\",\"red 1\"],[\"size\",\"28\"]]]",
+     "[\"B08JHSV9GK\",[[\"color\",\"709 wine red\"],[\"size\",\"28\"]]]",
+     "[\"B091GG5VP9\",[[\"color\",\"red\"],[\"size\",\"28\"]]]",
+     "[\"B0972FK2P4\",[[\"color\",\"red\"],[\"size\",\"28\"]]]",
+     "[\"B09F9CFWJR\",[[\"color\",\"a#purplish red\"],[\"size\",\"28\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "51e814878395a864",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B07JB7VQBY",
+     "attributes": [
+      "slim fit",
+      "button closure"
+     ],
+     "category": "",
+     "goal_options": [
+      "red",
+      "28"
+     ],
+     "name": "Lavnis Men’s Vintage Casual Ripped Slim fit Denim Jeans",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": "839630f2ac2fd431",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07MWML5S1",
+    "cluster": "men's jeans",
+    "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:comfortable fit",
+    "attr:imported zipper",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:comfortable fit",
+     "=",
+     "comfortable fit"
+    ],
+    [
+     "attr:imported zipper",
+     "=",
+     "imported zipper"
+    ],
+    [
+     "option:0",
+     "=",
+     "relaxed"
+    ],
+    [
+     "option:1",
+     "=",
+     "31w x 38l"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "9ea35bd421c173e9cab0c36ceaee2c95",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B01N1IZEXC\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B01N97KVM8\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B07C2DXQTP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B07C2F29CP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B07MWML5S1\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B07MWT9GKP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "70954fd0315a7b2c",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B07MWML5S1",
+     "attributes": [
+      "comfortable fit",
+      "imported zipper"
+     ],
+     "category": "",
+     "goal_options": [
+      "relaxed",
+      "31w x 38l"
+     ],
+     "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07MWML5S1",
+    "cluster": "men's jeans",
+    "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:comfortable fit",
+    "attr:machine wash",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:comfortable fit",
+     "=",
+     "comfortable fit"
+    ],
+    [
+     "attr:machine wash",
+     "=",
+     "machine wash"
+    ],
+    [
+     "option:0",
+     "=",
+     "relaxed"
+    ],
+    [
+     "option:1",
+     "=",
+     "31w x 38l"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "111140082a79ad8a04af31481c326337",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B01MRNDYVF\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B01N1IZEXC\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B01N97KVM8\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B07C2DXQTP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B07C2DXR19\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B07C2F29CP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B07MWML5S1\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B07MWT9GKP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+     "[\"B07MWTMFX1\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "edb18da6987743d1",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B07MWML5S1",
+     "attributes": [
+      "comfortable fit",
+      "machine wash"
+     ],
+     "category": "",
+     "goal_options": [
+      "relaxed",
+      "31w x 38l"
+     ],
+     "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07MWML5S1",
+    "cluster": "men's jeans",
+    "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:comfortable fit",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:comfortable fit",
+     "=",
+     "comfortable fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "relaxed"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "005499b6597f266c860cb6de29894f46",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B01MRNDYVF\",[[\"fit type\",\"relaxed\"]]]",
+     "[\"B01N1IZEXC\",[[\"fit type\",\"relaxed\"]]]",
+     "[\"B01N97KVM8\",[[\"fit type\",\"relaxed\"]]]",
+     "[\"B01N97KZLN\",[[\"fit type\",\"relaxed\"]]]",
+     "[\"B07C2DXQTP\",[[\"fit type\",\"relaxed\"]]]",
+     "[\"B07C2DXR19\",[[\"fit type\",\"relaxed\"]]]",
+     "[\"B07C2DXSBQ\",[[\"fit type\",\"relaxed\"]]]",
+     "[\"B07C2F29CP\",[[\"fit type\",\"relaxed\"]]]",
+     "[\"B07MWML5S1\",[[\"fit type\",\"relaxed\"]]]",
+     "[\"B07MWT9GKP\",[[\"fit type\",\"relaxed\"]]]",
+     "[\"B07MWTMFX1\",[[\"fit type\",\"relaxed\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "6da7580d6a8b1c99",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B07MWML5S1",
+     "attributes": [
+      "comfortable fit"
+     ],
+     "category": "",
+     "goal_options": [
+      "relaxed"
+     ],
+     "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07MWML5S1",
+    "cluster": "men's jeans",
+    "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:comfortable fit",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:comfortable fit",
+     "=",
+     "comfortable fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "#3357 army green"
+    ],
+    [
+     "option:1",
+     "=",
+     "31w x 38l"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "17b8c4ade9afce9b907122dacb2b8ff0",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B004OQ5JZM\",[[\"color\",\"spruce green\"],[\"size\",\"31w x 38l\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "18599abfdbba36e1",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B07MWML5S1",
+     "attributes": [
+      "comfortable fit"
+     ],
+     "category": "",
+     "goal_options": [
+      "#3357 army green",
+      "31w x 38l"
+     ],
+     "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07MWML5S1",
+    "cluster": "men's jeans",
+    "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:comfortable fit",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:comfortable fit",
+     "=",
+     "comfortable fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "#3357 grey green"
+    ],
+    [
+     "option:1",
+     "=",
+     "31w x 38l"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "17b8c4ade9afce9b907122dacb2b8ff0",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B004OQ5JZM\",[[\"color\",\"spruce green\"],[\"size\",\"31w x 38l\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "aa73dcecc526032a",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B07MWML5S1",
+     "attributes": [
+      "comfortable fit"
+     ],
+     "category": "",
+     "goal_options": [
+      "#3357 grey green",
+      "31w x 38l"
+     ],
+     "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "relaxed"
+     ],
+     [
+      "option:1",
+      "=",
+      "31w x 38l"
+     ]
+    ]
+   },
+   "dst": "540052e3acfa8998",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "REAL",
+   "source_record": "d5ea89e4f32b5a3a",
+   "src": "033cb5d63b40e48d"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B09NL6VC77",
+     "cluster": "men's jeans",
+     "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+    }
+   },
+   "dst": "1f3b01e202185b13",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "791268f360a1aabe",
+   "src": "033cb5d63b40e48d"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07JB7VQBY",
+     "cluster": "men's jeans",
+     "name": "Lavnis Men’s Vintage Casual Ripped Slim fit Denim Jeans",
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+    }
+   },
+   "dst": "51e814878395a864",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "839630f2ac2fd431",
+   "src": "033cb5d63b40e48d"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:imported zipper",
+      "=",
+      "imported zipper"
+     ]
+    ]
+   },
+   "dst": "70954fd0315a7b2c",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "033cb5d63b40e48d"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:machine wash",
+      "=",
+      "machine wash"
+     ]
+    ]
+   },
+   "dst": "edb18da6987743d1",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "033cb5d63b40e48d"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:1",
+      "=",
+      "31w x 38l"
+     ]
+    ]
+   },
+   "dst": "6da7580d6a8b1c99",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "033cb5d63b40e48d"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "relaxed",
+      "#3357 army green"
+     ]
+    ]
+   },
+   "dst": "18599abfdbba36e1",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "033cb5d63b40e48d"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "relaxed",
+      "#3357 grey green"
+     ]
+    ]
+   },
+   "dst": "aa73dcecc526032a",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "033cb5d63b40e48d"
+  }
+ ],
+ "env_id": "webshop_62694398abd83a76",
+ "env_spec": {
+  "cluster": "men's jeans",
+  "env_id": "webshop_62694398abd83a76",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B07MWML5S1",
+   "cluster": "men's jeans",
+   "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+   "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+  },
+  "bound_slots": [
+   "attr:comfortable fit",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:comfortable fit",
+    "=",
+    "comfortable fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "relaxed"
+   ],
+   [
+    "option:1",
+    "=",
+    "31w x 38l"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "ground_truth": {
+   "hash": "c882a63716c555e930af4d2182cd3630",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B01MRNDYVF\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+    "[\"B01N1IZEXC\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+    "[\"B01N97KVM8\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+    "[\"B01N97KZLN\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+    "[\"B07C2DXQTP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+    "[\"B07C2DXR19\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+    "[\"B07C2DXSBQ\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+    "[\"B07C2F29CP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+    "[\"B07MWML5S1\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+    "[\"B07MWT9GKP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+    "[\"B07MWTMFX1\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "033cb5d63b40e48d",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "men's jeans",
+   "goal": {
+    "asin": "B07MWML5S1",
+    "attributes": [
+     "comfortable fit"
+    ],
+    "category": "",
+    "goal_options": [
+     "relaxed",
+     "31w x 38l"
+    ],
+    "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+    "price_upper": 30,
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+    "query": "men's jeans"
+   }
+  },
+  "source_record": "abcd72b1a6ab99f4",
+  "unbound_slots": [
+   "attr:imported zipper",
+   "attr:machine wash",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "tree_id": "364e0ccf382f06d8"
+}

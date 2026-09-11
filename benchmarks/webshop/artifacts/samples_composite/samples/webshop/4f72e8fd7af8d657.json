@@ -1,0 +1,248 @@
+{
+ "sample_id": "4f72e8fd7af8d657",
+ "tree_id": "4d24bdf435a70c92",
+ "adapter": "webshop",
+ "cluster": "refillable containers",
+ "goal_idx": 111,
+ "split": "test",
+ "source_instruction": "i am looking for travel foaming dispenser for hand soap. please choose rose gold and silver pump head.",
+ "query": "Hey, I\u2019m looking through the refillable containers right now and need one that\u2019s blush pink, y\u2019know? Oh, and make sure it\u2019s got that one pump head like I always grab, plus it should come with a little detachable silicone travel sleeve too. I don\u2019t want to spend too much on it, obviously. Let me know what you\u2019ve got that fits!",
+ "strategy_ids": [
+  "factual_error",
+  "referential_ambiguity",
+  "irrelevant_information",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+referential_ambiguity+irrelevant_information+insufficient_information",
+  "family": "expression+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "referential_ambiguity",
+   "irrelevant_information",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:rose gold",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:rose gold",
+    "rose gold",
+    "blush pink"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "blush pink",
+    "condition": [
+     "attr:rose gold",
+     "=",
+     "blush pink"
+    ]
+   },
+   {
+    "text": "it should come with a little detachable silicone travel sleeve too",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [],
+  "hidden_slots": [
+   "attr:rose gold",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:rose gold",
+     "=",
+     "blush pink"
+    ],
+    [
+     "attr:rose gold",
+     "=",
+     "blush pink"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "1b5db18cbd57fccd"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 11,
+  "lit_card": 1,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 11,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 112,
+    "true_card": 11,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 11,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 12,
+    "true_card": 11,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "b01a8f2276717361",
+  "conditions": [
+   [
+    "attr:rose gold",
+    "=",
+    "rose gold"
+   ],
+   [
+    "option:0",
+    "=",
+    "silver pump head"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:rose gold",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 11,
+  "value": [
+   "[\"B0842CFRWY\",[[\"color\",\"silver\"]]]",
+   "[\"B085W67P7L\",[[\"color\",\"silver pump head\"]]]",
+   "[\"B08GY8991Y\",[[\"color\",\"silver\"]]]",
+   "[\"B08HGSVDZ6\",[[\"color\",\"silver\"]]]",
+   "[\"B08HQCBLL5\",[[\"color\",\"silver\"]]]",
+   "[\"B08J6R2CM4\",[[\"color\",\"silver\"]]]",
+   "[\"B08JBXDSW3\",[[\"color\",\"silver\"]]]",
+   "[\"B08LDLRJ7Y\",[[\"color\",\"silver\"]]]",
+   "[\"B09172HG6F\",[[\"color\",\"silver\"]]]",
+   "[\"B09GB2JXL7\",[[\"color\",\"silver\"]]]",
+   "[\"B09PLD5NWJ\",[[\"color\",\"silver ball\"]]]"
+  ],
+  "hash": "475d6f51ba7ab07fbaeaab9a287d053d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "38761bc5eb7aeb9a",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the refillable containers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "523e1485ba534c14",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the refillable containers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "84853f59cf236428",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be quality materials."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a953ad96d18c095e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be shampoo conditioner."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "755e44492b494502",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d3bf42b4b826c60b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "57e065657e5b8bef",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 count (pack of 1) instead of silver pump head."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "bb8de87feede8b85",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 count (pack of 1) instead of silver pump head."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

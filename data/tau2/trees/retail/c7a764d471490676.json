@@ -1,0 +1,685 @@
+{
+ "adapter": "tau2_retail",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "cancel_pending_order",
+     "cancel_pending_order"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:cancel_pending_order:order_id",
+    "arg:0:cancel_pending_order:reason",
+    "arg:1:cancel_pending_order:order_id",
+    "arg:1:cancel_pending_order:reason"
+   ],
+   "conditions": [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W3289292\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:1:cancel_pending_order:order_id",
+     "=",
+     "\"#W9722559\""
+    ],
+    [
+     "arg:1:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1ee08def4fd5596f7cdeb3b44bd5b05b",
+    "kind": "statehash",
+    "value": "{\"db\":\"3e6cf2f5d54493726f80ccd7b5913efecc8dbf8e7a2ffe4dd3afa3e86ad14eb8\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "ff741f8116593687",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "order_id": "#W3289292",
+       "reason": "no longer needed"
+      },
+      "name": "cancel_pending_order"
+     },
+     {
+      "arguments": {
+       "order_id": "#W9722559",
+       "reason": "no longer needed"
+      },
+      "name": "cancel_pending_order"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "81",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "cancel_pending_order",
+     "cancel_pending_order"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:cancel_pending_order:order_id",
+    "arg:0:cancel_pending_order:reason",
+    "arg:1:cancel_pending_order:order_id",
+    "arg:1:cancel_pending_order:reason"
+   ],
+   "conditions": [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W8367380\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"ordered by mistake\""
+    ],
+    [
+     "arg:1:cancel_pending_order:order_id",
+     "=",
+     "\"#W1242543\""
+    ],
+    [
+     "arg:1:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "b82e0d55220433ce551db5dcb6ad9294",
+    "kind": "statehash",
+    "value": "{\"db\":\"790091ad9136f130e41e1160cbac1fa673c272efdbac4f4abcca7ca91e8b18cc\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "09abb3455b0fa913",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "order_id": "#W8367380",
+       "reason": "ordered by mistake"
+      },
+      "name": "cancel_pending_order"
+     },
+     {
+      "arguments": {
+       "order_id": "#W1242543",
+       "reason": "no longer needed"
+      },
+      "name": "cancel_pending_order"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "76",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "exchange_delivered_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip",
+    "arg:1:modify_pending_order_items:item_ids",
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "arg:1:modify_pending_order_items:order_id",
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "arg:2:exchange_delivered_order_items:item_ids",
+    "arg:2:exchange_delivered_order_items:new_item_ids",
+    "arg:2:exchange_delivered_order_items:order_id",
+    "arg:2:exchange_delivered_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"144 Lakeview Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 925\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W4219264\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"10228\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"8886009523\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"2407258246\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4219264\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_1620755\""
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"6341716129\"]"
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"8302289002\"]"
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W3445693\""
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_1620755\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "039bf3bd60eef21b03d02860430fcb8b",
+    "kind": "statehash",
+    "value": "{\"db\":\"0089a38140d5fb73906b4984b8742ce6e6a73bd08894ee370274fc84adfcb44c\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "1558966fb77683b5",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "144 Lakeview Drive",
+       "address2": "Suite 925",
+       "city": "New York",
+       "country": "USA",
+       "order_id": "#W4219264",
+       "state": "NY",
+       "zip": "10228"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "8886009523"
+       ],
+       "new_item_ids": [
+        "2407258246"
+       ],
+       "order_id": "#W4219264",
+       "payment_method_id": "credit_card_1620755"
+      },
+      "name": "modify_pending_order_items"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "6341716129"
+       ],
+       "new_item_ids": [
+        "8302289002"
+       ],
+       "order_id": "#W3445693",
+       "payment_method_id": "credit_card_1620755"
+      },
+      "name": "exchange_delivered_order_items"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "102",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "calculate"
+    ],
+    "writes": [
+     "return_delivered_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:return_delivered_order_items:item_ids",
+    "arg:0:return_delivered_order_items:order_id",
+    "arg:0:return_delivered_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"2872451762\",\"9534205511\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W9502127\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_2433177\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "041291d6059408a6c70f2d06be9c42c9",
+    "kind": "statehash",
+    "value": "{\"db\":\"3e78643a771521156d2d2422415af35b76ec58d69bb832cc943f09b66b68aaa9\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "a8844bc2f8a581b1",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "item_ids": [
+        "2872451762",
+        "9534205511"
+       ],
+       "order_id": "#W9502127",
+       "payment_method_id": "paypal_2433177"
+      },
+      "name": "return_delivered_order_items"
+     }
+    ],
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "calculate"
+    ]
+   },
+   "source_record": "47",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "cancel_pending_order"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:cancel_pending_order:order_id",
+    "arg:0:cancel_pending_order:reason"
+   ],
+   "conditions": [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W5056519\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"ordered by mistake\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "186bc33b68d3be30cc1c6b2f076aa1b9",
+    "kind": "statehash",
+    "value": "{\"db\":\"08195684a824398723150e66a73d212902fdcfbe4cd6cad23e0ba44a18ad205e\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "fc13f8441eb65818",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "order_id": "#W5056519",
+       "reason": "ordered by mistake"
+      },
+      "name": "cancel_pending_order"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "cancel_pending_order"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:cancel_pending_order:order_id",
+    "arg:0:cancel_pending_order:reason"
+   ],
+   "conditions": [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W5995614\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"ordered by mistake\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "fd92236e2ac991c2caf5bd1a3a6e6d2f",
+    "kind": "statehash",
+    "value": "{\"db\":\"1df5e57e477c6f30720a45291d658830731dd314e3982d64528057bc0fe5b731\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "fd31105858982ebd",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "order_id": "#W5995614",
+       "reason": "ordered by mistake"
+      },
+      "name": "cancel_pending_order"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "min_gt_moved_edges": 1,
+  "require_full_quota": false,
+  "seed": 7
+ },
+ "edges": [
+  {
+   "delta": {
+    "changed": [
+     [
+      "arg:0:cancel_pending_order:order_id",
+      "=",
+      "\"#W5056519\"",
+      "\"#W3289292\""
+     ],
+     [
+      "arg:0:cancel_pending_order:reason",
+      "=",
+      "\"ordered by mistake\"",
+      "\"no longer needed\""
+     ],
+     [
+      "arg:1:cancel_pending_order:order_id",
+      "=",
+      "\"#W5995614\"",
+      "\"#W9722559\""
+     ],
+     [
+      "arg:1:cancel_pending_order:reason",
+      "=",
+      "\"ordered by mistake\"",
+      "\"no longer needed\""
+     ]
+    ]
+   },
+   "dst": "ff741f8116593687",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "source_record": "81",
+   "src": "e8c40e34a6a471bc"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "arg:0:cancel_pending_order:order_id",
+      "=",
+      "\"#W5056519\"",
+      "\"#W8367380\""
+     ],
+     [
+      "arg:1:cancel_pending_order:order_id",
+      "=",
+      "\"#W5995614\"",
+      "\"#W1242543\""
+     ],
+     [
+      "arg:1:cancel_pending_order:reason",
+      "=",
+      "\"ordered by mistake\"",
+      "\"no longer needed\""
+     ]
+    ]
+   },
+   "dst": "09abb3455b0fa913",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "source_record": "76",
+   "src": "e8c40e34a6a471bc"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "retail_request",
+     "reads": [],
+     "writes": [
+      "modify_pending_order_address",
+      "modify_pending_order_items",
+      "exchange_delivered_order_items"
+     ]
+    }
+   },
+   "dst": "1558966fb77683b5",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "102",
+   "src": "e8c40e34a6a471bc"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "retail_request",
+     "reads": [
+      "find_user_id_by_name_zip",
+      "get_order_details",
+      "get_order_details",
+      "get_order_details",
+      "calculate",
+      "calculate"
+     ],
+     "writes": [
+      "return_delivered_order_items"
+     ]
+    }
+   },
+   "dst": "a8844bc2f8a581b1",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "47",
+   "src": "e8c40e34a6a471bc"
+  },
+  {
+   "delta": {
+    "removed_request": "cancel_pending_order"
+   },
+   "dst": "fc13f8441eb65818",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "e8c40e34a6a471bc"
+  },
+  {
+   "delta": {
+    "removed_request": "cancel_pending_order"
+   },
+   "dst": "fd31105858982ebd",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "e8c40e34a6a471bc"
+  }
+ ],
+ "env_id": "tau2_retail_shop",
+ "env_spec": {
+  "domain": "retail",
+  "env_id": "tau2_retail_shop",
+  "env_key": "tau2_retail_shop",
+  "initialization": {},
+  "solo_mode": false
+ },
+ "root": {
+  "base": {
+   "kind": "retail_request",
+   "reads": [],
+   "writes": [
+    "cancel_pending_order",
+    "cancel_pending_order"
+   ]
+  },
+  "bound_slots": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason"
+  ],
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W5056519\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"ordered by mistake\""
+   ],
+   [
+    "arg:1:cancel_pending_order:order_id",
+    "=",
+    "\"#W5995614\""
+   ],
+   [
+    "arg:1:cancel_pending_order:reason",
+    "=",
+    "\"ordered by mistake\""
+   ]
+  ],
+  "ground_truth": {
+   "hash": "5b4f17eedb83a3ae244512d6fdf51fd5",
+   "kind": "statehash",
+   "value": "{\"db\":\"4337c9b2595520e27dba1d78005bfae6735706c7f819d183ee530326f7ad61a3\",\"errors\":[]}"
+  },
+  "gt_extensional": false,
+  "intent_id": "e8c40e34a6a471bc",
+  "is_seed": true,
+  "recipe": {
+   "actions": [
+    {
+     "arguments": {
+      "order_id": "#W5056519",
+      "reason": "ordered by mistake"
+     },
+     "name": "cancel_pending_order"
+    },
+    {
+     "arguments": {
+      "order_id": "#W5995614",
+      "reason": "ordered by mistake"
+     },
+     "name": "cancel_pending_order"
+    }
+   ],
+   "reads": []
+  },
+  "source_record": "113",
+  "unbound_slots": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason"
+  ]
+ },
+ "tree_id": "c7a764d471490676"
+}

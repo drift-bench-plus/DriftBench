@@ -1,0 +1,90 @@
+{
+ "sample_id": "2cbeca52438a4594__irrelevant_information",
+ "domain": "telecom",
+ "tree_id": "2cbeca52438a4594",
+ "query": "Hi, I have this matte clear popsocket attached to the back of my phone and I\u2019ve been having issues with it not connecting to the mobile network at all. Let me walk you through what\u2019s going on: airplane mode is switched on right now, my APN settings don\u2019t seem to work right, my line is suspended because of an overdue bill and my contract just ended, my SIM card is locked with a PIN I haven\u2019t entered yet, and I think the SIM card might be unseated too, can you help me fix this?",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "irrelevant_information",
+  "family": "parameter",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "matte clear popsocket attached to the back of my phone",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_settings",
+   "fault:contract_end_suspension",
+   "fault:lock_sim_card_pin",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "100e8a1417984acd"
+ },
+ "signature": {
+  "verdict": "ok_pragmatic_extra",
+  "executable": false,
+  "readings": 0,
+  "note": "extra detail is not expressible as a condition in this domain; string checks only"
+ },
+ "executable_admission": false,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:contract_end_suspension",
+    "=",
+    "contract_end_suspension"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

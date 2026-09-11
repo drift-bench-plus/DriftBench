@@ -1,0 +1,252 @@
+{
+ "sample_id": "4592e3684d5c6a0d",
+ "tree_id": "d8635b8c1de27ad3",
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "goal_idx": 409,
+ "split": "test",
+ "source_instruction": "i am looking for tulua apple cider vinegar lemon ginger flavored fruit juice that is certified organic.",
+ "query": "Ugh, I swear the parking lot at this shopping center is designed specifically to test every last bit of my patience today. I circled for a full 12 minutes before I finally snagged a spot way out by the garden center entrance, and then some guy in a giant lifted truck almost took my passenger side mirror off when he whipped around the lane without even using his turn signal. The second I stepped through the doors I got hit with that overwhelming smell of the fresh-baked cinnamon rolls from the bakery by the front, which would\u2019ve been nice if I hadn\u2019t skipped breakfast to run these errands and my stomach wasn\u2019t already growling so loud the person grabbing a cart next to me glanced over like they thought there was a stray cat yowling somewhere nearby. Hey, I\u2019m browsing the beverages section right now looking for that one I always pick up from Tulua, can you help me find it? I need it to be fair trade certified, and my budget cap is $60 total, I don\u2019t want to go over that at all. Oh, and make sure the bottle comes with a reusable pour spout attached, that\u2019s non-negotiable for me this trip. I don\u2019t have time to scroll through all the options myself so if you can pull up the right matches fast that\u2019d be great.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance",
+  "factual_error",
+  "irrelevant_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance+factual_error+irrelevant_information",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance",
+   "factual_error",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:certified organic"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:certified organic",
+    "certified organic",
+    "fair trade certified"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "I need it to be fair trade certified",
+    "condition": [
+     "attr:fair_trade",
+     "=",
+     "fair trade certified"
+    ]
+   },
+   {
+    "text": "make sure the bottle comes with a reusable pour spout attached, that\u2019s non-negotiable for me this trip",
+    "condition": [
+     "attr:accessory",
+     "=",
+     "reusable pour spout attached"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear the parking lot at this shopping center is designed specifically to test every last bit of my patience today. I circled for a full 12 minutes before I finally snagged a spot way out by the garden center entrance, and then some guy in a giant lifted truck almost took my passenger side mirror off when he whipped around the lane without even using his turn signal. The second I stepped through the doors I got hit with that overwhelming smell of the fresh-baked cinnamon rolls from the bakery by the front, which would\u2019ve been nice if I hadn\u2019t skipped breakfast to run these errands and my stomach wasn\u2019t already growling so loud the person grabbing a cart next to me glanced over like they thought there was a stray cat yowling somewhere nearby.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:certified organic",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:certified organic",
+     "=",
+     "fair trade certified"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ],
+    [
+     "attr:fair_trade",
+     "=",
+     "fair trade certified"
+    ],
+    [
+     "attr:accessory",
+     "=",
+     "reusable pour spout attached"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "c05111769a6f8bb1"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 13,
+  "lit_card": 0,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 64,
+    "true_card": 13,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 13,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 13,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "9abc84ff04905971",
+  "conditions": [
+   [
+    "attr:certified organic",
+    "=",
+    "certified organic"
+   ],
+   [
+    "option:0",
+    "=",
+    "tulua apple cider vinegar lemon ginger"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "attr:certified organic",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 13,
+  "value": [
+   "[\"B007PY8M9A\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B078Y9KGCD\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B07C63XYP4\",[[\"flavor name\",\"lemon-lime\"]]]",
+   "[\"B07GBGZZLC\",[[\"flavor\",\"apple cider vinegar lemon ginger\"]]]",
+   "[\"B07S6ZTGLY\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B087MBRQ51\",[[\"flavor name\",\"ginger lemon\"]]]",
+   "[\"B08DYDRTV1\",[[\"flavor name\",\"ginger lemonade\"]]]",
+   "[\"B08FV8RR9Y\",[[\"flavor name\",\"lemon\"]]]",
+   "[\"B08HTR6M9M\",[[\"flavor name\",\"ginger lemon\"]]]",
+   "[\"B08LP34HMM\",[[\"flavor name\",\"ginger lemon honey (pack of 2)\"]]]",
+   "[\"B08XZXPK93\",[[\"flavor name\",\"lemon pepper chicken\"]]]",
+   "[\"B0936QYZ8K\",[[\"flavor name\",\"lemon\"]]]",
+   "[\"B09BK4W8GB\",[[\"flavor name\",\"ginger lemon\"]]]"
+  ],
+  "hash": "b498997477baf2189a9bcf9d017cf856"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2398dab1f90987e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "38b64bfd9d3bf2d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bdef8c355e557c44",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cane sugar."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f18b778e27fff9a6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be natural flavors."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "09e1f35be0713809",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "af12f9b9de3bb07b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "681e7aa62244ea97",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.23 ounce (pack of 75) instead of tulua apple cider vinegar lemon ginger."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7fab184d8b90ce08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.21 ounce (pack of 10) instead of tulua apple cider vinegar lemon ginger."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

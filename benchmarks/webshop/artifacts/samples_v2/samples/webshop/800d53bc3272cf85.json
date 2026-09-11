@@ -1,0 +1,181 @@
+{
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "fidelity_notes": [],
+ "goal_idx": 307,
+ "ground_truth": {
+  "cardinality": 16,
+  "hash": "b85b38523f97a120df80b5b86b574e45",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B003VBA33E\",[[\"color\",\"black\"]]]",
+   "[\"B00WD017GQ\",[[\"color\",\"black\"]]]",
+   "[\"B0171EUOZI\",[[\"color\",\"black\"]]]",
+   "[\"B01K8O6W86\",[[\"color\",\"black\"]]]",
+   "[\"B073KYYVTR\",[[\"style\",\"quadshield - black\"]]]",
+   "[\"B073L11212\",[[\"style\",\"quadshield - black\"]]]",
+   "[\"B0741RSZTQ\",[[\"color\",\"quadshield - black\"]]]",
+   "[\"B07CQ96G4F\",[[\"material type\",\"quadshield - black\"]]]",
+   "[\"B07CQB2FZK\",[[\"material type\",\"quadshield - black\"]]]",
+   "[\"B07HC46N93\",[[\"color\",\"cat-5e - black\"]]]",
+   "[\"B07R3K1RSB\",[[\"color\",\"black\"]]]",
+   "[\"B07Z65SC1P\",[[\"color\",\"black\"]]]",
+   "[\"B08538V513\",[[\"color\",\"black\"]]]",
+   "[\"B091CKYSVL\",[[\"color\",\"black\"]]]",
+   "[\"B096KVYFN5\",[[\"color\",\"black\"]]]",
+   "[\"B099RJGRRZ\",[[\"color\",\"black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "quadshield - black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "a5d208c2f8815ff9"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "option:0",
+     "=",
+     "quadshield - black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I’ve been trying to train my rescue cat to stop knocking over my potted succulents on the windowsill, and last week I even bought a little weighted cat tree to redirect her attention but she still prefers the leafy plants. Yesterday I also spent an hour reorganizing my spice rack because I kept grabbing cinnamon instead of cumin when I make my morning oatmeal. Oh, and I finally figured out how to fix the wobbly leg on my kitchen bar stool with a few rubber bumpers from the hardware store.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high speed",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve been trying to train my rescue cat to stop knocking over my potted succulents on the windowsill, and last week I even bought a little weighted cat tree to redirect her attention but she still prefers the leafy plants. Yesterday I also spent an hour reorganizing my spice rack because I kept grabbing cinnamon instead of cumin when I make my morning oatmeal. Oh, and I finally figured out how to fix the wobbly leg on my kitchen bar stool with a few rubber bumpers from the hardware store. I’m looking for high speed satellite television equipment, specifically the quadshield - black option, and my price limit is 40.",
+ "render_attempts": 1,
+ "sample_id": "800d53bc3272cf85",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0d4271e27a5b21d4"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7845bdf8528c5ec1"
+  },
+  {
+   "announcement": "Also, it needs to be blu ray.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "344cfa2ae3ec4178"
+  },
+  {
+   "announcement": "Also, it needs to be hdmi cable.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e484f1f7e8211416"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cb68739b231072d2"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e05fdcce4645d715"
+  },
+  {
+   "announcement": "Actually, make it 150 ft instead of quadshield - black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "18789ead90bd1547"
+  },
+  {
+   "announcement": "Actually, make it 50 ft instead of quadshield - black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "672fc4fef32e57cb"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 16,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 16,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for high speed net it has quashield-black material type.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "adcb138b3ff9e85f",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

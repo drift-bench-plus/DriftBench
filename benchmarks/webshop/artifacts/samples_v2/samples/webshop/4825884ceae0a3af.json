@@ -1,0 +1,218 @@
+{
+ "adapter": "webshop",
+ "cluster": "home office chairs",
+ "fidelity_notes": [],
+ "goal_idx": 262,
+ "ground_truth": {
+  "cardinality": 6,
+  "hash": "0fb883ba9125c36a28519c14c2883a12",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B09CD6FT5P\",[[\"color\",\"pink\"]]]",
+   "[\"B09CDMY9LK\",[[\"color\",\"pink\"]]]",
+   "[\"B09CDN7QBP\",[[\"color\",\"pink\"]]]",
+   "[\"B09JC9HDVM\",[[\"color\",\"ty2-pink\"]]]",
+   "[\"B09N8VYS5J\",[[\"color\",\"pink\"]]]",
+   "[\"B09NVPPFDL\",[[\"color\",\"pink1\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy install",
+    "=",
+    "easy install"
+   ],
+   [
+    "attr:height adjustable",
+    "=",
+    "height adjustable"
+   ],
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "attr:lumbar support",
+    "=",
+    "lumbar support"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    410
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "1410d19fdd6bf8b2"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "irrelevant_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [
+   {
+    "condition": [
+     "attr:built-in cup holder",
+     "=",
+     "built-in cup holder"
+    ],
+    "text": "comes with a built-in cup holder accessory"
+   }
+  ],
+  "family": "parameter",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy install",
+     "=",
+     "easy install"
+    ],
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "attr:lumbar support",
+     "=",
+     "lumbar support"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     410
+    ],
+    [
+     "attr:built-in cup holder",
+     "=",
+     "built-in cup holder"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy install",
+   "attr:height adjustable",
+   "attr:living room",
+   "attr:lumbar support",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "933ecbdc7c1e220d",
+  "strategy_id": "irrelevant_information",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a home office chair that’s easy to install, height adjustable, suitable for my living room, has lumbar support, comes with a built-in cup holder accessory, and is pink, with a price limit of $410.",
+ "render_attempts": 1,
+ "sample_id": "4825884ceae0a3af",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office chairs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "540fcee693e2a2ce"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office chairs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a8a0e1fd3281152f"
+  },
+  {
+   "announcement": "Also, it needs to be button tufted.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0469b198e34e7b4d"
+  },
+  {
+   "announcement": "Also, it needs to be computer desk.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "500370ddd716af3a"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7fd373c913e49c38"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8ac138fa0ec9cab4"
+  },
+  {
+   "announcement": "Actually, make it 2.white instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "55c0bfe4a5713c2a"
+  },
+  {
+   "announcement": "Actually, make it 6422orange instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8ee54fa32b8ee5fd"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "extras",
+  "true_card": 6,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for an easy to install pink chair for the living room that offers lumbar support and is height adjustable.",
+ "split": "test",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "tree_id": "88be3082e27ac935",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

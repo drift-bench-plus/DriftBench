@@ -1,0 +1,115 @@
+{
+ "sample_id": "61e8759559d93376__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "61e8759559d93376",
+ "query": "I was walking my golden retriever this morning and he decided to roll in a big patch of dandelions, so I had to stop by the pet groomer on my way home to get him bathed, and they told me they\u2019re running a 20% off sale on nail trims this week so I signed up for that too. Oh and also I ran into my old high school lab partner at the groomer, we caught up for 10 minutes and she told me she just started a new job as a pastry chef at that new bakery downtown that sells those matcha croissants everyone\u2019s been posting about. Anyway, I\u2019ve been having issues with my phone lately: airplane mode is stuck on, my network connection is really bad, the wifi calling isn\u2019t working right, the storage permissions for my apps seem to be broken, and I think my SIM card might be unseated, can you help me fix these problems?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever this morning and he decided to roll in a big patch of dandelions, so I had to stop by the pet groomer on my way home to get him bathed, and they told me they\u2019re running a 20% off sale on nail trims this week so I signed up for that too. Oh and also I ran into my old high school lab partner at the groomer, we caught up for 10 minutes and she told me she just started a new job as a pastry chef at that new bakery downtown that sells those matcha croissants everyone\u2019s been posting about. Anyway,",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:bad_wifi_calling",
+   "fault:break_app_storage_permission",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

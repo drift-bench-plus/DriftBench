@@ -1,0 +1,393 @@
+{
+ "sample_id": "f62a91d2b24c9b0a",
+ "tree_id": "2f4897ebd52ff4e6",
+ "adapter": "webshop",
+ "cluster": "chargers",
+ "goal_idx": 90,
+ "split": "test",
+ "source_instruction": "i am looking for a wireless fast charger that goes with my iphone.",
+ "query": "Hey, I\u2019m looking for chargers that do both fast charging and wireless charging. Since wireless charging options seem to be totally out of stock right now, just grab me one with fast charging that fits the budget I have in mind, yeah? I don\u2019t need any extra fancy add-ons, just make sure it works for my phone.",
+ "strategy_ids": [
+  "false_presupposition",
+  "lexical_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+lexical_ambiguity",
+  "family": "expression+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark"
+  ],
+  "components": [
+   "false_presupposition",
+   "lexical_ambiguity"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since wireless charging options seem to be totally out of stock right now",
+    "condition": null,
+    "about": [
+     "attr:wireless charging",
+     "wireless charging"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "the budget I have in mind",
+    "placements": [
+     [
+      "price_upper",
+      "30"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:fast charging",
+   "attr:wireless charging"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:fast charging",
+     "=",
+     "fast charging"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "d042c93a5dc4bdb8"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 185,
+  "lit_card": 2318,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 2118,
+    "true_card": 185,
+    "readings": 1
+   },
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     185,
+     265
+    ],
+    "true_card": 185,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "c0de069b11223dd2",
+  "conditions": [
+   [
+    "attr:fast charging",
+    "=",
+    "fast charging"
+   ],
+   [
+    "attr:wireless charging",
+    "=",
+    "wireless charging"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 185,
+  "value": [
+   "[\"B00N63TWE8\",[]]",
+   "[\"B019GQ6S2C\",[]]",
+   "[\"B075CSLSLR\",[]]",
+   "[\"B075WQSXVF\",[]]",
+   "[\"B0769JN5MG\",[]]",
+   "[\"B0794DGBZ6\",[]]",
+   "[\"B0798X8Y9K\",[]]",
+   "[\"B07BVDX6CB\",[]]",
+   "[\"B07DC2MJR4\",[]]",
+   "[\"B07DT7LZ25\",[]]",
+   "[\"B07F9RBSP5\",[]]",
+   "[\"B07FLVNCYN\",[]]",
+   "[\"B07FM8R7J1\",[]]",
+   "[\"B07GZGB1YD\",[]]",
+   "[\"B07H67SD3Z\",[]]",
+   "[\"B07L16DXLV\",[]]",
+   "[\"B07MTSYXSC\",[]]",
+   "[\"B07RN75TGD\",[]]",
+   "[\"B07V3KGC8X\",[]]",
+   "[\"B07WBV5NJZ\",[]]",
+   "[\"B07WR9MNK8\",[]]",
+   "[\"B07X7M4D63\",[]]",
+   "[\"B07XRLJTSC\",[]]",
+   "[\"B07XYXBWS4\",[]]",
+   "[\"B07Y8T51VN\",[]]",
+   "[\"B07YD77RKC\",[]]",
+   "[\"B07Z9XMLLV\",[]]",
+   "[\"B081Z8413L\",[]]",
+   "[\"B08239BX6B\",[]]",
+   "[\"B082NLS4HQ\",[]]",
+   "[\"B0835LGZ9B\",[]]",
+   "[\"B083HKQTJM\",[]]",
+   "[\"B08438PZLR\",[]]",
+   "[\"B0843TMWSH\",[]]",
+   "[\"B085DQ6WYH\",[]]",
+   "[\"B085PRW9ST\",[]]",
+   "[\"B0871RCMKW\",[]]",
+   "[\"B087BM3D6X\",[]]",
+   "[\"B087P7DDDW\",[]]",
+   "[\"B087WSPFBV\",[]]",
+   "[\"B089JYH5M3\",[]]",
+   "[\"B08BNFNJ5X\",[]]",
+   "[\"B08CDH5VCX\",[]]",
+   "[\"B08CRD99SZ\",[]]",
+   "[\"B08CZBNGTR\",[]]",
+   "[\"B08F4S851D\",[]]",
+   "[\"B08FMTL1ML\",[]]",
+   "[\"B08FWVKMQ1\",[]]",
+   "[\"B08H5CDKPM\",[]]",
+   "[\"B08HN1VY8Y\",[]]",
+   "[\"B08L1TPZW6\",[]]",
+   "[\"B08LGRV36M\",[]]",
+   "[\"B08LZN8X8R\",[]]",
+   "[\"B08M3KZPXY\",[]]",
+   "[\"B08MF7JB24\",[]]",
+   "[\"B08MTJRM7Y\",[]]",
+   "[\"B08NJNS9FL\",[]]",
+   "[\"B08NJZVSJL\",[]]",
+   "[\"B08NPMQ8TP\",[]]",
+   "[\"B08NV6KW8C\",[]]",
+   "[\"B08NX689SN\",[]]",
+   "[\"B08P1LTXJW\",[]]",
+   "[\"B08P1XX53G\",[]]",
+   "[\"B08P2V15GJ\",[]]",
+   "[\"B08PCN9YX5\",[]]",
+   "[\"B08PP7JS36\",[]]",
+   "[\"B08PVVBGH4\",[]]",
+   "[\"B08PZ8314L\",[]]",
+   "[\"B08Q46NZV4\",[]]",
+   "[\"B08QD98B8L\",[]]",
+   "[\"B08QYFHGP6\",[]]",
+   "[\"B08QZFL6N7\",[]]",
+   "[\"B08RBML55P\",[]]",
+   "[\"B08RC5J15P\",[]]",
+   "[\"B08S2X58BC\",[]]",
+   "[\"B08S6LT3B7\",[]]",
+   "[\"B08SMKTWNR\",[]]",
+   "[\"B08SQN3G9X\",[]]",
+   "[\"B08SWBW3T4\",[]]",
+   "[\"B08T64LZ3B\",[]]",
+   "[\"B08T9QYHLJ\",[]]",
+   "[\"B08TMLCFYV\",[]]",
+   "[\"B08TQFF4D9\",[]]",
+   "[\"B08TWWRQGB\",[]]",
+   "[\"B08VDGN37G\",[]]",
+   "[\"B08VMTWYPR\",[]]",
+   "[\"B08VVJYJTM\",[]]",
+   "[\"B08WPTPFNK\",[]]",
+   "[\"B08X16PKSZ\",[]]",
+   "[\"B08XBPXHXH\",[]]",
+   "[\"B08Y5J69JV\",[]]",
+   "[\"B08YDRHJST\",[]]",
+   "[\"B08ZHJ7HM1\",[]]",
+   "[\"B08ZJKFHN3\",[]]",
+   "[\"B091CND5ZR\",[]]",
+   "[\"B091DJKX37\",[]]",
+   "[\"B091KT475R\",[]]",
+   "[\"B091T1FPQ8\",[]]",
+   "[\"B091T6VKBV\",[]]",
+   "[\"B091WR3LJK\",[]]",
+   "[\"B094FCVCS6\",[]]",
+   "[\"B094MRMK8Q\",[]]",
+   "[\"B094YVBWKT\",[]]",
+   "[\"B095MXCF2Q\",[]]",
+   "[\"B095NSNRSX\",[]]",
+   "[\"B095XCCHCB\",[]]",
+   "[\"B0965JNZVC\",[]]",
+   "[\"B096L8CY62\",[]]",
+   "[\"B096MFYCJB\",[]]",
+   "[\"B09729M46B\",[]]",
+   "[\"B097ZFS9MB\",[]]",
+   "[\"B098JPJLQW\",[]]",
+   "[\"B098NL74XF\",[]]",
+   "[\"B098R35JB2\",[]]",
+   "[\"B099DJWJ32\",[]]",
+   "[\"B099JM6FNW\",[]]",
+   "[\"B09B39Z3J1\",[]]",
+   "[\"B09BCY1BLB\",[]]",
+   "[\"B09BQM32F2\",[]]",
+   "[\"B09BYMXLQ7\",[]]",
+   "[\"B09BZ8BHKB\",[]]",
+   "[\"B09C1DM35C\",[]]",
+   "[\"B09C275FDG\",[]]",
+   "[\"B09CKN2PXX\",[]]",
+   "[\"B09CMM29V9\",[]]",
+   "[\"B09DBPN73B\",[]]",
+   "[\"B09DCCKCNT\",[]]",
+   "[\"B09DKBRJLD\",[]]",
+   "[\"B09DSJZPG6\",[]]",
+   "[\"B09F38ZGHR\",[]]",
+   "[\"B09FDL2H2R\",[]]",
+   "[\"B09G6PRQGY\",[]]",
+   "[\"B09GBN65NX\",[]]",
+   "[\"B09GFFXVT3\",[]]",
+   "[\"B09GFWRMNN\",[]]",
+   "[\"B09GXPQJH7\",[]]",
+   "[\"B09GY53YD9\",[]]",
+   "[\"B09H794QMG\",[]]",
+   "[\"B09HB8D55P\",[]]",
+   "[\"B09JG28G82\",[]]",
+   "[\"B09JKPXW9Q\",[]]",
+   "[\"B09JNTDPZJ\",[]]",
+   "[\"B09JVCLFR5\",[]]",
+   "[\"B09K7GC7TC\",[]]",
+   "[\"B09KNGX942\",[]]",
+   "[\"B09KRMH6C2\",[]]",
+   "[\"B09KZYF9BD\",[]]",
+   "[\"B09L4JDNK8\",[]]",
+   "[\"B09L4TLZQF\",[]]",
+   "[\"B09L4VB888\",[]]",
+   "[\"B09L5MCZ3D\",[]]",
+   "[\"B09L5THXQC\",[]]",
+   "[\"B09LQCDCMC\",[]]",
+   "[\"B09LVC567N\",[]]",
+   "[\"B09LYLJDRZ\",[]]",
+   "[\"B09LYWSRGV\",[]]",
+   "[\"B09M94YYYJ\",[]]",
+   "[\"B09MF2WRJH\",[]]",
+   "[\"B09MKG4NXZ\",[]]",
+   "[\"B09MLH83DJ\",[]]",
+   "[\"B09MQ14NVQ\",[]]",
+   "[\"B09MQPFXVR\",[]]",
+   "[\"B09MRH47BJ\",[]]",
+   "[\"B09MVKQN19\",[]]",
+   "[\"B09MW2HG38\",[]]",
+   "[\"B09MYP2LWH\",[]]",
+   "[\"B09N3VJPLL\",[]]",
+   "[\"B09N6X4Y7B\",[]]",
+   "[\"B09N6Y23WL\",[]]",
+   "[\"B09N964JG2\",[]]",
+   "[\"B09NCVZ1GP\",[]]",
+   "[\"B09NRFQLRJ\",[]]",
+   "[\"B09NVX1TPV\",[]]",
+   "[\"B09NYBNSDW\",[]]",
+   "[\"B09P6MF6K4\",[]]",
+   "[\"B09PLNCN1P\",[]]",
+   "[\"B09PMLNZF8\",[]]",
+   "[\"B09QRH7825\",[]]",
+   "[\"B09QXFZC12\",[]]",
+   "[\"B09QXJP7XX\",[]]",
+   "[\"B09R49WZ1X\",[]]",
+   "[\"B09S2RTKJF\",[]]",
+   "[\"B09S3PPVXG\",[]]",
+   "[\"B09S61NRNK\",[]]",
+   "[\"B09S9V1D7R\",[]]"
+  ],
+  "hash": "183011f0a4f43ea27cc19a9c64e5c402"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "13e5f2eaf8658992",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the chargers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a22d9878f305fb61",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the chargers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f3ba900bbc8baea9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy carry."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "fa5f77df293696e8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be aluminum alloy."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5715b7f5296015e1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "dcdf832bc4b4134e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4efa098eefa8d38c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 30."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d701fbe2a0b7d9f6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 30."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

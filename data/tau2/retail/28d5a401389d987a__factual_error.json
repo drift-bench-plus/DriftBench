@@ -1,0 +1,234 @@
+{
+ "sample_id": "28d5a401389d987a__factual_error",
+ "domain": "retail",
+ "tree_id": "28d5a401389d987a",
+ "query": "Hi there, I need to modify my pending order #W4219264 first: please update the shipping address to 144 Lakeview Drive, Suite 925, New York, NY 10229, USA. Then for the same order, I need to swap item 8886009523 for 2407258246 and use payment method credit_card_1620755, and for order #W6729841, please swap item 3076708684 for 8302289002 also using credit_card_1620755, thanks.",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "factual_error",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "factual_error"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "\"10228\"",
+    "10229"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_items:item_ids",
+   "arg:1:modify_pending_order_items:new_item_ids",
+   "arg:1:modify_pending_order_items:order_id",
+   "arg:1:modify_pending_order_items:payment_method_id",
+   "arg:2:modify_pending_order_items:item_ids",
+   "arg:2:modify_pending_order_items:new_item_ids",
+   "arg:2:modify_pending_order_items:order_id",
+   "arg:2:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [
+   "arg:0:modify_pending_order_address:zip"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"144 Lakeview Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 925\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W4219264\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "10229"
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"8886009523\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"2407258246\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4219264\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_1620755\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:item_ids",
+     "=",
+     "[\"3076708684\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"8302289002\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:order_id",
+     "=",
+     "\"#W6729841\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_1620755\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "d34be4b5618f3420"
+ },
+ "signature": {
+  "rule": "substituted",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"144 Lakeview Drive\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 925\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"New York\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W4219264\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"NY\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"10228\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:item_ids",
+    "=",
+    "[\"8886009523\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"2407258246\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:order_id",
+    "=",
+    "\"#W4219264\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_1620755\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:item_ids",
+    "=",
+    "[\"3076708684\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"8302289002\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:order_id",
+    "=",
+    "\"#W6729841\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_1620755\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:modify_pending_order_address:zip"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

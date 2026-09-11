@@ -1,0 +1,199 @@
+{
+ "sample_id": "6118336b91c49851",
+ "tree_id": "86853fcc2d629163",
+ "adapter": "webshop",
+ "cluster": "mattresses",
+ "goal_idx": 230,
+ "split": "test",
+ "source_instruction": "find a mattress with high density foam with cover included.",
+ "query": "I\u2019ve heard that high density mattresses work so much better for keeping your spine aligned even after years of use, especially when you don\u2019t end up sinking too far into the surface after lying down for a few hours. My friend mentioned that pairing that kind of base with that one extra add-on they always rave about makes the whole setup last way longer and feel way nicer to sleep on, and I\u2019ve also seen people say you don\u2019t have to spend a ton to get something solid, stuff under 260 works just as well as the pricy name brand options for most people. I\u2019ve been rearranging my bedroom lately and getting rid of the old lumpy bed setup I\u2019ve had since college, and a couple people I follow online have been talking about how much better their sleep got once they swapped over.",
+ "strategy_ids": [
+  "indirect_intent",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+referential_ambiguity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:high density",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high density",
+     "=",
+     "high density"
+    ],
+    [
+     "price_upper",
+     "<=",
+     260
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "5051bbb0bbf5b421"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 16,
+  "lit_card": 515,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 515,
+    "true_card": 16,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "e356bb805fdb8f9d",
+  "conditions": [
+   [
+    "attr:high density",
+    "=",
+    "high density"
+   ],
+   [
+    "option:0",
+    "=",
+    "high density foam + mattress cover"
+   ],
+   [
+    "price_upper",
+    "<=",
+    260
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 16,
+  "value": [
+   "[\"B01MU5FK81\",[[\"pattern name\",\"mattress\"]]]",
+   "[\"B06X9D3P1Y\",[[\"pattern name\",\"mattress\"]]]",
+   "[\"B0734MJZ9B\",[[\"style\",\"6\\\" mattress\"]]]",
+   "[\"B076MMY8T8\",[[\"style\",\"mattress\"]]]",
+   "[\"B07RFNSCL9\",[[\"style\",\"mattress\"]]]",
+   "[\"B07YLCWZF5\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B07YLD5PPN\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B07YLDTTP1\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B07YLF1MJV\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B07YLFCRNQ\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B08R7ZGLH2\",[[\"color\",\"high density foam\"]]]",
+   "[\"B08Y4ZXZ1H\",[[\"style\",\"high density foam\"]]]",
+   "[\"B098YFWL9P\",[[\"color\",\"high density foam\"]]]",
+   "[\"B099ML6NMQ\",[[\"material type\",\"high density foam\"]]]",
+   "[\"B09NQNLMJ6\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B09NQRJQ75\",[[\"color\",\"high density foam + mattress cover\"]]]"
+  ],
+  "hash": "d0b53b1eea60397e453041f7a8f77bfa"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "54029a09f9e6dae2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the mattresses instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e17f22850117a04a",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the mattresses instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3261021932dae5b7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be machine washable."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e7a2993d269c499f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "81be65131afa4977",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cad44a4fb19cd2ff",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3776c44387ba7709",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 01 twin instead of high density foam + mattress cover."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "45e406148d0d157b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 09 classe-plus acupressure (flower-stripe gray) instead of high density foam + mattress cover."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

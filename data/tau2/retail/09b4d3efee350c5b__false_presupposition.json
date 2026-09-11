@@ -1,0 +1,163 @@
+{
+ "sample_id": "09b4d3efee350c5b__false_presupposition",
+ "domain": "retail",
+ "tree_id": "09b4d3efee350c5b",
+ "query": "Since you probably can't process returns to the original gift card gift_card_7711863, I'd like to request returns for item 3788616824 from order #W2692684 and item 6477915553 from order #W7449508 refunded to any other available payment method instead, and also cancel my pending order #W9373487 because I no longer need it.",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "false_presupposition",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "false_presupposition"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you probably can't process returns to the original gift card gift_card_7711863",
+    "condition": null,
+    "about": [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "\"gift_card_7711863\""
+    ],
+    "alternative": [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "any other available payment method"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason",
+   "arg:2:return_delivered_order_items:item_ids",
+   "arg:2:return_delivered_order_items:order_id",
+   "arg:2:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"3788616824\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W2692684\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "any other available payment method"
+    ],
+    [
+     "arg:1:cancel_pending_order:order_id",
+     "=",
+     "\"#W9373487\""
+    ],
+    [
+     "arg:1:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:item_ids",
+     "=",
+     "[\"6477915553\"]"
+    ],
+    [
+     "arg:2:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7449508\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7711863\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "6a1dc2c0555a60c6"
+ },
+ "signature": {
+  "rule": "presupposed",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"3788616824\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W2692684\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7711863\""
+   ],
+   [
+    "arg:1:cancel_pending_order:order_id",
+    "=",
+    "\"#W9373487\""
+   ],
+   [
+    "arg:1:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:item_ids",
+    "=",
+    "[\"6477915553\"]"
+   ],
+   [
+    "arg:2:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7449508\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7711863\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

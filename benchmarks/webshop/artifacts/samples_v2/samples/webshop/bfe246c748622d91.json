@@ -1,0 +1,170 @@
+{
+ "adapter": "webshop",
+ "cluster": "digital cameras",
+ "fidelity_notes": [],
+ "goal_idx": 181,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "9cc52a7e15ea915683b85712867bad44",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07KTCSG5C\",[]]",
+   "[\"B07N96YVSW\",[]]",
+   "[\"B07S5CVRM3\",[]]",
+   "[\"B07T7399JK\",[]]",
+   "[\"B08L5ZGKCZ\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:optical zoom",
+    "=",
+    "optical zoom"
+   ],
+   [
+    "attr:ultra hd",
+    "=",
+    "ultra hd"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "58b28923f0df7081"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:optical zoom",
+     "=",
+     "optical zoom"
+    ],
+    [
+     "attr:ultra hd",
+     "=",
+     "ultra hd"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just finished planting a whole flat of cherry tomato seedlings on my balcony this morning, and I’m so excited to see if they’ll produce sweet little fruit this summer. I also spent last night binging a cozy new baking show, and I’ve been daydreaming about trying to make sourdough focaccia with rosemary from my windowsill herb pot. On my walk to the store earlier, I stopped to pet a fluffy orange tabby cat that was curled up on a park bench, it was so friendly it rubbed right against my hand.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:optical zoom",
+   "attr:ultra hd",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just finished planting a whole flat of cherry tomato seedlings on my balcony this morning, and I’m so excited to see if they’ll produce sweet little fruit this summer. I also spent last night binging a cozy new baking show, and I’ve been daydreaming about trying to make sourdough focaccia with rosemary from my windowsill herb pot. On my walk to the store earlier, I stopped to pet a fluffy orange tabby cat that was curled up on a park bench, it was so friendly it rubbed right against my hand. I’m looking for a digital camera with optical zoom and ultra HD capabilities, and my budget is $20.",
+ "render_attempts": 1,
+ "sample_id": "bfe246c748622d91",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the digital cameras instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "02f79fc486665f81"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the digital cameras instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0fbdc21648c3ecd2"
+  },
+  {
+   "announcement": "Also, it needs to be memory card.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2ab436ac9c205950"
+  },
+  {
+   "announcement": "Also, it needs to be ac adapter.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "da2f908b79213029"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1e0f6db5b43d27f9"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2fc57d4f8542e40f"
+  },
+  {
+   "announcement": "Actually, make it 80 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5e6bd26b4654fa66"
+  },
+  {
+   "announcement": "Actually, make it 100 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "eea9da11b80f248b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 5,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a ultra hd digital camera with optical zoom lens.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "4bf3161f1925a51d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

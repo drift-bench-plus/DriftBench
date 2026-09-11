@@ -1,0 +1,93 @@
+{
+ "sample_id": "f50774ae0bd0bd13__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "f50774ae0bd0bd13",
+ "query": "I was waiting in line at the local pastry shop this morning and tried their new matcha croissant, it was so buttery and had just the right amount of sweetness I almost got a second one to take with me. On the way to the train station I ran into my old college roommate, we ended up chatting for almost twenty minutes catching up about how our classmates are doing these days. I even managed to grab a limited edition city postcard from the kiosk near the platform to send back to my little sister, she\u2019s been collecting postcards from every country I visit. Anyway, I\u2019m currently abroad and I have roaming turned off, my SIM card feels like it might be unseated, and both of my app permissions seem to be broken so none of my apps are working properly right now, can you help me figure this out?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was waiting in line at the local pastry shop this morning and tried their new matcha croissant, it was so buttery and had just the right amount of sweetness I almost got a second one to take with me. On the way to the train station I ran into my old college roommate, we ended up chatting for almost twenty minutes catching up about how our classmates are doing these days. I even managed to grab a limited edition city postcard from the kiosk near the platform to send back to my little sister, she\u2019s been collecting postcards from every country I visit.",
+  "retained": [
+   "fault:break_app_both_permissions",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

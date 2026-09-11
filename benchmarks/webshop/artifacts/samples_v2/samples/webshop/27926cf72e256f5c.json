@@ -1,0 +1,171 @@
+{
+ "adapter": "webshop",
+ "cluster": "alcoholic beverages",
+ "fidelity_notes": [],
+ "goal_idx": 128,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "b3eba65f349c8603c3340dc1587f3f5c",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B005Z6LGYS\",[[\"flavor name\",\"citrus\"]]]",
+   "[\"B07CZLVZ7X\",[[\"flavor name\",\"citrus\"]]]",
+   "[\"B08PW3Y1DM\",[[\"flavor name\",\"dry citrus tonic\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high fructose",
+    "=",
+    "high fructose"
+   ],
+   [
+    "option:0",
+    "=",
+    "citrus"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "89f5663644d6a499"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high fructose",
+     "=",
+     "high fructose"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high fructose",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for alcoholic beverages with high fructose, and I’d like it to have that one flavor option too. My budget is under 120.",
+ "render_attempts": 2,
+ "sample_id": "27926cf72e256f5c",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the alcoholic beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "700c665f6cd77f27"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the alcoholic beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f29f8904846eb1e5"
+  },
+  {
+   "announcement": "Also, it needs to be gluten free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7429fcc26c217882"
+  },
+  {
+   "announcement": "Also, it needs to be artificial ingredients.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cf9cc98d3dd66929"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bfd10e1b407bd479"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e3813401fec811f4"
+  },
+  {
+   "announcement": "Actually, make it 11.1 fl oz (pack of 24) instead of citrus.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1c76d493f0391058"
+  },
+  {
+   "announcement": "Actually, make it 11.1 fl oz (pack of 6) instead of citrus.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b0eb969773263a76"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 100,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need some high fructose citrus tonic water.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "e9e72e3bb8bf1b5b",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

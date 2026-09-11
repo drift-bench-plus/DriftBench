@@ -1,0 +1,194 @@
+{
+ "sample_id": "5688a863f30addb7",
+ "tree_id": "e9e72e3bb8bf1b5b",
+ "adapter": "webshop",
+ "cluster": "alcoholic beverages",
+ "goal_idx": 128,
+ "split": "test",
+ "source_instruction": "i need some high fructose citrus tonic water.",
+ "query": "Ugh, I just spent 20 minutes wandering the snack aisle looking for those sour watermelon gummy bears I loved as a kid, and I swear they moved them again\u2014last time I found them they were tucked next to the fancy imported chocolate bars, and the cashier even gave me a weird look when I bought three bags last week. Oh, and I saw a guy drop a whole jar of pickles by the front entrance a minute ago, the glass shattered everywhere and staff were scrambling to clean it up before someone slipped. Anyway, since you probably don\u2019t have any high fructose alcoholic drinks in stock right now, can you just show me the citrus-flavored ones that are under $120? Wait, actually\u2014wait no, hold on, no\u2014wait, actually I do need the high fructose ones first, right? Wait no, no, just, y\u2019know, if you don\u2019t have the high fructose ones the citrus ones are fine, as long as they\u2019re under $120. Wait no, no\u2014wait, high fructose is non-negotiable? Wait no, no, I already said if you don\u2019t have it, citrus works, don\u2019t overcomplicate it.",
+ "strategy_ids": [
+  "false_presupposition",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "false_presupposition",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "since you probably don\u2019t have any high fructose alcoholic drinks in stock right now",
+    "condition": null,
+    "about": [
+     "attr:high fructose",
+     "high fructose"
+    ],
+    "alternative": [
+     "attr:high fructose",
+     "citrus"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I just spent 20 minutes wandering the snack aisle looking for those sour watermelon gummy bears I loved as a kid, and I swear they moved them again\u2014last time I found them they were tucked next to the fancy imported chocolate bars, and the cashier even gave me a weird look when I bought three bags last week. Oh, and I saw a guy drop a whole jar of pickles by the front entrance a minute ago, the glass shattered everywhere and staff were scrambling to clean it up before someone slipped.",
+  "retained": [
+   "attr:high fructose",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:high fructose",
+     "=",
+     "citrus"
+    ],
+    [
+     "option:0",
+     "=",
+     "citrus"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "08a885cdba834996"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 3,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 3,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "89f5663644d6a499",
+  "conditions": [
+   [
+    "attr:high fructose",
+    "=",
+    "high fructose"
+   ],
+   [
+    "option:0",
+    "=",
+    "citrus"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B005Z6LGYS\",[[\"flavor name\",\"citrus\"]]]",
+   "[\"B07CZLVZ7X\",[[\"flavor name\",\"citrus\"]]]",
+   "[\"B08PW3Y1DM\",[[\"flavor name\",\"dry citrus tonic\"]]]"
+  ],
+  "hash": "b3eba65f349c8603c3340dc1587f3f5c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "700c665f6cd77f27",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the alcoholic beverages instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f29f8904846eb1e5",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the alcoholic beverages instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7429fcc26c217882",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gluten free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cf9cc98d3dd66929",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be artificial ingredients."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "bfd10e1b407bd479",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e3813401fec811f4",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1c76d493f0391058",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 11.1 fl oz (pack of 24) instead of citrus."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b0eb969773263a76",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 11.1 fl oz (pack of 6) instead of citrus."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

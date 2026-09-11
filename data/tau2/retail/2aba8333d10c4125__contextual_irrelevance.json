@@ -1,0 +1,159 @@
+{
+ "sample_id": "2aba8333d10c4125__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "2aba8333d10c4125",
+ "query": "Last weekend I took my golden retriever puppy to the new dog park downtown, and he had the best time chasing a little corgi around the agility course for almost an hour. On the way home we stopped at that new bubble tea shop on Oak Street, and their taro milk tea with boba was so creamy I already want to go back again this weekend. I also just finished rearranging the succulent shelf in my living room yesterday, and I finally found the perfect spot for that little zebra haworthia I picked up at the plant sale last month.\n\nI need to process returns for three of my delivered orders please: for order #W3792453, return item 4293355847; for order #W7181492, return items 5753502325 and 9851293632; for order #W5565470, return items 9570044148 and 6857426243. Please refund all of these to the paypal_3024827 payment method I used to pay for the orders.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I took my golden retriever puppy to the new dog park downtown, and he had the best time chasing a little corgi around the agility course for almost an hour. On the way home we stopped at that new bubble tea shop on Oak Street, and their taro milk tea with boba was so creamy I already want to go back again this weekend. I also just finished rearranging the succulent shelf in my living room yesterday, and I finally found the perfect spot for that little zebra haworthia I picked up at the plant sale last month.",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id",
+   "arg:1:return_delivered_order_items:item_ids",
+   "arg:1:return_delivered_order_items:order_id",
+   "arg:1:return_delivered_order_items:payment_method_id",
+   "arg:2:return_delivered_order_items:item_ids",
+   "arg:2:return_delivered_order_items:order_id",
+   "arg:2:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"4293355847\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W3792453\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_3024827\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:item_ids",
+     "=",
+     "[\"5753502325\",\"9851293632\"]"
+    ],
+    [
+     "arg:1:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7181492\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_3024827\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:item_ids",
+     "=",
+     "[\"9570044148\",\"6857426243\"]"
+    ],
+    [
+     "arg:2:return_delivered_order_items:order_id",
+     "=",
+     "\"#W5565470\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_3024827\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"4293355847\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W3792453\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_3024827\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:item_ids",
+    "=",
+    "[\"5753502325\",\"9851293632\"]"
+   ],
+   [
+    "arg:1:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7181492\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_3024827\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:item_ids",
+    "=",
+    "[\"9570044148\",\"6857426243\"]"
+   ],
+   [
+    "arg:2:return_delivered_order_items:order_id",
+    "=",
+    "\"#W5565470\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_3024827\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

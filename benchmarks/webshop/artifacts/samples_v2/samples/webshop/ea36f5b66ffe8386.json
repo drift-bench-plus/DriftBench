@@ -1,0 +1,183 @@
+{
+ "adapter": "webshop",
+ "cluster": "home office furniture sets",
+ "fidelity_notes": [],
+ "goal_idx": 220,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "d9bc3fd271c22601f01ce8e34d8be738",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0842NKZ44\",[[\"color\",\"pink\"]]]",
+   "[\"B08M5M4772\",[[\"color\",\"pink - set of 1\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:heavy duty",
+    "=",
+    "heavy duty"
+   ],
+   [
+    "attr:height adjustable",
+    "=",
+    "height adjustable"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "5f20a10afb50c82d"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "option:0",
+     "pink"
+    ],
+    "alternative": null,
+    "condition": null,
+    "text": "Since you probably don’t have pink heavy duty height adjustable home office furniture sets"
+   }
+  ],
+  "retained": [
+   "attr:heavy duty",
+   "attr:height adjustable",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "0f3929271199cbb8",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don’t have pink heavy duty height adjustable home office furniture sets, could you find me any heavy duty height adjustable home office furniture sets under $60 instead?",
+ "render_attempts": 1,
+ "sample_id": "ea36f5b66ffe8386",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office furniture sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "563c8ea629ef4032"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office furniture sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7308c010a919a9c0"
+  },
+  {
+   "announcement": "Also, it needs to be computer desk.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "60d06e20a56d9dc3"
+  },
+  {
+   "announcement": "Also, it needs to be high density.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f5f77464e4b38db9"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1c8a3ff356eccdc3"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "91d5d51e8ac6e642"
+  },
+  {
+   "announcement": "Actually, make it *blue grotto instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9c2f6c2ad4070cae"
+  },
+  {
+   "announcement": "Actually, make it *biscay green instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d3e7ab742b677176"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a heavy duty, height adjustable office chair in pink color",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "68c8fa2c101a3818",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

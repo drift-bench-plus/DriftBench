@@ -1,0 +1,82 @@
+{
+ "sample_id": "d74c9205cca6c69a__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "d74c9205cca6c69a",
+ "query": "I tried out the new matcha latte at the caf\u00e9 near my hotel this morning and it was way creamier than the ones I get back home, I even took a photo of the little latte art heart on top to send to my roommate later. I also found a cute little handmade keychain stand on the walk over, the artisan had all these little animal designs and I picked up a fox one to clip on my backpack. Oh, and the weather here is so much sunnier than the forecast said it would be, I\u2019m glad I packed my sunglasses instead of leaving them in my suitcase. Anyway, I\u2019m currently abroad right now, I have data saver mode turned on and roaming switched off, but none of my mobile apps are loading at all and I can\u2019t get any internet to work on my phone, can you help me figure out what\u2019s going on?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I tried out the new matcha latte at the caf\u00e9 near my hotel this morning and it was way creamier than the ones I get back home, I even took a photo of the little latte art heart on top to send to my roommate later. I also found a cute little handmade keychain stand on the walk over, the artisan had all these little animal designs and I picked up a fox one to clip on my backpack. Oh, and the weather here is so much sunnier than the forecast said it would be, I\u2019m glad I packed my sunglasses instead of leaving them in my suitcase.",
+  "retained": [
+   "fault:data_saver_mode_on",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

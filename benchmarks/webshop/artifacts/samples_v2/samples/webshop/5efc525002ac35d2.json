@@ -1,0 +1,188 @@
+{
+ "adapter": "webshop",
+ "cluster": "mac",
+ "fidelity_notes": [],
+ "goal_idx": 435,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "f51b1d9ee81b7a8ec8418b6d6ec73d90",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B082V7PWD1\",[[\"color\",\"blue\"]]]",
+   "[\"B0919MJH8G\",[[\"color\",\"blue\"]]]",
+   "[\"B09MTFJ9G5\",[[\"color\",\"2.4g+bluetooth purple\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:plug play",
+    "=",
+    "plug play"
+   ],
+   [
+    "attr:wireless bluetooth",
+    "=",
+    "wireless bluetooth"
+   ],
+   [
+    "option:0",
+    "=",
+    "blue"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:wireless bluetooth"
+  ],
+  "intent_id": "5307ea3f009a251d"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "attr:wireless bluetooth"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:plug play",
+     "=",
+     "plug play"
+    ],
+    [
+     "attr:wireless bluetooth",
+     "=",
+     "wireless Wi-Fi connectivity"
+    ],
+    [
+     "option:0",
+     "=",
+     "blue"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:plug play",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "9e3f2e3510969464",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "attr:wireless bluetooth",
+    "wireless bluetooth",
+    "wireless Wi-Fi connectivity"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a Mac accessory that’s plug and play, has wireless Wi-Fi connectivity, comes in blue, and costs no more than $30.",
+ "render_attempts": 2,
+ "sample_id": "5efc525002ac35d2",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the mac instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "19e1de0a02a51222"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the mac instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "411c57812f3c1052"
+  },
+  {
+   "announcement": "Also, it needs to be charging cable.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "052d5f33de00bdd0"
+  },
+  {
+   "announcement": "Also, it needs to be rechargeable battery.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c27302e1dce4ad64"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "36f85e81c159a62d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "372e84f9f86fd57b"
+  },
+  {
+   "announcement": "Actually, make it #purple instead of blue.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "501cab8f96945dc3"
+  },
+  {
+   "announcement": "Actually, make it #pink instead of blue.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "81a8fa56e3f223b3"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a blue color wireless bluetooth mouse that is plug and play.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "da2c283680b90fc6",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

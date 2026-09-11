@@ -1,0 +1,82 @@
+{
+ "sample_id": "3cdba8f10c823ac0__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "3cdba8f10c823ac0",
+ "query": "I just got back from walking my dog this morning, and he was so excited to chase a squirrel up the oak tree at the end of the street, he almost pulled the leash right out of my hand. On the way home I stopped at the little bakery around the corner and picked up a fresh blueberry scone, it's still warm and smells absolutely amazing. I was also thinking about what movie I should watch tonight after I finish my laundry, I've been meaning to check out that new comedy that everyone's been talking about lately. Oh right, I need to cancel my pending order #W9348897, the reason is that I no longer need the items in it.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from walking my dog this morning, and he was so excited to chase a squirrel up the oak tree at the end of the street, he almost pulled the leash right out of my hand. On the way home I stopped at the little bakery around the corner and picked up a fresh blueberry scone, it's still warm and smells absolutely amazing. I was also thinking about what movie I should watch tonight after I finish my laundry, I've been meaning to check out that new comedy that everyone's been talking about lately.",
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W9348897\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W9348897\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

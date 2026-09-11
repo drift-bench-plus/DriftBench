@@ -1,0 +1,192 @@
+{
+ "sample_id": "d7011d651a157461",
+ "tree_id": "bf9ae0dc92dd221e",
+ "adapter": "webshop",
+ "cluster": "deli & prepared foods",
+ "goal_idx": 204,
+ "split": "test",
+ "source_instruction": "i'm searching for canned skinless and boneless pink salmon which is ready to eat. also, i want sweet and spicy flavor.",
+ "query": "I heard that the stuff in this deli & prepared foods section that\u2019s labeled as cook-and-serve is perfect for when you don\u2019t have time to mess around with meal prep. I\u2019ve also heard the sweet & spicy options are really popular with people who like a little kick with their sugar, and I\u2019ve got exactly 30 dollars in cash on me right now to spend here. I was just talking to my roommate earlier who said those kinds of picks make for a super easy weeknight bite when you\u2019re running between classes and shifts.",
+ "strategy_ids": [
+  "factual_error",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+indirect_intent",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "oblique"
+  ],
+  "components": [
+   "factual_error",
+   "indirect_intent"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:ready eat"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:ready eat",
+    "ready eat",
+    "cook-and-serve"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:ready eat"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ready eat",
+     "=",
+     "cook-and-serve"
+    ],
+    [
+     "option:0",
+     "=",
+     "sweet & spicy"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "9093b42233287a48"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "3aefe6af3116e824",
+  "conditions": [
+   [
+    "attr:ready eat",
+    "=",
+    "ready eat"
+   ],
+   [
+    "option:0",
+    "=",
+    "sweet & spicy"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:ready eat"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B0037507EE\",[[\"flavor name\",\"sweet & spicy\"]]]",
+   "[\"B003RWVFEI\",[[\"flavor name\",\"sweet & spicy\"]]]",
+   "[\"B0173GV8ZY\",[[\"flavor name\",\"sweet and spicy tuna salad\"]]]"
+  ],
+  "hash": "5e5d2b95ef0626f66d23e8276b3a6dfb"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "9f4ec545c1d51ffa",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the deli & prepared foods instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f3fa665e15e37d6c",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the deli & prepared foods instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7399910ca29f99b7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be fat free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c68b04e6e27349eb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gluten free."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a26a1475dafd3fc1",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f7ee1ea771e28f3d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0bf9d482353cdff3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .10 pack.--30 fl oz (pack of 2) instead of sweet & spicy."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "be84d1202e6eb480",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 12 instead of sweet & spicy."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

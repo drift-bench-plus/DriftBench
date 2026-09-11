@@ -1,0 +1,93 @@
+{
+ "sample_id": "204778052da49062__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "204778052da49062",
+ "query": "I spent last weekend hiking the coastal trail near the border, and I found the cutest little stray cat curled up on a rock there, I ended up bringing her home and she\u2019s already settled in so well, she even likes sleeping on my nightstand right next to my phone. Oh right, I\u2019m overseas right now and my mobile data isn\u2019t working at all, I checked and airplane mode is on, data saver mode is turned on too, and I have roaming disabled, can you help me figure out why I can\u2019t get online?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent last weekend hiking the coastal trail near the border, and I found the cutest little stray cat curled up on a rock there, I ended up bringing her home and she\u2019s already settled in so well, she even likes sleeping on my nightstand right next to my phone. Oh right, ",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:data_saver_mode_on",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

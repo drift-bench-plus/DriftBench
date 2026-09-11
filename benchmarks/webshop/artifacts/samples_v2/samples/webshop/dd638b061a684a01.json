@@ -1,0 +1,186 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's dresses",
+ "fidelity_notes": [],
+ "goal_idx": 61,
+ "ground_truth": {
+  "cardinality": 18,
+  "hash": "0a0860e483baeec8d8f1af958df50965",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B06XWB5RG5\",[[\"color\",\"jester red\"]]]",
+   "[\"B07D7T27T2\",[[\"color\",\"red\"]]]",
+   "[\"B07FYDYR9J\",[[\"color\",\"red\"]]]",
+   "[\"B07KZ8F1L3\",[[\"color\",\"red\"]]]",
+   "[\"B07V6D1G16\",[[\"color\",\"red\"]]]",
+   "[\"B07V6QFCJ9\",[[\"color\",\"jester red\"]]]",
+   "[\"B07W6PXQ22\",[[\"color\",\"red\"]]]",
+   "[\"B0867HY84L\",[[\"color\",\"jester red\"]]]",
+   "[\"B09122YWCY\",[[\"color\",\"red\"]]]",
+   "[\"B09576WFYS\",[[\"color\",\"jester red\"]]]",
+   "[\"B095JYNXS1\",[[\"color\",\"red\"]]]",
+   "[\"B096RZF13X\",[[\"color\",\"red\"]]]",
+   "[\"B09732G1MR\",[[\"color\",\"red\"]]]",
+   "[\"B09982RQ1N\",[[\"color\",\"red\"]]]",
+   "[\"B09BQYDP5K\",[[\"color\",\"red\"]]]",
+   "[\"B09K41RT6P\",[[\"color\",\"red\"]]]",
+   "[\"B09QMC1WYB\",[[\"color\",\"red\"]]]",
+   "[\"B09QXGQMDG\",[[\"color\",\"red\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:lace closure",
+    "=",
+    "lace closure"
+   ],
+   [
+    "option:0",
+    "=",
+    "wine red"
+   ],
+   [
+    "price_upper",
+    "<=",
+    90
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "cd235621b96a960b"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:lace closure",
+     "=",
+     "lace closure"
+    ],
+    [
+     "price_upper",
+     "<=",
+     90
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:lace closure",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for women's dresses with a lace closure, that one as the color, and my budget is under 90.",
+ "render_attempts": 1,
+ "sample_id": "dd638b061a684a01",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's dresses instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "452379291bd26652"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's dresses instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "815da9f7cb04b664"
+  },
+  {
+   "announcement": "Also, it needs to be wash cold.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2b72a27a68d715d4"
+  },
+  {
+   "announcement": "Also, it needs to be tumble dry.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e3e9135f73449ebf"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "637147da3ba79805"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dbd9ae630e46b831"
+  },
+  {
+   "announcement": "Actually, make it 001 brown instead of wine red.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "50218485ea8a4654"
+  },
+  {
+   "announcement": "Actually, make it 01-brown instead of wine red.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "59b0b0c41a34b0e5"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 21,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 18,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a women's wine red prom dress with a lace closure.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "c451113705b67be6",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "adapter": "webshop",
+ "cluster": "face makeup",
+ "fidelity_notes": [],
+ "goal_idx": 65,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "3b80347334716596798ded5c52bfa14f",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B073Q4RHF9\",[[\"color\",\"sassy\"]]]",
+   "[\"B073WGFRM1\",[[\"color\",\"sassy\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:dark circles",
+    "=",
+    "dark circles"
+   ],
+   [
+    "option:0",
+    "=",
+    "sassy"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:dark circles"
+  ],
+  "intent_id": "e545ba2f106aa687"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 5,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "attr:dark circles"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dark circles",
+     "=",
+     "dark spots"
+    ],
+    [
+     "option:0",
+     "=",
+     "sassy"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "3659af4bf6669de5",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "attr:dark circles",
+    "dark circles",
+    "dark spots"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for face makeup that targets dark spots, has a sassy option, and my price limit is 40.",
+ "render_attempts": 5,
+ "sample_id": "5918dfa7e62ed0d1",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the face makeup instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0199d13ad410cb7d"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the face makeup instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a8e44c73234cf3cc"
+  },
+  {
+   "announcement": "Also, it needs to be anti aging.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2eb7329cd5375a88"
+  },
+  {
+   "announcement": "Also, it needs to be non toxic.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cd278cbd6773c5a3"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "56c6472de033f744"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d6dba3de9ecbca22"
+  },
+  {
+   "announcement": "Actually, make it #01 instead of sassy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "039b3ef8588cccad"
+  },
+  {
+   "announcement": "Actually, make it (03 buff beige) instead of sassy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c64d6894f5bb4b29"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a concealer for dark circles that is in the color sassy",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "b7f56949ca18947a",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

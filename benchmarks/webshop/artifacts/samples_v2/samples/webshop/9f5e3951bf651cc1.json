@@ -1,0 +1,175 @@
+{
+ "adapter": "webshop",
+ "cluster": "deodorants & antiperspirants",
+ "fidelity_notes": [],
+ "goal_idx": 382,
+ "ground_truth": {
+  "cardinality": 10,
+  "hash": "b2fc0fc2a64a43be4cc7c4e05bba6fe7",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B000GCE9JK\",[[\"scent\",\"powder fresh\"]]]",
+   "[\"B000GCJWBU\",[[\"flavor name\",\"fresh scent\"]]]",
+   "[\"B001ET7C5M\",[[\"scent\",\"fresh | cool\"]]]",
+   "[\"B001EWEP40\",[[\"style\",\"flower fresh\"]]]",
+   "[\"B001QZLE6W\",[[\"scent\",\"powder fresh\"]]]",
+   "[\"B003A4HSOE\",[[\"scent\",\"fresh\"]]]",
+   "[\"B0077AV0UA\",[[\"scent\",\"fresh\"]]]",
+   "[\"B0199TEKPS\",[[\"scent\",\"fresh\"]]]",
+   "[\"B01HLZTNZY\",[[\"style\",\"powder fresh\"]]]",
+   "[\"B085B15DLY\",[[\"scent\",\"powder fresh\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:anti perspirant",
+    "=",
+    "anti perspirant"
+   ],
+   [
+    "option:0",
+    "=",
+    "fresh"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "c1eb26fc76ab6535"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:anti perspirant",
+     "=",
+     "anti perspirant"
+    ],
+    [
+     "option:0",
+     "=",
+     "fresh"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning trying to train my new rescue parrot to say “good morning” instead of squawking at the top of his lungs when the sun comes up, and he kept stealing my cereal bites off the table while I was practicing with him. I also finally repotted my string of pearls plant that’s been looking super leggy lately, and I’m hoping putting it by the kitchen window will help it fill out more.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:anti perspirant",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning trying to train my new rescue parrot to say “good morning” instead of squawking at the top of his lungs when the sun comes up, and he kept stealing my cereal bites off the table while I was practicing with him. I also finally repotted my string of pearls plant that’s been looking super leggy lately, and I’m hoping putting it by the kitchen window will help it fill out more. I’m on the hunt for an antiperspirant with a fresh scent, and I don’t want to spend more than $30 on it.",
+ "render_attempts": 1,
+ "sample_id": "9f5e3951bf651cc1",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the deodorants & antiperspirants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1e74e8c9f7b4475b"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the deodorants & antiperspirants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "9e4803fe86169ce2"
+  },
+  {
+   "announcement": "Also, it needs to be fragrance free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1a28664737f920ac"
+  },
+  {
+   "announcement": "Also, it needs to be clinically proven.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3ddb1380a372c7ef"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5e7b918942dc1a4f"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a47ead37a4446841"
+  },
+  {
+   "announcement": "Actually, make it 2-pack vanilla spice instead of fresh.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8e10bbd8c09f6727"
+  },
+  {
+   "announcement": "Actually, make it 2-pack honeydew instead of fresh.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fa2781a8bf60652f"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 10,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 10,
+  "verdict": "ok"
+ },
+ "source_instruction": "can i get arm & hammer ultramax anti-perspirant deodorant with fresh scent",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "d9c84e68acb0b38c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

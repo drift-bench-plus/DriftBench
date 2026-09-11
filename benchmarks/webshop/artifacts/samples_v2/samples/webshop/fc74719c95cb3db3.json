@@ -1,0 +1,257 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's sandals",
+ "fidelity_notes": [],
+ "goal_idx": 263,
+ "ground_truth": {
+  "cardinality": 22,
+  "hash": "83bba7513a8493be306cb4b61a7b83d7",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B072QBW28W\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B07KW39FML\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B07RM2K6KR\",[[\"color\",\"pink 10cm\"],[\"size\",\"11\"]]]",
+   "[\"B07SBD8BHC\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B084YRH45M\",[[\"color\",\"z92-pink\"],[\"size\",\"11\"]]]",
+   "[\"B0863B7C5V\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B08BJ4SC66\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B08HD6L8XV\",[[\"color\",\"suede pink\"],[\"size\",\"11\"]]]",
+   "[\"B091KM1RMW\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B093FKQWG6\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B09494N1BC\",[[\"color\",\"hot pink buckle strap\"],[\"size\",\"11\"]]]",
+   "[\"B09DSQ6QSN\",[[\"color\",\"z3-pink\"],[\"size\",\"11\"]]]",
+   "[\"B09HL9DTF5\",[[\"color\",\"bubble pink\"],[\"size\",\"11\"]]]",
+   "[\"B09LRW4YGB\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B09ND9584P\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B09NKKJCJN\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B09NQ94Y7F\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B09NXR1ZT7\",[[\"color\",\"hot pink\"],[\"size\",\"11\"]]]",
+   "[\"B09PQ9G79P\",[[\"color\",\"pink\"],[\"size\",\"11 narrow\"]]]",
+   "[\"B09Q8JLBKR\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B09Q8LC1DZ\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]",
+   "[\"B09QKBY81N\",[[\"color\",\"pink\"],[\"size\",\"11\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high heel",
+    "=",
+    "high heel"
+   ],
+   [
+    "attr:rubber sole",
+    "=",
+    "rubber sole"
+   ],
+   [
+    "option:0",
+    "=",
+    "bubble pink"
+   ],
+   [
+    "option:1",
+    "=",
+    "11"
+   ],
+   [
+    "price_upper",
+    "<=",
+    100
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "234af16e1548aeaf"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "bubble pink"
+     ],
+     [
+      "option:0",
+      "a bubble-themed design/feature rather than the color bubble pink"
+     ]
+    ],
+    "surface": "a nice bubble"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high heel",
+     "=",
+     "high heel"
+    ],
+    [
+     "attr:rubber sole",
+     "=",
+     "rubber sole"
+    ],
+    [
+     "option:0",
+     "=",
+     "bubble pink"
+    ],
+    [
+     "option:1",
+     "=",
+     "11"
+    ],
+    [
+     "price_upper",
+     "<=",
+     100
+    ]
+   ],
+   [
+    [
+     "attr:high heel",
+     "=",
+     "high heel"
+    ],
+    [
+     "attr:rubber sole",
+     "=",
+     "rubber sole"
+    ],
+    [
+     "option:0",
+     "=",
+     "a bubble-themed design/feature rather than the color bubble pink"
+    ],
+    [
+     "option:1",
+     "=",
+     "11"
+    ],
+    [
+     "price_upper",
+     "<=",
+     100
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high heel",
+   "attr:rubber sole",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "3de99dab5fb6d5f0",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a pair of women’s sandals with a high heel and a rubber sole, they should be a size 11 and cost no more than $100, and I want them to come in a nice bubble.",
+ "render_attempts": 2,
+ "sample_id": "fc74719c95cb3db3",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's sandals instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "21d7c0d4c3070864"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's sandals instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "d916d3e1a1b32446"
+  },
+  {
+   "announcement": "Also, it needs to be lace closure.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "65f57077f7408247"
+  },
+  {
+   "announcement": "Also, it needs to be boots women.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ae3efa395e32ec86"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9487b9b3d9f22c38"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f65d68e9535807b7"
+  },
+  {
+   "announcement": "Actually, make it 0 # brown instead of bubble pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7919a55dfd9a37fb"
+  },
+  {
+   "announcement": "Actually, make it 01-beige instead of bubble pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ac70d2b218cdfbd2"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   22,
+   21
+  ],
+  "rule": "ambiguous",
+  "true_card": 22,
+  "verdict": "ok"
+ },
+ "source_instruction": "can you help me find a pair of women's high heel sandal with a rubber sole? i want bubble pink one and size 11.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "f5eed0bb56caa962",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "sample_id": "da5fd26d5162cc9f__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "da5fd26d5162cc9f",
+ "query": "I just picked up a new lavender phone case on my way home earlier, it has little hand-embroidered cherry blossoms on the corners and it fits my phone perfectly, I even got a matching popsocket that has a tiny cat paw charm hanging off of it. I stopped by my favorite boba shop on the way back too, they had a new honey oolong milk tea with golden boba that I\u2019d been wanting to try, and it was so good I already want to go back tomorrow to get another one. Oh also, I tried to turn my phone on a little while ago and it\u2019s asking me for a SIM PIN that I can\u2019t remember to unlock the card, and when I tried to use a friend\u2019s phone to check what was going on I found out my line is suspended because I have an overdue bill and my contract just ended, can you help me sort this out?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just picked up a new lavender phone case on my way home earlier, it has little hand-embroidered cherry blossoms on the corners and it fits my phone perfectly, I even got a matching popsocket that has a tiny cat paw charm hanging off of it. I stopped by my favorite boba shop on the way back too, they had a new honey oolong milk tea with golden boba that I\u2019d been wanting to try, and it was so good I already want to go back tomorrow to get another one.",
+  "retained": [
+   "fault:contract_end_suspension",
+   "fault:lock_sim_card_pin"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:contract_end_suspension",
+     "=",
+     "contract_end_suspension"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:contract_end_suspension",
+    "=",
+    "contract_end_suspension"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

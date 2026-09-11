@@ -1,0 +1,1052 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B077T3SP3V",
+    "cluster": "beverages",
+    "name": "Wyler’s Light Singles-To-Go Sugar Free Drink Mix, Cherry, 8 CT Per Box (Pack of 1)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "fruit punch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0d38337340cca11181055d15b608b268",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00D3A828Q\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B077T3SP3V\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B07PGLHYB6\",[[\"flavor\",\"fruit punch\"]]]",
+     "[\"B07SXBW9ZC\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B086XHTQMS\",[[\"flavor name\",\"fruit-puch\"]]]",
+     "[\"B08L9S4K39\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B099H8D9XZ\",[[\"flavor name\",\"fruit-puch\"]]]",
+     "[\"B09GK16X81\",[[\"flavor name\",\"fruit punch\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "2398dab1f90987e2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B077T3SP3V",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "fruit punch"
+     ],
+     "name": "Wyler’s Light Singles-To-Go Sugar Free Drink Mix, Cherry, 8 CT Per Box (Pack of 1)",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes",
+     "query": "beverages"
+    }
+   },
+   "source_record": "a25c9d6c424dcb8b",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B01DQ8VYHA",
+    "cluster": "beverages",
+    "name": "Kool-Aid Unsweetened Drink Mixes, 12-pc. Assortment",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes"
+   },
+   "bound_slots": [
+    "attr:source vitamin",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:source vitamin",
+     "=",
+     "source vitamin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2e5db765d6235b814ccb650f837f0fd5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0000GJ7DK\",[]]",
+     "[\"B0010XPXJO\",[]]",
+     "[\"B0010XRUOK\",[]]",
+     "[\"B0010XRUV8\",[]]",
+     "[\"B003GADAN0\",[]]",
+     "[\"B003L2EYWY\",[]]",
+     "[\"B0040R91DQ\",[]]",
+     "[\"B008JA73RG\",[]]",
+     "[\"B00AAV8SOY\",[]]",
+     "[\"B00D5FSLE4\",[]]",
+     "[\"B00D5FSLNK\",[]]",
+     "[\"B00D5FSNNI\",[]]",
+     "[\"B00DT54U7M\",[]]",
+     "[\"B00F88MA02\",[]]",
+     "[\"B00IIWPMHS\",[]]",
+     "[\"B00JD792DM\",[]]",
+     "[\"B00QF2L1PU\",[]]",
+     "[\"B00QUEP5AA\",[]]",
+     "[\"B00RB8Q8TQ\",[]]",
+     "[\"B00V994MAK\",[]]",
+     "[\"B01BO1STRE\",[]]",
+     "[\"B01DQ8VYHA\",[]]",
+     "[\"B01FISY1D0\",[]]",
+     "[\"B01FISY5VS\",[]]",
+     "[\"B01KIGD4EE\",[]]",
+     "[\"B077T3SP3V\",[]]",
+     "[\"B07LC819M5\",[]]",
+     "[\"B07R6Y3Y3R\",[]]",
+     "[\"B07WS1NPBF\",[]]",
+     "[\"B07X4YMXP4\",[]]",
+     "[\"B07X512KZT\",[]]",
+     "[\"B07YBKK1ZH\",[]]",
+     "[\"B07YBKLX1V\",[]]",
+     "[\"B07YBKXWRC\",[]]",
+     "[\"B07YBL7Y7X\",[]]",
+     "[\"B083X82WPD\",[]]",
+     "[\"B083X8316R\",[]]",
+     "[\"B083XFGLB3\",[]]",
+     "[\"B083XK3VQX\",[]]",
+     "[\"B083XNN3N4\",[]]",
+     "[\"B083XPRHHJ\",[]]",
+     "[\"B086M9LK7F\",[]]",
+     "[\"B08XY5SH65\",[]]",
+     "[\"B092MYHRL8\",[]]",
+     "[\"B0959BPZ13\",[]]",
+     "[\"B0959R6MCZ\",[]]",
+     "[\"B095X9K87M\",[]]",
+     "[\"B09BJYPMD5\",[]]",
+     "[\"B09BK2GKDL\",[]]",
+     "[\"B09D8MXL3Z\",[]]",
+     "[\"B09D8PZ66T\",[]]",
+     "[\"B09D8RFJSS\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "38b64bfd9d3bf2d4",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B01DQ8VYHA",
+     "attributes": [
+      "source vitamin"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Kool-Aid Unsweetened Drink Mixes, 12-pc. Assortment",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes",
+     "query": "beverages"
+    }
+   },
+   "source_record": "fb502ffe71333495",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003DNL9XI",
+    "cluster": "beverages",
+    "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks"
+   },
+   "bound_slots": [
+    "attr:caffeine free",
+    "attr:drink mix",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:caffeine free",
+     "=",
+     "caffeine free"
+    ],
+    [
+     "attr:drink mix",
+     "=",
+     "drink mix"
+    ],
+    [
+     "option:0",
+     "=",
+     "raspberry ice"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "71e7cc321997aa4b9e148e1ff72b4ed5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003DNL9XI\",[[\"flavor name\",\"raspberry ice\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "ec5a60e5c8d12100",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B003DNL9XI",
+     "attributes": [
+      "caffeine free",
+      "drink mix"
+     ],
+     "category": "",
+     "goal_options": [
+      "raspberry ice"
+     ],
+     "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003DNL9XI",
+    "cluster": "beverages",
+    "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks"
+   },
+   "bound_slots": [
+    "attr:caffeine free",
+    "attr:gluten free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:caffeine free",
+     "=",
+     "caffeine free"
+    ],
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "raspberry ice"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "71e7cc321997aa4b9e148e1ff72b4ed5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003DNL9XI\",[[\"flavor name\",\"raspberry ice\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "91eb23f820f2ce8a",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B003DNL9XI",
+     "attributes": [
+      "caffeine free",
+      "gluten free"
+     ],
+     "category": "",
+     "goal_options": [
+      "raspberry ice"
+     ],
+     "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003DNL9XI",
+    "cluster": "beverages",
+    "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks"
+   },
+   "bound_slots": [
+    "attr:caffeine free",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:caffeine free",
+     "=",
+     "caffeine free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "5836ba7cdaa35da9eba601850baa83f8",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000ED6SWW\",[]]",
+     "[\"B000EGIOR6\",[]]",
+     "[\"B000ESLJ62\",[]]",
+     "[\"B000I64LMO\",[]]",
+     "[\"B0010XPXJO\",[]]",
+     "[\"B0010XRUV8\",[]]",
+     "[\"B0016BWB2M\",[]]",
+     "[\"B001EPPLWM\",[]]",
+     "[\"B001FA1LGQ\",[]]",
+     "[\"B001IZI8FA\",[]]",
+     "[\"B001U2XK8Q\",[]]",
+     "[\"B002YJC990\",[]]",
+     "[\"B003B8NXZW\",[]]",
+     "[\"B003DNL9XI\",[]]",
+     "[\"B003DNL9Y2\",[]]",
+     "[\"B003DNL9ZG\",[]]",
+     "[\"B003N2RZPK\",[]]",
+     "[\"B003Y3Y4X4\",[]]",
+     "[\"B0040R91DQ\",[]]",
+     "[\"B0044VPFYC\",[]]",
+     "[\"B0049IGQF2\",[]]",
+     "[\"B004FEDBXU\",[]]",
+     "[\"B004FEGLRS\",[]]",
+     "[\"B004G7LQ2Y\",[]]",
+     "[\"B004M8TKA2\",[]]",
+     "[\"B006VKZCGK\",[]]",
+     "[\"B006VKZGZW\",[]]",
+     "[\"B007BNCIF4\",[]]",
+     "[\"B007SI43P0\",[]]",
+     "[\"B0082N4P7Q\",[]]",
+     "[\"B008OUM9SO\",[]]",
+     "[\"B008PGFR2W\",[]]",
+     "[\"B00929ZV5O\",[]]",
+     "[\"B00B7E5W9C\",[]]",
+     "[\"B00CLXCJ8A\",[]]",
+     "[\"B00CMCC1OM\",[]]",
+     "[\"B00CMCR9NK\",[]]",
+     "[\"B00CULCEW4\",[]]",
+     "[\"B00D0WPD4I\",[]]",
+     "[\"B00D5FSKWW\",[]]",
+     "[\"B00D5FSL5S\",[]]",
+     "[\"B00D5FSLE4\",[]]",
+     "[\"B00D5FSLNK\",[]]",
+     "[\"B00D5FSN5Q\",[]]",
+     "[\"B00D5FSNNI\",[]]",
+     "[\"B00D5FSNWY\",[]]",
+     "[\"B00D8N1EVK\",[]]",
+     "[\"B00DEPFKH6\",[]]",
+     "[\"B00DT54U7M\",[]]",
+     "[\"B00EFKX116\",[]]",
+     "[\"B00EFL3BMO\",[]]",
+     "[\"B00EVAO65K\",[]]",
+     "[\"B00FEMJHOE\",[]]",
+     "[\"B00H3TRAK4\",[]]",
+     "[\"B00HXY2XU6\",[]]",
+     "[\"B00HY7PYFS\",[]]",
+     "[\"B00I922XOW\",[]]",
+     "[\"B00IEFXUP0\",[]]",
+     "[\"B00IEFXUSM\",[]]",
+     "[\"B00IIWPMHS\",[]]",
+     "[\"B00IW9MMFW\",[]]",
+     "[\"B00IW9MNMY\",[]]",
+     "[\"B00IW9MP7W\",[]]",
+     "[\"B00JB13A38\",[]]",
+     "[\"B00JD792DM\",[]]",
+     "[\"B00JG8DOGY\",[]]",
+     "[\"B00JVLPIEW\",[]]",
+     "[\"B00K4OZWKK\",[]]",
+     "[\"B00N9UHFZG\",[]]",
+     "[\"B00NASAIFG\",[]]",
+     "[\"B00NE4JY4W\",[]]",
+     "[\"B00OCM77Q2\",[]]",
+     "[\"B00P33X2IG\",[]]",
+     "[\"B00PSQ9GJC\",[]]",
+     "[\"B00TA5RS5G\",[]]",
+     "[\"B00TACGISM\",[]]",
+     "[\"B00WQEB2BE\",[]]",
+     "[\"B00WTHPGKQ\",[]]",
+     "[\"B00X2Z4R36\",[]]",
+     "[\"B00X2Z8AHU\",[]]",
+     "[\"B00X76TRKS\",[]]",
+     "[\"B00XGXMHAY\",[]]",
+     "[\"B00YOQE8UO\",[]]",
+     "[\"B00Z19375K\",[]]",
+     "[\"B00Z1DL6I6\",[]]",
+     "[\"B00ZK6KUUY\",[]]",
+     "[\"B00ZQ926PW\",[]]",
+     "[\"B010FBABXO\",[]]",
+     "[\"B014JX2QOG\",[]]",
+     "[\"B015TI6CJ0\",[]]",
+     "[\"B01796N5IG\",[]]",
+     "[\"B01AVMA844\",[]]",
+     "[\"B01C7FQFN6\",[]]",
+     "[\"B01D7THLF2\",[]]",
+     "[\"B01DQ8VYHA\",[]]",
+     "[\"B01EZPZ8XO\",[]]",
+     "[\"B01EZPZAV4\",[]]",
+     "[\"B01F13PPWI\",[]]",
+     "[\"B01F7M86PQ\",[]]",
+     "[\"B01FISY1D0\",[]]",
+     "[\"B01FISY5VS\",[]]",
+     "[\"B01FJDQYDE\",[]]",
+     "[\"B01FOK5CO4\",[]]",
+     "[\"B01FOK5HHG\",[]]",
+     "[\"B01FOK5IFM\",[]]",
+     "[\"B01FOK5KN2\",[]]",
+     "[\"B01HFLJG4M\",[]]",
+     "[\"B01HFLJK7U\",[]]",
+     "[\"B01J28N6II\",[]]",
+     "[\"B01KIGD4EE\",[]]",
+     "[\"B01LTHY6MK\",[]]",
+     "[\"B01N5XZQ3B\",[]]",
+     "[\"B01N7ZCXI6\",[]]",
+     "[\"B06XD745ZZ\",[]]",
+     "[\"B06XHLGCV8\",[]]",
+     "[\"B06XRFFKPX\",[]]",
+     "[\"B06XZ9YBTB\",[]]",
+     "[\"B06XZNSKH4\",[]]",
+     "[\"B072FH4RQJ\",[]]",
+     "[\"B072JXD7XY\",[]]",
+     "[\"B072K9MNDG\",[]]",
+     "[\"B072KJNV3N\",[]]",
+     "[\"B073V9FL3F\",[]]",
+     "[\"B074D4L23K\",[]]",
+     "[\"B074WGRDX5\",[]]",
+     "[\"B075R7P7LJ\",[]]",
+     "[\"B0763F67JJ\",[]]",
+     "[\"B0763FGZCP\",[]]",
+     "[\"B076HCJPS4\",[]]",
+     "[\"B07736WRTC\",[]]",
+     "[\"B0774NGB7M\",[]]",
+     "[\"B077SRVY3L\",[]]",
+     "[\"B077ZWD8ZX\",[]]",
+     "[\"B0786YK9DJ\",[]]",
+     "[\"B0791XCGS1\",[]]",
+     "[\"B07C9LRNWL\",[]]",
+     "[\"B07CCW93W7\",[]]",
+     "[\"B07DBT84S8\",[]]",
+     "[\"B07GHZ6X43\",[]]",
+     "[\"B07GNVMMLD\",[]]",
+     "[\"B07H361H25\",[]]",
+     "[\"B07H8CMS8Y\",[]]",
+     "[\"B07HD8PTHL\",[]]",
+     "[\"B07J5SZTV3\",[]]",
+     "[\"B07J646XT8\",[]]",
+     "[\"B07JBHKYNZ\",[]]",
+     "[\"B07JCMFVB2\",[]]",
+     "[\"B07KJKLG73\",[]]",
+     "[\"B07L4X38XD\",[]]",
+     "[\"B07L4YJ897\",[]]",
+     "[\"B07MHJCTWW\",[]]",
+     "[\"B07MQFR535\",[]]",
+     "[\"B07MQG4GWC\",[]]",
+     "[\"B07MT3KZZS\",[]]",
+     "[\"B07MVRKKSZ\",[]]",
+     "[\"B07P3X7VVL\",[]]",
+     "[\"B07PGLHYB6\",[]]",
+     "[\"B07PGR5QBL\",[]]",
+     "[\"B07PZ8HKQ5\",[]]",
+     "[\"B07R6Y3Y3R\",[]]",
+     "[\"B07RG96MSC\",[]]",
+     "[\"B07RRM37KH\",[]]",
+     "[\"B07RW7HMV8\",[]]",
+     "[\"B07S4P9CBS\",[]]",
+     "[\"B07SB38NGX\",[]]",
+     "[\"B07TKN32C1\",[]]",
+     "[\"B07TM7P6Q2\",[]]",
+     "[\"B07VDB1845\",[]]",
+     "[\"B07VPCLM7K\",[]]",
+     "[\"B07WVF6P3Z\",[]]",
+     "[\"B07WZGG4ZF\",[]]",
+     "[\"B07WZVMJM6\",[]]",
+     "[\"B07X1TCY9S\",[]]",
+     "[\"B07X398DCY\",[]]",
+     "[\"B07X43KSM5\",[]]",
+     "[\"B07XX39LWR\",[]]",
+     "[\"B07Y2BB4Q7\",[]]",
+     "[\"B07Y2DVXTD\",[]]",
+     "[\"B07ZL6QZ51\",[]]",
+     "[\"B07ZQX2JYM\",[]]",
+     "[\"B081Y4JFN2\",[]]",
+     "[\"B0821MJKL4\",[]]",
+     "[\"B082BKJXT6\",[]]",
+     "[\"B083XCB4XV\",[]]",
+     "[\"B0845ZYLKL\",[]]",
+     "[\"B084NV8ZJ3\",[]]",
+     "[\"B0853ZGWK7\",[]]",
+     "[\"B086H7HVTD\",[]]",
+     "[\"B086R3RYK9\",[]]",
+     "[\"B088FZWX8Y\",[]]",
+     "[\"B089BRX3YC\",[]]",
+     "[\"B089LY655Q\",[]]",
+     "[\"B08B2FNFHJ\",[]]",
+     "[\"B08B2HZRBN\",[]]",
+     "[\"B08B2NG8CQ\",[]]",
+     "[\"B08B2S3Y9M\",[]]",
+     "[\"B08DFM8J3N\",[]]",
+     "[\"B08DHH1DLH\",[]]",
+     "[\"B08FK87KYY\",[]]",
+     "[\"B08GCZJX5P\",[]]",
+     "[\"B08JRBKJ6Z\",[]]",
+     "[\"B08L48CZ6Q\",[]]",
+     "[\"B08LZQ71Q2\",[]]",
+     "[\"B08M3JWXN8\",[]]",
+     "[\"B08N58DSJF\",[]]",
+     "[\"B08P2CFC1D\",[]]",
+     "[\"B08R5RKM41\",[]]",
+     "[\"B08TM7G23V\",[]]",
+     "[\"B08TMCV5QV\",[]]",
+     "[\"B0916FKTK6\",[]]",
+     "[\"B091D2DLHC\",[]]",
+     "[\"B092MYHRL8\",[]]",
+     "[\"B093998D6Q\",[]]",
+     "[\"B0939JNT43\",[]]",
+     "[\"B0939K1KPB\",[]]",
+     "[\"B093QPT9WY\",[]]",
+     "[\"B09436HZFC\",[]]",
+     "[\"B0949T3GC8\",[]]",
+     "[\"B094JHJSK7\",[]]",
+     "[\"B094QMS4S2\",[]]",
+     "[\"B094RHF8Z3\",[]]",
+     "[\"B095CRZ9LP\",[]]",
+     "[\"B0964HVY63\",[]]",
+     "[\"B096QZV36V\",[]]",
+     "[\"B0971VV99P\",[]]",
+     "[\"B097CN6LKG\",[]]",
+     "[\"B097CN8QQD\",[]]",
+     "[\"B09BG7DH6V\",[]]",
+     "[\"B09BP2HHSN\",[]]",
+     "[\"B09C15RQ8S\",[]]",
+     "[\"B09DGS1NPC\",[]]",
+     "[\"B09DTCSCJX\",[]]",
+     "[\"B09DTFLRN1\",[]]",
+     "[\"B09DTFTY59\",[]]",
+     "[\"B09DZ2NW32\",[]]",
+     "[\"B09DZ3TZF9\",[]]",
+     "[\"B09F9G7BHR\",[]]",
+     "[\"B09FRC4J9C\",[]]",
+     "[\"B09GL7JMVT\",[]]",
+     "[\"B09GL84119\",[]]",
+     "[\"B09GRR857F\",[]]",
+     "[\"B09GS491FQ\",[]]",
+     "[\"B09HGD19YN\",[]]",
+     "[\"B09JL22XFW\",[]]",
+     "[\"B09JXVR3W7\",[]]",
+     "[\"B09LMTXXH4\",[]]",
+     "[\"B09LR6R4LV\",[]]",
+     "[\"B09M2JVX55\",[]]",
+     "[\"B09M7JSJJ9\",[]]",
+     "[\"B09MWMQ5WW\",[]]",
+     "[\"B09MYHVRGP\",[]]",
+     "[\"B09NDGZYSD\",[]]",
+     "[\"B09NDXYRTH\",[]]",
+     "[\"B09PTMLSSZ\",[]]",
+     "[\"B09Q8FVRL7\",[]]",
+     "[\"B09QXB9PKC\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c8432e0bba46470c",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B003DNL9XI",
+     "attributes": [
+      "caffeine free"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003DNL9XI",
+    "cluster": "beverages",
+    "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks"
+   },
+   "bound_slots": [
+    "attr:caffeine free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:caffeine free",
+     "=",
+     "caffeine free"
+    ],
+    [
+     "option:0",
+     "=",
+     ".4 pack - 25.4 fl oz (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "01ddf3464996b8c15482aff2e93aada1",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003Y3Y4X4\",[[\"size\",\"12 fl oz (pack of 24)\"]]]",
+     "[\"B004FEDBXU\",[[\"size\",\"10 fl oz (pack of 24)\"]]]",
+     "[\"B00EFL3BMO\",[[\"size\",\".4 pack\"]]]",
+     "[\"B00OCM77Q2\",[[\"size\",\".4 pack\"]]]",
+     "[\"B00XGXMHAY\",[[\"size\",\"24 fl oz (pack of 12)\"]]]",
+     "[\"B06XD745ZZ\",[[\"size\",\"12 fl oz (pack of 12)\"]]]",
+     "[\"B072KJNV3N\",[[\"size\",\"12 fl oz (pack of 6)\"]]]",
+     "[\"B07JCMFVB2\",[[\"number of items\",\"4\"]]]",
+     "[\"B07MQFR535\",[[\"size\",\"8.5 fl oz (pack of 16)\"]]]",
+     "[\"B07RG96MSC\",[[\"size\",\".4 pack\"]]]",
+     "[\"B082BKJXT6\",[[\"size\",\"12 fl oz (pack of 12)\"]]]",
+     "[\"B08JRBKJ6Z\",[[\"size\",\"18 fl oz (pack of 24)\"]]]",
+     "[\"B08L48CZ6Q\",[[\"size\",\"4 pack\"]]]",
+     "[\"B09BG7DH6V\",[[\"size\",\"4 pack\"]]]",
+     "[\"B09MYHVRGP\",[[\"size\",\"pack of 3\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "cbbe2c7daf6cee44",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B003DNL9XI",
+     "attributes": [
+      "caffeine free"
+     ],
+     "category": "",
+     "goal_options": [
+      ".4 pack - 25.4 fl oz (pack of 1)"
+     ],
+     "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003DNL9XI",
+    "cluster": "beverages",
+    "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks"
+   },
+   "bound_slots": [
+    "attr:caffeine free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:caffeine free",
+     "=",
+     "caffeine free"
+    ],
+    [
+     "option:0",
+     "=",
+     "0.24 ounce (pack of 30)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0454468cf114437c5a83ddfc2eb7f095",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003DNL9XI\",[[\"size\",\"0.08 ounce (pack of 30)\"]]]",
+     "[\"B00OCM77Q2\",[[\"size\",\"0.48 ounce (pack of 6)\"]]]",
+     "[\"B00XGXMHAY\",[[\"size\",\"24 ounce (pack of 8)\"]]]",
+     "[\"B06XZ9YBTB\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+     "[\"B073V9FL3F\",[[\"size\",\"7 ounce (pack of 1)\"]]]",
+     "[\"B0791XCGS1\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+     "[\"B07L4YJ897\",[[\"size\",\"10 ounce (pack of 2)\"]]]",
+     "[\"B07PZ8HKQ5\",[[\"size\",\"0.81 ounce (pack of 12)\"]]]",
+     "[\"B09MYHVRGP\",[[\"size\",\"pack of 3\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "0431dfb89d394f4a",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B003DNL9XI",
+     "attributes": [
+      "caffeine free"
+     ],
+     "category": "",
+     "goal_options": [
+      "0.24 ounce (pack of 30)"
+     ],
+     "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B003DNL9XI",
+    "cluster": "beverages",
+    "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks"
+   },
+   "bound_slots": [
+    "attr:caffeine free",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:caffeine free",
+     "=",
+     "caffeine free"
+    ],
+    [
+     "option:0",
+     "=",
+     "raspberry ice"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "378e737758ee2fd9d73092ce154074ee",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003DNL9XI\",[[\"flavor name\",\"raspberry ice\"]]]",
+     "[\"B004M8TKA2\",[[\"flavor name\",\"raspberry\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "594fd1f2b914436e",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B003DNL9XI",
+     "attributes": [
+      "caffeine free"
+     ],
+     "category": "",
+     "goal_options": [
+      "raspberry ice"
+     ],
+     "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+     "price_upper": 1000000,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B077T3SP3V",
+     "cluster": "beverages",
+     "name": "Wyler’s Light Singles-To-Go Sugar Free Drink Mix, Cherry, 8 CT Per Box (Pack of 1)",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes"
+    }
+   },
+   "dst": "2398dab1f90987e2",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "a25c9d6c424dcb8b",
+   "src": "cfccaba15ac2f0b3"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B01DQ8VYHA",
+     "cluster": "beverages",
+     "name": "Kool-Aid Unsweetened Drink Mixes, 12-pc. Assortment",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes"
+    }
+   },
+   "dst": "38b64bfd9d3bf2d4",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "fb502ffe71333495",
+   "src": "cfccaba15ac2f0b3"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:drink mix",
+      "=",
+      "drink mix"
+     ]
+    ]
+   },
+   "dst": "ec5a60e5c8d12100",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "cfccaba15ac2f0b3"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:gluten free",
+      "=",
+      "gluten free"
+     ]
+    ]
+   },
+   "dst": "91eb23f820f2ce8a",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "cfccaba15ac2f0b3"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "raspberry ice"
+     ]
+    ]
+   },
+   "dst": "c8432e0bba46470c",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "cfccaba15ac2f0b3"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "raspberry ice",
+      ".4 pack - 25.4 fl oz (pack of 1)"
+     ]
+    ]
+   },
+   "dst": "cbbe2c7daf6cee44",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "cfccaba15ac2f0b3"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "raspberry ice",
+      "0.24 ounce (pack of 30)"
+     ]
+    ]
+   },
+   "dst": "0431dfb89d394f4a",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "cfccaba15ac2f0b3"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      60
+     ]
+    ]
+   },
+   "dst": "594fd1f2b914436e",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "cfccaba15ac2f0b3"
+  }
+ ],
+ "env_id": "webshop_f88bf6b57df18466",
+ "env_spec": {
+  "cluster": "beverages",
+  "env_id": "webshop_f88bf6b57df18466",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B003DNL9XI",
+   "cluster": "beverages",
+   "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+   "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks"
+  },
+  "bound_slots": [
+   "attr:caffeine free",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:caffeine free",
+    "=",
+    "caffeine free"
+   ],
+   [
+    "option:0",
+    "=",
+    "raspberry ice"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "ground_truth": {
+   "hash": "378e737758ee2fd9d73092ce154074ee",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B003DNL9XI\",[[\"flavor name\",\"raspberry ice\"]]]",
+    "[\"B004M8TKA2\",[[\"flavor name\",\"raspberry\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "cfccaba15ac2f0b3",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "beverages",
+   "goal": {
+    "asin": "B003DNL9XI",
+    "attributes": [
+     "caffeine free"
+    ],
+    "category": "",
+    "goal_options": [
+     "raspberry ice"
+    ],
+    "name": "Crystal Light Raspberry Ice Drink Mix (12-Quart), 1.3-Ounce Packages (Pack of 4)",
+    "price_upper": 60,
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Energy Drinks",
+    "query": "beverages"
+   }
+  },
+  "source_record": "35d17dfa9ec61288",
+  "unbound_slots": [
+   "attr:drink mix",
+   "attr:gluten free",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "5b368617daf53a03"
+}

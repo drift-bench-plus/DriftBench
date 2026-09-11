@@ -1,0 +1,126 @@
+{
+ "sample_id": "3d2c8389bc1e2d90__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "3d2c8389bc1e2d90",
+ "query": "I just got back from picking up my new rescue puppy this morning, he\u2019s a tiny golden retriever mix with the cutest white patch on his chest, and he spent the whole car ride curled up in my lap licking my wrist. I stopped at that new coffee shop on 5th street on the way home too, and their lavender oat milk latte was so good I already signed up for their rewards program. I also spent 20 minutes picking out a new soft dog bed for him from the pet store next door, it\u2019s blue and has little bone patterns all over it. But anyway, I\u2019m having an issue with my phone where I can\u2019t get any mobile data to work at all right now. I checked and airplane mode is turned on, my network preference is set wrong, I think my APN MMS settings got messed up somehow, data mode is off, my SIM card might not be seated right, and I\u2019m currently abroad right now with roaming turned off. Can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from picking up my new rescue puppy this morning, he\u2019s a tiny golden retriever mix with the cutest white patch on his chest, and he spent the whole car ride curled up in my lap licking my wrist. I stopped at that new coffee shop on 5th street on the way home too, and their lavender oat milk latte was so good I already signed up for their rewards program. I also spent 20 minutes picking out a new soft dog bed for him from the pet store next door, it\u2019s blue and has little bone patterns all over it. But anyway,",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:break_apn_mms_setting",
+   "fault:data_mode_off",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

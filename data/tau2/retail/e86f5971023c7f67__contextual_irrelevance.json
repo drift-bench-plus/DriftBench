@@ -1,0 +1,104 @@
+{
+ "sample_id": "e86f5971023c7f67__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "e86f5971023c7f67",
+ "query": "My golden retriever just knocked over my potted mint plant this morning and got soil all over the living room rug, I spent almost an hour scrubbing it out and I still can't get the faint green stain off. Then I went to make coffee and realized I forgot to buy creamer at the grocery store yesterday, so I had to drink it black which tasted so bitter I almost poured the whole mug down the drain. Oh, and my neighbor just texted me asking if I can feed their cat while they're out of town this weekend, I was so flustered I almost forgot why I reached out in the first place. I need to exchange a delivered item from order #W6908222: change item 8555936349 to item 4063058357, and use paypal_4518393 as the payment method for any related fees.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "My golden retriever just knocked over my potted mint plant this morning and got soil all over the living room rug, I spent almost an hour scrubbing it out and I still can't get the faint green stain off. Then I went to make coffee and realized I forgot to buy creamer at the grocery store yesterday, so I had to drink it black which tasted so bitter I almost poured the whole mug down the drain. Oh, and my neighbor just texted me asking if I can feed their cat while they're out of town this weekend, I was so flustered I almost forgot why I reached out in the first place.",
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"8555936349\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"4063058357\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W6908222\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_4518393\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"8555936349\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"4063058357\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W6908222\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_4518393\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

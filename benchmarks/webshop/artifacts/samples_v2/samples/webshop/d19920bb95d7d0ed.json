@@ -1,0 +1,170 @@
+{
+ "adapter": "webshop",
+ "cluster": "wearable technology",
+ "fidelity_notes": [],
+ "goal_idx": 361,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "35bfe0c3d9317940fb45a1ea5003c2cc",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07Q2185MM\",[[\"size\",\"large (6.7\\\"-9.1\\\")\"]]]",
+   "[\"B08DFZ5ZSF\",[[\"size\",\"large\"]]]",
+   "[\"B091Q1PKSS\",[[\"size\",\"large\"]]]",
+   "[\"B095GNWPRW\",[[\"size\",\"20mm - large (fits 6.1\\\"-8.3\\\"wrist)\"]]]",
+   "[\"B09PRGMGTC\",[[\"size\",\"large\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:light weight",
+    "=",
+    "light weight"
+   ],
+   [
+    "option:0",
+    "=",
+    "large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "e9001d16c0403a65"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:light weight",
+     "=",
+     "light weight"
+    ],
+    [
+     "option:0",
+     "=",
+     "large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I’ve been re-watching all the old seasons of that competitive baking show where contestants have to make elaborate three-tiered cakes with weird secret ingredient twists every round. Last night I binged four episodes straight and stayed up way too late, now I keep daydreaming about the matcha white chocolate ganache one baker made for the final challenge. I even looked up a copycat recipe this morning to try making it this weekend if I have time.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:light weight",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve been re-watching all the old seasons of that competitive baking show where contestants have to make elaborate three-tiered cakes with weird secret ingredient twists every round. Last night I binged four episodes straight and stayed up way too late, now I keep daydreaming about the matcha white chocolate ganache one baker made for the final challenge. I even looked up a copycat recipe this morning to try making it this weekend if I have time. Anyway, I’m shopping in the wearable technology section, I need something that’s light weight, I’d prefer a large option if available, and my price limit is 30.",
+ "render_attempts": 1,
+ "sample_id": "d19920bb95d7d0ed",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the wearable technology instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1bfefa80419e06b6"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the wearable technology instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "ba23cbf0ef4376c4"
+  },
+  {
+   "announcement": "Also, it needs to be screen protector.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "51210c63fc7d4944"
+  },
+  {
+   "announcement": "Also, it needs to be quick release.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b73c7a2cdbf85baf"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dcd356cdf5193097"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e20385d3eb189798"
+  },
+  {
+   "announcement": "Actually, make it 02 black | red instead of large.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4951baff37670506"
+  },
+  {
+   "announcement": "Actually, make it 004, pearl pink | marine green instead of large.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "aeac3f46e684917b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 5,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "looking for light weight fitbit versa bands for men women also choose size large",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "22207a9aaddc14d4",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

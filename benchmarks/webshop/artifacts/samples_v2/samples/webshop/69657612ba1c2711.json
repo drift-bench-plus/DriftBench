@@ -1,0 +1,178 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair treatment oils",
+ "fidelity_notes": [],
+ "goal_idx": 169,
+ "ground_truth": {
+  "cardinality": 10,
+  "hash": "fa8ac504e2c74b8ea68a7c22951a7379",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00ADR6L08\",[[\"style\",\"conditioner\"]]]",
+   "[\"B014RU0SG4\",[[\"pattern name\",\"shampoo and conditioner set 16 oz\"]]]",
+   "[\"B075WY457Q\",[[\"style name\",\"conditioner\"]]]",
+   "[\"B07HMVN5HZ\",[[\"style\",\"conditioner\"]]]",
+   "[\"B07NBHJ4BT\",[[\"style\",\"conditioner\"]]]",
+   "[\"B086CPB3WR\",[[\"style\",\"conditioner\"]]]",
+   "[\"B088KNJ3S8\",[[\"style\",\"conditioner\"]]]",
+   "[\"B08YJBVWNV\",[[\"color\",\"conditioner\"]]]",
+   "[\"B096ZFGXMJ\",[[\"size\",\"conditioner\"]]]",
+   "[\"B0971BX3V1\",[[\"scent\",\"conditioner\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:damaged hair",
+    "=",
+    "damaged hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "shampoo+conditioner"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "09e22a60c6b87e11"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:damaged hair",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for something for damaged hair in the hair treatment oils section, with a price limit of 20 dollars, and I want that one option too.",
+ "render_attempts": 1,
+ "sample_id": "69657612ba1c2711",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair treatment oils instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7cc446afb81cc0ac"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair treatment oils instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e6c178f1ef18663"
+  },
+  {
+   "announcement": "Also, it needs to be natural ingredients.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3f612d7bec05dced"
+  },
+  {
+   "announcement": "Also, it needs to be tea tree.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8b371cb649304913"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4efcee8c0fba6abf"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fa6a594caf52a0ce"
+  },
+  {
+   "announcement": "Actually, make it 16 ounce instead of shampoo+conditioner.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "077f7de7f88e15f7"
+  },
+  {
+   "announcement": "Actually, make it 16 fl oz (pack of 2) instead of shampoo+conditioner.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "edbabb14a4ae98f6"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 338,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 10,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want a 2-in-one shampoo and conditioner for damaged hair.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "11f3e6c9352e5d79",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

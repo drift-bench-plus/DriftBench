@@ -1,0 +1,249 @@
+{
+ "sample_id": "32b927305c61b250",
+ "tree_id": "94fa3adbec8af01e",
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "goal_idx": 319,
+ "split": "test",
+ "source_instruction": "i am looking for a 10 foot high speed coaxial cable.",
+ "query": "I need a high speed coaxial cable and a cable clip 10ft for under $40, I\u2019m browsing the satellite TV section right now. Oh and make sure it comes with a gold-plated F connector, that\u2019s non-negotiable for what I\u2019m setting up. I don\u2019t want to have to run back to the store later if the parts don\u2019t match my dish setup.",
+ "strategy_ids": [
+  "syntactic_ambiguity",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "syntactic_ambiguity+irrelevant_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "syntactic_ambiguity",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "syntactic_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "10ft",
+    "placements": [
+     [
+      "option:0",
+      "10ft"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "text": "a cable clip",
+    "condition": null
+   },
+   {
+    "text": "browsing the satellite TV section right now",
+    "condition": null
+   },
+   {
+    "text": "comes with a gold-plated F connector",
+    "condition": [
+     "attr:connector",
+     "=",
+     "gold-plated F connector"
+    ]
+   },
+   {
+    "text": "parts don't match my dish setup",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:coaxial cable",
+   "attr:high speed",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:coaxial cable",
+     "=",
+     "coaxial cable"
+    ],
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ],
+    [
+     "attr:connector",
+     "=",
+     "gold-plated F connector"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "c4c317f90eea056d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 9,
+  "lit_card": 11,
+  "components": {
+   "syntactic_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     9,
+     225
+    ],
+    "true_card": 9,
+    "readings": 2
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 9,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "d0a5f936f2a34a02",
+  "conditions": [
+   [
+    "attr:coaxial cable",
+    "=",
+    "coaxial cable"
+   ],
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "10ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 9,
+  "value": [
+   "[\"B003VBA33E\",[[\"size\",\"100ft\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"10ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"10ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"10ft (3 pack)\"]]]",
+   "[\"B07CQ96G4F\",[[\"size\",\"10ft\"]]]",
+   "[\"B07CQB2FZK\",[[\"size\",\"10ft\"]]]",
+   "[\"B091CKYSVL\",[[\"size\",\"10ft tv cable+10ft ethernet cat6a cable\"]]]",
+   "[\"B096KVYFN5\",[[\"size\",\"10 ft\"]]]",
+   "[\"B099RJGRRZ\",[[\"size\",\"10ft\"]]]"
+  ],
+  "hash": "4221a711fdb1815e0d5a86da38debf16"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0d4271e27a5b21d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7845bdf8528c5ec1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7225c7d2bae77703",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gold plated."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a68ff6ecfb073629",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be extension cable."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "010fca387bb20a49",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ad6e60cfab4b5c0b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "85ea4f616a9fea84",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it 20 ft instead of 10ft."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "9c6fe7d7f60d5b07",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it 85ft instead of 10ft."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

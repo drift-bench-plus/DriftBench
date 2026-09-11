@@ -1,0 +1,854 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B09NCJH6D6",
+    "cluster": "alcoholic beverages",
+    "name": "Better Booch Organic Kombucha - Probiotic & Antioxidant Rich Raw Sparkling Tea - Low Sugar, Vegan, Gluten Free - Gut Healing Active Cultures - Happy Apple Flavor, 16 Fl Oz Cans, 9-Pack",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Sparkling Juice"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "ginger boost"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1503353d16e7bf09f7e30d6e0ec4d646",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B01M0LHANQ\",[[\"flavor name\",\"ginger\"]]]",
+     "[\"B0863FCYCV\",[[\"flavor name\",\"ginger\"]]]",
+     "[\"B08QW7RQ4F\",[[\"flavor name\",\"ginger\"]]]",
+     "[\"B09NCJH6D6\",[[\"flavor name\",\"ginger boost\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "700c665f6cd77f27",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "alcoholic beverages",
+    "goal": {
+     "asin": "B09NCJH6D6",
+     "attributes": [
+      "gluten free"
+     ],
+     "category": "",
+     "goal_options": [
+      "ginger boost"
+     ],
+     "name": "Better Booch Organic Kombucha - Probiotic & Antioxidant Rich Raw Sparkling Tea - Low Sugar, Vegan, Gluten Free - Gut Healing Active Cultures - Happy Apple Flavor, 16 Fl Oz Cans, 9-Pack",
+     "price_upper": 50,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Sparkling Juice",
+     "query": "alcoholic beverages"
+    }
+   },
+   "source_record": "864253f8e5e08711",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GB9MX2J",
+    "cluster": "alcoholic beverages",
+    "name": "DaVinci Gourmet Black Cherry Syrup, 4 Count, 25.4 Fl Oz",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "french vanilla"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "3c58c8297dec7da5297d4d5d9cbd9965",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00QU0GSDW\",[[\"flavor name\",\"40 decaf french roast & 40 decaf vanilla\"]]]",
+     "[\"B00VZ3NMAG\",[[\"flavor name\",\"sugar free french vanilla\"]]]",
+     "[\"B01MUHN1HC\",[[\"flavor name\",\"vanilla\"]]]",
+     "[\"B07GB9MX2J\",[[\"flavor name\",\"french vanilla\"]]]",
+     "[\"B07W14J4W3\",[[\"flavor name\",\"vanilla\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f29f8904846eb1e5",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "alcoholic beverages",
+    "goal": {
+     "asin": "B07GB9MX2J",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "french vanilla"
+     ],
+     "name": "DaVinci Gourmet Black Cherry Syrup, 4 Count, 25.4 Fl Oz",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups",
+     "query": "alcoholic beverages"
+    }
+   },
+   "source_record": "58cf936563824384",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B005Z6LGYS",
+    "cluster": "alcoholic beverages",
+    "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water"
+   },
+   "bound_slots": [
+    "attr:artificial ingredients",
+    "attr:high fructose",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:artificial ingredients",
+     "=",
+     "artificial ingredients"
+    ],
+    [
+     "attr:high fructose",
+     "=",
+     "high fructose"
+    ],
+    [
+     "option:0",
+     "=",
+     "citrus"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "60c46315db25366c51f0f3269deeaa69",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08PW3Y1DM\",[[\"flavor name\",\"dry citrus tonic\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "cf9cc98d3dd66929",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "alcoholic beverages",
+    "goal": {
+     "asin": "B005Z6LGYS",
+     "attributes": [
+      "artificial ingredients",
+      "high fructose"
+     ],
+     "category": "",
+     "goal_options": [
+      "citrus"
+     ],
+     "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+     "price_upper": 120,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water",
+     "query": "alcoholic beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B005Z6LGYS",
+    "cluster": "alcoholic beverages",
+    "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:high fructose",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:high fructose",
+     "=",
+     "high fructose"
+    ],
+    [
+     "option:0",
+     "=",
+     "citrus"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "60c46315db25366c51f0f3269deeaa69",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08PW3Y1DM\",[[\"flavor name\",\"dry citrus tonic\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7429fcc26c217882",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "alcoholic beverages",
+    "goal": {
+     "asin": "B005Z6LGYS",
+     "attributes": [
+      "gluten free",
+      "high fructose"
+     ],
+     "category": "",
+     "goal_options": [
+      "citrus"
+     ],
+     "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+     "price_upper": 120,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water",
+     "query": "alcoholic beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B005Z6LGYS",
+    "cluster": "alcoholic beverages",
+    "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water"
+   },
+   "bound_slots": [
+    "attr:high fructose",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:high fructose",
+     "=",
+     "high fructose"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "a627ce6287b3bbb9841d83e1db4c8935",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000BH1NQW\",[]]",
+     "[\"B000YT9LSY\",[]]",
+     "[\"B000YTCDJS\",[]]",
+     "[\"B0015GPUJY\",[]]",
+     "[\"B004XO3S5I\",[]]",
+     "[\"B004XO4DD4\",[]]",
+     "[\"B005Z6LGYS\",[]]",
+     "[\"B006LPJB5I\",[]]",
+     "[\"B006LPK7YC\",[]]",
+     "[\"B0078DRBE0\",[]]",
+     "[\"B00A66R33U\",[]]",
+     "[\"B00A66RCMW\",[]]",
+     "[\"B00A66RLKK\",[]]",
+     "[\"B00A66TJSW\",[]]",
+     "[\"B00A66UGPM\",[]]",
+     "[\"B00A66UQIO\",[]]",
+     "[\"B00A66V0X4\",[]]",
+     "[\"B00BWW8HMS\",[]]",
+     "[\"B00BWW8JA8\",[]]",
+     "[\"B00BWW9CCC\",[]]",
+     "[\"B00GY0G2YS\",[]]",
+     "[\"B00GY0G30Q\",[]]",
+     "[\"B00GY0G68U\",[]]",
+     "[\"B00GY1AMWU\",[]]",
+     "[\"B00H267MWY\",[]]",
+     "[\"B00HUCJHKA\",[]]",
+     "[\"B00HZ3BJLY\",[]]",
+     "[\"B00J1NTT5E\",[]]",
+     "[\"B00W8FA8P2\",[]]",
+     "[\"B00XH0277E\",[]]",
+     "[\"B018ES5DYM\",[]]",
+     "[\"B01F33PJQI\",[]]",
+     "[\"B01NCA6Y8C\",[]]",
+     "[\"B06XJ9321Z\",[]]",
+     "[\"B071GR36QN\",[]]",
+     "[\"B0721Q6N7C\",[]]",
+     "[\"B072KKLSZ5\",[]]",
+     "[\"B072N5DVXW\",[]]",
+     "[\"B072N5G7Y8\",[]]",
+     "[\"B072R4B8B2\",[]]",
+     "[\"B076CVKRV8\",[]]",
+     "[\"B076NVPW1Y\",[]]",
+     "[\"B076XWBF48\",[]]",
+     "[\"B0783RHBLD\",[]]",
+     "[\"B07889L742\",[]]",
+     "[\"B0788D3ZG3\",[]]",
+     "[\"B07CZLJ8TJ\",[]]",
+     "[\"B07CZLVZ7X\",[]]",
+     "[\"B07DQSB9M9\",[]]",
+     "[\"B07F45Z4S6\",[]]",
+     "[\"B07FYLP2T4\",[]]",
+     "[\"B07FYZHXRJ\",[]]",
+     "[\"B07G7Y9NV8\",[]]",
+     "[\"B07GC7L376\",[]]",
+     "[\"B07GC9D8LP\",[]]",
+     "[\"B07JHB6VKV\",[]]",
+     "[\"B07KB8KGS9\",[]]",
+     "[\"B07KJNFZGF\",[]]",
+     "[\"B07NDH9D9Y\",[]]",
+     "[\"B07RJZ66SY\",[]]",
+     "[\"B07TJT1CQ7\",[]]",
+     "[\"B07VHWCV85\",[]]",
+     "[\"B081GBF1VC\",[]]",
+     "[\"B084ZWN16N\",[]]",
+     "[\"B085D9534T\",[]]",
+     "[\"B085DBQHF3\",[]]",
+     "[\"B086H9J1N8\",[]]",
+     "[\"B086WB8S45\",[]]",
+     "[\"B087CYM49L\",[]]",
+     "[\"B08B46RMPL\",[]]",
+     "[\"B08B47L63W\",[]]",
+     "[\"B08B48VQR9\",[]]",
+     "[\"B08GJ6XXSH\",[]]",
+     "[\"B08J8FLYMH\",[]]",
+     "[\"B08KG6YHGG\",[]]",
+     "[\"B08LP4T5GN\",[]]",
+     "[\"B08MNCTNSM\",[]]",
+     "[\"B08NCMCKLG\",[]]",
+     "[\"B08PC988LJ\",[]]",
+     "[\"B08PPVPGVH\",[]]",
+     "[\"B08PW3Y1DM\",[]]",
+     "[\"B08TMS15BB\",[]]",
+     "[\"B08WN7H9V6\",[]]",
+     "[\"B08WS335JK\",[]]",
+     "[\"B08X1SS94X\",[]]",
+     "[\"B08XDKFYLC\",[]]",
+     "[\"B08XZWZQMB\",[]]",
+     "[\"B095CRW76R\",[]]",
+     "[\"B095CVD528\",[]]",
+     "[\"B095Z48BS7\",[]]",
+     "[\"B0987Y6MJ1\",[]]",
+     "[\"B09B2W7QBM\",[]]",
+     "[\"B09BBC3PSP\",[]]",
+     "[\"B09BBLPRGG\",[]]",
+     "[\"B09DLYKTL3\",[]]",
+     "[\"B09F9WQLCJ\",[]]",
+     "[\"B09F9Z5Y7J\",[]]",
+     "[\"B09FC39MKL\",[]]",
+     "[\"B09L7BLNKD\",[]]",
+     "[\"B09MDN33XJ\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "bfd10e1b407bd479",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "alcoholic beverages",
+    "goal": {
+     "asin": "B005Z6LGYS",
+     "attributes": [
+      "high fructose"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+     "price_upper": 120,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water",
+     "query": "alcoholic beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B005Z6LGYS",
+    "cluster": "alcoholic beverages",
+    "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water"
+   },
+   "bound_slots": [
+    "attr:high fructose",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:high fructose",
+     "=",
+     "high fructose"
+    ],
+    [
+     "option:0",
+     "=",
+     "11.1 fl oz (pack of 24)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0e46c86f7ab559ed6d3466e715a6cd49",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B005Z6LGYS\",[[\"size\",\"6.8 fl oz (pack of 24)\"]]]",
+     "[\"B00XH0277E\",[[\"size\",\"24 fl oz (pack of 12)\"]]]",
+     "[\"B0783RHBLD\",[[\"size\",\"8 fl oz (pack of 1)\"]]]",
+     "[\"B07DQSB9M9\",[[\"size\",\"33.8 fl oz (pack of 1)\"]]]",
+     "[\"B087CYM49L\",[[\"size\",\"6.7 fl oz (pack of 24)\"]]]",
+     "[\"B08GJ6XXSH\",[[\"size\",\"16 fl oz (pack of 1)\"]]]",
+     "[\"B08PW3Y1DM\",[[\"size\",\"8.12 fl oz (pack of 24)\"]]]",
+     "[\"B08TMS15BB\",[[\"size\",\"8 fl oz (pack of 24)\"]]]",
+     "[\"B08XZWZQMB\",[[\"size\",\"1 pack\"]]]",
+     "[\"B09F9WQLCJ\",[[\"size\",\"6.8 fl oz (pack of 24)\"]]]",
+     "[\"B09F9Z5Y7J\",[[\"size\",\"6.8 fl oz (pack of 24)\"]]]",
+     "[\"B09FC39MKL\",[[\"size\",\"6.8 fl oz (pack of 24)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "1c76d493f0391058",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "alcoholic beverages",
+    "goal": {
+     "asin": "B005Z6LGYS",
+     "attributes": [
+      "high fructose"
+     ],
+     "category": "",
+     "goal_options": [
+      "11.1 fl oz (pack of 24)"
+     ],
+     "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+     "price_upper": 120,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water",
+     "query": "alcoholic beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B005Z6LGYS",
+    "cluster": "alcoholic beverages",
+    "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water"
+   },
+   "bound_slots": [
+    "attr:high fructose",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:high fructose",
+     "=",
+     "high fructose"
+    ],
+    [
+     "option:0",
+     "=",
+     "11.1 fl oz (pack of 6)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "39a31c7dd377c524c6d15ac04be3c742",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B005Z6LGYS\",[[\"size\",\"16.9 fl oz (pack of 1)\"]]]",
+     "[\"B0783RHBLD\",[[\"size\",\"16 fl oz (pack of 1)\"]]]",
+     "[\"B07DQSB9M9\",[[\"size\",\"33.8 fl oz (pack of 1)\"]]]",
+     "[\"B087CYM49L\",[[\"size\",\"6.7 fl oz (pack of 24)\"]]]",
+     "[\"B08GJ6XXSH\",[[\"size\",\"16 fl oz (pack of 1)\"]]]",
+     "[\"B08TMS15BB\",[[\"size\",\"32 fl oz (pack of 6)\"]]]",
+     "[\"B08XZWZQMB\",[[\"size\",\"1 pack\"]]]",
+     "[\"B095Z48BS7\",[[\"size\",\"32 fl oz (pack of 6)\"]]]",
+     "[\"B09F9WQLCJ\",[[\"size\",\"6.8 fl oz (pack of 12)\"]]]",
+     "[\"B09F9Z5Y7J\",[[\"size\",\"6.8 fl oz (pack of 12)\"]]]",
+     "[\"B09FC39MKL\",[[\"size\",\"6.8 fl oz (pack of 12)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "b0eb969773263a76",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "alcoholic beverages",
+    "goal": {
+     "asin": "B005Z6LGYS",
+     "attributes": [
+      "high fructose"
+     ],
+     "category": "",
+     "goal_options": [
+      "11.1 fl oz (pack of 6)"
+     ],
+     "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+     "price_upper": 120,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water",
+     "query": "alcoholic beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B005Z6LGYS",
+    "cluster": "alcoholic beverages",
+    "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water"
+   },
+   "bound_slots": [
+    "attr:high fructose",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:high fructose",
+     "=",
+     "high fructose"
+    ],
+    [
+     "option:0",
+     "=",
+     "citrus"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "b3eba65f349c8603c3340dc1587f3f5c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B005Z6LGYS\",[[\"flavor name\",\"citrus\"]]]",
+     "[\"B07CZLVZ7X\",[[\"flavor name\",\"citrus\"]]]",
+     "[\"B08PW3Y1DM\",[[\"flavor name\",\"dry citrus tonic\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "e3813401fec811f4",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "alcoholic beverages",
+    "goal": {
+     "asin": "B005Z6LGYS",
+     "attributes": [
+      "high fructose"
+     ],
+     "category": "",
+     "goal_options": [
+      "citrus"
+     ],
+     "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+     "price_upper": 1000000,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water",
+     "query": "alcoholic beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B09NCJH6D6",
+     "cluster": "alcoholic beverages",
+     "name": "Better Booch Organic Kombucha - Probiotic & Antioxidant Rich Raw Sparkling Tea - Low Sugar, Vegan, Gluten Free - Gut Healing Active Cultures - Happy Apple Flavor, 16 Fl Oz Cans, 9-Pack",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Sparkling Juice"
+    }
+   },
+   "dst": "700c665f6cd77f27",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "864253f8e5e08711",
+   "src": "89f5663644d6a499"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07GB9MX2J",
+     "cluster": "alcoholic beverages",
+     "name": "DaVinci Gourmet Black Cherry Syrup, 4 Count, 25.4 Fl Oz",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups"
+    }
+   },
+   "dst": "f29f8904846eb1e5",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "58cf936563824384",
+   "src": "89f5663644d6a499"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:artificial ingredients",
+      "=",
+      "artificial ingredients"
+     ]
+    ]
+   },
+   "dst": "cf9cc98d3dd66929",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "89f5663644d6a499"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:gluten free",
+      "=",
+      "gluten free"
+     ]
+    ]
+   },
+   "dst": "7429fcc26c217882",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "89f5663644d6a499"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "citrus"
+     ]
+    ]
+   },
+   "dst": "bfd10e1b407bd479",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "89f5663644d6a499"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "citrus",
+      "11.1 fl oz (pack of 24)"
+     ]
+    ]
+   },
+   "dst": "1c76d493f0391058",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "89f5663644d6a499"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "citrus",
+      "11.1 fl oz (pack of 6)"
+     ]
+    ]
+   },
+   "dst": "b0eb969773263a76",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "89f5663644d6a499"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      120
+     ]
+    ]
+   },
+   "dst": "e3813401fec811f4",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "89f5663644d6a499"
+  }
+ ],
+ "env_id": "webshop_2096303a8868b9fa",
+ "env_spec": {
+  "cluster": "alcoholic beverages",
+  "env_id": "webshop_2096303a8868b9fa",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B005Z6LGYS",
+   "cluster": "alcoholic beverages",
+   "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+   "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water"
+  },
+  "bound_slots": [
+   "attr:high fructose",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:high fructose",
+    "=",
+    "high fructose"
+   ],
+   [
+    "option:0",
+    "=",
+    "citrus"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "ground_truth": {
+   "hash": "b3eba65f349c8603c3340dc1587f3f5c",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B005Z6LGYS\",[[\"flavor name\",\"citrus\"]]]",
+    "[\"B07CZLVZ7X\",[[\"flavor name\",\"citrus\"]]]",
+    "[\"B08PW3Y1DM\",[[\"flavor name\",\"dry citrus tonic\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "89f5663644d6a499",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "alcoholic beverages",
+   "goal": {
+    "asin": "B005Z6LGYS",
+    "attributes": [
+     "high fructose"
+    ],
+    "category": "",
+    "goal_options": [
+     "citrus"
+    ],
+    "name": "Fever-Tree Premium Indian Tonic Water, 6.8 Fl Oz (pack of 4)",
+    "price_upper": 120,
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Water › Tonic Water",
+    "query": "alcoholic beverages"
+   }
+  },
+  "source_record": "1c045dcc8b4b6d3f",
+  "unbound_slots": [
+   "attr:artificial ingredients",
+   "attr:gluten free",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "e9e72e3bb8bf1b5b"
+}

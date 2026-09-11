@@ -1,0 +1,137 @@
+{
+ "sample_id": "53e73e5c77733a79__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "53e73e5c77733a79",
+ "query": "Oh, I just have to say, the homemade lavender lemonade I picked up from the farmers market this morning was so refreshing, I\u2019ve already finished half the pitcher and I\u2019m already debating going back tomorrow to get more. My neighbor\u2019s golden retriever puppy also stopped by my porch earlier, he\u2019s still learning not to chew on doormats and it was honestly the cutest thing I\u2019ve seen all week. Oh, and I finally got around to watching that new cozy mystery show everyone\u2019s been talking about last night, the plot twist at the end of the first episode had me gasping out loud, I can\u2019t wait to watch the next episode tonight. Anyway, I need to update the shipping address for my recent order, my user ID is noah_patel_6952, the new address is 517 Lakeview Drive, Suite 183, Seattle, WA 98195, USA.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh, I just have to say, the homemade lavender lemonade I picked up from the farmers market this morning was so refreshing, I\u2019ve already finished half the pitcher and I\u2019m already debating going back tomorrow to get more. My neighbor\u2019s golden retriever puppy also stopped by my porch earlier, he\u2019s still learning not to chew on doormats and it was honestly the cutest thing I\u2019ve seen all week. Oh, and I finally got around to watching that new cozy mystery show everyone\u2019s been talking about last night, the plot twist at the end of the first episode had me gasping out loud, I can\u2019t wait to watch the next episode tonight.",
+  "retained": [
+   "arg:0:modify_user_address:address1",
+   "arg:0:modify_user_address:address2",
+   "arg:0:modify_user_address:city",
+   "arg:0:modify_user_address:country",
+   "arg:0:modify_user_address:state",
+   "arg:0:modify_user_address:user_id",
+   "arg:0:modify_user_address:zip"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_user_address:address1",
+     "=",
+     "\"517 Lakeview Drive\""
+    ],
+    [
+     "arg:0:modify_user_address:address2",
+     "=",
+     "\"Suite 183\""
+    ],
+    [
+     "arg:0:modify_user_address:city",
+     "=",
+     "\"Seattle\""
+    ],
+    [
+     "arg:0:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_user_address:state",
+     "=",
+     "\"WA\""
+    ],
+    [
+     "arg:0:modify_user_address:user_id",
+     "=",
+     "\"noah_patel_6952\""
+    ],
+    [
+     "arg:0:modify_user_address:zip",
+     "=",
+     "\"98195\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_user_address:address1",
+    "=",
+    "\"517 Lakeview Drive\""
+   ],
+   [
+    "arg:0:modify_user_address:address2",
+    "=",
+    "\"Suite 183\""
+   ],
+   [
+    "arg:0:modify_user_address:city",
+    "=",
+    "\"Seattle\""
+   ],
+   [
+    "arg:0:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_user_address:state",
+    "=",
+    "\"WA\""
+   ],
+   [
+    "arg:0:modify_user_address:user_id",
+    "=",
+    "\"noah_patel_6952\""
+   ],
+   [
+    "arg:0:modify_user_address:zip",
+    "=",
+    "\"98195\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

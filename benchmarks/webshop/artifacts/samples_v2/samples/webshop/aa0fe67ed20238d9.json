@@ -1,0 +1,182 @@
+{
+ "adapter": "webshop",
+ "cluster": "milks & creams",
+ "fidelity_notes": [],
+ "goal_idx": 475,
+ "ground_truth": {
+  "cardinality": 14,
+  "hash": "b6df1752cf70633c7cc68275a7cf7953",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00AF7XMYY\",[[\"size\",\"5.4 fl oz (pack of 12)\"]]]",
+   "[\"B00BBDJJL6\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B00RBACCJO\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B01IDDS444\",[[\"size\",\"12 fl oz (pack of 1)\"]]]",
+   "[\"B06XTGX3SG\",[[\"size\",\"12.2 fl oz (pack of 1)\"]]]",
+   "[\"B07NJ5TM46\",[[\"size\",\"12 packs\"]]]",
+   "[\"B07VMTFQV4\",[[\"number of items\",\"12\"]]]",
+   "[\"B07XVQTPC9\",[[\"size\",\"13.5 fl oz (pack of 12)\"]]]",
+   "[\"B081P3B73H\",[[\"number of items\",\"12\"]]]",
+   "[\"B083ST8KSK\",[[\"size\",\"11.4 fl oz (pack of 12)\"]]]",
+   "[\"B086CLFBFK\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B08NPJ6Q94\",[[\"size\",\"12 pack\"]]]",
+   "[\"B0916ML338\",[[\"size\",\"pack of 12\"]]]",
+   "[\"B09DFVX42H\",[[\"size\",\"13.5 ounce (pack of 12)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "option:0",
+    "=",
+    "12 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "c65196b4b9152670"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "12 pack"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:gluten free",
+   "option:0"
+  ],
+  "spec_id": "45034283175eebd4",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for gluten free milks & creams in a 12 pack, and I need it to stay under that one limit I always stick to for these orders.",
+ "render_attempts": 2,
+ "sample_id": "aa0fe67ed20238d9",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the milks & creams instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "286279cef0dab79c"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the milks & creams instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a7aaa77bb9c8deed"
+  },
+  {
+   "announcement": "Also, it needs to be healthy snack.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7b2e24a17661e29f"
+  },
+  {
+   "announcement": "Also, it needs to be brown sugar.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c230527304c57592"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "133c61b9f21a394a"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d45296c7a7c0fe47"
+  },
+  {
+   "announcement": "Actually, make it 1 pound instead of 12 pack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1fa93448b9dbfa1e"
+  },
+  {
+   "announcement": "Actually, make it 1-lb bag instead of 12 pack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "46ef2b613776a2c2"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 24,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 14,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a 12 pack of gluten free almonds.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "a19338bd61427da3",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

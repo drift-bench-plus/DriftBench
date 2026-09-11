@@ -1,0 +1,189 @@
+{
+ "sample_id": "551bb1b0a62f41f3",
+ "tree_id": "6f1b473ddfa74c05",
+ "adapter": "webshop",
+ "cluster": "toothpicks",
+ "goal_idx": 159,
+ "split": "test",
+ "source_instruction": "i would like a pattern 21 cake topper for a birthday party.",
+ "query": "My cousin just got a rescue tabby cat that keeps knocking over her potted succulents off the windowsill, she\u2019s been posting nonstop about how the little orange gremlin chews on the plant leaves too. I spent twenty minutes last night scrolling through silly cat videos of kitties stealing socks out of laundry baskets, and I almost burned my microwave popcorn because I was laughing so hard at one where a cat wore a tiny cowboy hat and fell off a couch. The neighbor down the hall mentioned they\u2019re throwing a birthday party next weekend, I\u2019ve heard picks marked 21 work really well when you\u2019re sticking to a $20 budget in this section.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+indirect_intent",
+  "family": "intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "indirect_intent"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "My cousin just got a rescue tabby cat that keeps knocking over her potted succulents off the windowsill, she\u2019s been posting nonstop about how the little orange gremlin chews on the plant leaves too. I spent twenty minutes last night scrolling through silly cat videos of kitties stealing socks out of laundry baskets, and I almost burned my microwave popcorn because I was laughing so hard at one where a cat wore a tiny cowboy hat and fell off a couch.",
+  "retained": [
+   "attr:birthday party",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:birthday party",
+     "=",
+     "birthday party"
+    ],
+    [
+     "option:0",
+     "=",
+     "21"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "02bc26d92e3e4721"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 20,
+  "lit_card": 20,
+  "components": {}
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "e2643cf5f741c5e9",
+  "conditions": [
+   [
+    "attr:birthday party",
+    "=",
+    "birthday party"
+   ],
+   [
+    "option:0",
+    "=",
+    "21"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 20,
+  "value": [
+   "[\"B07PT3T483\",[[\"color\",\"21 birthday cake topper\"]]]",
+   "[\"B07VXM53T5\",[[\"color\",\"21 - centerpiece sticks\"]]]",
+   "[\"B07W484LLV\",[[\"pattern name\",\"21 pcs cupcake toppers\"]]]",
+   "[\"B07WK1QBNB\",[[\"pattern name\",\"21\"]]]",
+   "[\"B086CWFZQG\",[[\"size\",\"21\"]]]",
+   "[\"B08DR9N34F\",[[\"flavor name\",\"21\"]]]",
+   "[\"B08JKHLN4B\",[[\"color\",\"21 cupcake toppers\"]]]",
+   "[\"B08PCZTV1P\",[[\"pattern name\",\"cheers 21\"]]]",
+   "[\"B08PZ4VCR4\",[[\"pattern name\",\"21\"]]]",
+   "[\"B093QDDCK3\",[[\"pattern name\",\"21\"]]]",
+   "[\"B0967TTL9K\",[[\"style\",\"21\"]]]",
+   "[\"B0967WBF7C\",[[\"style\",\"21\"]]]",
+   "[\"B0971BMZJB\",[[\"pattern name\",\"21\"]]]",
+   "[\"B0971CFLHW\",[[\"pattern name\",\"21\"]]]",
+   "[\"B0971CHBSM\",[[\"pattern name\",\"21\"]]]",
+   "[\"B0971CW3S9\",[[\"pattern name\",\"21\"]]]",
+   "[\"B09DDBNDFT\",[[\"color\",\"ad-21-065\"]]]",
+   "[\"B09FQ77MSZ\",[[\"pattern name\",\"21\"]]]",
+   "[\"B09FQ7W2G3\",[[\"pattern name\",\"21\"]]]",
+   "[\"B09FQ9Q2PH\",[[\"pattern name\",\"rg 21\"]]]"
+  ],
+  "hash": "1a52b74ce025449dc379e405cbbb5541"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "a5e2a9ac63b5d573",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpicks instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f3db182cc6b0c0d3",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpicks instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c749623e5229d4fe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be baby shower."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "fcb486ec372ab001",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be valentine day."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "40fcd0f21865524c",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "abdff43e8541259f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7133b1979b1669b6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 16 instead of 21."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c3afc14c5dd13130",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1st birthday instead of 21."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

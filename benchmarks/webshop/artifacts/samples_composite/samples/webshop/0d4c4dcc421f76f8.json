@@ -1,0 +1,191 @@
+{
+ "sample_id": "0d4c4dcc421f76f8",
+ "tree_id": "8beb5f007cd49886",
+ "adapter": "webshop",
+ "cluster": "deodorants & antiperspirants",
+ "goal_idx": 358,
+ "split": "test",
+ "source_instruction": "what deodorants do you have that are alcohol free and very long lasting?",
+ "query": "Ugh, my neighbor\u2019s tabby cat keeps sneaking onto my fire escape to knock over my potted succulents, I had to re-pot three of them last night after it chewed through a whole jade plant leaf. I tried leaving out a little bowl of kibble to distract it but now it just brings its tiny kitten friend around too, and last week they left muddy paw prints all over my canvas grocery tote that I hand-painted sunflowers on. I\u2019m also still annoyed that my go-to bubble tea shop swapped their boba for those weird chewy konjac pearls without warning, they taste like weirdly sweet rubber and I wasted $7 on a taro latte that was basically undrinkable. Anyway, can you help me pick out an alcohol free, long lasting deodorant? I don\u2019t wanna spend too much on it.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+insufficient_information",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, my neighbor\u2019s tabby cat keeps sneaking onto my fire escape to knock over my potted succulents, I had to re-pot three of them last night after it chewed through a whole jade plant leaf. I tried leaving out a little bowl of kibble to distract it but now it just brings its tiny kitten friend around too, and last week they left muddy paw prints all over my canvas grocery tote that I hand-painted sunflowers on. I\u2019m also still annoyed that my go-to bubble tea shop swapped their boba for those weird chewy konjac pearls without warning, they taste like weirdly sweet rubber and I wasted $7 on a taro latte that was basically undrinkable.",
+  "retained": [
+   "attr:alcohol free",
+   "attr:long lasting"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:alcohol free",
+     "=",
+     "alcohol free"
+    ],
+    [
+     "attr:long lasting",
+     "=",
+     "long lasting"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "51f8f642c2ed08a7"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 11,
+  "lit_card": 16,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 16,
+    "true_card": 11,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "9e4803fe86169ce2",
+  "conditions": [
+   [
+    "attr:alcohol free",
+    "=",
+    "alcohol free"
+   ],
+   [
+    "attr:long lasting",
+    "=",
+    "long lasting"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 11,
+  "value": [
+   "[\"B00BN9OW6K\",[]]",
+   "[\"B013UKOWAA\",[]]",
+   "[\"B01N7E0O2P\",[]]",
+   "[\"B076391VVY\",[]]",
+   "[\"B07PTVLHDT\",[]]",
+   "[\"B07SV8N5JW\",[]]",
+   "[\"B0874W6L83\",[]]",
+   "[\"B08TNZK3ZM\",[]]",
+   "[\"B094NXKBT6\",[]]",
+   "[\"B09MZKP5ZT\",[]]",
+   "[\"B09MZL9CMT\",[]]"
+  ],
+  "hash": "100c49ccd741d272926cad1335034ae6"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1e74e8c9f7b4475b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the deodorants & antiperspirants instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "d445613bda664ed7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the deodorants & antiperspirants instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "5575f5845cbead32",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dermatologist tested."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "dc12910e077290f8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be sulfate free."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "7bfb9a59e93c19a3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a8ffeff40ee86d3c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "88e226262c673689",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 20."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d9178178ff28c649",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 instead of 20."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,192 @@
+{
+ "sample_id": "0213288d7b8709be__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "0213288d7b8709be",
+ "query": "My potted aloe vera just put out three tiny new pups this morning, I was so excited I almost knocked over my ceramic mug of jasmine tea when I spotted them. The local bakery around the corner also just released their new matcha scone recipe, I grabbed one on my way home yesterday and it was perfectly buttery with just the right amount of sweetness. Oh, and my cat decided to take a nap inside my empty delivery box from last week, she looked so cozy I didn't have the heart to move her for hours.\nAnyway, I need to handle a few order adjustments: first for delivered order #W3947049, exchange item 3358616356 to item 8573379326, use credit_card_7901829 for any related payments. Then for delivered order #W6876713, exchange item 6301799585 to item 8926329222, also use credit_card_7901829. Finally for pending order #W3561391, modify item 5946177616 to item 7082455361, with payment method credit_card_7901829.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "My potted aloe vera just put out three tiny new pups this morning, I was so excited I almost knocked over my ceramic mug of jasmine tea when I spotted them. The local bakery around the corner also just released their new matcha scone recipe, I grabbed one on my way home yesterday and it was perfectly buttery with just the right amount of sweetness. Oh, and my cat decided to take a nap inside my empty delivery box from last week, she looked so cozy I didn't have the heart to move her for hours.",
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id",
+   "arg:1:exchange_delivered_order_items:item_ids",
+   "arg:1:exchange_delivered_order_items:new_item_ids",
+   "arg:1:exchange_delivered_order_items:order_id",
+   "arg:1:exchange_delivered_order_items:payment_method_id",
+   "arg:2:modify_pending_order_items:item_ids",
+   "arg:2:modify_pending_order_items:new_item_ids",
+   "arg:2:modify_pending_order_items:order_id",
+   "arg:2:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"3358616356\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"8573379326\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W3947049\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_7901829\""
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"6301799585\"]"
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"8926329222\"]"
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W6876713\""
+    ],
+    [
+     "arg:1:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_7901829\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:item_ids",
+     "=",
+     "[\"5946177616\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"7082455361\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:order_id",
+     "=",
+     "\"#W3561391\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_7901829\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"3358616356\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"8573379326\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W3947049\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_7901829\""
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"6301799585\"]"
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"8926329222\"]"
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W6876713\""
+   ],
+   [
+    "arg:1:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_7901829\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:item_ids",
+    "=",
+    "[\"5946177616\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"7082455361\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:order_id",
+    "=",
+    "\"#W3561391\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_7901829\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,203 @@
+{
+ "sample_id": "dd8226a82c84bc2c",
+ "tree_id": "7e11c3baa04ae554",
+ "adapter": "webshop",
+ "cluster": "hair loss products",
+ "goal_idx": 490,
+ "split": "test",
+ "source_instruction": "i want to purchase synthetic hair topper that are 18 inch long and have 4 clips of dark blonde hair with bangs.",
+ "query": "I\u2019ve heard that the toppers made with heat-resistant silk-blend hair work so well for covering thinning spots when you\u2019re browsing the hair loss products section. The 18 inch length with 4 clips in dark blonde w that comes with bangs is the exact style my roommate raved about using last semester. I saw a tag the other day that said all the pieces matching that exact description ring up under $60 at the shop right now.",
+ "strategy_ids": [
+  "indirect_intent",
+  "factual_error"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+factual_error",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:synthetic hair"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:synthetic hair",
+    "synthetic hair",
+    "heat-resistant silk-blend hair"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:synthetic hair"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:synthetic hair",
+     "=",
+     "heat-resistant silk-blend hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "4 clips-dark blonde w |  bangs"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "04deb33d6c9a110b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "2606334f5e1c910f",
+  "conditions": [
+   [
+    "attr:synthetic hair",
+    "=",
+    "synthetic hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "4 clips-dark blonde w |  bangs"
+   ],
+   [
+    "option:1",
+    "=",
+    "18 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "attr:synthetic hair"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B07CXHL4T3\",[[\"color\",\"#27 dark blonde\"],[\"size\",\"18\\\"\"]]]",
+   "[\"B08FY3WDDJ\",[[\"color\",\"4 clips-dark blonde\"],[\"size\",\"18 inch\"]]]",
+   "[\"B08KVNKJFL\",[[\"color\",\"dark blonde | beach blonde\"],[\"size\",\"16 inch\"]]]"
+  ],
+  "hash": "9c5967ee120e21e4265a837fa7e153e1"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "20cd3e9d9a0c5ee1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair loss products instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f0bfa433247a8172",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair loss products instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9950e58eb37df563",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair loss."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d5f1ca8baea54ea3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy use."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "caf50b11fe2640e2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f829adc626fcaae6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "111ce912aef29f37",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 jet black-thicker instead of 4 clips-dark blonde w |  bangs."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "90ea4f0d48565da2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 jet black instead of 4 clips-dark blonde w |  bangs."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

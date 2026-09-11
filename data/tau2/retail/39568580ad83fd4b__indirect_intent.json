@@ -1,0 +1,225 @@
+{
+ "sample_id": "39568580ad83fd4b__indirect_intent",
+ "domain": "retail",
+ "tree_id": "39568580ad83fd4b",
+ "query": "I placed order #W9810810 with item 1355937109 and paid using gift_card_7252880, and I also have order #W3730488 that currently has item 2913673670, is paid with gift_card_7252880, and is set to ship to 555 Highland Drive, Suite 872, New York, NY 10116, USA, and I\u2019ve heard that 9949163720 is the correct item for the first order and 2216662955 is the right replacement for the item in the second order.",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "indirect_intent",
+  "family": "intention",
+  "mask_kind": "oblique",
+  "kinds": [
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id",
+   "arg:1:modify_pending_order_address:address1",
+   "arg:1:modify_pending_order_address:address2",
+   "arg:1:modify_pending_order_address:city",
+   "arg:1:modify_pending_order_address:country",
+   "arg:1:modify_pending_order_address:order_id",
+   "arg:1:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_address:zip",
+   "arg:2:modify_pending_order_items:item_ids",
+   "arg:2:modify_pending_order_items:new_item_ids",
+   "arg:2:modify_pending_order_items:order_id",
+   "arg:2:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"1355937109\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"9949163720\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W9810810\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7252880\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address1",
+     "=",
+     "\"555 Highland Drive\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 872\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:order_id",
+     "=",
+     "\"#W3730488\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:zip",
+     "=",
+     "\"10116\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:item_ids",
+     "=",
+     "[\"2913673670\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"2216662955\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:order_id",
+     "=",
+     "\"#W3730488\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7252880\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "8d9ebde1bce95b92"
+ },
+ "signature": {
+  "rule": "oblique",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"1355937109\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"9949163720\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W9810810\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7252880\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address1",
+    "=",
+    "\"555 Highland Drive\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 872\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:city",
+    "=",
+    "\"New York\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "=",
+    "\"#W3730488\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:state",
+    "=",
+    "\"NY\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:zip",
+    "=",
+    "\"10116\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:item_ids",
+    "=",
+    "[\"2913673670\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"2216662955\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:order_id",
+    "=",
+    "\"#W3730488\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7252880\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

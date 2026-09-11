@@ -1,0 +1,185 @@
+{
+ "adapter": "webshop",
+ "cluster": "beds",
+ "fidelity_notes": [],
+ "goal_idx": 357,
+ "ground_truth": {
+  "cardinality": 20,
+  "hash": "4348cdc67aeebb7fb1ea60035b441e23",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07423LL3H\",[[\"color\",\"deep blue\"]]]",
+   "[\"B07MBLBPC4\",[[\"color\",\"blue - faux velvet\"]]]",
+   "[\"B07THG63LT\",[[\"color\",\"blue velvet\"]]]",
+   "[\"B07WVW9RYD\",[[\"color\",\"blue velvet\"]]]",
+   "[\"B08W57CYQM\",[[\"color\",\"blue line\"]]]",
+   "[\"B08ZS646HV\",[[\"color\",\"b-blue\"]]]",
+   "[\"B091L91HP8\",[[\"color\",\"blue\"]]]",
+   "[\"B092VQFRTC\",[[\"color\",\"blue\"]]]",
+   "[\"B0943N4ZJH\",[[\"color\",\"dark blue velvet\"]]]",
+   "[\"B09784LHM6\",[[\"color\",\"blue\"]]]",
+   "[\"B097GJG1RR\",[[\"color\",\"blue\"]]]",
+   "[\"B09997ZQKB\",[[\"color\",\"blue\"]]]",
+   "[\"B099Z8LLSF\",[[\"color\",\"blue\"]]]",
+   "[\"B09K43T2JT\",[[\"color\",\"blue\"]]]",
+   "[\"B09KN56VFY\",[[\"color\",\"blue bunk bed\"]]]",
+   "[\"B09M8HFXDJ\",[[\"color\",\"blue\"]]]",
+   "[\"B09NQXDCJM\",[[\"color\",\"blue +trundle\"]]]",
+   "[\"B09Q8DRTQH\",[[\"color\",\"blue\"]]]",
+   "[\"B09QFYRHN5\",[[\"color\",\"blue\"]]]",
+   "[\"B09QFZ2HZ8\",[[\"color\",\"blue\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "blue velvet"
+   ],
+   [
+    "price_upper",
+    "<=",
+    470
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "c9335cd7ae304a11"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "blue velvet"
+    ],
+    [
+     "price_upper",
+     "<=",
+     470
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:living room",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard blue velvet pieces work really well in living rooms, and I saw some options priced around 470 while I was browsing the beds section.",
+ "render_attempts": 2,
+ "sample_id": "74cce6e67d1438d8",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beds instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "76981513bf93d917"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beds instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b41f437a8930bf97"
+  },
+  {
+   "announcement": "Also, it needs to be coated steel.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4ddcbc4c842a41e4"
+  },
+  {
+   "announcement": "Also, it needs to be dining room.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "741b7c4b9ea7771c"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "22f609db418a4ac4"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "85e28a76865c4767"
+  },
+  {
+   "announcement": "Actually, make it #1 white instead of blue velvet.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "368b3006d9b2290c"
+  },
+  {
+   "announcement": "Actually, make it 3pc king(102\"x90\") instead of blue velvet.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "eb9bd9130bb873c8"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 20,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 20,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a futon set that is blue velvet",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "55123162223a05bb",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

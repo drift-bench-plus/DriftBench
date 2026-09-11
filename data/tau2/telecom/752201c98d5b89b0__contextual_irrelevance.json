@@ -1,0 +1,115 @@
+{
+ "sample_id": "752201c98d5b89b0__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "752201c98d5b89b0",
+ "query": "I was walking around the city center this afternoon and tried the new matcha croissant at the little bakery on 5th Street, it was so flaky and they put just the right amount of red bean filling inside, I ended up buying two more to take home for my roommate. On my way back I also ran into my old college classmate, we chatted for almost 20 minutes about how our old dorm is getting a full renovation next semester, it\u2019s crazy how fast time has flown since we graduated. I even stopped to pet a tiny orange stray cat that curled around my ankles, it was so friendly I almost considered bringing it home with me before I remembered my apartment doesn\u2019t allow pets. Anyway, I\u2019m abroad right now and my mobile data isn\u2019t working at all, I already checked that airplane mode is on, I think my network preference might be set wrong, maybe there\u2019s an issue with my VPN, I also have data saver mode turned on and I haven\u2019t enabled roaming yet, can you help me figure out how to fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking around the city center this afternoon and tried the new matcha croissant at the little bakery on 5th Street, it was so flaky and they put just the right amount of red bean filling inside, I ended up buying two more to take home for my roommate. On my way back I also ran into my old college classmate, we chatted for almost 20 minutes about how our old dorm is getting a full renovation next semester, it\u2019s crazy how fast time has flown since we graduated. I even stopped to pet a tiny orange stray cat that curled around my ankles, it was so friendly I almost considered bringing it home with me before I remembered my apartment doesn\u2019t allow pets.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:bad_vpn",
+   "fault:data_saver_mode_on",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_vpn",
+     "=",
+     "bad_vpn"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_vpn",
+    "=",
+    "bad_vpn"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "sample_id": "aee5abf6cb361eb9__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "aee5abf6cb361eb9",
+ "query": "I spent this morning trying out the new neighborhood bakery down the street, their matcha croissant was so flaky and not too sweet, I even bought an extra one to save for tomorrow\u2019s breakfast. On my way back I stopped by the pet adoption event in the community square, there was the cutest little tabby kitten that kept rubbing its head on my hand, I\u2019m still thinking about whether I should go back and fill out an adoption application later. Oh, and the weather today is perfect, it\u2019s sunny but with a nice cool breeze, I walked the long way home just to enjoy it. Anyway, I\u2019m having some issues with my phone right now: my mobile network is really slow and unstable, I can\u2019t send or receive SMS messages at all, and I\u2019m currently traveling abroad with data roaming turned off on my plan, can you help me figure out what\u2019s going wrong?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent this morning trying out the new neighborhood bakery down the street, their matcha croissant was so flaky and not too sweet, I even bought an extra one to save for tomorrow\u2019s breakfast. On my way back I stopped by the pet adoption event in the community square, there was the cutest little tabby kitten that kept rubbing its head on my hand, I\u2019m still thinking about whether I should go back and fill out an adoption application later. Oh, and the weather today is perfect, it\u2019s sunny but with a nice cool breeze, I walked the long way home just to enjoy it.",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:break_app_sms_permission",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:break_app_sms_permission",
+    "=",
+    "break_app_sms_permission"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

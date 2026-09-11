@@ -1,0 +1,218 @@
+{
+ "adapter": "webshop",
+ "cluster": "salon & spa equipment",
+ "fidelity_notes": [],
+ "goal_idx": 395,
+ "ground_truth": {
+  "cardinality": 39,
+  "hash": "206afec9887e848d63666c851d05a1f4",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07ZXQD8NK\",[[\"color\",\"purple\"]]]",
+   "[\"B08GKPPPLQ\",[[\"color\",\"purple\"]]]",
+   "[\"B08TG5XYXN\",[[\"color\",\"purple\"]]]",
+   "[\"B08VNW6CG4\",[[\"color\",\"white + purple\"]]]",
+   "[\"B08WCCZDFP\",[[\"color\",\"purple\"]]]",
+   "[\"B09CMR3XMH\",[[\"color\",\"purple\"]]]",
+   "[\"B09CYPQN7X\",[[\"color\",\"purple\"]]]",
+   "[\"B09DKVQT8D\",[[\"color\",\"purple\"]]]",
+   "[\"B09GK2ZGRW\",[[\"color\",\"purple\"]]]",
+   "[\"B09H2QFSKP\",[[\"color\",\"purple\"]]]",
+   "[\"B09HBTX7LP\",[[\"color\",\"purple\"]]]",
+   "[\"B09KNCV5JY\",[[\"color\",\"purple\"]]]",
+   "[\"B09NVDGZ4J\",[[\"color\",\"purple\"]]]",
+   "[\"B09NVDH359\",[[\"color\",\"purple\"]]]",
+   "[\"B09NVF8FL8\",[[\"color\",\"purple\"]]]",
+   "[\"B09PYDH7ZD\",[[\"color\",\"purple\"]]]",
+   "[\"B09Q2TZZXP\",[[\"color\",\"purple\"]]]",
+   "[\"B09Q33YRSY\",[[\"color\",\"purple\"]]]",
+   "[\"B09QHRCF6M\",[[\"color\",\"purple\"]]]",
+   "[\"B09QHRQ89B\",[[\"color\",\"deep purple\"]]]",
+   "[\"B09QPNQ1JR\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYRW4N3\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSBNWR\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSJ62R\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSKBYJ\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSNRPZ\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSXTR5\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSZDSC\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYT13VQ\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYT5CX8\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYT6RB8\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYTR26S\",[[\"color\",\"purple\"]]]",
+   "[\"B09T2WQNXX\",[[\"color\",\"purple\"]]]",
+   "[\"B09T2Z324R\",[[\"color\",\"purple\"]]]",
+   "[\"B09T31P5H7\",[[\"color\",\"purple\"]]]",
+   "[\"B09T32QJKV\",[[\"color\",\"purple\"]]]",
+   "[\"B09T33MHLV\",[[\"color\",\"purple\"]]]",
+   "[\"B09T33NQZ8\",[[\"color\",\"purple\"]]]",
+   "[\"B09T341WVC\",[[\"color\",\"purple\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy clean",
+    "=",
+    "easy clean"
+   ],
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "option:0",
+    "=",
+    "purple"
+   ],
+   [
+    "price_upper",
+    "<=",
+    170
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "2372f416912ab196"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 4,
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "purple"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy clean",
+   "attr:high quality",
+   "option:0"
+  ],
+  "spec_id": "052a6af8410e4ae7",
+  "strategy_id": "vagueness_subjectivity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for salon & spa equipment that’s easy to clean and high quality, comes in purple, and has a good price.",
+ "render_attempts": 4,
+ "sample_id": "a1ff96a5ac6d544d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the salon & spa equipment instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "9cddc82766c5a0bc"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the salon & spa equipment instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "c4f221801f6143f6"
+  },
+  {
+   "announcement": "Also, it needs to be non slip.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "23a01aff52db7797"
+  },
+  {
+   "announcement": "Also, it needs to be barber chair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f9e2b1562593519b"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "035f2099b4a0d437"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e052bdc293934234"
+  },
+  {
+   "announcement": "Actually, make it 190x70cm(75x28inch) instead of purple.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b781e358eddda197"
+  },
+  {
+   "announcement": "Actually, make it 190*70cm instead of purple.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c9bb067247c16776"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 56,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 39,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a high quality bed cover that is easy to clean. find something in purple.",
+ "split": "test",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "tree_id": "09d8722580d5bd6a",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

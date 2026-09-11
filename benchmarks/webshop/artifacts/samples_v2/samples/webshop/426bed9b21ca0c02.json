@@ -1,0 +1,186 @@
+{
+ "adapter": "webshop",
+ "cluster": "boomboxes & portable radios",
+ "fidelity_notes": [],
+ "goal_idx": 362,
+ "ground_truth": {
+  "cardinality": 8,
+  "hash": "8488d6cb1636b52d389ea9a496112225",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B017WOQHAS\",[[\"color\",\"cloudy grey\"]]]",
+   "[\"B07H9T6TJQ\",[[\"color\",\"grey\"]]]",
+   "[\"B07W7442RZ\",[[\"color\",\"grey\"]]]",
+   "[\"B07X2Z97SG\",[[\"color\",\"grey\"]]]",
+   "[\"B07X43JBY8\",[[\"color\",\"grey\"]]]",
+   "[\"B083JNJX1Z\",[[\"color\",\"grey\"]]]",
+   "[\"B08DCY9MS5\",[[\"color\",\"grey\"]]]",
+   "[\"B092Z8C9FH\",[[\"color\",\"deep grey\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:stereo sound",
+    "=",
+    "stereo sound"
+   ],
+   [
+    "option:0",
+    "=",
+    "grey"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "bf9e9d34dff61b2c"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:stereo sound",
+     "=",
+     "stereo sound"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "option:0",
+     "grey"
+    ],
+    "alternative": [
+     "option:0",
+     "black"
+    ],
+    "condition": null,
+    "text": "Since you probably don’t have grey boomboxes & portable radios with stereo sound"
+   }
+  ],
+  "retained": [
+   "attr:stereo sound",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "eb3838dca1d8e290",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don’t have grey boomboxes & portable radios with stereo sound, I’ll settle for black ones with a price limit of $120.",
+ "render_attempts": 1,
+ "sample_id": "426bed9b21ca0c02",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the boomboxes & portable radios instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "018c4ca2ea5e520a"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the boomboxes & portable radios instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5a700a421cf0e71e"
+  },
+  {
+   "announcement": "Also, it needs to be mobile phone.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "79372386c01fd8fd"
+  },
+  {
+   "announcement": "Also, it needs to be power bank.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bdbf67b8a3fbf71e"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c06df852db62e4eb"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "de90d71107914b61"
+  },
+  {
+   "announcement": "Actually, make it black instead of grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "43bd53e1a6e575a2"
+  },
+  {
+   "announcement": "Actually, make it beartapeyellow instead of grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "43e44837b6061a34"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 62,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 8,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a jet-4 bluetooth portable speaker",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "96f35bb21ef1d3ab",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

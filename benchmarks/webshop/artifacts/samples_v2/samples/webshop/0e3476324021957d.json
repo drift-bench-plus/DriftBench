@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair loss products",
+ "fidelity_notes": [],
+ "goal_idx": 490,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "9c5967ee120e21e4265a837fa7e153e1",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07CXHL4T3\",[[\"color\",\"#27 dark blonde\"],[\"size\",\"18\\\"\"]]]",
+   "[\"B08FY3WDDJ\",[[\"color\",\"4 clips-dark blonde\"],[\"size\",\"18 inch\"]]]",
+   "[\"B08KVNKJFL\",[[\"color\",\"dark blonde | beach blonde\"],[\"size\",\"16 inch\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:synthetic hair",
+    "=",
+    "synthetic hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "4 clips-dark blonde w |  bangs"
+   ],
+   [
+    "option:1",
+    "=",
+    "18 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "2606334f5e1c910f"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "4 clips-dark blonde w |  bangs"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:synthetic hair",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m browsing the hair loss products section, and I’ve heard that synthetic hair pieces with 4 clips in dark blonde with bangs, 18 inches long, work well, and they usually cost under $60.",
+ "render_attempts": 1,
+ "sample_id": "0e3476324021957d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair loss products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "20cd3e9d9a0c5ee1"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair loss products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f0bfa433247a8172"
+  },
+  {
+   "announcement": "Also, it needs to be hair loss.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9950e58eb37df563"
+  },
+  {
+   "announcement": "Also, it needs to be easy use.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d5f1ca8baea54ea3"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "caf50b11fe2640e2"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f829adc626fcaae6"
+  },
+  {
+   "announcement": "Actually, make it #1 jet black-thicker instead of 4 clips-dark blonde w |  bangs.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "111ce912aef29f37"
+  },
+  {
+   "announcement": "Actually, make it #1 jet black instead of 4 clips-dark blonde w |  bangs.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "90ea4f0d48565da2"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want to purchase synthetic hair topper that are 18 inch long and have 4 clips of dark blonde hair with bangs.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "7e11c3baa04ae554",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

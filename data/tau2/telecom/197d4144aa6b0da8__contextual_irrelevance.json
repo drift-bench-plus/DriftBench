@@ -1,0 +1,137 @@
+{
+ "sample_id": "197d4144aa6b0da8__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "197d4144aa6b0da8",
+ "query": "I just got back from a weekend hike in the national park yesterday, the wild blueberries along the trail were so sweet I picked a whole bag to bring home, and my dog even chased a squirrel up a pine tree and sat at the base barking for ten minutes before I could coax him away. I also tried that new bubble tea shop near the park entrance, their taro milk tea with boba was so creamy I\u2019m already planning to go back next weekend. Anyway, I\u2019m having some issues with my phone right now: airplane mode is turned on, the wifi calling quality is really bad, the Break app isn\u2019t getting either of the permissions it needs, my data mode is off, I\u2019ve exceeded my data usage limit, my SIM card seems to be unseated, I\u2019m currently abroad and roaming is turned off so my service isn\u2019t working properly.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from a weekend hike in the national park yesterday, the wild blueberries along the trail were so sweet I picked a whole bag to bring home, and my dog even chased a squirrel up a pine tree and sat at the base barking for ten minutes before I could coax him away. I also tried that new bubble tea shop near the park entrance, their taro milk tea with boba was so creamy I\u2019m already planning to go back next weekend.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_wifi_calling",
+   "fault:break_app_both_permissions",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

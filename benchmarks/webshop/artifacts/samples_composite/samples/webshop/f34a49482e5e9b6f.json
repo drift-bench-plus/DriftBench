@@ -1,0 +1,315 @@
+{
+ "sample_id": "f34a49482e5e9b6f",
+ "tree_id": "8808708ed9611ef1",
+ "adapter": "webshop",
+ "cluster": "tripods & monopods",
+ "goal_idx": 355,
+ "split": "test",
+ "source_instruction": "i need an easy to carry tripod made of carbon fiber for my camera.",
+ "query": "Hey, can you help me find a tripod or monopod made of carbon nanotube composite that\u2019s totally easy to tote around? I want the best price possible for something like this, and it definitely needs to come with a detachable Bluetooth shutter remote included. I don\u2019t have super strict specs otherwise, just something I can grab and go when I\u2019m out shooting photos on hikes.",
+ "strategy_ids": [
+  "factual_error",
+  "insufficient_information",
+  "irrelevant_information",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+insufficient_information+irrelevant_information+vagueness_subjectivity",
+  "family": "expression+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "insufficient_information",
+   "irrelevant_information",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "factual_error": "attr:carbon fiber",
+   "insufficient_information": "attr:easy carry"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:carbon fiber",
+    "carbon fiber",
+    "carbon nanotube composite"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "attr:easy carry"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "made of carbon nanotube composite",
+    "condition": [
+     "attr:material",
+     "=",
+     "carbon nanotube composite"
+    ]
+   },
+   {
+    "text": "come with a detachable Bluetooth shutter remote included",
+    "condition": [
+     "attr:accessory",
+     "=",
+     "detachable Bluetooth shutter remote"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [],
+  "hidden_slots": [
+   "attr:carbon fiber",
+   "attr:easy carry",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:carbon fiber",
+     "=",
+     "carbon nanotube composite"
+    ],
+    [
+     "attr:material",
+     "=",
+     "carbon nanotube composite"
+    ],
+    [
+     "attr:accessory",
+     "=",
+     "detachable Bluetooth shutter remote"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "a2bcbebbc298c33e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 69,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 69,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 264,
+    "true_card": 69,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 69,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 88,
+    "true_card": 69,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "75610cff0958fca6",
+  "conditions": [
+   [
+    "attr:carbon fiber",
+    "=",
+    "carbon fiber"
+   ],
+   [
+    "attr:easy carry",
+    "=",
+    "easy carry"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "attr:carbon fiber",
+   "attr:easy carry",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 69,
+  "value": [
+   "[\"B00LEO51YQ\",[]]",
+   "[\"B00M17CYNG\",[]]",
+   "[\"B014EQFYE2\",[]]",
+   "[\"B074QRPJ5F\",[]]",
+   "[\"B075163951\",[]]",
+   "[\"B07MF1Z61X\",[]]",
+   "[\"B07PJ6RTHX\",[]]",
+   "[\"B07PK9Q627\",[]]",
+   "[\"B07QZY8Y4X\",[]]",
+   "[\"B081L9BGPT\",[]]",
+   "[\"B081PN7VDH\",[]]",
+   "[\"B0821GKMK2\",[]]",
+   "[\"B0821GTZVD\",[]]",
+   "[\"B084L1X9JT\",[]]",
+   "[\"B084MFQN85\",[]]",
+   "[\"B0876WQ9XT\",[]]",
+   "[\"B08FYN9TMC\",[]]",
+   "[\"B08FZDXY3R\",[]]",
+   "[\"B08GC7HZ4V\",[]]",
+   "[\"B08GCQS9GL\",[]]",
+   "[\"B08H8LZRJ8\",[]]",
+   "[\"B08HN63535\",[]]",
+   "[\"B08HV8Q9VV\",[]]",
+   "[\"B08HVDYN4S\",[]]",
+   "[\"B08HVGKQFQ\",[]]",
+   "[\"B08HVJ6R9T\",[]]",
+   "[\"B08HWNDKJY\",[]]",
+   "[\"B08HWR6C22\",[]]",
+   "[\"B08J3D287S\",[]]",
+   "[\"B08JCVG3CB\",[]]",
+   "[\"B08KD1974X\",[]]",
+   "[\"B08NXM2M7R\",[]]",
+   "[\"B08SQBGKZJ\",[]]",
+   "[\"B08SVRZQKS\",[]]",
+   "[\"B08SW9Y72X\",[]]",
+   "[\"B08T255P8L\",[]]",
+   "[\"B095W8ZNY5\",[]]",
+   "[\"B09699W3W9\",[]]",
+   "[\"B097RPV8G6\",[]]",
+   "[\"B097RQDY66\",[]]",
+   "[\"B097RQM4VG\",[]]",
+   "[\"B097RR276V\",[]]",
+   "[\"B0987J6TV8\",[]]",
+   "[\"B098956C15\",[]]",
+   "[\"B0989CY71R\",[]]",
+   "[\"B0989JPYNP\",[]]",
+   "[\"B098L1X519\",[]]",
+   "[\"B098P2LYP8\",[]]",
+   "[\"B098P4GFXK\",[]]",
+   "[\"B098P4XXL9\",[]]",
+   "[\"B0994SDJ3M\",[]]",
+   "[\"B099WDKTW7\",[]]",
+   "[\"B099WKXHK1\",[]]",
+   "[\"B09C2DPQKP\",[]]",
+   "[\"B09DT1VZNJ\",[]]",
+   "[\"B09FDXBVYF\",[]]",
+   "[\"B09H37W2H7\",[]]",
+   "[\"B09H59CSTC\",[]]",
+   "[\"B09HNDX66P\",[]]",
+   "[\"B09HNFC8BB\",[]]",
+   "[\"B09J2JXYJF\",[]]",
+   "[\"B09J39SZV2\",[]]",
+   "[\"B09J3VC7N8\",[]]",
+   "[\"B09JB1SLKQ\",[]]",
+   "[\"B09L5SHNQB\",[]]",
+   "[\"B09Q3KLC6S\",[]]",
+   "[\"B09Q3N3J87\",[]]",
+   "[\"B09RHYDLQL\",[]]",
+   "[\"B09SY8H9BW\",[]]"
+  ],
+  "hash": "68a999caa57351ef46976c4633b6de3f"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "5c672a673f0f31e4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the tripods & monopods instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "eec093c597267088",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the tripods & monopods instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b4687b303f27bd6b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be carrying case."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ccca1543a52dbbf5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be phone holder."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cf653970add6536b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e1a7d126a13d8635",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "788f1c7d8fa22e3e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 30 instead of 120."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "997ddd069706d14c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 40 instead of 120."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

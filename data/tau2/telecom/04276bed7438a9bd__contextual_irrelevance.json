@@ -1,0 +1,115 @@
+{
+ "sample_id": "04276bed7438a9bd__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "04276bed7438a9bd",
+ "query": "I just got back from trying the new matcha croissant at the bakery down the street this morning, it was so flaky and had just the right amount of sweetness, I\u2019m already planning to go back tomorrow to get one for my roommate too. On my way home I stopped by the pet store and played with the most adorable golden retriever puppy they have up for adoption, it kept licking my hand and I had to stop myself from filling out the adoption paperwork right there. Also last night I binged the whole first season of that new mystery show everyone\u2019s been talking about, the plot twist at the end had me sitting there staring at my screen for five minutes straight I was so shocked. But anyway, I\u2019m currently abroad and none of my phone apps can load anything at all right now, I checked and airplane mode is turned on, my data mode is off, roaming is disabled too, I think I messed up my app storage permissions and my network preference settings are probably wrong as well, can you help me figure out how to fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from trying the new matcha croissant at the bakery down the street this morning, it was so flaky and had just the right amount of sweetness, I\u2019m already planning to go back tomorrow to get one for my roommate too. On my way home I stopped by the pet store and played with the most adorable golden retriever puppy they have up for adoption, it kept licking my hand and I had to stop myself from filling out the adoption paperwork right there. Also last night I binged the whole first season of that new mystery show everyone\u2019s been talking about, the plot twist at the end had me sitting there staring at my screen for five minutes straight I was so shocked.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:break_app_storage_permission",
+   "fault:data_mode_off",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

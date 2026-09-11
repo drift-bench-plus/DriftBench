@@ -1,0 +1,210 @@
+{
+ "sample_id": "6bb74b96096fa247",
+ "tree_id": "53f6e5137d562818",
+ "adapter": "webshop",
+ "cluster": "makeup palettes",
+ "goal_idx": 378,
+ "split": "test",
+ "source_instruction": "i need a purple eyeshadow set",
+ "query": "I\u2019ve been browsing the makeup palettes section for ages, and I\u2019ve heard the florescence and purple eye shadow options are so fun for spring looks. All the ones I\u2019ve glanced at so far have totally reasonable price points, from what I can tell flipping through the product tags. My friend mentioned those two shades blended together make such a pretty pop for everyday wear, too.",
+ "strategy_ids": [
+  "indirect_intent",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+vagueness_subjectivity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:eye shadow",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:eye shadow",
+     "=",
+     "eye shadow"
+    ],
+    [
+     "option:0",
+     "=",
+     "florescence+purple"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "bd049b0a6247a1b8"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 27,
+  "lit_card": 38,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 38,
+    "true_card": 27,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "2e70d46958167301",
+  "conditions": [
+   [
+    "attr:eye shadow",
+    "=",
+    "eye shadow"
+   ],
+   [
+    "option:0",
+    "=",
+    "florescence+purple"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 27,
+  "value": [
+   "[\"B004LXHQX6\",[[\"color\",\"smokey purple\"]]]",
+   "[\"B00LDJ3C7K\",[[\"color\",\"rose purple\"]]]",
+   "[\"B01D7PJ06Y\",[[\"color\",\"royal amethyst - shimmering purple\"]]]",
+   "[\"B07R9ZMTQD\",[[\"color\",\"purple liama 51364\"]]]",
+   "[\"B07RLQGPTV\",[[\"color\",\"purple\"]]]",
+   "[\"B07TXSLF5K\",[[\"color\",\"eyeshadow palette-dream purple\"]]]",
+   "[\"B07WLDP7C1\",[[\"color\",\"purple\"]]]",
+   "[\"B07ZBHJ1DH\",[[\"color\",\"purple\"]]]",
+   "[\"B083GQMJS3\",[[\"color\",\"florescence+purple\"]]]",
+   "[\"B08GHCJYMW\",[[\"color\",\"purple\"]]]",
+   "[\"B08MQ96898\",[[\"color\",\"purple 2#\"]]]",
+   "[\"B08QD87FWC\",[[\"color\",\"h-purple\"]]]",
+   "[\"B08RNKRNVP\",[[\"color\",\"a- purple\"]]]",
+   "[\"B08XZP1B9L\",[[\"color\",\"purple series\"]]]",
+   "[\"B08Y7PZXY3\",[[\"color\",\"purple\"]]]",
+   "[\"B08ZJPG368\",[[\"color\",\"purple\"]]]",
+   "[\"B08ZM47FWC\",[[\"color\",\"purple\"]]]",
+   "[\"B0915SFQM8\",[[\"color\",\"rose purple\"]]]",
+   "[\"B092JBXWN9\",[[\"color\",\"purple clouds\"]]]",
+   "[\"B097P35FQS\",[[\"color\",\"purple\"]]]",
+   "[\"B09G5PJZ23\",[[\"color\",\"purple white\"]]]",
+   "[\"B09GXRDWKB\",[[\"color\",\"purple1\"]]]",
+   "[\"B09MCZFBQD\",[[\"color\",\"purple eyeshadow palette\"]]]",
+   "[\"B09MQCQRXM\",[[\"color\",\"purple\"]]]",
+   "[\"B09MZ5X4HR\",[[\"color\",\"purple\"]]]",
+   "[\"B09NPLHWCC\",[[\"color\",\"purple\"]]]",
+   "[\"B09QKCTJYT\",[[\"color\",\"#3 purple\"]]]"
+  ],
+  "hash": "dad08760d7b67cf5551bdd41655bef2e"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0870f9030b5283fe",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup palettes instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "eb22e0e4bfe4f89e",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup palettes instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "0c0253b34a0707b4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be nail polish."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "8c85ac62bcd34ffa",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be essential oils."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "81c435221f844491",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "fd23c823414cd953",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1cde32f4c4d116b7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #2 instead of florescence+purple."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d0e37f958dc9fc42",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #401 instead of florescence+purple."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

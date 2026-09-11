@@ -1,0 +1,203 @@
+{
+ "adapter": "webshop",
+ "cluster": "non-dairy milks",
+ "fidelity_notes": [],
+ "goal_idx": 150,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "fbff7fa1169d5380ab5de66d9531ab9b",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08F2QT47F\",[[\"size\",\"10 ounce (pack of 3)\"]]]",
+   "[\"B091M7DJM2\",[[\"size\",\"7 ounce (pack of 3)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:dairy free",
+    "=",
+    "dairy free"
+   ],
+   [
+    "attr:low sugar",
+    "=",
+    "low sugar"
+   ],
+   [
+    "attr:soy free",
+    "=",
+    "soy free"
+   ],
+   [
+    "option:0",
+    "=",
+    "10 ounce (pack of 3)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "3ccaf14bd0fc63d1"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "irrelevant_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [
+   {
+    "condition": [
+     "attr:B Corp certification",
+     "=",
+     "B Corp certified"
+    ],
+    "text": "B Corp certification"
+   }
+  ],
+  "family": "parameter",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dairy free",
+     "=",
+     "dairy free"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "option:0",
+     "=",
+     "10 ounce (pack of 3)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ],
+    [
+     "attr:B Corp certification",
+     "=",
+     "B Corp certified"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:dairy free",
+   "attr:low sugar",
+   "attr:soy free",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "1f3aaa2342eb4840",
+  "strategy_id": "irrelevant_information",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for non-dairy milks that are dairy free, low sugar, soy free, and come in a 10 ounce pack of 3, have a B Corp certification, and stay within a $40 price limit.",
+ "render_attempts": 3,
+ "sample_id": "6c0cd52564f9880c",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the non-dairy milks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "67237a1870713a0b"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the non-dairy milks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a68891af7741449d"
+  },
+  {
+   "announcement": "Also, it needs to be brown rice.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dda697bd9deae6fb"
+  },
+  {
+   "announcement": "Also, it needs to be gluten free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ed7c9fb58d3a1158"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c5e082bb8fd8b331"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "daccff96aed61e91"
+  },
+  {
+   "announcement": "Actually, make it 1 count instead of 10 ounce (pack of 3).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bf626b4ddc70affd"
+  },
+  {
+   "announcement": "Actually, make it 1 count (pack of 1) instead of 10 ounce (pack of 3).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c2c2ab0f02ff469a"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "extras",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a low sugar granola bar that is soy and diary free. pick the pack of 3 weighing 10 ounces.",
+ "split": "test",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "tree_id": "e606b03f74962051",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "sample_id": "2ac53b549cb48ad7__lexical_ambiguity",
+ "domain": "retail",
+ "tree_id": "2ac53b549cb48ad7",
+ "query": "Hi, I need to modify the payment method for my pending order, can I use my plastic to pay for #W4923227?",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "lexical_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "plastic",
+    "placements": [
+     [
+      "arg:0:modify_pending_order_payment:payment_method_id",
+      "\"credit_card_8897086\""
+     ],
+     [
+      "arg:0:modify_pending_order_payment:payment_method_id",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_payment:order_id"
+  ],
+  "hidden_slots": [
+   "arg:0:modify_pending_order_payment:payment_method_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_payment:order_id",
+     "=",
+     "\"#W4923227\""
+    ],
+    [
+     "arg:0:modify_pending_order_payment:payment_method_id",
+     "=",
+     "\"credit_card_8897086\""
+    ]
+   ],
+   [
+    [
+     "arg:0:modify_pending_order_payment:order_id",
+     "=",
+     "\"#W4923227\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "c9864f7b31e00ca1"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_payment:order_id",
+    "=",
+    "\"#W4923227\""
+   ],
+   [
+    "arg:0:modify_pending_order_payment:payment_method_id",
+    "=",
+    "\"credit_card_8897086\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:modify_pending_order_payment:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

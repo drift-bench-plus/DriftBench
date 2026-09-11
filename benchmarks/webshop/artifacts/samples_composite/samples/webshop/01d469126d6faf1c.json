@@ -1,0 +1,191 @@
+{
+ "sample_id": "01d469126d6faf1c",
+ "tree_id": "5b368617daf53a03",
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "goal_idx": 14,
+ "split": "test",
+ "source_instruction": "i am looking for a caffeine free raspberry ice flavored drink mix.",
+ "query": "Ugh, I spent 20 minutes this morning trying to fix the wobbly leg on my kitchen step stool, I think I stripped the screw head when I tightened it too hard last week, and now I can't even reach the top shelf of my pantry without it wobbling so bad I'm scared I'll fall. My neighbor brought over a jar of homemade peach jam yesterday too, and I've been dying to spread it on toast for breakfast but I forgot to pick up bread when I ran errands yesterday. Oh, and my cat knocked over my favorite potted succulent last night, so I had to sweep potting soil off the living room rug for ages before bed. Anyway, I'm looking for caffeine infused raspberry ice beverages here, and I don't want to spend more than 60 dollars total.",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:caffeine free"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:caffeine free",
+    "caffeine free",
+    "caffeine infused"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I spent 20 minutes this morning trying to fix the wobbly leg on my kitchen step stool, I think I stripped the screw head when I tightened it too hard last week, and now I can't even reach the top shelf of my pantry without it wobbling so bad I'm scared I'll fall. My neighbor brought over a jar of homemade peach jam yesterday too, and I've been dying to spread it on toast for breakfast but I forgot to pick up bread when I ran errands yesterday. Oh, and my cat knocked over my favorite potted succulent last night, so I had to sweep potting soil off the living room rug for ages before bed. Anyway,",
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:caffeine free"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:caffeine free",
+     "=",
+     "caffeine infused"
+    ],
+    [
+     "option:0",
+     "=",
+     "raspberry ice"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "6c43b652f6bf20a8"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 2,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "cfccaba15ac2f0b3",
+  "conditions": [
+   [
+    "attr:caffeine free",
+    "=",
+    "caffeine free"
+   ],
+   [
+    "option:0",
+    "=",
+    "raspberry ice"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "attr:caffeine free"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B003DNL9XI\",[[\"flavor name\",\"raspberry ice\"]]]",
+   "[\"B004M8TKA2\",[[\"flavor name\",\"raspberry\"]]]"
+  ],
+  "hash": "378e737758ee2fd9d73092ce154074ee"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2398dab1f90987e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "38b64bfd9d3bf2d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "91eb23f820f2ce8a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gluten free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ec5a60e5c8d12100",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be drink mix."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "594fd1f2b914436e",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c8432e0bba46470c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0431dfb89d394f4a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.24 ounce (pack of 30) instead of raspberry ice."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cbbe2c7daf6cee44",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .4 pack - 25.4 fl oz (pack of 1) instead of raspberry ice."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

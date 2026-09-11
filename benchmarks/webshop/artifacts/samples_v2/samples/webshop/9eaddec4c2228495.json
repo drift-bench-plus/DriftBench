@@ -1,0 +1,175 @@
+{
+ "adapter": "webshop",
+ "cluster": "makeup sets",
+ "fidelity_notes": [],
+ "goal_idx": 232,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "ba807ed05378b2fd9e90530bcf810a81",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08WZ7MMYZ\",[[\"color\",\"champagne\"]]]",
+   "[\"B0943N574G\",[[\"color\",\"champagne\"]]]",
+   "[\"B09N75TYCR\",[[\"color\",\"2pcs champagne-purple\"]]]",
+   "[\"B09NW1MP2M\",[[\"color\",\"champagne diamond\"]]]",
+   "[\"B09PYDYQ9B\",[[\"color\",\"120pcs+2204pcs champagne gold rhinestones\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:nail art",
+    "=",
+    "nail art"
+   ],
+   [
+    "option:0",
+    "=",
+    "champagne"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "b838a4194218c014"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:nail art",
+     "=",
+     "nail art"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "option:0",
+     "champagne"
+    ],
+    "alternative": null,
+    "condition": null,
+    "text": "Since you probably don't have champagne-colored makeup sets with nail art under $50"
+   }
+  ],
+  "retained": [
+   "attr:nail art",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "890706a4f2895574",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don't have champagne-colored makeup sets with nail art under $50, could you show me the closest available options that still fit the rest of my preferences?",
+ "render_attempts": 2,
+ "sample_id": "9eaddec4c2228495",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the makeup sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "3c4aca41b8fb98f6"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the makeup sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4a58c89b8d2e01ea"
+  },
+  {
+   "announcement": "Also, it needs to be storage box.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "65959e8e4a9eb66d"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e8dc28ba79851055"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bd21ad16512cd0c3"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e77773368d1f9659"
+  },
+  {
+   "announcement": "Actually, make it ! pigeon gray (large) instead of champagne.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "81631d5e8c9cf84a"
+  },
+  {
+   "announcement": "Actually, make it \" sapphire black (large) instead of champagne.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d67e9fa9c39f17e6"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 62,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like some champagne rhinestones for my nail art.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "fb31c7e1fb96a04c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

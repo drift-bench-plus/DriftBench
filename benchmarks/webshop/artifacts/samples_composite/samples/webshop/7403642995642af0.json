@@ -1,0 +1,224 @@
+{
+ "sample_id": "7403642995642af0",
+ "tree_id": "e48d643599e8be60",
+ "adapter": "webshop",
+ "cluster": "bar stools",
+ "goal_idx": 170,
+ "split": "test",
+ "source_instruction": "i am looking for a  counter height size barstools of faux leather",
+ "query": "Hey, I swear my cat\u2019s been on a total chaos spree this entire week that\u2019s thrown every little part of my routine totally off kilter. First, he figured out how to pry open the lid of the snack bin I keep on the kitchen counter, so I walked in Tuesday to half a bag of freeze-dried tuna treats crunched all over the floor and him passed out on the rug like he\u2019d just pulled off the heist of the century. Then last night, he decided my favorite knit throw blanket was the perfect new spot to knead and shed all over right before I had a friend over for movie night, so I spent 20 minutes running the lint roller over it like a maniac while my friend laughed at me from the couch. He even batted one of my houseplant\u2019s baby leaves off right before I sat down to pull up your website just now, the little stinker.\nI\u2019m browsing the bar stools section right now and need a little help picking something out. I\u2019m looking for stools made of bonded leather, and I want that one height style I always go for for my kitchen island, y\u2019know? I don\u2019t want to spend too much, so just keep the total under what I usually set as my cap for small furniture pieces, yeah? Let me know what options you have that fit what I\u2019m after, thanks!",
+ "strategy_ids": [
+  "factual_error",
+  "insufficient_information",
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+insufficient_information+referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "insufficient_information",
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:faux leather",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:faux leather",
+    "faux leather",
+    "bonded leather"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey, I swear my cat\u2019s been on a total chaos spree this entire week that\u2019s thrown every little part of my routine totally off kilter. First, he figured out how to pry open the lid of the snack bin I keep on the kitchen counter, so I walked in Tuesday to half a bag of freeze-dried tuna treats crunched all over the floor and him passed out on the rug like he\u2019d just pulled off the heist of the century. Then last night, he decided my favorite knit throw blanket was the perfect new spot to knead and shed all over right before I had a friend over for movie night, so I spent 20 minutes running the lint roller over it like a maniac while my friend laughed at me from the couch. He even batted one of my houseplant\u2019s baby leaves off right before I sat down to pull up your website just now, the little stinker.",
+  "retained": [],
+  "hidden_slots": [
+   "attr:faux leather",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:faux leather",
+     "=",
+     "bonded leather"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d9bf99a65c1f1793"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 13,
+  "lit_card": 23,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 5,
+    "true_card": 13,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 25,
+    "true_card": 13,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 152,
+    "true_card": 13,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "dbfbddff4bf8b6af",
+  "conditions": [
+   [
+    "attr:faux leather",
+    "=",
+    "faux leather"
+   ],
+   [
+    "option:0",
+    "=",
+    "counter height"
+   ],
+   [
+    "price_upper",
+    "<=",
+    180
+   ]
+  ],
+  "hidden_slots": [
+   "attr:faux leather",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 13,
+  "value": [
+   "[\"B01DWGRHCW\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B01DWGRKBU\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B071F9VR56\",[[\"size\",\"25.5\\\" counter height\"]]]",
+   "[\"B07B5HWV1C\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07B5NKTTG\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07D481FC6\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07VMB63DC\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07WX5ZZ8Q\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07XPXVHCM\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B084W2RZQN\",[[\"style\",\"counter height\"]]]",
+   "[\"B0851GZM55\",[[\"size\",\"counter height\"]]]",
+   "[\"B08568W6MS\",[[\"size\",\"counter height\"]]]",
+   "[\"B08FRP1B4Q\",[[\"size\",\"26 inch counter height\"]]]"
+  ],
+  "hash": "68ef4afe2468ba82e9a13bdab4df9006"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6ef9144c08537686",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bar stools instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b065fa878d7d3391",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bar stools instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "38e844ba96ef565b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be stainless steel."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "650f9bffc4c925fb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be fully assembled."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "13323d7bcc61568c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f19e4f78dbc85ff3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4025cc74d85253f7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 18\" instead of counter height."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "ba4669ff7a779dec",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pack instead of counter height."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

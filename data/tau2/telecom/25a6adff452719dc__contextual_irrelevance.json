@@ -1,0 +1,126 @@
+{
+ "sample_id": "25a6adff452719dc__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "25a6adff452719dc",
+ "query": "I was walking my golden retriever through the community park this morning, and he chased a squirrel right into a patch of dandelions, got his fur all covered in the fluffy seeds, I had to spend ten minutes brushing him off before we could head home. Then I stopped by the corner boba shop on the way back, and they had a new honey oolong flavor that was so good I already decided I\u2019m going to go back again tomorrow to get another one. Oh right, the reason I\u2019m calling is that my mobile service isn\u2019t working at all. My data usage hit the limit earlier this month, my SIM card feels like it might be loose, I\u2019m traveling abroad right now and I haven\u2019t turned roaming on, I keep having issues with network preferences being stuck on bad connections, WiFi calling cuts out every time I try to use it, and both of the permissions for my main messaging app got disabled somehow so it won\u2019t open at all.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever through the community park this morning, and he chased a squirrel right into a patch of dandelions, got his fur all covered in the fluffy seeds, I had to spend ten minutes brushing him off before we could head home. Then I stopped by the corner boba shop on the way back, and they had a new honey oolong flavor that was so good I already decided I\u2019m going to go back again tomorrow to get another one. Oh right, the reason I\u2019m calling is that my mobile service isn\u2019t working at all.",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:bad_wifi_calling",
+   "fault:break_app_both_permissions",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

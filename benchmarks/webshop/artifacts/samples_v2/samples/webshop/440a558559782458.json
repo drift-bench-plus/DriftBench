@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "lighters & matches",
+ "fidelity_notes": [],
+ "goal_idx": 269,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "561c2a6b8f72347605478c59636614c6",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B073H7T9P8\",[[\"flavor name\",\"golden oolong tea\"],[\"size\",\"16.9 ounce (pack of 12)\"]]]",
+   "[\"B07YVLPWX7\",[[\"flavor name\",\"golden\"],[\"size\",\"8.29 ounce (pack of 1)\"]]]",
+   "[\"B08S7KZVFX\",[[\"flavor name\",\"ultra gold\"],[\"size\",\"16 ounce (pack of 24)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:sugar free",
+    "=",
+    "sugar free"
+   ],
+   [
+    "option:0",
+    "=",
+    "ultra gold"
+   ],
+   [
+    "option:1",
+    "=",
+    "16 ounce (pack of 24)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "769a0d0780bb01f9"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "ultra gold"
+    ],
+    [
+     "option:1",
+     "=",
+     "16 ounce (pack of 24)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the afternoon rearranging my windowsill herb garden, and my basil plant finally sprouted its first set of true leaves after three weeks of waiting. I also tried a new homemade iced tea recipe with fresh mint from the garden yesterday, and it turned out so refreshing I drank three glasses in one sitting. Oh, and I found a cute tiny ceramic watering can at the craft store last weekend that’s perfect for tending to those little seedlings.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:sugar free",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the afternoon rearranging my windowsill herb garden, and my basil plant finally sprouted its first set of true leaves after three weeks of waiting. I also tried a new homemade iced tea recipe with fresh mint from the garden yesterday, and it turned out so refreshing I drank three glasses in one sitting. Oh, and I found a cute tiny ceramic watering can at the craft store last weekend that’s perfect for tending to those little seedlings. Anyway, I’m looking for sugar free options, preferably ultra gold 16 ounce packs of 24, with a price limit of $50.",
+ "render_attempts": 2,
+ "sample_id": "440a558559782458",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the lighters & matches instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "3be70ff83880c9e4"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the lighters & matches instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "502f1dffbc409486"
+  },
+  {
+   "announcement": "Also, it needs to be energy drink.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0d7cee070729386d"
+  },
+  {
+   "announcement": "Also, it needs to be zero sugar.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1194c6dab11aa5cf"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1a6c56ed598bc34b"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "84fd31fa93f635bb"
+  },
+  {
+   "announcement": "Actually, make it 0.15 ounce (pack of 1) instead of ultra gold.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "455b5d526db48e30"
+  },
+  {
+   "announcement": "Actually, make it 0.15 ounce (pack of 2) instead of ultra gold.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8f1b3604d1c18bf5"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like a 16 ounce ultra gold sugar free energy drink,",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "ff004be3b17ec6ca",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

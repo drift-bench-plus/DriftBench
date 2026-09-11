@@ -1,0 +1,282 @@
+{
+ "sample_id": "42a944b2a5d3ed0f",
+ "tree_id": "8592822d3b6fb92c",
+ "adapter": "webshop",
+ "cluster": "throw blankets",
+ "goal_idx": 380,
+ "split": "test",
+ "source_instruction": "i am looking  super soft speed sports car fleece throw blanket for boys girls extreme sports theme plush blanket cool tie dye decor fuzzy blanket for sofa bed couch  for living room.",
+ "query": "I\u2019ve heard there are sherpa throws for living room use that feel super soft, y\u2019know? I\u2019ve heard the regular option from this section is nothing fancy, and I\u2019ve heard that option doesn\u2019t go over that usual price cap I stick to, yeah? I\u2019ve heard it\u2019s the kind of thing that doesn\u2019t cost more than I\u2019m comfortable with for something I\u2019ll curl up with while watching TV after work.",
+ "strategy_ids": [
+  "insufficient_information",
+  "indirect_intent",
+  "factual_error",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+indirect_intent+factual_error+referential_ambiguity",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "indirect_intent",
+   "factual_error",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "factual_error": "attr:fleece throw",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:fleece throw",
+    "fleece throw",
+    "sherpa throws"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:living room",
+   "attr:super soft"
+  ],
+  "hidden_slots": [
+   "attr:fleece throw",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:fleece throw",
+     "=",
+     "sherpa throws"
+    ],
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "febe0b54937219e5"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 48,
+  "lit_card": 7,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 494,
+    "true_card": 48,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 48,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 50,
+    "true_card": 48,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "24810cd9bb6a5801",
+  "conditions": [
+   [
+    "attr:fleece throw",
+    "=",
+    "fleece throw"
+   ],
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "attr:super soft",
+    "=",
+    "super soft"
+   ],
+   [
+    "option:0",
+    "=",
+    "throw"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "attr:fleece throw",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 48,
+  "value": [
+   "[\"B07B4WXL1V\",[[\"size\",\"50 x 60 inches - throw\"]]]",
+   "[\"B07FM8MZZ1\",[[\"size\",\"throw(50\\\"x60\\\")\"]]]",
+   "[\"B07PRQ7CX7\",[[\"size\",\"throw(50\\\"x65\\\")\"]]]",
+   "[\"B07TRBZGV7\",[[\"size\",\"throw(50\\\"x60\\\")\"]]]",
+   "[\"B07VSR4MG1\",[[\"size\",\"throw(50\\\"x60\\\")\"]]]",
+   "[\"B085RNCPZC\",[[\"size\",\"travel | throw(50\\\"x60\\\")\"]]]",
+   "[\"B08744SN3H\",[[\"size\",\"throw\"]]]",
+   "[\"B088LQ75SN\",[[\"size\",\"throw (50 in x 60 in)\"]]]",
+   "[\"B089WG5SD3\",[[\"size\",\"throw-50\\\"x60\\\"\"]]]",
+   "[\"B08BLDR3CZ\",[[\"size\",\"throw\"]]]",
+   "[\"B08C7V89DV\",[[\"size\",\"throw( 50\\\"x60\\\")\"]]]",
+   "[\"B08F4XRK3W\",[[\"size\",\"throw(50\\\"x60\\\")\"]]]",
+   "[\"B08F5F95Y8\",[[\"size\",\"throw( 50\\\"x60\\\")\"]]]",
+   "[\"B08F5FD8T2\",[[\"size\",\"throw( 50\\\"x60\\\")\"]]]",
+   "[\"B08GH6MWJM\",[[\"size\",\"throw\"]]]",
+   "[\"B08GRZ9351\",[[\"size\",\"throw\"]]]",
+   "[\"B08GSL8SXK\",[[\"size\",\"throw( 50\\\"x60\\\")\"]]]",
+   "[\"B08H55YJ1Y\",[[\"size\",\"throw\"]]]",
+   "[\"B08J7YX2GQ\",[[\"size\",\"throw\"]]]",
+   "[\"B08JCC5VDM\",[[\"size\",\"throw\"]]]",
+   "[\"B08L33D457\",[[\"size\",\"throw\"]]]",
+   "[\"B08LBHBP2V\",[[\"size\",\"throw\"]]]",
+   "[\"B08N45D8NZ\",[[\"size\",\"throw\"]]]",
+   "[\"B08N4GNPRP\",[[\"size\",\"throw\"]]]",
+   "[\"B08N4GTQN8\",[[\"size\",\"throw\"]]]",
+   "[\"B08NJGPH9M\",[[\"size\",\"throw\"]]]",
+   "[\"B08P2PTQ4Q\",[[\"size\",\"throw\"]]]",
+   "[\"B08P8M1LTT\",[[\"size\",\"throw blanket 60\\\"x50\"]]]",
+   "[\"B08QTYLGNL\",[[\"size\",\"throw\"]]]",
+   "[\"B08RDKXGS8\",[[\"size\",\"throw\"]]]",
+   "[\"B08SR67Y3N\",[[\"size\",\"throw-50 in x 60 in\"]]]",
+   "[\"B08T9GNY46\",[[\"size\",\"throw (50x65 inches)\"]]]",
+   "[\"B08TLKFL5B\",[[\"size\",\"throw\"]]]",
+   "[\"B08Y6T1TYN\",[[\"size\",\"throw\"]]]",
+   "[\"B08ZYSGPWT\",[[\"size\",\"throw\"]]]",
+   "[\"B091YNR3KS\",[[\"size\",\"throw\"]]]",
+   "[\"B092Z6HN7J\",[[\"size\",\"throw\"]]]",
+   "[\"B0952QTC4R\",[[\"size\",\"throw\"]]]",
+   "[\"B097DM42GX\",[[\"size\",\"throw\"]]]",
+   "[\"B097XWJ1KM\",[[\"size\",\"throw\"]]]",
+   "[\"B09B6S83CN\",[[\"size\",\"throw 50\\\"x60\\\"\"]]]",
+   "[\"B09D8WZ42X\",[[\"size\",\"throw\"]]]",
+   "[\"B09G5R8G7F\",[[\"size\",\"throw 50\\\" x 60\\\"\"]]]",
+   "[\"B09J3PMPYW\",[[\"size\",\"throw(50\\\"x60\\\")\"]]]",
+   "[\"B09J8GBQNG\",[[\"size\",\"throw(50\\\"x60\\\")\"]]]",
+   "[\"B09JRKJ35C\",[[\"size\",\"throw\"]]]",
+   "[\"B09JZ3Q2DD\",[[\"size\",\"throw(50\\\"x60\\\")\"]]]",
+   "[\"B09NR9CNJ2\",[[\"size\",\"throw size(50\\\" by 60\\\")\"]]]"
+  ],
+  "hash": "f297e5b29a9eb1a7788c9cf9403c7ad0"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "201005557906bc2d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the throw blankets instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "76c32a170da78957",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the throw blankets instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "176accf555a456a2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be home office."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "361127cad5818239",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gray item."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "001c0e0ad692f497",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6eb8e2890a1f4e1e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0fd6f4a4d642202d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 120\"x90\" extra large instead of throw."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "8bfeff07d5c625fb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 120\"x90\" for family instead of throw."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

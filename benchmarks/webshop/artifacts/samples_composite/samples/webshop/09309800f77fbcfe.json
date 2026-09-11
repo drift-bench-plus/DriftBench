@@ -1,0 +1,196 @@
+{
+ "sample_id": "09309800f77fbcfe",
+ "tree_id": "fb31c7e1fb96a04c",
+ "adapter": "webshop",
+ "cluster": "makeup sets",
+ "goal_idx": 232,
+ "split": "test",
+ "source_instruction": "i would like some champagne rhinestones for my nail art.",
+ "query": "Oh man, I just got back from walking my golden retriever and he rolled in a huge patch of mud by the community garden, so I had to give him a sudsy bath on the porch and now my favorite fuzzy slippers are soaked through, plus I noticed my windowsill succulent is getting all wrinkly like I forgot to water it for two whole weeks. Anyway, since you probably don\u2019t have any makeup sets with nail art in stock right now, can you grab me the ones with champagne-themed accents that are under $50? Wait, actually make sure they\u2019re the ones that come with nail art too, yeah?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "false_presupposition"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+false_presupposition",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "false_presupposition"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "since you probably don\u2019t have any makeup sets with nail art in stock right now",
+    "condition": null,
+    "about": [
+     "attr:nail art",
+     "nail art"
+    ],
+    "alternative": [
+     "attr:nail art",
+     "champagne"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh man, I just got back from walking my golden retriever and he rolled in a huge patch of mud by the community garden, so I had to give him a sudsy bath on the porch and now my favorite fuzzy slippers are soaked through, plus I noticed my windowsill succulent is getting all wrinkly like I forgot to water it for two whole weeks.",
+  "retained": [
+   "attr:nail art",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:nail art",
+     "=",
+     "champagne"
+    ],
+    [
+     "option:0",
+     "=",
+     "champagne"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "f23124c4aafec9ef"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 5,
+  "lit_card": 1,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 5,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "b838a4194218c014",
+  "conditions": [
+   [
+    "attr:nail art",
+    "=",
+    "nail art"
+   ],
+   [
+    "option:0",
+    "=",
+    "champagne"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 5,
+  "value": [
+   "[\"B08WZ7MMYZ\",[[\"color\",\"champagne\"]]]",
+   "[\"B0943N574G\",[[\"color\",\"champagne\"]]]",
+   "[\"B09N75TYCR\",[[\"color\",\"2pcs champagne-purple\"]]]",
+   "[\"B09NW1MP2M\",[[\"color\",\"champagne diamond\"]]]",
+   "[\"B09PYDYQ9B\",[[\"color\",\"120pcs+2204pcs champagne gold rhinestones\"]]]"
+  ],
+  "hash": "ba807ed05378b2fd9e90530bcf810a81"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "3c4aca41b8fb98f6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup sets instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "4a58c89b8d2e01ea",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup sets instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "65959e8e4a9eb66d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be storage box."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e8dc28ba79851055",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "bd21ad16512cd0c3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e77773368d1f9659",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "81631d5e8c9cf84a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it ! pigeon gray (large) instead of champagne."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d67e9fa9c39f17e6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it \" sapphire black (large) instead of champagne."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

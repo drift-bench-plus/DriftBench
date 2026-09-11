@@ -1,0 +1,202 @@
+{
+ "sample_id": "48e1278d289b37a2",
+ "tree_id": "1cef1282d58c59b6",
+ "adapter": "webshop",
+ "cluster": "dairy, cheese & eggs",
+ "goal_idx": 266,
+ "split": "test",
+ "source_instruction": "i am looking for a individual wrapped birthday cakes and chocolate chip blondies that come in a 12 pack.",
+ "query": "You won\u2019t believe how wild the parking lot was when I pulled up ten minutes ago\u2014there was a golden retriever sitting straight up in the driver\u2019s seat of a beat-up minivan, paws propped on the steering wheel like he was waiting to pull out of the spot the second his owner came back, and a whole group of people had stopped to snap photos of him, holding up traffic for almost five whole minutes. I even ran into that barista from the corner coffee shop who always draws little dinosaurs on the latte cups, and she said they\u2019re rolling out a honey-cinnamon cold brew next week that tastes exactly like the cereal we all ate as kids, which sounds so good I\u2019m already planning to stop by on my way home tomorrow. The weather\u2019s holding up way nicer than the forecast predicted too, all soft sun and a light breeze that doesn\u2019t even feel like the sticky, gross humidity we\u2019ve had every afternoon for the past two weeks, so I might take the long way through the park when I leave instead of cutting through the busy main road. I\u2019m over in the dairy, cheese & eggs section right now. I\u2019ve heard those individually wrapped snack bites, y\u2019know the ones? I\u2019ve heard the total doesn\u2019t go over that one, and the usual mix I get is the one that\u2019s there for that.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "referential_ambiguity",
+  "indirect_intent",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+referential_ambiguity+indirect_intent+insufficient_information",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "referential_ambiguity",
+   "indirect_intent",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "You won\u2019t believe how wild the parking lot was when I pulled up ten minutes ago\u2014there was a golden retriever sitting straight up in the driver\u2019s seat of a beat-up minivan, paws propped on the steering wheel like he was waiting to pull out of the spot the second his owner came back, and a whole group of people had stopped to snap photos of him, holding up traffic for almost five whole minutes. I even ran into that barista from the corner coffee shop who always draws little dinosaurs on the latte cups, and she said they\u2019re rolling out a honey-cinnamon cold brew next week that tastes exactly like the cereal we all ate as kids, which sounds so good I\u2019m already planning to stop by on my way home tomorrow. The weather\u2019s holding up way nicer than the forecast predicted too, all soft sun and a light breeze that doesn\u2019t even feel like the sticky, gross humidity we\u2019ve had every afternoon for the past two weeks, so I might take the long way through the park when I leave instead of cutting through the busy main road. I\u2019m over in the dairy, cheese & eggs section right now.",
+  "retained": [
+   "attr:individually wrapped"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:individually wrapped",
+     "=",
+     "individually wrapped"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "2b4d433437bfe88b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 22,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 7,
+    "true_card": 6,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 19,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "0b2e52ba71bde3ef",
+  "conditions": [
+   [
+    "attr:individually wrapped",
+    "=",
+    "individually wrapped"
+   ],
+   [
+    "option:0",
+    "=",
+    "birthday cake & chocolate chip blondie"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B01B22W5JS\",[[\"flavor name\",\"oatmeal chocolate chip\"]]]",
+   "[\"B07B7BV15N\",[[\"flavor name\",\"birthday cake & chocolate chip blondie\"]]]",
+   "[\"B0863J835N\",[[\"flavor name\",\"chocolate\"]]]",
+   "[\"B08R3V9K9B\",[[\"flavor name\",\"cocoa & chocolate\"]]]",
+   "[\"B08VZWT34G\",[[\"flavor name\",\"peanut butter dark chocolate\"]]]",
+   "[\"B08XB8SQ4P\",[[\"flavor name\",\"peanut butter dark chocolate\"]]]"
+  ],
+  "hash": "f074c901efae68ce48cc14dce424c33a"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "31593c3e27e9c9a1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the dairy, cheese & eggs instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ea20cb6fefb97a92",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the dairy, cheese & eggs instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "020d455a76a5d3b2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dietary fiber."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e5cee811883bc46d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be low calorie."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "413dc7dfbc38420e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c34bdc093142353b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "024c6584d82202ef",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1.6 ounce (pack of 12) instead of birthday cake & chocolate chip blondie."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d3d534ee1db13989",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pound (pack of 2) instead of birthday cake & chocolate chip blondie."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

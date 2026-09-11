@@ -1,0 +1,821 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B006QN9TFC",
+    "cluster": "hair treatment oils",
+    "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners"
+   },
+   "bound_slots": [
+    "attr:argan oil",
+    "attr:damaged hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "120ml |  4 fl oz"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ],
+   "ground_truth": {
+    "hash": "354d5889c2fc75af4e08d016eaf58dcd",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B006QN9TFC\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+     "[\"B007CKMQOY\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+     "[\"B00E9YSADW\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+     "[\"B07YF3LZVQ\",[[\"size\",\"3.4 fl oz.\"]]]",
+     "[\"B09PTXBSFM\",[[\"size\",\"4 fl.oz\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7cc446afb81cc0ac",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B006QN9TFC",
+     "attributes": [
+      "argan oil",
+      "damaged hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "120ml |  4 fl oz"
+     ],
+     "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+     "price_upper": 70,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": "cdf3235a52427b36",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B082Q61BS5",
+    "cluster": "hair treatment oils",
+    "name": "Dr. Miracle's Strong & Healthy Detangling Pre-Shampoo Treatment. Infused with Coconut Water, Marshmallow Root and Aloe Vera, hydrates and restores moisture to dry damaged hair.",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+   },
+   "bound_slots": [
+    "attr:damaged hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "pre-shampoo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ac8e1c53af8fd33a28df3cc706d49ade",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00ADR6L08\",[[\"style\",\"shampoo\"]]]",
+     "[\"B075WY457Q\",[[\"style name\",\"shampoo\"]]]",
+     "[\"B07HMVN5HZ\",[[\"style\",\"shampoo\"]]]",
+     "[\"B07NBHJ4BT\",[[\"style\",\"shampoo\"]]]",
+     "[\"B082F2HL6P\",[[\"pattern name\",\"pre shampoo hair oil\"]]]",
+     "[\"B082Q61BS5\",[[\"scent\",\"pre-shampoo\"]]]",
+     "[\"B086CPB3WR\",[[\"style\",\"shampoo\"]]]",
+     "[\"B088KNJ3S8\",[[\"style\",\"shampoo\"]]]",
+     "[\"B08JSH5FKJ\",[[\"style\",\"shampoo\"]]]",
+     "[\"B096ZFGXMJ\",[[\"size\",\"shampoo\"]]]",
+     "[\"B0971BX3V1\",[[\"scent\",\"shampoo\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "53e294edf352a6cf",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B082Q61BS5",
+     "attributes": [
+      "damaged hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "pre-shampoo"
+     ],
+     "name": "Dr. Miracle's Strong & Healthy Detangling Pre-Shampoo Treatment. Infused with Coconut Water, Marshmallow Root and Aloe Vera, hydrates and restores moisture to dry damaged hair.",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": "2250feaaa4fd013b",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B088LGSRTG",
+    "cluster": "hair treatment oils",
+    "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+   },
+   "bound_slots": [
+    "attr:aloe vera",
+    "attr:natural hair",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:aloe vera",
+     "=",
+     "aloe vera"
+    ],
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "7 fl oz (pack of 3)"
+    ],
+    [
+     "option:1",
+     "=",
+     "conditioner"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "49167fb9cd9da2436db2c82bd9e20c57",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08JSH5FKJ\",[[\"size\",\"14 fl oz (pack of 3)\"],[\"style\",\"conditioner\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "6a1db6384c6d4c43",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B088LGSRTG",
+     "attributes": [
+      "aloe vera",
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "7 fl oz (pack of 3)",
+      "conditioner"
+     ],
+     "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B088LGSRTG",
+    "cluster": "hair treatment oils",
+    "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+   },
+   "bound_slots": [
+    "attr:damaged hair",
+    "attr:natural hair",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "7 fl oz (pack of 3)"
+    ],
+    [
+     "option:1",
+     "=",
+     "conditioner"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "49167fb9cd9da2436db2c82bd9e20c57",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08JSH5FKJ\",[[\"size\",\"14 fl oz (pack of 3)\"],[\"style\",\"conditioner\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "5ea257971345868d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B088LGSRTG",
+     "attributes": [
+      "damaged hair",
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "7 fl oz (pack of 3)",
+      "conditioner"
+     ],
+     "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B088LGSRTG",
+    "cluster": "hair treatment oils",
+    "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+   },
+   "bound_slots": [
+    "attr:natural hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "7 fl oz (pack of 3)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "3fbdcf762c16ee129a662905332fa5c3",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00NFUH1AY\",[[\"size\",\"3.4 fl oz (pack of 3)\"]]]",
+     "[\"B00S5UFHFU\",[[\"size\",\"2 fl oz (pack of 1)\"]]]",
+     "[\"B00TH3UPMO\",[[\"size\",\"0.51 fl oz (pack of 1)\"]]]",
+     "[\"B01IHUN5D8\",[[\"size\",\"3.38 fl oz (pack of 1)\"]]]",
+     "[\"B01NALN8Q9\",[[\"size\",\"2 fl oz (pack of 1)\"]]]",
+     "[\"B06X18521Y\",[[\"size\",\"16 fl oz (pack of 1)\"]]]",
+     "[\"B0785FGYTX\",[[\"scent\",\"pack of 1\"]]]",
+     "[\"B07DXCJYKK\",[[\"size\",\"2 fl oz (pack of 1)\"]]]",
+     "[\"B07N158T2H\",[[\"size\",\"3 pack\"]]]",
+     "[\"B07PT51SW7\",[[\"size\",\"4 fl oz (pack of 1)\"]]]",
+     "[\"B07QXY6ST8\",[[\"size\",\"4 fl oz (pack of 1)\"]]]",
+     "[\"B07XWVWHVJ\",[[\"size\",\"2.03 fl oz (pack of 2)\"]]]",
+     "[\"B07YL955KY\",[[\"size\",\"1 fl oz (pack of 1)\"]]]",
+     "[\"B07YVHY6YR\",[[\"size\",\"4 fl oz (pack of 3)\"]]]",
+     "[\"B08537YL1X\",[[\"size\",\"3.38 fl oz (pack of 1)\"]]]",
+     "[\"B088LGSRTG\",[[\"size\",\"7 fl oz (pack of 3)\"]]]",
+     "[\"B08JSH5FKJ\",[[\"size\",\"14 fl oz (pack of 3)\"]]]",
+     "[\"B08NF21D2H\",[[\"size\",\"3.38 fl oz (pack of 1)\"]]]",
+     "[\"B08QM7KBB8\",[[\"size\",\"8.45 fl. oz (pack of 3)\"]]]",
+     "[\"B08RDHV1RF\",[[\"size\",\"1.01 fl oz (pack of 1)\"]]]",
+     "[\"B08XC1YYGG\",[[\"size\",\"1.7 fl oz (pack of 1)\"]]]",
+     "[\"B08XP95VY4\",[[\"size\",\"1 fl oz (pack of 1)\"]]]",
+     "[\"B09DK6FR44\",[[\"size\",\"2 fl oz (pack of 1)\"]]]",
+     "[\"B09DTG9YCM\",[[\"size\",\"16 fl oz (pack of 3)\"]]]",
+     "[\"B09PKM2L24\",[[\"size\",\"4 fl oz (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "de935e7fde707d33",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B088LGSRTG",
+     "attributes": [
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "7 fl oz (pack of 3)"
+     ],
+     "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B088LGSRTG",
+    "cluster": "hair treatment oils",
+    "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+   },
+   "bound_slots": [
+    "attr:natural hair",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:1",
+     "=",
+     "conditioner"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "9c46b89419e39fd8c7a52e62a576446c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B082Q61BS5\",[[\"scent\",\"conditioner\"]]]",
+     "[\"B088LGSRTG\",[[\"style\",\"conditioner\"]]]",
+     "[\"B08JCJKT5N\",[[\"scent\",\"keratin & argan hair conditioner\"]]]",
+     "[\"B08JSH5FKJ\",[[\"style\",\"conditioner\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "2fe17382e85ec3f4",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B088LGSRTG",
+     "attributes": [
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "conditioner"
+     ],
+     "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B088LGSRTG",
+    "cluster": "hair treatment oils",
+    "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+   },
+   "bound_slots": [
+    "attr:natural hair",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "1 ounce"
+    ],
+    [
+     "option:1",
+     "=",
+     "conditioner"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "4dab8277647f2ff8540a440c712efb17",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08JSH5FKJ\",[[\"size\",\"14 ounce (pack of 1)\"],[\"style\",\"conditioner\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7b612a4687aadc24",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B088LGSRTG",
+     "attributes": [
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "1 ounce",
+      "conditioner"
+     ],
+     "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B088LGSRTG",
+    "cluster": "hair treatment oils",
+    "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+   },
+   "bound_slots": [
+    "attr:natural hair",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "11 ounce (pack of 1)"
+    ],
+    [
+     "option:1",
+     "=",
+     "conditioner"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "4dab8277647f2ff8540a440c712efb17",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08JSH5FKJ\",[[\"size\",\"14 ounce (pack of 1)\"],[\"style\",\"conditioner\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c132ef3f0a8a88f8",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B088LGSRTG",
+     "attributes": [
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "11 ounce (pack of 1)",
+      "conditioner"
+     ],
+     "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B006QN9TFC",
+     "cluster": "hair treatment oils",
+     "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners"
+    }
+   },
+   "dst": "7cc446afb81cc0ac",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "cdf3235a52427b36",
+   "src": "7e6c178f1ef18663"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B082Q61BS5",
+     "cluster": "hair treatment oils",
+     "name": "Dr. Miracle's Strong & Healthy Detangling Pre-Shampoo Treatment. Infused with Coconut Water, Marshmallow Root and Aloe Vera, hydrates and restores moisture to dry damaged hair.",
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+    }
+   },
+   "dst": "53e294edf352a6cf",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "2250feaaa4fd013b",
+   "src": "7e6c178f1ef18663"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:aloe vera",
+      "=",
+      "aloe vera"
+     ]
+    ]
+   },
+   "dst": "6a1db6384c6d4c43",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7e6c178f1ef18663"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:damaged hair",
+      "=",
+      "damaged hair"
+     ]
+    ]
+   },
+   "dst": "5ea257971345868d",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7e6c178f1ef18663"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:1",
+      "=",
+      "conditioner"
+     ]
+    ]
+   },
+   "dst": "de935e7fde707d33",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7e6c178f1ef18663"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "7 fl oz (pack of 3)"
+     ]
+    ]
+   },
+   "dst": "2fe17382e85ec3f4",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7e6c178f1ef18663"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "7 fl oz (pack of 3)",
+      "1 ounce"
+     ]
+    ]
+   },
+   "dst": "7b612a4687aadc24",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7e6c178f1ef18663"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "7 fl oz (pack of 3)",
+      "11 ounce (pack of 1)"
+     ]
+    ]
+   },
+   "dst": "c132ef3f0a8a88f8",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7e6c178f1ef18663"
+  }
+ ],
+ "env_id": "webshop_9822bb15989ffae8",
+ "env_spec": {
+  "cluster": "hair treatment oils",
+  "env_id": "webshop_9822bb15989ffae8",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B088LGSRTG",
+   "cluster": "hair treatment oils",
+   "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+   "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+  },
+  "bound_slots": [
+   "attr:natural hair",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:natural hair",
+    "=",
+    "natural hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "7 fl oz (pack of 3)"
+   ],
+   [
+    "option:1",
+    "=",
+    "conditioner"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "ground_truth": {
+   "hash": "691f1072e2b49fe01f86b69d93dc6a7d",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B088LGSRTG\",[[\"size\",\"7 fl oz (pack of 3)\"],[\"style\",\"conditioner\"]]]",
+    "[\"B08JSH5FKJ\",[[\"size\",\"14 fl oz (pack of 3)\"],[\"style\",\"conditioner\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "7e6c178f1ef18663",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "hair treatment oils",
+   "goal": {
+    "asin": "B088LGSRTG",
+    "attributes": [
+     "natural hair"
+    ],
+    "category": "",
+    "goal_options": [
+     "7 fl oz (pack of 3)",
+     "conditioner"
+    ],
+    "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+    "price_upper": 20,
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos",
+    "query": "hair treatment oils"
+   }
+  },
+  "source_record": "671deca08be5dde0",
+  "unbound_slots": [
+   "attr:aloe vera",
+   "attr:damaged hair",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "tree_id": "27435fd52d082942"
+}

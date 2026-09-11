@@ -1,0 +1,318 @@
+{
+ "sample_id": "f8720847dc0f16c3",
+ "tree_id": "1ce18d923203f256",
+ "adapter": "webshop",
+ "cluster": "digital cameras",
+ "goal_idx": 32,
+ "split": "test",
+ "source_instruction": "please show me a digital camera. my favorite brand is casio, my husnband  told me about model exilim ex-z120 7. is there a batteries included too ? isn't it",
+ "query": "I stopped by the community garden on my walk home yesterday, right when the last of the golden hour light was slanting over the raised beds. The old guy who tends the tomato row was passing out warm slices of sun-warmed Brandywine tomato, sprinkled with a little flaky salt he kept in a dented tin in his overalls pocket. A group of tiny kids was chasing a monarch butterfly that kept fluttering just out of their reach, their sneakers kicking up little puffs of wood chip mulch as they wove between the beds, laughing so loud the sparrows perched on the fence took off in a flutter of brown wings. One of the sunflower heads had drooped so low it was resting on the path, its face crammed full of plump seeds that a handful of chickadees were darting in to peck at like tiny, skittish party crashers.\nI\u2019ve heard there are digital cameras that come with batteries included, y\u2019know? I\u2019ve heard there\u2019s no need to run out and grab those separately right after buying one. I\u2019ve heard of good ones that don\u2019t cost a crazy amount, something with a price that feels totally reasonable for what you\u2019re getting. I\u2019ve heard those have that zoom thing people talk about for getting clearer shots of stuff that\u2019s far away, right? Wait, no, hold on\u2014wait, I\u2019ve heard those come with all the little bits needed to use them right out of the box, yeah? I\u2019ve heard there\u2019s no messing around buying extra add-ons just to turn them on.",
+ "strategy_ids": [
+  "indirect_intent",
+  "contextual_irrelevance",
+  "vagueness_subjectivity",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+contextual_irrelevance+vagueness_subjectivity+insufficient_information",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "indirect_intent",
+   "contextual_irrelevance",
+   "vagueness_subjectivity",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "insufficient_information": "attr:optical zoom"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:optical zoom"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the community garden on my walk home yesterday, right when the last of the golden hour light was slanting over the raised beds. The old guy who tends the tomato row was passing out warm slices of sun-warmed Brandywine tomato, sprinkled with a little flaky salt he kept in a dented tin in his overalls pocket. A group of tiny kids was chasing a monarch butterfly that kept fluttering just out of their reach, their sneakers kicking up little puffs of wood chip mulch as they wove between the beds, laughing so loud the sparrows perched on the fence took off in a flutter of brown wings. One of the sunflower heads had drooped so low it was resting on the path, its face crammed full of plump seeds that a handful of chickadees were darting in to peck at like tiny, skittish party crashers.",
+  "retained": [
+   "attr:batteries included"
+  ],
+  "hidden_slots": [
+   "attr:optical zoom",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:batteries included",
+     "=",
+     "batteries included"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "68d4657d2f6dfd2b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 122,
+  "lit_card": 205,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 144,
+    "true_card": 122,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 176,
+    "true_card": 122,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "02f79fc486665f81",
+  "conditions": [
+   [
+    "attr:batteries included",
+    "=",
+    "batteries included"
+   ],
+   [
+    "attr:optical zoom",
+    "=",
+    "optical zoom"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "attr:optical zoom",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 122,
+  "value": [
+   "[\"B000038ABH\",[]]",
+   "[\"B00004R8VC\",[]]",
+   "[\"B00004R8VE\",[]]",
+   "[\"B00004RDMR\",[]]",
+   "[\"B00004TH2W\",[]]",
+   "[\"B00004TH2X\",[]]",
+   "[\"B00004TH2Y\",[]]",
+   "[\"B00004TJ7O\",[]]",
+   "[\"B00004WGNF\",[]]",
+   "[\"B000058TLP\",[]]",
+   "[\"B000059Y4N\",[]]",
+   "[\"B00005ATZO\",[]]",
+   "[\"B00005B6TI\",[]]",
+   "[\"B00005B6UF\",[]]",
+   "[\"B00005LVWB\",[]]",
+   "[\"B00005NHAC\",[]]",
+   "[\"B00005NHAK\",[]]",
+   "[\"B00005NVPW\",[]]",
+   "[\"B00005OAY3\",[]]",
+   "[\"B00005Q5ZC\",[]]",
+   "[\"B00005Q7DG\",[]]",
+   "[\"B00005QI59\",[]]",
+   "[\"B000063BGY\",[]]",
+   "[\"B000063CWO\",[]]",
+   "[\"B000063S4I\",[]]",
+   "[\"B000063S4J\",[]]",
+   "[\"B000063VYI\",[]]",
+   "[\"B00006412G\",[]]",
+   "[\"B000066EW5\",[]]",
+   "[\"B000067BEG\",[]]",
+   "[\"B000067BI8\",[]]",
+   "[\"B000068BRB\",[]]",
+   "[\"B000068BRE\",[]]",
+   "[\"B000069J9O\",[]]",
+   "[\"B00006AFD2\",[]]",
+   "[\"B00006BSTZ\",[]]",
+   "[\"B00006FMPP\",[]]",
+   "[\"B00006RZ1I\",[]]",
+   "[\"B00008IHTY\",[]]",
+   "[\"B00008IOEJ\",[]]",
+   "[\"B00008KIW8\",[]]",
+   "[\"B00008NDZY\",[]]",
+   "[\"B00008O2YO\",[]]",
+   "[\"B00008O35Y\",[]]",
+   "[\"B00008OE46\",[]]",
+   "[\"B00008OE5G\",[]]",
+   "[\"B00009VS6P\",[]]",
+   "[\"B00009VSBE\",[]]",
+   "[\"B00009VSG6\",[]]",
+   "[\"B00009VSIM\",[]]",
+   "[\"B00009WN9P\",[]]",
+   "[\"B0000AAAYY\",[]]",
+   "[\"B0000APONO\",[]]",
+   "[\"B0000C8VF9\",[]]",
+   "[\"B0000C8WLU\",[]]",
+   "[\"B0001EY1JQ\",[]]",
+   "[\"B0001FT3I4\",[]]",
+   "[\"B0001G6U8O\",[]]",
+   "[\"B0001G6UCA\",[]]",
+   "[\"B0001G6UES\",[]]",
+   "[\"B0001G6UF2\",[]]",
+   "[\"B0001GUOIQ\",[]]",
+   "[\"B00022PTTS\",[]]",
+   "[\"B0002AHQL4\",[]]",
+   "[\"B0002RS9A4\",[]]",
+   "[\"B0007CZ3D0\",[]]",
+   "[\"B0007CZ3EE\",[]]",
+   "[\"B0007GIXS8\",[]]",
+   "[\"B0007KQUP2\",[]]",
+   "[\"B0007LW2US\",[]]",
+   "[\"B0007MVHZS\",[]]",
+   "[\"B0007VTU9Y\",[]]",
+   "[\"B0009JQROU\",[]]",
+   "[\"B0009XQPHU\",[]]",
+   "[\"B000A7B9XU\",[]]",
+   "[\"B000A7B9YE\",[]]",
+   "[\"B000AOFVZK\",[]]",
+   "[\"B000AXMEDI\",[]]",
+   "[\"B000CCOFZM\",[]]",
+   "[\"B000CSBZLI\",[]]",
+   "[\"B000CSC0BM\",[]]",
+   "[\"B000CSYXCG\",[]]",
+   "[\"B000E65Y10\",[]]",
+   "[\"B000EMPPBS\",[]]",
+   "[\"B000GT6HAM\",[]]",
+   "[\"B000H7FXAS\",[]]",
+   "[\"B000HZXX0W\",[]]",
+   "[\"B000I1VEWO\",[]]",
+   "[\"B000JCMH4Q\",[]]",
+   "[\"B000M0X62W\",[]]",
+   "[\"B000MD3AH0\",[]]",
+   "[\"B000MD4UGK\",[]]",
+   "[\"B000QY3GPQ\",[]]",
+   "[\"B000TGQ66M\",[]]",
+   "[\"B000V1VG2E\",[]]",
+   "[\"B000V22SAM\",[]]",
+   "[\"B000VQ5VLQ\",[]]",
+   "[\"B0011Z9VKI\",[]]",
+   "[\"B001283FDS\",[]]",
+   "[\"B0012YA4YK\",[]]",
+   "[\"B001EQ4C8U\",[]]",
+   "[\"B001HKHKNW\",[]]",
+   "[\"B001WYKC5Q\",[]]",
+   "[\"B002HEWA1E\",[]]",
+   "[\"B002LITT3I\",[]]",
+   "[\"B002LITT3S\",[]]",
+   "[\"B0035WTVMI\",[]]",
+   "[\"B003B4BCHW\",[]]",
+   "[\"B003NZKUMW\",[]]",
+   "[\"B003NZKUP4\",[]]",
+   "[\"B004HO58JI\",[]]",
+   "[\"B004HW73TI\",[]]",
+   "[\"B006T7QXOA\",[]]",
+   "[\"B00B46XRI6\",[]]",
+   "[\"B00B4ZLJ5U\",[]]",
+   "[\"B00CD9JO3U\",[]]",
+   "[\"B00EFILR6E\",[]]",
+   "[\"B00HGE3CWG\",[]]",
+   "[\"B01HN372O8\",[]]",
+   "[\"B073PSKNQC\",[]]",
+   "[\"B09JNR1913\",[]]",
+   "[\"B09S1FJNGM\",[]]"
+  ],
+  "hash": "5affd74b41b6cdddff4edd277479907e"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0fbdc21648c3ecd2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the digital cameras instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ead79380ddcd9a74",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the digital cameras instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "54f8eba6777b6fea",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be motion detection."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7f3311598faacf4a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be light weight."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9586c74c1bf1895e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d6fa49c5835dc685",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "ccefd4270796a0cf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 120."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f9f24e2e0b3036f6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 120."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

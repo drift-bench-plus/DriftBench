@@ -1,0 +1,192 @@
+{
+ "sample_id": "9ddb8571ad28fb1e",
+ "tree_id": "ae56922c737a52f7",
+ "adapter": "webshop",
+ "cluster": "bathing accessories",
+ "goal_idx": 209,
+ "split": "test",
+ "source_instruction": "i'm looking for a light pink long handle back loofah shower brush.",
+ "query": "Ugh, I swear my neighbor\u2019s tabby keeps sneaking onto my fire escape to knock over my succulent pots, I had to repot my poor echeveria twice this week already, and I still can\u2019t find the right citrus fertilizer that doesn\u2019t smell weird enough to attract more stray cats loitering by the windowsill. Anyway, I\u2019m looking for bathing accessories here: I need one with an extra telescopic neck, in light pink, and it can\u2019t cost more than $20.",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:long handle"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:long handle",
+    "long handle",
+    "extra telescopic neck"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear my neighbor\u2019s tabby keeps sneaking onto my fire escape to knock over my succulent pots, I had to repot my poor echeveria twice this week already, and I still can\u2019t find the right citrus fertilizer that doesn\u2019t smell weird enough to attract more stray cats loitering by the windowsill.",
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:long handle"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:long handle",
+     "=",
+     "extra telescopic neck"
+    ],
+    [
+     "option:0",
+     "=",
+     "light pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "ab3e6effc2bcd873"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "71a6a9b91d6775b6",
+  "conditions": [
+   [
+    "attr:long handle",
+    "=",
+    "long handle"
+   ],
+   [
+    "option:0",
+    "=",
+    "light pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:long handle"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B08R9GV397\",[[\"color\",\"light pink\"]]]",
+   "[\"B08XXQHZS1\",[[\"color\",\"light pink\"]]]",
+   "[\"B08Y6VZFT6\",[[\"scent\",\"2 pack-light pink\"]]]"
+  ],
+  "hash": "2c816d607110daa9aefa71414b757cf4"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "874df47adf6060c1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bathing accessories instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "af15b930ca3ad6b5",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bathing accessories instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "4a19ed42826d492f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be non toxic."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cd07b8fc34b2b57f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be shower gel."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8dcba4e6eedf9624",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b46c34f0af3fda2d",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1829cc730df8e907",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it (6 packs)-blackx6 instead of light pink."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "40751f6f00e8cf26",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #3 instead of light pink."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

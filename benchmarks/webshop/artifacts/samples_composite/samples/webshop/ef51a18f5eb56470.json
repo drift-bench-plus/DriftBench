@@ -1,0 +1,219 @@
+{
+ "sample_id": "ef51a18f5eb56470",
+ "tree_id": "8dfccd58f5038c2a",
+ "adapter": "webshop",
+ "cluster": "lenses",
+ "goal_idx": 72,
+ "split": "test",
+ "source_instruction": "i am looking for a camera lens protector for iphone 13 made up of aluminum alloy. also choose pink color.",
+ "query": "I stopped at the little pretzel stand right by the mall entrance on my way in, and the warm, salty smell hit so hard I almost grabbed a soft pretzel with the chewy golden crust and extra cinnamon sugar dusted on top before I even remembered I was supposed to swing through this part of the store first. A kid standing by the stand was showing off the sparkly neon slime he\u2019d just won from the claw machine around the corner, stretching it so far between his hands it looked like it might drip right onto the tile floor before his mom laughed and nudged him to tuck it back into its plastic container. The overhead radio was playing that one early 2000s pop song I used to blast on my old portable CD player on the bus to high school, the one with the super catchy chorus that always gets stuck in my head for hours after I hear it, and I found myself humming along under my breath as I wandered over to the shelves. Over in the lenses section here, there are options made of magnesium alloy, all priced $30 max, and there\u2019s that one color I always pick, you know the one? I\u2019ve heard those magnesium alloy picks in that exact color at that price point fit exactly what lines up with what I look for when I\u2019m browsing this section.",
+ "strategy_ids": [
+  "factual_error",
+  "referential_ambiguity",
+  "indirect_intent",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+referential_ambiguity+indirect_intent+contextual_irrelevance",
+  "family": "expression+intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "factual_error",
+   "referential_ambiguity",
+   "indirect_intent",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:aluminum alloy"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:aluminum alloy",
+    "aluminum alloy",
+    "magnesium alloy"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped at the little pretzel stand right by the mall entrance on my way in, and the warm, salty smell hit so hard I almost grabbed a soft pretzel with the chewy golden crust and extra cinnamon sugar dusted on top before I even remembered I was supposed to swing through this part of the store first. A kid standing by the stand was showing off the sparkly neon slime he\u2019d just won from the claw machine around the corner, stretching it so far between his hands it looked like it might drip right onto the tile floor before his mom laughed and nudged him to tuck it back into its plastic container. The overhead radio was playing that one early 2000s pop song I used to blast on my old portable CD player on the bus to high school, the one with the super catchy chorus that always gets stuck in my head for hours after I hear it, and I found myself humming along under my breath as I wandered over to the shelves.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:aluminum alloy",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:aluminum alloy",
+     "=",
+     "magnesium alloy"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "d39f8eeadd8e7b32"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 14,
+  "lit_card": 4,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 14,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 141,
+    "true_card": 14,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "85f39e39db8e90bf",
+  "conditions": [
+   [
+    "attr:aluminum alloy",
+    "=",
+    "aluminum alloy"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:aluminum alloy",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 14,
+  "value": [
+   "[\"B09BB8CWYN\",[[\"color\",\"pink\"]]]",
+   "[\"B09DSHDKC5\",[[\"color\",\"diamond pink\"]]]",
+   "[\"B09FF7TJ67\",[[\"color\",\"pink\"]]]",
+   "[\"B09FFF942K\",[[\"color\",\"pink\"]]]",
+   "[\"B09FHHWNQ8\",[[\"color\",\"[for iphone 13  |  13 mini] - pink\"]]]",
+   "[\"B09H7RLPXK\",[[\"color\",\"pink\"]]]",
+   "[\"B09HXL86QD\",[[\"color\",\"pink\"]]]",
+   "[\"B09J7LZBN8\",[[\"color\",\"pink\"]]]",
+   "[\"B09JBL4FQG\",[[\"color\",\"pink\"]]]",
+   "[\"B09JC4Q9BM\",[[\"color\",\"pink\"]]]",
+   "[\"B09JZ8PZ1S\",[[\"color\",\"pink\"]]]",
+   "[\"B09LHV4X28\",[[\"color\",\"pink purple\"]]]",
+   "[\"B09LRPSGXV\",[[\"color\",\"pink\"]]]",
+   "[\"B09QRNDK13\",[[\"*\",\"pink\"]]]"
+  ],
+  "hash": "53cf4e61fb6363827245ff0c5cc6db81"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1517a244d9504ae9",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the lenses instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a30a8a150afddc1b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the lenses instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "0f316feb9fee34a2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wireless charging."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d4acfc5df3b3125f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cell phone."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "691b2eb556016aa5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "7497f2c7fdf0fcc7",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "04351f70df4a600f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 150mm handheld kaleidoscope instead of pink."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "794b3a3fde41830f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it -crystal instead of pink."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

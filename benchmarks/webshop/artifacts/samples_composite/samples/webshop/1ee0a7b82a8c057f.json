@@ -1,0 +1,204 @@
+{
+ "sample_id": "1ee0a7b82a8c057f",
+ "tree_id": "96f35bb21ef1d3ab",
+ "adapter": "webshop",
+ "cluster": "boomboxes & portable radios",
+ "goal_idx": 362,
+ "split": "test",
+ "source_instruction": "i'm looking for a jet-4 bluetooth portable speaker",
+ "query": "Hey there, I\u2019m browsing your boomboxes & portable radios section right now and I need a unit that has surround sound, can you show me options that fit that? My budget\u2019s no more than $120 total, and I definitely have a specific color I want but I don\u2019t want to lock myself into picking it out right now, just pull up all the matching ones that hit that sound feature and price point first.",
+ "strategy_ids": [
+  "factual_error",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+insufficient_information",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:stereo sound",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:stereo sound",
+    "stereo sound",
+    "surround sound"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:stereo sound",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:stereo sound",
+     "=",
+     "surround sound"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "e7de81410fcac517"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 8,
+  "lit_card": 72,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 8,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 286,
+    "true_card": 8,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "bf9e9d34dff61b2c",
+  "conditions": [
+   [
+    "attr:stereo sound",
+    "=",
+    "stereo sound"
+   ],
+   [
+    "option:0",
+    "=",
+    "grey"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "attr:stereo sound",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 8,
+  "value": [
+   "[\"B017WOQHAS\",[[\"color\",\"cloudy grey\"]]]",
+   "[\"B07H9T6TJQ\",[[\"color\",\"grey\"]]]",
+   "[\"B07W7442RZ\",[[\"color\",\"grey\"]]]",
+   "[\"B07X2Z97SG\",[[\"color\",\"grey\"]]]",
+   "[\"B07X43JBY8\",[[\"color\",\"grey\"]]]",
+   "[\"B083JNJX1Z\",[[\"color\",\"grey\"]]]",
+   "[\"B08DCY9MS5\",[[\"color\",\"grey\"]]]",
+   "[\"B092Z8C9FH\",[[\"color\",\"deep grey\"]]]"
+  ],
+  "hash": "8488d6cb1636b52d389ea9a496112225"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "018c4ca2ea5e520a",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the boomboxes & portable radios instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "5a700a421cf0e71e",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the boomboxes & portable radios instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "79372386c01fd8fd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mobile phone."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bdbf67b8a3fbf71e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be power bank."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c06df852db62e4eb",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "de90d71107914b61",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "43bd53e1a6e575a2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it black instead of grey."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "43e44837b6061a34",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it beartapeyellow instead of grey."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,245 @@
+{
+ "sample_id": "63242b00ffc96a5c",
+ "tree_id": "6a8dd7045af7540c",
+ "adapter": "webshop",
+ "cluster": "body care",
+ "goal_idx": 10,
+ "split": "test",
+ "source_instruction": "i am looking fresh scent body lotion for dry skin.",
+ "query": "Ugh, I swear the community garden plot I signed up for this spring is out to get me this week. I stopped by to water my tomato plants first thing this morning and found a whole family of squirrels had dug up half my marigold seedlings to stash acorns, and one of them just sat on the fence chittering at me like I was the one intruding on their space. I tried to patch up the bed and replant what I could save, but I tracked so much clumpy mud across the sidewalk on my walk home that a kid on a scooter pointed and laughed at my caked-up sneakers the whole block. Hey, I\u2019m looking through the body care section right now for something that works for combination skin, I want it to have that nice fresh scent too, and oh it\u2019d be great if it came with a little loofah attachment bundled with it. Can you show me options that fit what I\u2019m looking for? I don\u2019t want to spend too much, just something that fits my budget, y\u2019know? I\u2019ve been scrolling for a few minutes and haven\u2019t found the right pick yet.",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance",
+  "insufficient_information",
+  "irrelevant_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance+insufficient_information+irrelevant_information",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance",
+   "insufficient_information",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:dry skin",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:dry skin",
+    "dry skin",
+    "combination skin"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "works for combination skin",
+    "condition": [
+     "attr:skin_type",
+     "=",
+     "combination skin"
+    ]
+   },
+   {
+    "text": "came with a little loofah attachment bundled with it",
+    "condition": [
+     "attr:bundle",
+     "=",
+     "loofah attachment"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear the community garden plot I signed up for this spring is out to get me this week. I stopped by to water my tomato plants first thing this morning and found a whole family of squirrels had dug up half my marigold seedlings to stash acorns, and one of them just sat on the fence chittering at me like I was the one intruding on their space. I tried to patch up the bed and replant what I could save, but I tracked so much clumpy mud across the sidewalk on my walk home that a kid on a scooter pointed and laughed at my caked-up sneakers the whole block.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:dry skin",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dry skin",
+     "=",
+     "combination skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "fresh"
+    ],
+    [
+     "attr:skin_type",
+     "=",
+     "combination skin"
+    ],
+    [
+     "attr:bundle",
+     "=",
+     "loofah attachment"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "2da07b9fefc35f5b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 9,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 9,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 13,
+    "true_card": 9,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 9,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "e528bc01f86f4414",
+  "conditions": [
+   [
+    "attr:dry skin",
+    "=",
+    "dry skin"
+   ],
+   [
+    "option:0",
+    "=",
+    "fresh"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:dry skin",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 9,
+  "value": [
+   "[\"B00OQ1ZKO0\",[[\"scent\",\"fresh\"]]]",
+   "[\"B07NNXYHNM\",[[\"scent\",\"invigorating ocean-fresh fragrance\"]]]",
+   "[\"B07TFHZT47\",[[\"scent\",\"fresh sea salt\"]]]",
+   "[\"B0837311RV\",[[\"scent\",\"active + fresh\"]]]",
+   "[\"B086K1S96X\",[[\"scent\",\"extra fresh\"]]]",
+   "[\"B0875R9D9Q\",[[\"style\",\"fresh and fruity\"]]]",
+   "[\"B087Y28XLM\",[[\"scent\",\"fresh\"]]]",
+   "[\"B08DDYN4GB\",[[\"style\",\"fresh fusion\"]]]",
+   "[\"B08ZG91F9V\",[[\"scent\",\"fresh pomelo\"]]]"
+  ],
+  "hash": "1dfd531d953bd15d0f3978c308a1cdf6"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "44da8667d447c513",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the body care instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b7549c1d6038c0f0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the body care instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "472cbbfd796b790d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gluten free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "89313d391a559d1d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be clinically proven."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6aa9bbbf0d6a16e5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b7898de2d8a7134d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "887ef28075d55a56",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 101.2 ounce instead of fresh."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c5cf16a76ef4d72c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 12 fl oz (pack of 1) instead of fresh."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

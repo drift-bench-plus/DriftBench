@@ -1,0 +1,208 @@
+{
+ "adapter": "webshop",
+ "cluster": "digital cameras",
+ "fidelity_notes": [],
+ "goal_idx": 181,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "9cc52a7e15ea915683b85712867bad44",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07KTCSG5C\",[]]",
+   "[\"B07N96YVSW\",[]]",
+   "[\"B07S5CVRM3\",[]]",
+   "[\"B07T7399JK\",[]]",
+   "[\"B08L5ZGKCZ\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:optical zoom",
+    "=",
+    "optical zoom"
+   ],
+   [
+    "attr:ultra hd",
+    "=",
+    "ultra hd"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:optical zoom"
+  ],
+  "intent_id": "58b28923f0df7081"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "attr:optical zoom",
+      "optical zoom"
+     ],
+     [
+      "attr:optical zoom",
+      "digital zoom"
+     ]
+    ],
+    "surface": "a zoom"
+   }
+  ],
+  "attempt": 3,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:optical zoom"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:optical zoom",
+     "=",
+     "optical zoom"
+    ],
+    [
+     "attr:ultra hd",
+     "=",
+     "ultra hd"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   [
+    [
+     "attr:optical zoom",
+     "=",
+     "digital zoom"
+    ],
+    [
+     "attr:ultra hd",
+     "=",
+     "ultra hd"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:ultra hd",
+   "price_upper"
+  ],
+  "spec_id": "b9872e3df8e59ea7",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a camera that has ultra HD and a zoom, and I don’t want to spend more than 20 on it.",
+ "render_attempts": 3,
+ "sample_id": "982c8db696e0d648",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the digital cameras instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "02f79fc486665f81"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the digital cameras instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0fbdc21648c3ecd2"
+  },
+  {
+   "announcement": "Also, it needs to be memory card.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2ab436ac9c205950"
+  },
+  {
+   "announcement": "Also, it needs to be ac adapter.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "da2f908b79213029"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1e0f6db5b43d27f9"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2fc57d4f8542e40f"
+  },
+  {
+   "announcement": "Actually, make it 80 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5e6bd26b4654fa66"
+  },
+  {
+   "announcement": "Actually, make it 100 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "eea9da11b80f248b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   5,
+   2
+  ],
+  "rule": "ambiguous",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a ultra hd digital camera with optical zoom lens.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "4bf3161f1925a51d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

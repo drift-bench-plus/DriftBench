@@ -1,0 +1,191 @@
+{
+ "adapter": "webshop",
+ "cluster": "candles",
+ "fidelity_notes": [],
+ "goal_idx": 31,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "59566ae3a1113147ceb2d93588d68de3",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08R1MJL3H\",[[\"color\",\"white sage\"],[\"size\",\"14.1 oz-1 pack\"]]]",
+   "[\"B08VBW96KY\",[[\"color\",\"white sage\"],[\"size\",\"1 pack\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:soy wax",
+    "=",
+    "soy wax"
+   ],
+   [
+    "option:0",
+    "=",
+    "white sage"
+   ],
+   [
+    "option:1",
+    "=",
+    "14.1 oz-1 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "f6480f9621b13681"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:soy wax",
+     "=",
+     "beeswax"
+    ],
+    [
+     "option:0",
+     "=",
+     "white sage"
+    ],
+    [
+     "option:1",
+     "=",
+     "14.1 oz-1 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:soy wax",
+     "soy wax"
+    ],
+    "alternative": [
+     "attr:soy wax",
+     "beeswax"
+    ],
+    "condition": null,
+    "text": "Since you probably don’t have soy wax candles"
+   }
+  ],
+  "retained": [
+   "attr:soy wax",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "987d5b59318e107d",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don’t have soy wax candles, I’m looking for a white sage scented 14.1 oz single pack candle in the candles section with a price limit of $40, made with beeswax instead.",
+ "render_attempts": 2,
+ "sample_id": "b04a3a71ed8880d7",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the candles instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a717d26db56b04b8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the candles instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a982685f8ca45c96"
+  },
+  {
+   "announcement": "Also, it needs to be scented candle.",
+   "gt_moved": false,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "93cece4efeb33a15"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fbc16058237520b2"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "170ad789479d6419"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d25b27ab769e3e4d"
+  },
+  {
+   "announcement": "Actually, make it 10 pack instead of white sage.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2f86fc8fea95d74a"
+  },
+  {
+   "announcement": "Actually, make it 16oz | jasmine instead of white sage.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "847d2d9a9f369ef0"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 1,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a soy wax candle that is white sage and 14 oz.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "6f68f01afef4b3bc",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

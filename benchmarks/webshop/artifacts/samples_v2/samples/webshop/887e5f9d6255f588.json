@@ -1,0 +1,167 @@
+{
+ "adapter": "webshop",
+ "cluster": "meat snacks",
+ "fidelity_notes": [],
+ "goal_idx": 441,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "8d8ad75449ed1ad745095896d105d3eb",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B06Y3C628Q\",[[\"flavor name\",\"italian\"]]]",
+   "[\"B08T5SBG7K\",[[\"flavor name\",\"italian herb\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "option:0",
+    "=",
+    "italian herb"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "58d6d4ba4d866875"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "option:0",
+     "=",
+     "italian herb"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning repotting my collection of variegated pothos plants, and I’m so proud that I finally got the soil mixture right to avoid root rot. I also stopped by the bakery down the street and picked up a warm sourdough loaf that smells incredible, and I’m planning to make garlic bread with it later for dinner. Oh, and my cat just knocked over my favorite mug this morning, so I’ve been running around cleaning up ceramic shards for the past hour.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:low carb",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning repotting my collection of variegated pothos plants, and I’m so proud that I finally got the soil mixture right to avoid root rot. I also stopped by the bakery down the street and picked up a warm sourdough loaf that smells incredible, and I’m planning to make garlic bread with it later for dinner. Oh, and my cat just knocked over my favorite mug this morning, so I’ve been running around cleaning up ceramic shards for the past hour. Anyway, I’m shopping in the meat snacks section and I’m looking for low carb options with italian herb flavor, and my price limit is 30.",
+ "render_attempts": 1,
+ "sample_id": "887e5f9d6255f588",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the meat snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5fdb1dc9e6bfb0dd"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the meat snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "cbbeebf3d04c65a0"
+  },
+  {
+   "announcement": "Also, it needs to be artificial ingredients.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "111f22faca8d90f0"
+  },
+  {
+   "announcement": "Also, it needs to be beef jerky.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bdc18db8b3a78b30"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1cb800049b7b2f4c"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8309b668f9b7a88e"
+  },
+  {
+   "announcement": "Actually, make it 0.39 ounce (pack of 28) instead of italian herb.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "119fa52a6b2343b7"
+  },
+  {
+   "announcement": "Actually, make it 0.8 ounce (pack of 20) instead of italian herb.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9770522825ccc81b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 2,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want to find italian herb-flavored parmesan cheese crisps that are low in carbs.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "ccd36ab90b742e30",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,210 @@
+{
+ "sample_id": "f58db5363690f700",
+ "tree_id": "d874232a2b086326",
+ "adapter": "webshop",
+ "cluster": "men's jeans",
+ "goal_idx": 20,
+ "split": "test",
+ "source_instruction": "i am looking for standard sized levi strauss & co. men's carpenter jeans that are machine washable.",
+ "query": "I stopped by the corner food cart on my walk over here, right? The guy running it was grilling up these spicy garlic chicken skewers that smelled so good I almost grabbed a plate before I remembered I\u2019m meeting my roommate for tacos in an hour, and he\u2019s been hyping up that new al pastor spot for three whole weeks. A couple of kids were zooming by on beat-up skateboards right outside the store entrance, laughing so loud when one of them nearly wiped out on a crack in the sidewalk that I had to pause and make sure he didn\u2019t actually eat pavement. The sky\u2019s that soft hazy blue it gets right before golden hour, too, and the breeze coming through the open store door smells like cut grass from the little park down the block. Right now I\u2019m browsing the men\u2019s jeans section. I\u2019ve heard pairs that are totally machine washable, no special dry cleaning or hand washing required at all, are such a solid call for everyday wear. I\u2019ve heard those fancy premium cuts or weird custom fits don\u2019t line up with the regular option I usually go for, y\u2019know? I\u2019ve heard none of the options go over that one budget limit I always stick to when I\u2019m picking up new everyday pants.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "insufficient_information",
+  "referential_ambiguity",
+  "indirect_intent"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+insufficient_information+referential_ambiguity+indirect_intent",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "insufficient_information",
+   "referential_ambiguity",
+   "indirect_intent"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the corner food cart on my walk over here, right? The guy running it was grilling up these spicy garlic chicken skewers that smelled so good I almost grabbed a plate before I remembered I\u2019m meeting my roommate for tacos in an hour, and he\u2019s been hyping up that new al pastor spot for three whole weeks. A couple of kids were zooming by on beat-up skateboards right outside the store entrance, laughing so loud when one of them nearly wiped out on a crack in the sidewalk that I had to pause and make sure he didn\u2019t actually eat pavement. The sky\u2019s that soft hazy blue it gets right before golden hour, too, and the breeze coming through the open store door smells like cut grass from the little park down the block.",
+  "retained": [
+   "attr:machine wash"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:machine wash",
+     "=",
+     "machine wash"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "9ca3b09f17a97dcb"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 14,
+  "lit_card": 1195,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 582,
+    "true_card": 14,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 20,
+    "true_card": 14,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "033d403b63d1f58f",
+  "conditions": [
+   [
+    "attr:machine wash",
+    "=",
+    "machine wash"
+   ],
+   [
+    "option:0",
+    "=",
+    "standard"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 14,
+  "value": [
+   "[\"B000IBH612\",[[\"color\",\"tan\"]]]",
+   "[\"B005DIGPNA\",[[\"color\",\"tan\"]]]",
+   "[\"B01H7ENCMO\",[[\"special size\",\"standard\"]]]",
+   "[\"B07336HLSP\",[[\"special size\",\"standard\"]]]",
+   "[\"B07336W4MP\",[[\"color\",\"titan - waterless\"]]]",
+   "[\"B073V4382Z\",[[\"fit type\",\"standard\"]]]",
+   "[\"B074KJ5LD3\",[[\"special size\",\"standard\"]]]",
+   "[\"B075CQ3FG6\",[[\"special size\",\"standard\"]]]",
+   "[\"B077PHGLJN\",[[\"fit type\",\"standard\"]]]",
+   "[\"B077R99SVL\",[[\"special size\",\"standard\"]]]",
+   "[\"B07HNYC7W4\",[[\"special size\",\"standard\"]]]",
+   "[\"B07PJ2YHKM\",[[\"color\",\"tan\"]]]",
+   "[\"B082QPZXC6\",[[\"color\",\"tan\"]]]",
+   "[\"B08Q8QYG1L\",[[\"color\",\"tan\"]]]"
+  ],
+  "hash": "b83112cd83b7624bd23c7ca16b0826a4"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1f3b01e202185b13",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's jeans instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "cc0c20dc6378e118",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's jeans instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e5d073cd91daae11",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy care."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "eb6744886f262701",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be elastic waist."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5756aafb894501ad",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "913d4bc8df615ab6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0be7b820456a4ada",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #3357 camo m instead of standard."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "825b85dd870decff",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #3357 z green instead of standard."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

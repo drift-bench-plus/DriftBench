@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "puffed snacks",
+ "fidelity_notes": [],
+ "goal_idx": 149,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "fb124530b817f8c6ac32c8579763d015",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07FFB1KR4\",[]]",
+   "[\"B097QC1R46\",[]]",
+   "[\"B09M968ZCM\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high protein",
+    "=",
+    "high protein"
+   ],
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "attr:low sugar",
+    "=",
+    "low sugar"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "252ee08c0d5f3876"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high protein",
+     "=",
+     "high protein"
+    ],
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just finished planting a whole flat of cherry tomato seedlings on my balcony this morning, and I’ve been obsessing over whether they’ll get enough sunlight to ripen by summer. I also spent twenty minutes rearranging my bookshelf last night to make space for the new mystery novel I picked up at the local bookstore, since my cat keeps knocking my poetry collections off the top shelf. Oh, and I’ve been trying to find the perfect reusable water bottle that fits in the cup holder of my old bike, since I’ve been riding to the park on weekends lately.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high protein",
+   "attr:low carb",
+   "attr:low sugar",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just finished planting a whole flat of cherry tomato seedlings on my balcony this morning, and I’ve been obsessing over whether they’ll get enough sunlight to ripen by summer. I also spent twenty minutes rearranging my bookshelf last night to make space for the new mystery novel I picked up at the local bookstore, since my cat keeps knocking my poetry collections off the top shelf. Oh, and I’ve been trying to find the perfect reusable water bottle that fits in the cup holder of my old bike, since I’ve been riding to the park on weekends lately. I’m looking for puffed snacks that are high protein, low carb, and low sugar, with a price limit of $40.",
+ "render_attempts": 1,
+ "sample_id": "313535b9c804319b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the puffed snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "07dfe3067d09168b"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the puffed snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2508133ff4226586"
+  },
+  {
+   "announcement": "Also, it needs to be dietary fiber.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8977ef4b8517936b"
+  },
+  {
+   "announcement": "Also, it needs to be non gmo.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e1b9c512a7aa2577"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0671e049fbda5c48"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a381b9a72687d1f6"
+  },
+  {
+   "announcement": "Actually, make it 30 instead of 40.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3afa82882e8bb29e"
+  },
+  {
+   "announcement": "Actually, make it 20 instead of 40.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b965401fe11713fa"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a high protein energy bar with low sugar and low carb.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "ab6ea16fe365601d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

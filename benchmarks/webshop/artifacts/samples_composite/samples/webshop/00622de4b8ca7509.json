@@ -1,0 +1,180 @@
+{
+ "sample_id": "00622de4b8ca7509",
+ "tree_id": "4d24bdf435a70c92",
+ "adapter": "webshop",
+ "cluster": "refillable containers",
+ "goal_idx": 111,
+ "split": "test",
+ "source_instruction": "i am looking for travel foaming dispenser for hand soap. please choose rose gold and silver pump head.",
+ "query": "Ugh, my cat knocked over my potted succulent this morning and got soil all over the throw rug by the couch, then I realized I was out of oat milk so I had to run to the corner store before the rain picked up, and on the walk over I saw a kid chasing a squirrel that stole a french fry right out of their takeout bag. I\u2019ve heard the refillable containers in rose gold with the silver pump head are usually priced under 30 dollars here.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+indirect_intent",
+  "family": "intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "indirect_intent"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "Ugh, my cat knocked over my potted succulent this morning and got soil all over the throw rug by the couch, then I realized I was out of oat milk so I had to run to the corner store before the rain picked up, and on the walk over I saw a kid chasing a squirrel that stole a french fry right out of their takeout bag.",
+  "retained": [
+   "attr:rose gold",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:rose gold",
+     "=",
+     "rose gold"
+    ],
+    [
+     "option:0",
+     "=",
+     "silver pump head"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "02bc26d92e3e4721"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 11,
+  "lit_card": 11,
+  "components": {}
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "b01a8f2276717361",
+  "conditions": [
+   [
+    "attr:rose gold",
+    "=",
+    "rose gold"
+   ],
+   [
+    "option:0",
+    "=",
+    "silver pump head"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 11,
+  "value": [
+   "[\"B0842CFRWY\",[[\"color\",\"silver\"]]]",
+   "[\"B085W67P7L\",[[\"color\",\"silver pump head\"]]]",
+   "[\"B08GY8991Y\",[[\"color\",\"silver\"]]]",
+   "[\"B08HGSVDZ6\",[[\"color\",\"silver\"]]]",
+   "[\"B08HQCBLL5\",[[\"color\",\"silver\"]]]",
+   "[\"B08J6R2CM4\",[[\"color\",\"silver\"]]]",
+   "[\"B08JBXDSW3\",[[\"color\",\"silver\"]]]",
+   "[\"B08LDLRJ7Y\",[[\"color\",\"silver\"]]]",
+   "[\"B09172HG6F\",[[\"color\",\"silver\"]]]",
+   "[\"B09GB2JXL7\",[[\"color\",\"silver\"]]]",
+   "[\"B09PLD5NWJ\",[[\"color\",\"silver ball\"]]]"
+  ],
+  "hash": "475d6f51ba7ab07fbaeaab9a287d053d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "38761bc5eb7aeb9a",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the refillable containers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "523e1485ba534c14",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the refillable containers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "84853f59cf236428",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be quality materials."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a953ad96d18c095e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be shampoo conditioner."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "755e44492b494502",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d3bf42b4b826c60b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "57e065657e5b8bef",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 count (pack of 1) instead of silver pump head."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "bb8de87feede8b85",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 count (pack of 1) instead of silver pump head."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

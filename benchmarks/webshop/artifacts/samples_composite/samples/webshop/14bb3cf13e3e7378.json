@@ -1,0 +1,242 @@
+{
+ "sample_id": "14bb3cf13e3e7378",
+ "tree_id": "e3a31a2e05c746f8",
+ "adapter": "webshop",
+ "cluster": "dried fruits & raisins",
+ "goal_idx": 354,
+ "split": "test",
+ "source_instruction": "i am looking for resealable snak club antioxidant trail mix. 5.5oz packs of six.",
+ "query": "Ugh, I just realized I left my favorite lavender-infused iced coffee sitting on the kitchen counter right by the toaster when I ran out the door this morning, and I\u2019m already kicking myself because I spent three whole minutes last night brewing it extra strong and stirring in just the right amount of oat milk to get that creamy, not-too-sweet ratio I\u2019ve been perfecting for weeks. The barista at the corner spot by the bus stop always over-roasts their beans so bad every sip tastes like burnt campfire ash, and I really don\u2019t want to drop seven bucks on a drink I know I\u2019ll hate just because I was scatterbrained before leaving. I also spotted the fluffiest orange tabby cat curled up on the hood of a beat-up blue pickup in the parking lot when I walked in, it had a tiny white patch on its chest that looked like a tiny lopsided heart, and I stopped to give it a couple quick scratches behind the ears before it hopped down to trot after a sparrow that darted under a nearby shopping cart return. Hey, can you help me grab something from the dried fruits & raisins section? I need it to come in a microwaveable steamer bag, be that one size I always get, and make sure it\u2019s certified kosher for Passover too. Oh, and don\u2019t grab anything over $40, please.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "referential_ambiguity",
+  "factual_error",
+  "irrelevant_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+referential_ambiguity+factual_error+irrelevant_information",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "referential_ambiguity",
+   "factual_error",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:resealable bag"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:resealable bag",
+    "resealable bag",
+    "microwaveable steamer bag"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "microwaveable steamer bag",
+    "condition": [
+     "attr:resealable bag",
+     "=",
+     "microwaveable steamer bag"
+    ]
+   },
+   {
+    "text": "certified kosher for Passover",
+    "condition": null
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I just realized I left my favorite lavender-infused iced coffee sitting on the kitchen counter right by the toaster when I ran out the door this morning, and I\u2019m already kicking myself because I spent three whole minutes last night brewing it extra strong and stirring in just the right amount of oat milk to get that creamy, not-too-sweet ratio I\u2019ve been perfecting for weeks. The barista at the corner spot by the bus stop always over-roasts their beans so bad every sip tastes like burnt campfire ash, and I really don\u2019t want to drop seven bucks on a drink I know I\u2019ll hate just because I was scatterbrained before leaving. I also spotted the fluffiest orange tabby cat curled up on the hood of a beat-up blue pickup in the parking lot when I walked in, it had a tiny white patch on its chest that looked like a tiny lopsided heart, and I stopped to give it a couple quick scratches behind the ears before it hopped down to trot after a sparrow that darted under a nearby shopping cart return.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:resealable bag",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:resealable bag",
+     "=",
+     "microwaveable steamer bag"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ],
+    [
+     "attr:resealable bag",
+     "=",
+     "microwaveable steamer bag"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "8399e39ac45c4352"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 12,
+  "lit_card": 0,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 50,
+    "true_card": 12,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 12,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 12,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "40d15c3b06c56b53",
+  "conditions": [
+   [
+    "attr:resealable bag",
+    "=",
+    "resealable bag"
+   ],
+   [
+    "option:0",
+    "=",
+    "1.37 pound (pack of 1)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:resealable bag",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 12,
+  "value": [
+   "[\"B00Q04M6FM\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B01CUS63OG\",[[\"size\",\"3 pound (pack of 1)\"]]]",
+   "[\"B01N2GSA7X\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B01N5PCA1R\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B01NBXSDS4\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B071GB5H9C\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07CBKJ7TS\",[[\"size\",\"1.37 pound (pack of 1)\"]]]",
+   "[\"B07M7FCJXZ\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07MQBHYD2\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07Q56R59Q\",[[\"size\",\"2 pound (pack of 1)\"]]]",
+   "[\"B083VBC1M5\",[[\"size\",\"2.75 pound (pack of 1)\"]]]",
+   "[\"B088MCD3V3\",[[\"size\",\"1 pound (pack of 1)\"]]]"
+  ],
+  "hash": "083b45668c5eb07372138e646400ff87"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "3be01460388e3c38",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the dried fruits & raisins instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "9358e15f7b0fb3fe",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the dried fruits & raisins instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "42d537842bdf4f38",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ready eat."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "5f499918480179da",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be artificial colors."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1713cb466a201cb9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "bd584204725efe5b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1d3e0d4bd20fa9b0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 lb instead of 1.37 pound (pack of 1)."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "782825495c8b76b0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.75 ounce (pack of 3) instead of 1.37 pound (pack of 1)."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

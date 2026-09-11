@@ -1,0 +1,209 @@
+{
+ "sample_id": "f579cf1192033539",
+ "tree_id": "8c96b5310b014540",
+ "adapter": "webshop",
+ "cluster": "non-dairy milks",
+ "goal_idx": 272,
+ "split": "test",
+ "source_instruction": "i would like some sugar free salted caramel truffles.",
+ "query": "Hey, I\u2019m looking through the non-dairy milks right now and need a sugar free one, salted caramel flavor sounds perfect for my morning coffee. I\u2019ve been trying to cut back on added sugars lately and that flavor\u2019s my go-to sweet treat without the actual sugar, right? Oh, and make sure it\u2019s got that third-party fair-trade certified seal on the carton too, I always try to pick those when I can. The price just needs to be good, I don\u2019t wanna overpay for something I\u2019ll grab every week.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+vagueness_subjectivity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "it\u2019s got that third-party fair-trade certified seal on the carton",
+    "condition": [
+     "attr:fair_trade_certified",
+     "=",
+     "third-party fair-trade certified"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:sugar free",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "salted caramel"
+    ],
+    [
+     "attr:fair_trade_certified",
+     "=",
+     "third-party fair-trade certified"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "43f2c1fc0b3cacd0"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 4,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 4,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 13,
+    "true_card": 4,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "3fea2e58369d2aed",
+  "conditions": [
+   [
+    "attr:sugar free",
+    "=",
+    "sugar free"
+   ],
+   [
+    "option:0",
+    "=",
+    "salted caramel"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 4,
+  "value": [
+   "[\"B004ADZEI6\",[[\"flavor\",\"caramel\"]]]",
+   "[\"B077S9R9KT\",[[\"flavor name\",\"caramel\"]]]",
+   "[\"B07CZB4YB6\",[[\"flavor name\",\"caramel and chocolate\"]]]",
+   "[\"B09NZDB484\",[[\"flavor name\",\"salted caramel\"]]]"
+  ],
+  "hash": "9aa8950c9008dbd23e1c0f9fc8daa382"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "67237a1870713a0b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the non-dairy milks instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a68891af7741449d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the non-dairy milks instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b0505eb938e82759",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ice cream."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e099de74a80441e4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be snack mix."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9440f04302ad64d5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d82ab4c29a64a6cc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "71cf7c994736b5b3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 bag instead of salted caramel."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f5ede238d7215487",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 ounce (pack of 100) instead of salted caramel."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

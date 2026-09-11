@@ -1,0 +1,125 @@
+{
+ "sample_id": "1066bf7d48feef4c__syntactic_ambiguity",
+ "domain": "retail",
+ "tree_id": "1066bf7d48feef4c",
+ "query": "Hi, I want to return the item 6065192424 from my order #W9571698 along with the small complementary storage pouch it came with, refunded to gift_card_7250692.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "small complementary storage pouch it came with",
+    "placements": [
+     [
+      "arg:0:return_delivered_order_items:item_ids",
+      "[\"6065192424\"]"
+     ],
+     [
+      "arg:0:return_delivered_order_items:item_ids",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [
+   "arg:0:return_delivered_order_items:item_ids"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"6065192424\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W9571698\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7250692\""
+    ]
+   ],
+   [
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W9571698\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7250692\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 7,
+  "spec_id": "f655f418c347d7d1"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"6065192424\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W9571698\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7250692\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:return_delivered_order_items:item_ids"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

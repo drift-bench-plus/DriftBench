@@ -1,0 +1,231 @@
+{
+ "sample_id": "3d1c26ea3b44aebb",
+ "tree_id": "a56254d4b3cf9230",
+ "adapter": "webshop",
+ "cluster": "throw blankets",
+ "goal_idx": 176,
+ "split": "test",
+ "source_instruction": "i looking a super soft fleece throw for  small pets size;40*30 inch",
+ "query": "I swear the drive over here was total chaos today\u2014there was a fluffy golden retriever trotting right down the middle of the main road by the park, holding a whole slice of pepperoni pizza in its mouth like it had just pulled off the heist of the century, and every single car stopped to watch it instead of honking. I even rolled my window down to cheer it on before a very flustered teen came sprinting after it, yelling that their dog had stolen their lunch off the picnic table and bolted before they could grab him. It was so funny I sat through two whole green lights just cackling, and the person behind me didn\u2019t even honk because they were laughing too hard at the dog trotting away like he owned the place. Hey, can you help me find a good microplush throw from this section? I\u2019m looking for one that feels really nice to the touch, y\u2019know? I also need the 40\"x30\" extra small size made for pets, please. I don\u2019t wanna spend more than that usual amount I stick to for these kinds of purchases, so make sure whatever you pull up fits that limit too.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance",
+  "insufficient_information",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance+insufficient_information+factual_error",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance",
+   "insufficient_information",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "factual_error": "attr:fleece throw",
+   "insufficient_information": "attr:super soft"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:fleece throw",
+    "fleece throw",
+    "microplush throw"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "attr:super soft"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I swear the drive over here was total chaos today\u2014there was a fluffy golden retriever trotting right down the middle of the main road by the park, holding a whole slice of pepperoni pizza in its mouth like it had just pulled off the heist of the century, and every single car stopped to watch it instead of honking. I even rolled my window down to cheer it on before a very flustered teen came sprinting after it, yelling that their dog had stolen their lunch off the picnic table and bolted before they could grab him. It was so funny I sat through two whole green lights just cackling, and the person behind me didn\u2019t even honk because they were laughing too hard at the dog trotting away like he owned the place.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:fleece throw",
+   "attr:super soft",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:fleece throw",
+     "=",
+     "microplush throw"
+    ],
+    [
+     "option:0",
+     "=",
+     "40\"x30\" extra small for pet"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d15aeb3872afd44b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 8,
+  "lit_card": 0,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 9,
+    "true_card": 8,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 11,
+    "true_card": 8,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 8,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "effc50f7f6ddf547",
+  "conditions": [
+   [
+    "attr:fleece throw",
+    "=",
+    "fleece throw"
+   ],
+   [
+    "attr:super soft",
+    "=",
+    "super soft"
+   ],
+   [
+    "option:0",
+    "=",
+    "40\"x30\" extra small for pet"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:fleece throw",
+   "attr:super soft",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 8,
+  "value": [
+   "[\"B07YBS3MHS\",[[\"size\",\"small\"]]]",
+   "[\"B08PBMT84S\",[[\"size\",\"40\\\"x30\\\"\"]]]",
+   "[\"B097NMSGZ8\",[[\"size\",\"40\\\"x30\\\"\"]]]",
+   "[\"B09B9KGXTW\",[[\"size\",\"40\\\"x30\\\"\"]]]",
+   "[\"B09G6PN6XQ\",[[\"size\",\"40\\\"x30\\\" for pet\"]]]",
+   "[\"B09G9MVGHH\",[[\"size\",\"40\\\"x30\\\" for pet\"]]]",
+   "[\"B09J2RZ26Q\",[[\"size\",\"40\\\"x30\\\" extra small for pet\"]]]",
+   "[\"B09KLQ39BG\",[[\"size\",\"40\\\"x30\\\"\"]]]"
+  ],
+  "hash": "52cd8f01b130b34f2cc6e5b0e8fcd146"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "201005557906bc2d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the throw blankets instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "76c32a170da78957",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the throw blankets instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "0fe11f4c016b2640",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3151c9764c455e5a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4b49625a0c019d8c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "98fb445ee491e916",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "dc97be55af2cca89",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 instead of 40\"x30\" extra small for pet."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f92dc287b64ad524",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 photo instead of 40\"x30\" extra small for pet."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "sample_id": "391d28afc08b1f1d__false_presupposition",
+ "domain": "retail",
+ "tree_id": "391d28afc08b1f1d",
+ "query": "Hi there, since you probably don't have the state field available for US addresses in your system, could you update the shipping address for my user ID lucas_santos_6600 to 943 Maple Drive, Suite 356, Chicago, IL 60621, USA please?",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "false_presupposition",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "false_presupposition"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "since you probably don't have the state field available for US addresses in your system",
+    "condition": null,
+    "about": [
+     "arg:0:modify_user_address:state",
+     "\"IL\""
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_user_address:address1",
+   "arg:0:modify_user_address:address2",
+   "arg:0:modify_user_address:city",
+   "arg:0:modify_user_address:country",
+   "arg:0:modify_user_address:state",
+   "arg:0:modify_user_address:user_id",
+   "arg:0:modify_user_address:zip"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_user_address:address1",
+     "=",
+     "\"943 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_user_address:address2",
+     "=",
+     "\"Suite 356\""
+    ],
+    [
+     "arg:0:modify_user_address:city",
+     "=",
+     "\"Chicago\""
+    ],
+    [
+     "arg:0:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_user_address:user_id",
+     "=",
+     "\"lucas_santos_6600\""
+    ],
+    [
+     "arg:0:modify_user_address:zip",
+     "=",
+     "\"60621\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "1b0d156d3773d50f"
+ },
+ "signature": {
+  "rule": "presupposed",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_user_address:address1",
+    "=",
+    "\"943 Maple Drive\""
+   ],
+   [
+    "arg:0:modify_user_address:address2",
+    "=",
+    "\"Suite 356\""
+   ],
+   [
+    "arg:0:modify_user_address:city",
+    "=",
+    "\"Chicago\""
+   ],
+   [
+    "arg:0:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_user_address:state",
+    "=",
+    "\"IL\""
+   ],
+   [
+    "arg:0:modify_user_address:user_id",
+    "=",
+    "\"lucas_santos_6600\""
+   ],
+   [
+    "arg:0:modify_user_address:zip",
+    "=",
+    "\"60621\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:modify_user_address:state"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

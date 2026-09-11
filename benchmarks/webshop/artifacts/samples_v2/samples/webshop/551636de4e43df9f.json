@@ -1,0 +1,240 @@
+{
+ "adapter": "webshop",
+ "cluster": "bathing accessories",
+ "fidelity_notes": [],
+ "goal_idx": 145,
+ "ground_truth": {
+  "cardinality": 37,
+  "hash": "24ad2eb97a5b2a5fab3de24383e47322",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0744MQDVZ\",[[\"color\",\"2-pack, white\"]]]",
+   "[\"B08BYT6KYK\",[[\"color\",\"white\"]]]",
+   "[\"B08M34N9X1\",[[\"color\",\"off-white564\"]]]",
+   "[\"B08M6C44VV\",[[\"color\",\"white\"]]]",
+   "[\"B08Q7DG4VW\",[[\"color\",\"cactus-white\"]]]",
+   "[\"B08QHLZY1R\",[[\"color\",\"white\"]]]",
+   "[\"B08R9RMVBZ\",[[\"color\",\"white\"]]]",
+   "[\"B08XPXN459\",[[\"color\",\"white\"]]]",
+   "[\"B092DBNBDS\",[[\"color\",\"white\"]]]",
+   "[\"B092VNFTBK\",[[\"color\",\"white\"]]]",
+   "[\"B094G5FKGS\",[[\"color\",\"white\"]]]",
+   "[\"B096SPYQ43\",[[\"color\",\"happy fish | white sheep\"]]]",
+   "[\"B097PHT83F\",[[\"color\",\"white\"]]]",
+   "[\"B099RNKKG2\",[[\"color\",\"white\"]]]",
+   "[\"B09BDHLQHM\",[[\"color\",\"white\"]]]",
+   "[\"B09CHH6MP1\",[[\"color\",\"white\"]]]",
+   "[\"B09CTC2H2R\",[[\"color\",\"white\"]]]",
+   "[\"B09GK8SMFQ\",[[\"color\",\"white flower\"]]]",
+   "[\"B09LDCHGTM\",[[\"color\",\"white\"]]]",
+   "[\"B09MTM728X\",[[\"color\",\"white\"]]]",
+   "[\"B09MWMJQWJ\",[[\"color\",\"white\"]]]",
+   "[\"B09NNPYWHZ\",[[\"color\",\"white\"]]]",
+   "[\"B09P6BDXVK\",[[\"color\",\"white daisy pattern\"]]]",
+   "[\"B09P7H3XM3\",[[\"color\",\"white\"]]]",
+   "[\"B09P8BQFZY\",[[\"color\",\"white daisy flowers\"]]]",
+   "[\"B09PBTBLFS\",[[\"color\",\"white\"]]]",
+   "[\"B09PG18LXP\",[[\"color\",\"white marble2\"]]]",
+   "[\"B09QK2XS8K\",[[\"color\",\"white\"]]]",
+   "[\"B09RWS6MLB\",[[\"color\",\"white\"]]]",
+   "[\"B09SYRM6K4\",[[\"color\",\"white\"]]]",
+   "[\"B09T2TY9CL\",[[\"color\",\"white\"]]]",
+   "[\"B09T322KD5\",[[\"color\",\"white\"]]]",
+   "[\"B09T32WLY2\",[[\"color\",\"white\"]]]",
+   "[\"B09T36SHMC\",[[\"color\",\"white\"]]]",
+   "[\"B09T36XXZD\",[[\"color\",\"white\"]]]",
+   "[\"B09T37YRXT\",[[\"color\",\"white\"]]]",
+   "[\"B09T3CMHB8\",[[\"color\",\"white\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "option:0",
+    "=",
+    "white"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "874df47adf6060c1"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "white"
+     ],
+     [
+      "option:0",
+      "light in weight"
+     ]
+    ],
+    "surface": "light"
+   }
+  ],
+  "attempt": 1,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "white"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   [
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "light in weight"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high quality",
+   "price_upper"
+  ],
+  "spec_id": "762da03e2dd427fd",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for some high quality bathing accessories under $20, I want them to be light.",
+ "render_attempts": 1,
+ "sample_id": "551636de4e43df9f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bathing accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "582c2b30d496ee68"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bathing accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "af15b930ca3ad6b5"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b9291750c5b60966"
+  },
+  {
+   "announcement": "Also, it needs to be quality materials.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "be3ee14d5e55752e"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "12780b69e81cbacf"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b3b0f137c14702d9"
+  },
+  {
+   "announcement": "Actually, make it 10 pack fashion leader instead of white.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3b43b0261d4b9f2c"
+  },
+  {
+   "announcement": "Actually, make it #2 instead of white.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "69d37e7129adea97"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   37,
+   3
+  ],
+  "rule": "ambiguous",
+  "true_card": 37,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for high quality bathing accessories in white color",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "56aa232136eb359d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

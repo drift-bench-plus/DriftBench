@@ -1,0 +1,113 @@
+{
+ "sample_id": "dd2f415b05fc769f__factual_error",
+ "domain": "telecom",
+ "tree_id": "dd2f415b05fc769f",
+ "query": "Hey, my airplane mode is turned on, my APN settings aren\u2019t working right, and my SIM card isn\u2019t seated properly, plus I think my roaming is disabled because I can\u2019t get any cell service at all no matter what I try.",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "factual_error",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "factual_error"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [
+   [
+    "fault:contract_end_suspension",
+    "contract_end_suspension",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_settings",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [
+   "fault:contract_end_suspension"
+  ],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:contract_end_suspension",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 7,
+  "spec_id": "f797946c32f067c7"
+ },
+ "signature": {
+  "rule": "substituted",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:contract_end_suspension",
+    "=",
+    "contract_end_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:contract_end_suspension"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

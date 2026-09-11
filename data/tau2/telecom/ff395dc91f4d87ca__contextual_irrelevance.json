@@ -1,0 +1,104 @@
+{
+ "sample_id": "ff395dc91f4d87ca__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "ff395dc91f4d87ca",
+ "query": "I just got back from picking up my new rescue kitten this afternoon, she\u2019s the cutest little tabby with white paws and she immediately curled up on my lap when I brought her home. I stopped to grab a matcha latte on the way too, and the barista drew a little cat face in the foam that I almost didn\u2019t want to drink. I was planning to call my sister to tell her all about the kitten as soon as I got home, but my phone isn\u2019t working at all right now. Airplane mode is turned on, my line is suspended because I have an overdue bill and my contract just ended, my SIM card is locked with a PIN, and I think the SIM card might be unseated too, can you help me figure out how to fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from picking up my new rescue kitten this afternoon, she\u2019s the cutest little tabby with white paws and she immediately curled up on my lap when I brought her home. I stopped to grab a matcha latte on the way too, and the barista drew a little cat face in the foam that I almost didn\u2019t want to drink. I was planning to call my sister to tell her all about the kitten as soon as I got home, but",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:contract_end_suspension",
+   "fault:lock_sim_card_pin",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:contract_end_suspension",
+     "=",
+     "contract_end_suspension"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:contract_end_suspension",
+    "=",
+    "contract_end_suspension"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

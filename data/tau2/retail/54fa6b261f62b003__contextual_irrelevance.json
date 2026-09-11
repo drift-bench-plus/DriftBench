@@ -1,0 +1,137 @@
+{
+ "sample_id": "54fa6b261f62b003__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "54fa6b261f62b003",
+ "query": "Last weekend I took my golden retriever to the new dog park downtown, and he had the best time chasing after a border collie that brought a bright orange frisbee. We stopped at the pet supply shop on the way home, and I picked up a bag of salmon-flavored treats that he\u2019s been begging for nonstop ever since. Yesterday I even found a cute little raincoat for him online that\u2019s bright yellow, just like a duck, and it should arrive next week.\n\nNow I actually need help with two things for my orders: first, for my pending order #W3295833, please modify the items by replacing items 8926329222 and 5312063289 with items 7160999700 and 6956751343, and use the payment method credit_card_3261838 for any adjustments from that change. Second, for my delivered order #W8488728, I need to return item 5676696062, and please process the refund to my paypal_3650980 account.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I took my golden retriever to the new dog park downtown, and he had the best time chasing after a border collie that brought a bright orange frisbee. We stopped at the pet supply shop on the way home, and I picked up a bag of salmon-flavored treats that he\u2019s been begging for nonstop ever since. Yesterday I even found a cute little raincoat for him online that\u2019s bright yellow, just like a duck, and it should arrive next week.",
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id",
+   "arg:1:return_delivered_order_items:item_ids",
+   "arg:1:return_delivered_order_items:order_id",
+   "arg:1:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"8926329222\",\"5312063289\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"7160999700\",\"6956751343\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W3295833\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3261838\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:item_ids",
+     "=",
+     "[\"5676696062\"]"
+    ],
+    [
+     "arg:1:return_delivered_order_items:order_id",
+     "=",
+     "\"#W8488728\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_3650980\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"8926329222\",\"5312063289\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"7160999700\",\"6956751343\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W3295833\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_3261838\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:item_ids",
+    "=",
+    "[\"5676696062\"]"
+   ],
+   [
+    "arg:1:return_delivered_order_items:order_id",
+    "=",
+    "\"#W8488728\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_3650980\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

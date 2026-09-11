@@ -1,0 +1,209 @@
+{
+ "sample_id": "dae6a2c12e4396ba",
+ "tree_id": "e1ca5a13cc0515a7",
+ "adapter": "webshop",
+ "cluster": "snack food gifts",
+ "goal_idx": 119,
+ "split": "test",
+ "source_instruction": "i'm looking for a gift covered with chocolate and should be in a gift basket.",
+ "query": "Ugh, I spent all morning trying to get my cat to stop knocking over the houseplant by the window, she\u2019s obsessed with chewing the pothos leaves even though I\u2019ve sprayed them with that bitter apple stuff three times already, and then my neighbor popped over to rant for 20 minutes about how the community garden plots got assigned unfairly this year. Oh, and I remembered I need to grab a chocolate covered snack gift basket from this section, and don\u2019t go over that one for the price, yeah?",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I spent all morning trying to get my cat to stop knocking over the houseplant by the window, she\u2019s obsessed with chewing the pothos leaves even though I\u2019ve sprayed them with that bitter apple stuff three times already, and then my neighbor popped over to rant for 20 minutes about how the community garden plots got assigned unfairly this year.",
+  "retained": [
+   "attr:chocolate covered",
+   "attr:gift basket"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:chocolate covered",
+     "=",
+     "chocolate covered"
+    ],
+    [
+     "attr:gift basket",
+     "=",
+     "gift basket"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "20cb95785fad166d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 26,
+  "lit_card": 48,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 48,
+    "true_card": 26,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "de1e36915cad848b",
+  "conditions": [
+   [
+    "attr:chocolate covered",
+    "=",
+    "chocolate covered"
+   ],
+   [
+    "attr:gift basket",
+    "=",
+    "gift basket"
+   ],
+   [
+    "price_upper",
+    "<=",
+    80
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 26,
+  "value": [
+   "[\"B000KAN9L2\",[]]",
+   "[\"B003N15JC2\",[]]",
+   "[\"B004W5AU4U\",[]]",
+   "[\"B007JE673E\",[]]",
+   "[\"B00IPQ54KM\",[]]",
+   "[\"B00O06CPJO\",[]]",
+   "[\"B018RW9ELS\",[]]",
+   "[\"B01CPXD1ZU\",[]]",
+   "[\"B06ZYP5L63\",[]]",
+   "[\"B07CNGX5YC\",[]]",
+   "[\"B07TS31WYR\",[]]",
+   "[\"B07ZG1RBX9\",[]]",
+   "[\"B07ZS5QP8D\",[]]",
+   "[\"B07ZYHZ1NK\",[]]",
+   "[\"B07ZZK7LJK\",[]]",
+   "[\"B081SNVCN4\",[]]",
+   "[\"B084XVVPQL\",[]]",
+   "[\"B088NK941W\",[]]",
+   "[\"B08LMNNKFY\",[]]",
+   "[\"B08MBBRFQG\",[]]",
+   "[\"B08TB2D9YH\",[]]",
+   "[\"B08WH7YCMD\",[]]",
+   "[\"B09GYW93X8\",[]]",
+   "[\"B09HWCWDYJ\",[]]",
+   "[\"B09QXH1WVS\",[]]",
+   "[\"B09RKVYNCY\",[]]"
+  ],
+  "hash": "f29ed3db50d5224f5d524ce4ee098b77"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0610e8ff0fdd64f7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the snack food gifts instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "60c6b706db344ae9",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the snack food gifts instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "40caa2a41304fb3f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be birthday cake."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ab589c9cf3920076",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gift set."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "98cbf9a58700107e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d755f8ec2289bd3a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "16d53fc7ac22d0b1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 30 instead of 80."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "9d1d4028018a513e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 80."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

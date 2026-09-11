@@ -1,0 +1,215 @@
+{
+ "sample_id": "deb0f9d1b3b4a15f",
+ "tree_id": "6f1b473ddfa74c05",
+ "adapter": "webshop",
+ "cluster": "toothpicks",
+ "goal_idx": 159,
+ "split": "test",
+ "source_instruction": "i would like a pattern 21 cake topper for a birthday party.",
+ "query": "I\u2019m wandering through the toothpicks section right now, prepping for my kid\u2019s birthday party this weekend where all the little guests will be munching on sliders and fruit skewers. I\u2019ve heard the picks that come in a count matching the legal drinking age in most US states work perfect for these kinds of shindigs, and they never run more than twenty bucks total for a pack.",
+ "strategy_ids": [
+  "lexical_ambiguity",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "lexical_ambiguity+indirect_intent",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "oblique"
+  ],
+  "components": [
+   "lexical_ambiguity",
+   "indirect_intent"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "the legal drinking age in most US states",
+    "placements": [
+     [
+      "option:0",
+      "21"
+     ],
+     [
+      "option:0",
+      "18"
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:birthday party",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:birthday party",
+     "=",
+     "birthday party"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 6,
+  "spec_id": "5ba035aab79eaf30"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 20,
+  "lit_card": 3033,
+  "components": {
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     20,
+     18
+    ],
+    "true_card": 20,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 6,
+ "hidden_intent": {
+  "intent_id": "e2643cf5f741c5e9",
+  "conditions": [
+   [
+    "attr:birthday party",
+    "=",
+    "birthday party"
+   ],
+   [
+    "option:0",
+    "=",
+    "21"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 20,
+  "value": [
+   "[\"B07PT3T483\",[[\"color\",\"21 birthday cake topper\"]]]",
+   "[\"B07VXM53T5\",[[\"color\",\"21 - centerpiece sticks\"]]]",
+   "[\"B07W484LLV\",[[\"pattern name\",\"21 pcs cupcake toppers\"]]]",
+   "[\"B07WK1QBNB\",[[\"pattern name\",\"21\"]]]",
+   "[\"B086CWFZQG\",[[\"size\",\"21\"]]]",
+   "[\"B08DR9N34F\",[[\"flavor name\",\"21\"]]]",
+   "[\"B08JKHLN4B\",[[\"color\",\"21 cupcake toppers\"]]]",
+   "[\"B08PCZTV1P\",[[\"pattern name\",\"cheers 21\"]]]",
+   "[\"B08PZ4VCR4\",[[\"pattern name\",\"21\"]]]",
+   "[\"B093QDDCK3\",[[\"pattern name\",\"21\"]]]",
+   "[\"B0967TTL9K\",[[\"style\",\"21\"]]]",
+   "[\"B0967WBF7C\",[[\"style\",\"21\"]]]",
+   "[\"B0971BMZJB\",[[\"pattern name\",\"21\"]]]",
+   "[\"B0971CFLHW\",[[\"pattern name\",\"21\"]]]",
+   "[\"B0971CHBSM\",[[\"pattern name\",\"21\"]]]",
+   "[\"B0971CW3S9\",[[\"pattern name\",\"21\"]]]",
+   "[\"B09DDBNDFT\",[[\"color\",\"ad-21-065\"]]]",
+   "[\"B09FQ77MSZ\",[[\"pattern name\",\"21\"]]]",
+   "[\"B09FQ7W2G3\",[[\"pattern name\",\"21\"]]]",
+   "[\"B09FQ9Q2PH\",[[\"pattern name\",\"rg 21\"]]]"
+  ],
+  "hash": "1a52b74ce025449dc379e405cbbb5541"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "a5e2a9ac63b5d573",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpicks instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f3db182cc6b0c0d3",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpicks instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c749623e5229d4fe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be baby shower."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "fcb486ec372ab001",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be valentine day."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "40fcd0f21865524c",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "abdff43e8541259f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7133b1979b1669b6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 16 instead of 21."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c3afc14c5dd13130",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1st birthday instead of 21."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

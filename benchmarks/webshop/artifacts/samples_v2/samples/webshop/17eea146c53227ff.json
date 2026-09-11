@@ -1,0 +1,181 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair treatment oils",
+ "fidelity_notes": [],
+ "goal_idx": 461,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "354d5889c2fc75af4e08d016eaf58dcd",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B006QN9TFC\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+   "[\"B007CKMQOY\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+   "[\"B00E9YSADW\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+   "[\"B07YF3LZVQ\",[[\"size\",\"3.4 fl oz.\"]]]",
+   "[\"B09PTXBSFM\",[[\"size\",\"4 fl.oz\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:argan oil",
+    "=",
+    "argan oil"
+   ],
+   [
+    "attr:damaged hair",
+    "=",
+    "damaged hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "120ml |  4 fl oz"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "7cc446afb81cc0ac"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "120ml |  4 fl oz"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the whole afternoon trying to train my new rescue kitten to use a scratching post instead of my couch, and let me tell you, she’s way more interested in batting at the tassel on my throw pillow than any piece of sisal. I also stopped by the local bakery on my way home and picked up a lemon poppy seed muffin that was so moist and tangy, I’m already thinking about going back for a second one tomorrow. Oh, and my neighbor was telling me about her new vegetable garden and how her tomato plants are already growing twice as tall as she expected this year.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:argan oil",
+   "attr:damaged hair",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the whole afternoon trying to train my new rescue kitten to use a scratching post instead of my couch, and let me tell you, she’s way more interested in batting at the tassel on my throw pillow than any piece of sisal. I also stopped by the local bakery on my way home and picked up a lemon poppy seed muffin that was so moist and tangy, I’m already thinking about going back for a second one tomorrow. Oh, and my neighbor was telling me about her new vegetable garden and how her tomato plants are already growing twice as tall as she expected this year. I’m looking for hair treatment oils with argan oil for damaged hair, in the 120ml | 4 fl oz size, and my budget is no more than $70.",
+ "render_attempts": 1,
+ "sample_id": "17eea146c53227ff",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair treatment oils instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "53e294edf352a6cf"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair treatment oils instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e6c178f1ef18663"
+  },
+  {
+   "announcement": "Also, it needs to be dry hair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9278ae29f0fa5b16"
+  },
+  {
+   "announcement": "Also, it needs to be high quality.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e53fdf88345c4130"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "afce7dec83007497"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ce2acbabf6a922d6"
+  },
+  {
+   "announcement": "Actually, make it 11 ounce (pack of 1) instead of 120ml |  4 fl oz.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cd29b9bfaa7fe9b2"
+  },
+  {
+   "announcement": "Actually, make it 12 ounce (pack of 1) instead of 120ml |  4 fl oz.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e576d6729301f85f"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 5,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a 4oz size hair conditioner that has argan oil and is for damged hair.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "c71fbc9ba13aad92",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

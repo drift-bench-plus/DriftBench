@@ -1,0 +1,82 @@
+{
+ "sample_id": "97a342fd5f2fccf9__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "97a342fd5f2fccf9",
+ "query": "Hey, I was at this little local coffee shop near my hotel this morning and they had the best honey lavender latte I\u2019ve ever tasted, I even asked the barista for their recipe to try making it at home when I get back. Also, I stopped by a street market on the way back and picked up this really cute hand-painted phone case, the design is all local flower motifs, it fits my phone perfectly. Oh, and I was thinking of going to a hiking trail nearby tomorrow, I\u2019m trying to figure out if I need to rent a pair of walking shoes since the ones I brought are kind of worn out. Anyway, I\u2019m currently abroad right now and I have roaming turned off, but my MMS messages won\u2019t send at all, I think there\u2019s something wrong with my APN MMS settings, can you help me figure out what\u2019s going on with that?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey, I was at this little local coffee shop near my hotel this morning and they had the best honey lavender latte I\u2019ve ever tasted, I even asked the barista for their recipe to try making it at home when I get back. Also, I stopped by a street market on the way back and picked up this really cute hand-painted phone case, the design is all local flower motifs, it fits my phone perfectly. Oh, and I was thinking of going to a hiking trail nearby tomorrow, I\u2019m trying to figure out if I need to rent a pair of walking shoes since the ones I brought are kind of worn out. Anyway,",
+  "retained": [
+   "fault:break_apn_mms_setting",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

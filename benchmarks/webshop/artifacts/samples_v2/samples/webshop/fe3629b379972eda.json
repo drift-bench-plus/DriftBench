@@ -1,0 +1,229 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair extensions, wigs & accessories",
+ "fidelity_notes": [],
+ "goal_idx": 415,
+ "ground_truth": {
+  "cardinality": 10,
+  "hash": "9f0a4326afecbcf639493c2782f77241",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01IHCUSL8\",[[\"color\",\"dark black\"],[\"size\",\"17\\\" curly\"]]]",
+   "[\"B06X9T6WLP\",[[\"color\",\"dark black\"],[\"size\",\"17 inch curly\"]]]",
+   "[\"B071HW7PJX\",[[\"color\",\"1bt0906 black to sliver grey\"],[\"size\",\"curly\"]]]",
+   "[\"B07GGR2KVQ\",[[\"color\",\"dark black\"],[\"size\",\"17\\\"-curly\"]]]",
+   "[\"B07VKZ52ZL\",[[\"color\",\"black-\"],[\"size\",\"17\\\"-curly\"]]]",
+   "[\"B0816QXBWB\",[[\"color\",\"black\"],[\"size\",\"curly\"]]]",
+   "[\"B08QYZT9BD\",[[\"color\",\"curly-dark black\"],[\"size\",\"16\\\"-curly\"]]]",
+   "[\"B0932FBT59\",[[\"color\",\"dark black\"],[\"size\",\"12\\\"-curly\"]]]",
+   "[\"B095NZMMMN\",[[\"color\",\"dark black\"],[\"size\",\"17''curly\"]]]",
+   "[\"B0989JL16Z\",[[\"color\",\"dark black - 1#\"],[\"size\",\"18\\\"-curly\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark black"
+   ],
+   [
+    "option:1",
+    "=",
+    "17\"-curly"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "910a93f82b24c236"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "dark black"
+     ],
+     [
+      "option:0",
+      "dark brown (or other dark hair color shades)"
+     ]
+    ],
+    "surface": "dark shade"
+   }
+  ],
+  "attempt": 4,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark black"
+    ],
+    [
+     "option:1",
+     "=",
+     "17\"-curly"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark brown (or other dark hair color shades)"
+    ],
+    [
+     "option:1",
+     "=",
+     "17\"-curly"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair extensions",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "ee8f0d3503705df7",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need to pick up some hair extensions for under $30, I want the dark shade that’s 17 inches long, and make sure it’s a real set of curls I can attach easily.",
+ "render_attempts": 4,
+ "sample_id": "fe3629b379972eda",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair extensions, wigs & accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2b702871dfd53145"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair extensions, wigs & accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "679243e994beeb02"
+  },
+  {
+   "announcement": "Also, it needs to be hair accessories.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2ede2213f871b456"
+  },
+  {
+   "announcement": "Also, it needs to be natural hair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "586c8c7e25a04628"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "378a77d391826e8e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f8f7268b13fe5a0f"
+  },
+  {
+   "announcement": "Actually, make it #16 instead of dark black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c90811c4590cd116"
+  },
+  {
+   "announcement": "Actually, make it #16 | 22 light blonde highlights instead of dark black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cc658688068b6fe1"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   10,
+   9
+  ],
+  "rule": "ambiguous",
+  "true_card": 10,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want dark black clip-in hair extensions. it should be 17\" in size when curly.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "4cd8d2085e9784ed",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

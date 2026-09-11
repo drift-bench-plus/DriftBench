@@ -1,0 +1,169 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair masks",
+ "fidelity_notes": [],
+ "goal_idx": 1,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "eaeed664bc822c58bdbbe1148d954487",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07ZNTM2L5\",[[\"size\",\"120ml\"]]]",
+   "[\"B08MWSHXLX\",[[\"size\",\"120ml+cs\"]]]",
+   "[\"B09QHQYYM5\",[[\"color\",\"120ml | 4 oz\"]]]",
+   "[\"B09R4RJSFP\",[[\"color\",\"120ml\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair treatment",
+    "=",
+    "hair treatment"
+   ],
+   [
+    "option:0",
+    "=",
+    "120ml"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "3f8e6661d251c449"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair treatment",
+     "=",
+     "hair treatment"
+    ],
+    [
+     "option:0",
+     "=",
+     "120ml"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just finished binging that new cozy farming sim game last night, and I swear I stayed up way too late trying to unlock the rare golden chicken coop upgrade. My neighbor’s tabby cat also stopped by my balcony this morning to curl up on my potted mint, it was so sweet I almost forgot to make my morning matcha latte. I’ve also been meaning to replant my succulent collection because they’ve been looking a little droopy from the recent cloudy weather.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair treatment",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just finished binging that new cozy farming sim game last night, and I swear I stayed up way too late trying to unlock the rare golden chicken coop upgrade. My neighbor’s tabby cat also stopped by my balcony this morning to curl up on my potted mint, it was so sweet I almost forgot to make my morning matcha latte. I’ve also been meaning to replant my succulent collection because they’ve been looking a little droopy from the recent cloudy weather. I’m looking for hair masks with hair treatment function, 120ml option, and the price should be under 120.",
+ "render_attempts": 1,
+ "sample_id": "e3c2c23db5b9103b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair masks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4b823fdb647c9844"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair masks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7123ef47a28d1d28"
+  },
+  {
+   "announcement": "Also, it needs to be argan oil.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "60065ca6773ebdef"
+  },
+  {
+   "announcement": "Also, it needs to be damaged hair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f4dae67bcc315fc0"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6eed8e07f9a1b595"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ef4fa821c157a4b6"
+  },
+  {
+   "announcement": "Actually, make it 1 fl oz (pack of 1) instead of 120ml.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "902e8b23b07e6366"
+  },
+  {
+   "announcement": "Actually, make it 1 instead of 120ml.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fb28fb69f963d471"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 4,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a 120 ml hair mask treatment",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "42281034fc0d2f5c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

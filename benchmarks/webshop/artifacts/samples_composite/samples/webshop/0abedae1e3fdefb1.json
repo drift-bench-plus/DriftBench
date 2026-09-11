@@ -1,0 +1,264 @@
+{
+ "sample_id": "0abedae1e3fdefb1",
+ "tree_id": "aeefe9bf6344a01a",
+ "adapter": "webshop",
+ "cluster": "hair extensions, wigs & accessories",
+ "goal_idx": 259,
+ "split": "test",
+ "source_instruction": "i would like some 22 inch hair extensions made of natural hair.",
+ "query": "I stopped by the little community park on my walk over today, and the old oak tree by the playground was absolutely covered in those fluffy pale pink cherry blossom petals that stick to your jacket cuffs if you brush too close to the branches. A group of tiny kids were chasing a very chonky calico cat that had stolen a half-eaten cheese cracker from one of their picnic blankets, and none of them could run fast enough to catch up before it hopped up on the split-rail fence to nibble its prize. The food truck parked by the park entrance was grilling those sweet-spicy chicken skewers I smelled last weekend but didn\u2019t have cash to grab, and the scent carried all the way across the grass so strong it made my stomach growl halfway to the crosswalk. I\u2019ve heard there are hair extensions that match natural hair really well, y\u2019know? The one length I always go for is what lines up for me, nothing shorter or longer than that fits what I\u2019m aligned with. Options that fit those specs are the exact kind of thing I\u2019m aware lines up with what makes sense for me. I don\u2019t go too overboard on spending, so things that stick to what makes sense for my usual budget are the ones that fit my vibe, yeah?",
+ "strategy_ids": [
+  "insufficient_information",
+  "indirect_intent",
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+indirect_intent+referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "indirect_intent",
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the little community park on my walk over today, and the old oak tree by the playground was absolutely covered in those fluffy pale pink cherry blossom petals that stick to your jacket cuffs if you brush too close to the branches. A group of tiny kids were chasing a very chonky calico cat that had stolen a half-eaten cheese cracker from one of their picnic blankets, and none of them could run fast enough to catch up before it hopped up on the split-rail fence to nibble its prize. The food truck parked by the park entrance was grilling those sweet-spicy chicken skewers I smelled last weekend but didn\u2019t have cash to grab, and the scent carried all the way across the grass so strong it made my stomach growl halfway to the crosswalk.",
+  "retained": [
+   "attr:hair extensions",
+   "attr:natural hair"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "504ad7f38a37291b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 57,
+  "lit_card": 452,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 66,
+    "true_card": 57,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 431,
+    "true_card": 57,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "fefc739000804503",
+  "conditions": [
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "attr:natural hair",
+    "=",
+    "natural hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "22 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 57,
+  "value": [
+   "[\"B00QWCP4FG\",[[\"size\",\"22 inch\"]]]",
+   "[\"B01IHCUSL8\",[[\"size\",\"24 inch\"]]]",
+   "[\"B01J7VN28Y\",[[\"size\",\"23 inch\"]]]",
+   "[\"B01LZ3W17F\",[[\"size\",\"22\\\"\"]]]",
+   "[\"B07G23NLBR\",[[\"size\",\"12\\\" inch\"]]]",
+   "[\"B07K9HVPJ6\",[[\"size\",\"20 inch\"]]]",
+   "[\"B07MPBHRSD\",[[\"size\",\"12 inch\"]]]",
+   "[\"B07NWBLSM1\",[[\"size\",\"22 inch (pack of 1)\"]]]",
+   "[\"B07QB44B12\",[[\"size\",\"22 inch-curly\"]]]",
+   "[\"B07RB1XJYN\",[[\"size\",\"22 inch-curly\"]]]",
+   "[\"B07Y4V5XGS\",[[\"size\",\"22\\\"\"]]]",
+   "[\"B08C5BL54W\",[[\"size\",\"22 inch\"]]]",
+   "[\"B08F3PT7QJ\",[[\"size\",\"20 inch\"]]]",
+   "[\"B08HX1VXF6\",[[\"size\",\"20 inch\"]]]",
+   "[\"B08L54NF2H\",[[\"size\",\"22 inch\"]]]",
+   "[\"B08M316K5C\",[[\"size\",\"12 inch\"]]]",
+   "[\"B08P2VT4CY\",[[\"size\",\"22 inch\"]]]",
+   "[\"B08Q3NH1BB\",[[\"color\",\"22#\"]]]",
+   "[\"B08QVHK3KT\",[[\"size\",\"22 inch\"]]]",
+   "[\"B08QZ2QC2K\",[[\"size\",\"20 inch\"]]]",
+   "[\"B08R5R5XTH\",[[\"color\",\"22inch\"]]]",
+   "[\"B08R5SKF8M\",[[\"color\",\"22inch\"]]]",
+   "[\"B08R7HWN49\",[[\"color\",\"22inch\"]]]",
+   "[\"B08R7J5S2J\",[[\"color\",\"22inch\"]]]",
+   "[\"B08RBSN5TZ\",[[\"size\",\"22 inch\"]]]",
+   "[\"B08RHS42Q2\",[[\"size\",\"22 inch (pack of 1)\"]]]",
+   "[\"B08SQJMW66\",[[\"size\",\"20 inch\"]]]",
+   "[\"B08T7P2SQZ\",[[\"size\",\"12 inch\"]]]",
+   "[\"B08Y83XLL8\",[[\"size\",\"22 inch (55cm) 50g\"]]]",
+   "[\"B08Y8B6692\",[[\"size\",\"22 inch (55cm) 50g\"]]]",
+   "[\"B08YDFXW4T\",[[\"size\",\"22 inch (55cm) 50g\"]]]",
+   "[\"B08YDTNZQD\",[[\"size\",\"22 inch (55cm) 100g\"]]]",
+   "[\"B092HGVSKK\",[[\"color\",\"22 inch\"]]]",
+   "[\"B092ZCVP62\",[[\"size\",\"20 inch\"]]]",
+   "[\"B0932HBXKS\",[[\"size\",\"22 inch\"]]]",
+   "[\"B0946PGP8Y\",[[\"size\",\"22 inch\"]]]",
+   "[\"B094J8QSCV\",[[\"size\",\"22 inch (pack of 1)\"]]]",
+   "[\"B095JMKGRS\",[[\"size\",\"12 inch\"]]]",
+   "[\"B096KT9CFM\",[[\"size\",\"24 inch\"]]]",
+   "[\"B097PPDD7T\",[[\"size\",\"22 inch\"]]]",
+   "[\"B098JK8Y2S\",[[\"size\",\"22 inch\"]]]",
+   "[\"B099DF7MB6\",[[\"size\",\"22 inch\"]]]",
+   "[\"B099K9Z9L2\",[[\"size\",\"22 inch\"]]]",
+   "[\"B09B1NSY5P\",[[\"size\",\"22 inch\"]]]",
+   "[\"B09BD2ZR3J\",[[\"size\",\"22 inch (pack of 7)\"]]]",
+   "[\"B09BMRDX27\",[[\"size\",\"22 inch (pack of 1)\"]]]",
+   "[\"B09DCCQBKK\",[[\"size\",\"22 inch\"]]]",
+   "[\"B09DL826DF\",[[\"size\",\"22 inch\"]]]",
+   "[\"B09G9664GR\",[[\"size\",\"20 inch\"]]]",
+   "[\"B09GM2B2CH\",[[\"size\",\"12 inch\"]]]",
+   "[\"B09NNR7JH1\",[[\"size\",\"22 inch\"]]]",
+   "[\"B09NZYXKG9\",[[\"size\",\"24 inch\"]]]",
+   "[\"B09P1614YF\",[[\"size\",\"22 inch\"]]]",
+   "[\"B09P71JP79\",[[\"size\",\"22 inch 100g\"]]]",
+   "[\"B09P8B2L8V\",[[\"color\",\"22\"]]]",
+   "[\"B09PDP2SKW\",[[\"size\",\"22 inch\"]]]",
+   "[\"B09QS6VPVZ\",[[\"color\",\"#22\"]]]"
+  ],
+  "hash": "d448ecb987b4a8bae4afc7f314ac8e17"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2b702871dfd53145",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair extensions, wigs & accessories instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "679243e994beeb02",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair extensions, wigs & accessories instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "123d238a6ad39203",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair scalp."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "825b089d8a4d8915",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be quality materials."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "66eb9345e0242f19",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "add1ccade372a269",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0764145d9b37ec76",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 jet balck instead of 22 inch."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "8d8381eda49cfdba",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 instead of 22 inch."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,191 @@
+{
+ "adapter": "webshop",
+ "cluster": "toothpaste",
+ "fidelity_notes": [],
+ "goal_idx": 21,
+ "ground_truth": {
+  "cardinality": 21,
+  "hash": "9138c5db994df4fb1209cdb0329a2d97",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B000E3DX5W\",[]]",
+   "[\"B00692AHS8\",[]]",
+   "[\"B00DZNP1Y4\",[]]",
+   "[\"B01CWYEUWK\",[]]",
+   "[\"B077KJ6LT9\",[]]",
+   "[\"B07GT3YKXK\",[]]",
+   "[\"B07HHBZXSF\",[]]",
+   "[\"B07HJWFCBS\",[]]",
+   "[\"B07MNTKBTH\",[]]",
+   "[\"B07V9PR7LW\",[]]",
+   "[\"B07ZML21XH\",[]]",
+   "[\"B081SGNY71\",[]]",
+   "[\"B0821T9FSW\",[]]",
+   "[\"B0849R7MY1\",[]]",
+   "[\"B08HW1JFR6\",[]]",
+   "[\"B08N1J39Q8\",[]]",
+   "[\"B08Y6F32HY\",[]]",
+   "[\"B09L47X9R6\",[]]",
+   "[\"B09MQQWNJB\",[]]",
+   "[\"B09SCPZ512\",[]]",
+   "[\"B09SCVNW6X\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:fluoride free",
+    "=",
+    "fluoride free"
+   ],
+   [
+    "attr:fresh breath",
+    "=",
+    "fresh breath"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "69dc1296e101714d"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:fresh breath",
+     "=",
+     "fresh breath"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:fluoride free",
+     "fluoride free"
+    ],
+    "alternative": null,
+    "condition": null,
+    "text": "Since you probably don't have fluoride free toothpaste in stock"
+   }
+  ],
+  "retained": [
+   "attr:fluoride free",
+   "attr:fresh breath",
+   "price_upper"
+  ],
+  "spec_id": "f95c7632d611d6f9",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don't have fluoride free toothpaste in stock, I'm looking for toothpaste that gives fresh breath and costs under $30.",
+ "render_attempts": 3,
+ "sample_id": "fda3b7a3c53186fd",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the toothpaste instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "6131833197b2580f"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the toothpaste instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "ee2213fe4b5062d6"
+  },
+  {
+   "announcement": "Also, it needs to be essential oils.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "47a34d0c6c3bc65c"
+  },
+  {
+   "announcement": "Also, it needs to be electric toothbrush.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e7a0f81847ba9e8d"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a58bb0a5beed6f1d"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ba8e2e740978484f"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of 30.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "361a770f729a23ac"
+  },
+  {
+   "announcement": "Actually, make it 20 instead of 30.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "716c6606d891b77f"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 110,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 21,
+  "verdict": "ok"
+ },
+ "source_instruction": "i  need fluoide free toothpaste for fresh breath.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "9e6997230fbcbfb5",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

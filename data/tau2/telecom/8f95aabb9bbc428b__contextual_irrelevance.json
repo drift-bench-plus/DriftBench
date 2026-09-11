@@ -1,0 +1,126 @@
+{
+ "sample_id": "8f95aabb9bbc428b__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "8f95aabb9bbc428b",
+ "query": "I picked up my dog from the groomer this morning and they gave her the cutest little bandana with paw prints on it, she\u2019s been prancing around the house all afternoon like she knows she looks extra fancy. I also just baked a batch of chocolate chip cookies that came out perfectly chewy, I even added a pinch of sea salt on top like I saw in that TikTok recipe last week. Oh, and my favorite houseplant that I thought was dying just sprouted a new leaf this morning, I was so excited I took like five photos of it to send to my mom. Anyway, my mobile data isn\u2019t working at all right now. I don\u2019t have a good network connection where I am, my VPN\u2019s been acting up all day, I have data mode turned off completely, data saver mode is enabled, I already got the alert that I\u2019ve exceeded my monthly data limit, and I\u2019m traveling abroad right now but I never turned on roaming, can you help me figure out what to do?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I picked up my dog from the groomer this morning and they gave her the cutest little bandana with paw prints on it, she\u2019s been prancing around the house all afternoon like she knows she looks extra fancy. I also just baked a batch of chocolate chip cookies that came out perfectly chewy, I even added a pinch of sea salt on top like I saw in that TikTok recipe last week. Oh, and my favorite houseplant that I thought was dying just sprouted a new leaf this morning, I was so excited I took like five photos of it to send to my mom. Anyway, ",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:bad_vpn",
+   "fault:data_mode_off",
+   "fault:data_saver_mode_on",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_vpn",
+     "=",
+     "bad_vpn"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_vpn",
+    "=",
+    "bad_vpn"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

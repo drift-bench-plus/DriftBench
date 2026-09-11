@@ -1,0 +1,137 @@
+{
+ "sample_id": "4aacbf60cafd17ab__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "4aacbf60cafd17ab",
+ "query": "I just got back from walking my dog this morning, he chased a squirrel all around the park and ended up getting his leash tangled around a park bench, it took me ten whole minutes to get him free. Then on the way home I stopped at the neighborhood bakery and picked up a warm cinnamon roll, it was so flaky and sweet, I ate the whole thing before I even walked in the door. I also just remembered I need to pick up some cat litter on my way out tomorrow, my cat's almost run out and the pet store nearby closes early on weekends. But anyway, I need to cancel two pending orders first: order #W9373487 and order #W5481803, both for the reason that they're no longer needed. I also need to return the item with number 6477915553 from delivered order #W7449508, and please process the refund to my payment method gift_card_7711863.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from walking my dog this morning, he chased a squirrel all around the park and ended up getting his leash tangled around a park bench, it took me ten whole minutes to get him free. Then on the way home I stopped at the neighborhood bakery and picked up a warm cinnamon roll, it was so flaky and sweet, I ate the whole thing before I even walked in the door. I also just remembered I need to pick up some cat litter on my way out tomorrow, my cat's almost run out and the pet store nearby closes early on weekends. But anyway,",
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason",
+   "arg:2:return_delivered_order_items:item_ids",
+   "arg:2:return_delivered_order_items:order_id",
+   "arg:2:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W9373487\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:1:cancel_pending_order:order_id",
+     "=",
+     "\"#W5481803\""
+    ],
+    [
+     "arg:1:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:item_ids",
+     "=",
+     "[\"6477915553\"]"
+    ],
+    [
+     "arg:2:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7449508\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7711863\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W9373487\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:1:cancel_pending_order:order_id",
+    "=",
+    "\"#W5481803\""
+   ],
+   [
+    "arg:1:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:item_ids",
+    "=",
+    "[\"6477915553\"]"
+   ],
+   [
+    "arg:2:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7449508\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7711863\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

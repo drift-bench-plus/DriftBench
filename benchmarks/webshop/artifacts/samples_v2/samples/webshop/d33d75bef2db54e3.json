@@ -1,0 +1,180 @@
+{
+ "adapter": "webshop",
+ "cluster": "iphone accessories",
+ "fidelity_notes": [],
+ "goal_idx": 393,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "5a098633172004271dcd71e8d5905706",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08P4N9Z9H\",[[\"color\",\"black\"],[\"size\",\"iphone 12 mini\"]]]",
+   "[\"B09FT4RLLS\",[[\"color\",\"black\"],[\"size\",\"iphone 13\"]]]",
+   "[\"B09JSRB9GR\",[[\"color\",\"black\"],[\"size\",\"iphone 13\"]]]",
+   "[\"B09K7DC3HM\",[[\"color\",\"black\"],[\"size\",\"iphone 13\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:aluminum alloy",
+    "=",
+    "aluminum alloy"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "option:1",
+    "=",
+    "iphone 13 mini"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "14b2abfb13d4ee17"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:aluminum alloy",
+     "=",
+     "aluminum alloy"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "option:1",
+     "=",
+     "iphone 13 mini"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:aluminum alloy",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that aluminum alloy iPhone 13 mini cases in black hold up really well, and they usually go for under 40 bucks in the iPhone accessories section.",
+ "render_attempts": 1,
+ "sample_id": "d33d75bef2db54e3",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the iphone accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b28b8518a196ebfb"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the iphone accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e2332715c61df1bb"
+  },
+  {
+   "announcement": "Also, it needs to be pro max.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0f6793779cec1fae"
+  },
+  {
+   "announcement": "Also, it needs to be iphone pro.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e4c87e4dbd22ed02"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "062f37020270a7cf"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fcd1e3263d0d0223"
+  },
+  {
+   "announcement": "Actually, make it 3. black+multicolor ties instead of black.",
+   "gt_moved": false,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "89d066b4a1fddba5"
+  },
+  {
+   "announcement": "Actually, make it 1. black instead of black.",
+   "gt_moved": false,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b4bdbdec85649e2d"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 4,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for one aluminum alloy magnetic case phor iphone 13 mini in black",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "efcdeaccf2e09c86",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

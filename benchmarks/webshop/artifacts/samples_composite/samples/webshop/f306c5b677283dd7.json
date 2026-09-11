@@ -1,0 +1,199 @@
+{
+ "sample_id": "f306c5b677283dd7",
+ "tree_id": "4944911280127eae",
+ "adapter": "webshop",
+ "cluster": "video surveillance",
+ "goal_idx": 184,
+ "split": "test",
+ "source_instruction": "i am looking for 3mp motion detection security camera.",
+ "query": "I stopped by the community garden on my walk over this morning, right? The tomato plants the retired teacher down the block put in back in May are finally heavy with fruit, all sun-warmed and blushed deep red, and she was passing out samples of the first ripe ones to anyone who wandered by. They tasted exactly like the ones my grandma used to grow in her backyard when I was little, sweet and tangy enough that the juice dribbled down my wrist before I even took the second bite. A couple of the neighborhood kids were chasing a monarch butterfly that kept fluttering between the sunflower stalks along the fence, laughing so loud a few sparrows took off from the nearby telephone wire. I\u2019ve heard video surveillance cameras with solid motion detection work really well for keeping an eye on spaces around the house. I\u2019ve heard the exact same resolution spec I always go for, the one from the camera I picked up last time for my front porch, holds up really well for clear, usable footage. I\u2019ve heard options that sit outside the budget I\u2019m sticking to right now aren\u2019t a fit at the moment, since I\u2019m not trying to spend too much right now.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance",
+  "insufficient_information",
+  "indirect_intent"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance+insufficient_information+indirect_intent",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance",
+   "insufficient_information",
+   "indirect_intent"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the community garden on my walk over this morning, right? The tomato plants the retired teacher down the block put in back in May are finally heavy with fruit, all sun-warmed and blushed deep red, and she was passing out samples of the first ripe ones to anyone who wandered by. They tasted exactly like the ones my grandma used to grow in her backyard when I was little, sweet and tangy enough that the juice dribbled down my wrist before I even took the second bite. A couple of the neighborhood kids were chasing a monarch butterfly that kept fluttering between the sunflower stalks along the fence, laughing so loud a few sparrows took off from the nearby telephone wire.",
+  "retained": [
+   "attr:motion detection"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:motion detection",
+     "=",
+     "motion detection"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "d50f2d3686ee99a7"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 2939,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1475,
+    "true_card": 3,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 8,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "7278ebab2e56407b",
+  "conditions": [
+   [
+    "attr:motion detection",
+    "=",
+    "motion detection"
+   ],
+   [
+    "option:0",
+    "=",
+    "3mp"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B08B7TXXWF\",[[\"color\",\"3mp\"]]]",
+   "[\"B08W57SX4J\",[[\"size\",\"3mp camera\"]]]",
+   "[\"B08ZN3Q4DN\",[[\"color\",\"3mp\"]]]"
+  ],
+  "hash": "6ec2e226b6b811002787153ab9ba1992"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "18a6cd52da3d2b94",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the video surveillance instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6a0c0bc79e73076",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the video surveillance instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "267155914c5d4abe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mobile phone."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "876e17877673602d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be rechargeable battery."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "353171591dacb3bf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8c7e8e0461c8e66b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "6d3ee0bb9e3d45f9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 female to 4 male (1 pack) instead of 3mp."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "dcb428f641864c08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pc instead of 3mp."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

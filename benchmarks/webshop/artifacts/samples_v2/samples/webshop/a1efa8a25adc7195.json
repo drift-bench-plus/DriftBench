@@ -1,0 +1,207 @@
+{
+ "adapter": "webshop",
+ "cluster": "pc",
+ "fidelity_notes": [],
+ "goal_idx": 276,
+ "ground_truth": {
+  "cardinality": 29,
+  "hash": "d2e291026d75e831eea4fb6de7cfc7fe",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B086XLYPSB\",[[\"size\",\"64gb ram|2tb ssd|win10pro\"]]]",
+   "[\"B097FJ9KHT\",[[\"size\",\"64gb ram | 2tb ssd\"]]]",
+   "[\"B0982QQGXT\",[[\"configuration\",\"64gb ram |2tb ssd\"]]]",
+   "[\"B098KK7H3Q\",[[\"size\",\"64gb ram | 1tb ssd\"]]]",
+   "[\"B09GV76J4S\",[[\"size\",\"64gb ram|1tb ssd|win10pro\"]]]",
+   "[\"B09H7ML1HC\",[[\"size\",\"64gb ram|2tb ssd+2tb hdd|win10h\"]]]",
+   "[\"B09J6YN4CD\",[[\"size\",\"64gb ram|1tb ssd|win10h\"]]]",
+   "[\"B09JMLZGLV\",[[\"size\",\"64gb ram|512gb ssd+3tb hdd|win10h\"]]]",
+   "[\"B09JMM68X9\",[[\"size\",\"64gb ram|2x4tb ssd|win10h\"]]]",
+   "[\"B09JMMCRJP\",[[\"size\",\"64gb ram|2x4tb ssd|win10h\"]]]",
+   "[\"B09JMPWD3L\",[[\"size\",\"64gb ram|4tb ssd|win10h\"]]]",
+   "[\"B09JMVK45R\",[[\"size\",\"64gb ram|4tb ssd|win10h\"]]]",
+   "[\"B09JMWFSJJ\",[[\"size\",\"64gb ram|512gb ssd+2tb hdd|win10h\"]]]",
+   "[\"B09JMXDS13\",[[\"size\",\"64gb ram|512gb ssd+3tb hdd|win10h\"]]]",
+   "[\"B09JMYB51Y\",[[\"size\",\"64gb ram|2tb ssd+1tb hdd|win10h\"]]]",
+   "[\"B09JMZF8XW\",[[\"size\",\"64gb ram|2x4tb ssd|win10h\"]]]",
+   "[\"B09ML1SJJ9\",[[\"size\",\"64gb ram|1tb ssd|win11h\"]]]",
+   "[\"B09MR57X94\",[[\"size\",\"64gb ram|1tb ssd|win11h\"]]]",
+   "[\"B09MZRGK5P\",[[\"size\",\"64gb ram|1tb ssd|win10pro\"]]]",
+   "[\"B09NLBQ4BG\",[[\"size\",\"64gb ram|1tb ssd\"]]]",
+   "[\"B09NMRJZYL\",[[\"size\",\"64gb ram | 2tb ssd\"]]]",
+   "[\"B09NWCLDNH\",[[\"size\",\"64gb ram | 4tb ssd\"]]]",
+   "[\"B09Q7P6GYB\",[[\"size\",\"64gb ram|4tb ssd|win11h\"]]]",
+   "[\"B09Q7QBBC4\",[[\"size\",\"64gb ram|128gb ssd+1tb hdd|win10h\"]]]",
+   "[\"B09Q7RJ9JH\",[[\"size\",\"64gb ram|512gb ssd+1tb hdd|win10h\"]]]",
+   "[\"B09Q7YW5QL\",[[\"size\",\"64gb ram|1tb ssd|win11h\"]]]",
+   "[\"B09SR5NGX9\",[[\"size\",\"64gb ram|1tb ssd+2tb hdd|win10h\"]]]",
+   "[\"B09SXPPGMR\",[[\"size\",\"64gb ram|4tb ssd|win10pro\"]]]",
+   "[\"B09SZ6GNR7\",[[\"size\",\"64gb ram|2tb ssd|win11h\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:intel core",
+    "=",
+    "intel core"
+   ],
+   [
+    "option:0",
+    "=",
+    "64gb ram|4tb ssd|win10h"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "c864e69df44b944a"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:intel core",
+     "=",
+     "amd-based"
+    ],
+    [
+     "option:0",
+     "=",
+     "64gb ram|4tb ssd|win10h"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:intel core",
+     "intel core"
+    ],
+    "alternative": [
+     "attr:intel core",
+     "amd-based"
+    ],
+    "condition": null,
+    "text": "Since you probably don't have PCs with Intel Core processors in the PC section right now"
+   }
+  ],
+  "retained": [
+   "attr:intel core",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "356e67b9bcad1061",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don't have PCs with Intel Core processors in the PC section right now, I'm looking for AMD-based PCs with 64GB RAM, 4TB SSD, and Windows 10 Home, with a price limit of 20.",
+ "render_attempts": 2,
+ "sample_id": "a1efa8a25adc7195",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the pc instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "12ea55b9589d13af"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the pc instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "9031c46c001d7f69"
+  },
+  {
+   "announcement": "Also, it needs to be hdmi cable.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6bba613a177711e3"
+  },
+  {
+   "announcement": "Also, it needs to be memory card.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d0e81d71ef797881"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "09a9e8686a0d3f2f"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c6c83a03c2a76e6b"
+  },
+  {
+   "announcement": "Actually, make it 16g ram 240g ssd instead of 64gb ram|4tb ssd|win10h.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d0fa61dfbbd4c99b"
+  },
+  {
+   "announcement": "Actually, make it 16g ram 256g ssd 1tb hdd instead of 64gb ram|4tb ssd|win10h.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e8d471adcadb710c"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 29,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like an intel core desktop that has 64 gb of ram with 4 tb storage",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "b513a019ad1352d6",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

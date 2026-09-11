@@ -1,0 +1,229 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's slippers",
+ "fidelity_notes": [],
+ "goal_idx": 289,
+ "ground_truth": {
+  "cardinality": 39,
+  "hash": "d0f7627814267005b4cbee70bd931864",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08DCFW5CT\",[[\"color\",\"black\"]]]",
+   "[\"B08K4Q97MR\",[[\"color\",\"black\"]]]",
+   "[\"B08MMQH84M\",[[\"color\",\"new black\"]]]",
+   "[\"B08T8YGHSG\",[[\"color\",\"black\"]]]",
+   "[\"B08T8YRFQ2\",[[\"color\",\"black\"]]]",
+   "[\"B08TQSDG8B\",[[\"color\",\"black\"]]]",
+   "[\"B08VDBY711\",[[\"color\",\"black\"]]]",
+   "[\"B08XQVF55R\",[[\"color\",\"black\"]]]",
+   "[\"B08YDTTBV2\",[[\"color\",\"black\"]]]",
+   "[\"B08YJM2BQ9\",[[\"color\",\"black\"]]]",
+   "[\"B08ZHVRP4V\",[[\"color\",\"black\"]]]",
+   "[\"B08ZN8RQCH\",[[\"color\",\"black\"]]]",
+   "[\"B091FNNZRP\",[[\"color\",\"black\"]]]",
+   "[\"B091SHWLB9\",[[\"color\",\"black\"]]]",
+   "[\"B092HNMC2K\",[[\"color\",\"black\"]]]",
+   "[\"B092VF2RWZ\",[[\"color\",\"a-black\"]]]",
+   "[\"B093QBKLVS\",[[\"color\",\"black\"]]]",
+   "[\"B096M7YX9G\",[[\"color\",\"black\"]]]",
+   "[\"B0972VJ681\",[[\"color\",\"black\"]]]",
+   "[\"B097BFBG1L\",[[\"color\",\"black\"]]]",
+   "[\"B097K1N9JN\",[[\"color\",\"black\"]]]",
+   "[\"B098W9BKDG\",[[\"color\",\"black\"]]]",
+   "[\"B0993Q8MYW\",[[\"color\",\"black\"]]]",
+   "[\"B099ZRW22F\",[[\"color\",\"black\"]]]",
+   "[\"B09B1YP4VW\",[[\"color\",\"black\"]]]",
+   "[\"B09C1DN7YC\",[[\"color\",\"black\"]]]",
+   "[\"B09C4DFS8S\",[[\"color\",\"black\"]]]",
+   "[\"B09CDPT3NH\",[[\"color\",\"black\"]]]",
+   "[\"B09DD8KHVN\",[[\"color\",\"black\"]]]",
+   "[\"B09KC6PYXD\",[[\"color\",\"black\"]]]",
+   "[\"B09KCB5MB2\",[[\"color\",\"black\"]]]",
+   "[\"B09L64FTNF\",[[\"color\",\"black\"]]]",
+   "[\"B09M82C1H8\",[[\"color\",\"black\"]]]",
+   "[\"B09MTKZJNL\",[[\"color\",\"black-3\"]]]",
+   "[\"B09NDSCGJD\",[[\"color\",\"black\"]]]",
+   "[\"B09NFMHVS8\",[[\"color\",\"black\"]]]",
+   "[\"B09P4ZW3CT\",[[\"color\",\"black\"]]]",
+   "[\"B09QK1Z3DG\",[[\"color\",\"black\"]]]",
+   "[\"B09QSLGV5T\",[[\"color\",\"black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:ethylene vinyl",
+    "=",
+    "ethylene vinyl"
+   ],
+   [
+    "attr:non slip",
+    "=",
+    "non slip"
+   ],
+   [
+    "attr:vinyl acetate",
+    "=",
+    "vinyl acetate"
+   ],
+   [
+    "option:0",
+    "=",
+    "new black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "2e883960e5ec6b68"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ethylene vinyl",
+     "=",
+     "ethylene vinyl"
+    ],
+    [
+     "attr:non slip",
+     "=",
+     "non slip"
+    ],
+    [
+     "attr:vinyl acetate",
+     "=",
+     "vinyl acetate"
+    ],
+    [
+     "option:0",
+     "=",
+     "new black"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:ethylene vinyl",
+   "attr:non slip",
+   "attr:vinyl acetate",
+   "option:0"
+  ],
+  "spec_id": "052a6af8410e4ae7",
+  "strategy_id": "vagueness_subjectivity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for men’s slippers that have ethylene vinyl, non slip, and vinyl acetate features, come in the new black option, and are priced at a reasonable amount.",
+ "render_attempts": 1,
+ "sample_id": "d8f3411ab3bc841f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's slippers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "43214916f8a9cc81"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's slippers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "aa8882388e062e56"
+  },
+  {
+   "announcement": "Also, it needs to be platform sandals.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ded7fbd62fd90117"
+  },
+  {
+   "announcement": "Also, it needs to be casual shoes.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e80554dd9e50a73a"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "05f1b85dc19485d5"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cb26a12cc4da5829"
+  },
+  {
+   "announcement": "Actually, make it (us11-12) instead of new black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "39e17cc156fb1c9b"
+  },
+  {
+   "announcement": "Actually, make it 10-11 instead of new black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "67b6220c0b8b88ae"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 40,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 39,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for some non-slip black vinyls.",
+ "split": "test",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "tree_id": "6766f6d5dc98f2d1",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

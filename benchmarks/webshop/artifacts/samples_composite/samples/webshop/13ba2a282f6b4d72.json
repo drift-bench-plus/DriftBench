@@ -1,0 +1,282 @@
+{
+ "sample_id": "13ba2a282f6b4d72",
+ "tree_id": "9998e10e55e4c8df",
+ "adapter": "webshop",
+ "cluster": "women's flats",
+ "goal_idx": 41,
+ "split": "test",
+ "source_instruction": "i am looking for winter warm ankle boots for women. my size is 7.5.",
+ "query": "Hey, I\u2019m looking through the women\u2019s flats section right now\u2014can you help me find a pair? I need a pair that\u2019s summer breathable for walking around, I want that one size I always grab for these kinds of shoes, and they have to come with a detachable fuzzy pom-pom charm on the toe too, don\u2019t skip that. I don\u2019t want to spend too much so just keep it under the amount I usually budget for casual everyday shoes, yeah? Wait, make sure the pom-pom is the soft fluffy kind, not the weird scratchy fake fur I got last time.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "insufficient_information",
+  "irrelevant_information",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+insufficient_information+irrelevant_information+factual_error",
+  "family": "expression+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "insufficient_information",
+   "irrelevant_information",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:winter warm",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:winter warm",
+    "winter warm",
+    "summer breathable"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "summer breathable for walking around",
+    "condition": [
+     "attr:winter warm",
+     "=",
+     "summer breathable"
+    ]
+   },
+   {
+    "text": "come with a detachable fuzzy pom-pom charm on the toe",
+    "condition": null
+   },
+   {
+    "text": "the pom-pom is the soft fluffy kind, not the weird scratchy fake fur I got last time",
+    "condition": null
+   },
+   {
+    "text": "keep it under the amount I usually budget for casual everyday shoes",
+    "condition": [
+     "price_upper",
+     "=",
+     "the amount I usually budget for casual everyday shoes"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [],
+  "hidden_slots": [
+   "attr:winter warm",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:winter warm",
+     "=",
+     "summer breathable"
+    ],
+    [
+     "attr:winter warm",
+     "=",
+     "summer breathable"
+    ],
+    [
+     "price_upper",
+     "=",
+     "the amount I usually budget for casual everyday shoes"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "bb7e2c7cb2eeb041"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 28,
+  "lit_card": null,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 29,
+    "true_card": 28,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 45,
+    "true_card": 28,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 28,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 3,
+    "true_card": 28,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "78ce867d31453fa0",
+  "conditions": [
+   [
+    "attr:winter warm",
+    "=",
+    "winter warm"
+   ],
+   [
+    "option:0",
+    "=",
+    "7.5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:winter warm",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 28,
+  "value": [
+   "[\"B07BMLVX16\",[[\"size\",\"us:7.5(cn:37)\"]]]",
+   "[\"B07HF57J75\",[[\"size\",\"5.5\"]]]",
+   "[\"B07RRND2YB\",[[\"size\",\"5\"]]]",
+   "[\"B07VHNQXYD\",[[\"size\",\"7.5\"]]]",
+   "[\"B081M1632W\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B081T63T3Z\",[[\"size\",\"us:6.5-7=cn:37\"]]]",
+   "[\"B081T7ZCYM\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B08BXMR79H\",[[\"size\",\"7\"]]]",
+   "[\"B08BXNGCP4\",[[\"size\",\"7\"]]]",
+   "[\"B08TMTGPV6\",[[\"size\",\"5.5\"]]]",
+   "[\"B08W3D5642\",[[\"size\",\"7\"]]]",
+   "[\"B0995XLWYH\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09B3ZGXK6\",[[\"size\",\"7\"]]]",
+   "[\"B09DQ6VYGT\",[[\"size\",\"7\"]]]",
+   "[\"B09HC7FPDC\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09JCDQ9FD\",[[\"size\",\"7\"]]]",
+   "[\"B09K74T4LZ\",[[\"size\",\"7.5 wide\"]]]",
+   "[\"B09LCNVMBV\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09LSWJ2Z6\",[[\"size\",\"7\"]]]",
+   "[\"B09M2B4NZ9\",[[\"size\",\"7\"]]]",
+   "[\"B09MLTB56D\",[[\"size\",\"5.5\"]]]",
+   "[\"B09MMYV8M8\",[[\"size\",\"5.5\"]]]",
+   "[\"B09MZGL7QP\",[[\"size\",\"7\"]]]",
+   "[\"B09NRRZ1T1\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09PNKGWYX\",[[\"size\",\"5.5\"]]]",
+   "[\"B09PNLX519\",[[\"size\",\"5.5\"]]]",
+   "[\"B09Q3HJSNH\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09QSW7LZ3\",[[\"size\",\"7\"]]]"
+  ],
+  "hash": "10780f8862e30169f606b5787d3c3c9c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "646f70b4c5c8559d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's flats instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "9ec03bda172208c6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's flats instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "21ba9ea19270a5ad",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dress shoes."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "581542e413602d22",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ankle strap."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1184f8f88f0e0b08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ceb2d92dc22e7e53",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "294b895897f50415",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 005 grey instead of 7.5."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "e04a87be2f029d6f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01-khaki instead of 7.5."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "telecom": {
+  "domain": "telecom",
+  "samples": 857,
+  "by_strategy": {
+   "factual_error": 63,
+   "vagueness_subjectivity": 91,
+   "false_presupposition": 93,
+   "irrelevant_information": 108,
+   "indirect_intent": 110,
+   "contextual_irrelevance": 110,
+   "insufficient_information": 59,
+   "lexical_ambiguity": 56,
+   "referential_ambiguity": 105,
+   "syntactic_ambiguity": 62
+  },
+  "non_executable_admissions": 107,
+  "trees_covered": 114
+ },
+ "retail": {
+  "domain": "retail",
+  "samples": 734,
+  "by_strategy": {
+   "vagueness_subjectivity": 62,
+   "false_presupposition": 83,
+   "irrelevant_information": 81,
+   "indirect_intent": 65,
+   "contextual_irrelevance": 98,
+   "factual_error": 90,
+   "syntactic_ambiguity": 73,
+   "insufficient_information": 50,
+   "referential_ambiguity": 94,
+   "lexical_ambiguity": 38
+  },
+  "non_executable_admissions": 81,
+  "trees_covered": 98
+ },
+ "trees": {
+  "telecom": 114,
+  "retail": 98
+ },
+ "provenance": {
+  "battery": "0 findings on all trees incl. --reproduce (telecom 114, retail 98)",
+  "retail_policy_gate": {
+   "nodes": 389,
+   "violating": 0,
+   "rate": 0.0,
+   "per_operator": {
+    "PIVOT": {
+     "nodes": 196
+    },
+    "REFINEMENT": {
+     "nodes": 43
+    },
+    "RELAXATION": {
+     "nodes": 73
+    },
+    "SUBSTITUTION": {
+     "nodes": 77
+    }
+   }
+  },
+  "pragmatic_collision_audit": {
+   "audited": 288,
+   "collisions": 19,
+   "by_domain": {
+    "telecom": {
+     "audited": 110,
+     "collisions": 3
+    },
+    "retail": {
+     "audited": 178,
+     "collisions": 16
+    }
+   },
+   "only_one_extractor": 14
+  },
+  "telecom_shift_certificates": {
+   "rule": "eligible = non_vacuous AND achievable; moved is a label (ruling 2026-08-13)",
+   "trees": 114,
+   "edges": 5942,
+   "eligible": 1787,
+   "eligible_rate": 0.301,
+   "per_operator": {
+    "PIVOT": {
+     "edges": 2922,
+     "eligible": 813,
+     "eligible_moved": 783,
+     "eligible_unmoved": 30,
+     "fail_non_vacuous": 198,
+     "fail_achievable": 1911
+    },
+    "REFINEMENT": {
+     "edges": 1173,
+     "eligible": 958,
+     "eligible_moved": 958,
+     "eligible_unmoved": 0,
+     "fail_non_vacuous": 215,
+     "fail_achievable": 0
+    },
+    "RELAXATION": {
+     "edges": 1173,
+     "eligible": 0,
+     "eligible_moved": 0,
+     "eligible_unmoved": 0,
+     "fail_non_vacuous": 111,
+     "fail_achievable": 1062
+    },
+    "SUBSTITUTION": {
+     "edges": 674,
+     "eligible": 16,
+     "eligible_moved": 14,
+     "eligible_unmoved": 2,
+     "fail_non_vacuous": 110,
+     "fail_achievable": 548,
+     "errors": 14
+    }
+   }
+  },
+  "shift_manifest": {
+   "telecom": {
+    "trees": 114,
+    "trees_with_edges": 114,
+    "trees_root_shiftable": 85,
+    "eligible_edges": 1787,
+    "unmoved_edges": 32
+   },
+   "retail": {
+    "trees": 98,
+    "trees_with_edges": 98,
+    "trees_root_shiftable": 98,
+    "eligible_edges": 1984,
+    "unmoved_edges": 0
+   }
+  },
+  "retail_id_remap_entries": 39
+ }
+}

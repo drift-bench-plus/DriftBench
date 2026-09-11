@@ -1,0 +1,207 @@
+{
+ "adapter": "webshop",
+ "cluster": "pantry staples",
+ "fidelity_notes": [],
+ "goal_idx": 489,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "af976802a7a2caac58116a098c8b9e4b",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B001EO5S1C\",[[\"size\",\"32 ounce (pack of 6)\"]]]",
+   "[\"B00S5AZRYG\",[[\"size\",\"24 ounce\"]]]",
+   "[\"B013PTSCWU\",[[\"size\",\"21 ounce\"]]]",
+   "[\"B09913B3WZ\",[[\"size\",\"32 ounce\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "option:0",
+    "=",
+    "32 ounce"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "08486ec40a329416"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "32 ounce"
+     ],
+     [
+      "option:0",
+      "low in calories/fat"
+     ]
+    ],
+    "surface": "light"
+   }
+  ],
+  "attempt": 3,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "32 ounce"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "low in calories/fat"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:gluten free",
+   "price_upper"
+  ],
+  "spec_id": "bc843c30cfa620ce",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need something from the pantry staples section that’s gluten free, and make sure it’s light, with a total cost no more than $30.",
+ "render_attempts": 3,
+ "sample_id": "b72a2144fcaa842a",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the pantry staples instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e8bafccb35e5707"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the pantry staples instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b6215ee8575f5182"
+  },
+  {
+   "announcement": "Also, it needs to be great gift.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "65f2292138e4b7f4"
+  },
+  {
+   "announcement": "Also, it needs to be gift basket.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bd35a16081691216"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5b80cf5427dfc468"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ce695cf84de8b47c"
+  },
+  {
+   "announcement": "Actually, make it .2 pack - 1 pound instead of 32 ounce.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1bc641492c1156bd"
+  },
+  {
+   "announcement": "Actually, make it .10 set(2 ounce (pack of 1)) instead of 32 ounce.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5f959bce39642f69"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   4,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a 32 ounce package of gluten free almond flour.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "12d5734d35c6cd87",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

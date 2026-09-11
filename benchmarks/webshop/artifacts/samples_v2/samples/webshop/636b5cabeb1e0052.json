@@ -1,0 +1,182 @@
+{
+ "adapter": "webshop",
+ "cluster": "bar stools",
+ "fidelity_notes": [],
+ "goal_idx": 440,
+ "ground_truth": {
+  "cardinality": 6,
+  "hash": "8350314bc69f9daf4a2fae6c26b64643",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01DWGRENE\",[[\"color\",\"chrome base finish | black\"]]]",
+   "[\"B01DWGRESY\",[[\"color\",\"chrome finish | black\"]]]",
+   "[\"B071LMB16R\",[[\"color\",\"black\"]]]",
+   "[\"B07TVRWRQR\",[[\"color\",\"black\"]]]",
+   "[\"B07WYL5JTX\",[[\"color\",\"black\"]]]",
+   "[\"B091DG574T\",[[\"color\",\"black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:faux leather",
+    "=",
+    "faux leather"
+   ],
+   [
+    "attr:stainless steel",
+    "=",
+    "stainless steel"
+   ],
+   [
+    "option:0",
+    "=",
+    "black | stainless steel"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "b5da4ff0d66d0ce2"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:faux leather",
+     "=",
+     "faux leather"
+    ],
+    [
+     "attr:stainless steel",
+     "=",
+     "stainless steel"
+    ],
+    [
+     "option:0",
+     "=",
+     "black | stainless steel"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning planting new tomato seedlings in my backyard vegetable patch, and I’m really hoping they get enough sun this week to take root properly. I also tried a new homemade lemon poppyseed muffin recipe for breakfast that turned out way fluffier than I expected, I might even bake a second batch to bring to my neighbor this weekend. Oh, and my cat just knocked over my favorite potted succulent again, I’m still trying to find all the scattered soil around the living room rug. Anyway,",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:faux leather",
+   "attr:stainless steel",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning planting new tomato seedlings in my backyard vegetable patch, and I’m really hoping they get enough sun this week to take root properly. I also tried a new homemade lemon poppyseed muffin recipe for breakfast that turned out way fluffier than I expected, I might even bake a second batch to bring to my neighbor this weekend. Oh, and my cat just knocked over my favorite potted succulent again, I’m still trying to find all the scattered soil around the living room rug. Anyway, I’m looking for bar stools that have faux leather and stainless steel, I prefer the black with stainless steel option, and my price limit is $120.",
+ "render_attempts": 1,
+ "sample_id": "636b5cabeb1e0052",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bar stools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "6ef9144c08537686"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bar stools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b065fa878d7d3391"
+  },
+  {
+   "announcement": "Also, it needs to be wood frame.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9784606009c9a950"
+  },
+  {
+   "announcement": "Also, it needs to be mid century.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d00819d1c929ab77"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9ab988bef87ace79"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b52781acb9726f78"
+  },
+  {
+   "announcement": "Actually, make it 26\" metal footrest instead of black | stainless steel.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7d229aef311a0bbe"
+  },
+  {
+   "announcement": "Actually, make it 26\" height seat instead of black | stainless steel.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "91cb6f4ce841b642"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 6,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 6,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want to find a barstool made out of faux leather and stainless steel.  i want the one in black.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "1cd4e81b8fbad67c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

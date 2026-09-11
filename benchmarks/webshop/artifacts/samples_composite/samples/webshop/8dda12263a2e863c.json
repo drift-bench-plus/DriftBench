@@ -1,0 +1,262 @@
+{
+ "sample_id": "8dda12263a2e863c",
+ "tree_id": "09d8722580d5bd6a",
+ "adapter": "webshop",
+ "cluster": "salon & spa equipment",
+ "goal_idx": 395,
+ "split": "test",
+ "source_instruction": "i need a high quality bed cover that is easy to clean. find something in purple.",
+ "query": "I spent my whole Saturday morning deep cleaning my sunroom, which has turned into my little unofficial plant hospital lately. I rescued a sad, crispy fiddle leaf fig from the curb outside my neighbor\u2019s house last week, and I\u2019ve been fussing over it like it\u2019s a sick toddler\u2014misting its leaves every couple hours, rotating it to catch the perfect slant of afternoon sun, even mixing up a little diluted banana peel water to feed it because I saw that hack on TikTok. My cat Mochi spent the entire time I was cleaning knocking over the small terracotta pots I lined up on the windowsill, like she was personally offended I was rearranging \u201cher\u201d sun napping spots, so I had to stop twice to fish potting soil out of her fluffy white fur before she tracked it all over the living room carpet.\nHey there, I\u2019m browsing through your salon & spa equipment section looking for some high quality pieces that are scratch resistant, y\u2019know? I need to stick to that usual budget cap I always go with when I\u2019m picking up gear for my home treatment room, so don\u2019t show me anything that goes over that one. I\u2019m really only drawn to pieces in my go-to favorite color for all my salon setup stuff, so make sure you filter for that when you\u2019re pulling up options for me, yeah? I don\u2019t want to waste time scrolling through stuff that doesn\u2019t fit what I\u2019m after for my space.",
+ "strategy_ids": [
+  "insufficient_information",
+  "contextual_irrelevance",
+  "referential_ambiguity",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+contextual_irrelevance+referential_ambiguity+factual_error",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "contextual_irrelevance",
+   "referential_ambiguity",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "factual_error": "attr:easy clean",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:easy clean",
+    "easy clean",
+    "scratch resistant"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent my whole Saturday morning deep cleaning my sunroom, which has turned into my little unofficial plant hospital lately. I rescued a sad, crispy fiddle leaf fig from the curb outside my neighbor\u2019s house last week, and I\u2019ve been fussing over it like it\u2019s a sick toddler\u2014misting its leaves every couple hours, rotating it to catch the perfect slant of afternoon sun, even mixing up a little diluted banana peel water to feed it because I saw that hack on TikTok. My cat Mochi spent the entire time I was cleaning knocking over the small terracotta pots I lined up on the windowsill, like she was personally offended I was rearranging \u201cher\u201d sun napping spots, so I had to stop twice to fish potting soil out of her fluffy white fur before she tracked it all over the living room carpet.",
+  "retained": [
+   "attr:high quality"
+  ],
+  "hidden_slots": [
+   "attr:easy clean",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy clean",
+     "=",
+     "scratch resistant"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "56b2e38e3bf50402"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 39,
+  "lit_card": 52,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 373,
+    "true_card": 39,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 56,
+    "true_card": 39,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 39,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "2372f416912ab196",
+  "conditions": [
+   [
+    "attr:easy clean",
+    "=",
+    "easy clean"
+   ],
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "option:0",
+    "=",
+    "purple"
+   ],
+   [
+    "price_upper",
+    "<=",
+    170
+   ]
+  ],
+  "hidden_slots": [
+   "attr:easy clean",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 39,
+  "value": [
+   "[\"B07ZXQD8NK\",[[\"color\",\"purple\"]]]",
+   "[\"B08GKPPPLQ\",[[\"color\",\"purple\"]]]",
+   "[\"B08TG5XYXN\",[[\"color\",\"purple\"]]]",
+   "[\"B08VNW6CG4\",[[\"color\",\"white + purple\"]]]",
+   "[\"B08WCCZDFP\",[[\"color\",\"purple\"]]]",
+   "[\"B09CMR3XMH\",[[\"color\",\"purple\"]]]",
+   "[\"B09CYPQN7X\",[[\"color\",\"purple\"]]]",
+   "[\"B09DKVQT8D\",[[\"color\",\"purple\"]]]",
+   "[\"B09GK2ZGRW\",[[\"color\",\"purple\"]]]",
+   "[\"B09H2QFSKP\",[[\"color\",\"purple\"]]]",
+   "[\"B09HBTX7LP\",[[\"color\",\"purple\"]]]",
+   "[\"B09KNCV5JY\",[[\"color\",\"purple\"]]]",
+   "[\"B09NVDGZ4J\",[[\"color\",\"purple\"]]]",
+   "[\"B09NVDH359\",[[\"color\",\"purple\"]]]",
+   "[\"B09NVF8FL8\",[[\"color\",\"purple\"]]]",
+   "[\"B09PYDH7ZD\",[[\"color\",\"purple\"]]]",
+   "[\"B09Q2TZZXP\",[[\"color\",\"purple\"]]]",
+   "[\"B09Q33YRSY\",[[\"color\",\"purple\"]]]",
+   "[\"B09QHRCF6M\",[[\"color\",\"purple\"]]]",
+   "[\"B09QHRQ89B\",[[\"color\",\"deep purple\"]]]",
+   "[\"B09QPNQ1JR\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYRW4N3\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSBNWR\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSJ62R\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSKBYJ\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSNRPZ\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSXTR5\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYSZDSC\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYT13VQ\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYT5CX8\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYT6RB8\",[[\"color\",\"purple\"]]]",
+   "[\"B09SYTR26S\",[[\"color\",\"purple\"]]]",
+   "[\"B09T2WQNXX\",[[\"color\",\"purple\"]]]",
+   "[\"B09T2Z324R\",[[\"color\",\"purple\"]]]",
+   "[\"B09T31P5H7\",[[\"color\",\"purple\"]]]",
+   "[\"B09T32QJKV\",[[\"color\",\"purple\"]]]",
+   "[\"B09T33MHLV\",[[\"color\",\"purple\"]]]",
+   "[\"B09T33NQZ8\",[[\"color\",\"purple\"]]]",
+   "[\"B09T341WVC\",[[\"color\",\"purple\"]]]"
+  ],
+  "hash": "206afec9887e848d63666c851d05a1f4"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "9cddc82766c5a0bc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the salon & spa equipment instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "c4f221801f6143f6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the salon & spa equipment instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "23a01aff52db7797",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be non slip."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f9e2b1562593519b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be barber chair."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "035f2099b4a0d437",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e052bdc293934234",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b781e358eddda197",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 190x70cm(75x28inch) instead of purple."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c9bb067247c16776",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 190*70cm instead of purple."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

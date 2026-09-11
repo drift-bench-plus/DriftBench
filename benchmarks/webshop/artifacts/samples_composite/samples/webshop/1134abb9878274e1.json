@@ -1,0 +1,218 @@
+{
+ "sample_id": "1134abb9878274e1",
+ "tree_id": "e48d643599e8be60",
+ "adapter": "webshop",
+ "cluster": "bar stools",
+ "goal_idx": 170,
+ "split": "test",
+ "source_instruction": "i am looking for a  counter height size barstools of faux leather",
+ "query": "Hey, I\u2019m looking through your bar stools right now and need to grab a couple that are made of faux leather, priced no more than $180 total, and make sure they\u2019re that one height option I always go for for my kitchen island. Oh, and they absolutely have to come with the little adjustable rubber foot pads to stop scuffs on my hardwood floors, I don\u2019t care what other styles you show me if they don\u2019t have those. I\u2019ve been scrolling for ages and don\u2019t want to waste time looking at stuff that doesn\u2019t check all those boxes, so just pull up the matches for me when you get a sec.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+irrelevant_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "they absolutely have to come with the little adjustable rubber foot pads to stop scuffs on my hardwood floors",
+    "condition": [
+     "attr:accessory",
+     "=",
+     "adjustable rubber foot pads"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:faux leather",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:faux leather",
+     "=",
+     "faux leather"
+    ],
+    [
+     "price_upper",
+     "<=",
+     180
+    ],
+    [
+     "attr:accessory",
+     "=",
+     "adjustable rubber foot pads"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "6a36b90f8272d56c"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 13,
+  "lit_card": 0,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 152,
+    "true_card": 13,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 13,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "dbfbddff4bf8b6af",
+  "conditions": [
+   [
+    "attr:faux leather",
+    "=",
+    "faux leather"
+   ],
+   [
+    "option:0",
+    "=",
+    "counter height"
+   ],
+   [
+    "price_upper",
+    "<=",
+    180
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 13,
+  "value": [
+   "[\"B01DWGRHCW\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B01DWGRKBU\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B071F9VR56\",[[\"size\",\"25.5\\\" counter height\"]]]",
+   "[\"B07B5HWV1C\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07B5NKTTG\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07D481FC6\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07VMB63DC\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07WX5ZZ8Q\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07XPXVHCM\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B084W2RZQN\",[[\"style\",\"counter height\"]]]",
+   "[\"B0851GZM55\",[[\"size\",\"counter height\"]]]",
+   "[\"B08568W6MS\",[[\"size\",\"counter height\"]]]",
+   "[\"B08FRP1B4Q\",[[\"size\",\"26 inch counter height\"]]]"
+  ],
+  "hash": "68ef4afe2468ba82e9a13bdab4df9006"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6ef9144c08537686",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bar stools instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b065fa878d7d3391",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bar stools instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "38e844ba96ef565b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be stainless steel."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "650f9bffc4c925fb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be fully assembled."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "13323d7bcc61568c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f19e4f78dbc85ff3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4025cc74d85253f7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 18\" instead of counter height."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "ba4669ff7a779dec",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pack instead of counter height."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

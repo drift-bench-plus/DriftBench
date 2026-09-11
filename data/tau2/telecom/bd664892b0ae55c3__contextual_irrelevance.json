@@ -1,0 +1,82 @@
+{
+ "sample_id": "bd664892b0ae55c3__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "bd664892b0ae55c3",
+ "query": "I was walking around the old town this morning and found the cutest little bakery that sells lavender honey croissants, they\u2019re still warm when you pick them up and the filling oozes out just right when you take a bite. I even bought a small jar of their homemade jam to bring back home for my mom, she\u2019s been obsessed with fruit preserves ever since she started her little garden last summer. Oh, and I also met a street artist who drew a little caricature of my dog that\u2019s so spot on it had me laughing for five whole minutes. Anyway, I\u2019m having a bit of an issue with my phone right now\u2014my data usage has gone over the limit, I\u2019m currently abroad and I have roaming turned off, so my mobile data isn\u2019t working at all and I need help figuring out what to do.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking around the old town this morning and found the cutest little bakery that sells lavender honey croissants, they\u2019re still warm when you pick them up and the filling oozes out just right when you take a bite. I even bought a small jar of their homemade jam to bring back home for my mom, she\u2019s been obsessed with fruit preserves ever since she started her little garden last summer. Oh, and I also met a street artist who drew a little caricature of my dog that\u2019s so spot on it had me laughing for five whole minutes.",
+  "retained": [
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "sample_id": "28bd559acf34fcd1__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "28bd559acf34fcd1",
+ "query": "I just tried the new matcha croissant from the bakery down the street this morning, it\u2019s so buttery and the matcha filling isn\u2019t too sweet at all, I even bought an extra one to save for tomorrow. Also my cat figured out how to open the kitchen cabinet last night, he dragged out a whole bag of treats and ate half of it, I had to rush to the vet to make sure he was okay, he\u2019s totally fine now just a little grumpy I took the rest of the treats away. Oh right, I\u2019m actually calling because my mobile data isn\u2019t working at all right now. I\u2019m abroad right now and I have roaming turned off, and my network connection is super bad, I can\u2019t load any pages or send messages at all, can you help me figure out what\u2019s going on?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just tried the new matcha croissant from the bakery down the street this morning, it\u2019s so buttery and the matcha filling isn\u2019t too sweet at all, I even bought an extra one to save for tomorrow. Also my cat figured out how to open the kitchen cabinet last night, he dragged out a whole bag of treats and ate half of it, I had to rush to the vet to make sure he was okay, he\u2019s totally fine now just a little grumpy I took the rest of the treats away. Oh right, ",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

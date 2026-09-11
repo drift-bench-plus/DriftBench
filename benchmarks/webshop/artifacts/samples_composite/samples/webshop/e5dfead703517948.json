@@ -1,0 +1,282 @@
+{
+ "sample_id": "e5dfead703517948",
+ "tree_id": "a7fd9f9de2febcb5",
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "goal_idx": 318,
+ "split": "test",
+ "source_instruction": "i am looking for a 200ft coaxial cable black in color. indoor/outdoor use.",
+ "query": "Hey, I\u2019m browsing the satellite television section right now looking for a coaxial cable. I don\u2019t want anything over a reasonable price point, I know what I need for my setup so I don\u2019t want to shell out more than makes sense for what I\u2019m getting. Can you pull up the options that fit what I\u2019m looking for so I can grab one today?",
+ "strategy_ids": [
+  "insufficient_information",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+vagueness_subjectivity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:coaxial cable"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:coaxial cable",
+     "=",
+     "coaxial cable"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "cb7992b24d32bbb0"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 92,
+  "lit_card": 1282,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 955,
+    "true_card": 92,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 147,
+    "true_card": 92,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "b060a90c2c0fa0e3",
+  "conditions": [
+   [
+    "attr:coaxial cable",
+    "=",
+    "coaxial cable"
+   ],
+   [
+    "option:0",
+    "=",
+    "3ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 92,
+  "value": [
+   "[\"B003VBA33E\",[[\"size\",\"3ft\"]]]",
+   "[\"B003ZZSVIK\",[[\"size\",\"3ft\"]]]",
+   "[\"B071Y7JGV2\",[[\"size\",\"3 ft\"]]]",
+   "[\"B073KRBFSV\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KRCZPZ\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KRGXKV\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KS45WW\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KSFT82\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KSKPS1\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KT97P6\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KT97PL\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KV3QM5\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KV3QPX\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KVDN75\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KVHWN3\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KVHWP6\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KWB1CH\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KX9B82\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KXN9G6\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KXY1HX\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KY92N6\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KYC8R3\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KYH41C\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KYNSDP\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KYSF7V\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZ5SJL\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZ7ZDW\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZ8V5T\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZFZZS\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZTXYF\",[[\"size\",\"3ft\"]]]",
+   "[\"B073KZW4RW\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L19GGM\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L1B9W3\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L1KSMQ\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L1RPYT\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L1TR5F\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L23SL9\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L26QNP\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2CX5Y\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2K3S1\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2LCH5\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2R6YL\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2RDKV\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2TRC1\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L2VVP4\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L368RR\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3HDHZ\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3SNW4\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3SNWW\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3VNCG\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3VWN7\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3WYTS\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L3XPNN\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L434XB\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L44ZBG\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L4KBVJ\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L4WH86\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L56VL8\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L7K1XN\",[[\"size\",\"3ft\"]]]",
+   "[\"B073L9BGZN\",[[\"size\",\"3ft\"]]]",
+   "[\"B073LB3ZW6\",[[\"size\",\"3ft\"]]]",
+   "[\"B073LBXJ9T\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VB832J\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VBKQ97\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VBNQFG\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VBRQSN\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VBV3RQ\",[[\"size\",\"3ft\"]]]",
+   "[\"B073VBZJYL\",[[\"size\",\"3ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"3ft (3 pack)\"]]]",
+   "[\"B079K7FMS9\",[[\"size\",\"3 ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"size\",\"3ft\"]]]",
+   "[\"B07CQB2FZK\",[[\"size\",\"3ft\"]]]",
+   "[\"B07MHQJ8ZZ\",[[\"size\",\"3 ft\"]]]",
+   "[\"B07TDP7W6C\",[[\"size\",\"3 ft\"]]]",
+   "[\"B07WYKSZZF\",[[\"size\",\"3ft(1m)\"]]]",
+   "[\"B081DQLVK5\",[[\"size\",\"3ft\"]]]",
+   "[\"B08352NCDN\",[[\"size\",\"3ft\"]]]",
+   "[\"B0861KSF5B\",[[\"size\",\"3ft\"]]]",
+   "[\"B08C5KGR5R\",[[\"size\",\"3ft\"]]]",
+   "[\"B08LKZ6H1L\",[[\"size\",\"3ft\"]]]",
+   "[\"B08M3MPD7S\",[[\"size\",\"3ft\"]]]",
+   "[\"B091CKYSVL\",[[\"size\",\"3ft tv cable+3ft ethernet cat6a cable\"]]]",
+   "[\"B096KVYFN5\",[[\"size\",\"3 ft\"]]]",
+   "[\"B097H3973N\",[[\"size\",\"3ft\"]]]",
+   "[\"B097H4JBTX\",[[\"size\",\"3ft\"]]]",
+   "[\"B097H5734C\",[[\"size\",\"3ft\"]]]",
+   "[\"B097H5V8FR\",[[\"size\",\"3ft\"]]]",
+   "[\"B09876WT1T\",[[\"size\",\"3ft-2pk\"]]]",
+   "[\"B099RJGRRZ\",[[\"size\",\"3ft\"]]]",
+   "[\"B09DVSLDPB\",[[\"size\",\"3ft | 1m\"]]]"
+  ],
+  "hash": "c00ccabc3d5438eb0a06f291a22e9bf6"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0d4271e27a5b21d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7845bdf8528c5ec1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "19b799e6bc0ad377",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be plug play."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "96a6978f78d25296",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be audio cable."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2cda361b98b2802e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c0f2b37f0ac737be",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "17e7b8e6374b8de9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pack instead of 3ft."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4625a3c9c0f7cb4a",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it 3ghz dual w |  ground - black instead of 3ft."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

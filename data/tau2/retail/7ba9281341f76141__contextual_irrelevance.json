@@ -1,0 +1,93 @@
+{
+ "sample_id": "7ba9281341f76141__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "7ba9281341f76141",
+ "query": "Oh my gosh, you\u2019ll never guess what happened on my walk earlier today \u2014 I ran into the sweetest little golden retriever puppy that kept trying to tug on my shoelaces, and its owner even let me give it a tiny peanut butter treat I had in my bag. Then when I got home, my new houseplant I ordered last week finally perked up after I gave it some extra sunlight and a little bit of plant food this morning. I was also so excited last night because I finally beat that tricky final level of the puzzle game I\u2019ve been playing for weeks, I even did a little happy dance when I finished it. Anyway, I need to request a return for my delivered order #W5490111, the items I want to return are 4579334072, 6117189161 and 4947717507, and I\u2019d like the refund to go back to my credit_card_3124723 please.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh my gosh, you\u2019ll never guess what happened on my walk earlier today \u2014 I ran into the sweetest little golden retriever puppy that kept trying to tug on my shoelaces, and its owner even let me give it a tiny peanut butter treat I had in my bag. Then when I got home, my new houseplant I ordered last week finally perked up after I gave it some extra sunlight and a little bit of plant food this morning. I was also so excited last night because I finally beat that tricky final level of the puzzle game I\u2019ve been playing for weeks, I even did a little happy dance when I finished it. Anyway, ",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"4579334072\",\"6117189161\",\"4947717507\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W5490111\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3124723\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"4579334072\",\"6117189161\",\"4947717507\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W5490111\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_3124723\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

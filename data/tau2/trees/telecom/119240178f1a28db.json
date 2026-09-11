@@ -1,0 +1,1364 @@
+{
+ "adapter": "tau2_telecom",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "kind": "telecom_repair",
+    "manager": "mms_issue"
+   },
+   "bound_slots": [
+    "fault:airplane_mode_on",
+    "fault:bad_network_preference",
+    "fault:bad_wifi_calling",
+    "fault:break_apn_mms_setting",
+    "fault:break_app_sms_permission",
+    "fault:data_mode_off",
+    "fault:data_usage_exceeded",
+    "fault:unseat_sim_card",
+    "fault:user_abroad_roaming_disabled_on"
+   ],
+   "conditions": [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0a6cb063ba6703162d7e6726950c1203",
+    "kind": "statehash",
+    "value": "{\"assertions\":[[\"assert_can_send_mms\",{\"expected_status\":true},true],[\"assert_data_refueling_amount\",{\"customer_id\":\"C1001\",\"expected_amount\":2,\"line_id\":\"L1002\"},true]],\"assertions_hold\":[true,true],\"repair\":[[\"toggle_airplane_mode\",{}],[\"set_network_mode_preference\",{\"mode\":\"4g_5g_preferred\"}],[\"toggle_wifi_calling\",{}],[\"reset_apn_settings\",{}],[\"reboot_device\",{}],[\"grant_app_permission\",{\"app_name\":\"messaging\",\"permission\":\"sms\"}],[\"toggle_data\",{}],[\"refuel_data\",{\"customer_id\":\"C1001\",\"gb_amount\":2,\"line_id\":\"L1002\"}],[\"reseat_sim_card\",{}],[\"enable_roaming\",{\"customer_id\":\"C1001\",\"line_id\":\"L1002\"}]]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "a8f723e47976c369",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "action_id": "toggle_airplane_mode_0",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "toggle_airplane_mode",
+      "requestor": "user"
+     },
+     {
+      "action_id": "set_network_mode_preference_1",
+      "arguments": {
+       "mode": "4g_5g_preferred"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "set_network_mode_preference",
+      "requestor": "user"
+     },
+     {
+      "action_id": "toggle_wifi_calling_2",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "toggle_wifi_calling",
+      "requestor": "user"
+     },
+     {
+      "action_id": "reset_apn_settings_3",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "reset_apn_settings",
+      "requestor": "user"
+     },
+     {
+      "action_id": "reboot_device_4",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "reboot_device",
+      "requestor": "user"
+     },
+     {
+      "action_id": "grant_app_permission_5",
+      "arguments": {
+       "app_name": "messaging",
+       "permission": "sms"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "grant_app_permission",
+      "requestor": "user"
+     },
+     {
+      "action_id": "toggle_data_6",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "toggle_data",
+      "requestor": "user"
+     },
+     {
+      "action_id": "refuel_data_7",
+      "arguments": {
+       "customer_id": "C1001",
+       "gb_amount": 2,
+       "line_id": "L1002"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "refuel_data",
+      "requestor": "assistant"
+     },
+     {
+      "action_id": "reseat_sim_card_8",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "reseat_sim_card",
+      "requestor": "user"
+     },
+     {
+      "action_id": "enable_roaming_9",
+      "arguments": {
+       "customer_id": "C1001",
+       "line_id": "L1002"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "enable_roaming",
+      "requestor": "assistant"
+     }
+    ],
+    "env_assertions": [
+     {
+      "arguments": {
+       "expected_status": true
+      },
+      "assert_value": true,
+      "env_type": "user",
+      "func_name": "assert_can_send_mms",
+      "message": null
+     },
+     {
+      "arguments": {
+       "customer_id": "C1001",
+       "expected_amount": 2,
+       "line_id": "L1002"
+      },
+      "assert_value": true,
+      "env_type": "assistant",
+      "func_name": "assert_data_refueling_amount",
+      "message": null
+     }
+    ],
+    "faults": [
+     "airplane_mode_on",
+     "bad_network_preference",
+     "bad_wifi_calling",
+     "break_apn_mms_setting",
+     "break_app_sms_permission",
+     "data_mode_off",
+     "data_usage_exceeded",
+     "unseat_sim_card",
+     "user_abroad_roaming_disabled_on"
+    ],
+    "initialization": {
+     "initialization_actions": [
+      {
+       "arguments": {
+        "name": "John Smith",
+        "phone_number": "555-123-2002"
+       },
+       "env_type": "user",
+       "func_name": "set_user_info"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "turn_airplane_mode_on"
+      },
+      {
+       "arguments": {
+        "mode": "2g_only"
+       },
+       "env_type": "user",
+       "func_name": "set_network_mode_preference"
+      },
+      {
+       "arguments": {
+        "enabled": true,
+        "mms_over_wifi": true
+       },
+       "env_type": "user",
+       "func_name": "set_wifi_calling"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "break_apn_mms_setting"
+      },
+      {
+       "arguments": {
+        "app_name": "messaging",
+        "permission": "sms"
+       },
+       "env_type": "user",
+       "func_name": "remove_app_permission"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "turn_data_off"
+      },
+      {
+       "arguments": {
+        "customer_id": "C1001",
+        "data_used_gb": "15.1",
+        "line_id": "L1002"
+       },
+       "env_type": "assistant",
+       "func_name": "set_data_usage"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "unseat_sim_card"
+      },
+      {
+       "arguments": {
+        "abroad": true
+       },
+       "env_type": "user",
+       "func_name": "set_user_location"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "turn_roaming_on"
+      },
+      {
+       "arguments": {
+        "customer_id": "C1001",
+        "line_id": "L1002"
+       },
+       "env_type": "assistant",
+       "func_name": "disable_roaming"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "simulate_network_search"
+      }
+     ],
+     "initialization_data": null
+    },
+    "manager": "mms_issue"
+   },
+   "source_record": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "telecom_repair",
+    "manager": "mms_issue"
+   },
+   "bound_slots": [
+    "fault:bad_network_preference",
+    "fault:bad_wifi_calling",
+    "fault:break_app_sms_permission",
+    "fault:data_mode_off",
+    "fault:data_usage_exceeded",
+    "fault:unseat_sim_card",
+    "fault:user_abroad_roaming_enabled_off"
+   ],
+   "conditions": [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1f36719e4592d2df82ccd8c2112a9093",
+    "kind": "statehash",
+    "value": "{\"assertions\":[[\"assert_can_send_mms\",{\"expected_status\":true},true],[\"assert_data_refueling_amount\",{\"customer_id\":\"C1001\",\"expected_amount\":2,\"line_id\":\"L1002\"},true]],\"assertions_hold\":[true,true],\"repair\":[[\"set_network_mode_preference\",{\"mode\":\"4g_5g_preferred\"}],[\"toggle_wifi_calling\",{}],[\"grant_app_permission\",{\"app_name\":\"messaging\",\"permission\":\"sms\"}],[\"toggle_data\",{}],[\"refuel_data\",{\"customer_id\":\"C1001\",\"gb_amount\":2,\"line_id\":\"L1002\"}],[\"reseat_sim_card\",{}],[\"toggle_roaming\",{}]]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "b82f8eb0239d0444",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "action_id": "set_network_mode_preference_0",
+      "arguments": {
+       "mode": "4g_5g_preferred"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "set_network_mode_preference",
+      "requestor": "user"
+     },
+     {
+      "action_id": "toggle_wifi_calling_1",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "toggle_wifi_calling",
+      "requestor": "user"
+     },
+     {
+      "action_id": "grant_app_permission_2",
+      "arguments": {
+       "app_name": "messaging",
+       "permission": "sms"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "grant_app_permission",
+      "requestor": "user"
+     },
+     {
+      "action_id": "toggle_data_3",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "toggle_data",
+      "requestor": "user"
+     },
+     {
+      "action_id": "refuel_data_4",
+      "arguments": {
+       "customer_id": "C1001",
+       "gb_amount": 2,
+       "line_id": "L1002"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "refuel_data",
+      "requestor": "assistant"
+     },
+     {
+      "action_id": "reseat_sim_card_5",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "reseat_sim_card",
+      "requestor": "user"
+     },
+     {
+      "action_id": "toggle_roaming_6",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "toggle_roaming",
+      "requestor": "user"
+     }
+    ],
+    "env_assertions": [
+     {
+      "arguments": {
+       "expected_status": true
+      },
+      "assert_value": true,
+      "env_type": "user",
+      "func_name": "assert_can_send_mms",
+      "message": null
+     },
+     {
+      "arguments": {
+       "customer_id": "C1001",
+       "expected_amount": 2,
+       "line_id": "L1002"
+      },
+      "assert_value": true,
+      "env_type": "assistant",
+      "func_name": "assert_data_refueling_amount",
+      "message": null
+     }
+    ],
+    "faults": [
+     "bad_network_preference",
+     "bad_wifi_calling",
+     "break_app_sms_permission",
+     "data_mode_off",
+     "data_usage_exceeded",
+     "unseat_sim_card",
+     "user_abroad_roaming_enabled_off"
+    ],
+    "initialization": {
+     "initialization_actions": [
+      {
+       "arguments": {
+        "name": "John Smith",
+        "phone_number": "555-123-2002"
+       },
+       "env_type": "user",
+       "func_name": "set_user_info"
+      },
+      {
+       "arguments": {
+        "mode": "2g_only"
+       },
+       "env_type": "user",
+       "func_name": "set_network_mode_preference"
+      },
+      {
+       "arguments": {
+        "enabled": true,
+        "mms_over_wifi": true
+       },
+       "env_type": "user",
+       "func_name": "set_wifi_calling"
+      },
+      {
+       "arguments": {
+        "app_name": "messaging",
+        "permission": "sms"
+       },
+       "env_type": "user",
+       "func_name": "remove_app_permission"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "turn_data_off"
+      },
+      {
+       "arguments": {
+        "customer_id": "C1001",
+        "data_used_gb": "15.1",
+        "line_id": "L1002"
+       },
+       "env_type": "assistant",
+       "func_name": "set_data_usage"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "unseat_sim_card"
+      },
+      {
+       "arguments": {
+        "abroad": true
+       },
+       "env_type": "user",
+       "func_name": "set_user_location"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "turn_roaming_off"
+      },
+      {
+       "arguments": {
+        "customer_id": "C1001",
+        "line_id": "L1002"
+       },
+       "env_type": "assistant",
+       "func_name": "enable_roaming"
+      }
+     ],
+     "initialization_data": null
+    },
+    "manager": "mms_issue"
+   },
+   "source_record": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "telecom_repair",
+    "manager": "mobile_data_issue"
+   },
+   "bound_slots": [
+    "fault:bad_network_preference",
+    "fault:bad_vpn",
+    "fault:user_abroad_roaming_disabled_off"
+   ],
+   "conditions": [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_vpn",
+     "=",
+     "bad_vpn"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "094f86edcd1cc4b64d975d0240762858",
+    "kind": "statehash",
+    "value": "{\"assertions\":[[\"assert_mobile_data_status\",{\"expected_status\":true},true],[\"assert_internet_speed\",{\"expected_desc\":\"excellent\",\"expected_speed\":200},true]],\"assertions_hold\":[true,true],\"repair\":[[\"set_network_mode_preference\",{\"mode\":\"4g_5g_preferred\"}],[\"disconnect_vpn\",{}],[\"enable_roaming\",{\"customer_id\":\"C1001\",\"line_id\":\"L1002\"}],[\"toggle_roaming\",{}]]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "48f9fb0c9a2b82f3",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "action_id": "set_network_mode_preference_0",
+      "arguments": {
+       "mode": "4g_5g_preferred"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "set_network_mode_preference",
+      "requestor": "user"
+     },
+     {
+      "action_id": "disconnect_vpn_1",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "disconnect_vpn",
+      "requestor": "user"
+     },
+     {
+      "action_id": "enable_roaming_2",
+      "arguments": {
+       "customer_id": "C1001",
+       "line_id": "L1002"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "enable_roaming",
+      "requestor": "assistant"
+     },
+     {
+      "action_id": "toggle_roaming_3",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "toggle_roaming",
+      "requestor": "user"
+     }
+    ],
+    "env_assertions": [
+     {
+      "arguments": {
+       "expected_status": true
+      },
+      "assert_value": true,
+      "env_type": "user",
+      "func_name": "assert_mobile_data_status",
+      "message": null
+     },
+     {
+      "arguments": {
+       "expected_desc": "excellent",
+       "expected_speed": 200
+      },
+      "assert_value": true,
+      "env_type": "user",
+      "func_name": "assert_internet_speed",
+      "message": null
+     }
+    ],
+    "faults": [
+     "bad_network_preference",
+     "bad_vpn",
+     "user_abroad_roaming_disabled_off"
+    ],
+    "initialization": {
+     "initialization_actions": [
+      {
+       "arguments": {
+        "name": "John Smith",
+        "phone_number": "555-123-2002"
+       },
+       "env_type": "user",
+       "func_name": "set_user_info"
+      },
+      {
+       "arguments": {
+        "mode": "2g_only"
+       },
+       "env_type": "user",
+       "func_name": "set_network_mode_preference"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "break_vpn"
+      },
+      {
+       "arguments": {
+        "abroad": true
+       },
+       "env_type": "user",
+       "func_name": "set_user_location"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "turn_roaming_off"
+      },
+      {
+       "arguments": {
+        "customer_id": "C1001",
+        "line_id": "L1002"
+       },
+       "env_type": "assistant",
+       "func_name": "disable_roaming"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "simulate_network_search"
+      }
+     ],
+     "initialization_data": null
+    },
+    "manager": "mobile_data_issue"
+   },
+   "source_record": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "telecom_repair",
+    "manager": "mobile_data_issue"
+   },
+   "bound_slots": [
+    "fault:airplane_mode_on",
+    "fault:data_mode_off"
+   ],
+   "conditions": [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "123f77ba6caecdcd0870f9e216df2c5f",
+    "kind": "statehash",
+    "value": "{\"assertions\":[[\"assert_mobile_data_status\",{\"expected_status\":true},true],[\"assert_internet_speed\",{\"expected_desc\":\"excellent\",\"expected_speed\":200},true]],\"assertions_hold\":[true,true],\"repair\":[[\"toggle_airplane_mode\",{}],[\"toggle_data\",{}]]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "0ff4ca0f3c3d6b11",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "action_id": "toggle_airplane_mode_0",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "toggle_airplane_mode",
+      "requestor": "user"
+     },
+     {
+      "action_id": "toggle_data_1",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "toggle_data",
+      "requestor": "user"
+     }
+    ],
+    "env_assertions": [
+     {
+      "arguments": {
+       "expected_status": true
+      },
+      "assert_value": true,
+      "env_type": "user",
+      "func_name": "assert_mobile_data_status",
+      "message": null
+     },
+     {
+      "arguments": {
+       "expected_desc": "excellent",
+       "expected_speed": 200
+      },
+      "assert_value": true,
+      "env_type": "user",
+      "func_name": "assert_internet_speed",
+      "message": null
+     }
+    ],
+    "faults": [
+     "airplane_mode_on",
+     "data_mode_off"
+    ],
+    "initialization": {
+     "initialization_actions": [
+      {
+       "arguments": {
+        "name": "John Smith",
+        "phone_number": "555-123-2002"
+       },
+       "env_type": "user",
+       "func_name": "set_user_info"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "turn_airplane_mode_on"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "turn_data_off"
+      }
+     ],
+     "initialization_data": null
+    },
+    "manager": "mobile_data_issue"
+   },
+   "source_record": "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "telecom_repair",
+    "manager": "mms_issue"
+   },
+   "bound_slots": [
+    "fault:break_app_sms_permission"
+   ],
+   "conditions": [
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ef75b3758fafebdb5fe3d21e28f30dd3",
+    "kind": "statehash",
+    "value": "{\"assertions\":[[\"assert_can_send_mms\",{\"expected_status\":true},true]],\"assertions_hold\":[true],\"repair\":[[\"grant_app_permission\",{\"app_name\":\"messaging\",\"permission\":\"sms\"}]]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "32b79e20a4d09b35",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "action_id": "grant_app_permission_0",
+      "arguments": {
+       "app_name": "messaging",
+       "permission": "sms"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "grant_app_permission",
+      "requestor": "user"
+     }
+    ],
+    "env_assertions": [
+     {
+      "arguments": {
+       "expected_status": true
+      },
+      "assert_value": true,
+      "env_type": "user",
+      "func_name": "assert_can_send_mms",
+      "message": null
+     }
+    ],
+    "faults": [
+     "break_app_sms_permission"
+    ],
+    "initialization": {
+     "initialization_actions": [
+      {
+       "arguments": {
+        "name": "John Smith",
+        "phone_number": "555-123-2002"
+       },
+       "env_type": "user",
+       "func_name": "set_user_info"
+      },
+      {
+       "arguments": {
+        "app_name": "messaging",
+        "permission": "sms"
+       },
+       "env_type": "user",
+       "func_name": "remove_app_permission"
+      }
+     ],
+     "initialization_data": null
+    },
+    "manager": "mms_issue"
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "telecom_repair",
+    "manager": "mms_issue"
+   },
+   "bound_slots": [
+    "fault:break_apn_mms_setting",
+    "fault:break_app_sms_permission"
+   ],
+   "conditions": [
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0877dad84e6a8507df89bb114f881ef0",
+    "kind": "statehash",
+    "value": "{\"assertions\":[[\"assert_can_send_mms\",{\"expected_status\":true},true]],\"assertions_hold\":[true],\"repair\":[[\"reset_apn_settings\",{}],[\"reboot_device\",{}],[\"grant_app_permission\",{\"app_name\":\"messaging\",\"permission\":\"sms\"}]]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "805088956f615379",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "action_id": "reset_apn_settings_0",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "reset_apn_settings",
+      "requestor": "user"
+     },
+     {
+      "action_id": "reboot_device_1",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "reboot_device",
+      "requestor": "user"
+     },
+     {
+      "action_id": "grant_app_permission_2",
+      "arguments": {
+       "app_name": "messaging",
+       "permission": "sms"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "grant_app_permission",
+      "requestor": "user"
+     }
+    ],
+    "env_assertions": [
+     {
+      "arguments": {
+       "expected_status": true
+      },
+      "assert_value": true,
+      "env_type": "user",
+      "func_name": "assert_can_send_mms",
+      "message": null
+     }
+    ],
+    "faults": [
+     "break_apn_mms_setting",
+     "break_app_sms_permission"
+    ],
+    "initialization": {
+     "initialization_actions": [
+      {
+       "arguments": {
+        "name": "John Smith",
+        "phone_number": "555-123-2002"
+       },
+       "env_type": "user",
+       "func_name": "set_user_info"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "break_apn_mms_setting"
+      },
+      {
+       "arguments": {
+        "app_name": "messaging",
+        "permission": "sms"
+       },
+       "env_type": "user",
+       "func_name": "remove_app_permission"
+      }
+     ],
+     "initialization_data": null
+    },
+    "manager": "mms_issue"
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "telecom_repair",
+    "manager": "mms_issue"
+   },
+   "bound_slots": [
+    "fault:bad_network_preference",
+    "fault:data_mode_off"
+   ],
+   "conditions": [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "23cc8ae8063a80607b050ac97f784fa8",
+    "kind": "statehash",
+    "value": "{\"assertions\":[[\"assert_can_send_mms\",{\"expected_status\":true},true]],\"assertions_hold\":[true],\"repair\":[[\"set_network_mode_preference\",{\"mode\":\"4g_5g_preferred\"}],[\"toggle_data\",{}]]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "6184e801fea81728",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "action_id": "set_network_mode_preference_0",
+      "arguments": {
+       "mode": "4g_5g_preferred"
+      },
+      "compare_args": null,
+      "info": null,
+      "name": "set_network_mode_preference",
+      "requestor": "user"
+     },
+     {
+      "action_id": "toggle_data_1",
+      "arguments": {},
+      "compare_args": null,
+      "info": null,
+      "name": "toggle_data",
+      "requestor": "user"
+     }
+    ],
+    "env_assertions": [
+     {
+      "arguments": {
+       "expected_status": true
+      },
+      "assert_value": true,
+      "env_type": "user",
+      "func_name": "assert_can_send_mms",
+      "message": null
+     }
+    ],
+    "faults": [
+     "bad_network_preference",
+     "data_mode_off"
+    ],
+    "initialization": {
+     "initialization_actions": [
+      {
+       "arguments": {
+        "name": "John Smith",
+        "phone_number": "555-123-2002"
+       },
+       "env_type": "user",
+       "func_name": "set_user_info"
+      },
+      {
+       "arguments": {
+        "mode": "2g_only"
+       },
+       "env_type": "user",
+       "func_name": "set_network_mode_preference"
+      },
+      {
+       "arguments": {},
+       "env_type": "user",
+       "func_name": "turn_data_off"
+      }
+     ],
+     "initialization_data": null
+    },
+    "manager": "mms_issue"
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "min_gt_moved_edges": 1,
+  "require_full_quota": false,
+  "seed": 7
+ },
+ "edges": [
+  {
+   "delta": {
+    "added": [
+     [
+      "fault:airplane_mode_on",
+      "=",
+      "airplane_mode_on"
+     ],
+     [
+      "fault:bad_network_preference",
+      "=",
+      "bad_network_preference"
+     ],
+     [
+      "fault:bad_wifi_calling",
+      "=",
+      "bad_wifi_calling"
+     ],
+     [
+      "fault:break_apn_mms_setting",
+      "=",
+      "break_apn_mms_setting"
+     ],
+     [
+      "fault:data_usage_exceeded",
+      "=",
+      "data_usage_exceeded"
+     ],
+     [
+      "fault:unseat_sim_card",
+      "=",
+      "unseat_sim_card"
+     ],
+     [
+      "fault:user_abroad_roaming_disabled_on",
+      "=",
+      "user_abroad_roaming_disabled_on"
+     ]
+    ]
+   },
+   "dst": "a8f723e47976c369",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "REAL",
+   "source_record": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]",
+   "src": "5ca0e3d177310150"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "fault:bad_network_preference",
+      "=",
+      "bad_network_preference"
+     ],
+     [
+      "fault:bad_wifi_calling",
+      "=",
+      "bad_wifi_calling"
+     ],
+     [
+      "fault:data_usage_exceeded",
+      "=",
+      "data_usage_exceeded"
+     ],
+     [
+      "fault:unseat_sim_card",
+      "=",
+      "unseat_sim_card"
+     ],
+     [
+      "fault:user_abroad_roaming_enabled_off",
+      "=",
+      "user_abroad_roaming_enabled_off"
+     ]
+    ]
+   },
+   "dst": "b82f8eb0239d0444",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "REAL",
+   "source_record": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+   "src": "5ca0e3d177310150"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "telecom_repair",
+     "manager": "mobile_data_issue"
+    }
+   },
+   "dst": "48f9fb0c9a2b82f3",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+   "src": "5ca0e3d177310150"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "telecom_repair",
+     "manager": "mobile_data_issue"
+    }
+   },
+   "dst": "0ff4ca0f3c3d6b11",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]",
+   "src": "5ca0e3d177310150"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "fault:data_mode_off",
+      "=",
+      "data_mode_off"
+     ]
+    ]
+   },
+   "dst": "32b79e20a4d09b35",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "5ca0e3d177310150"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "fault:data_mode_off",
+      "=",
+      "data_mode_off",
+      "break_apn_mms_setting"
+     ]
+    ]
+   },
+   "dst": "805088956f615379",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "5ca0e3d177310150"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "fault:break_app_sms_permission",
+      "=",
+      "break_app_sms_permission",
+      "bad_network_preference"
+     ]
+    ]
+   },
+   "dst": "6184e801fea81728",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "5ca0e3d177310150"
+  }
+ ],
+ "env_id": "tau2_telecom_c1001",
+ "env_spec": {
+  "domain": "telecom",
+  "env_id": "tau2_telecom_c1001",
+  "env_key": "tau2_telecom_c1001",
+  "initialization": {},
+  "solo_mode": true
+ },
+ "root": {
+  "base": {
+   "kind": "telecom_repair",
+   "manager": "mms_issue"
+  },
+  "bound_slots": [
+   "fault:break_app_sms_permission",
+   "fault:data_mode_off"
+  ],
+  "conditions": [
+   [
+    "fault:break_app_sms_permission",
+    "=",
+    "break_app_sms_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ]
+  ],
+  "ground_truth": {
+   "hash": "c2558576a0cae08a12d58aaac320864c",
+   "kind": "statehash",
+   "value": "{\"assertions\":[[\"assert_can_send_mms\",{\"expected_status\":true},true]],\"assertions_hold\":[true],\"repair\":[[\"grant_app_permission\",{\"app_name\":\"messaging\",\"permission\":\"sms\"}],[\"toggle_data\",{}]]}"
+  },
+  "gt_extensional": false,
+  "intent_id": "5ca0e3d177310150",
+  "is_seed": true,
+  "recipe": {
+   "actions": [
+    {
+     "action_id": "grant_app_permission_0",
+     "arguments": {
+      "app_name": "messaging",
+      "permission": "sms"
+     },
+     "compare_args": null,
+     "info": null,
+     "name": "grant_app_permission",
+     "requestor": "user"
+    },
+    {
+     "action_id": "toggle_data_1",
+     "arguments": {},
+     "compare_args": null,
+     "info": null,
+     "name": "toggle_data",
+     "requestor": "user"
+    }
+   ],
+   "env_assertions": [
+    {
+     "arguments": {
+      "expected_status": true
+     },
+     "assert_value": true,
+     "env_type": "user",
+     "func_name": "assert_can_send_mms",
+     "message": null
+    }
+   ],
+   "faults": [
+    "break_app_sms_permission",
+    "data_mode_off"
+   ],
+   "initialization": {
+    "initialization_actions": [
+     {
+      "arguments": {
+       "name": "John Smith",
+       "phone_number": "555-123-2002"
+      },
+      "env_type": "user",
+      "func_name": "set_user_info"
+     },
+     {
+      "arguments": {
+       "app_name": "messaging",
+       "permission": "sms"
+      },
+      "env_type": "user",
+      "func_name": "remove_app_permission"
+     },
+     {
+      "arguments": {},
+      "env_type": "user",
+      "func_name": "turn_data_off"
+     }
+    ],
+    "initialization_data": null
+   },
+   "manager": "mms_issue"
+  },
+  "source_record": "[mms_issue]break_app_sms_permission|data_mode_off[PERSONA:None]",
+  "unbound_slots": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:break_app_sms_permission",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_disabled_on",
+   "fault:user_abroad_roaming_enabled_off"
+  ]
+ },
+ "tree_id": "119240178f1a28db"
+}

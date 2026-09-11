@@ -1,0 +1,176 @@
+{
+ "adapter": "webshop",
+ "cluster": "bedroom sets",
+ "fidelity_notes": [],
+ "goal_idx": 375,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "07f7c4e37e521fc61358294412482efc",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B091T7D9G4\",[[\"color\",\"wooden dark brown\"]]]",
+   "[\"B09J4PY9C9\",[[\"color\",\"drift brown\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:storage space",
+    "=",
+    "storage space"
+   ],
+   [
+    "option:0",
+    "=",
+    "drift brown"
+   ],
+   [
+    "price_upper",
+    "<=",
+    110
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "6814f2e833d7f41e"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:storage space",
+     "=",
+     "storage space"
+    ],
+    [
+     "option:0",
+     "=",
+     "drift gray"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:storage space",
+   "price_upper"
+  ],
+  "spec_id": "f4dbb243fec93216",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "option:0",
+    "drift brown",
+    "drift gray"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for bedroom sets with storage space in drift gray, and my budget is $110.",
+ "render_attempts": 1,
+ "sample_id": "6616b9302b13650d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bedroom sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "071b7fafdced26f0"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bedroom sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "289334f5c8707df3"
+  },
+  {
+   "announcement": "Also, it needs to be easy install.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2c14ba5ef3e91734"
+  },
+  {
+   "announcement": "Also, it needs to be dining room.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f9688060fdeb9525"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0f03631796ae0a4c"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f048fe810be0f794"
+  },
+  {
+   "announcement": "Actually, make it 1 pack white no switch instead of drift brown.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a0135563be815fa5"
+  },
+  {
+   "announcement": "Actually, make it 1 pack instead of drift brown.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ed706044e3c9d187"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 1,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for brown colored kitchen table and chair set with storage space.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "e2b290a27c07c107",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

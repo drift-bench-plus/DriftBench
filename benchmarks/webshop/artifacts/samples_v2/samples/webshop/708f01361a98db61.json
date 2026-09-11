@@ -1,0 +1,221 @@
+{
+ "adapter": "webshop",
+ "cluster": "candles",
+ "fidelity_notes": [],
+ "goal_idx": 31,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "59566ae3a1113147ceb2d93588d68de3",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08R1MJL3H\",[[\"color\",\"white sage\"],[\"size\",\"14.1 oz-1 pack\"]]]",
+   "[\"B08VBW96KY\",[[\"color\",\"white sage\"],[\"size\",\"1 pack\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:soy wax",
+    "=",
+    "soy wax"
+   ],
+   [
+    "option:0",
+    "=",
+    "white sage"
+   ],
+   [
+    "option:1",
+    "=",
+    "14.1 oz-1 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "option:1"
+  ],
+  "intent_id": "f6480f9621b13681"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:1",
+      "14.1 oz-1 pack"
+     ],
+     [
+      "option:1",
+      "light in weight (not the 14.1 oz size specification)"
+     ]
+    ],
+    "surface": "light"
+   }
+  ],
+  "attempt": 5,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:1"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:soy wax",
+     "=",
+     "soy wax"
+    ],
+    [
+     "option:0",
+     "=",
+     "white sage"
+    ],
+    [
+     "option:1",
+     "=",
+     "14.1 oz-1 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   [
+    [
+     "attr:soy wax",
+     "=",
+     "soy wax"
+    ],
+    [
+     "option:0",
+     "=",
+     "white sage"
+    ],
+    [
+     "option:1",
+     "=",
+     "light in weight (not the 14.1 oz size specification)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:soy wax",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "c4ef994b2f3089cd",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a candle under $40 that uses soy wax, has white sage, comes in a light 1-pack, and I don’t need to specify the exact size right now.",
+ "render_attempts": 5,
+ "sample_id": "708f01361a98db61",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the candles instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a717d26db56b04b8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the candles instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a982685f8ca45c96"
+  },
+  {
+   "announcement": "Also, it needs to be scented candle.",
+   "gt_moved": false,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "93cece4efeb33a15"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fbc16058237520b2"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "170ad789479d6419"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d25b27ab769e3e4d"
+  },
+  {
+   "announcement": "Actually, make it 10 pack instead of white sage.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2f86fc8fea95d74a"
+  },
+  {
+   "announcement": "Actually, make it 16oz | jasmine instead of white sage.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "847d2d9a9f369ef0"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   2,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a soy wax candle that is white sage and 14 oz.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "6f68f01afef4b3bc",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

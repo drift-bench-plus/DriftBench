@@ -1,0 +1,214 @@
+{
+ "sample_id": "7c7b4b7db4291b6e",
+ "tree_id": "6b13d6923a1f76ef",
+ "adapter": "webshop",
+ "cluster": "window coverings",
+ "goal_idx": 227,
+ "split": "test",
+ "source_instruction": "i am looking for 96\"w x 72\"h roller shades of gray color and it is east to install.",
+ "query": "I\u2019ve been going back and forth about sprucing up the sunroom off the kitchen, and my neighbor mentioned that gray window coverings that go up super easy are such a lifesaver for people who can never make sense of confusing hardware and instruction manuals. I also picked up a cheap little tension rod to hang next to the window for my trailing pothos the other day, 96\"w x 72\"h, and I\u2019ve heard the nicer options around here never run over $280 total.",
+ "strategy_ids": [
+  "syntactic_ambiguity",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "syntactic_ambiguity+indirect_intent",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "oblique"
+  ],
+  "components": [
+   "syntactic_ambiguity",
+   "indirect_intent"
+  ],
+  "assigned_slots": {
+   "syntactic_ambiguity": "option:1"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "96\"w x 72\"h",
+    "placements": [
+     [
+      "option:1",
+      "96\"w x 72\"h"
+     ],
+     [
+      "option:1",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:easy install",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:1"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy install",
+     "=",
+     "easy install"
+    ],
+    [
+     "option:0",
+     "=",
+     "gray"
+    ],
+    [
+     "price_upper",
+     "<=",
+     280
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "61519c4aa015668c"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 8,
+  "lit_card": 21,
+  "components": {
+   "syntactic_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     8,
+     21
+    ],
+    "true_card": 8,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "7dba2c02f001f90d",
+  "conditions": [
+   [
+    "attr:easy install",
+    "=",
+    "easy install"
+   ],
+   [
+    "option:0",
+    "=",
+    "gray"
+   ],
+   [
+    "option:1",
+    "=",
+    "96\"w x 72\"h"
+   ],
+   [
+    "price_upper",
+    "<=",
+    280
+   ]
+  ],
+  "hidden_slots": [
+   "option:1"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 8,
+  "value": [
+   "[\"B07RRSGYWK\",[[\"color\",\"gray\"],[\"size\",\"36\\\"w x 72\\\"h\"]]]",
+   "[\"B09CGHW1CP\",[[\"color\",\"gray\"],[\"size\",\"72\\\"w x 72\\\"h\"]]]",
+   "[\"B09DVKC4MV\",[[\"color\",\"gray - light filtering\"],[\"size\",\"72\\\"w x 72\\\"h\"]]]",
+   "[\"B09JZ84S8D\",[[\"color\",\"gray\"],[\"size\",\"72\\\"w x 72\\\"h\"]]]",
+   "[\"B09KV26B8S\",[[\"color\",\"gray\"],[\"size\",\"72\\\"w x 72\\\"h\"]]]",
+   "[\"B09L4HSKLK\",[[\"color\",\"light gray\"],[\"size\",\"72\\\"w x 72\\\"h\"]]]",
+   "[\"B09L6DLV9B\",[[\"color\",\"purple-gray\"],[\"size\",\"72\\\"w x 36\\\"h\"]]]",
+   "[\"B09NBQ9WG3\",[[\"color\",\"gray\"],[\"size\",\"72\\\"w x 36\\\"h\"]]]"
+  ],
+  "hash": "22f5b1b93ee71096e34804711a51aa3a"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "4320bc1a7db3f1da",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the window coverings instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "55eaa6a799a5c634",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the window coverings instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "075b532d8ac7f3c3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be home office."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "959fce64fdc3e7f3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be white item."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1500537b9503f998",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d04081db4c7fbf97",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0ca5c9018e2b62b5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #18 instead of gray."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "6199ecac002a15ac",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #13 instead of gray."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

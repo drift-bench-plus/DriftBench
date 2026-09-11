@@ -1,0 +1,212 @@
+{
+ "adapter": "webshop",
+ "cluster": "tongue cleaners",
+ "fidelity_notes": [],
+ "goal_idx": 11,
+ "ground_truth": {
+  "cardinality": 47,
+  "hash": "c3996c5e639ff559e045de665f743910",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07KRWL4G7\",[[\"color\",\"blue\"]]]",
+   "[\"B07TVN9BYL\",[[\"color\",\"blue & red\"]]]",
+   "[\"B07YDSM3SV\",[[\"color\",\"blue\"]]]",
+   "[\"B081F37L4Y\",[[\"color\",\"blue\"]]]",
+   "[\"B0899RXL78\",[[\"color\",\"blue\"]]]",
+   "[\"B08B8PVQKY\",[[\"color\",\"light blue\"]]]",
+   "[\"B08N461J5C\",[[\"color\",\"blue & purple\"]]]",
+   "[\"B08PFGJQCX\",[[\"color\",\"blue\"]]]",
+   "[\"B08W533DQL\",[[\"color\",\"light blue, pink, yellow, light green\"]]]",
+   "[\"B094R9DBYB\",[[\"color\",\"blue\"]]]",
+   "[\"B097MXVJXG\",[[\"color\",\"blue\"]]]",
+   "[\"B098JFH3CG\",[[\"color\",\"blue\"]]]",
+   "[\"B098NB477N\",[[\"color\",\"blue\"]]]",
+   "[\"B098NXW443\",[[\"color\",\"blue\"]]]",
+   "[\"B0998ZBHVC\",[[\"color\",\"blue\"]]]",
+   "[\"B09J4RNGF4\",[[\"color\",\"blue-1\"]]]",
+   "[\"B09JFP1D3F\",[[\"color\",\"blue\"]]]",
+   "[\"B09JG3BQZF\",[[\"color\",\"blue\"]]]",
+   "[\"B09JZ2HRZJ\",[[\"color\",\"blue\"]]]",
+   "[\"B09LHSNFFX\",[[\"color\",\"blue\"]]]",
+   "[\"B09M6YB2L5\",[[\"color\",\"blue\"]]]",
+   "[\"B09MSY95XX\",[[\"color\",\"blue\"]]]",
+   "[\"B09MTNMKKM\",[[\"color\",\"blue\"]]]",
+   "[\"B09MTPKW8N\",[[\"color\",\"blue\"]]]",
+   "[\"B09MW563KN\",[[\"color\",\"blue\"]]]",
+   "[\"B09PDTSFWQ\",[[\"color\",\"blue\"]]]",
+   "[\"B09PDV6D84\",[[\"color\",\"blue\"]]]",
+   "[\"B09PDV6DS9\",[[\"color\",\"blue\"]]]",
+   "[\"B09PDV8GZY\",[[\"color\",\"blue\"]]]",
+   "[\"B09PDV91GR\",[[\"color\",\"blue\"]]]",
+   "[\"B09PLC5QYY\",[[\"color\",\"blue\"]]]",
+   "[\"B09PLC9MVP\",[[\"color\",\"blue\"]]]",
+   "[\"B09PLCCVX1\",[[\"color\",\"blue\"]]]",
+   "[\"B09PLCD1R1\",[[\"color\",\"blue\"]]]",
+   "[\"B09PLCFZ2B\",[[\"color\",\"blue\"]]]",
+   "[\"B09PLCKDGP\",[[\"color\",\"blue\"]]]",
+   "[\"B09PLD16Y7\",[[\"color\",\"blue\"]]]",
+   "[\"B09PLD5TT1\",[[\"color\",\"blue\"]]]",
+   "[\"B09PLD714V\",[[\"color\",\"blue\"]]]",
+   "[\"B09PV3M65J\",[[\"color\",\"light pink & light blue\"]]]",
+   "[\"B09PZQ4WKW\",[[\"color\",\"sky-blue\"]]]",
+   "[\"B09Q3BXJBK\",[[\"color\",\"blue-2\"]]]",
+   "[\"B09QD1T6TY\",[[\"color\",\"blue\"]]]",
+   "[\"B09QXM5QGG\",[[\"color\",\"blue\"]]]",
+   "[\"B09SMS7RW2\",[[\"color\",\"blue\"]]]",
+   "[\"B09SQCNVM8\",[[\"color\",\"blue\"]]]",
+   "[\"B09SQDPPR6\",[[\"color\",\"blue\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:oral hygiene",
+    "=",
+    "oral hygiene"
+   ],
+   [
+    "option:0",
+    "=",
+    "blue"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "59f595a0347bdbb8"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:oral hygiene",
+     "=",
+     "oral hygiene"
+    ],
+    [
+     "option:0",
+     "=",
+     "blue"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from a weekend hike at the nearby mountain trail, where I stumbled on a patch of wild blackberries that were so sweet and juicy I filled a whole cloth bag with them. On the way down, I also found a smooth, pale river rock that’s been sitting on my desk as a little paperweight ever since. The trail’s wooden footbridge was even newly repainted a soft forest green, which matched the pine trees around it perfectly.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:oral hygiene",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just got back from a weekend hike at the nearby mountain trail, where I stumbled on a patch of wild blackberries that were so sweet and juicy I filled a whole cloth bag with them. On the way down, I also found a smooth, pale river rock that’s been sitting on my desk as a little paperweight ever since. The trail’s wooden footbridge was even newly repainted a soft forest green, which matched the pine trees around it perfectly. I’m looking for a tongue cleaner for oral hygiene, I’d prefer a blue one, and my price limit is 40.",
+ "render_attempts": 1,
+ "sample_id": "bd241e0ba34b5753",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the tongue cleaners instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "05fd10ce0245abcb"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the tongue cleaners instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5f32cd4fe0cc7fea"
+  },
+  {
+   "announcement": "Also, it needs to be eco friendly.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "441e4c921957bf83"
+  },
+  {
+   "announcement": "Also, it needs to be easy carry.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "79aa70e8e723b872"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1562c3279dd552b8"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9a4f8031ada2ad03"
+  },
+  {
+   "announcement": "Actually, make it 3pcs yellow cover instead of blue.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9c7f16ba180dd6e8"
+  },
+  {
+   "announcement": "Actually, make it 4pcs yellow cover instead of blue.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "aa60223fe74aa342"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 47,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 47,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for blue color toothbrushes that helps to maintain my oral hygiene.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "52bd0d822c8df17f",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

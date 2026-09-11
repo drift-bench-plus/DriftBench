@@ -1,0 +1,1091 @@
+{
+ "adapter": "tau2_retail",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip",
+    "arg:1:modify_pending_order_items:item_ids",
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "arg:1:modify_pending_order_items:order_id",
+    "arg:1:modify_pending_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"476 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 432\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W6750959\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"10093\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"3254583681\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"9440686670\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W6750959\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_8080730\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "e22062ec45cda4163b5099dc5ed4a438",
+    "kind": "statehash",
+    "value": "{\"db\":\"a997556557672619d883773ad696e9a5faae2e452ef49fa38e02896362fc24d7\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "6858c4a40755c6a1",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "476 Maple Drive",
+       "address2": "Suite 432",
+       "city": "New York",
+       "country": "USA",
+       "order_id": "#W6750959",
+       "state": "NY",
+       "zip": "10093"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "3254583681"
+       ],
+       "new_item_ids": [
+        "9440686670"
+       ],
+       "order_id": "#W6750959",
+       "payment_method_id": "paypal_8080730"
+      },
+      "name": "modify_pending_order_items"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "96",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "exchange_delivered_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip",
+    "arg:1:modify_pending_order_items:item_ids",
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "arg:1:modify_pending_order_items:order_id",
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "arg:2:exchange_delivered_order_items:item_ids",
+    "arg:2:exchange_delivered_order_items:new_item_ids",
+    "arg:2:exchange_delivered_order_items:order_id",
+    "arg:2:exchange_delivered_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"144 Lakeview Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 925\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W4219264\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"10228\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"8886009523\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"2407258246\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4219264\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_1620755\""
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"6341716129\"]"
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"8302289002\"]"
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W3445693\""
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_1620755\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "039bf3bd60eef21b03d02860430fcb8b",
+    "kind": "statehash",
+    "value": "{\"db\":\"0089a38140d5fb73906b4984b8742ce6e6a73bd08894ee370274fc84adfcb44c\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "1558966fb77683b5",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "144 Lakeview Drive",
+       "address2": "Suite 925",
+       "city": "New York",
+       "country": "USA",
+       "order_id": "#W4219264",
+       "state": "NY",
+       "zip": "10228"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "8886009523"
+       ],
+       "new_item_ids": [
+        "2407258246"
+       ],
+       "order_id": "#W4219264",
+       "payment_method_id": "credit_card_1620755"
+      },
+      "name": "modify_pending_order_items"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "6341716129"
+       ],
+       "new_item_ids": [
+        "8302289002"
+       ],
+       "order_id": "#W3445693",
+       "payment_method_id": "credit_card_1620755"
+      },
+      "name": "exchange_delivered_order_items"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "102",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "calculate"
+    ],
+    "writes": [
+     "return_delivered_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:return_delivered_order_items:item_ids",
+    "arg:0:return_delivered_order_items:order_id",
+    "arg:0:return_delivered_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"2872451762\",\"9534205511\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W9502127\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_2433177\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "041291d6059408a6c70f2d06be9c42c9",
+    "kind": "statehash",
+    "value": "{\"db\":\"3e78643a771521156d2d2422415af35b76ec58d69bb832cc943f09b66b68aaa9\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "a8844bc2f8a581b1",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "item_ids": [
+        "2872451762",
+        "9534205511"
+       ],
+       "order_id": "#W9502127",
+       "payment_method_id": "paypal_2433177"
+      },
+      "name": "return_delivered_order_items"
+     }
+    ],
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "calculate"
+    ]
+   },
+   "source_record": "47",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ]
+   },
+   "bound_slots": [
+    "also:3:modify_pending_order_payment",
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip",
+    "arg:1:modify_pending_order_items:item_ids",
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "arg:1:modify_pending_order_items:order_id",
+    "arg:1:modify_pending_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "also:3:modify_pending_order_payment",
+     "=",
+     "{\"order_id\":\"#W5782623\",\"payment_method_id\":\"paypal_7729105\"}"
+    ],
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"159 Hickory Lane\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 995\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"Charlotte\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W5270061\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NC\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"28243\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"2492465580\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"5917587651\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W5270061\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_7729105\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "9bb5b419fbaed9aa0adf7e3e8569b824",
+    "kind": "statehash",
+    "value": "{\"db\":\"a578ac6ca185ce3ec4cc93dfebe402e6b9bcdcb83db0984077566963558302d7\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "8862638d3c548233",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "159 Hickory Lane",
+       "address2": "Suite 995",
+       "city": "Charlotte",
+       "country": "USA",
+       "order_id": "#W5270061",
+       "state": "NC",
+       "zip": "28243"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "2492465580"
+       ],
+       "new_item_ids": [
+        "5917587651"
+       ],
+       "order_id": "#W5270061",
+       "payment_method_id": "paypal_7729105"
+      },
+      "name": "modify_pending_order_items"
+     },
+     {
+      "arguments": {
+       "order_id": "#W5782623",
+       "payment_method_id": "paypal_7729105"
+      },
+      "name": "modify_pending_order_payment"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ]
+   },
+   "bound_slots": [
+    "also:2:cancel_pending_order",
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip",
+    "arg:1:modify_pending_order_items:item_ids",
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "arg:1:modify_pending_order_items:order_id",
+    "arg:1:modify_pending_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "also:2:cancel_pending_order",
+     "=",
+     "{\"order_id\":\"#W5782623\",\"reason\":\"no longer needed\"}"
+    ],
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"159 Hickory Lane\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 995\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"Charlotte\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W5270061\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NC\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"28243\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"2492465580\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"5917587651\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W5270061\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_7729105\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "f16e8cf27116c7ad732e25af118cde83",
+    "kind": "statehash",
+    "value": "{\"db\":\"26ea91b53897c34a1d7f944e3c88b81d36476af979e6be81ebdc48f405ed6f5d\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "5dbe6eb53a6bc007",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "159 Hickory Lane",
+       "address2": "Suite 995",
+       "city": "Charlotte",
+       "country": "USA",
+       "order_id": "#W5270061",
+       "state": "NC",
+       "zip": "28243"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "2492465580"
+       ],
+       "new_item_ids": [
+        "5917587651"
+       ],
+       "order_id": "#W5270061",
+       "payment_method_id": "paypal_7729105"
+      },
+      "name": "modify_pending_order_items"
+     },
+     {
+      "arguments": {
+       "order_id": "#W5782623",
+       "reason": "no longer needed"
+      },
+      "name": "cancel_pending_order"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_items:item_ids",
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "arg:0:modify_pending_order_items:order_id",
+    "arg:0:modify_pending_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"2492465580\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"5917587651\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W5270061\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_7729105\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0fbbc1241d57bdd6446cce0725f51237",
+    "kind": "statehash",
+    "value": "{\"db\":\"8302b9dcc22dd9a3ec942751d132ab7f1d0cae12e54c7c984d938305382165fe\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "4929869b0ac3ecc7",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "item_ids": [
+        "2492465580"
+       ],
+       "new_item_ids": [
+        "5917587651"
+       ],
+       "order_id": "#W5270061",
+       "payment_method_id": "paypal_7729105"
+      },
+      "name": "modify_pending_order_items"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_address"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"159 Hickory Lane\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 995\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"Charlotte\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W5270061\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NC\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"28243\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "3fca9c0f4bc8af161dcc47a1657993f2",
+    "kind": "statehash",
+    "value": "{\"db\":\"5cf258776f30f4eb9a7fe97000be4ab4a91665d9f22caff69d1dea3675f5aa74\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "3df02330590b0b94",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "159 Hickory Lane",
+       "address2": "Suite 995",
+       "city": "Charlotte",
+       "country": "USA",
+       "order_id": "#W5270061",
+       "state": "NC",
+       "zip": "28243"
+      },
+      "name": "modify_pending_order_address"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "min_gt_moved_edges": 1,
+  "require_full_quota": false,
+  "seed": 7
+ },
+ "edges": [
+  {
+   "delta": {
+    "changed": [
+     [
+      "arg:0:modify_pending_order_address:address1",
+      "=",
+      "\"159 Hickory Lane\"",
+      "\"476 Maple Drive\""
+     ],
+     [
+      "arg:0:modify_pending_order_address:address2",
+      "=",
+      "\"Suite 995\"",
+      "\"Suite 432\""
+     ],
+     [
+      "arg:0:modify_pending_order_address:city",
+      "=",
+      "\"Charlotte\"",
+      "\"New York\""
+     ],
+     [
+      "arg:0:modify_pending_order_address:order_id",
+      "=",
+      "\"#W5270061\"",
+      "\"#W6750959\""
+     ],
+     [
+      "arg:0:modify_pending_order_address:state",
+      "=",
+      "\"NC\"",
+      "\"NY\""
+     ],
+     [
+      "arg:0:modify_pending_order_address:zip",
+      "=",
+      "\"28243\"",
+      "\"10093\""
+     ],
+     [
+      "arg:1:modify_pending_order_items:item_ids",
+      "=",
+      "[\"2492465580\"]",
+      "[\"3254583681\"]"
+     ],
+     [
+      "arg:1:modify_pending_order_items:new_item_ids",
+      "=",
+      "[\"5917587651\"]",
+      "[\"9440686670\"]"
+     ],
+     [
+      "arg:1:modify_pending_order_items:order_id",
+      "=",
+      "\"#W5270061\"",
+      "\"#W6750959\""
+     ],
+     [
+      "arg:1:modify_pending_order_items:payment_method_id",
+      "=",
+      "\"paypal_7729105\"",
+      "\"paypal_8080730\""
+     ]
+    ]
+   },
+   "dst": "6858c4a40755c6a1",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "source_record": "96",
+   "src": "59c707c755f39bf0"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "retail_request",
+     "reads": [],
+     "writes": [
+      "modify_pending_order_address",
+      "modify_pending_order_items",
+      "exchange_delivered_order_items"
+     ]
+    }
+   },
+   "dst": "1558966fb77683b5",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "102",
+   "src": "59c707c755f39bf0"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "retail_request",
+     "reads": [
+      "find_user_id_by_name_zip",
+      "get_order_details",
+      "get_order_details",
+      "get_order_details",
+      "calculate",
+      "calculate"
+     ],
+     "writes": [
+      "return_delivered_order_items"
+     ]
+    }
+   },
+   "dst": "a8844bc2f8a581b1",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "47",
+   "src": "59c707c755f39bf0"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "also:3:modify_pending_order_payment",
+      "=",
+      "{\"order_id\":\"#W5782623\",\"payment_method_id\":\"paypal_7729105\"}"
+     ]
+    ]
+   },
+   "dst": "8862638d3c548233",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "59c707c755f39bf0"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "also:2:cancel_pending_order",
+      "=",
+      "{\"order_id\":\"#W5782623\",\"reason\":\"no longer needed\"}"
+     ]
+    ]
+   },
+   "dst": "5dbe6eb53a6bc007",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "59c707c755f39bf0"
+  },
+  {
+   "delta": {
+    "removed_request": "modify_pending_order_address"
+   },
+   "dst": "4929869b0ac3ecc7",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "59c707c755f39bf0"
+  },
+  {
+   "delta": {
+    "removed_request": "modify_pending_order_items"
+   },
+   "dst": "3df02330590b0b94",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "59c707c755f39bf0"
+  }
+ ],
+ "env_id": "tau2_retail_shop",
+ "env_spec": {
+  "domain": "retail",
+  "env_id": "tau2_retail_shop",
+  "env_key": "tau2_retail_shop",
+  "initialization": {},
+  "solo_mode": false
+ },
+ "root": {
+  "base": {
+   "kind": "retail_request",
+   "reads": [],
+   "writes": [
+    "modify_pending_order_address",
+    "modify_pending_order_items"
+   ]
+  },
+  "bound_slots": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_pending_order_items:item_ids",
+   "arg:1:modify_pending_order_items:new_item_ids",
+   "arg:1:modify_pending_order_items:order_id",
+   "arg:1:modify_pending_order_items:payment_method_id"
+  ],
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"159 Hickory Lane\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 995\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"Charlotte\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W5270061\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"NC\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"28243\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:item_ids",
+    "=",
+    "[\"2492465580\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"5917587651\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:order_id",
+    "=",
+    "\"#W5270061\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_7729105\""
+   ]
+  ],
+  "ground_truth": {
+   "hash": "761517cc364ed9d91df1b45b450922ea",
+   "kind": "statehash",
+   "value": "{\"db\":\"c14be7c97f71be56b7f5bbb1bf5e1791c8f1b1f5ea9fb724eb52df49e5c02e8a\",\"errors\":[]}"
+  },
+  "gt_extensional": false,
+  "intent_id": "59c707c755f39bf0",
+  "is_seed": true,
+  "recipe": {
+   "actions": [
+    {
+     "arguments": {
+      "address1": "159 Hickory Lane",
+      "address2": "Suite 995",
+      "city": "Charlotte",
+      "country": "USA",
+      "order_id": "#W5270061",
+      "state": "NC",
+      "zip": "28243"
+     },
+     "name": "modify_pending_order_address"
+    },
+    {
+     "arguments": {
+      "item_ids": [
+       "2492465580"
+      ],
+      "new_item_ids": [
+       "5917587651"
+      ],
+      "order_id": "#W5270061",
+      "payment_method_id": "paypal_7729105"
+     },
+     "name": "modify_pending_order_items"
+    }
+   ],
+   "reads": []
+  },
+  "source_record": "72",
+  "unbound_slots": [
+   "also:2:cancel_pending_order",
+   "also:3:modify_pending_order_payment",
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_pending_order_items:item_ids",
+   "arg:1:modify_pending_order_items:new_item_ids",
+   "arg:1:modify_pending_order_items:order_id",
+   "arg:1:modify_pending_order_items:payment_method_id"
+  ]
+ },
+ "tree_id": "94fc7d5e49888b92"
+}

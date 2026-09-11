@@ -1,0 +1,140 @@
+{
+ "sample_id": "53e73e5c77733a79__referential_ambiguity",
+ "domain": "retail",
+ "tree_id": "53e73e5c77733a79",
+ "query": "Hi there, I need to update the shipping address on my recently placed order under user id noah_patel_6952. The new address is 517 Lakeview Drive, Suite 183, Seattle, WA, 98195, and the country is the usual one.",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "arg:0:modify_user_address:country",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_user_address:address1",
+   "arg:0:modify_user_address:address2",
+   "arg:0:modify_user_address:city",
+   "arg:0:modify_user_address:state",
+   "arg:0:modify_user_address:user_id",
+   "arg:0:modify_user_address:zip"
+  ],
+  "hidden_slots": [
+   "arg:0:modify_user_address:country"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_user_address:address1",
+     "=",
+     "\"517 Lakeview Drive\""
+    ],
+    [
+     "arg:0:modify_user_address:address2",
+     "=",
+     "\"Suite 183\""
+    ],
+    [
+     "arg:0:modify_user_address:city",
+     "=",
+     "\"Seattle\""
+    ],
+    [
+     "arg:0:modify_user_address:state",
+     "=",
+     "\"WA\""
+    ],
+    [
+     "arg:0:modify_user_address:user_id",
+     "=",
+     "\"noah_patel_6952\""
+    ],
+    [
+     "arg:0:modify_user_address:zip",
+     "=",
+     "\"98195\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b84daa247ae48fa0"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_user_address:address1",
+    "=",
+    "\"517 Lakeview Drive\""
+   ],
+   [
+    "arg:0:modify_user_address:address2",
+    "=",
+    "\"Suite 183\""
+   ],
+   [
+    "arg:0:modify_user_address:city",
+    "=",
+    "\"Seattle\""
+   ],
+   [
+    "arg:0:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_user_address:state",
+    "=",
+    "\"WA\""
+   ],
+   [
+    "arg:0:modify_user_address:user_id",
+    "=",
+    "\"noah_patel_6952\""
+   ],
+   [
+    "arg:0:modify_user_address:zip",
+    "=",
+    "\"98195\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:modify_user_address:country"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

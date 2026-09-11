@@ -1,0 +1,202 @@
+{
+ "sample_id": "83ecc44af3bd5251",
+ "tree_id": "0f4133136a896b20",
+ "adapter": "webshop",
+ "cluster": "women's activewear",
+ "goal_idx": 217,
+ "split": "test",
+ "source_instruction": "i am looking for camo colored women's running shorts with an elastic waistband.",
+ "query": "I spent my whole walk to the store this morning thinking about how my neighbor\u2019s tabby cat keeps sneaking onto my fire escape to knock over my potted succulents, and I swear I saw a hawk circling the park yesterday that looked big enough to carry off a small chihuahua, plus I still can\u2019t decide if I should rewatch that old 90s skateboarding documentary tonight or try that new matcha cookie recipe I saved last week. Anyway, can you help me find pieces in the women\u2019s activewear section? I need ones with an elastic drawstring collar, I want the camo option, and I can\u2019t spend more than $30 total.",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:elastic waistband"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:elastic waistband",
+    "elastic waistband",
+    "elastic drawstring collar"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent my whole walk to the store this morning thinking about how my neighbor\u2019s tabby cat keeps sneaking onto my fire escape to knock over my potted succulents, and I swear I saw a hawk circling the park yesterday that looked big enough to carry off a small chihuahua, plus I still can\u2019t decide if I should rewatch that old 90s skateboarding documentary tonight or try that new matcha cookie recipe I saved last week.",
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:elastic waistband"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:elastic waistband",
+     "=",
+     "elastic drawstring collar"
+    ],
+    [
+     "option:0",
+     "=",
+     "camo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "a38ffb3ad4c9f300"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 13,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 13,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "3a0ea8182a83c78a",
+  "conditions": [
+   [
+    "attr:elastic waistband",
+    "=",
+    "elastic waistband"
+   ],
+   [
+    "option:0",
+    "=",
+    "camo"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:elastic waistband"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 13,
+  "value": [
+   "[\"B00L8LXSG8\",[[\"color\",\"lagoon camo palm\"]]]",
+   "[\"B081PBSJCQ\",[[\"color\",\"ojog128  |  153 camo\"]]]",
+   "[\"B08F3GG7R4\",[[\"color\",\"camouflage\"]]]",
+   "[\"B08GPS1Q34\",[[\"color\",\"army green camo\"]]]",
+   "[\"B08JYGZZ8C\",[[\"color\",\"camo\"]]]",
+   "[\"B08K89ZK4Q\",[[\"color\",\"a-camo gray\"]]]",
+   "[\"B08MLLGHPH\",[[\"color\",\"kdf201-grey camo\"]]]",
+   "[\"B08N3XLLC3\",[[\"color\",\"camo multi 6-c\"]]]",
+   "[\"B08R9TJPK6\",[[\"color\",\"camo\"]]]",
+   "[\"B08TQQC152\",[[\"color\",\"08-camo army\"]]]",
+   "[\"B08VDDMTHD\",[[\"color\",\"army green camo\"]]]",
+   "[\"B09J2Y79WS\",[[\"color\",\"green camo\"]]]",
+   "[\"B09QC3MDM9\",[[\"color\",\"b-camouflage\"]]]"
+  ],
+  "hash": "04fd9564000833b8ae904dc074abc740"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "8ea567891c2117c8",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's activewear instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e834125cf8ec9848",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's activewear instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "20a9af9e2b8cfddd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be drawstring waist."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "fcad5883709f6e26",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be athletic shorts."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4ca46e5cfae189bd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d4f566e1b2b81abe",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3f45315a07dfc50a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #4 green instead of camo."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "ea212883d44807dd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #2 black instead of camo."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

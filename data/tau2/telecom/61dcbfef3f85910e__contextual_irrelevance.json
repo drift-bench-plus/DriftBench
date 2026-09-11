@@ -1,0 +1,104 @@
+{
+ "sample_id": "61dcbfef3f85910e__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "61dcbfef3f85910e",
+ "query": "I took my dog to the local park this morning, and he had the best time chasing a group of squirrels up an oak tree, even rolling around in a patch of fresh clover afterwards. On the way home I stopped at that new bubble tea shop downtown, their taro milk tea with boba is so creamy, I already decided I\u2019m going back next weekend to try their matcha flavor. Oh, also I was rearranging the photos on my phone earlier to make an album of the park trip, and I ran into some issues I need help with. My phone has airplane mode turned on right now, the network preference is set really poorly, my APN MMS settings are broken, and my app storage permissions are also messed up, so nothing\u2019s working right.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I took my dog to the local park this morning, and he had the best time chasing a group of squirrels up an oak tree, even rolling around in a patch of fresh clover afterwards. On the way home I stopped at that new bubble tea shop downtown, their taro milk tea with boba is so creamy, I already decided I\u2019m going back next weekend to try their matcha flavor.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:break_apn_mms_setting",
+   "fault:break_app_storage_permission"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,266 @@
+{
+ "sample_id": "fda3df9b60f8c811",
+ "tree_id": "6766f6d5dc98f2d1",
+ "adapter": "webshop",
+ "cluster": "men's slippers",
+ "goal_idx": 289,
+ "split": "test",
+ "source_instruction": "i'm looking for some non-slip black vinyls.",
+ "query": "I stopped by the little community park on my walk over here today, and the whole place smelled like the churro cart that sets up by the playground on weekends\u2014those crispy, cinnamon-dusted sticks that are still warm enough to melt the little side of dulce de leche they hand you with them, the kind that leave sugar crumbs all over the cuff of your jacket no matter how careful you try to be. A group of tiny kids was chasing a floppy golden retriever that had stolen a neon purple frisbee right out of a teenager\u2019s hand, darting between picnic tables while everyone laughed instead of being mad, even when it skidded through a patch of clover and shook dewdrops all over a half-finished iced coffee sitting on a bench. The oak tree by the path is finally starting to drop those spiky little round seed pods that stick to your shoelaces if you step too close to the edge of the sidewalk, and I had to stop twice to pry them off the soles of my sneakers before I made it to the store entrance. I\u2019m browsing the men\u2019s slippers section right now. I\u2019ve heard pairs made of ethylene propylene hold up really well for regular wear, that good non-slip grip makes them steady on all kinds of floors, pairs that contain vinyl acetate have a nice comfortable feel to them, and that new black color option is available for a lot of the current styles. I\u2019ve also heard all the options that fit under that usual price cap I stick to for these are easy to spot on the shelves right now, no marked-up pairs sitting in the main display for that category.",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance",
+  "indirect_intent",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance+indirect_intent+referential_ambiguity",
+  "family": "expression+intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance",
+   "indirect_intent",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "factual_error": "attr:ethylene vinyl"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:ethylene vinyl",
+    "ethylene vinyl",
+    "ethylene propylene"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the little community park on my walk over here today, and the whole place smelled like the churro cart that sets up by the playground on weekends\u2014those crispy, cinnamon-dusted sticks that are still warm enough to melt the little side of dulce de leche they hand you with them, the kind that leave sugar crumbs all over the cuff of your jacket no matter how careful you try to be. A group of tiny kids was chasing a floppy golden retriever that had stolen a neon purple frisbee right out of a teenager\u2019s hand, darting between picnic tables while everyone laughed instead of being mad, even when it skidded through a patch of clover and shook dewdrops all over a half-finished iced coffee sitting on a bench. The oak tree by the path is finally starting to drop those spiky little round seed pods that stick to your shoelaces if you step too close to the edge of the sidewalk, and I had to stop twice to pry them off the soles of my sneakers before I made it to the store entrance.",
+  "retained": [
+   "attr:non slip",
+   "attr:vinyl acetate",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:ethylene vinyl",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ethylene vinyl",
+     "=",
+     "ethylene propylene"
+    ],
+    [
+     "attr:non slip",
+     "=",
+     "non slip"
+    ],
+    [
+     "attr:vinyl acetate",
+     "=",
+     "vinyl acetate"
+    ],
+    [
+     "option:0",
+     "=",
+     "new black"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "5b5110eb8492d693"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 39,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 39,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 40,
+    "true_card": 39,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "2e883960e5ec6b68",
+  "conditions": [
+   [
+    "attr:ethylene vinyl",
+    "=",
+    "ethylene vinyl"
+   ],
+   [
+    "attr:non slip",
+    "=",
+    "non slip"
+   ],
+   [
+    "attr:vinyl acetate",
+    "=",
+    "vinyl acetate"
+   ],
+   [
+    "option:0",
+    "=",
+    "new black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:ethylene vinyl",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 39,
+  "value": [
+   "[\"B08DCFW5CT\",[[\"color\",\"black\"]]]",
+   "[\"B08K4Q97MR\",[[\"color\",\"black\"]]]",
+   "[\"B08MMQH84M\",[[\"color\",\"new black\"]]]",
+   "[\"B08T8YGHSG\",[[\"color\",\"black\"]]]",
+   "[\"B08T8YRFQ2\",[[\"color\",\"black\"]]]",
+   "[\"B08TQSDG8B\",[[\"color\",\"black\"]]]",
+   "[\"B08VDBY711\",[[\"color\",\"black\"]]]",
+   "[\"B08XQVF55R\",[[\"color\",\"black\"]]]",
+   "[\"B08YDTTBV2\",[[\"color\",\"black\"]]]",
+   "[\"B08YJM2BQ9\",[[\"color\",\"black\"]]]",
+   "[\"B08ZHVRP4V\",[[\"color\",\"black\"]]]",
+   "[\"B08ZN8RQCH\",[[\"color\",\"black\"]]]",
+   "[\"B091FNNZRP\",[[\"color\",\"black\"]]]",
+   "[\"B091SHWLB9\",[[\"color\",\"black\"]]]",
+   "[\"B092HNMC2K\",[[\"color\",\"black\"]]]",
+   "[\"B092VF2RWZ\",[[\"color\",\"a-black\"]]]",
+   "[\"B093QBKLVS\",[[\"color\",\"black\"]]]",
+   "[\"B096M7YX9G\",[[\"color\",\"black\"]]]",
+   "[\"B0972VJ681\",[[\"color\",\"black\"]]]",
+   "[\"B097BFBG1L\",[[\"color\",\"black\"]]]",
+   "[\"B097K1N9JN\",[[\"color\",\"black\"]]]",
+   "[\"B098W9BKDG\",[[\"color\",\"black\"]]]",
+   "[\"B0993Q8MYW\",[[\"color\",\"black\"]]]",
+   "[\"B099ZRW22F\",[[\"color\",\"black\"]]]",
+   "[\"B09B1YP4VW\",[[\"color\",\"black\"]]]",
+   "[\"B09C1DN7YC\",[[\"color\",\"black\"]]]",
+   "[\"B09C4DFS8S\",[[\"color\",\"black\"]]]",
+   "[\"B09CDPT3NH\",[[\"color\",\"black\"]]]",
+   "[\"B09DD8KHVN\",[[\"color\",\"black\"]]]",
+   "[\"B09KC6PYXD\",[[\"color\",\"black\"]]]",
+   "[\"B09KCB5MB2\",[[\"color\",\"black\"]]]",
+   "[\"B09L64FTNF\",[[\"color\",\"black\"]]]",
+   "[\"B09M82C1H8\",[[\"color\",\"black\"]]]",
+   "[\"B09MTKZJNL\",[[\"color\",\"black-3\"]]]",
+   "[\"B09NDSCGJD\",[[\"color\",\"black\"]]]",
+   "[\"B09NFMHVS8\",[[\"color\",\"black\"]]]",
+   "[\"B09P4ZW3CT\",[[\"color\",\"black\"]]]",
+   "[\"B09QK1Z3DG\",[[\"color\",\"black\"]]]",
+   "[\"B09QSLGV5T\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "d0f7627814267005b4cbee70bd931864"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "43214916f8a9cc81",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's slippers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "aa8882388e062e56",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's slippers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ded7fbd62fd90117",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be platform sandals."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e80554dd9e50a73a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be casual shoes."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "05f1b85dc19485d5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cb26a12cc4da5829",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "39e17cc156fb1c9b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it (us11-12) instead of new black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "67b6220c0b8b88ae",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10-11 instead of new black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

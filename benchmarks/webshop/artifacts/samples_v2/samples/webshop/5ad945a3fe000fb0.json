@@ -1,0 +1,228 @@
+{
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "fidelity_notes": [],
+ "goal_idx": 319,
+ "ground_truth": {
+  "cardinality": 9,
+  "hash": "4221a711fdb1815e0d5a86da38debf16",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B003VBA33E\",[[\"size\",\"100ft\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"10ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"10ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"10ft (3 pack)\"]]]",
+   "[\"B07CQ96G4F\",[[\"size\",\"10ft\"]]]",
+   "[\"B07CQB2FZK\",[[\"size\",\"10ft\"]]]",
+   "[\"B091CKYSVL\",[[\"size\",\"10ft tv cable+10ft ethernet cat6a cable\"]]]",
+   "[\"B096KVYFN5\",[[\"size\",\"10 ft\"]]]",
+   "[\"B099RJGRRZ\",[[\"size\",\"10ft\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:coaxial cable",
+    "=",
+    "coaxial cable"
+   ],
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "10ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:coaxial cable"
+  ],
+  "intent_id": "d0a5f936f2a34a02"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "attr:coaxial cable",
+      "coaxial cable"
+     ],
+     [
+      "attr:coaxial cable",
+      "a high speed internet/ethernet line"
+     ]
+    ],
+    "surface": "high speed line"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:coaxial cable"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:coaxial cable",
+     "=",
+     "coaxial cable"
+    ],
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "option:0",
+     "=",
+     "10ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   [
+    [
+     "attr:coaxial cable",
+     "=",
+     "a high speed internet/ethernet line"
+    ],
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "option:0",
+     "=",
+     "10ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high speed",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "921c65847529664d",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a high speed line for my satellite television setup that’s 10ft, and I won’t pay more than $40 for it.",
+ "render_attempts": 2,
+ "sample_id": "5ad945a3fe000fb0",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0d4271e27a5b21d4"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7845bdf8528c5ec1"
+  },
+  {
+   "announcement": "Also, it needs to be gold plated.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7225c7d2bae77703"
+  },
+  {
+   "announcement": "Also, it needs to be extension cable.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a68ff6ecfb073629"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "010fca387bb20a49"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ad6e60cfab4b5c0b"
+  },
+  {
+   "announcement": "Actually, make it 20 ft instead of 10ft.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "85ea4f616a9fea84"
+  },
+  {
+   "announcement": "Actually, make it 85ft instead of 10ft.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "9c6fe7d7f60d5b07"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   9,
+   14
+  ],
+  "rule": "ambiguous",
+  "true_card": 9,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a 10 foot high speed coaxial cable.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "94fa3adbec8af01e",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

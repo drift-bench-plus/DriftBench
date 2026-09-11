@@ -1,0 +1,184 @@
+{
+ "adapter": "webshop",
+ "cluster": "throw blankets",
+ "fidelity_notes": [],
+ "goal_idx": 176,
+ "ground_truth": {
+  "cardinality": 8,
+  "hash": "52cd8f01b130b34f2cc6e5b0e8fcd146",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07YBS3MHS\",[[\"size\",\"small\"]]]",
+   "[\"B08PBMT84S\",[[\"size\",\"40\\\"x30\\\"\"]]]",
+   "[\"B097NMSGZ8\",[[\"size\",\"40\\\"x30\\\"\"]]]",
+   "[\"B09B9KGXTW\",[[\"size\",\"40\\\"x30\\\"\"]]]",
+   "[\"B09G6PN6XQ\",[[\"size\",\"40\\\"x30\\\" for pet\"]]]",
+   "[\"B09G9MVGHH\",[[\"size\",\"40\\\"x30\\\" for pet\"]]]",
+   "[\"B09J2RZ26Q\",[[\"size\",\"40\\\"x30\\\" extra small for pet\"]]]",
+   "[\"B09KLQ39BG\",[[\"size\",\"40\\\"x30\\\"\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:fleece throw",
+    "=",
+    "fleece throw"
+   ],
+   [
+    "attr:super soft",
+    "=",
+    "super soft"
+   ],
+   [
+    "option:0",
+    "=",
+    "40\"x30\" extra small for pet"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "effc50f7f6ddf547"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:fleece throw",
+     "=",
+     "fleece throw"
+    ],
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ],
+    [
+     "option:0",
+     "=",
+     "40\"x30\" extra small for pet"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I’ve been re-watching old 90s cartoon reruns every night before bed lately, and I swear the theme songs get stuck in my head for hours after I turn the TV off. My neighbor’s tabby cat keeps sneaking onto my fire escape to sunbathe in the afternoons, and I’ve started leaving a little bowl of water out for it. I also just finished a whole jar of pickles that I pickled myself over the summer, they turned out way crunchier than I expected.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:fleece throw",
+   "attr:super soft",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve been re-watching old 90s cartoon reruns every night before bed lately, and I swear the theme songs get stuck in my head for hours after I turn the TV off. My neighbor’s tabby cat keeps sneaking onto my fire escape to sunbathe in the afternoons, and I’ve started leaving a little bowl of water out for it. I also just finished a whole jar of pickles that I pickled myself over the summer, they turned out way crunchier than I expected. Anyway, I’m looking for a super soft fleece throw blanket that’s 40\"x30\" extra small for a pet, and my price limit is $30.",
+ "render_attempts": 1,
+ "sample_id": "c8a9c2135fd87268",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the throw blankets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "201005557906bc2d"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the throw blankets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "76c32a170da78957"
+  },
+  {
+   "announcement": "Also, it needs to be easy clean.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0fe11f4c016b2640"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3151c9764c455e5a"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4b49625a0c019d8c"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "98fb445ee491e916"
+  },
+  {
+   "announcement": "Actually, make it 1 instead of 40\"x30\" extra small for pet.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dc97be55af2cca89"
+  },
+  {
+   "announcement": "Actually, make it 1 photo instead of 40\"x30\" extra small for pet.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f92dc287b64ad524"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 8,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 8,
+  "verdict": "ok"
+ },
+ "source_instruction": "i looking a super soft fleece throw for  small pets size;40*30 inch",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "a56254d4b3cf9230",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

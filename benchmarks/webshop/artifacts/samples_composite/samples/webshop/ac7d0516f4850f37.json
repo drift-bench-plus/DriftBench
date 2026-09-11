@@ -1,0 +1,356 @@
+{
+ "sample_id": "ac7d0516f4850f37",
+ "tree_id": "a5693061b587f7ce",
+ "adapter": "webshop",
+ "cluster": "home office chairs",
+ "goal_idx": 197,
+ "split": "test",
+ "source_instruction": "i need a heavy duty desk chair for my office.  get me one that is easy to assemble though.",
+ "query": "Y\u2019know, I spent my whole weekend helping my neighbor rescue the stray tabby that\u2019s been hanging around our apartment complex for the last three weeks? We set up a little humane trap baited with tuna and a sprinkle of catnip by the bush where she always naps, and sat on my porch for almost two hours just quiet, watching birds hop across the fence and waiting for her to creep over. When she finally stepped in and the trap clicked shut, she didn\u2019t even hiss\u2014just curled up in the little fleece blanket we\u2019d tucked inside, like she was relieved someone finally noticed she\u2019d been out there. We dropped her off at the low-cost vet first thing this morning to get her checked out and scheduled for her spay, and my neighbor\u2019s already got a little cat tree set up in her living room for when she\u2019s ready to come home.\nHey, I\u2019m looking for a home office chair right now. I definitely need one that\u2019s heavy duty, plus it should come with a built-in retractable cup holder for my morning iced coffee, y\u2019know? I\u2019m only looking to spend a reasonable amount on it, nothing crazy over the top. I don\u2019t want to mess around with any tricky, frustrating setup processes when it shows up, either. Can you show me some options that fit what I\u2019m after?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "insufficient_information",
+  "vagueness_subjectivity",
+  "irrelevant_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+insufficient_information+vagueness_subjectivity+irrelevant_information",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "insufficient_information",
+   "vagueness_subjectivity",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "insufficient_information": "attr:easy assemble"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:easy assemble"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "it should come with a built-in retractable cup holder for my morning iced coffee",
+    "condition": [
+     "attr:built-in retractable cup holder",
+     "=",
+     "built-in retractable cup holder"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Y\u2019know, I spent my whole weekend helping my neighbor rescue the stray tabby that\u2019s been hanging around our apartment complex for the last three weeks? We set up a little humane trap baited with tuna and a sprinkle of catnip by the bush where she always naps, and sat on my porch for almost two hours just quiet, watching birds hop across the fence and waiting for her to creep over. When she finally stepped in and the trap clicked shut, she didn\u2019t even hiss\u2014just curled up in the little fleece blanket we\u2019d tucked inside, like she was relieved someone finally noticed she\u2019d been out there. We dropped her off at the low-cost vet first thing this morning to get her checked out and scheduled for her spay, and my neighbor\u2019s already got a little cat tree set up in her living room for when she\u2019s ready to come home.",
+  "retained": [
+   "attr:heavy duty"
+  ],
+  "hidden_slots": [
+   "attr:easy assemble",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "attr:built-in retractable cup holder",
+     "=",
+     "built-in retractable cup holder"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "ac7d09f5bcd2aade"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 139,
+  "lit_card": 0,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 628,
+    "true_card": 139,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 174,
+    "true_card": 139,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 139,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "087622fce1804795",
+  "conditions": [
+   [
+    "attr:easy assemble",
+    "=",
+    "easy assemble"
+   ],
+   [
+    "attr:heavy duty",
+    "=",
+    "heavy duty"
+   ],
+   [
+    "price_upper",
+    "<=",
+    180
+   ]
+  ],
+  "hidden_slots": [
+   "attr:easy assemble",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 139,
+  "value": [
+   "[\"B00EF4G6FK\",[]]",
+   "[\"B01M05YL7H\",[]]",
+   "[\"B07NN6ZR53\",[]]",
+   "[\"B07W41W999\",[]]",
+   "[\"B082WQYG58\",[]]",
+   "[\"B083SMBK6W\",[]]",
+   "[\"B083W3W9F4\",[]]",
+   "[\"B085DHMVD5\",[]]",
+   "[\"B085N15SW6\",[]]",
+   "[\"B0862BHBJF\",[]]",
+   "[\"B086YQWT6C\",[]]",
+   "[\"B087JFW1W7\",[]]",
+   "[\"B087M5H4QM\",[]]",
+   "[\"B0887TL8PS\",[]]",
+   "[\"B088WL89RP\",[]]",
+   "[\"B0895P7R9Z\",[]]",
+   "[\"B089M938CS\",[]]",
+   "[\"B08B8W77QF\",[]]",
+   "[\"B08BLTX82M\",[]]",
+   "[\"B08BWCBYXC\",[]]",
+   "[\"B08F7MHRL3\",[]]",
+   "[\"B08FBF7P9P\",[]]",
+   "[\"B08FSNHNZG\",[]]",
+   "[\"B08GJZGVK4\",[]]",
+   "[\"B08HS6R6MG\",[]]",
+   "[\"B08J3MT4SD\",[]]",
+   "[\"B08KDYG3V6\",[]]",
+   "[\"B08KZY9S72\",[]]",
+   "[\"B08M3MS9W5\",[]]",
+   "[\"B08MX264LR\",[]]",
+   "[\"B08MZXFTKW\",[]]",
+   "[\"B08N6J3BNN\",[]]",
+   "[\"B08NVLR8KX\",[]]",
+   "[\"B08NWPKYW2\",[]]",
+   "[\"B08NXFJ3D7\",[]]",
+   "[\"B08P1MN98G\",[]]",
+   "[\"B08P5KF71X\",[]]",
+   "[\"B08PFH8WPD\",[]]",
+   "[\"B08PPGC1C4\",[]]",
+   "[\"B08PTSX6S8\",[]]",
+   "[\"B08QMWB1BD\",[]]",
+   "[\"B08QRFKQ9X\",[]]",
+   "[\"B08QRG458S\",[]]",
+   "[\"B08RYW86K8\",[]]",
+   "[\"B08RYX1CMK\",[]]",
+   "[\"B08SR2VDRV\",[]]",
+   "[\"B08SWD1ZR8\",[]]",
+   "[\"B08T98F4PB\",[]]",
+   "[\"B08VDP6RJV\",[]]",
+   "[\"B08WHN7B16\",[]]",
+   "[\"B08XXM119W\",[]]",
+   "[\"B08XYT674H\",[]]",
+   "[\"B08YR5JJDV\",[]]",
+   "[\"B08Z7L4864\",[]]",
+   "[\"B091GLYWW9\",[]]",
+   "[\"B0922L3M44\",[]]",
+   "[\"B0922M62T4\",[]]",
+   "[\"B092H7BW73\",[]]",
+   "[\"B09334LCBK\",[]]",
+   "[\"B093B1V8WZ\",[]]",
+   "[\"B093Y7Q1RR\",[]]",
+   "[\"B095KN3S5X\",[]]",
+   "[\"B095SP5C57\",[]]",
+   "[\"B0963775J3\",[]]",
+   "[\"B096LTFX9F\",[]]",
+   "[\"B097DKD2SN\",[]]",
+   "[\"B097HFDBR3\",[]]",
+   "[\"B097RDZLGG\",[]]",
+   "[\"B098TCBRXS\",[]]",
+   "[\"B099KMQ18Z\",[]]",
+   "[\"B09B27D877\",[]]",
+   "[\"B09B2DKCCF\",[]]",
+   "[\"B09B2HYSNV\",[]]",
+   "[\"B09B72JB81\",[]]",
+   "[\"B09B9VMXH3\",[]]",
+   "[\"B09CL889SQ\",[]]",
+   "[\"B09CQ5H7NX\",[]]",
+   "[\"B09CTS62RS\",[]]",
+   "[\"B09D3ZB5VT\",[]]",
+   "[\"B09D9BKLWJ\",[]]",
+   "[\"B09D9FV7CP\",[]]",
+   "[\"B09DBL7G7S\",[]]",
+   "[\"B09DBLNS4S\",[]]",
+   "[\"B09DCTX5J1\",[]]",
+   "[\"B09DCW4T8W\",[]]",
+   "[\"B09DK2J2VZ\",[]]",
+   "[\"B09F98J6KR\",[]]",
+   "[\"B09FF3RPL9\",[]]",
+   "[\"B09G12GPL8\",[]]",
+   "[\"B09GB12FTL\",[]]",
+   "[\"B09GB1B129\",[]]",
+   "[\"B09GB4L3W6\",[]]",
+   "[\"B09GPFTS6S\",[]]",
+   "[\"B09GY677KW\",[]]",
+   "[\"B09GYQ66FQ\",[]]",
+   "[\"B09H5RQ64X\",[]]",
+   "[\"B09H724SYN\",[]]",
+   "[\"B09HBHN6NB\",[]]",
+   "[\"B09J4YLNFY\",[]]",
+   "[\"B09JBGVDZG\",[]]",
+   "[\"B09JJQCLF3\",[]]",
+   "[\"B09JMW9ZLT\",[]]",
+   "[\"B09K3ZF4Y8\",[]]",
+   "[\"B09K6DYV71\",[]]",
+   "[\"B09KBGQH57\",[]]",
+   "[\"B09KG6CDSH\",[]]",
+   "[\"B09KKR2ZNQ\",[]]",
+   "[\"B09KLW9P47\",[]]",
+   "[\"B09KQTSVKH\",[]]",
+   "[\"B09L3TR1N2\",[]]",
+   "[\"B09LCDR3Y4\",[]]",
+   "[\"B09LQ8FY9Y\",[]]",
+   "[\"B09LYM11YM\",[]]",
+   "[\"B09M74VH9L\",[]]",
+   "[\"B09M76YNKX\",[]]",
+   "[\"B09MLFT28X\",[]]",
+   "[\"B09MPB67GP\",[]]",
+   "[\"B09MYKKD83\",[]]",
+   "[\"B09MYMXM1H\",[]]",
+   "[\"B09MYNWPQR\",[]]",
+   "[\"B09N7XG7ZL\",[]]",
+   "[\"B09N93LY6X\",[]]",
+   "[\"B09NLHJ4SN\",[]]",
+   "[\"B09NN4TG22\",[]]",
+   "[\"B09NR1P4XL\",[]]",
+   "[\"B09P1SGV7P\",[]]",
+   "[\"B09P1TBBJL\",[]]",
+   "[\"B09PL8BSJV\",[]]",
+   "[\"B09QLWY68J\",[]]",
+   "[\"B09QM2S9PB\",[]]",
+   "[\"B09QMF9D26\",[]]",
+   "[\"B09QW4JQMX\",[]]",
+   "[\"B09QX81BSH\",[]]",
+   "[\"B09QZPLMNN\",[]]",
+   "[\"B09R9Q2HD2\",[]]",
+   "[\"B09SGL3M73\",[]]",
+   "[\"B09SP6F69N\",[]]",
+   "[\"B09SPKJGYM\",[]]",
+   "[\"B09T6W2NZ3\",[]]"
+  ],
+  "hash": "58425acee03b2f6a449db949ae06dbb3"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1410d19fdd6bf8b2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the home office chairs instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a8a0e1fd3281152f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the home office chairs instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "2a602619529713db",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be accent chair."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "375cbab517a60146",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gray item."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cf0e71b0392a8f7f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f96089edc2aba16d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "aabcd3951cf5cc36",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 180."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "e10fe95373729735",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 180."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

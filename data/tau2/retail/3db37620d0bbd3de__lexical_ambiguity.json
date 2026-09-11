@@ -1,0 +1,141 @@
+{
+ "sample_id": "3db37620d0bbd3de__lexical_ambiguity",
+ "domain": "retail",
+ "tree_id": "3db37620d0bbd3de",
+ "query": "Hi there, I need to adjust the items in my pending order #W9911714, swap the four items [\"2366567022\",\"1340995114\",\"9791469541\",\"1763705424\"] for [\"4579334072\",\"1151293680\",\"4107812777\",\"2882812427\"], and use my card to cover any price difference for this change.",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "lexical_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "my card",
+    "placements": [
+     [
+      "arg:0:modify_pending_order_items:payment_method_id",
+      "\"gift_card_4332117\""
+     ],
+     [
+      "arg:0:modify_pending_order_items:payment_method_id",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id"
+  ],
+  "hidden_slots": [
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"2366567022\",\"1340995114\",\"9791469541\",\"1763705424\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"4579334072\",\"1151293680\",\"4107812777\",\"2882812427\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W9911714\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"gift_card_4332117\""
+    ]
+   ],
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"2366567022\",\"1340995114\",\"9791469541\",\"1763705424\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"4579334072\",\"1151293680\",\"4107812777\",\"2882812427\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W9911714\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "9c008f8eefa19121"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"2366567022\",\"1340995114\",\"9791469541\",\"1763705424\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"4579334072\",\"1151293680\",\"4107812777\",\"2882812427\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W9911714\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"gift_card_4332117\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,226 @@
+{
+ "sample_id": "2bcfc114ee542912",
+ "tree_id": "7e11c3baa04ae554",
+ "adapter": "webshop",
+ "cluster": "hair loss products",
+ "goal_idx": 490,
+ "split": "test",
+ "source_instruction": "i want to purchase synthetic hair topper that are 18 inch long and have 4 clips of dark blonde hair with bangs.",
+ "query": "Oh man, I swear the barista at my usual corner caf\u00e9 recognized me the second I walked in this morning, and they already had my iced oat milk latte with an extra shot and a dash of cinnamon sitting on the counter before I even opened my mouth to order. The best part? They\u2019d slipped one of those little lemon shortbread cookies I love onto the saucer for free, saying they\u2019d baked an extra batch that morning and thought I\u2019d want one. I sat at the wobbly little table by the window for ten minutes just people watching, too\u2014saw a golden retriever trot by wearing a tiny neon rain jacket even though it wasn\u2019t raining, and a group of teens doing a terrible but very enthusiastic choreographed dance on the sidewalk for a school project. It was such a silly, nice little start to the day that it almost made me forget I ran out of my favorite dry shampoo last night and had to make a run to the store to restock. Hey, I\u2019m looking through the hair loss products section for a topper made of yak hair, y\u2019know? I need the one that\u2019s that length I always grab, and I don\u2019t wanna spend more than $60 on it total. Can you pull up the options that fit that stuff for me? Wait, make sure it\u2019s the regular clip and bangs style I usually go for too, yeah?",
+ "strategy_ids": [
+  "insufficient_information",
+  "factual_error",
+  "contextual_irrelevance",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+factual_error+contextual_irrelevance+referential_ambiguity",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "factual_error",
+   "contextual_irrelevance",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:1",
+   "factual_error": "attr:synthetic hair",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:synthetic hair",
+    "synthetic hair",
+    "yak hair"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "option:1",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh man, I swear the barista at my usual corner caf\u00e9 recognized me the second I walked in this morning, and they already had my iced oat milk latte with an extra shot and a dash of cinnamon sitting on the counter before I even opened my mouth to order. The best part? They\u2019d slipped one of those little lemon shortbread cookies I love onto the saucer for free, saying they\u2019d baked an extra batch that morning and thought I\u2019d want one. I sat at the wobbly little table by the window for ten minutes just people watching, too\u2014saw a golden retriever trot by wearing a tiny neon rain jacket even though it wasn\u2019t raining, and a group of teens doing a terrible but very enthusiastic choreographed dance on the sidewalk for a school project. It was such a silly, nice little start to the day that it almost made me forget I ran out of my favorite dry shampoo last night and had to make a run to the store to restock.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:synthetic hair",
+   "option:0",
+   "option:1"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:synthetic hair",
+     "=",
+     "yak hair"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "58332b14c2dc8ece"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 0,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 15,
+    "true_card": 3,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 14,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "2606334f5e1c910f",
+  "conditions": [
+   [
+    "attr:synthetic hair",
+    "=",
+    "synthetic hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "4 clips-dark blonde w |  bangs"
+   ],
+   [
+    "option:1",
+    "=",
+    "18 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "attr:synthetic hair",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B07CXHL4T3\",[[\"color\",\"#27 dark blonde\"],[\"size\",\"18\\\"\"]]]",
+   "[\"B08FY3WDDJ\",[[\"color\",\"4 clips-dark blonde\"],[\"size\",\"18 inch\"]]]",
+   "[\"B08KVNKJFL\",[[\"color\",\"dark blonde | beach blonde\"],[\"size\",\"16 inch\"]]]"
+  ],
+  "hash": "9c5967ee120e21e4265a837fa7e153e1"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "20cd3e9d9a0c5ee1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair loss products instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f0bfa433247a8172",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair loss products instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9950e58eb37df563",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair loss."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d5f1ca8baea54ea3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy use."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "caf50b11fe2640e2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f829adc626fcaae6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "111ce912aef29f37",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 jet black-thicker instead of 4 clips-dark blonde w |  bangs."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "90ea4f0d48565da2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 jet black instead of 4 clips-dark blonde w |  bangs."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

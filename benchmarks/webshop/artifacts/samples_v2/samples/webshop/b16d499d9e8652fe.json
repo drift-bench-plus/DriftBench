@@ -1,0 +1,190 @@
+{
+ "adapter": "webshop",
+ "cluster": "refillable containers",
+ "fidelity_notes": [],
+ "goal_idx": 18,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "42861d902f5d62399215557323f8a283",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07Q2XMTKC\",[[\"color\",\"1#\"]]]",
+   "[\"B07QFL1S9C\",[[\"color\",\"1\"]]]",
+   "[\"B083TBC7BW\",[[\"size\",\"1.7 oz\"]]]",
+   "[\"B0865WJZMB\",[[\"size\",\"6 count (pack of 1)\"]]]",
+   "[\"B08DNY6F2G\",[[\"color\",\"corlorful 1\"]]]",
+   "[\"B08FRHM3WW\",[[\"size\",\"#1\"]]]",
+   "[\"B08JM329RT\",[[\"color\",\"1#\"]]]",
+   "[\"B098DMR27N\",[[\"color\",\"no.1\"]]]",
+   "[\"B09BFS3DKS\",[[\"color\",\"#1\"]]]",
+   "[\"B09JFDTY6G\",[[\"size\",\"30ml | 1 ounce\"]]]",
+   "[\"B09P4MZ1NK\",[[\"size\",\"1.7 ounce\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy carry",
+    "=",
+    "easy carry"
+   ],
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "option:0",
+    "=",
+    "1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "d6cbc9d0cde1523b"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy carry",
+     "=",
+     "easy carry"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy carry",
+   "attr:high quality",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for easy carry, high quality refillable containers that fit within a $20 price limit, and I want that one.",
+ "render_attempts": 1,
+ "sample_id": "b16d499d9e8652fe",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the refillable containers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "38761bc5eb7aeb9a"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the refillable containers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "523e1485ba534c14"
+  },
+  {
+   "announcement": "Also, it needs to be easy clean.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6cb69e637ab9632a"
+  },
+  {
+   "announcement": "Also, it needs to be makeup bag.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6ddf75eefad6db81"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e0de665b93af458e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ff016c425052f720"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7efe199cd5c43579"
+  },
+  {
+   "announcement": "Actually, make it 10ml | 0.4 ounce instead of 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f7307f0e6cc7cce1"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 421,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a high quality perfume atomizer bottle that is easy to carry and has 1 color.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "80e512e96ac39ba8",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

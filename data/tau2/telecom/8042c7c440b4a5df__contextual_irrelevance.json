@@ -1,0 +1,93 @@
+{
+ "sample_id": "8042c7c440b4a5df__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "8042c7c440b4a5df",
+ "query": "I picked up this really delicious salted caramel croissant from the little bakery around the corner from my hotel this morning, the crust was so flaky it left crumbs all over my jacket when I was walking to the metro. I also saw a street performer playing the violin there, they were doing a cover of my favorite 90s pop song so I stopped to listen for a few minutes and dropped a couple euros in their case. I was trying to text my friend to meet me for dinner later but I realized my calls and messages aren't going through at all right now. I've got airplane mode turned on, the wifi calling here is really spotty and keeps cutting out, and I'm abroad right now with roaming turned off so I'm not sure what's going wrong, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I picked up this really delicious salted caramel croissant from the little bakery around the corner from my hotel this morning, the crust was so flaky it left crumbs all over my jacket when I was walking to the metro. I also saw a street performer playing the violin there, they were doing a cover of my favorite 90s pop song so I stopped to listen for a few minutes and dropped a couple euros in their case.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_wifi_calling",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

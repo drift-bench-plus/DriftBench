@@ -1,0 +1,167 @@
+{
+ "adapter": "webshop",
+ "cluster": "bedroom sets",
+ "fidelity_notes": [],
+ "goal_idx": 375,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "07f7c4e37e521fc61358294412482efc",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B091T7D9G4\",[[\"color\",\"wooden dark brown\"]]]",
+   "[\"B09J4PY9C9\",[[\"color\",\"drift brown\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:storage space",
+    "=",
+    "storage space"
+   ],
+   [
+    "option:0",
+    "=",
+    "drift brown"
+   ],
+   [
+    "price_upper",
+    "<=",
+    110
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "6814f2e833d7f41e"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:storage space",
+     "=",
+     "storage space"
+    ],
+    [
+     "option:0",
+     "=",
+     "drift brown"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning repotting my new snake plant and pothos, and I’m so happy they finally have terracotta pots that match the sunny windowsill in my living room. I also tried a new honey oat latte recipe from a food blog this weekend, and it turned out way creamier than the ones I usually get at the corner café. Oh, and I’ve been binge-watching a cozy gardening documentary series every night this week, it’s so calming after a long work day.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:storage space",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning repotting my new snake plant and pothos, and I’m so happy they finally have terracotta pots that match the sunny windowsill in my living room. I also tried a new honey oat latte recipe from a food blog this weekend, and it turned out way creamier than the ones I usually get at the corner café. Oh, and I’ve been binge-watching a cozy gardening documentary series every night this week, it’s so calming after a long work day. I’m looking for bedroom sets that have storage space, come in drift brown, and cost no more than 110.",
+ "render_attempts": 1,
+ "sample_id": "494c8ad12438f8f7",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bedroom sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "071b7fafdced26f0"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bedroom sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "289334f5c8707df3"
+  },
+  {
+   "announcement": "Also, it needs to be easy install.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2c14ba5ef3e91734"
+  },
+  {
+   "announcement": "Also, it needs to be dining room.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f9688060fdeb9525"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0f03631796ae0a4c"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f048fe810be0f794"
+  },
+  {
+   "announcement": "Actually, make it 1 pack white no switch instead of drift brown.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a0135563be815fa5"
+  },
+  {
+   "announcement": "Actually, make it 1 pack instead of drift brown.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ed706044e3c9d187"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 2,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for brown colored kitchen table and chair set with storage space.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "e2b290a27c07c107",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

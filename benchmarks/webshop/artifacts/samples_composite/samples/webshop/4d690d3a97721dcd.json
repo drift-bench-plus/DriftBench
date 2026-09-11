@@ -1,0 +1,184 @@
+{
+ "sample_id": "4d690d3a97721dcd",
+ "tree_id": "c5d6e9ca2f95b495",
+ "adapter": "webshop",
+ "cluster": "bags & cases",
+ "goal_idx": 338,
+ "split": "test",
+ "source_instruction": "i would like a corgi dog cosmetic bag for my nail art.",
+ "query": "I was browsing the bags & cases section just now, and I\u2019ve heard super cute stuff with corgi dog motifs and little nail art details is really popular with people my age lately. I remember my friend mentioned grabbing something similar last week that fit her casual budget really well, no fancy overpriced markup at all. All the little decorative touches on those pieces look so fun and playful when you spot them out on the shelves.",
+ "strategy_ids": [
+  "indirect_intent",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+insufficient_information",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "indirect_intent",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:nail art",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:nail art",
+     "=",
+     "nail art"
+    ],
+    [
+     "option:0",
+     "=",
+     "corgi dog"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "ecb18e262673080d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 4,
+  "lit_card": 5,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 5,
+    "true_card": 4,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "9de96cf97e64bf13",
+  "conditions": [
+   [
+    "attr:nail art",
+    "=",
+    "nail art"
+   ],
+   [
+    "option:0",
+    "=",
+    "corgi dog"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 4,
+  "value": [
+   "[\"B082YMS9LN\",[[\"color\",\"corgi dog\"]]]",
+   "[\"B08RYZT6MB\",[[\"color\",\"corgi\"]]]",
+   "[\"B09GLYQ5P2\",[[\"color\",\"corgi dog's paw print\"]]]",
+   "[\"B09GM5V85P\",[[\"color\",\"corgi\"]]]"
+  ],
+  "hash": "a9815157111f457628a5e0f64832db96"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "5022045ab82ac014",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bags & cases instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ddf874ccce3c6424",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bags & cases instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9e770a5a41c83862",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy use."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b2c927a8ff6d02c1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be face wash."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "26e9450478304702",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ea7325f7f6c0685f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "69232cb9dd527bb9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #galaxy instead of corgi dog."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f116f8d6bacc1912",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #flower instead of corgi dog."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

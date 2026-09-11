@@ -1,0 +1,225 @@
+{
+ "sample_id": "b1934d84adf0a5f9",
+ "tree_id": "605cd47c1d0bcc72",
+ "adapter": "webshop",
+ "cluster": "men's slippers",
+ "goal_idx": 182,
+ "split": "test",
+ "source_instruction": "i need grey memory foam slippers with open toes.",
+ "query": "Hey, since you probably don\u2019t have any open toe men\u2019s slippers right now, can you show me options with the memory foam footbed I want in that c-gray color, and just make sure they fit my budget? I don\u2019t need anything super fancy, just the kind I can slip on to grab the mail or walk around the house.",
+ "strategy_ids": [
+  "insufficient_information",
+  "false_presupposition"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+false_presupposition",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "false_presupposition"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "since you probably don\u2019t have any open toe men\u2019s slippers right now",
+    "condition": null,
+    "about": [
+     "attr:open toe",
+     "open toe"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:memory foam",
+   "attr:open toe",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:memory foam",
+     "=",
+     "memory foam"
+    ],
+    [
+     "option:0",
+     "=",
+     "c-gray"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "0f807fcf1a985fdf"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 21,
+  "lit_card": 71,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 26,
+    "true_card": 21,
+    "readings": 1
+   },
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 48,
+    "true_card": 21,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "5f8dc065bfa386ba",
+  "conditions": [
+   [
+    "attr:memory foam",
+    "=",
+    "memory foam"
+   ],
+   [
+    "attr:open toe",
+    "=",
+    "open toe"
+   ],
+   [
+    "option:0",
+    "=",
+    "c-gray"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 21,
+  "value": [
+   "[\"B08FYC36G1\",[[\"color\",\"gray leopard\"]]]",
+   "[\"B098T7T4ZD\",[[\"color\",\"c gray\"]]]",
+   "[\"B09BRDRZX2\",[[\"color\",\"z01-gray\"]]]",
+   "[\"B09DD8KHVN\",[[\"color\",\"b-gray-male\"]]]",
+   "[\"B09DFHY4CK\",[[\"color\",\"gray-b\"]]]",
+   "[\"B09DGCQL47\",[[\"color\",\"01#gray\"]]]",
+   "[\"B09DPD473C\",[[\"color\",\"gray\"]]]",
+   "[\"B09DRZ2M2T\",[[\"color\",\"gray\"]]]",
+   "[\"B09HHJ1M7D\",[[\"color\",\"a-gray\"]]]",
+   "[\"B09JF3D6D3\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09JFDGWC8\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09JFLMKBY\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09JFMHVYR\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09KBS2K6V\",[[\"color\",\"gray2\"]]]",
+   "[\"B09KCCDRX2\",[[\"color\",\"a gray\"]]]",
+   "[\"B09LYT6QVC\",[[\"color\",\"gray-c\"]]]",
+   "[\"B09LYZTMVR\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09MDLG3PC\",[[\"color\",\"gray#a1\"]]]",
+   "[\"B09MHZGCBD\",[[\"color\",\"gray#a1\"]]]",
+   "[\"B09PJH8VZF\",[[\"color\",\"z01# gray\"]]]",
+   "[\"B09PN2BFG8\",[[\"color\",\"a-gray\"]]]"
+  ],
+  "hash": "6cf2f6f7e629d8e1bcc10a634f242b5d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "43214916f8a9cc81",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's slippers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "aa8882388e062e56",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's slippers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3eb33d3ad5a5bab3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be boots women."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bc69617a5bb809a3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be fleece lined."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "85320c11a5b32ffd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d42d4c51807773b7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7547c8327599e33d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10-10.5 women | 8.5-9 men instead of c-gray."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "942e03922a9fa987",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it (us7-8) instead of c-gray."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

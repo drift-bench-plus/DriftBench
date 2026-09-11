@@ -1,0 +1,214 @@
+{
+ "sample_id": "d5b7e9261c06cbfb",
+ "tree_id": "03bdb278505ad2e9",
+ "adapter": "webshop",
+ "cluster": "breads & bakery",
+ "goal_idx": 104,
+ "split": "test",
+ "source_instruction": "i am looking for a gluten free non gmo fig bar packet of 7. and i choose the variety pack",
+ "query": "I spent my entire walk to the grocery store replaying that viral cat video where the orange tabby keeps knocking over full mugs of iced coffee right onto its owner\u2019s work laptop, I can\u2019t stop cackling thinking about how the owner just stared blankly at the screen instead of yelling. I also realized halfway here I forgot to grab the lavender laundry detergent I\u2019ve been meaning to test for weeks, and I\u2019m low-key stressing because my neighbor said they\u2019d drop off their foster puppy for a quick visit right after I get home so I don\u2019t have time to linger. Oh, also I\u2019ve been trying to track down that weird limited-edition cherry-flavored lip balm that sold out last month, I checked three drugstores already and no luck. Anyway, can you help me find options in the breads & bakery section that are grain free, non gmo, either in a variety pack or the 12 count (pack of 7) size, and cost $20 or less?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "factual_error"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+factual_error",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:gluten free"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:gluten free",
+    "gluten free",
+    "grain free"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent my entire walk to the grocery store replaying that viral cat video where the orange tabby keeps knocking over full mugs of iced coffee right onto its owner\u2019s work laptop, I can\u2019t stop cackling thinking about how the owner just stared blankly at the screen instead of yelling. I also realized halfway here I forgot to grab the lavender laundry detergent I\u2019ve been meaning to test for weeks, and I\u2019m low-key stressing because my neighbor said they\u2019d drop off their foster puppy for a quick visit right after I get home so I don\u2019t have time to linger. Oh, also I\u2019ve been trying to track down that weird limited-edition cherry-flavored lip balm that sold out last month, I checked three drugstores already and no luck.",
+  "retained": [
+   "attr:non gmo",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:gluten free"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "grain free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "variety pack"
+    ],
+    [
+     "option:1",
+     "=",
+     "12 count (pack of 7)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "ad421f3c94893983"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "befb9681ace0d113",
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "attr:non gmo",
+    "=",
+    "non gmo"
+   ],
+   [
+    "option:0",
+    "=",
+    "variety pack"
+   ],
+   [
+    "option:1",
+    "=",
+    "12 count (pack of 7)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:gluten free"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B00WFDKDIO\",[[\"flavor name\",\"variety pack\"],[\"size\",\"12 count (pack of 7)\"]]]",
+   "[\"B07YSWL849\",[[\"flavor name\",\"variety\"],[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B08B8ZHBK2\",[[\"flavor name\",\"variety pack\"],[\"size\",\"7 ounce (pack of 1)\"]]]"
+  ],
+  "hash": "f08ab26df53fcc6fc5ab246ee4ca0264"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1f6225fde59968dc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breads & bakery instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "6da6ddcafa09e269",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breads & bakery instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "62eb6218b480cdb2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be 0g trans."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a4f8784d3ca9082e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy use."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "713431c87ef68b7d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a9b210ac95a3c43c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5fd0830c1731bea7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 11 ounce (pack of 12) instead of variety pack."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7443574b220999b8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 12 instead of variety pack."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

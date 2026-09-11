@@ -1,0 +1,115 @@
+{
+ "sample_id": "7def69415f432fa4__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "7def69415f432fa4",
+ "query": "I was walking my golden retriever puppy this morning and he chased a squirrel right into a rose bush, I had to pick so many thorns out of his paws and then we stopped at the corner caf\u00e9 for an iced latte, the barista even gave my pup a tiny pup cup with peanut butter on top. On my way home I stopped at the craft store to pick up yarn for the knit scarf I\u2019m making for my mom\u2019s birthday next month, they had a sale on all the merino wool so I got three extra skeins to make matching mittens too. Anyways, my mobile data has been super slow and keeps cutting out, I think my network preference is messed up, my VPN isn\u2019t working right, data saver mode is turned on, I already exceeded my data limit this month, plus I\u2019m traveling abroad right now and roaming is switched off, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever puppy this morning and he chased a squirrel right into a rose bush, I had to pick so many thorns out of his paws and then we stopped at the corner caf\u00e9 for an iced latte, the barista even gave my pup a tiny pup cup with peanut butter on top. On my way home I stopped at the craft store to pick up yarn for the knit scarf I\u2019m making for my mom\u2019s birthday next month, they had a sale on all the merino wool so I got three extra skeins to make matching mittens too.",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:bad_vpn",
+   "fault:data_saver_mode_on",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_vpn",
+     "=",
+     "bad_vpn"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_vpn",
+    "=",
+    "bad_vpn"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

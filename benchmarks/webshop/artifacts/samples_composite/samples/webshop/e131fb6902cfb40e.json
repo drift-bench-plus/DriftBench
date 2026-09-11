@@ -1,0 +1,212 @@
+{
+ "sample_id": "e131fb6902cfb40e",
+ "tree_id": "1efd6434839f8d4f",
+ "adapter": "webshop",
+ "cluster": "breakfast foods",
+ "goal_idx": 388,
+ "split": "test",
+ "source_instruction": "i am looking for a low carbohydrates protein bar with package of 12 counts.",
+ "query": "Oh man, that golden retriever I passed by the community park entrance on my walk over was so silly, it was fully flopped on its back in the middle of the sidewalk wiggling so hard its whole body shook, just begging every person who walked by for quick belly rubs. The barista at the little corner spot right by the store doors remembered my usual order today too, they added an extra dash of cinnamon to my iced oat milk latte without me even asking, and it tasted cozier than any version I\u2019ve gotten there before. I even spotted a cluster of tiny bright orange wild mushrooms popping up through the mulch around the oak tree right by the cart return, they looked like little fairy-sized party umbrellas tucked between the fallen acorns. I\u2019ve heard the breakfast foods section has a bunch of solid picks for anyone browsing that part of the store, I\u2019ve heard the low-sugar ones there are a really solid option, I\u2019ve heard there\u2019s that one pack size I always get that\u2019s stocked there right now, and I\u2019ve heard it works out well when the total doesn\u2019t go over $40.",
+ "strategy_ids": [
+  "indirect_intent",
+  "contextual_irrelevance",
+  "factual_error",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+contextual_irrelevance+factual_error+referential_ambiguity",
+  "family": "expression+intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "contextual_irrelevance",
+   "factual_error",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:low carb"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:low carb",
+    "low carb",
+    "low-sugar"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "Oh man, that golden retriever I passed by the community park entrance on my walk over was so silly, it was fully flopped on its back in the middle of the sidewalk wiggling so hard its whole body shook, just begging every person who walked by for quick belly rubs. The barista at the little corner spot right by the store doors remembered my usual order today too, they added an extra dash of cinnamon to my iced oat milk latte without me even asking, and it tasted cozier than any version I\u2019ve gotten there before. I even spotted a cluster of tiny bright orange wild mushrooms popping up through the mulch around the oak tree right by the cart return, they looked like little fairy-sized party umbrellas tucked between the fallen acorns.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:low carb",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low carb",
+     "=",
+     "low-sugar"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "8a13521d2193e65e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 7,
+  "lit_card": 112,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 5,
+    "true_card": 7,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 190,
+    "true_card": 7,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "20dd7cfec853f571",
+  "conditions": [
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "option:0",
+    "=",
+    "12 count"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:low carb",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 7,
+  "value": [
+   "[\"B016MEN14O\",[[\"size\",\"12 count\"]]]",
+   "[\"B01LPCLEWY\",[[\"size\",\"12 count\"]]]",
+   "[\"B07GY4FK2W\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B07YSWT2N1\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B082X86HD5\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B084JRK94V\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B08BW4HZ7R\",[[\"size\",\"12 count (pack of 1)\"]]]"
+  ],
+  "hash": "29fdd54f5ee7fe83e5591d3eac7f8638"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "85251a87f89861a6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breakfast foods instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "c7ffade20e378f4e",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breakfast foods instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "665882adf42ee6f7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be artificial flavors."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "db6b38f24984e87b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be brown rice."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4ffca32d859a1bed",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "aa9208beee49f9fc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3ccd70b7d7c46649",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pound instead of 12 count."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f2d1ebc23dc8b8e0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pack instead of 12 count."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

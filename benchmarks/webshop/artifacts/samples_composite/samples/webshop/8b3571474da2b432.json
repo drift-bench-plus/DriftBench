@@ -1,0 +1,451 @@
+{
+ "sample_id": "8b3571474da2b432",
+ "tree_id": "5ead8f28858ba430",
+ "adapter": "webshop",
+ "cluster": "vanities",
+ "goal_idx": 192,
+ "split": "test",
+ "source_instruction": "i need a vanity light with four bulbs and glass shades.",
+ "query": "Hey there, I\u2019m browsing the vanities section looking for a 4-light vanity light with a frosted crystal shade, and it needs to come with a matching wall-mounted toothbrush holder attached right to the fixture base. I can\u2019t spend more than $120 total on whatever you recommend, so make sure any picks you pull up stay under that price cap for me, okay? I don\u2019t want to waste time looking at options that blow my budget or don\u2019t have that little built-in holder to keep my counter clear.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "factual_error"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+factual_error",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:glass shade"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:glass shade",
+    "glass shade",
+    "frosted crystal shade"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "frosted crystal shade",
+    "condition": [
+     "attr:glass shade",
+     "=",
+     "frosted crystal shade"
+    ]
+   },
+   {
+    "text": "come with a matching wall-mounted toothbrush holder attached right to the fixture base",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:vanity light",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:glass shade"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:glass shade",
+     "=",
+     "frosted crystal shade"
+    ],
+    [
+     "attr:vanity light",
+     "=",
+     "vanity light"
+    ],
+    [
+     "option:0",
+     "=",
+     "4-light"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ],
+    [
+     "attr:glass shade",
+     "=",
+     "frosted crystal shade"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "422a75dbc4fe89fd"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 225,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 225,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 225,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "8aece172e8b843da",
+  "conditions": [
+   [
+    "attr:glass shade",
+    "=",
+    "glass shade"
+   ],
+   [
+    "attr:vanity light",
+    "=",
+    "vanity light"
+   ],
+   [
+    "option:0",
+    "=",
+    "4-light"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "attr:glass shade"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 225,
+  "value": [
+   "[\"B000VUENWU\",[[\"size\",\"4 light\"]]]",
+   "[\"B0014HAMUQ\",[[\"size\",\"4-light\"]]]",
+   "[\"B001Q1C64A\",[[\"size\",\"4 light\"]]]",
+   "[\"B005WZP4QS\",[[\"size\",\"14 in-2 lights\"]]]",
+   "[\"B00BBUSCQC\",[[\"size\",\"4-light\"]]]",
+   "[\"B01N3Z7ZTS\",[[\"size\",\"4 lights\"]]]",
+   "[\"B01NAGPM29\",[[\"size\",\"4 light\"]]]",
+   "[\"B01NBR0M9C\",[[\"size\",\"2-light\"]]]",
+   "[\"B071JW1ZLB\",[[\"size\",\"2-light\"]]]",
+   "[\"B075H6L5RC\",[[\"size\",\"4-light\"]]]",
+   "[\"B078WFPDWN\",[[\"size\",\"4-light\"]]]",
+   "[\"B079FVY5N9\",[[\"size\",\"1-light\"]]]",
+   "[\"B07B4CPR1D\",[[\"size\",\"4 lights\"]]]",
+   "[\"B07BGDW6VK\",[[\"size\",\"4 light\"]]]",
+   "[\"B07DFN1R5B\",[[\"size\",\"2-light\"]]]",
+   "[\"B07DGN3R41\",[[\"size\",\"2-light\"]]]",
+   "[\"B07DJB7K52\",[[\"size\",\"4-light\"]]]",
+   "[\"B07F71Q2SS\",[[\"size\",\"1 light\"]]]",
+   "[\"B07FDG35C7\",[[\"size\",\"4-light\"]]]",
+   "[\"B07L3MM774\",[[\"size\",\"4-light vanity light\"]]]",
+   "[\"B07MPFCK4H\",[[\"size\",\"4 light\"]]]",
+   "[\"B07N1M8TNM\",[[\"size\",\"3 lights\"]]]",
+   "[\"B07TKCL9PF\",[[\"size\",\"4 lights\"]]]",
+   "[\"B07TS78CJT\",[[\"size\",\"4 light\"]]]",
+   "[\"B07VVJGVGG\",[[\"size\",\"4-light\"]]]",
+   "[\"B07WC8VF5T\",[[\"size\",\"four light\"]]]",
+   "[\"B07XDCGSSR\",[[\"size\",\"4 - lights\"]]]",
+   "[\"B07XDD382P\",[[\"size\",\"4 lights\"]]]",
+   "[\"B07YDKLNBN\",[[\"size\",\"2-light\"]]]",
+   "[\"B07ZKGNLQ3\",[[\"size\",\"2-light\"]]]",
+   "[\"B081CBH11F\",[[\"size\",\"4-light\"]]]",
+   "[\"B0823DWXN9\",[[\"size\",\"2 light\"]]]",
+   "[\"B082L4BTHQ\",[[\"size\",\"4-light\"]]]",
+   "[\"B082L5JJK3\",[[\"size\",\"1-light\"]]]",
+   "[\"B082WRLVRM\",[[\"size\",\"modern-2 lights\"]]]",
+   "[\"B083J348LS\",[[\"size\",\"2-light\"]]]",
+   "[\"B083KMRHCP\",[[\"size\",\"1-light\"]]]",
+   "[\"B083SSB4W5\",[[\"size\",\"4-light\"]]]",
+   "[\"B083ZG8KSJ\",[[\"size\",\"4-light\"]]]",
+   "[\"B083ZGTJC3\",[[\"size\",\"4-light\"]]]",
+   "[\"B084P38C8F\",[[\"size\",\"4-light\"]]]",
+   "[\"B08645BPHX\",[[\"size\",\"4-lights\"]]]",
+   "[\"B086W4N5DY\",[[\"size\",\"4-light\"]]]",
+   "[\"B0872TSFCL\",[[\"size\",\"2 light\"]]]",
+   "[\"B087BY734W\",[[\"size\",\"1-light\"]]]",
+   "[\"B089CVWZKV\",[[\"size\",\"4 light\"]]]",
+   "[\"B089G4CVSW\",[[\"size\",\"4 light\"]]]",
+   "[\"B089R361DF\",[[\"size\",\"1 light\"]]]",
+   "[\"B089X2QP1Q\",[[\"size\",\"4-light\"]]]",
+   "[\"B08B3BHV6N\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08BQZMMGV\",[[\"size\",\"4 light\"]]]",
+   "[\"B08C9B5NQ2\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08CVC1PXY\",[[\"size\",\"4 light\"]]]",
+   "[\"B08D64NLHW\",[[\"size\",\"2-light\"]]]",
+   "[\"B08DTJ422J\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08FB3CDSD\",[[\"size\",\"14.96 inch, 2 lights vanity light\"]]]",
+   "[\"B08FQW9NCY\",[[\"size\",\"27.75 inches length,4 lights\"]]]",
+   "[\"B08G52KJ9Y\",[[\"size\",\"1 light\"]]]",
+   "[\"B08GF3W29R\",[[\"size\",\"4 light\"]]]",
+   "[\"B08GKBBCMQ\",[[\"size\",\"4 light\"]]]",
+   "[\"B08GKMVPHL\",[[\"size\",\"4 light\"]]]",
+   "[\"B08GKNDJP6\",[[\"size\",\"4 light\"]]]",
+   "[\"B08GKX7RQC\",[[\"size\",\"4-light\"]]]",
+   "[\"B08GP9MPWB\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08J7Q8MFX\",[[\"size\",\"4-light\"]]]",
+   "[\"B08JJ8PXMG\",[[\"color\",\"brushed nickel- 2 light\"]]]",
+   "[\"B08K2YX9GH\",[[\"color\",\"2-light\"]]]",
+   "[\"B08KM9VYMG\",[[\"color\",\"brushed nickle 1-light\"]]]",
+   "[\"B08KR7LWK1\",[[\"size\",\"2 lights\"]]]",
+   "[\"B08KRYGFCW\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08KW2W5H6\",[[\"size\",\"1 light\"]]]",
+   "[\"B08L95NR22\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08LG9TS8K\",[[\"size\",\"1-light\"]]]",
+   "[\"B08LVK94N6\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08M9DF2N5\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08MXK6XKX\",[[\"size\",\"4 light\"]]]",
+   "[\"B08N4HSPZN\",[[\"size\",\"4 light\"]]]",
+   "[\"B08NCXLB2P\",[[\"size\",\"4-light\"]]]",
+   "[\"B08P1KDD3R\",[[\"size\",\"2-light\"]]]",
+   "[\"B08P1WZGVK\",[[\"size\",\"2 lights\"]]]",
+   "[\"B08P5995TP\",[[\"size\",\"4-light\"]]]",
+   "[\"B08P6Y2NPL\",[[\"size\",\"4-light\"]]]",
+   "[\"B08PBHP9HS\",[[\"size\",\"2 light\"]]]",
+   "[\"B08PBKBJ9M\",[[\"size\",\"2 light\"]]]",
+   "[\"B08Q37WHT2\",[[\"color\",\"1-light\"]]]",
+   "[\"B08Q8BGMWZ\",[[\"size\",\"2-light\"]]]",
+   "[\"B08QMKK94C\",[[\"size\",\"4 light\"]]]",
+   "[\"B08QRSX372\",[[\"color\",\"4-light vanity\"]]]",
+   "[\"B08QZ7QYSB\",[[\"size\",\"1 light\"]]]",
+   "[\"B08R55N3TW\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08R5C94K2\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08R6YPMX6\",[[\"size\",\"2-light\"]]]",
+   "[\"B08R8JW4R7\",[[\"size\",\"2-cone light\"]]]",
+   "[\"B08R8Q88L4\",[[\"size\",\"1 light\"]]]",
+   "[\"B08RDDMCR2\",[[\"color\",\"3-light plug in\"]]]",
+   "[\"B08RDN5FST\",[[\"size\",\"4-light\"]]]",
+   "[\"B08RY6G4LL\",[[\"size\",\"one light\"]]]",
+   "[\"B08SC8SWRM\",[[\"size\",\"1 light\"]]]",
+   "[\"B08T9NS65P\",[[\"size\",\"1 light\"]]]",
+   "[\"B08TCH27QJ\",[[\"size\",\"2 light\"]]]",
+   "[\"B08TCHV1G6\",[[\"size\",\"2 light\"]]]",
+   "[\"B08VKST7JM\",[[\"size\",\"4 bulb lighting fixture\"]]]",
+   "[\"B08VL2H82G\",[[\"size\",\"4 bulb light\"]]]",
+   "[\"B08VRTKT34\",[[\"size\",\"2-light\"]]]",
+   "[\"B08WJPPV9T\",[[\"size\",\"4 light\"]]]",
+   "[\"B08X1HPPZX\",[[\"size\",\"4-light bathroom vanity light\"]]]",
+   "[\"B08X2CRSMM\",[[\"size\",\"4-light\"]]]",
+   "[\"B08XBW1RC9\",[[\"size\",\"2-light\"]]]",
+   "[\"B08XQNGGSJ\",[[\"color\",\"2 light\"]]]",
+   "[\"B08XYR28PC\",[[\"color\",\"4-light\"]]]",
+   "[\"B08Y8MB5V9\",[[\"size\",\"4 light\"]]]",
+   "[\"B08YXCQ9DL\",[[\"size\",\"4 lights\"]]]",
+   "[\"B08YYS4ZV2\",[[\"size\",\"4-light 33 inches\"]]]",
+   "[\"B08Z68JSMX\",[[\"size\",\"4 light vanity\"]]]",
+   "[\"B08Z78ZBPV\",[[\"size\",\"22inch vanity light fixture\"]]]",
+   "[\"B08ZB7VL5B\",[[\"size\",\"38\\\" island light\"]]]",
+   "[\"B08ZHNSJQ3\",[[\"size\",\"4 light\"]]]",
+   "[\"B08ZHX4273\",[[\"size\",\"4 light\"]]]",
+   "[\"B08ZHZCS3Y\",[[\"size\",\"2 light\"]]]",
+   "[\"B08ZKVFMQW\",[[\"size\",\"4-light\"]]]",
+   "[\"B08ZMW8C56\",[[\"size\",\"1-light\"]]]",
+   "[\"B0913BZRB6\",[[\"color\",\"4 light\"]]]",
+   "[\"B091562VZD\",[[\"size\",\"1 light\"]]]",
+   "[\"B091D1988Y\",[[\"size\",\"1-light\"]]]",
+   "[\"B091DJB7F7\",[[\"size\",\"4-lights\"]]]",
+   "[\"B091Q1Y26G\",[[\"size\",\"4 lights\"]]]",
+   "[\"B0928K612B\",[[\"color\",\"1-light\"]]]",
+   "[\"B092QS7ZNB\",[[\"size\",\"2-lights\"]]]",
+   "[\"B092ZQ9VKK\",[[\"size\",\"4 lights\"]]]",
+   "[\"B092ZT7SBQ\",[[\"size\",\"4-light\"]]]",
+   "[\"B0932XDDCP\",[[\"size\",\"2-lights\"]]]",
+   "[\"B093F6HKSV\",[[\"size\",\"4 lights\"]]]",
+   "[\"B093KP2SW4\",[[\"size\",\"4 light\"]]]",
+   "[\"B093KPMFQ4\",[[\"size\",\"2 light\"]]]",
+   "[\"B09475YGWK\",[[\"size\",\"2 light\"]]]",
+   "[\"B0948KG96F\",[[\"size\",\"2 light\"]]]",
+   "[\"B094VSMJSX\",[[\"size\",\"1-light\"]]]",
+   "[\"B094ZVR2DV\",[[\"size\",\"4 lights\"]]]",
+   "[\"B0953DYRY7\",[[\"size\",\"4-light\"]]]",
+   "[\"B0957JSJ5P\",[[\"size\",\"4 lights-31 inch\"]]]",
+   "[\"B095BLDD3Z\",[[\"size\",\"1-light\"]]]",
+   "[\"B095HGLWQM\",[[\"size\",\"2 lights\"]]]",
+   "[\"B095JT98Q3\",[[\"size\",\"4-lights\"]]]",
+   "[\"B095JTF9KC\",[[\"size\",\"2-light\"]]]",
+   "[\"B095N11QL7\",[[\"size\",\"2-light\"]]]",
+   "[\"B095N1CF2L\",[[\"size\",\"2-light\"]]]",
+   "[\"B095W6C7K6\",[[\"size\",\"4 light\"]]]",
+   "[\"B095WD7C1S\",[[\"size\",\"3 light-24.4''\"]]]",
+   "[\"B0965V8ZTK\",[[\"size\",\"2-light\"]]]",
+   "[\"B096FKYVSW\",[[\"size\",\"2-lights\"]]]",
+   "[\"B096HJ1YSY\",[[\"size\",\"4 light vanity light\"]]]",
+   "[\"B096LQ92J6\",[[\"size\",\"4-lights\"]]]",
+   "[\"B096TN59CP\",[[\"size\",\"4 lights\"]]]",
+   "[\"B097DMHLV5\",[[\"size\",\"1 light\"]]]",
+   "[\"B097N3BJJF\",[[\"size\",\"2-light\"]]]",
+   "[\"B097R57CPM\",[[\"size\",\"2-light\"]]]",
+   "[\"B097SNT4FQ\",[[\"size\",\"2 lights\"]]]",
+   "[\"B097TC3HDD\",[[\"size\",\"2-light\"]]]",
+   "[\"B097Y2D6DJ\",[[\"size\",\"1 light\"]]]",
+   "[\"B0987Q68LY\",[[\"size\",\"1-light\"]]]",
+   "[\"B09893SXT4\",[[\"size\",\"4-light\"]]]",
+   "[\"B0989DWSGH\",[[\"size\",\"4-light\"]]]",
+   "[\"B0989WGF2K\",[[\"size\",\"4-light\"]]]",
+   "[\"B098J883VG\",[[\"size\",\"4 lights\"]]]",
+   "[\"B098QBKWTJ\",[[\"color\",\"01 - 1 sconces light\"]]]",
+   "[\"B098RBFFMS\",[[\"size\",\"4 lights\"]]]",
+   "[\"B098RCXLS4\",[[\"size\",\"4 lights\"]]]",
+   "[\"B0998RX4K8\",[[\"size\",\"4-light\"]]]",
+   "[\"B099F473HW\",[[\"color\",\"4-light\"]]]",
+   "[\"B099W34RMT\",[[\"size\",\"2 lights\"]]]",
+   "[\"B09B27FK8K\",[[\"size\",\"2-light\"]]]",
+   "[\"B09B2GK19G\",[[\"size\",\"2-light\"]]]",
+   "[\"B09B2QWWX7\",[[\"size\",\"2-light\"]]]",
+   "[\"B09BB557JC\",[[\"size\",\"4 lights\"]]]",
+   "[\"B09BC1568T\",[[\"size\",\"2-lights\"]]]",
+   "[\"B09BQFKRRW\",[[\"size\",\"4-light\"]]]",
+   "[\"B09C8KJNC4\",[[\"size\",\"4 light\"]]]",
+   "[\"B09CPP5FC3\",[[\"size\",\"4-lights\"]]]",
+   "[\"B09CQBWTY6\",[[\"size\",\"4-lights\"]]]",
+   "[\"B09CTGQG9M\",[[\"size\",\"1 light\"]]]",
+   "[\"B09CYDPHWZ\",[[\"size\",\"4-lights\"]]]",
+   "[\"B09D3DWFSZ\",[[\"color\",\"seeded glass- 1 light-2 pack\"]]]",
+   "[\"B09D7LJ3KJ\",[[\"color\",\"4 lights\"]]]",
+   "[\"B09DCRTTHS\",[[\"size\",\"2-light\"]]]",
+   "[\"B09DGDRWX2\",[[\"size\",\"2-light\"]]]",
+   "[\"B09DKLD9TG\",[[\"size\",\"4- lights\"]]]",
+   "[\"B09DLTD9KY\",[[\"color\",\"galvanized (1-light)\"]]]",
+   "[\"B09DND6W6M\",[[\"size\",\"2 light\"]]]",
+   "[\"B09DSB3384\",[[\"size\",\"2 lights\"]]]",
+   "[\"B09DYGY6YY\",[[\"size\",\"4 lights\"]]]",
+   "[\"B09FJF55RR\",[[\"size\",\"1 light\"]]]",
+   "[\"B09G2HMTP9\",[[\"color\",\"1-light\"]]]",
+   "[\"B09G9LL9BB\",[[\"size\",\"4-light\"]]]",
+   "[\"B09GFTCV22\",[[\"size\",\"2 lights\"]]]",
+   "[\"B09GFVX2Y2\",[[\"size\",\"2 lights\"]]]",
+   "[\"B09GLV6P4K\",[[\"size\",\"4-light\"]]]",
+   "[\"B09GVG9NTQ\",[[\"size\",\"2-light\"]]]",
+   "[\"B09HC2H4JD\",[[\"size\",\"4-light\"]]]",
+   "[\"B09HHG5522\",[[\"size\",\"1 light\"]]]",
+   "[\"B09HX1SHBD\",[[\"size\",\"4-light\"]]]",
+   "[\"B09HXDFTHN\",[[\"size\",\"4 lights\"]]]",
+   "[\"B09J2WTLN9\",[[\"size\",\"4 lights\"]]]",
+   "[\"B09J57SVMR\",[[\"size\",\"2-light\"]]]",
+   "[\"B09JFGT4DL\",[[\"size\",\"4-lights\"]]]",
+   "[\"B09JNZ23QZ\",[[\"size\",\"4-light\"]]]",
+   "[\"B09JRSWQDC\",[[\"size\",\"1 light\"]]]",
+   "[\"B09JWM749S\",[[\"size\",\"4 lights\"]]]",
+   "[\"B09KPR4VKB\",[[\"size\",\"2 lights\"]]]",
+   "[\"B09KSVVJFD\",[[\"size\",\"4-light\"]]]",
+   "[\"B09KTX5X3X\",[[\"size\",\"2-light 11.8 inch\"]]]",
+   "[\"B09L381K1F\",[[\"size\",\"1-light\"]]]",
+   "[\"B09L59P42S\",[[\"size\",\"4-light\"]]]",
+   "[\"B09LLV8Y2Q\",[[\"size\",\"4-light\"]]]",
+   "[\"B09LM829SQ\",[[\"size\",\"4-light\"]]]",
+   "[\"B09M863TDN\",[[\"size\",\"4-light\"]]]",
+   "[\"B09MD47TTT\",[[\"size\",\"4-light\"]]]",
+   "[\"B09MF336FR\",[[\"color\",\"4-light\"]]]",
+   "[\"B09MW39V3C\",[[\"color\",\"1-light\"]]]",
+   "[\"B09MZ8HMFR\",[[\"size\",\"4-light\"]]]",
+   "[\"B09N74R9RD\",[[\"size\",\"4-light\"]]]",
+   "[\"B09NCZZ9HH\",[[\"size\",\"4 lights\"]]]",
+   "[\"B09PD98SGX\",[[\"size\",\"1 light\"]]]",
+   "[\"B09QM98F2V\",[[\"size\",\"4-light\"]]]",
+   "[\"B09QPXZBGB\",[[\"size\",\"4 lights\"]]]",
+   "[\"B09R7WKZQY\",[[\"size\",\"4-lights\"]]]"
+  ],
+  "hash": "3588b0365a6a494d5859787180a9af83"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "5d7f7bef8f3fd416",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the vanities instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "c670da917b235c09",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the vanities instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "df40c92c46cf20af",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be makeup mirror."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f39bbd8f2de9c1f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5c47725249c228bb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c5682c7123d1f7f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0395e0a731e32ad0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 led instead of 4-light."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "9531bb4c02f114f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pack,gold instead of 4-light."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,189 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's fragrance",
+ "fidelity_notes": [],
+ "goal_idx": 413,
+ "ground_truth": {
+  "cardinality": 10,
+  "hash": "cd7a1fc475964e477c99bb1fc647e213",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01HIRQ93Y\",[[\"scent name\",\"good girl impression\"]]]",
+   "[\"B08DHJPGS6\",[[\"scent\",\"dior poison girl impression\"]]]",
+   "[\"B08DHXBHGG\",[[\"scent\",\"dior poison girl impression\"]]]",
+   "[\"B08DJ6D8X5\",[[\"scent\",\"dior poison girl impression\"]]]",
+   "[\"B08DM8YTF7\",[[\"scent\",\"dior poison girl impression\"]]]",
+   "[\"B08SJ16N4D\",[[\"scent\",\"dior poison girl impression\"]]]",
+   "[\"B08SJ3BSK5\",[[\"scent\",\"impression of poison girl\"]]]",
+   "[\"B08SJBD8CQ\",[[\"scent\",\"dior poison girl impression\"]]]",
+   "[\"B08SJGT3GL\",[[\"scent\",\"impression of poison girl\"]]]",
+   "[\"B09DJY3N7N\",[[\"scent\",\"dior poison girl impression\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:travel size",
+    "=",
+    "travel size"
+   ],
+   [
+    "option:0",
+    "=",
+    "impression of poison girl"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "763174ad6f5bdcaa"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "irrelevant_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [
+   {
+    "condition": [
+     "attr:cruelty-free",
+     "=",
+     "cruelty-free"
+    ],
+    "text": "cruelty-free certification"
+   }
+  ],
+  "family": "parameter",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:travel size",
+     "=",
+     "travel size"
+    ],
+    [
+     "option:0",
+     "=",
+     "impression of poison girl"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:cruelty-free",
+     "=",
+     "cruelty-free"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:travel size",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "25d6564af17e0105",
+  "strategy_id": "irrelevant_information",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for travel size women’s fragrances with the Impression of Poison Girl scent under $30, and they need to have a cruelty-free certification.",
+ "render_attempts": 3,
+ "sample_id": "8b543ec286a659f1",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's fragrance instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "513f2fa0f78b466f"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's fragrance instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "9a688c1ecdd65f58"
+  },
+  {
+   "announcement": "Also, it needs to be spray bottle.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "272820bac01376f0"
+  },
+  {
+   "announcement": "Also, it needs to be alcohol free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3a8b516c7c1a9a7f"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c89174cf0a1d5c08"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dc4fe8e6ce3933cf"
+  },
+  {
+   "announcement": "Actually, make it 1.0 ounce instead of impression of poison girl.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "726ac29f1c0122f4"
+  },
+  {
+   "announcement": "Actually, make it 1.3-fl. oz. instead of impression of poison girl.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d953ca355d1b9964"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "extras",
+  "true_card": 10,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a specific perfume fragrance called impression of a poison girl that comes in a travel size.",
+ "split": "test",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "tree_id": "c8618eaa2e794355",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,193 @@
+{
+ "sample_id": "86c4238225277bfb",
+ "tree_id": "b7f56949ca18947a",
+ "adapter": "webshop",
+ "cluster": "face makeup",
+ "goal_idx": 65,
+ "split": "test",
+ "source_instruction": "i need a concealer for dark circles that is in the color sassy",
+ "query": "I\u2019ve heard that those sassy little face makeup picks that cover dark circles work so well for pulling together a last-minute going-out look, and since all the ones that actually target dark circles seem to be totally sold out right now, I\u2019ve been scrolling through the section while waiting for my friend to finish picking out her lipstick, remembering how my roommate raved last week about how that fun, bold sassy vibe makes even late-night study session skin look put-together, all while staying under that $40 mark I\u2019ve been sticking to for makeup buys this month.",
+ "strategy_ids": [
+  "indirect_intent",
+  "false_presupposition"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+false_presupposition",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "false_presupposition"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "all the ones that actually target dark circles seem to be totally sold out right now",
+    "condition": null,
+    "about": [
+     "attr:dark circles",
+     "dark circles"
+    ],
+    "alternative": [
+     "attr:dark circles",
+     "sassy"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:dark circles",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:dark circles",
+     "=",
+     "sassy"
+    ],
+    [
+     "option:0",
+     "=",
+     "sassy"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d82f80c497cd1706"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 0,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 2,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "e545ba2f106aa687",
+  "conditions": [
+   [
+    "attr:dark circles",
+    "=",
+    "dark circles"
+   ],
+   [
+    "option:0",
+    "=",
+    "sassy"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B073Q4RHF9\",[[\"color\",\"sassy\"]]]",
+   "[\"B073WGFRM1\",[[\"color\",\"sassy\"]]]"
+  ],
+  "hash": "3b80347334716596798ded5c52bfa14f"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0199d13ad410cb7d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the face makeup instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a8e44c73234cf3cc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the face makeup instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "2eb7329cd5375a88",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be anti aging."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cd278cbd6773c5a3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be non toxic."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "56c6472de033f744",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d6dba3de9ecbca22",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "039b3ef8588cccad",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01 instead of sassy."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c64d6894f5bb4b29",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it (03 buff beige) instead of sassy."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

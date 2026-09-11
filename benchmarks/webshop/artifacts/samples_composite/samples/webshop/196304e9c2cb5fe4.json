@@ -1,0 +1,229 @@
+{
+ "sample_id": "196304e9c2cb5fe4",
+ "tree_id": "9e6997230fbcbfb5",
+ "adapter": "webshop",
+ "cluster": "toothpaste",
+ "goal_idx": 21,
+ "split": "test",
+ "source_instruction": "i  need fluoide free toothpaste for fresh breath.",
+ "query": "I stopped by the community garden on my walk home yesterday and spent nearly 40 minutes chatting with the retired guy who tends the tomato beds by the fence. He brought out a jar of the sun-warmed cherry tomatoes he\u2019d picked that morning to pass around to everyone lingering nearby, and they were so sweet they tasted like they\u2019d been dipped in a little sugar, no extra prep needed at all. A group of tiny kids from the daycare down the block came trotting through right as I was leaving, each clutching a crumpled dandelion they\u2019d picked along the path, and their teacher was laughing so hard she could barely corral them when one of the kids tried to tuck a dandelion behind her ear. I\u2019ve heard there\u2019s toothpaste that helps keep breath smelling fresh all day. I\u2019ve heard that option doesn\u2019t land too high on what people shell out for it, so it stays light on the wallet. I\u2019ve heard it\u2019s got none of that stuff people usually skip when they\u2019re looking at natural toothpaste.",
+ "strategy_ids": [
+  "indirect_intent",
+  "insufficient_information",
+  "contextual_irrelevance",
+  "lexical_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+insufficient_information+contextual_irrelevance+lexical_ambiguity",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "indirect_intent",
+   "insufficient_information",
+   "contextual_irrelevance",
+   "lexical_ambiguity"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "price_upper",
+   "insufficient_information": "attr:fluoride free"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:fluoride free"
+  ],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "doesn\u2019t land too high on what people shell out for it, so it stays light on the wallet",
+    "placements": [
+     [
+      "price_upper",
+      "30"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the community garden on my walk home yesterday and spent nearly 40 minutes chatting with the retired guy who tends the tomato beds by the fence. He brought out a jar of the sun-warmed cherry tomatoes he\u2019d picked that morning to pass around to everyone lingering nearby, and they were so sweet they tasted like they\u2019d been dipped in a little sugar, no extra prep needed at all. A group of tiny kids from the daycare down the block came trotting through right as I was leaving, each clutching a crumpled dandelion they\u2019d picked along the path, and their teacher was laughing so hard she could barely corral them when one of the kids tried to tuck a dandelion behind her ear.",
+  "retained": [
+   "attr:fresh breath"
+  ],
+  "hidden_slots": [
+   "attr:fluoride free",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:fresh breath",
+     "=",
+     "fresh breath"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "64141c671be2f299"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 21,
+  "lit_card": 153,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 110,
+    "true_card": 21,
+    "readings": 1
+   },
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     21,
+     23
+    ],
+    "true_card": 21,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "69dc1296e101714d",
+  "conditions": [
+   [
+    "attr:fluoride free",
+    "=",
+    "fluoride free"
+   ],
+   [
+    "attr:fresh breath",
+    "=",
+    "fresh breath"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:fluoride free",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 21,
+  "value": [
+   "[\"B000E3DX5W\",[]]",
+   "[\"B00692AHS8\",[]]",
+   "[\"B00DZNP1Y4\",[]]",
+   "[\"B01CWYEUWK\",[]]",
+   "[\"B077KJ6LT9\",[]]",
+   "[\"B07GT3YKXK\",[]]",
+   "[\"B07HHBZXSF\",[]]",
+   "[\"B07HJWFCBS\",[]]",
+   "[\"B07MNTKBTH\",[]]",
+   "[\"B07V9PR7LW\",[]]",
+   "[\"B07ZML21XH\",[]]",
+   "[\"B081SGNY71\",[]]",
+   "[\"B0821T9FSW\",[]]",
+   "[\"B0849R7MY1\",[]]",
+   "[\"B08HW1JFR6\",[]]",
+   "[\"B08N1J39Q8\",[]]",
+   "[\"B08Y6F32HY\",[]]",
+   "[\"B09L47X9R6\",[]]",
+   "[\"B09MQQWNJB\",[]]",
+   "[\"B09SCPZ512\",[]]",
+   "[\"B09SCVNW6X\",[]]"
+  ],
+  "hash": "9138c5db994df4fb1209cdb0329a2d97"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6131833197b2580f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ee2213fe4b5062d6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "47a34d0c6c3bc65c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be essential oils."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e7a0f81847ba9e8d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be electric toothbrush."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a58bb0a5beed6f1d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ba8e2e740978484f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "361a770f729a23ac",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 30."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "716c6606d891b77f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 30."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

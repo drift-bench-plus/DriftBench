@@ -1,0 +1,207 @@
+{
+ "adapter": "webshop",
+ "cluster": "breakfast foods",
+ "fidelity_notes": [],
+ "goal_idx": 205,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "b6a896b13c57556f69289b1a823b2955",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B077JGYFKM\",[[\"number of items\",\"1\"]]]",
+   "[\"B07DCY2VHK\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B07WHFF8QX\",[[\"size\",\"8 ounce (pack of 1)\"]]]",
+   "[\"B095YZT3VD\",[[\"size\",\"1 pack of 5 ounce\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:resealable bag",
+    "=",
+    "resealable bag"
+   ],
+   [
+    "option:0",
+    "=",
+    "1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "08483e7a6b2bf441"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "1"
+     ],
+     [
+      "option:0",
+      "any of the top few options (not specifically the very first one)"
+     ]
+    ],
+    "surface": "one of the first options I see"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "option:0",
+     "=",
+     "1"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "option:0",
+     "=",
+     "any of the top few options (not specifically the very first one)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:resealable bag",
+   "price_upper"
+  ],
+  "spec_id": "2e8730b244ad86ba",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a breakfast food under 30 dollars that comes in a bag, and I want one of the first options I see.",
+ "render_attempts": 2,
+ "sample_id": "dac57009177b89da",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the breakfast foods instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "20dd7cfec853f571"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the breakfast foods instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "85251a87f89861a6"
+  },
+  {
+   "announcement": "Also, it needs to be certified organic.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f142c6eae024df7d"
+  },
+  {
+   "announcement": "Also, it needs to be snack mix.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fe2f6b3ee8b1a993"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5cfb92e29c013f16"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8fd06777a768e843"
+  },
+  {
+   "announcement": "Actually, make it .3 pack instead of 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "394d30925d0d8828"
+  },
+  {
+   "announcement": "Actually, make it .2 pack instead of 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c921ca8299b69272"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   4,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for 1 resealed bag of puffed snacks",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "4fd468f18d2c448e",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "sample_id": "a76e95577bd3f957__false_presupposition",
+ "domain": "telecom",
+ "tree_id": "a76e95577bd3f957",
+ "query": "Since you guys already helped me disable the SIM PIN lock last time I called, I'm still having issues with my APN settings being broken even after I restarted my phone, and my SIM card is now asking for a PIN again which is locking it.",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "false_presupposition",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "false_presupposition"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you guys already helped me disable the SIM PIN lock last time I called",
+    "condition": null,
+    "about": [
+     "fault:lock_sim_card_pin",
+     "lock_sim_card_pin"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "fault:break_apn_settings",
+   "fault:lock_sim_card_pin"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "6dc631238cefdc7c"
+ },
+ "signature": {
+  "rule": "presupposed",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ]
+  ],
+  "hidden_slots": [
+   "fault:lock_sim_card_pin"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

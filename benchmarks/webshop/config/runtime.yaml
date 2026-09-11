@@ -1,0 +1,165 @@
+# Interaction-runtime config.  DELIBERATELY SEPARATE from default.yaml: config_hash()
+# excludes only `paths` and `workers`, and Graph.build folds that hash into every graph_id,
+# so putting runtime settings in default.yaml would change every graph id and bake LLM
+# settings (including the API-key variable name) into every graph file.
+
+runtime:
+  graphs_dir: artifacts            # which artifact set to play
+  episode_seed: 1234
+  # Questions have no separate count cap. Each costs patience, and the episode affordability
+  # rule forces the final answer when the user can no longer afford another question.
+  # 40, MEASURED (restored 2026-08-19). This file said 16 with the note ">= worst-case oracle
+  # (10) + headroom", but every reported campaign overrode it to 40 on the command line
+  # (tools/run_campaign_procs.sh: "the tool loop + conversation does not fit WebShop's bare
+  # 10-16") -- so the shipped config described no run anyone did, exactly like the 1/2/14
+  # patience economy did before 2026-08-19.
+  #
+  # 16 is not "oracle + headroom": the conversation shares the same budget as the tool loop.
+  # Measured over 4 x ~1,780 episodes at cap 40, the cap is NOT burned -- median 12-18 turns
+  # and only 4-7% of episodes reach it, because ~95% terminate on their own (patience
+  # exhaustion 54-59%, success 34-43%). At cap 16 the same arms died on the cap 16-43% of the
+  # time, with patience still unspent (A0/dependent held 6.6 of its 12), and it truncated A0
+  # about twice as often as A3 -- so a tight cap does not merely add noise, it biases the
+  # arm comparison. 40 leaves the economy, not the clock, deciding the episode.
+  max_turns: 40
+  # act_consumes_turn: REMOVED 2026-08-19 -- declared here but read
+  # nowhere in the source, so it never did anything.
+
+  # ---- master switches ----
+  # These were switched on at the command line for every reported run, but were absent
+  # from this file, so the shipped config did NOT reproduce those runs -- it silently ran
+  # with axis B off and the old simulated user. Verified from the trajectories themselves:
+  # 44% of w48/nothink episodes carry an intent shift, and 17% carry a reveal on a rejected
+  # proposal, which only the v2 user produces. Declared here so the file describes the
+  # experiments rather than a configuration nobody ran.
+  shift_scheduled: true           # master switch for axis B; shift_schedule picks the mode
+  user_v2: true                   # the simulated user that reacts to a proposal as a shopper
+
+  # ---- axis B: intent evolution ----
+  p_shift: 0.25
+  # How many user-facing actions (ASK/PROPOSE) may roll for a shift. null = every one.
+  # MEASURED 2026-08-12: rolling on every user action makes shift EXPOSURE a function of how
+  # much the agent talks -- 82% for the plain baseline vs 70% for a terser clarification arm --
+  # and within each stratum the arms scored identically, so a +6 point Success "gain" was
+  # entirely the reward for brevity. Capping the rolls fixes exposure across arms. The campaign
+  # pairs window 3 with p_shift 0.40, which reproduces the 78% episode-level exposure the old
+  # 0.20-per-action setting produced in practice: same difficulty, no longer behaviour-dependent.
+  shift_roll_window: null
+  category_probs:
+    REFINEMENT: 0.25
+    RELAXATION: 0.25
+    SUBSTITUTION: 0.30
+    PIVOT: 0.20
+  # THE SHIFT SCHEDULE (ruling 2026-08-19, settled). mode "persona": the persona decides
+  # how many shifts and where each sits on the PATIENCE axis (threshold = placement x
+  # initial patience; fires at the first user exchange after patience drops below it);
+  # the agent's questions can fire a shift early via suggestibility, spending the LAST
+  # scheduled placement ("budget minus one") -- clarity moves shifts earlier, never adds
+  # them, and solving fast avoids them. Placements/suggestibility live in persona.py:
+  #   rational (1.0,)x0.2 | avoidant (0.5,)x0.1 | intuitive (1.0,0.5)x0.5
+  #   dependent (0.66,0.33)x0.8 | spontaneous (1.0,0.5)x0.6
+  # mode "coin": the legacy 2026-08-14 episode-start draw (p_shift), for replays only.
+  shift_schedule: persona
+  max_shifts: 1                   # coin-mode cap; persona mode uses the persona's count
+  allow_revisit: false            # over NODES
+  on_empty_category: resample     # resample (renormalised) | skip
+  shift_after_mutation: forbid
+  # Axis-B arm. p_shift alone can fire the shift on turn 1, before the agent has
+  # committed to anything -- so nothing can go stale and STALE is unmeasurable. Set both
+  # this and p_shift: 1.0 to get a clean arm where every episode shifts AFTER a proposal.
+  shift_after_first_proposal: false
+  axis_b_on_write_graphs: false    # 77% of dbbench is write-type; see plan section 6.3
+  perturb_shift_announcements: false
+
+  # ---- axis A: perturbation ----
+  strategy_probs: {}              # empty => uniform over applicable FAMILIES, then strategies
+  withhold_k_max: 2
+  # How many misalignments land in ONE query. 1 is the normal case: a real user's sentence
+  # is usually wrong in a single way. Raise it to make the data harder -- the agent then has
+  # to notice that resolving one flaw leaves the request still misstated. Capped in practice
+  # by the number of conditions, since each hiding flaw consumes one and min_retained must
+  # survive; sample_strategies() prefers distinct mask kinds so k=2 is two KINDS of flaw.
+  misalignments_k: 1
+  composite_max_combinations: 24   # bound on the cross-product of per-strategy candidates
+  min_retained_conditions: 1
+  # MEASURED: WebShop's reward scores text similarity, so a bogus value very often still
+  # satisfies the intent -- the FALSIFY strategies made a sample on only 4 of 14 trees at 5
+  # attempts. Each attempt is a local cluster scan (no API call), so the budget is cheap.
+  falsify_max_attempts: 10
+  # MEASURED: with reasoning effort 'minimal' (the only setting that returns text at all),
+  # a single-flaw render passes fidelity 8/8 on the first attempt and a two-flaw composite
+  # 6/8 -- the failures are the model spilling its reasoning into the output. Five attempts
+  # puts template fallback effectively out of reach, and retries only cost on failure.
+  render_max_attempts: 5
+  # A shopper types a sentence or two. Observed live: one render returned 1,000 words of
+  # the model reasoning aloud, and fidelity passed it because every value appeared
+  # somewhere in the monologue.
+  render_max_words: 120
+
+  # ---- simulated user ----
+  persona: rational
+  max_consecutive_none: 3
+  min_reveal_after_n_asks: 2
+
+  # ---- patience ----
+  # THE OPERATING POINT (measured from the runs themselves, 2026-08-19). These are the
+  # values the reported campaigns actually ran under -- verified by reading patience
+  # deltas out of the trajectories, not by trusting this file: runs w32/w40/w48/nothink
+  # and every tau2 retail run charge ASK 2 and a refused proposal 4, from a base of 10.
+  # (An older generation of runs used 1/2 from a base of 14; those numbers are not the
+  # reported ones. This file used to still say 1/2/14, which is how a stale config can
+  # quietly misdescribe a whole campaign.)
+  patience_init: 10               # effective = patience_init * persona.patience_mult
+  cost_ask: 2                     # a question
+  cost_reject: 4                  # a proposal the user refuses -- twice a question
+  cost_malformed: 1
+  cost_act: 0                     # working the environment is free; the user does not wait on it
+
+llm:
+  base_url: https://ark.cn-beijing.volces.com/api/v3
+  model: doubao-seed-2-1-pro-260628
+  api_key_env: ARK_API_KEY        # never hardcode, never commit
+  temperature_render: 0.7
+  temperature_phrase: 0.3
+  temperature_select: 0.0
+  # agent-side roles (experiments). act is sampled, audit/judge are deterministic,
+  # sample is hot on purpose -- A2's gate IS the disagreement between hypotheses.
+  temperature_agent_act: 0.7
+  temperature_agent_audit: 0.0
+  temperature_agent_sample: 1.0
+  temperature_agent_judge: 0.0
+  agent_model: deepseek-v4-flash-260425   # cross-family vs the doubao user: no self-play
+  # DISABLED (ruling 2026-08-16): never silently substitute a different model for the agent.
+  # A provider degradation on 2026-08-15 sent 2-9% of agent CALLS to doubao-seed-2-1-pro -- a
+  # STRONGER model -- which touched 33-87% of episodes per run (an episode makes ~13 agent
+  # calls, so a small per-call rate is a large per-episode rate) and silently inflated whichever
+  # arm it hit. Correct behaviour is to WAIT and retry the SAME model; see llm.retry_attempts.
+  agent_model_fallback: ""
+  # Wait-and-retry budget for a degraded provider. 8 attempts with capped exponential backoff
+  # is ~4 minutes of patience per call, which rides out the kind of outage that previously
+  # triggered the fallback, at the cost of wall-clock rather than of comparability.
+  retry_attempts: 8
+  retry_backoff_cap_s: 60
+  max_output_tokens: 1024
+  # MEASURED, load-bearing: doubao-seed-2-1-pro is a reasoning model, and at default
+  # effort it spends the ENTIRE max_output_tokens budget on internal reasoning and returns
+  # output_text = "". Verified empty at caps of 256, 512, 1024 and 2048 on a normal render
+  # prompt. With effort=minimal the same prompt answers in 21 tokens and 1.2s instead of
+  # 15s. Raising the cap does not fix it -- only lowering effort does. Do not remove.
+  reasoning_effort: minimal       # minimal | low | medium | high; "" omits the field
+  # NO HIDDEN REASONING ANYWHERE (ruling 2026-08-19: "none of the thinking mode
+  # everywhere"). Declared here because the post-2026-08-16 campaigns passed it on the
+  # command line while this file said nothing -- the same config-vs-runs drift as the
+  # patience economy. With this true, reasoning_effort above is inert (the two are
+  # mutually exclusive per request). The switch SHAPE differs per model family and lives
+  # in llm.thinking_off_params(): doubao/deepseek/glm use thinking:disabled, qwen uses
+  # enable_thinking:false, gpt-5.x uses reasoning effort "none", gemini needs nothing.
+  disable_thinking: true
+  # "responses" = Ark Responses API (default). The model gateway serves Responses only for
+  # gpt-5.x, so a gateway-model config sets protocol: chat.
+  protocol: responses
+  timeout_s: 60
+  sdk_max_retries: 3
+  cache_dir: artifacts/llm_cache
+  prompt_version: v1
+  offline: false                  # true => cache-only; a miss is an error (CI)

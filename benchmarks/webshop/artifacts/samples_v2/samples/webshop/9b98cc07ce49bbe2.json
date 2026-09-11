@@ -1,0 +1,224 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair loss products",
+ "fidelity_notes": [],
+ "goal_idx": 468,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "76a3435f4415464d46dd8b92f9a99afc",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0785YLFQX\",[[\"color\",\"p-light blonde highlighted golden blonde #16 | 22\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+   "[\"B07CZKHLV6\",[[\"color\",\"golden blonde  | beach blonde\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+   "[\"B08KVNKJFL\",[[\"color\",\"golden blonde  | beach blonde\"],[\"size\",\"16 inch\"]]]",
+   "[\"B096M319FV\",[[\"color\",\"light golden blonde\"],[\"size\",\"18 inch\"]]]",
+   "[\"B09GXZJLB1\",[[\"color\",\"ba#16 | 22 light blonde highlighted golden blonde\"],[\"size\",\"18 inch\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "option:0",
+    "=",
+    "ba#16 | 22 light blonde highlighted golden blonde"
+   ],
+   [
+    "option:1",
+    "=",
+    "18 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "d4d04a4538409427"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "ba#16 | 22 light blonde highlighted golden blonde"
+     ],
+     [
+      "option:0",
+      "light in weight"
+     ]
+    ],
+    "surface": "light"
+   }
+  ],
+  "attempt": 1,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "ba#16 | 22 light blonde highlighted golden blonde"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "light in weight"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair extensions",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "1451d9a49bdaf792",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m browsing the hair loss products section, can you help me find extensions that are light, 18 inches long, and cost no more than $60?",
+ "render_attempts": 1,
+ "sample_id": "9b98cc07ce49bbe2",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair loss products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e0918b55ee9dfe8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair loss products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f0bfa433247a8172"
+  },
+  {
+   "announcement": "Also, it needs to be high quality.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "413d3d3eff4b4c43"
+  },
+  {
+   "announcement": "Also, it needs to be easy use.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d82b080ff531d397"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c9a30ee8e610e928"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d5d50deca78eed6d"
+  },
+  {
+   "announcement": "Actually, make it #1 jet black instead of ba#16 | 22 light blonde highlighted golden blonde.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0165c8246d7b9169"
+  },
+  {
+   "announcement": "Actually, make it #2 | 6 | 12 dark brown to medium brown with golden blonde instead of ba#16 | 22 light blonde highlighted golden blonde.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "47f06a1a49fc0177"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   5,
+   6
+  ],
+  "rule": "ambiguous",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for light blonde hair extensions that are 18 inches long.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "3753532cdccbf261",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

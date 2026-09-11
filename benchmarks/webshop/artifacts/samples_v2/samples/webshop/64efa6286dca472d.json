@@ -1,0 +1,230 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's jeans",
+ "fidelity_notes": [],
+ "goal_idx": 324,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "c882a63716c555e930af4d2182cd3630",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01MRNDYVF\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+   "[\"B01N1IZEXC\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+   "[\"B01N97KVM8\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+   "[\"B01N97KZLN\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+   "[\"B07C2DXQTP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+   "[\"B07C2DXR19\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+   "[\"B07C2DXSBQ\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+   "[\"B07C2F29CP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+   "[\"B07MWML5S1\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+   "[\"B07MWT9GKP\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]",
+   "[\"B07MWTMFX1\",[[\"fit type\",\"relaxed\"],[\"size\",\"31w x 38l\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:comfortable fit",
+    "=",
+    "comfortable fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "relaxed"
+   ],
+   [
+    "option:1",
+    "=",
+    "31w x 38l"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:comfortable fit"
+  ],
+  "intent_id": "033cb5d63b40e48d"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "attr:comfortable fit",
+      "comfortable fit"
+     ],
+     [
+      "attr:comfortable fit",
+      "soft fabric texture"
+     ]
+    ],
+    "surface": "really soft fit"
+   }
+  ],
+  "attempt": 3,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:comfortable fit"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:comfortable fit",
+     "=",
+     "comfortable fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "relaxed"
+    ],
+    [
+     "option:1",
+     "=",
+     "31w x 38l"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   [
+    [
+     "attr:comfortable fit",
+     "=",
+     "soft fabric texture"
+    ],
+    [
+     "option:0",
+     "=",
+     "relaxed"
+    ],
+    [
+     "option:1",
+     "=",
+     "31w x 38l"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "ae17f60af2d4e680",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for men’s jeans that have a nice relaxed cut, come in 31w x 38l, cost no more than $30, and have a really soft fit.",
+ "render_attempts": 3,
+ "sample_id": "64efa6286dca472d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1f3b01e202185b13"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "51e814878395a864"
+  },
+  {
+   "announcement": "Also, it needs to be imported zipper.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "70954fd0315a7b2c"
+  },
+  {
+   "announcement": "Also, it needs to be machine wash.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "edb18da6987743d1"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on), the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "REAL",
+   "to_intent": "540052e3acfa8998"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6da7580d6a8b1c99"
+  },
+  {
+   "announcement": "Actually, make it #3357 army green instead of relaxed.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "18599abfdbba36e1"
+  },
+  {
+   "announcement": "Actually, make it #3357 grey green instead of relaxed.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "aa73dcecc526032a"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   11,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want to find a pair of cowboy cut jeans with a relaxed, comfortable fit. the jeans need to be 31 inches in width and 38 inches in length.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "364e0ccf382f06d8",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

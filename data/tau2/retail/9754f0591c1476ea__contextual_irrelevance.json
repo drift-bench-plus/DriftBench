@@ -1,0 +1,93 @@
+{
+ "sample_id": "9754f0591c1476ea__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "9754f0591c1476ea",
+ "query": "I just came back from walking my golden retriever this afternoon, he chased a butterfly all the way across the community park and even stopped to say hi to a little kid who was eating ice cream. Oh right, I also tried that new matcha bakery near the subway station this morning, their red bean mochi is so chewy and not too sweet, I definitely want to go back to try their chiffon cake this weekend. My tomato plants on the balcony are finally starting to grow small buds too, I\u2019ve been watering them every other day for almost a month now, I\u2019m really looking forward to harvesting fresh tomatoes this summer. Anyway, I need to request a return for my delivered order #W3916020, I want to return the item with number 7758198585, and please refund the amount to my payment method credit_card_8105988.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just came back from walking my golden retriever this afternoon, he chased a butterfly all the way across the community park and even stopped to say hi to a little kid who was eating ice cream. Oh right, I also tried that new matcha bakery near the subway station this morning, their red bean mochi is so chewy and not too sweet, I definitely want to go back to try their chiffon cake this weekend. My tomato plants on the balcony are finally starting to grow small buds too, I\u2019ve been watering them every other day for almost a month now, I\u2019m really looking forward to harvesting fresh tomatoes this summer.",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"7758198585\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W3916020\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_8105988\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"7758198585\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W3916020\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_8105988\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

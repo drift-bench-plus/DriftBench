@@ -1,0 +1,104 @@
+{
+ "sample_id": "f3f349039bb80173__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "f3f349039bb80173",
+ "query": "Last week I took my rescue golden retriever to the new dog park near the downtown community center, and he made so many new puppy friends that he was too tired to eat his favorite peanut butter treats when we got home. I\u2019ve also been trying out a new sourdough recipe lately, and my third loaf actually came out with a perfect crispy crust and soft, chewy center that tastes amazing with a little homemade raspberry jam. I even found a cute small batch ceramic mug at the local farmers\u2019 market last weekend that keeps my morning coffee warm for almost three hours, which has been a total game changer for my work from home routine. Now I need to exchange some items from my delivered order #W5838674, I want to swap items 7441167885 and 3478699712 for items 3815173328 and 6017636844, and use gift_card_9368765 as the payment method for any applicable fees for this exchange.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last week I took my rescue golden retriever to the new dog park near the downtown community center, and he made so many new puppy friends that he was too tired to eat his favorite peanut butter treats when we got home. I\u2019ve also been trying out a new sourdough recipe lately, and my third loaf actually came out with a perfect crispy crust and soft, chewy center that tastes amazing with a little homemade raspberry jam. I even found a cute small batch ceramic mug at the local farmers\u2019 market last weekend that keeps my morning coffee warm for almost three hours, which has been a total game changer for my work from home routine.",
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"7441167885\",\"3478699712\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"3815173328\",\"6017636844\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W5838674\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_9368765\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"7441167885\",\"3478699712\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"3815173328\",\"6017636844\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W5838674\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_9368765\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

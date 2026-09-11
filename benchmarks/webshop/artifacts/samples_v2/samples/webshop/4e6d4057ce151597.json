@@ -1,0 +1,193 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's flats",
+ "fidelity_notes": [],
+ "goal_idx": 41,
+ "ground_truth": {
+  "cardinality": 28,
+  "hash": "10780f8862e30169f606b5787d3c3c9c",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07BMLVX16\",[[\"size\",\"us:7.5(cn:37)\"]]]",
+   "[\"B07HF57J75\",[[\"size\",\"5.5\"]]]",
+   "[\"B07RRND2YB\",[[\"size\",\"5\"]]]",
+   "[\"B07VHNQXYD\",[[\"size\",\"7.5\"]]]",
+   "[\"B081M1632W\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B081T63T3Z\",[[\"size\",\"us:6.5-7=cn:37\"]]]",
+   "[\"B081T7ZCYM\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B08BXMR79H\",[[\"size\",\"7\"]]]",
+   "[\"B08BXNGCP4\",[[\"size\",\"7\"]]]",
+   "[\"B08TMTGPV6\",[[\"size\",\"5.5\"]]]",
+   "[\"B08W3D5642\",[[\"size\",\"7\"]]]",
+   "[\"B0995XLWYH\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09B3ZGXK6\",[[\"size\",\"7\"]]]",
+   "[\"B09DQ6VYGT\",[[\"size\",\"7\"]]]",
+   "[\"B09HC7FPDC\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09JCDQ9FD\",[[\"size\",\"7\"]]]",
+   "[\"B09K74T4LZ\",[[\"size\",\"7.5 wide\"]]]",
+   "[\"B09LCNVMBV\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09LSWJ2Z6\",[[\"size\",\"7\"]]]",
+   "[\"B09M2B4NZ9\",[[\"size\",\"7\"]]]",
+   "[\"B09MLTB56D\",[[\"size\",\"5.5\"]]]",
+   "[\"B09MMYV8M8\",[[\"size\",\"5.5\"]]]",
+   "[\"B09MZGL7QP\",[[\"size\",\"7\"]]]",
+   "[\"B09NRRZ1T1\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09PNKGWYX\",[[\"size\",\"5.5\"]]]",
+   "[\"B09PNLX519\",[[\"size\",\"5.5\"]]]",
+   "[\"B09Q3HJSNH\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09QSW7LZ3\",[[\"size\",\"7\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:winter warm",
+    "=",
+    "winter warm"
+   ],
+   [
+    "option:0",
+    "=",
+    "7.5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "78ce867d31453fa0"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:winter warm",
+     "=",
+     "winter warm"
+    ],
+    [
+     "option:0",
+     "=",
+     "7.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning planting new pansy bulbs in my windowsill planter, and I’m so excited to see them bloom in soft purple and yellow once spring rolls around. My neighbor dropped off a jar of homemade strawberry jam yesterday too, it’s got little chunks of fruit in it and tastes amazing on toasted sourdough. I’ve also been rewatching that old cozy gardening show every evening while I knit a scarf for my cat.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:winter warm",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning planting new pansy bulbs in my windowsill planter, and I’m so excited to see them bloom in soft purple and yellow once spring rolls around. My neighbor dropped off a jar of homemade strawberry jam yesterday too, it’s got little chunks of fruit in it and tastes amazing on toasted sourdough. I’ve also been rewatching that old cozy gardening show every evening while I knit a scarf for my cat. I’m looking for women’s flats that are winter warm, size 7.5, with a price limit of $30.",
+ "render_attempts": 1,
+ "sample_id": "4e6d4057ce151597",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's flats instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "646f70b4c5c8559d"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's flats instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "9ec03bda172208c6"
+  },
+  {
+   "announcement": "Also, it needs to be dress shoes.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "21ba9ea19270a5ad"
+  },
+  {
+   "announcement": "Also, it needs to be ankle strap.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "581542e413602d22"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1184f8f88f0e0b08"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ceb2d92dc22e7e53"
+  },
+  {
+   "announcement": "Actually, make it 005 grey instead of 7.5.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "294b895897f50415"
+  },
+  {
+   "announcement": "Actually, make it #01-khaki instead of 7.5.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e04a87be2f029d6f"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 28,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 28,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for winter warm ankle boots for women. my size is 7.5.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "9998e10e55e4c8df",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

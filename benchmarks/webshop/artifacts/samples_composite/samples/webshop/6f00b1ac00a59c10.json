@@ -1,0 +1,273 @@
+{
+ "sample_id": "6f00b1ac00a59c10",
+ "tree_id": "3a1a586b74097790",
+ "adapter": "webshop",
+ "cluster": "lips makeup",
+ "goal_idx": 333,
+ "split": "test",
+ "source_instruction": "find me a paraben free long lasting lip gloss",
+ "query": "Hey, I\u2019m browsing the lip makeup section right now and need to grab something that\u2019s totally paraben free, y\u2019know? Don\u2019t show me anything over that one budget cap I always stick to, yeah? I don\u2019t want stuff that wears off super quick right after I put it on, obviously.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+insufficient_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "attr:long lasting"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:long lasting"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:paraben free"
+  ],
+  "hidden_slots": [
+   "attr:long lasting",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:paraben free",
+     "=",
+     "paraben free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "4f272ac2b2a44827"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 83,
+  "lit_card": 216,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 87,
+    "true_card": 83,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 207,
+    "true_card": 83,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "64423c5393064d29",
+  "conditions": [
+   [
+    "attr:long lasting",
+    "=",
+    "long lasting"
+   ],
+   [
+    "attr:paraben free",
+    "=",
+    "paraben free"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:long lasting",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 83,
+  "value": [
+   "[\"B00028OUHY\",[]]",
+   "[\"B0009XJNLK\",[]]",
+   "[\"B000GBK25Q\",[]]",
+   "[\"B000IG4TH6\",[]]",
+   "[\"B000IG6SRA\",[]]",
+   "[\"B000URWZ38\",[]]",
+   "[\"B0017YUVMA\",[]]",
+   "[\"B001I6O42U\",[]]",
+   "[\"B001TO5QDC\",[]]",
+   "[\"B002EZMNG8\",[]]",
+   "[\"B005AL5H9S\",[]]",
+   "[\"B00DFMVMO8\",[]]",
+   "[\"B00M69SLUO\",[]]",
+   "[\"B00P5FGRMA\",[]]",
+   "[\"B00T5DZ4C2\",[]]",
+   "[\"B00UIBKNSA\",[]]",
+   "[\"B016WXIVLS\",[]]",
+   "[\"B01FYO3MAG\",[]]",
+   "[\"B01GL6XCEM\",[]]",
+   "[\"B01GUEJYG0\",[]]",
+   "[\"B01M8N0QBI\",[]]",
+   "[\"B01N46PYZO\",[]]",
+   "[\"B01N4Q8XOL\",[]]",
+   "[\"B01NBWJB3Z\",[]]",
+   "[\"B06XQ15MZG\",[]]",
+   "[\"B06XTBGPT5\",[]]",
+   "[\"B06Y5QFJH4\",[]]",
+   "[\"B073DQZXPW\",[]]",
+   "[\"B075733YQZ\",[]]",
+   "[\"B075KQZPQ5\",[]]",
+   "[\"B075QXJ68W\",[]]",
+   "[\"B07652VVCT\",[]]",
+   "[\"B076YFNT18\",[]]",
+   "[\"B076YHXVLM\",[]]",
+   "[\"B078JFSCGZ\",[]]",
+   "[\"B07B6DT1B5\",[]]",
+   "[\"B07CW615ND\",[]]",
+   "[\"B07GC68FWD\",[]]",
+   "[\"B07GC7LMR9\",[]]",
+   "[\"B07NLZP6PB\",[]]",
+   "[\"B07NY8PPGC\",[]]",
+   "[\"B07NY8QRN7\",[]]",
+   "[\"B07NZ5JBF4\",[]]",
+   "[\"B07NZ5VF5D\",[]]",
+   "[\"B07P1931ZW\",[]]",
+   "[\"B07PFCXN5Z\",[]]",
+   "[\"B07TT8MP7X\",[]]",
+   "[\"B07YZB55WB\",[]]",
+   "[\"B07Z9RCQRK\",[]]",
+   "[\"B083BF3GJT\",[]]",
+   "[\"B084D93HGK\",[]]",
+   "[\"B0865C1D6R\",[]]",
+   "[\"B087J7WY3J\",[]]",
+   "[\"B088PZN2QP\",[]]",
+   "[\"B08HR97HHM\",[]]",
+   "[\"B08M2HY7X5\",[]]",
+   "[\"B08MR3DFM7\",[]]",
+   "[\"B08PZHDMPQ\",[]]",
+   "[\"B08QSTQ44J\",[]]",
+   "[\"B08T8Q5JXC\",[]]",
+   "[\"B08T8RM755\",[]]",
+   "[\"B08WJM1QGJ\",[]]",
+   "[\"B08WJMQLZH\",[]]",
+   "[\"B08WJN6TCR\",[]]",
+   "[\"B08WJNHB27\",[]]",
+   "[\"B08WKQSKRX\",[]]",
+   "[\"B08X9WXST8\",[]]",
+   "[\"B092RHQ22N\",[]]",
+   "[\"B093L9YDS6\",[]]",
+   "[\"B094W5RGV9\",[]]",
+   "[\"B097J47RQ2\",[]]",
+   "[\"B097KK8S9X\",[]]",
+   "[\"B099V89LVH\",[]]",
+   "[\"B09BG83GKS\",[]]",
+   "[\"B09F6BFP62\",[]]",
+   "[\"B09LMP4NFQ\",[]]",
+   "[\"B09MZFPKXZ\",[]]",
+   "[\"B09MZFYHHR\",[]]",
+   "[\"B09MZGTMXG\",[]]",
+   "[\"B09MZJKHNM\",[]]",
+   "[\"B09NXBCCX6\",[]]",
+   "[\"B09PD86JQL\",[]]",
+   "[\"B09QL3BLPD\",[]]"
+  ],
+  "hash": "d12afa37947df19cb0ab6047eaf239f1"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "60aacf749f46a006",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the lips makeup instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "dfa34579b47ac53f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the lips makeup instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "034640ad43f47e6a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be lip balm."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a41cfe4ab7fac451",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be alcohol free."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2434c3e4851ca6ff",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "af2f0b7d2fe75c92",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "558be7b135c97869",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 40."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cc163195cc06df7a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 40."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "adapter": "webshop",
+ "cluster": "lenses",
+ "fidelity_notes": [],
+ "goal_idx": 107,
+ "ground_truth": {
+  "cardinality": 7,
+  "hash": "0e7e0f6b2195834c06ad6888087fce0f",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07J3Y6LVY\",[[\"color\",\"crystal ab-12 pro max\"]]]",
+   "[\"B09KTLJD8F\",[[\"color\",\"b-crystal clear\"]]]",
+   "[\"B09LQNZLP3\",[[\"color\",\"crystal clear+len def\"]]]",
+   "[\"B09NN6T68X\",[[\"color\",\"crystal clear\"]]]",
+   "[\"B09NN8CNVP\",[[\"color\",\"crystal clear\"]]]",
+   "[\"B09QS816PL\",[[\"color\",\"crystal clear\"]]]",
+   "[\"B09SFPSLX5\",[[\"color\",\"crystal clear\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:tempered glass",
+    "=",
+    "tempered glass"
+   ],
+   [
+    "option:0",
+    "=",
+    "crystal ab-12 pro max"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "1517a244d9504ae9"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "irrelevant_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [
+   {
+    "condition": [
+     "attr:scratch-resistant coating",
+     "=",
+     "included"
+    ],
+    "text": "scratch-resistant coating included"
+   }
+  ],
+  "family": "parameter",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:tempered glass",
+     "=",
+     "tempered glass"
+    ],
+    [
+     "option:0",
+     "=",
+     "crystal ab-12 pro max"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:scratch-resistant coating",
+     "=",
+     "included"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:tempered glass",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "1d7e5efd3b6689f2",
+  "strategy_id": "irrelevant_information",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for tempered glass lenses for the crystal ab-12 pro max, with a price under $30 and a scratch-resistant coating included.",
+ "render_attempts": 1,
+ "sample_id": "0307b83d260996af",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the lenses instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "85f39e39db8e90bf"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the lenses instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a30a8a150afddc1b"
+  },
+  {
+   "announcement": "Also, it needs to be aluminum alloy.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "228fb8c21ef0a6fc"
+  },
+  {
+   "announcement": "Also, it needs to be wireless charger.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3fa8481e00246e3e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "303e9f0c78512f61"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5835b6891b05b91b"
+  },
+  {
+   "announcement": "Actually, make it 10 pack instead of crystal ab-12 pro max.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5c13c7712608e224"
+  },
+  {
+   "announcement": "Actually, make it 12 | screen protector*4+lens protector*2 instead of crystal ab-12 pro max.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c591eda4e3aa05bd"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "extras",
+  "true_card": 7,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a tempered glass cell phone case.",
+ "split": "test",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "tree_id": "a3d74d83be69cd24",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

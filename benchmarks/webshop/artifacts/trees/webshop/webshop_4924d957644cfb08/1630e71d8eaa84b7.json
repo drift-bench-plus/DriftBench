@@ -1,0 +1,880 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B07KYKPRQH",
+    "cluster": "men's work & safety footwear",
+    "name": "Skechers Men's Greetah Construction Shoe",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+   },
+   "bound_slots": [
+    "attr:memory foam",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:memory foam",
+     "=",
+     "memory foam"
+    ],
+    [
+     "option:0",
+     "=",
+     "navy"
+    ],
+    [
+     "option:1",
+     "=",
+     "7.5 wide"
+    ],
+    [
+     "price_upper",
+     "<=",
+     80
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ab4fd0dff15967e74a0c8c43e8f927cf",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07FBJ494Z\",[[\"color\",\"navy\"],[\"size\",\"7\"]]]",
+     "[\"B07KYKPRQH\",[[\"color\",\"navy\"],[\"size\",\"7\"]]]",
+     "[\"B08PC6RVKK\",[[\"color\",\"navy\"],[\"size\",\"7\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7dea39dd9a077edd",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's work & safety footwear",
+    "goal": {
+     "asin": "B07KYKPRQH",
+     "attributes": [
+      "memory foam"
+     ],
+     "category": "",
+     "goal_options": [
+      "navy",
+      "7.5 wide"
+     ],
+     "name": "Skechers Men's Greetah Construction Shoe",
+     "price_upper": 80,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes",
+     "query": "men's work & safety footwear"
+    }
+   },
+   "source_record": "b33a27f97544c386",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08FM6347F",
+    "cluster": "men's work & safety footwear",
+    "name": "SUADEX Indestructible Steel Toe Shoes Men Women Work Safety Shoes Non-Slip Puncture-Proof Composite Toe Sneakers",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+   },
+   "bound_slots": [
+    "attr:anti slip",
+    "attr:rubber sole",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:anti slip",
+     "=",
+     "anti slip"
+    ],
+    [
+     "attr:rubber sole",
+     "=",
+     "rubber sole"
+    ],
+    [
+     "option:0",
+     "=",
+     "f black"
+    ],
+    [
+     "option:1",
+     "=",
+     "7.5 women | 6 men"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "f795f356b563b1e90e860391e455d3b5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07M5SCXQN\",[[\"color\",\"black\"],[\"size\",\"6\"]]]",
+     "[\"B07TZ1K3HY\",[[\"color\",\"black gray yellow\"],[\"size\",\"7.5\"]]]",
+     "[\"B07VVXYK46\",[[\"color\",\"black\"],[\"size\",\"7.5 women | 6 men\"]]]",
+     "[\"B07WJ5FLLX\",[[\"color\",\"zblack\"],[\"size\",\"6.5 women | 5 men\"]]]",
+     "[\"B084QHS94F\",[[\"color\",\"black\"],[\"size\",\"7\"]]]",
+     "[\"B089JXYSBN\",[[\"color\",\"black(807)\"],[\"size\",\"7 women | 7 men\"]]]",
+     "[\"B08BCTK3NK\",[[\"color\",\"black\"],[\"size\",\"6.5\"]]]",
+     "[\"B08F7WBX93\",[[\"color\",\"black(807)\"],[\"size\",\"7 women | 7 men\"]]]",
+     "[\"B08F7WF3RT\",[[\"color\",\"black(807)\"],[\"size\",\"7 women | 7 men\"]]]",
+     "[\"B08F7Y89LH\",[[\"color\",\"black(807)\"],[\"size\",\"7 women | 7 men\"]]]",
+     "[\"B08F7YH2DW\",[[\"color\",\"black(807)\"],[\"size\",\"7 women | 7 men\"]]]",
+     "[\"B08FM6347F\",[[\"color\",\"f black\"],[\"size\",\"6.5 women | 5 men\"]]]",
+     "[\"B08HQR8MKY\",[[\"color\",\"black\"],[\"size\",\"6 women | 5 men\"]]]",
+     "[\"B08TCHN9HZ\",[[\"color\",\"black\"],[\"size\",\"women 6\"]]]",
+     "[\"B08TR2LRNF\",[[\"color\",\"black\"],[\"size\",\"women 6.5\"]]]",
+     "[\"B08TWXKKY5\",[[\"color\",\"black\"],[\"size\",\"women 6.5\"]]]",
+     "[\"B08TZMFH6L\",[[\"color\",\"black\"],[\"size\",\"7\"]]]",
+     "[\"B08ZLJSPCP\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B0927QY6MP\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B094VZV4CR\",[[\"color\",\"black&gray\"],[\"size\",\"7.5\"]]]",
+     "[\"B095P1945K\",[[\"color\",\"black\"],[\"size\",\"7\"]]]",
+     "[\"B0979YT5QB\",[[\"color\",\"black\"],[\"size\",\"6.5 women | 5 men\"]]]",
+     "[\"B097R5CFGW\",[[\"color\",\"830-black\"],[\"size\",\"6.5-7 women | 4.5-5 men\"]]]",
+     "[\"B097SS62GD\",[[\"color\",\"825black\"],[\"size\",\"6.5\"]]]",
+     "[\"B099S48P21\",[[\"color\",\"black\"],[\"size\",\"6.5\"]]]",
+     "[\"B09B1M5RHG\",[[\"color\",\"black b\"],[\"size\",\"6.5\"]]]",
+     "[\"B09B734JPV\",[[\"color\",\"black\"],[\"size\",\"8 women | 7 men\"]]]",
+     "[\"B09H2LDR9B\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B09HZPXMBR\",[[\"color\",\"black\"],[\"size\",\"6.5\"]]]",
+     "[\"B09J86RP5M\",[[\"color\",\"black\"],[\"size\",\"7\"]]]",
+     "[\"B09KKL3WQD\",[[\"color\",\"black\"],[\"size\",\"6.5 women | 5 men\"]]]",
+     "[\"B09NQ1V97K\",[[\"color\",\"a black\"],[\"size\",\"8.5 women | 6.5 men\"]]]",
+     "[\"B09QG9KTG7\",[[\"color\",\"black\"],[\"size\",\"7\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "ecd05ee6ce66071b",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's work & safety footwear",
+    "goal": {
+     "asin": "B08FM6347F",
+     "attributes": [
+      "anti slip",
+      "rubber sole"
+     ],
+     "category": "",
+     "goal_options": [
+      "f black",
+      "7.5 women | 6 men"
+     ],
+     "name": "SUADEX Indestructible Steel Toe Shoes Men Women Work Safety Shoes Non-Slip Puncture-Proof Composite Toe Sneakers",
+     "price_upper": 60,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes",
+     "query": "men's work & safety footwear"
+    }
+   },
+   "source_record": "13b5debea9b9000a",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NPXWNMY",
+    "cluster": "men's work & safety footwear",
+    "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+   },
+   "bound_slots": [
+    "attr:light weight",
+    "attr:memory foam",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:light weight",
+     "=",
+     "light weight"
+    ],
+    [
+     "attr:memory foam",
+     "=",
+     "memory foam"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "14dda3468cab578e0fac3be7657d7fdc",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B097PJ8ZRF\",[[\"color\",\"a01_black\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c631d84d33eb22a5",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's work & safety footwear",
+    "goal": {
+     "asin": "B09NPXWNMY",
+     "attributes": [
+      "light weight",
+      "memory foam"
+     ],
+     "category": "",
+     "goal_options": [
+      "black"
+     ],
+     "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+     "price_upper": 60,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes",
+     "query": "men's work & safety footwear"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NPXWNMY",
+    "cluster": "men's work & safety footwear",
+    "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+   },
+   "bound_slots": [
+    "attr:light weight",
+    "attr:quick drying",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:light weight",
+     "=",
+     "light weight"
+    ],
+    [
+     "attr:quick drying",
+     "=",
+     "quick drying"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "14dda3468cab578e0fac3be7657d7fdc",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B097PJ8ZRF\",[[\"color\",\"a01_black\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "166babd4693798cf",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's work & safety footwear",
+    "goal": {
+     "asin": "B09NPXWNMY",
+     "attributes": [
+      "light weight",
+      "quick drying"
+     ],
+     "category": "",
+     "goal_options": [
+      "black"
+     ],
+     "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+     "price_upper": 60,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes",
+     "query": "men's work & safety footwear"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NPXWNMY",
+    "cluster": "men's work & safety footwear",
+    "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+   },
+   "bound_slots": [
+    "attr:light weight",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:light weight",
+     "=",
+     "light weight"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2171f7c679ef4c53320cac4b83f8333f",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003RQ0Y28\",[]]",
+     "[\"B005BGY5FO\",[]]",
+     "[\"B005BHXOPK\",[]]",
+     "[\"B015R08K68\",[]]",
+     "[\"B074PFPGHC\",[]]",
+     "[\"B07T8JJV8T\",[]]",
+     "[\"B07WQSCGDQ\",[]]",
+     "[\"B07WQV76H8\",[]]",
+     "[\"B07Z7FMHVG\",[]]",
+     "[\"B0828ZCS2T\",[]]",
+     "[\"B089QDRZKH\",[]]",
+     "[\"B08BP3FY3J\",[]]",
+     "[\"B08DXPYLHZ\",[]]",
+     "[\"B08GC7FP5S\",[]]",
+     "[\"B08W3CNDLD\",[]]",
+     "[\"B0957JDVLS\",[]]",
+     "[\"B096JQX63Z\",[]]",
+     "[\"B097PJ8ZRF\",[]]",
+     "[\"B098JSTV4D\",[]]",
+     "[\"B09B1M5RHG\",[]]",
+     "[\"B09JPDCKBX\",[]]",
+     "[\"B09NPXK3BZ\",[]]",
+     "[\"B09NPXMH94\",[]]",
+     "[\"B09NPXTCGX\",[]]",
+     "[\"B09NPXTQH5\",[]]",
+     "[\"B09NPXVGHG\",[]]",
+     "[\"B09NPXWNMY\",[]]",
+     "[\"B09NPXZC6S\",[]]",
+     "[\"B09NPYSCM8\",[]]",
+     "[\"B09NY645T9\",[]]",
+     "[\"B09NY6CGSN\",[]]",
+     "[\"B09PG34DTS\",[]]",
+     "[\"B09PG36QGC\",[]]",
+     "[\"B09PG3YMGK\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "72f12476cf3e136a",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's work & safety footwear",
+    "goal": {
+     "asin": "B09NPXWNMY",
+     "attributes": [
+      "light weight"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+     "price_upper": 60,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes",
+     "query": "men's work & safety footwear"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NPXWNMY",
+    "cluster": "men's work & safety footwear",
+    "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+   },
+   "bound_slots": [
+    "attr:light weight",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:light weight",
+     "=",
+     "light weight"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "b135c99cd7b1902e8b449c2066034a79",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B074PFPGHC\",[[\"color\",\"black\"]]]",
+     "[\"B07JXYWDVR\",[[\"color\",\"black\"]]]",
+     "[\"B07T8JJV8T\",[[\"color\",\"black\"]]]",
+     "[\"B083L9XK21\",[[\"color\",\"black\"]]]",
+     "[\"B08BP3FY3J\",[[\"color\",\"797-black\"]]]",
+     "[\"B08KZVZHTB\",[[\"color\",\"black\"]]]",
+     "[\"B08L7ZH89W\",[[\"color\",\"black(fourseasons)\"]]]",
+     "[\"B08MQ3FFTP\",[[\"color\",\"black\"]]]",
+     "[\"B08MQDB8BF\",[[\"color\",\"black\"]]]",
+     "[\"B08MTXJV9G\",[[\"color\",\"black\"]]]",
+     "[\"B08MW8YHX1\",[[\"color\",\"black\"]]]",
+     "[\"B08MXNG5TB\",[[\"color\",\"black\"]]]",
+     "[\"B08QDGNBZD\",[[\"color\",\"black\"]]]",
+     "[\"B08W3CNDLD\",[[\"color\",\"black | red\"]]]",
+     "[\"B09448VNTB\",[[\"color\",\"black | yellow\"]]]",
+     "[\"B0957JDVLS\",[[\"color\",\"023-black\"]]]",
+     "[\"B096JQX63Z\",[[\"color\",\"black-21\"]]]",
+     "[\"B097PJ8ZRF\",[[\"color\",\"a01_black\"]]]",
+     "[\"B098JSTV4D\",[[\"color\",\"black\"]]]",
+     "[\"B09B1M5RHG\",[[\"color\",\"black b\"]]]",
+     "[\"B09JPDCKBX\",[[\"color\",\"striped black\"]]]",
+     "[\"B09MJW499S\",[[\"color\",\"black\"]]]",
+     "[\"B09MVMQYRR\",[[\"color\",\"black\"]]]",
+     "[\"B09NPXK3BZ\",[[\"color\",\"black\"]]]",
+     "[\"B09NPXTCGX\",[[\"color\",\"black\"]]]",
+     "[\"B09NPXVGHG\",[[\"color\",\"black\"]]]",
+     "[\"B09NPXWNMY\",[[\"color\",\"black\"]]]",
+     "[\"B09NPXZC6S\",[[\"color\",\"black\"]]]",
+     "[\"B09NY645T9\",[[\"color\",\"black\"]]]",
+     "[\"B09PG34DTS\",[[\"color\",\"black\"]]]",
+     "[\"B09PG36QGC\",[[\"color\",\"black\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "4d6b71b29d81c8bb",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's work & safety footwear",
+    "goal": {
+     "asin": "B09NPXWNMY",
+     "attributes": [
+      "light weight"
+     ],
+     "category": "",
+     "goal_options": [
+      "black"
+     ],
+     "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+     "price_upper": 1000000,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes",
+     "query": "men's work & safety footwear"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NPXWNMY",
+    "cluster": "men's work & safety footwear",
+    "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+   },
+   "bound_slots": [
+    "attr:light weight",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:light weight",
+     "=",
+     "light weight"
+    ],
+    [
+     "option:0",
+     "=",
+     "11 narrow"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "06e534137da3a05daaffa0e8d5f72dad",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003RQ0Y28\",[[\"size\",\"11\"]]]",
+     "[\"B005BGY5FO\",[[\"size\",\"11\"]]]",
+     "[\"B015R08K68\",[[\"size\",\"11\"]]]",
+     "[\"B074PFPGHC\",[[\"size\",\"11\"]]]",
+     "[\"B07Z7FMHVG\",[[\"size\",\"11\"]]]",
+     "[\"B08W3CNDLD\",[[\"size\",\"11\"]]]",
+     "[\"B0957JDVLS\",[[\"size\",\"11\"]]]",
+     "[\"B096JQX63Z\",[[\"size\",\"11\"]]]",
+     "[\"B097PJ8ZRF\",[[\"size\",\"11\"]]]",
+     "[\"B09B1M5RHG\",[[\"size\",\"11\"]]]",
+     "[\"B09JPDCKBX\",[[\"size\",\"11\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "bc2f9add26b21668",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's work & safety footwear",
+    "goal": {
+     "asin": "B09NPXWNMY",
+     "attributes": [
+      "light weight"
+     ],
+     "category": "",
+     "goal_options": [
+      "11 narrow"
+     ],
+     "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+     "price_upper": 60,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes",
+     "query": "men's work & safety footwear"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NPXWNMY",
+    "cluster": "men's work & safety footwear",
+    "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+   },
+   "bound_slots": [
+    "attr:light weight",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:light weight",
+     "=",
+     "light weight"
+    ],
+    [
+     "option:0",
+     "=",
+     "10.5 wide"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "5be72734ee8d58180549bf347188ad4d",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003RQ0Y28\",[[\"size\",\"10\"]]]",
+     "[\"B005BGY5FO\",[[\"size\",\"10\"]]]",
+     "[\"B005BHXOPK\",[[\"size\",\"10 wide\"]]]",
+     "[\"B015R08K68\",[[\"size\",\"10\"]]]",
+     "[\"B074PFPGHC\",[[\"size\",\"5\"]]]",
+     "[\"B07Z7FMHVG\",[[\"size\",\"10\"]]]",
+     "[\"B08GC7FP5S\",[[\"size\",\"10\"]]]",
+     "[\"B08W3CNDLD\",[[\"size\",\"5.5\"]]]",
+     "[\"B0957JDVLS\",[[\"size\",\"10\"]]]",
+     "[\"B096JQX63Z\",[[\"size\",\"10\"]]]",
+     "[\"B097PJ8ZRF\",[[\"size\",\"10\"]]]",
+     "[\"B09B1M5RHG\",[[\"size\",\"10\"]]]",
+     "[\"B09JPDCKBX\",[[\"size\",\"10\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "38229d04ab5c6a70",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's work & safety footwear",
+    "goal": {
+     "asin": "B09NPXWNMY",
+     "attributes": [
+      "light weight"
+     ],
+     "category": "",
+     "goal_options": [
+      "10.5 wide"
+     ],
+     "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+     "price_upper": 60,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes",
+     "query": "men's work & safety footwear"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07KYKPRQH",
+     "cluster": "men's work & safety footwear",
+     "name": "Skechers Men's Greetah Construction Shoe",
+     "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+    }
+   },
+   "dst": "7dea39dd9a077edd",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "b33a27f97544c386",
+   "src": "b3421f41fdef2b80"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B08FM6347F",
+     "cluster": "men's work & safety footwear",
+     "name": "SUADEX Indestructible Steel Toe Shoes Men Women Work Safety Shoes Non-Slip Puncture-Proof Composite Toe Sneakers",
+     "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+    }
+   },
+   "dst": "ecd05ee6ce66071b",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "13b5debea9b9000a",
+   "src": "b3421f41fdef2b80"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:memory foam",
+      "=",
+      "memory foam"
+     ]
+    ]
+   },
+   "dst": "c631d84d33eb22a5",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b3421f41fdef2b80"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:quick drying",
+      "=",
+      "quick drying"
+     ]
+    ]
+   },
+   "dst": "166babd4693798cf",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b3421f41fdef2b80"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "black"
+     ]
+    ]
+   },
+   "dst": "72f12476cf3e136a",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b3421f41fdef2b80"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      60
+     ]
+    ]
+   },
+   "dst": "4d6b71b29d81c8bb",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b3421f41fdef2b80"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "black",
+      "11 narrow"
+     ]
+    ]
+   },
+   "dst": "bc2f9add26b21668",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b3421f41fdef2b80"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "black",
+      "10.5 wide"
+     ]
+    ]
+   },
+   "dst": "38229d04ab5c6a70",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b3421f41fdef2b80"
+  }
+ ],
+ "env_id": "webshop_4924d957644cfb08",
+ "env_spec": {
+  "cluster": "men's work & safety footwear",
+  "env_id": "webshop_4924d957644cfb08",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B09NPXWNMY",
+   "cluster": "men's work & safety footwear",
+   "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+   "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes"
+  },
+  "bound_slots": [
+   "attr:light weight",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:light weight",
+    "=",
+    "light weight"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "ground_truth": {
+   "hash": "909c95fbf925cae324aca1b511a05f4c",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B074PFPGHC\",[[\"color\",\"black\"]]]",
+    "[\"B07T8JJV8T\",[[\"color\",\"black\"]]]",
+    "[\"B08BP3FY3J\",[[\"color\",\"797-black\"]]]",
+    "[\"B08W3CNDLD\",[[\"color\",\"black | red\"]]]",
+    "[\"B0957JDVLS\",[[\"color\",\"023-black\"]]]",
+    "[\"B096JQX63Z\",[[\"color\",\"black-21\"]]]",
+    "[\"B097PJ8ZRF\",[[\"color\",\"a01_black\"]]]",
+    "[\"B098JSTV4D\",[[\"color\",\"black\"]]]",
+    "[\"B09B1M5RHG\",[[\"color\",\"black b\"]]]",
+    "[\"B09JPDCKBX\",[[\"color\",\"striped black\"]]]",
+    "[\"B09NPXK3BZ\",[[\"color\",\"black\"]]]",
+    "[\"B09NPXTCGX\",[[\"color\",\"black\"]]]",
+    "[\"B09NPXVGHG\",[[\"color\",\"black\"]]]",
+    "[\"B09NPXWNMY\",[[\"color\",\"black\"]]]",
+    "[\"B09NPXZC6S\",[[\"color\",\"black\"]]]",
+    "[\"B09NY645T9\",[[\"color\",\"black\"]]]",
+    "[\"B09PG34DTS\",[[\"color\",\"black\"]]]",
+    "[\"B09PG36QGC\",[[\"color\",\"black\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "b3421f41fdef2b80",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "men's work & safety footwear",
+   "goal": {
+    "asin": "B09NPXWNMY",
+    "attributes": [
+     "light weight"
+    ],
+    "category": "",
+    "goal_options": [
+     "black"
+    ],
+    "name": "generetic Safety Shoes Mens Work Trainers Ladies Running Construction Boots Non-Slip Breathable Women Steel Toe Cap Lightweight Mesh Footwear Sport Sneakers (Color : Black, Size : 44)",
+    "price_upper": 60,
+    "product_category": "Clothing, Shoes & Jewelry › Men › Uniforms, Work & Safety › Shoes › Work & Utility › Shoes",
+    "query": "men's work & safety footwear"
+   }
+  },
+  "source_record": "4f94181db1e46895",
+  "unbound_slots": [
+   "attr:memory foam",
+   "attr:quick drying",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "1630e71d8eaa84b7"
+}

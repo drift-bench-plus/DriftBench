@@ -1,0 +1,207 @@
+{
+ "sample_id": "3276b427e1e29789",
+ "tree_id": "e3a31a2e05c746f8",
+ "adapter": "webshop",
+ "cluster": "dried fruits & raisins",
+ "goal_idx": 354,
+ "split": "test",
+ "source_instruction": "i am looking for resealable snak club antioxidant trail mix. 5.5oz packs of six.",
+ "query": "Ugh, I spent my whole walk over here replaying that last scene from the baking show I binged last night where the contestant got sent home just because their apricot tart had a soggy bottom, I still can\u2019t believe they didn\u2019t give them a second chance to crisp up the crust! I also stopped to pet the cutest calico cat curled up on the store\u2019s welcome mat on my way in, it had a tiny little knit scarf around its neck that matched its orange patches perfectly, and I almost tripped over a stack of reusable shopping totes by the entrance because I was too busy cooing at it. I\u2019m looking for dried fruits and raisins that come in a resealable bag, specifically the 1.37 pound pack of 1 option, and I don\u2019t want anything that goes over what I\u2019ve set aside for this.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "lexical_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+lexical_ambiguity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "lexical_ambiguity"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "what I\u2019ve set aside for this",
+    "placements": [
+     [
+      "price_upper",
+      "40"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I spent my whole walk over here replaying that last scene from the baking show I binged last night where the contestant got sent home just because their apricot tart had a soggy bottom, I still can\u2019t believe they didn\u2019t give them a second chance to crisp up the crust! I also stopped to pet the cutest calico cat curled up on the store\u2019s welcome mat on my way in, it had a tiny little knit scarf around its neck that matched its orange patches perfectly, and I almost tripped over a stack of reusable shopping totes by the entrance because I was too busy cooing at it.",
+  "retained": [
+   "attr:resealable bag",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "option:0",
+     "=",
+     "1.37 pound (pack of 1)"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "b902a441eca1e359"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 12,
+  "lit_card": 13,
+  "components": {
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     12,
+     13
+    ],
+    "true_card": 12,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "40d15c3b06c56b53",
+  "conditions": [
+   [
+    "attr:resealable bag",
+    "=",
+    "resealable bag"
+   ],
+   [
+    "option:0",
+    "=",
+    "1.37 pound (pack of 1)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 12,
+  "value": [
+   "[\"B00Q04M6FM\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B01CUS63OG\",[[\"size\",\"3 pound (pack of 1)\"]]]",
+   "[\"B01N2GSA7X\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B01N5PCA1R\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B01NBXSDS4\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B071GB5H9C\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07CBKJ7TS\",[[\"size\",\"1.37 pound (pack of 1)\"]]]",
+   "[\"B07M7FCJXZ\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07MQBHYD2\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07Q56R59Q\",[[\"size\",\"2 pound (pack of 1)\"]]]",
+   "[\"B083VBC1M5\",[[\"size\",\"2.75 pound (pack of 1)\"]]]",
+   "[\"B088MCD3V3\",[[\"size\",\"1 pound (pack of 1)\"]]]"
+  ],
+  "hash": "083b45668c5eb07372138e646400ff87"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "3be01460388e3c38",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the dried fruits & raisins instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "9358e15f7b0fb3fe",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the dried fruits & raisins instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "42d537842bdf4f38",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ready eat."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "5f499918480179da",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be artificial colors."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1713cb466a201cb9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "bd584204725efe5b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1d3e0d4bd20fa9b0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 lb instead of 1.37 pound (pack of 1)."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "782825495c8b76b0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.75 ounce (pack of 3) instead of 1.37 pound (pack of 1)."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,196 @@
+{
+ "sample_id": "9cb533fd5d0b3443",
+ "tree_id": "4bf3161f1925a51d",
+ "adapter": "webshop",
+ "cluster": "digital cameras",
+ "goal_idx": 181,
+ "split": "test",
+ "source_instruction": "i'm looking for a ultra hd digital camera with optical zoom lens.",
+ "query": "Hey, I just had the silliest mishap on my walk over here\u2014my favorite cherry lollipop slipped right out of my hand and landed in a puddle, then a sparrow darted down and pecked at it like it was the fanciest treat on the block, and I swear I saw a barista across the street snort-laugh at the whole scene. Since you probably don\u2019t have any digital cameras with optical zoom in stock right now, just show me the ones with ultra HD instead, right? And make sure none of them are over $20, yeah?",
+ "strategy_ids": [
+  "false_presupposition",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "false_presupposition",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you probably don\u2019t have any digital cameras with optical zoom in stock right now",
+    "condition": null,
+    "about": [
+     "attr:optical zoom",
+     "optical zoom"
+    ],
+    "alternative": [
+     "attr:optical zoom",
+     "ultra hd"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey, I just had the silliest mishap on my walk over here\u2014my favorite cherry lollipop slipped right out of my hand and landed in a puddle, then a sparrow darted down and pecked at it like it was the fanciest treat on the block, and I swear I saw a barista across the street snort-laugh at the whole scene.",
+  "retained": [
+   "attr:optical zoom",
+   "attr:ultra hd",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:optical zoom",
+     "=",
+     "ultra hd"
+    ],
+    [
+     "attr:ultra hd",
+     "=",
+     "ultra hd"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "583a03280bd2c306"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 5,
+  "lit_card": 57,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 57,
+    "true_card": 5,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "58b28923f0df7081",
+  "conditions": [
+   [
+    "attr:optical zoom",
+    "=",
+    "optical zoom"
+   ],
+   [
+    "attr:ultra hd",
+    "=",
+    "ultra hd"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 5,
+  "value": [
+   "[\"B07KTCSG5C\",[]]",
+   "[\"B07N96YVSW\",[]]",
+   "[\"B07S5CVRM3\",[]]",
+   "[\"B07T7399JK\",[]]",
+   "[\"B08L5ZGKCZ\",[]]"
+  ],
+  "hash": "9cc52a7e15ea915683b85712867bad44"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "02f79fc486665f81",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the digital cameras instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "0fbdc21648c3ecd2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the digital cameras instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "2ab436ac9c205950",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be memory card."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "da2f908b79213029",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ac adapter."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1e0f6db5b43d27f9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2fc57d4f8542e40f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5e6bd26b4654fa66",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 80 instead of 20."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "eea9da11b80f248b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 instead of 20."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

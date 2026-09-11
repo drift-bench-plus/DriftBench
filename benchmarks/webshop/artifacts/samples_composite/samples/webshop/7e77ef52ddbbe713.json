@@ -1,0 +1,191 @@
+{
+ "sample_id": "7e77ef52ddbbe713",
+ "tree_id": "7e03f38aa847204b",
+ "adapter": "webshop",
+ "cluster": "non-dairy milks",
+ "goal_idx": 280,
+ "split": "test",
+ "source_instruction": "i'm looking for certifies organic groceries the flavor was cacao bits",
+ "query": "I spent twenty minutes this morning chasing my escaped house gecko around the apartment, he\u2019d climbed up the curtain rod and knocked over my favorite pothos cutting right onto the rug. I stopped on the way in to grab a lavender iced latte that was way too sweet, and I still have to remember to pick up dry cleaning after this. My roommate texted me five times while I was walking in to rant about our building\u2019s broken elevator that\u2019s been out for three whole days. Can you help me find certified biodynamic cacao nibs under $20 in this non-dairy milks section?",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:certified organic"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:certified organic",
+    "certified organic",
+    "certified biodynamic"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent twenty minutes this morning chasing my escaped house gecko around the apartment, he\u2019d climbed up the curtain rod and knocked over my favorite pothos cutting right onto the rug. I stopped on the way in to grab a lavender iced latte that was way too sweet, and I still have to remember to pick up dry cleaning after this. My roommate texted me five times while I was walking in to rant about our building\u2019s broken elevator that\u2019s been out for three whole days.",
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:certified organic"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:certified organic",
+     "=",
+     "certified biodynamic"
+    ],
+    [
+     "option:0",
+     "=",
+     "cacao nibs"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "122941fa0e51f8ec"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 2,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "a68891af7741449d",
+  "conditions": [
+   [
+    "attr:certified organic",
+    "=",
+    "certified organic"
+   ],
+   [
+    "option:0",
+    "=",
+    "cacao nibs"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:certified organic"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B06XSGZKC7\",[[\"flavor\",\"cacao nibs\"]]]",
+   "[\"B08VYDSFV8\",[[\"flavor name\",\"cacao nibs\"]]]"
+  ],
+  "hash": "2dffe4d99c272f21066a35be27c00557"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "67237a1870713a0b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the non-dairy milks instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e5958b68e2938544",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the non-dairy milks instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "0b50145e807237a5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hot chocolate."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "11ff0c6efeeced73",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be non gmo."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1ab4d9e6aa90e05e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b01e98e00df591ed",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "25b6c0760aa901f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pound instead of cacao nibs."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "718f5da5d5c4ef46",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pound (pack of 6) instead of cacao nibs."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

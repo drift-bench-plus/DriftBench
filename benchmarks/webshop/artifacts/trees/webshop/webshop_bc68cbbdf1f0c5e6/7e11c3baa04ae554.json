@@ -1,0 +1,927 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B01HU10MSG",
+    "cluster": "hair loss products",
+    "name": "Shilo Wig Color Chocolate Swirl - Noriko Wigs 15\" Long Soft Layers Monofilament Top Synthetic Natural Looking Bundle w/ Comb, MaxWigs Hairloss Booklet",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Wigs"
+   },
+   "bound_slots": [
+    "attr:natural hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "darkchocolate"
+    ],
+    [
+     "price_upper",
+     "<=",
+     360
+    ]
+   ],
+   "ground_truth": {
+    "hash": "115ee0475c05feadf87bd421f4cf3f38",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00ZPTH388\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B01CUQBJQ0\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B01CYVAV2O\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B01CYVYKI0\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B01GOO7530\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B01HU10MSG\",[[\"color\",\"darkchocolate\"]]]",
+     "[\"B01HU58VP8\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B01IAA1O60\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B077B61X1P\",[[\"color\",\"chocolateswirl\"]]]",
+     "[\"B078XKTFVB\",[[\"color\",\"r6 | 30h chocolate copper\"]]]",
+     "[\"B07FW6WT8H\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B07N1QSB5T\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B07N8DSJ4Z\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B07NBVMD3P\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B07NCC6JDC\",[[\"color\",\"r6 | 30h chocolate copper\"]]]",
+     "[\"B07NDLGGS1\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B07NPKBQ7C\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B07NY3NCTT\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07P2HCFNQ\",[[\"color\",\"chocolate rooted\"]]]",
+     "[\"B07PHVJMKM\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07RSSPRK3\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B07SKX5P7V\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07T57FXSM\",[[\"color\",\"chocolate rooted\"]]]",
+     "[\"B07T76LP44\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07T8WP9YX\",[[\"color\",\"hot chocolate mix\"]]]",
+     "[\"B07TMRR64G\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B08428CDPD\",[[\"color\",\"chocolate swirl\"]]]",
+     "[\"B084294KQT\",[[\"color\",\"chocolate swirl\"]]]",
+     "[\"B084B1D3V4\",[[\"color\",\"chocolate pretzel\"]]]",
+     "[\"B084B1GC8R\",[[\"color\",\"chocolate pretzel\"]]]",
+     "[\"B0857H2JLC\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B0859HFQ1Q\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B0859HT1G7\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B085LRNPCK\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B085LS1KZ7\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B086K378KP\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B086K5GM8Y\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YV6S91\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YV8YX2\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YVTP6L\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YVY2DQ\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YW3Q6K\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YWJ5SJ\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B08JH3CDKW\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B08JH3ZLCX\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B08L9RVLPL\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B08LQTY9S8\",[[\"color\",\"gl4-8 dark chocolate\"]]]",
+     "[\"B08PDKH8Y7\",[[\"color\",\"chocolate rooted\"]]]",
+     "[\"B08S428V6F\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B08ZCW1MM2\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B0917L2DBN\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B09R4ZJYS6\",[[\"color\",\"613 white chocolate\"]]]",
+     "[\"B09R4ZN3NB\",[[\"color\",\"613 white chocolate\"]]]",
+     "[\"B09RH81MNH\",[[\"color\",\"613rn white chocolate natural\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f0bfa433247a8172",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B01HU10MSG",
+     "attributes": [
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "darkchocolate"
+     ],
+     "name": "Shilo Wig Color Chocolate Swirl - Noriko Wigs 15\" Long Soft Layers Monofilament Top Synthetic Natural Looking Bundle w/ Comb, MaxWigs Hairloss Booklet",
+     "price_upper": 360,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Wigs",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": "940a0ac94a43555b",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09S3QKSWW",
+    "cluster": "hair loss products",
+    "name": "HairReBirth Herbal Spray, HerbalRevive Hair-Growth Essence Spray, Hair Essential Oil Anti Hair Loss (12pcs)",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Loss Products › Hair Regrowth Treatments"
+   },
+   "bound_slots": [
+    "attr:hair growth",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair growth",
+     "=",
+     "hair growth"
+    ],
+    [
+     "option:0",
+     "=",
+     "9pcs"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "268dedb7d2c906450080219f1c706375",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09PFRSY3M\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09QKPWN7Z\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09QKRZ4Z2\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09QKSNKVG\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09QKTF64F\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09QKXTL2D\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09QMG6P7Y\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09QX8QTBY\",[[\"color\",\"9pc\"]]]",
+     "[\"B09RVV7B79\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09RVW1P6Y\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09RWG7DQM\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09RWNCYFR\",[[\"color\",\"9pc\"]]]",
+     "[\"B09RWR2ND5\",[[\"color\",\"9pc\"]]]",
+     "[\"B09RWWQKNM\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09RWXGC81\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09RX1893D\",[[\"color\",\"9 pcs\"]]]",
+     "[\"B09RZSM95Z\",[[\"color\",\"9 pcs\"]]]",
+     "[\"B09RZT6NPN\",[[\"color\",\"10ml 9pcs\"]]]",
+     "[\"B09RZZD5G6\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09S2RRVGY\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09S32X4YL\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09S344SSP\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09S35BC8T\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09S369GW1\",[[\"color\",\"10ml -9pcs\"]]]",
+     "[\"B09S3F3Y8V\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09S3FDLC2\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09S3MRTTZ\",[[\"color\",\"9 pcs\"]]]",
+     "[\"B09S3NF4PP\",[[\"color\",\"9pc\"]]]",
+     "[\"B09S3P38DY\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09S3PH7SH\",[[\"color\",\"9pc\"]]]",
+     "[\"B09S3QKSWW\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09S5F799D\",[[\"size\",\"9pc\"]]]",
+     "[\"B09S5KPPRW\",[[\"color\",\"9 pcs\"]]]",
+     "[\"B09S5PRQFQ\",[[\"color\",\"9 pcs\"]]]",
+     "[\"B09S5V7P7B\",[[\"color\",\"9 pcs\"]]]",
+     "[\"B09S66FX1J\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09S6GS9KX\",[[\"color\",\"9pc\"]]]",
+     "[\"B09S8FNLSN\",[[\"color\",\"9pc\"]]]",
+     "[\"B09SB348FL\",[[\"color\",\"9 pcs\"]]]",
+     "[\"B09SB4GCN8\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09SB4Z31R\",[[\"color\",\"9 pcs\"]]]",
+     "[\"B09SCNXNZB\",[[\"size\",\"9 pcs\"]]]",
+     "[\"B09SCWP1GS\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09SFRZSMM\",[[\"size\",\"9 pcs\"]]]",
+     "[\"B09SHXKRHZ\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09SP5RJLD\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09SWSQ4VM\",[[\"color\",\"9pcs\"]]]",
+     "[\"B09T36NWSF\",[[\"color\",\"9pcs\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "20cd3e9d9a0c5ee1",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B09S3QKSWW",
+     "attributes": [
+      "hair growth"
+     ],
+     "category": "",
+     "goal_options": [
+      "9pcs"
+     ],
+     "name": "HairReBirth Herbal Spray, HerbalRevive Hair-Growth Essence Spray, Hair Essential Oil Anti Hair Loss (12pcs)",
+     "price_upper": 40,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Loss Products › Hair Regrowth Treatments",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": "cb60898ac0aa9a92",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08FY3WDDJ",
+    "cluster": "hair loss products",
+    "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:hair loss",
+    "attr:synthetic hair",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair loss",
+     "=",
+     "hair loss"
+    ],
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "4 clips-dark blonde w |  bangs"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "4337b8dbebd95db403c78c2a14558da5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08FY3WDDJ\",[[\"color\",\"4 clips-dark blonde\"],[\"size\",\"18 inch\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9950e58eb37df563",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B08FY3WDDJ",
+     "attributes": [
+      "hair loss",
+      "synthetic hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "4 clips-dark blonde w |  bangs",
+      "18 inch"
+     ],
+     "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08FY3WDDJ",
+    "cluster": "hair loss products",
+    "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:easy use",
+    "attr:synthetic hair",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ],
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "4 clips-dark blonde w |  bangs"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "5e18778ac0e3b331dc414fba9c97ed6e",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07CXHL4T3\",[[\"color\",\"#27 dark blonde\"],[\"size\",\"18\\\"\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "d5f1ca8baea54ea3",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B08FY3WDDJ",
+     "attributes": [
+      "easy use",
+      "synthetic hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "4 clips-dark blonde w |  bangs",
+      "18 inch"
+     ],
+     "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08FY3WDDJ",
+    "cluster": "hair loss products",
+    "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:synthetic hair",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "815276545c7b0b71a7f714574657ee77",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07CXHL4T3\",[[\"size\",\"18\\\"\"]]]",
+     "[\"B07MV5B2XB\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08762SVZ4\",[[\"size\",\"18 inch\"]]]",
+     "[\"B08DX5J739\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08FY3WDDJ\",[[\"size\",\"18 inch\"]]]",
+     "[\"B08JPQ3CP9\",[[\"size\",\"14 inch\"]]]",
+     "[\"B08KVNKJFL\",[[\"size\",\"16 inch\"]]]",
+     "[\"B08NYMVR1D\",[[\"size\",\"18\\\"\"]]]",
+     "[\"B08P1WRRVJ\",[[\"size\",\"18 inch\"]]]",
+     "[\"B08QCL4SB5\",[[\"size\",\"11 inch\"]]]",
+     "[\"B08RP6V5KZ\",[[\"size\",\"18\\\"\"]]]",
+     "[\"B096M319FV\",[[\"size\",\"18 inch\"]]]",
+     "[\"B097DCRTWP\",[[\"size\",\"18 inch\"]]]",
+     "[\"B09FXQBB5J\",[[\"size\",\"16 inch\"]]]",
+     "[\"B09PQQHBS1\",[[\"size\",\"18 inch wavy with 5 inch bangs(pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "caf50b11fe2640e2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B08FY3WDDJ",
+     "attributes": [
+      "synthetic hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "18 inch"
+     ],
+     "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08FY3WDDJ",
+    "cluster": "hair loss products",
+    "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:synthetic hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "4 clips-dark blonde w |  bangs"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "8b35e93ba2c7be8cec70dac4185a329a",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07CXHL4T3\",[[\"color\",\"#27 dark blonde\"]]]",
+     "[\"B07RKK18QY\",[[\"color\",\"dark blonde\"]]]",
+     "[\"B07RR1BHHX\",[[\"color\",\"dark blonde\"]]]",
+     "[\"B07RT6F66Y\",[[\"color\",\"dark blonde\"]]]",
+     "[\"B07RVCJYSZ\",[[\"color\",\"dark blonde\"]]]",
+     "[\"B07TWZNNL8\",[[\"color\",\"dark blonde\"]]]",
+     "[\"B0813RS3LS\",[[\"color\",\"dark blonde\"]]]",
+     "[\"B0813S1H5C\",[[\"color\",\"dark blonde\"]]]",
+     "[\"B082HZNMNR\",[[\"color\",\"dark green\"]]]",
+     "[\"B08FY3WDDJ\",[[\"color\",\"4 clips-dark blonde\"]]]",
+     "[\"B08KVNKJFL\",[[\"color\",\"dark blonde | beach blonde\"]]]",
+     "[\"B08PC8QTFB\",[[\"color\",\"dark blonde\"]]]",
+     "[\"B08PC99NHQ\",[[\"color\",\"dark blonde\"]]]",
+     "[\"B098DPBD42\",[[\"color\",\"dark blonde-straight-11\\\"\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f829adc626fcaae6",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B08FY3WDDJ",
+     "attributes": [
+      "synthetic hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "4 clips-dark blonde w |  bangs"
+     ],
+     "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08FY3WDDJ",
+    "cluster": "hair loss products",
+    "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:synthetic hair",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "#1 jet black"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1f4559bd91ce890ee2f8f158265b869c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07CXHL4T3\",[[\"color\",\"#1 jet black\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B07MV5B2XB\",[[\"color\",\"jet black\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08DX5J739\",[[\"color\",\"black brown\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08FY3WDDJ\",[[\"color\",\"4 clips-jet black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08JPQ3CP9\",[[\"color\",\"natural black\"],[\"size\",\"14 inch\"]]]",
+     "[\"B08KVNKJFL\",[[\"color\",\"jet black\"],[\"size\",\"16 inch\"]]]",
+     "[\"B08NYMVR1D\",[[\"color\",\"brown black\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B08P1WRRVJ\",[[\"color\",\"black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08QCL4SB5\",[[\"color\",\"75g-jet black\"],[\"size\",\"11 inch\"]]]",
+     "[\"B08RP6V5KZ\",[[\"color\",\"dark black - curly\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B096M319FV\",[[\"color\",\"black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B097DCRTWP\",[[\"color\",\"jet black-curly\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09FXQBB5J\",[[\"color\",\"a natural black\"],[\"size\",\"16 inch\"]]]",
+     "[\"B09PQQHBS1\",[[\"color\",\"black brown\"],[\"size\",\"18 inch wavy with 5 inch bangs(pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "90ea4f0d48565da2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B08FY3WDDJ",
+     "attributes": [
+      "synthetic hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "#1 jet black",
+      "18 inch"
+     ],
+     "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08FY3WDDJ",
+    "cluster": "hair loss products",
+    "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:synthetic hair",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "#1 jet black-thicker"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1f4559bd91ce890ee2f8f158265b869c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07CXHL4T3\",[[\"color\",\"#1 jet black\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B07MV5B2XB\",[[\"color\",\"jet black\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08DX5J739\",[[\"color\",\"black brown\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08FY3WDDJ\",[[\"color\",\"4 clips-jet black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08JPQ3CP9\",[[\"color\",\"natural black\"],[\"size\",\"14 inch\"]]]",
+     "[\"B08KVNKJFL\",[[\"color\",\"jet black\"],[\"size\",\"16 inch\"]]]",
+     "[\"B08NYMVR1D\",[[\"color\",\"brown black\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B08P1WRRVJ\",[[\"color\",\"black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08QCL4SB5\",[[\"color\",\"75g-jet black\"],[\"size\",\"11 inch\"]]]",
+     "[\"B08RP6V5KZ\",[[\"color\",\"dark black - curly\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B096M319FV\",[[\"color\",\"black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B097DCRTWP\",[[\"color\",\"jet black-curly\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09FXQBB5J\",[[\"color\",\"a natural black\"],[\"size\",\"16 inch\"]]]",
+     "[\"B09PQQHBS1\",[[\"color\",\"black brown\"],[\"size\",\"18 inch wavy with 5 inch bangs(pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "111ce912aef29f37",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B08FY3WDDJ",
+     "attributes": [
+      "synthetic hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "#1 jet black-thicker",
+      "18 inch"
+     ],
+     "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B01HU10MSG",
+     "cluster": "hair loss products",
+     "name": "Shilo Wig Color Chocolate Swirl - Noriko Wigs 15\" Long Soft Layers Monofilament Top Synthetic Natural Looking Bundle w/ Comb, MaxWigs Hairloss Booklet",
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Wigs"
+    }
+   },
+   "dst": "f0bfa433247a8172",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "940a0ac94a43555b",
+   "src": "2606334f5e1c910f"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B09S3QKSWW",
+     "cluster": "hair loss products",
+     "name": "HairReBirth Herbal Spray, HerbalRevive Hair-Growth Essence Spray, Hair Essential Oil Anti Hair Loss (12pcs)",
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Loss Products › Hair Regrowth Treatments"
+    }
+   },
+   "dst": "20cd3e9d9a0c5ee1",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "cb60898ac0aa9a92",
+   "src": "2606334f5e1c910f"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:hair loss",
+      "=",
+      "hair loss"
+     ]
+    ]
+   },
+   "dst": "9950e58eb37df563",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2606334f5e1c910f"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:easy use",
+      "=",
+      "easy use"
+     ]
+    ]
+   },
+   "dst": "d5f1ca8baea54ea3",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2606334f5e1c910f"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "4 clips-dark blonde w |  bangs"
+     ]
+    ]
+   },
+   "dst": "caf50b11fe2640e2",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2606334f5e1c910f"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:1",
+      "=",
+      "18 inch"
+     ]
+    ]
+   },
+   "dst": "f829adc626fcaae6",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2606334f5e1c910f"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "4 clips-dark blonde w |  bangs",
+      "#1 jet black"
+     ]
+    ]
+   },
+   "dst": "90ea4f0d48565da2",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2606334f5e1c910f"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "4 clips-dark blonde w |  bangs",
+      "#1 jet black-thicker"
+     ]
+    ]
+   },
+   "dst": "111ce912aef29f37",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2606334f5e1c910f"
+  }
+ ],
+ "env_id": "webshop_bc68cbbdf1f0c5e6",
+ "env_spec": {
+  "cluster": "hair loss products",
+  "env_id": "webshop_bc68cbbdf1f0c5e6",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B08FY3WDDJ",
+   "cluster": "hair loss products",
+   "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+   "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+  },
+  "bound_slots": [
+   "attr:synthetic hair",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:synthetic hair",
+    "=",
+    "synthetic hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "4 clips-dark blonde w |  bangs"
+   ],
+   [
+    "option:1",
+    "=",
+    "18 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "ground_truth": {
+   "hash": "9c5967ee120e21e4265a837fa7e153e1",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B07CXHL4T3\",[[\"color\",\"#27 dark blonde\"],[\"size\",\"18\\\"\"]]]",
+    "[\"B08FY3WDDJ\",[[\"color\",\"4 clips-dark blonde\"],[\"size\",\"18 inch\"]]]",
+    "[\"B08KVNKJFL\",[[\"color\",\"dark blonde | beach blonde\"],[\"size\",\"16 inch\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "2606334f5e1c910f",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "hair loss products",
+   "goal": {
+    "asin": "B08FY3WDDJ",
+    "attributes": [
+     "synthetic hair"
+    ],
+    "category": "",
+    "goal_options": [
+     "4 clips-dark blonde w |  bangs",
+     "18 inch"
+    ],
+    "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+    "price_upper": 60,
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+    "query": "hair loss products"
+   }
+  },
+  "source_record": "a0d559bc91507536",
+  "unbound_slots": [
+   "attr:easy use",
+   "attr:hair loss",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "tree_id": "7e11c3baa04ae554"
+}

@@ -1,0 +1,206 @@
+{
+ "adapter": "webshop",
+ "cluster": "home office desks",
+ "fidelity_notes": [],
+ "goal_idx": 208,
+ "ground_truth": {
+  "cardinality": 41,
+  "hash": "10d070ba11e7aa18900c765aac8b755b",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07KJYY5YB\",[[\"color\",\"brown\"]]]",
+   "[\"B07QQNBXHK\",[[\"color\",\"retro brown\"]]]",
+   "[\"B0828P658S\",[[\"color\",\"4.0 rustic brown 1\"]]]",
+   "[\"B085C75DZM\",[[\"color\",\"brown\"]]]",
+   "[\"B087Q5Q3YT\",[[\"color\",\"brown 1\"]]]",
+   "[\"B08DN8QW11\",[[\"color\",\"47 inch, rustic brown\"]]]",
+   "[\"B08L8QXWGG\",[[\"color\",\"brown\"]]]",
+   "[\"B08MKWKXL6\",[[\"color\",\"deep brown\"]]]",
+   "[\"B08NPD28J9\",[[\"color\",\"brown\"]]]",
+   "[\"B08P1VJC39\",[[\"color\",\"brown\"]]]",
+   "[\"B08QYVY7GH\",[[\"color\",\"rusic brown\"]]]",
+   "[\"B08SCDQBPS\",[[\"color\",\"rustic brown\"]]]",
+   "[\"B08SW62P9V\",[[\"color\",\"brown\"]]]",
+   "[\"B08TB71K41\",[[\"color\",\"rustic brown\"]]]",
+   "[\"B08TM2FHMX\",[[\"color\",\"brown\"]]]",
+   "[\"B08VWZQW7V\",[[\"color\",\"brown\"]]]",
+   "[\"B08W2C7JZ7\",[[\"color\",\"rustic brown\"]]]",
+   "[\"B08WH8SH3G\",[[\"color\",\"brown\"]]]",
+   "[\"B08WPK3VKY\",[[\"color\",\"brown\"]]]",
+   "[\"B08XXD9PT1\",[[\"color\",\"brown# steel\"]]]",
+   "[\"B091KWCVZ8\",[[\"color\",\"brown\"]]]",
+   "[\"B091NWXXP7\",[[\"color\",\"brown\"]]]",
+   "[\"B095K9GPTF\",[[\"color\",\"dark brown\"]]]",
+   "[\"B096898KR7\",[[\"color\",\"rustic brown\"]]]",
+   "[\"B098F6FMKY\",[[\"size\",\"31.5 x 15.7 x 45.9 in brown\"]]]",
+   "[\"B0995PV1KG\",[[\"color\",\"brown-39.4 x 19.5 x 46.3 in\"]]]",
+   "[\"B099K9XHKH\",[[\"color\",\"brown\"]]]",
+   "[\"B09B299RJ3\",[[\"color\",\"brown\"]]]",
+   "[\"B09FJNSG3C\",[[\"color\",\"brown\"]]]",
+   "[\"B09L7NMVG3\",[[\"color\",\"brown\"]]]",
+   "[\"B09LH9WZ4X\",[[\"color\",\"brown\"]]]",
+   "[\"B09MCZG7JH\",[[\"size\",\"47 in brown\"]]]",
+   "[\"B09MFF1BLD\",[[\"size\",\"47 in brown\"]]]",
+   "[\"B09MFWZHPL\",[[\"color\",\"brown#01\"]]]",
+   "[\"B09MH5GL9P\",[[\"color\",\"brown\"]]]",
+   "[\"B09MHB573Z\",[[\"color\",\"brown\"]]]",
+   "[\"B09PKTYCW8\",[[\"color\",\"brown\"]]]",
+   "[\"B09PR9MR59\",[[\"color\",\"brown\"]]]",
+   "[\"B09PZ1HD8W\",[[\"color\",\"brown\"]]]",
+   "[\"B09QG6BK7L\",[[\"color\",\"brown\"]]]",
+   "[\"B09QGX1YDT\",[[\"color\",\"brown 46.5x34.3x18.9 in\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy assemble",
+    "=",
+    "easy assemble"
+   ],
+   [
+    "option:0",
+    "=",
+    "4.0 rustic brown 1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    80
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "a783d0bab577b608"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy assemble",
+     "=",
+     "easy assemble"
+    ],
+    [
+     "option:0",
+     "=",
+     "4.0 rustic brown 1"
+    ],
+    [
+     "price_upper",
+     "<=",
+     80
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning re-potting my new snake plant and pothos, trying to figure out the best spot near the window where they’ll get just the right amount of indirect sunlight. I also spent way too long picking out cute ceramic planters that match the soft green tones of my living room throw pillows, and I’m already thinking about adding a small succulent arrangement to the mix next weekend.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy assemble",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning re-potting my new snake plant and pothos, trying to figure out the best spot near the window where they’ll get just the right amount of indirect sunlight. I also spent way too long picking out cute ceramic planters that match the soft green tones of my living room throw pillows, and I’m already thinking about adding a small succulent arrangement to the mix next weekend. I’m looking for an easy to assemble home office desk, specifically the 4.0 rustic brown 1 option, with a price limit of $80.",
+ "render_attempts": 1,
+ "sample_id": "db4500665c09f585",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office desks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "9591eb6ab0135559"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office desks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "bb76e32558efe4e4"
+  },
+  {
+   "announcement": "Also, it needs to be non slip.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2dbdbc392b0df273"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c920ae1d04f5bf26"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "49e00e01e3ed9879"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e81d6c7093d6ea9c"
+  },
+  {
+   "announcement": "Actually, make it 180x80x75cm instead of 4.0 rustic brown 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "38dcd9df964cf20c"
+  },
+  {
+   "announcement": "Actually, make it 160x70x75cm instead of 4.0 rustic brown 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a6d1720e1c5e6f11"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 41,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 41,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a 4.0 rustic brown 1 color home office desk that is easy to assemble.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "0d7dbc58465c362f",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

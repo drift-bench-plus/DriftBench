@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair cutting tools",
+ "fidelity_notes": [],
+ "goal_idx": 39,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "d01f613c99fa9b62195b0dd1902d8deb",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07JN1MH5K\",[[\"size\",\"5.5''\"]]]",
+   "[\"B07P5NMTVZ\",[[\"color\",\"space starry sky printing\"]]]",
+   "[\"B07SRWVV96\",[[\"size\",\"5.5\"]]]",
+   "[\"B07SVHZLWM\",[[\"size\",\"5\"]]]",
+   "[\"B07Y8533L4\",[[\"color\",\"5\"]]]",
+   "[\"B0876H6VLH\",[[\"size\",\"5.5\"]]]",
+   "[\"B0893TC5B1\",[[\"size\",\"5.5\"]]]",
+   "[\"B08DXSZZP7\",[[\"color\",\"5\"]]]",
+   "[\"B08SHJ266Q\",[[\"size\",\"5\"]]]",
+   "[\"B08XJ2PT2C\",[[\"color\",\"starry sky 5\"]]]",
+   "[\"B09JWDDFB7\",[[\"color\",\"#5\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair cutting",
+    "=",
+    "hair cutting"
+   ],
+   [
+    "option:0",
+    "=",
+    "starry sky 5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "ef83bf0a76b2e786"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair cutting",
+     "=",
+     "hair cutting"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair cutting",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for hair cutting tools within 30 dollars, and I want it to have that one option I mentioned before.",
+ "render_attempts": 1,
+ "sample_id": "c1350c81d6f33075",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair cutting tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1c6b31c348bc9e75"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair cutting tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a0bea4fdf149ac03"
+  },
+  {
+   "announcement": "Also, it needs to be hair scalp.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5fd679b025cb913a"
+  },
+  {
+   "announcement": "Also, it needs to be water resistant.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fed1be588b649d26"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "19c1f8138dd89dcb"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "42510a0d0a13762e"
+  },
+  {
+   "announcement": "Actually, make it 12 inch (pack of 1) instead of starry sky 5.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "12c18b3b2156d716"
+  },
+  {
+   "announcement": "Actually, make it 1.0 instead of starry sky 5.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4ea74ed2a0d47793"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 2307,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a skull king barber cape with hook sucker.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "189d5a54446d1aa3",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

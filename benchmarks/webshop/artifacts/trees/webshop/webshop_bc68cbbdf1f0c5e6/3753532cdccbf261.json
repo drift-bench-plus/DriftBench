@@ -1,0 +1,1000 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B01HU10MSG",
+    "cluster": "hair loss products",
+    "name": "Shilo Wig Color Chocolate Swirl - Noriko Wigs 15\" Long Soft Layers Monofilament Top Synthetic Natural Looking Bundle w/ Comb, MaxWigs Hairloss Booklet",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Wigs"
+   },
+   "bound_slots": [
+    "attr:natural hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "darkchocolate"
+    ],
+    [
+     "price_upper",
+     "<=",
+     360
+    ]
+   ],
+   "ground_truth": {
+    "hash": "115ee0475c05feadf87bd421f4cf3f38",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00ZPTH388\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B01CUQBJQ0\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B01CYVAV2O\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B01CYVYKI0\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B01GOO7530\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B01HU10MSG\",[[\"color\",\"darkchocolate\"]]]",
+     "[\"B01HU58VP8\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B01IAA1O60\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B077B61X1P\",[[\"color\",\"chocolateswirl\"]]]",
+     "[\"B078XKTFVB\",[[\"color\",\"r6 | 30h chocolate copper\"]]]",
+     "[\"B07FW6WT8H\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B07N1QSB5T\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B07N8DSJ4Z\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B07NBVMD3P\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B07NCC6JDC\",[[\"color\",\"r6 | 30h chocolate copper\"]]]",
+     "[\"B07NDLGGS1\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B07NPKBQ7C\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B07NY3NCTT\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07P2HCFNQ\",[[\"color\",\"chocolate rooted\"]]]",
+     "[\"B07PHVJMKM\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07RSSPRK3\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B07SKX5P7V\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07T57FXSM\",[[\"color\",\"chocolate rooted\"]]]",
+     "[\"B07T76LP44\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07T8WP9YX\",[[\"color\",\"hot chocolate mix\"]]]",
+     "[\"B07TMRR64G\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B08428CDPD\",[[\"color\",\"chocolate swirl\"]]]",
+     "[\"B084294KQT\",[[\"color\",\"chocolate swirl\"]]]",
+     "[\"B084B1D3V4\",[[\"color\",\"chocolate pretzel\"]]]",
+     "[\"B084B1GC8R\",[[\"color\",\"chocolate pretzel\"]]]",
+     "[\"B0857H2JLC\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B0859HFQ1Q\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B0859HT1G7\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B085LRNPCK\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B085LS1KZ7\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B086K378KP\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B086K5GM8Y\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YV6S91\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YV8YX2\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YVTP6L\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YVY2DQ\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YW3Q6K\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YWJ5SJ\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B08JH3CDKW\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B08JH3ZLCX\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B08L9RVLPL\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B08LQTY9S8\",[[\"color\",\"gl4-8 dark chocolate\"]]]",
+     "[\"B08PDKH8Y7\",[[\"color\",\"chocolate rooted\"]]]",
+     "[\"B08S428V6F\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B08ZCW1MM2\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B0917L2DBN\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B09R4ZJYS6\",[[\"color\",\"613 white chocolate\"]]]",
+     "[\"B09R4ZN3NB\",[[\"color\",\"613 white chocolate\"]]]",
+     "[\"B09RH81MNH\",[[\"color\",\"613rn white chocolate natural\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f0bfa433247a8172",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B01HU10MSG",
+     "attributes": [
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "darkchocolate"
+     ],
+     "name": "Shilo Wig Color Chocolate Swirl - Noriko Wigs 15\" Long Soft Layers Monofilament Top Synthetic Natural Looking Bundle w/ Comb, MaxWigs Hairloss Booklet",
+     "price_upper": 360,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Wigs",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": "940a0ac94a43555b",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08FY3WDDJ",
+    "cluster": "hair loss products",
+    "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:hair loss",
+    "attr:synthetic hair",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair loss",
+     "=",
+     "hair loss"
+    ],
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1af03ccc77c0fb9ccbf19163362a6e2a",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B01N8YVP43\",[]]",
+     "[\"B07427VMRZ\",[]]",
+     "[\"B07429L7WZ\",[]]",
+     "[\"B0742BV2JG\",[]]",
+     "[\"B0742JH3JT\",[]]",
+     "[\"B07K328CPH\",[]]",
+     "[\"B07L3QNWB6\",[]]",
+     "[\"B07MQ8G1LC\",[]]",
+     "[\"B07P8VYDGL\",[]]",
+     "[\"B07PPHZPRV\",[]]",
+     "[\"B07PR7ZNBD\",[]]",
+     "[\"B07PYH7ZVF\",[]]",
+     "[\"B07QXCWLHS\",[]]",
+     "[\"B089M937YX\",[]]",
+     "[\"B089QL1SVF\",[]]",
+     "[\"B08DX5J739\",[]]",
+     "[\"B08FY3WDDJ\",[]]",
+     "[\"B08NYMVR1D\",[]]",
+     "[\"B08PC8QTFB\",[]]",
+     "[\"B08QCL4SB5\",[]]",
+     "[\"B08XND7S6M\",[]]",
+     "[\"B08XNDHHRF\",[]]",
+     "[\"B08ZNR6GW1\",[]]",
+     "[\"B0928MJQCN\",[]]",
+     "[\"B092MJ5ZY3\",[]]",
+     "[\"B095B9DNLL\",[]]",
+     "[\"B095N8WX77\",[]]",
+     "[\"B098DPBD42\",[]]",
+     "[\"B098T89QPQ\",[]]",
+     "[\"B09917NLTG\",[]]",
+     "[\"B09925FV26\",[]]",
+     "[\"B09BCFNMMJ\",[]]",
+     "[\"B09C2L8FFC\",[]]",
+     "[\"B09FXQBB5J\",[]]",
+     "[\"B09HK1C5W5\",[]]",
+     "[\"B09J14LSR4\",[]]",
+     "[\"B09KRXCPP1\",[]]",
+     "[\"B09KX8NW3T\",[]]",
+     "[\"B09MHV1G8W\",[]]",
+     "[\"B09P51BFWM\",[]]",
+     "[\"B09PQQHBS1\",[]]",
+     "[\"B09QLW8N3Z\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7e0918b55ee9dfe8",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B08FY3WDDJ",
+     "attributes": [
+      "synthetic hair",
+      "hair loss"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": "2211fd0f4ab5d776",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09GXZJLB1",
+    "cluster": "hair loss products",
+    "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions"
+   },
+   "bound_slots": [
+    "attr:hair extensions",
+    "attr:high quality",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "ba#16 | 22 light blonde highlighted golden blonde"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "25b7be9d46d20c9ec3b3a51ccdcda868",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0785YLFQX\",[[\"color\",\"p-light blonde highlighted golden blonde #16 | 22\"],[\"size\",\"18 inch (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "413d3d3eff4b4c43",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B09GXZJLB1",
+     "attributes": [
+      "hair extensions",
+      "high quality"
+     ],
+     "category": "",
+     "goal_options": [
+      "ba#16 | 22 light blonde highlighted golden blonde",
+      "18 inch"
+     ],
+     "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09GXZJLB1",
+    "cluster": "hair loss products",
+    "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions"
+   },
+   "bound_slots": [
+    "attr:easy use",
+    "attr:hair extensions",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ],
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "ba#16 | 22 light blonde highlighted golden blonde"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "13aa2bbf6b341102d1450a19d1a6849f",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B096M319FV\",[[\"color\",\"light golden blonde\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09GXZJLB1\",[[\"color\",\"ba#16 | 22 light blonde highlighted golden blonde\"],[\"size\",\"18 inch\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "d82b080ff531d397",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B09GXZJLB1",
+     "attributes": [
+      "easy use",
+      "hair extensions"
+     ],
+     "category": "",
+     "goal_options": [
+      "ba#16 | 22 light blonde highlighted golden blonde",
+      "18 inch"
+     ],
+     "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09GXZJLB1",
+    "cluster": "hair loss products",
+    "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions"
+   },
+   "bound_slots": [
+    "attr:hair extensions",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "ba#16 | 22 light blonde highlighted golden blonde"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "03d144f8a8c6859aef87efab6d624f41",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0785YLFQX\",[[\"color\",\"p-light blonde highlighted golden blonde #16 | 22\"]]]",
+     "[\"B07CZKHLV6\",[[\"color\",\"golden blonde  | beach blonde\"]]]",
+     "[\"B08KVNKJFL\",[[\"color\",\"golden blonde  | beach blonde\"]]]",
+     "[\"B096M319FV\",[[\"color\",\"light golden blonde\"]]]",
+     "[\"B09GXZJLB1\",[[\"color\",\"ba#16 | 22 light blonde highlighted golden blonde\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c9a30ee8e610e928",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B09GXZJLB1",
+     "attributes": [
+      "hair extensions"
+     ],
+     "category": "",
+     "goal_options": [
+      "ba#16 | 22 light blonde highlighted golden blonde"
+     ],
+     "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09GXZJLB1",
+    "cluster": "hair loss products",
+    "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions"
+   },
+   "bound_slots": [
+    "attr:hair extensions",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "68af25aecd39a2108946011a9157c90d",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B06ZXRJM45\",[[\"size\",\"18 inch\"]]]",
+     "[\"B0785YLFQX\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07CXHL4T3\",[[\"size\",\"18\\\"\"]]]",
+     "[\"B07CZKHLV6\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07G5B53KS\",[[\"size\",\"18 inch\"]]]",
+     "[\"B07MV5B2XB\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07N371CZS\",[[\"size\",\"18 inch\"]]]",
+     "[\"B07P4CGFLT\",[[\"size\",\"18 inch\"]]]",
+     "[\"B07PP1VJ9H\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07SQ9ZFFD\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07T42TZLP\",[[\"size\",\"18 inch\"]]]",
+     "[\"B07V5TLJQR\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07VB1QB9B\",[[\"size\",\"18''\"]]]",
+     "[\"B07W9BFZGP\",[[\"size\",\"18 inch\"]]]",
+     "[\"B07Z7MQSM1\",[[\"size\",\"18 inch-7pcs\"]]]",
+     "[\"B07ZYDBNH5\",[[\"size\",\"18 inch (30 gram)\"]]]",
+     "[\"B081VZ8SWF\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B083XZGDX1\",[[\"size\",\"18\"]]]",
+     "[\"B085SZRGSM\",[[\"size\",\"18 inch\"]]]",
+     "[\"B086YX5JB1\",[[\"size\",\"18 inch\"]]]",
+     "[\"B08762SVZ4\",[[\"size\",\"18 inch\"]]]",
+     "[\"B0876KCVD2\",[[\"size\",\"18 inch\"]]]",
+     "[\"B08DX5J739\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08F9TG7FC\",[[\"size\",\"18 inch (pack of 5)\"]]]",
+     "[\"B08GFZNT8P\",[[\"size\",\"12 inch\"]]]",
+     "[\"B08H4XGV9N\",[[\"size\",\"18 inch\"]]]",
+     "[\"B08HJYX5L2\",[[\"size\",\"18 inch\"]]]",
+     "[\"B08HX2JFV2\",[[\"size\",\"16 inch\"]]]",
+     "[\"B08KVNKJFL\",[[\"size\",\"16 inch\"]]]",
+     "[\"B08L4ZNNK6\",[[\"size\",\"18 inch\"]]]",
+     "[\"B08QHVXHG9\",[[\"size\",\"8 inch\"]]]",
+     "[\"B08RP6V5KZ\",[[\"size\",\"18\\\"\"]]]",
+     "[\"B08T8VJBXX\",[[\"size\",\"18 inch\"]]]",
+     "[\"B08VJ83DF3\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08VMRDTDY\",[[\"size\",\"18 inch\"]]]",
+     "[\"B08YDCSF8G\",[[\"size\",\"8 inch\"]]]",
+     "[\"B08ZN82993\",[[\"size\",\"18\\\"\"]]]",
+     "[\"B0912C5F9C\",[[\"size\",\"18 inch\"]]]",
+     "[\"B092VHHF8B\",[[\"size\",\"18 inch\"]]]",
+     "[\"B0936BZ1Q2\",[[\"size\",\"18 inch\"]]]",
+     "[\"B0943WF6SS\",[[\"size\",\"8 inch\"]]]",
+     "[\"B095W93Z3Z\",[[\"size\",\"8 inch\"]]]",
+     "[\"B096FTZZZH\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B096M319FV\",[[\"size\",\"18 inch\"]]]",
+     "[\"B097DCRTWP\",[[\"size\",\"18 inch\"]]]",
+     "[\"B099J4JMTH\",[[\"size\",\"18 inch\"]]]",
+     "[\"B09BMLSQZV\",[[\"size\",\"18 inch\"]]]",
+     "[\"B09CQ2QHHT\",[[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B09FLCK3PT\",[[\"size\",\"18 inch\"]]]",
+     "[\"B09FXB2F69\",[[\"size\",\"18 inch\"]]]",
+     "[\"B09FXQBB5J\",[[\"size\",\"16 inch\"]]]",
+     "[\"B09GXZJLB1\",[[\"size\",\"18 inch\"]]]",
+     "[\"B09K62T12J\",[[\"size\",\"10 inch\"]]]",
+     "[\"B09M7ZDNT3\",[[\"size\",\"8 inch\"]]]",
+     "[\"B09PDPSL8F\",[[\"size\",\"8 inch\"]]]",
+     "[\"B09PQQHBS1\",[[\"size\",\"18 inch wavy with 5 inch bangs(pack of 1)\"]]]",
+     "[\"B09QWTS9XL\",[[\"size\",\"14 16 18 inch\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "d5d50deca78eed6d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B09GXZJLB1",
+     "attributes": [
+      "hair extensions"
+     ],
+     "category": "",
+     "goal_options": [
+      "18 inch"
+     ],
+     "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09GXZJLB1",
+    "cluster": "hair loss products",
+    "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions"
+   },
+   "bound_slots": [
+    "attr:hair extensions",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "#1 jet black"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "04f8d3da2bec66efd4004c025c7a847b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0785YLFQX\",[[\"color\",\"wa-ombre jet black to red #1 | 99j\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07CXHL4T3\",[[\"color\",\"#1 jet black\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B07CZKHLV6\",[[\"color\",\"jet black\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07G5B53KS\",[[\"color\",\"p#1b | 4 natural black mixed with chocolate brown\"],[\"size\",\"18 inch\"]]]",
+     "[\"B07MV5B2XB\",[[\"color\",\"jet black\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07P4CGFLT\",[[\"color\",\"#1b (natural black)\"],[\"size\",\"18 inch\"]]]",
+     "[\"B07PP1VJ9H\",[[\"color\",\"jet black\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07SQ9ZFFD\",[[\"color\",\"dark black-curly\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07T42TZLP\",[[\"color\",\"1# jet black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B07VB1QB9B\",[[\"color\",\"u tip-jet black\"],[\"size\",\"18''\"]]]",
+     "[\"B07Z7MQSM1\",[[\"color\",\"#1jet black\"],[\"size\",\"18 inch-7pcs\"]]]",
+     "[\"B07ZYDBNH5\",[[\"color\",\"jet black\"],[\"size\",\"18 inch (30 gram)\"]]]",
+     "[\"B085SZRGSM\",[[\"color\",\"black(#1b)\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08DX5J739\",[[\"color\",\"black brown\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08GFZNT8P\",[[\"color\",\"#1b off black\"],[\"size\",\"12 inch\"]]]",
+     "[\"B08HJYX5L2\",[[\"color\",\"natural black-1b#\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08HX2JFV2\",[[\"color\",\"black mix light auburn-2 | 30\"],[\"size\",\"16 inch\"]]]",
+     "[\"B08KVNKJFL\",[[\"color\",\"jet black\"],[\"size\",\"16 inch\"]]]",
+     "[\"B08QHVXHG9\",[[\"color\",\"#01 jet black\"],[\"size\",\"8 inch\"]]]",
+     "[\"B08RP6V5KZ\",[[\"color\",\"dark black - curly\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B08T8VJBXX\",[[\"color\",\"#1 jet black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08VJ83DF3\",[[\"color\",\"#1 jet black\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08YDCSF8G\",[[\"color\",\"jet black\"],[\"size\",\"8 inch\"]]]",
+     "[\"B08ZN82993\",[[\"color\",\"natural black\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B0912C5F9C\",[[\"color\",\"jet black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B0936BZ1Q2\",[[\"color\",\"#1 jet black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B0943WF6SS\",[[\"color\",\"jet black\"],[\"size\",\"8 inch\"]]]",
+     "[\"B095W93Z3Z\",[[\"color\",\"dark black #1\"],[\"size\",\"8 inch\"]]]",
+     "[\"B096FTZZZH\",[[\"color\",\"black\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B096M319FV\",[[\"color\",\"black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B097DCRTWP\",[[\"color\",\"jet black-curly\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09BMLSQZV\",[[\"color\",\"#1 jet black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09FLCK3PT\",[[\"color\",\"#1bnatural black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09FXB2F69\",[[\"color\",\"20 pcs (1# black)\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09FXQBB5J\",[[\"color\",\"a natural black\"],[\"size\",\"16 inch\"]]]",
+     "[\"B09GXZJLB1\",[[\"color\",\"#1 jet black\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09K62T12J\",[[\"color\",\"black\"],[\"size\",\"10 inch\"]]]",
+     "[\"B09PDPSL8F\",[[\"color\",\"#1b natural black\"],[\"size\",\"8 inch\"]]]",
+     "[\"B09PQQHBS1\",[[\"color\",\"black brown\"],[\"size\",\"18 inch wavy with 5 inch bangs(pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "0165c8246d7b9169",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B09GXZJLB1",
+     "attributes": [
+      "hair extensions"
+     ],
+     "category": "",
+     "goal_options": [
+      "#1 jet black",
+      "18 inch"
+     ],
+     "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09GXZJLB1",
+    "cluster": "hair loss products",
+    "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions"
+   },
+   "bound_slots": [
+    "attr:hair extensions",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "#2 | 6 | 12 dark brown to medium brown with golden blonde"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "05f679f46ea6b4460b02d546c67b3860",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0785YLFQX\",[[\"color\",\"o-dark brown #2\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07CXHL4T3\",[[\"color\",\"#2 dark brown\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B07CZKHLV6\",[[\"color\",\"brown to golden\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07P4CGFLT\",[[\"color\",\"#2 (dark brown)\"],[\"size\",\"18 inch\"]]]",
+     "[\"B07PP1VJ9H\",[[\"color\",\"dark brown\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07SQ9ZFFD\",[[\"color\",\"medium brown-curly\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07T42TZLP\",[[\"color\",\"6# medium brown\"],[\"size\",\"18 inch\"]]]",
+     "[\"B07V5TLJQR\",[[\"color\",\"#4 dark brown\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B07VB1QB9B\",[[\"color\",\"u tip-medium brown&dark blonde\"],[\"size\",\"18''\"]]]",
+     "[\"B07Z7MQSM1\",[[\"color\",\"#2dark brown\"],[\"size\",\"18 inch-7pcs\"]]]",
+     "[\"B085SZRGSM\",[[\"color\",\"dark brown(#2)\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08762SVZ4\",[[\"color\",\"#2 dark brown\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08DX5J739\",[[\"color\",\"dark brown\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B08GFZNT8P\",[[\"color\",\"#2 dark brown\"],[\"size\",\"12 inch\"]]]",
+     "[\"B08HJYX5L2\",[[\"color\",\"medium brown-4#\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08HX2JFV2\",[[\"color\",\"dark brown\"],[\"size\",\"16 inch\"]]]",
+     "[\"B08KVNKJFL\",[[\"color\",\"dark brown\"],[\"size\",\"16 inch\"]]]",
+     "[\"B08QHVXHG9\",[[\"color\",\"#4 | 27 medium brown | dark blonde\"],[\"size\",\"8 inch\"]]]",
+     "[\"B08RP6V5KZ\",[[\"color\",\"medium brown - curly\"],[\"size\",\"18\\\"\"]]]",
+     "[\"B08T8VJBXX\",[[\"color\",\"#2 dark brown\"],[\"size\",\"18 inch\"]]]",
+     "[\"B08VJ83DF3\",[[\"color\",\"p#4 | 12 dark brown to golden brown\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+     "[\"B0912C5F9C\",[[\"color\",\"dark brown\"],[\"size\",\"18 inch\"]]]",
+     "[\"B0936BZ1Q2\",[[\"color\",\"#12 golden brown\"],[\"size\",\"18 inch\"]]]",
+     "[\"B095W93Z3Z\",[[\"color\",\"dark brown #2\"],[\"size\",\"8 inch\"]]]",
+     "[\"B096M319FV\",[[\"color\",\"dark brown\"],[\"size\",\"18 inch\"]]]",
+     "[\"B097DCRTWP\",[[\"color\",\"dark brown-curly\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09BMLSQZV\",[[\"color\",\"#2 dark brown\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09FXB2F69\",[[\"color\",\"20 pcs (2# dark brown)\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09FXQBB5J\",[[\"color\",\"dark brown\"],[\"size\",\"16 inch\"]]]",
+     "[\"B09GXZJLB1\",[[\"color\",\"#2 dark brown\"],[\"size\",\"18 inch\"]]]",
+     "[\"B09M7ZDNT3\",[[\"color\",\"8# medium brown\"],[\"size\",\"8 inch\"]]]",
+     "[\"B09PDPSL8F\",[[\"color\",\"#2 dark brown\"],[\"size\",\"8 inch\"]]]",
+     "[\"B09PQQHBS1\",[[\"color\",\"dark brown\"],[\"size\",\"18 inch wavy with 5 inch bangs(pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "47f06a1a49fc0177",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B09GXZJLB1",
+     "attributes": [
+      "hair extensions"
+     ],
+     "category": "",
+     "goal_options": [
+      "#2 | 6 | 12 dark brown to medium brown with golden blonde",
+      "18 inch"
+     ],
+     "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B01HU10MSG",
+     "cluster": "hair loss products",
+     "name": "Shilo Wig Color Chocolate Swirl - Noriko Wigs 15\" Long Soft Layers Monofilament Top Synthetic Natural Looking Bundle w/ Comb, MaxWigs Hairloss Booklet",
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Wigs"
+    }
+   },
+   "dst": "f0bfa433247a8172",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "940a0ac94a43555b",
+   "src": "d4d04a4538409427"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B08FY3WDDJ",
+     "cluster": "hair loss products",
+     "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+    }
+   },
+   "dst": "7e0918b55ee9dfe8",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "2211fd0f4ab5d776",
+   "src": "d4d04a4538409427"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:high quality",
+      "=",
+      "high quality"
+     ]
+    ]
+   },
+   "dst": "413d3d3eff4b4c43",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "d4d04a4538409427"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:easy use",
+      "=",
+      "easy use"
+     ]
+    ]
+   },
+   "dst": "d82b080ff531d397",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "d4d04a4538409427"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:1",
+      "=",
+      "18 inch"
+     ]
+    ]
+   },
+   "dst": "c9a30ee8e610e928",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "d4d04a4538409427"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "ba#16 | 22 light blonde highlighted golden blonde"
+     ]
+    ]
+   },
+   "dst": "d5d50deca78eed6d",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "d4d04a4538409427"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "ba#16 | 22 light blonde highlighted golden blonde",
+      "#1 jet black"
+     ]
+    ]
+   },
+   "dst": "0165c8246d7b9169",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "d4d04a4538409427"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "ba#16 | 22 light blonde highlighted golden blonde",
+      "#2 | 6 | 12 dark brown to medium brown with golden blonde"
+     ]
+    ]
+   },
+   "dst": "47f06a1a49fc0177",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "d4d04a4538409427"
+  }
+ ],
+ "env_id": "webshop_bc68cbbdf1f0c5e6",
+ "env_spec": {
+  "cluster": "hair loss products",
+  "env_id": "webshop_bc68cbbdf1f0c5e6",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B09GXZJLB1",
+   "cluster": "hair loss products",
+   "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+   "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions"
+  },
+  "bound_slots": [
+   "attr:hair extensions",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "option:0",
+    "=",
+    "ba#16 | 22 light blonde highlighted golden blonde"
+   ],
+   [
+    "option:1",
+    "=",
+    "18 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "ground_truth": {
+   "hash": "76a3435f4415464d46dd8b92f9a99afc",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B0785YLFQX\",[[\"color\",\"p-light blonde highlighted golden blonde #16 | 22\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+    "[\"B07CZKHLV6\",[[\"color\",\"golden blonde  | beach blonde\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+    "[\"B08KVNKJFL\",[[\"color\",\"golden blonde  | beach blonde\"],[\"size\",\"16 inch\"]]]",
+    "[\"B096M319FV\",[[\"color\",\"light golden blonde\"],[\"size\",\"18 inch\"]]]",
+    "[\"B09GXZJLB1\",[[\"color\",\"ba#16 | 22 light blonde highlighted golden blonde\"],[\"size\",\"18 inch\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "d4d04a4538409427",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "hair loss products",
+   "goal": {
+    "asin": "B09GXZJLB1",
+    "attributes": [
+     "hair extensions"
+    ],
+    "category": "",
+    "goal_options": [
+     "ba#16 | 22 light blonde highlighted golden blonde",
+     "18 inch"
+    ],
+    "name": "Human Hair Extensions Clip in, 5pcs 65g 14 Inch Balayage Dark Brown to Chestnut Brown DOORES Clip in Hair Extensions Straight Remy Hair Extensions Clip in",
+    "price_upper": 60,
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hair Extensions",
+    "query": "hair loss products"
+   }
+  },
+  "source_record": "de45ec12b7934351",
+  "unbound_slots": [
+   "attr:easy use",
+   "attr:high quality",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "tree_id": "3753532cdccbf261"
+}

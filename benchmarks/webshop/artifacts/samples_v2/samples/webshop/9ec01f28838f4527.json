@@ -1,0 +1,190 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair treatment oils",
+ "fidelity_notes": [],
+ "goal_idx": 461,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "354d5889c2fc75af4e08d016eaf58dcd",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B006QN9TFC\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+   "[\"B007CKMQOY\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+   "[\"B00E9YSADW\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+   "[\"B07YF3LZVQ\",[[\"size\",\"3.4 fl oz.\"]]]",
+   "[\"B09PTXBSFM\",[[\"size\",\"4 fl.oz\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:argan oil",
+    "=",
+    "argan oil"
+   ],
+   [
+    "attr:damaged hair",
+    "=",
+    "damaged hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "120ml |  4 fl oz"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "7cc446afb81cc0ac"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "150ml | 5 fl oz"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:argan oil",
+   "attr:damaged hair",
+   "price_upper"
+  ],
+  "spec_id": "a4c26977975f58e1",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "option:0",
+    "120ml |  4 fl oz",
+    "150ml | 5 fl oz"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a hair treatment oil with argan oil for damaged hair, in a 150ml | 5 fl oz size, and my budget is $70.",
+ "render_attempts": 1,
+ "sample_id": "9ec01f28838f4527",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair treatment oils instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "53e294edf352a6cf"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair treatment oils instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e6c178f1ef18663"
+  },
+  {
+   "announcement": "Also, it needs to be dry hair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9278ae29f0fa5b16"
+  },
+  {
+   "announcement": "Also, it needs to be high quality.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e53fdf88345c4130"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "afce7dec83007497"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ce2acbabf6a922d6"
+  },
+  {
+   "announcement": "Actually, make it 11 ounce (pack of 1) instead of 120ml |  4 fl oz.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cd29b9bfaa7fe9b2"
+  },
+  {
+   "announcement": "Actually, make it 12 ounce (pack of 1) instead of 120ml |  4 fl oz.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e576d6729301f85f"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 4,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a 4oz size hair conditioner that has argan oil and is for damged hair.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "c71fbc9ba13aad92",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

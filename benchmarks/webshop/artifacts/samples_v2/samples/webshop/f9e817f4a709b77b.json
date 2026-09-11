@@ -1,0 +1,170 @@
+{
+ "adapter": "webshop",
+ "cluster": "meat snacks",
+ "fidelity_notes": [],
+ "goal_idx": 441,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "8d8ad75449ed1ad745095896d105d3eb",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B06Y3C628Q\",[[\"flavor name\",\"italian\"]]]",
+   "[\"B08T5SBG7K\",[[\"flavor name\",\"italian herb\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "option:0",
+    "=",
+    "italian herb"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "58d6d4ba4d866875"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:low carb",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for low carb meat snacks that come in that one flavor, and I don’t want to spend more than $30 on them.",
+ "render_attempts": 1,
+ "sample_id": "f9e817f4a709b77b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the meat snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5fdb1dc9e6bfb0dd"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the meat snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "cbbeebf3d04c65a0"
+  },
+  {
+   "announcement": "Also, it needs to be artificial ingredients.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "111f22faca8d90f0"
+  },
+  {
+   "announcement": "Also, it needs to be beef jerky.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bdc18db8b3a78b30"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1cb800049b7b2f4c"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8309b668f9b7a88e"
+  },
+  {
+   "announcement": "Actually, make it 0.39 ounce (pack of 28) instead of italian herb.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "119fa52a6b2343b7"
+  },
+  {
+   "announcement": "Actually, make it 0.8 ounce (pack of 20) instead of italian herb.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9770522825ccc81b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 159,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want to find italian herb-flavored parmesan cheese crisps that are low in carbs.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "ccd36ab90b742e30",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

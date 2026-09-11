@@ -1,0 +1,381 @@
+{
+ "sample_id": "a8f4b47c973a799b",
+ "tree_id": "2eece000456407dd",
+ "adapter": "webshop",
+ "cluster": "home office chairs",
+ "goal_idx": 443,
+ "split": "test",
+ "source_instruction": "i'm looking for  high density of furniture home office chairs.",
+ "query": "I\u2019m looking for a home office chair that\u2019s high density, has proper lumbar support, and comes in black, plus it needs to have a built-in cup holder on the armrest, right? I want the price to be reasonable, nothing that feels like a total ripoff for what you get. I\u2019ve been scrolling through options for ages and really don\u2019t want to waste time looking at chairs that don\u2019t hit those marks.",
+ "strategy_ids": [
+  "vagueness_subjectivity",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "vagueness_subjectivity+irrelevant_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "vagueness_subjectivity",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "has a built-in cup holder on the armrest",
+    "condition": [
+     "attr:built-in cup holder on armrest",
+     "=",
+     "built-in cup holder on the armrest"
+    ]
+   },
+   {
+    "text": "the price to be reasonable, nothing that feels like a total ripoff for what you get",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:high density",
+   "attr:lumbar support",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high density",
+     "=",
+     "high density"
+    ],
+    [
+     "attr:lumbar support",
+     "=",
+     "lumbar support"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "attr:built-in cup holder on armrest",
+     "=",
+     "built-in cup holder on the armrest"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "5de66a39514bd135"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 161,
+  "lit_card": 0,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 267,
+    "true_card": 161,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 161,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "b5ef8c427d76f13b",
+  "conditions": [
+   [
+    "attr:high density",
+    "=",
+    "high density"
+   ],
+   [
+    "attr:lumbar support",
+    "=",
+    "lumbar support"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 161,
+  "value": [
+   "[\"B004ZVHQZC\",[[\"color\",\"black\"]]]",
+   "[\"B07C8C7X9G\",[[\"color\",\"black\"]]]",
+   "[\"B07L25NZXD\",[[\"color\",\"black | gray\"]]]",
+   "[\"B07R4ZNF1M\",[[\"color\",\"black\"]]]",
+   "[\"B07RCW5HHH\",[[\"color\",\"black\"]]]",
+   "[\"B07RKZDC37\",[[\"color\",\"black\"]]]",
+   "[\"B07RXNWD5Y\",[[\"color\",\"black\"]]]",
+   "[\"B07T83R2Y1\",[[\"color\",\"black\"]]]",
+   "[\"B07TH1PL5S\",[[\"color\",\"black\"]]]",
+   "[\"B07TLJTW1W\",[[\"color\",\"black\"]]]",
+   "[\"B07TTB2534\",[[\"color\",\"black\"]]]",
+   "[\"B07TV7YK13\",[[\"color\",\"black-4\"]]]",
+   "[\"B07TW6YGFH\",[[\"color\",\"black\"]]]",
+   "[\"B07VNY36JL\",[[\"color\",\"black\"]]]",
+   "[\"B07X3KMNB9\",[[\"color\",\"black\"]]]",
+   "[\"B07YPRBZYD\",[[\"color\",\"black\"]]]",
+   "[\"B0816HY9HR\",[[\"color\",\"black\"]]]",
+   "[\"B082J162S3\",[[\"color\",\"black\"]]]",
+   "[\"B082J2X79B\",[[\"color\",\"black\"]]]",
+   "[\"B0834T3BBQ\",[[\"color\",\"black\"]]]",
+   "[\"B083TKZJYW\",[[\"color\",\"black\"]]]",
+   "[\"B083W3W9F4\",[[\"color\",\"black & blue\"]]]",
+   "[\"B0842N3BX9\",[[\"color\",\"black\"]]]",
+   "[\"B0842NJ414\",[[\"color\",\"black\"]]]",
+   "[\"B0851Y4BRQ\",[[\"color\",\"black\"]]]",
+   "[\"B085QG8WV1\",[[\"color\",\"black\"]]]",
+   "[\"B085Y476KB\",[[\"color\",\"black\"]]]",
+   "[\"B085ZRWSLC\",[[\"color\",\"black\"]]]",
+   "[\"B086BPF77P\",[[\"color\",\"black\"]]]",
+   "[\"B08723CPCF\",[[\"color\",\"black\"]]]",
+   "[\"B087RM91S5\",[[\"color\",\"black\"]]]",
+   "[\"B088GMPZ3F\",[[\"color\",\"black\"]]]",
+   "[\"B088WZ4D4S\",[[\"color\",\"black\"]]]",
+   "[\"B0899DYCPP\",[[\"color\",\"black\"]]]",
+   "[\"B089W86S39\",[[\"color\",\"black\"]]]",
+   "[\"B08B5S75G6\",[[\"color\",\"black\"]]]",
+   "[\"B08B5YRKL7\",[[\"color\",\"high-back | black\"]]]",
+   "[\"B08B658JSS\",[[\"color\",\"black\"]]]",
+   "[\"B08F7MHRL3\",[[\"color\",\"black\"]]]",
+   "[\"B08G4Q2V85\",[[\"color\",\"black + headrest\"]]]",
+   "[\"B08GFZBB4W\",[[\"color\",\"black\"]]]",
+   "[\"B08H8JM3SN\",[[\"color\",\"black\"]]]",
+   "[\"B08L6JTJ9D\",[[\"color\",\"black\"]]]",
+   "[\"B08LG1NNRN\",[[\"color\",\"black\"]]]",
+   "[\"B08M3LT2X4\",[[\"color\",\"black\"]]]",
+   "[\"B08MZLL24M\",[[\"color\",\"black\"]]]",
+   "[\"B08N5ZWM75\",[[\"color\",\"black\"]]]",
+   "[\"B08N6J3BNN\",[[\"color\",\"black\"]]]",
+   "[\"B08N6LB8MH\",[[\"color\",\"black\"]]]",
+   "[\"B08NP7BYRN\",[[\"color\",\"black\"]]]",
+   "[\"B08NVG3GSX\",[[\"color\",\"black\"]]]",
+   "[\"B08P1V3N3V\",[[\"color\",\"black\"]]]",
+   "[\"B08PTSX6S8\",[[\"color\",\"black\"]]]",
+   "[\"B08QJG7YHY\",[[\"color\",\"black\"]]]",
+   "[\"B08QV5XRD7\",[[\"color\",\"black\"]]]",
+   "[\"B08QZ1J9Z7\",[[\"color\",\"black\"]]]",
+   "[\"B08R3QL2V8\",[[\"color\",\"black\"]]]",
+   "[\"B08R5F8T3N\",[[\"color\",\"black\"]]]",
+   "[\"B08R6TTRFQ\",[[\"color\",\"black\"]]]",
+   "[\"B08RYW86K8\",[[\"color\",\"black\"]]]",
+   "[\"B08SHXQ4BV\",[[\"color\",\"black\"]]]",
+   "[\"B08T7PFQT9\",[[\"color\",\"black\"]]]",
+   "[\"B08TC5X86H\",[[\"color\",\"black\"]]]",
+   "[\"B08TMKVRKC\",[[\"color\",\"black\"]]]",
+   "[\"B08VS7V4YW\",[[\"color\",\"black\"]]]",
+   "[\"B08W51FVWC\",[[\"color\",\"4020-black\"]]]",
+   "[\"B08WK6T854\",[[\"color\",\"black\"]]]",
+   "[\"B08XXM119W\",[[\"color\",\"black\"]]]",
+   "[\"B08Z7WWST6\",[[\"color\",\"black\"]]]",
+   "[\"B08ZSSYHHW\",[[\"color\",\"black\"]]]",
+   "[\"B08ZXWR255\",[[\"color\",\"black\"]]]",
+   "[\"B092CZX7C9\",[[\"color\",\"black\"]]]",
+   "[\"B092H7BW73\",[[\"color\",\"black\"]]]",
+   "[\"B092M8F53R\",[[\"color\",\"black\"]]]",
+   "[\"B0932R58JR\",[[\"color\",\"black\"]]]",
+   "[\"B093B1V8WZ\",[[\"color\",\"black\"]]]",
+   "[\"B094FDGVKJ\",[[\"color\",\"black\"]]]",
+   "[\"B094JPJ153\",[[\"color\",\"black high back\"]]]",
+   "[\"B094VW46NN\",[[\"color\",\"black\"]]]",
+   "[\"B095KGZ4FT\",[[\"color\",\"black\"]]]",
+   "[\"B095W3Y49L\",[[\"color\",\"black\"]]]",
+   "[\"B0966GC1XK\",[[\"color\",\"black\"]]]",
+   "[\"B0967GTGGK\",[[\"color\",\"black\"]]]",
+   "[\"B0967WRLDY\",[[\"color\",\"black\"]]]",
+   "[\"B096S4DGNM\",[[\"color\",\"3011 black\"]]]",
+   "[\"B096TR6S1C\",[[\"color\",\"black\"]]]",
+   "[\"B096VCTG43\",[[\"color\",\"black\"]]]",
+   "[\"B096XRCCRG\",[[\"color\",\"black\"]]]",
+   "[\"B097DQMN6G\",[[\"color\",\"black\"]]]",
+   "[\"B097HFDBR3\",[[\"color\",\"black\"]]]",
+   "[\"B097RDZLGG\",[[\"color\",\"black\"]]]",
+   "[\"B098K58V9B\",[[\"color\",\"black\"]]]",
+   "[\"B098NR6QF6\",[[\"color\",\"black\"]]]",
+   "[\"B0999FV73Q\",[[\"color\",\"black\"]]]",
+   "[\"B099SCJ9NB\",[[\"color\",\"black\"]]]",
+   "[\"B09B29CTRT\",[[\"color\",\"black\"]]]",
+   "[\"B09BB4DD8V\",[[\"color\",\"black\"]]]",
+   "[\"B09BQ87TCZ\",[[\"color\",\"black\"]]]",
+   "[\"B09BR2CQ7M\",[[\"color\",\"black\"]]]",
+   "[\"B09C4BVDMH\",[[\"color\",\"black\"]]]",
+   "[\"B09C4PM8H9\",[[\"color\",\"black\"]]]",
+   "[\"B09C5QXV78\",[[\"color\",\"black\"]]]",
+   "[\"B09C629LRY\",[[\"color\",\"black\"]]]",
+   "[\"B09CL45XKR\",[[\"size\",\"style-2black\"]]]",
+   "[\"B09CL889SQ\",[[\"color\",\"black\"]]]",
+   "[\"B09CYDP6S5\",[[\"color\",\"black\"]]]",
+   "[\"B09CYGP449\",[[\"color\",\"black\"]]]",
+   "[\"B09CYQ12DH\",[[\"color\",\"black\"]]]",
+   "[\"B09DBL7G7S\",[[\"color\",\"black\"]]]",
+   "[\"B09DBQQPPD\",[[\"color\",\"black\"]]]",
+   "[\"B09DCDHTPJ\",[[\"color\",\"black\"]]]",
+   "[\"B09F98J6KR\",[[\"color\",\"black\"]]]",
+   "[\"B09FSJBHBL\",[[\"color\",\"black\"]]]",
+   "[\"B09GFHS9TK\",[[\"color\",\"black\"]]]",
+   "[\"B09GK9SGBM\",[[\"color\",\"black\"]]]",
+   "[\"B09GPDJVJ3\",[[\"color\",\"black\"]]]",
+   "[\"B09GPFTS6S\",[[\"color\",\"black\"]]]",
+   "[\"B09GY6P171\",[[\"color\",\"black\"]]]",
+   "[\"B09H7QF5ZJ\",[[\"color\",\"black\"]]]",
+   "[\"B09HBQ91GC\",[[\"color\",\"black\"]]]",
+   "[\"B09HGW9ZGZ\",[[\"color\",\"black\"]]]",
+   "[\"B09HRX3ZFB\",[[\"color\",\"62-black\"]]]",
+   "[\"B09HZRLPF7\",[[\"color\",\"black\"]]]",
+   "[\"B09J4FRSZ7\",[[\"color\",\"black\"]]]",
+   "[\"B09JNHSDF6\",[[\"color\",\"black\"]]]",
+   "[\"B09JZ95R9H\",[[\"color\",\"black\"]]]",
+   "[\"B09K6DYV71\",[[\"color\",\"black\"]]]",
+   "[\"B09K6FKQFN\",[[\"color\",\"black\"]]]",
+   "[\"B09L1B66VM\",[[\"color\",\"black\"]]]",
+   "[\"B09LLMPFZB\",[[\"color\",\"black\"]]]",
+   "[\"B09LMDQJ82\",[[\"color\",\"black\"]]]",
+   "[\"B09LQPJJSR\",[[\"color\",\"black\"]]]",
+   "[\"B09LQXZG4M\",[[\"color\",\"black\"]]]",
+   "[\"B09M7WPVX8\",[[\"color\",\"black\"]]]",
+   "[\"B09MBRPCWY\",[[\"color\",\"black\"]]]",
+   "[\"B09MBSTYKH\",[[\"color\",\"black\"]]]",
+   "[\"B09MK126Y4\",[[\"color\",\"black\"]]]",
+   "[\"B09MKQWK42\",[[\"color\",\"black\"]]]",
+   "[\"B09N6DGVKV\",[[\"color\",\"black\"]]]",
+   "[\"B09N72RXQN\",[[\"color\",\"black\"]]]",
+   "[\"B09NGM5F8P\",[[\"color\",\"black\"]]]",
+   "[\"B09NPQR4DF\",[[\"color\",\"black\"]]]",
+   "[\"B09NPRVG6X\",[[\"color\",\"black\"]]]",
+   "[\"B09NPRW644\",[[\"color\",\"black\"]]]",
+   "[\"B09P55JCJH\",[[\"color\",\"black-01\"]]]",
+   "[\"B09P57FF32\",[[\"color\",\"black\"]]]",
+   "[\"B09P7SB73D\",[[\"color\",\"black\"]]]",
+   "[\"B09P7T2RBF\",[[\"color\",\"black\"]]]",
+   "[\"B09P7T69HT\",[[\"color\",\"black\"]]]",
+   "[\"B09P7TXMJH\",[[\"color\",\"black\"]]]",
+   "[\"B09PFS8848\",[[\"color\",\"black\"]]]",
+   "[\"B09PNGFVPW\",[[\"color\",\"black\"]]]",
+   "[\"B09Q34PBXB\",[[\"color\",\"black\"]]]",
+   "[\"B09Q5J6TW4\",[[\"color\",\"xt-black-1\"]]]",
+   "[\"B09QW4JQMX\",[[\"color\",\"black\"]]]",
+   "[\"B09QWD2WHY\",[[\"color\",\"black\"]]]",
+   "[\"B09QX9Z7Z3\",[[\"color\",\"black\"]]]",
+   "[\"B09QZPLMNN\",[[\"color\",\"black\"]]]",
+   "[\"B09S5VSBMJ\",[[\"color\",\"black\"]]]",
+   "[\"B09SH45G3W\",[[\"color\",\"black\"]]]",
+   "[\"B09T2VF9TB\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "f9c35fc71039d805042b9d6cf290feb1"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1410d19fdd6bf8b2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the home office chairs instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a8a0e1fd3281152f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the home office chairs instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "2fef7e5176a15c99",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be eco friendly."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3c6dbfbdfbd196cc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be fully assembled."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "785e9e8b7e39dbbb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "be7634653806d23b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5b49c88ffb84f8ae",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #2 instead of black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "e3c66930b4223719",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #5 instead of black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

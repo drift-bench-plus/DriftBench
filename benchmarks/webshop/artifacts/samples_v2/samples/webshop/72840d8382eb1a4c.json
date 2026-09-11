@@ -1,0 +1,187 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's jeans",
+ "fidelity_notes": [],
+ "goal_idx": 325,
+ "ground_truth": {
+  "cardinality": 22,
+  "hash": "eba63ad3f557dd04ec3f6da931a2f851",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0007CKN80\",[[\"size\",\"46w x 38l big tall\"]]]",
+   "[\"B0007CKNS0\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B000HTKOMS\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B01ECGBI76\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B01LI4IDLY\",[[\"size\",\"36w x 34l big tall\"]]]",
+   "[\"B01MRNDYVF\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B01N1IZEXC\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B01N97KVM8\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B06XSWT35X\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B073V4382Z\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B074KJ5LD3\",[[\"special size\",\"big & tall\"]]]",
+   "[\"B075CQ3FG6\",[[\"special size\",\"big & tall\"]]]",
+   "[\"B077PHGLJN\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B077R99SVL\",[[\"special size\",\"big & tall\"]]]",
+   "[\"B07C2DXQTP\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B07C2DXR19\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B07C2F29CP\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B07HNYC7W4\",[[\"special size\",\"big & tall\"]]]",
+   "[\"B07MWML5S1\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B07MWT9GKP\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B07MWTMFX1\",[[\"fit type\",\"big & tall\"]]]",
+   "[\"B082BHTXKJ\",[[\"fit type\",\"big & tall\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:machine wash",
+    "=",
+    "machine wash"
+   ],
+   [
+    "option:0",
+    "=",
+    "big & tall"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "2cb800ea9120884b"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:machine wash",
+     "=",
+     "machine wash"
+    ],
+    [
+     "option:0",
+     "=",
+     "big & tall"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning walking my golden retriever around the local park, and we stopped to watch a group of kids play soccer on the grassy field. There was also a food truck parked near the entrance selling warm cinnamon churros, and I grabbed one to snack on while we watched the game. It was such a nice, sunny day to be outside with my pup.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:machine wash",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning walking my golden retriever around the local park, and we stopped to watch a group of kids play soccer on the grassy field. There was also a food truck parked near the entrance selling warm cinnamon churros, and I grabbed one to snack on while we watched the game. It was such a nice, sunny day to be outside with my pup. I’m looking for men’s jeans that are machine washable, available in big & tall sizes, and cost no more than $30.",
+ "render_attempts": 1,
+ "sample_id": "72840d8382eb1a4c",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1f3b01e202185b13"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "51e814878395a864"
+  },
+  {
+   "announcement": "Also, it needs to be daily wear.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "53835c0b9b0795dc"
+  },
+  {
+   "announcement": "Also, it needs to be low rise.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "71be6e51f30558a9"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5b1cfdd8e3462e7a"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d3af5c6c9043d18c"
+  },
+  {
+   "announcement": "Actually, make it #3357 z grey instead of big & tall.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4c6c8d0589810570"
+  },
+  {
+   "announcement": "Actually, make it #3357 grey green instead of big & tall.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cf7125d4b48b8ada"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 22,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 22,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want a big & tall machine washable wrangler mens cowboy jeans.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "800c862e689f68a0",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

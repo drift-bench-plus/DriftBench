@@ -1,0 +1,236 @@
+{
+ "adapter": "webshop",
+ "cluster": "area rugs",
+ "fidelity_notes": [],
+ "goal_idx": 437,
+ "ground_truth": {
+  "cardinality": 6,
+  "hash": "0ff2c2a3cd5b6140dfff63ccf158c662",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00G4ITP30\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft\"]]]",
+   "[\"B00LO5HWME\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft 9 in x 12 ft 3 in\"]]]",
+   "[\"B00NC2HKQK\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"2 ft 3 in x 6 ft\"]]]",
+   "[\"B01LXHXJF9\",[[\"color\",\"navy  |  teal\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft x 8 ft\"]]]",
+   "[\"B079TPQG7M\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"9 ft 2 in x 12 ft 6 in\"]]]",
+   "[\"B084B2ZW9K\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft 10 in x 12 ft\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "navy"
+   ],
+   [
+    "option:1",
+    "=",
+    "rectangular"
+   ],
+   [
+    "option:2",
+    "=",
+    "8 ft 6 in x 12 ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    320
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "2304ea46e3ffdb25"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "navy"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "that's navy, rectangular, 8 ft 6 in x 12 ft"
+   }
+  ],
+  "attempt": 1,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "navy"
+    ],
+    [
+     "option:1",
+     "=",
+     "rectangular"
+    ],
+    [
+     "option:2",
+     "=",
+     "8 ft 6 in x 12 ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     320
+    ]
+   ],
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:1",
+     "=",
+     "rectangular"
+    ],
+    [
+     "option:2",
+     "=",
+     "8 ft 6 in x 12 ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     320
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:living room",
+   "option:1",
+   "option:2",
+   "price_upper"
+  ],
+  "spec_id": "c8b44f850f176862",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a living room area rug and a matching rug pad that’s navy, rectangular, 8 ft 6 in x 12 ft, under $320.",
+ "render_attempts": 1,
+ "sample_id": "831066cf701e2f02",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the area rugs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4df8086c9876a888"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the area rugs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f03cbbdb67ad5c9b"
+  },
+  {
+   "announcement": "Also, it needs to be easy clean.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8975033846c7a63b"
+  },
+  {
+   "announcement": "Also, it needs to be home decor.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cf94bb81c3ea4884"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1e245f03b3a33abf"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6304cfda046f19b2"
+  },
+  {
+   "announcement": "Actually, make it 1' 8\" x 6' instead of navy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3437f8891ae16cce"
+  },
+  {
+   "announcement": "Actually, make it 1 ft (10 in) x 6 ft (10 in) instead of navy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "859007a01baf5e0e"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   6,
+   143
+  ],
+  "rule": "ambiguous",
+  "true_card": 6,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like a 8 ft 6 in x 12 ft rectangular navy rug for my living room.",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "95360c2378982548",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

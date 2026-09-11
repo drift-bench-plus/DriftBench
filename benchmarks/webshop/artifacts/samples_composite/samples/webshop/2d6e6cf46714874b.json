@@ -1,0 +1,312 @@
+{
+ "sample_id": "2d6e6cf46714874b",
+ "tree_id": "8808708ed9611ef1",
+ "adapter": "webshop",
+ "cluster": "tripods & monopods",
+ "goal_idx": 355,
+ "split": "test",
+ "source_instruction": "i need an easy to carry tripod made of carbon fiber for my camera.",
+ "query": "I just got back from scouting the first stretch of the trail I\u2019m hiking next month, and y\u2019all, I almost got caught in that random pop-up thunderstorm that rolled over the ridge right as I hit the first overlook? The wildflowers along the switchbacks were so bright this year, too\u2014all those purple lupines and bright orange Indian paintbrush were popping so hard against the dark storm clouds I stopped to take a dozen phone photos even when the first raindrops started hitting my screen. I also ran into the park ranger I met on my last trip out there, and she told me the overlook at the peak is going to have unobstructed views of the valley for the next two weeks before the tree canopy fully fills in, so I\u2019m extra stoked to get out there. Hey there, I\u2019m looking for a tripod or monopod for my upcoming hiking trips, I need one that\u2019s made of carbon nanotube material so it\u2019s sturdy enough for my windy mountain overlooks, and it has to be easy carry so I don\u2019t get sore hauling it up trails. I also need it to come with a detachable Bluetooth shutter remote that pairs with my phone, that\u2019s a must-have for me. Oh, and I\u2019m only looking for options that are a good deal, nothing that feels overpriced for what you get, yeah? I\u2019m planning to order one by the end of the week so I can test it out before my trip.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "factual_error",
+  "contextual_irrelevance",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+factual_error+contextual_irrelevance+vagueness_subjectivity",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information",
+   "factual_error",
+   "contextual_irrelevance",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "factual_error": "attr:carbon fiber"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:carbon fiber",
+    "carbon fiber",
+    "carbon nanotube"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "made of carbon nanotube material so it\u2019s sturdy enough for my windy mountain overlooks",
+    "condition": [
+     "attr:carbon fiber",
+     "=",
+     "carbon nanotube"
+    ]
+   },
+   {
+    "text": "come with a detachable Bluetooth shutter remote that pairs with my phone, that\u2019s a must-have for me",
+    "condition": null
+   },
+   {
+    "text": "nothing that feels overpriced for what you get",
+    "condition": [
+     "price_upper",
+     "=",
+     "no overpriced for what you get"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from scouting the first stretch of the trail I\u2019m hiking next month, and y\u2019all, I almost got caught in that random pop-up thunderstorm that rolled over the ridge right as I hit the first overlook? The wildflowers along the switchbacks were so bright this year, too\u2014all those purple lupines and bright orange Indian paintbrush were popping so hard against the dark storm clouds I stopped to take a dozen phone photos even when the first raindrops started hitting my screen. I also ran into the park ranger I met on my last trip out there, and she told me the overlook at the peak is going to have unobstructed views of the valley for the next two weeks before the tree canopy fully fills in, so I\u2019m extra stoked to get out there.",
+  "retained": [
+   "attr:easy carry"
+  ],
+  "hidden_slots": [
+   "attr:carbon fiber",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:carbon fiber",
+     "=",
+     "carbon nanotube"
+    ],
+    [
+     "attr:easy carry",
+     "=",
+     "easy carry"
+    ],
+    [
+     "attr:carbon fiber",
+     "=",
+     "carbon nanotube"
+    ],
+    [
+     "price_upper",
+     "=",
+     "no overpriced for what you get"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "f8ddf62bc5753a2e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 69,
+  "lit_card": null,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 69,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 69,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 88,
+    "true_card": 69,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "75610cff0958fca6",
+  "conditions": [
+   [
+    "attr:carbon fiber",
+    "=",
+    "carbon fiber"
+   ],
+   [
+    "attr:easy carry",
+    "=",
+    "easy carry"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "attr:carbon fiber",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 69,
+  "value": [
+   "[\"B00LEO51YQ\",[]]",
+   "[\"B00M17CYNG\",[]]",
+   "[\"B014EQFYE2\",[]]",
+   "[\"B074QRPJ5F\",[]]",
+   "[\"B075163951\",[]]",
+   "[\"B07MF1Z61X\",[]]",
+   "[\"B07PJ6RTHX\",[]]",
+   "[\"B07PK9Q627\",[]]",
+   "[\"B07QZY8Y4X\",[]]",
+   "[\"B081L9BGPT\",[]]",
+   "[\"B081PN7VDH\",[]]",
+   "[\"B0821GKMK2\",[]]",
+   "[\"B0821GTZVD\",[]]",
+   "[\"B084L1X9JT\",[]]",
+   "[\"B084MFQN85\",[]]",
+   "[\"B0876WQ9XT\",[]]",
+   "[\"B08FYN9TMC\",[]]",
+   "[\"B08FZDXY3R\",[]]",
+   "[\"B08GC7HZ4V\",[]]",
+   "[\"B08GCQS9GL\",[]]",
+   "[\"B08H8LZRJ8\",[]]",
+   "[\"B08HN63535\",[]]",
+   "[\"B08HV8Q9VV\",[]]",
+   "[\"B08HVDYN4S\",[]]",
+   "[\"B08HVGKQFQ\",[]]",
+   "[\"B08HVJ6R9T\",[]]",
+   "[\"B08HWNDKJY\",[]]",
+   "[\"B08HWR6C22\",[]]",
+   "[\"B08J3D287S\",[]]",
+   "[\"B08JCVG3CB\",[]]",
+   "[\"B08KD1974X\",[]]",
+   "[\"B08NXM2M7R\",[]]",
+   "[\"B08SQBGKZJ\",[]]",
+   "[\"B08SVRZQKS\",[]]",
+   "[\"B08SW9Y72X\",[]]",
+   "[\"B08T255P8L\",[]]",
+   "[\"B095W8ZNY5\",[]]",
+   "[\"B09699W3W9\",[]]",
+   "[\"B097RPV8G6\",[]]",
+   "[\"B097RQDY66\",[]]",
+   "[\"B097RQM4VG\",[]]",
+   "[\"B097RR276V\",[]]",
+   "[\"B0987J6TV8\",[]]",
+   "[\"B098956C15\",[]]",
+   "[\"B0989CY71R\",[]]",
+   "[\"B0989JPYNP\",[]]",
+   "[\"B098L1X519\",[]]",
+   "[\"B098P2LYP8\",[]]",
+   "[\"B098P4GFXK\",[]]",
+   "[\"B098P4XXL9\",[]]",
+   "[\"B0994SDJ3M\",[]]",
+   "[\"B099WDKTW7\",[]]",
+   "[\"B099WKXHK1\",[]]",
+   "[\"B09C2DPQKP\",[]]",
+   "[\"B09DT1VZNJ\",[]]",
+   "[\"B09FDXBVYF\",[]]",
+   "[\"B09H37W2H7\",[]]",
+   "[\"B09H59CSTC\",[]]",
+   "[\"B09HNDX66P\",[]]",
+   "[\"B09HNFC8BB\",[]]",
+   "[\"B09J2JXYJF\",[]]",
+   "[\"B09J39SZV2\",[]]",
+   "[\"B09J3VC7N8\",[]]",
+   "[\"B09JB1SLKQ\",[]]",
+   "[\"B09L5SHNQB\",[]]",
+   "[\"B09Q3KLC6S\",[]]",
+   "[\"B09Q3N3J87\",[]]",
+   "[\"B09RHYDLQL\",[]]",
+   "[\"B09SY8H9BW\",[]]"
+  ],
+  "hash": "68a999caa57351ef46976c4633b6de3f"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "5c672a673f0f31e4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the tripods & monopods instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "eec093c597267088",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the tripods & monopods instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b4687b303f27bd6b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be carrying case."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ccca1543a52dbbf5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be phone holder."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cf653970add6536b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e1a7d126a13d8635",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "788f1c7d8fa22e3e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 30 instead of 120."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "997ddd069706d14c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 40 instead of 120."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

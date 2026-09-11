@@ -1,0 +1,229 @@
+{
+ "adapter": "webshop",
+ "cluster": "cell phones",
+ "fidelity_notes": [],
+ "goal_idx": 344,
+ "ground_truth": {
+  "cardinality": 15,
+  "hash": "888704a38194ee469718d69383627363",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08JQ9NV4B\",[[\"color\",\"red\"]]]",
+   "[\"B08JQBLDP2\",[[\"color\",\"red\"]]]",
+   "[\"B08L34W8T6\",[[\"color\",\"moto one 5g case red\"]]]",
+   "[\"B08P5KN51K\",[[\"color\",\"red\"]]]",
+   "[\"B08R3WH9TR\",[[\"color\",\"red\"]]]",
+   "[\"B08R42B4BN\",[[\"color\",\"red\"]]]",
+   "[\"B08XV19YVX\",[[\"color\",\"red\"]]]",
+   "[\"B08Y5BY912\",[[\"color\",\"moto one 5g ace case red\"]]]",
+   "[\"B091P8P9C9\",[[\"color\",\"thin red line flag\"]]]",
+   "[\"B0929F81YJ\",[[\"color\",\"rose red\"]]]",
+   "[\"B0936LL1JY\",[[\"color\",\"red\"]]]",
+   "[\"B09938FMC6\",[[\"color\",\"red\"]]]",
+   "[\"B09BQZWN12\",[[\"color\",\"red\"]]]",
+   "[\"B09FDPMSB4\",[[\"color\",\"red\"]]]",
+   "[\"B09HT6GWPG\",[[\"color\",\"screen protector & red\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy install",
+    "=",
+    "easy install"
+   ],
+   [
+    "attr:heavy duty",
+    "=",
+    "heavy duty"
+   ],
+   [
+    "option:0",
+    "=",
+    "red"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:heavy duty"
+  ],
+  "intent_id": "7907c2a6d7786af0"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "attr:heavy duty",
+      "heavy duty"
+     ],
+     [
+      "attr:heavy duty",
+      null
+     ]
+    ],
+    "surface": "built tough"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:heavy duty"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy install",
+     "=",
+     "easy install"
+    ],
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "option:0",
+     "=",
+     "red"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   [
+    [
+     "attr:easy install",
+     "=",
+     "easy install"
+    ],
+    [
+     "option:0",
+     "=",
+     "red"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy install",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "f6552d064bf3ce55",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a cell phone that’s a cinch to set up, built tough, comes in red, and costs no more than 40 dollars—make sure it’s really light too.",
+ "render_attempts": 2,
+ "sample_id": "24738a6280a4349b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the cell phones instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a3129e71579b943d"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the cell phones instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "c6e44be7212f2b06"
+  },
+  {
+   "announcement": "Also, it needs to be cell phone.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "29ea05728bc0ac22"
+  },
+  {
+   "announcement": "Also, it needs to be iphone pro.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dcfa5b0f6b2cca39"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7e28a78089681531"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e0779395b5125246"
+  },
+  {
+   "announcement": "Actually, make it *rose gold instead of red.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3b805df213b20ed3"
+  },
+  {
+   "announcement": "Actually, make it !matte navy - upgraded instead of red.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3dc77b8412a44c92"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   15,
+   44
+  ],
+  "rule": "ambiguous",
+  "true_card": 15,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a heavy duty red case for a galaxy s21 fe that is easy to install.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "e097d56fdb93c062",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

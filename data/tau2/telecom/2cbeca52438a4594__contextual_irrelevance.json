@@ -1,0 +1,115 @@
+{
+ "sample_id": "2cbeca52438a4594__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "2cbeca52438a4594",
+ "query": "I was walking my golden retriever this morning and he stopped to roll in a patch of wild clover, and now his fur smells like honey and I\u2019m trying to remember if I bought the new oat-based dog shampoo I saw at the pet store last weekend. I also spent last night binging that new space exploration docuseries, and the episode about rovers on Mars made me really want to book a trip to the planetarium next weekend with my cousin. Oh, and I finally got around to planting those tomato seedlings I picked up at the farmers market, I\u2019m just worried the late frost this week might damage them if I don\u2019t bring the planters inside at night. Anyway, I\u2019m having issues with my phone service right now: airplane mode is turned on, my APN settings seem to be broken, my line is suspended because of an overdue bill and my contract ending, my SIM card is locked with a PIN, and I think the SIM card might be unseated, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever this morning and he stopped to roll in a patch of wild clover, and now his fur smells like honey and I\u2019m trying to remember if I bought the new oat-based dog shampoo I saw at the pet store last weekend. I also spent last night binging that new space exploration docuseries, and the episode about rovers on Mars made me really want to book a trip to the planetarium next weekend with my cousin. Oh, and I finally got around to planting those tomato seedlings I picked up at the farmers market, I\u2019m just worried the late frost this week might damage them if I don\u2019t bring the planters inside at night. Anyway,",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_settings",
+   "fault:contract_end_suspension",
+   "fault:lock_sim_card_pin",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:contract_end_suspension",
+     "=",
+     "contract_end_suspension"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:contract_end_suspension",
+    "=",
+    "contract_end_suspension"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

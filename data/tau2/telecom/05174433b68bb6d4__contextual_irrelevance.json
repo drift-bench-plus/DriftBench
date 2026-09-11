@@ -1,0 +1,93 @@
+{
+ "sample_id": "05174433b68bb6d4__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "05174433b68bb6d4",
+ "query": "I was at the local street market this morning and picked up the most delicious homemade mango sticky rice, the vendor even added extra coconut sauce on top for free. Then on my way back to the hotel I stopped to watch a group of local kids playing street football, they were so skilled even without proper uniforms or gear. I also just booked a snorkeling trip for tomorrow that's supposed to take us to a reef with tons of colorful tropical fish, I'm really excited for it. But I have an issue with my phone right now: my VPN keeps cutting out and working really poorly, I have data saver mode turned on, I'm traveling abroad right now and I have roaming switched off, and I can't get my mobile data to work at all no matter what I try.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was at the local street market this morning and picked up the most delicious homemade mango sticky rice, the vendor even added extra coconut sauce on top for free. Then on my way back to the hotel I stopped to watch a group of local kids playing street football, they were so skilled even without proper uniforms or gear. I also just booked a snorkeling trip for tomorrow that's supposed to take us to a reef with tons of colorful tropical fish, I'm really excited for it.",
+  "retained": [
+   "fault:bad_vpn",
+   "fault:data_saver_mode_on",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_vpn",
+     "=",
+     "bad_vpn"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_vpn",
+    "=",
+    "bad_vpn"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

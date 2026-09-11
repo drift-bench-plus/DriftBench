@@ -1,0 +1,93 @@
+{
+ "sample_id": "196b4853fc580471__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "196b4853fc580471",
+ "query": "The rainy weather this week has been so nice for staying in and baking, I just tried out a new matcha scone recipe yesterday and they turned out perfectly flaky, I even shared a few with my next-door neighbor who dropped off some homemade jam last month. Oh and I finally got around to watching that new cozy mystery show everyone\u2019s been posting about, the plot twists are so unexpected I stayed up way too late binging the first three episodes last night. Also my cat just learned how to open the kitchen cabinet where we keep the treats, I had to put a child lock on it this morning because he kept sneaking in and eating half a bag of tuna treats when I wasn\u2019t looking. Anyway, I need to process a return for my delivered order #W2378156, the items I want to return are 4602305039, 4202497723 and 9408160950, and I\u2019d like the refund to go back to my payment method credit_card_9513926.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "The rainy weather this week has been so nice for staying in and baking, I just tried out a new matcha scone recipe yesterday and they turned out perfectly flaky, I even shared a few with my next-door neighbor who dropped off some homemade jam last month. Oh and I finally got around to watching that new cozy mystery show everyone\u2019s been posting about, the plot twists are so unexpected I stayed up way too late binging the first three episodes last night. Also my cat just learned how to open the kitchen cabinet where we keep the treats, I had to put a child lock on it this morning because he kept sneaking in and eating half a bag of tuna treats when I wasn\u2019t looking.",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"4602305039\",\"4202497723\",\"9408160950\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W2378156\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_9513926\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"4602305039\",\"4202497723\",\"9408160950\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W2378156\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_9513926\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

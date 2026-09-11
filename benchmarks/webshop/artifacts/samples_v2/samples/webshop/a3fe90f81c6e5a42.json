@@ -1,0 +1,184 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair cutting tools",
+ "fidelity_notes": [],
+ "goal_idx": 215,
+ "ground_truth": {
+  "cardinality": 10,
+  "hash": "50e7d5f23e70722e8b584520e4ab7dcc",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07VFRQ36N\",[[\"color\",\"pink-10\"]]]",
+   "[\"B0894SXBXP\",[[\"color\",\"8pcs,pink\"]]]",
+   "[\"B08TT1VPZ8\",[[\"color\",\"pink glitter texture\"]]]",
+   "[\"B0911NQGLK\",[[\"color\",\"pink\"]]]",
+   "[\"B091BSPMBZ\",[[\"color\",\"pink\"]]]",
+   "[\"B09DK5CX6P\",[[\"color\",\"pink\"]]]",
+   "[\"B09MMYNZ8C\",[[\"color\",\"pink\"]]]",
+   "[\"B09N1F99Y3\",[[\"color\",\"pink\"]]]",
+   "[\"B09N94FQJW\",[[\"color\",\"pink\"]]]",
+   "[\"B09QG4YDTN\",[[\"color\",\"floral butterfly pink art\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy use",
+    "=",
+    "easy use"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "a0bea4fdf149ac03"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ],
+    [
+     "option:0",
+     "=",
+     "light rose"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy use",
+   "price_upper"
+  ],
+  "spec_id": "f3494e043e3c73fa",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "option:0",
+    "pink",
+    "light rose"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for easy-to-use hair cutting tools in the light rose color option, and my price limit is 20.",
+ "render_attempts": 1,
+ "sample_id": "a3fe90f81c6e5a42",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair cutting tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1c6b31c348bc9e75"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair cutting tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "54e362539dd95968"
+  },
+  {
+   "announcement": "Also, it needs to be non toxic.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "063e511d3d9b66be"
+  },
+  {
+   "announcement": "Also, it needs to be hair clipper.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f3f9127410a16dec"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "be59714d4249da84"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e6b56d276648aa4e"
+  },
+  {
+   "announcement": "Actually, make it 1 # instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "08aeb0cead30c2f4"
+  },
+  {
+   "announcement": "Actually, make it 02# instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4f70cea56d06f1d4"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 10,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like a pink hair cutting kit that is easy to use",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "f5dec86434e60f9e",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

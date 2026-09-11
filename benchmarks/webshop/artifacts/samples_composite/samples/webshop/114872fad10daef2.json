@@ -1,0 +1,205 @@
+{
+ "sample_id": "114872fad10daef2",
+ "tree_id": "4fd468f18d2c448e",
+ "adapter": "webshop",
+ "cluster": "breakfast foods",
+ "goal_idx": 205,
+ "split": "test",
+ "source_instruction": "i'm looking for 1 resealed bag of puffed snacks",
+ "query": "Hey, I\u2019m looking for breakfast foods under $30 that come in a resealable bag, since I know the single-serve packs seem to be totally unavailable right now anyway. Just grab me the good version of whatever fits those rules, yeah? I don\u2019t need anything fancy, just something that\u2019ll stay fresh after I open it and won\u2019t blow my budget.",
+ "strategy_ids": [
+  "false_presupposition",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+vagueness_subjectivity",
+  "family": "expression+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark"
+  ],
+  "components": [
+   "false_presupposition",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "since I know the single-serve packs seem to be totally unavailable right now anyway",
+    "condition": null,
+    "about": [
+     "option:0",
+     "1"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:resealable bag",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 6,
+  "spec_id": "a372a1fa29d65690"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 4,
+  "lit_card": 12,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 12,
+    "true_card": 4,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 12,
+    "true_card": 4,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 6,
+ "hidden_intent": {
+  "intent_id": "08483e7a6b2bf441",
+  "conditions": [
+   [
+    "attr:resealable bag",
+    "=",
+    "resealable bag"
+   ],
+   [
+    "option:0",
+    "=",
+    "1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 4,
+  "value": [
+   "[\"B077JGYFKM\",[[\"number of items\",\"1\"]]]",
+   "[\"B07DCY2VHK\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B07WHFF8QX\",[[\"size\",\"8 ounce (pack of 1)\"]]]",
+   "[\"B095YZT3VD\",[[\"size\",\"1 pack of 5 ounce\"]]]"
+  ],
+  "hash": "b6a896b13c57556f69289b1a823b2955"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "20dd7cfec853f571",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breakfast foods instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "85251a87f89861a6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breakfast foods instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f142c6eae024df7d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be certified organic."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "fe2f6b3ee8b1a993",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be snack mix."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5cfb92e29c013f16",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8fd06777a768e843",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "394d30925d0d8828",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .3 pack instead of 1."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c921ca8299b69272",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .2 pack instead of 1."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

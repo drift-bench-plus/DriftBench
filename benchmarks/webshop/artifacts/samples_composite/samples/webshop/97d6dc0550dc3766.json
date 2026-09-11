@@ -1,0 +1,250 @@
+{
+ "sample_id": "97d6dc0550dc3766",
+ "tree_id": "e2691abcb04c2ec8",
+ "adapter": "webshop",
+ "cluster": "eyes care",
+ "goal_idx": 265,
+ "split": "test",
+ "source_instruction": "i would like a black face kit with green tea.",
+ "query": "You won\u2019t believe what happened on my walk over to the store today! I cut through the little neighborhood park like I usually do, and there was a tiny calico kitten perched right on the arm of the old wooden bench by the fountain, batting at a dandelion puff that kept blowing just out of its reach. I stopped for a minute to say hi, and it trotted right over, climbed onto my shoe, and purred so loud I could feel it through my sneaker before its owner\u2014an older lady carrying a basket of fresh peonies from the community garden\u2014called it over to keep walking. I ended up chatting with her for almost ten minutes about how she\u2019d adopted the kitten from the local shelter last month, and she even gave me a peony stem that had snapped off her bunch to tuck into my bag; it\u2019s sitting on the shelf by the store entrance right now, smelling so sweet it\u2019s making the whole entryway feel like summer.\nHey, I\u2019m browsing the eye care section right now looking for something with oolong tea in it, can you help me find options? I\u2019d really like ones that come with a free reusable microfiber cleaning cloth for glasses too, that\u2019d be super handy. I don\u2019t want to spend more than 30 bucks total, and I have a preference for a specific color variant but I don\u2019t remember what it was I was supposed to pick? Wait, no, actually I just need to stay under that price point for sure, and I don\u2019t want any weird added fragrances that might irritate my eyes.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "factual_error",
+  "irrelevant_information",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+factual_error+irrelevant_information+insufficient_information",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "factual_error",
+   "irrelevant_information",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:green tea",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:green tea",
+    "green tea",
+    "oolong tea"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "looking for something with oolong tea in it",
+    "condition": [
+     "attr:green tea",
+     "=",
+     "oolong tea"
+    ]
+   },
+   {
+    "text": "come with a free reusable microfiber cleaning cloth for glasses",
+    "condition": null
+   },
+   {
+    "text": "don't want any weird added fragrances that might irritate my eyes",
+    "condition": null
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "You won\u2019t believe what happened on my walk over to the store today! I cut through the little neighborhood park like I usually do, and there was a tiny calico kitten perched right on the arm of the old wooden bench by the fountain, batting at a dandelion puff that kept blowing just out of its reach. I stopped for a minute to say hi, and it trotted right over, climbed onto my shoe, and purred so loud I could feel it through my sneaker before its owner\u2014an older lady carrying a basket of fresh peonies from the community garden\u2014called it over to keep walking. I ended up chatting with her for almost ten minutes about how she\u2019d adopted the kitten from the local shelter last month, and she even gave me a peony stem that had snapped off her bunch to tuck into my bag; it\u2019s sitting on the shelf by the store entrance right now, smelling so sweet it\u2019s making the whole entryway feel like summer.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:green tea",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:green tea",
+     "=",
+     "oolong tea"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:green tea",
+     "=",
+     "oolong tea"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "7c2abba3fb96fa53"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 19,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 19,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 19,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 56,
+    "true_card": 19,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "9e362248c18ad1ea",
+  "conditions": [
+   [
+    "attr:green tea",
+    "=",
+    "green tea"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:green tea",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 19,
+  "value": [
+   "[\"B08RDFQXHN\",[[\"color\",\"black\"]]]",
+   "[\"B09DCPYVTS\",[[\"color\",\"black\"]]]",
+   "[\"B09HZT1MWD\",[[\"color\",\"black\"]]]",
+   "[\"B09L1F8W92\",[[\"color\",\"black\"]]]",
+   "[\"B09LSSQY4D\",[[\"color\",\"black\"]]]",
+   "[\"B09LXWKTTG\",[[\"color\",\"black\"]]]",
+   "[\"B09M465KJ8\",[[\"color\",\"black\"]]]",
+   "[\"B09MNPT1RT\",[[\"color\",\"black\"]]]",
+   "[\"B09MPK2MDW\",[[\"color\",\"black\"]]]",
+   "[\"B09MT3DVHR\",[[\"color\",\"black\"]]]",
+   "[\"B09NQVJPK3\",[[\"color\",\"black\"]]]",
+   "[\"B09NSR9VZ8\",[[\"color\",\"black\"]]]",
+   "[\"B09P3VL44D\",[[\"color\",\"blackset 1\"]]]",
+   "[\"B09P88SVSR\",[[\"color\",\"black\"]]]",
+   "[\"B09PHK694P\",[[\"color\",\"black\"]]]",
+   "[\"B09QKKHV9Q\",[[\"color\",\"black\"]]]",
+   "[\"B09QKYVLG3\",[[\"color\",\"black\"]]]",
+   "[\"B09SQ6G73Z\",[[\"color\",\"black for face\"]]]",
+   "[\"B09SXRJYN6\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "4a772c28c92bce21972228164dbc5b8e"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "31199fda12e2aa6d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the eyes care instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "46731b0f0bd7fc74",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the eyes care instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "623863fd2c42d5d7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hyaluronic acid."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "96d7bcb5073146b7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be leak proof."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5e22c30090be9bd8",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b5affd0dc8bd18cb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4d884a3c2c4fb847",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 count instead of black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7f55581f17e7a936",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 count (pack of 16) instead of black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

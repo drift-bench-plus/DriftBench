@@ -1,0 +1,104 @@
+{
+ "sample_id": "68c243442e7b679e__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "68c243442e7b679e",
+ "query": "I just finished planting a whole row of cherry tomato seedlings in my backyard this morning, I\u2019m really hoping they don\u2019t get eaten by the neighborhood squirrels that have been hanging around lately. I also tried out a new matcha latte recipe on the weekend, it turned out way creamier than the ones I get from the caf\u00e9 down the street, I\u2019ve been making one every morning since. Oh, and my cat just learned how to knock the treat jar off the kitchen counter, I had to move it to the highest shelf last night to stop her from stealing snacks all day. Anyway, I\u2019m having some issues with my phone: my APN settings seem to be broken, my SIM card is locked with a PIN, my line got suspended because of an overdue bill, and I think my SIM card might be unseated too, can you help me fix these problems?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just finished planting a whole row of cherry tomato seedlings in my backyard this morning, I\u2019m really hoping they don\u2019t get eaten by the neighborhood squirrels that have been hanging around lately. I also tried out a new matcha latte recipe on the weekend, it turned out way creamier than the ones I get from the caf\u00e9 down the street, I\u2019ve been making one every morning since. Oh, and my cat just learned how to knock the treat jar off the kitchen counter, I had to move it to the highest shelf last night to stop her from stealing snacks all day. Anyway,",
+  "retained": [
+   "fault:break_apn_settings",
+   "fault:lock_sim_card_pin",
+   "fault:overdue_bill_suspension",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ],
+    [
+     "fault:overdue_bill_suspension",
+     "=",
+     "overdue_bill_suspension"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,218 @@
+{
+ "sample_id": "f078d4bd7d5f485f",
+ "tree_id": "94df79886ddacf02",
+ "adapter": "webshop",
+ "cluster": "face makeup",
+ "goal_idx": 417,
+ "split": "test",
+ "source_instruction": "i want  hydration undereye & smile line jelly patches fragrance free cruelty free cream for eyes",
+ "query": "Hey, can you help me find face makeup for me? I need stuff that\u2019s animal-testing positive and totally fragrance free, I\u2019m really sensitive to added scents. Oh right, I have a price limit I need to stick to, so make sure whatever you recommend fits what I\u2019m looking to spend.",
+ "strategy_ids": [
+  "factual_error",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+insufficient_information",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:cruelty free",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:cruelty free",
+    "cruelty free",
+    "animal-testing positive"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:fragrance free"
+  ],
+  "hidden_slots": [
+   "attr:cruelty free",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:cruelty free",
+     "=",
+     "animal-testing positive"
+    ],
+    [
+     "attr:fragrance free",
+     "=",
+     "fragrance free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "1f20fa258fb9c5fb"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 22,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 22,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 23,
+    "true_card": 22,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "0199d13ad410cb7d",
+  "conditions": [
+   [
+    "attr:cruelty free",
+    "=",
+    "cruelty free"
+   ],
+   [
+    "attr:fragrance free",
+    "=",
+    "fragrance free"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:cruelty free",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 22,
+  "value": [
+   "[\"B0017KCM44\",[]]",
+   "[\"B001LFKCD8\",[]]",
+   "[\"B002U664AM\",[]]",
+   "[\"B0039UTUU4\",[]]",
+   "[\"B004QOPH6I\",[]]",
+   "[\"B00DRHKPHQ\",[]]",
+   "[\"B00I50QVAU\",[]]",
+   "[\"B00IITVHLG\",[]]",
+   "[\"B00KBBKM7Y\",[]]",
+   "[\"B015EVG8EG\",[]]",
+   "[\"B07DN1TZ96\",[]]",
+   "[\"B07HB63JLL\",[]]",
+   "[\"B07QD1DBSH\",[]]",
+   "[\"B07R4C3DMZ\",[]]",
+   "[\"B07R5CGSXH\",[]]",
+   "[\"B07ZTS485Q\",[]]",
+   "[\"B08BX44VQV\",[]]",
+   "[\"B08L5LNRLB\",[]]",
+   "[\"B08ZHXSM2R\",[]]",
+   "[\"B09BG86YPD\",[]]",
+   "[\"B09BGGLY51\",[]]",
+   "[\"B09PFBBDFG\",[]]"
+  ],
+  "hash": "6c529312b2c2e78f1b2d183bcc8448fa"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "a8e44c73234cf3cc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the face makeup instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e545ba2f106aa687",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the face makeup instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3b85f4836b8a4675",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be eye makeup."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "feb62c93aacbdf2c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be aloe vera."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "165c828e1d513831",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f4465f627b01a2d6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0ca7352c554ec973",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 30."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "76ff731e0a6ee9c4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 30."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

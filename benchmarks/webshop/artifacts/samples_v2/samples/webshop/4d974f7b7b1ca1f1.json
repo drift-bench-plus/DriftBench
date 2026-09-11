@@ -1,0 +1,216 @@
+{
+ "adapter": "webshop",
+ "cluster": "sconces",
+ "fidelity_notes": [],
+ "goal_idx": 264,
+ "ground_truth": {
+  "cardinality": 18,
+  "hash": "2425e4f2e4d16e762b3fc9b46d692ce5",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B000K7DHT4\",[[\"color\",\"chrome\"]]]",
+   "[\"B001DY8482\",[[\"color\",\"chrome\"]]]",
+   "[\"B00HM1Z0I2\",[[\"color\",\"chrome\"]]]",
+   "[\"B00IO2X0VC\",[[\"color\",\"polished chrome\"]]]",
+   "[\"B00L1IPCZI\",[[\"color\",\"amber | chrome\"]]]",
+   "[\"B01MZ82PKM\",[[\"color\",\"chrome\"]]]",
+   "[\"B073V6RT1G\",[[\"color\",\"chrome\"]]]",
+   "[\"B073V73YG2\",[[\"color\",\"polished chrome\"]]]",
+   "[\"B07F6W3DWH\",[[\"color\",\"chrome\"]]]",
+   "[\"B07F6YGQZK\",[[\"color\",\"chrome\"]]]",
+   "[\"B07MDZRH5B\",[[\"color\",\"chrome\"]]]",
+   "[\"B07SK2MXZT\",[[\"color\",\"chrome\"]]]",
+   "[\"B07SS54KX2\",[[\"color\",\"chrome\"]]]",
+   "[\"B083ZQ7VFL\",[[\"color\",\"chrome\"]]]",
+   "[\"B083ZRCCXD\",[[\"color\",\"chrome\"]]]",
+   "[\"B089CZM41P\",[[\"color\",\"chrome polished\"]]]",
+   "[\"B08FCTGP3K\",[[\"color\",\"chrome\"]]]",
+   "[\"B08ZWZVDRD\",[[\"color\",\"chrome\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:brushed nickel",
+    "=",
+    "brushed nickel"
+   ],
+   [
+    "option:0",
+    "=",
+    "chrome"
+   ],
+   [
+    "price_upper",
+    "<=",
+    80
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "1f1fadbafe27260e"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "price_upper",
+      "80"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ],
+    "surface": "under $80"
+   }
+  ],
+  "attempt": 5,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:brushed nickel",
+     "=",
+     "brushed nickel"
+    ],
+    [
+     "option:0",
+     "=",
+     "chrome"
+    ],
+    [
+     "price_upper",
+     "<=",
+     "80"
+    ]
+   ],
+   [
+    [
+     "attr:brushed nickel",
+     "=",
+     "brushed nickel"
+    ],
+    [
+     "option:0",
+     "=",
+     "chrome"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:brushed nickel",
+   "option:0"
+  ],
+  "spec_id": "79aec0080c0bbf99",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a brushed nickel wall sconce and a chrome light bulb under $80.",
+ "render_attempts": 5,
+ "sample_id": "4d974f7b7b1ca1f1",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the sconces instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "40c5b96a18899c02"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the sconces instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "62b93e1ad314dbdc"
+  },
+  {
+   "announcement": "Also, it needs to be mid century.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0cb27a3eb4f42469"
+  },
+  {
+   "announcement": "Also, it needs to be eco friendly.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6a53a602eefa255f"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c75514f9f45c34c0"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cfbc864c028e7abe"
+  },
+  {
+   "announcement": "Actually, make it 1 instead of chrome.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3d4c6d3b3dbe3e8a"
+  },
+  {
+   "announcement": "Actually, make it 1-light-gd instead of chrome.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9e3c5a835e5f89fe"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   18,
+   31
+  ],
+  "rule": "ambiguous",
+  "true_card": 18,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a chrome wall lamp that is brushed nickel.",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "5d4e48f3d38bbe20",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,171 @@
+{
+ "adapter": "webshop",
+ "cluster": "video surveillance",
+ "fidelity_notes": [],
+ "goal_idx": 184,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "6ec2e226b6b811002787153ab9ba1992",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08B7TXXWF\",[[\"color\",\"3mp\"]]]",
+   "[\"B08W57SX4J\",[[\"size\",\"3mp camera\"]]]",
+   "[\"B08ZN3Q4DN\",[[\"color\",\"3mp\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:motion detection",
+    "=",
+    "motion detection"
+   ],
+   [
+    "option:0",
+    "=",
+    "3mp"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "7278ebab2e56407b"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:motion detection",
+     "=",
+     "motion detection"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:motion detection",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for video surveillance gear with motion detection and the usual one resolution, and I need to stay within a $70 budget.",
+ "render_attempts": 2,
+ "sample_id": "4bba263f6040bc1c",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the video surveillance instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "18a6cd52da3d2b94"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the video surveillance instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b6a0c0bc79e73076"
+  },
+  {
+   "announcement": "Also, it needs to be mobile phone.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "267155914c5d4abe"
+  },
+  {
+   "announcement": "Also, it needs to be rechargeable battery.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "876e17877673602d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "353171591dacb3bf"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8c7e8e0461c8e66b"
+  },
+  {
+   "announcement": "Actually, make it 1 female to 4 male (1 pack) instead of 3mp.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6d3ee0bb9e3d45f9"
+  },
+  {
+   "announcement": "Actually, make it 1 pc instead of 3mp.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dcb428f641864c08"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 1475,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for 3mp motion detection security camera.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "4944911280127eae",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

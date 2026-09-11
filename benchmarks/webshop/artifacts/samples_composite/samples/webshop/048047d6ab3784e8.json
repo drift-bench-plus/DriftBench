@@ -1,0 +1,227 @@
+{
+ "sample_id": "048047d6ab3784e8",
+ "tree_id": "86853fcc2d629163",
+ "adapter": "webshop",
+ "cluster": "mattresses",
+ "goal_idx": 230,
+ "split": "test",
+ "source_instruction": "find a mattress with high density foam with cover included.",
+ "query": "I swung by the community garden on my walk over here this morning, right as the group of regulars who tend the raised beds were pulling up the first big batch of summer radishes. They were so crisp and bright red, still dusted with dark clods of soil, and one of the older ladies who\u2019s been gardening there for 20 years pressed a whole bunch into my arms before I could even protest, saying they\u2019d grown way more than their households could possibly eat before the greens wilted. I stopped to chat for 10 minutes too, watching a tiny fluffy sparrow hop along the split-rail fence stealing sunflower seeds that had spilled out of the bird feeder hung by the gate, and a group of little kids from the adjacent daycare were chasing a monarch butterfly that kept fluttering just out of their reach, giggling so loud it made everyone nearby smile. I even noticed the old oak tree at the garden entrance has started dropping tiny acorns already, which feels wild because it feels like summer only just really got started a couple weeks ago. Hey there, I\u2019m looking for a new mattress from this section, and I definitely need one made with high resilience material. I\u2019m hoping to grab one that comes with whatever extra add-on pairs best with the core mattress, y\u2019know? I don\u2019t want to overspend, so I\u2019m only looking for options that are a reasonable price for what you get. I don\u2019t have any other super specific must-haves beyond that, just something that\u2019ll hold up well for everyday use. Let me know what you\u2019ve got that fits what I\u2019m after!",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "vagueness_subjectivity",
+  "factual_error",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+vagueness_subjectivity+factual_error+insufficient_information",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "vagueness_subjectivity",
+   "factual_error",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "factual_error": "attr:high density",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:high density",
+    "high density",
+    "high resilience"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I swung by the community garden on my walk over here this morning, right as the group of regulars who tend the raised beds were pulling up the first big batch of summer radishes. They were so crisp and bright red, still dusted with dark clods of soil, and one of the older ladies who\u2019s been gardening there for 20 years pressed a whole bunch into my arms before I could even protest, saying they\u2019d grown way more than their households could possibly eat before the greens wilted. I stopped to chat for 10 minutes too, watching a tiny fluffy sparrow hop along the split-rail fence stealing sunflower seeds that had spilled out of the bird feeder hung by the gate, and a group of little kids from the adjacent daycare were chasing a monarch butterfly that kept fluttering just out of their reach, giggling so loud it made everyone nearby smile. I even noticed the old oak tree at the garden entrance has started dropping tiny acorns already, which feels wild because it feels like summer only just really got started a couple weeks ago.",
+  "retained": [],
+  "hidden_slots": [
+   "attr:high density",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high density",
+     "=",
+     "high resilience"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "d678b7a2c2c3ece5"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 16,
+  "lit_card": 30,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 37,
+    "true_card": 16,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 16,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 515,
+    "true_card": 16,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "e356bb805fdb8f9d",
+  "conditions": [
+   [
+    "attr:high density",
+    "=",
+    "high density"
+   ],
+   [
+    "option:0",
+    "=",
+    "high density foam + mattress cover"
+   ],
+   [
+    "price_upper",
+    "<=",
+    260
+   ]
+  ],
+  "hidden_slots": [
+   "attr:high density",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 16,
+  "value": [
+   "[\"B01MU5FK81\",[[\"pattern name\",\"mattress\"]]]",
+   "[\"B06X9D3P1Y\",[[\"pattern name\",\"mattress\"]]]",
+   "[\"B0734MJZ9B\",[[\"style\",\"6\\\" mattress\"]]]",
+   "[\"B076MMY8T8\",[[\"style\",\"mattress\"]]]",
+   "[\"B07RFNSCL9\",[[\"style\",\"mattress\"]]]",
+   "[\"B07YLCWZF5\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B07YLD5PPN\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B07YLDTTP1\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B07YLF1MJV\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B07YLFCRNQ\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B08R7ZGLH2\",[[\"color\",\"high density foam\"]]]",
+   "[\"B08Y4ZXZ1H\",[[\"style\",\"high density foam\"]]]",
+   "[\"B098YFWL9P\",[[\"color\",\"high density foam\"]]]",
+   "[\"B099ML6NMQ\",[[\"material type\",\"high density foam\"]]]",
+   "[\"B09NQNLMJ6\",[[\"color\",\"high density foam + mattress cover\"]]]",
+   "[\"B09NQRJQ75\",[[\"color\",\"high density foam + mattress cover\"]]]"
+  ],
+  "hash": "d0b53b1eea60397e453041f7a8f77bfa"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "54029a09f9e6dae2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the mattresses instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e17f22850117a04a",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the mattresses instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3261021932dae5b7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be machine washable."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e7a2993d269c499f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "81be65131afa4977",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cad44a4fb19cd2ff",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3776c44387ba7709",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 01 twin instead of high density foam + mattress cover."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "45e406148d0d157b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 09 classe-plus acupressure (flower-stripe gray) instead of high density foam + mattress cover."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

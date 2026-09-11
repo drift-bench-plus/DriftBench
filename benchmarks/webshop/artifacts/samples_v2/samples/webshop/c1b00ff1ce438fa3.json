@@ -1,0 +1,171 @@
+{
+ "adapter": "webshop",
+ "cluster": "kitchen islands",
+ "fidelity_notes": [],
+ "goal_idx": 19,
+ "ground_truth": {
+  "cardinality": 6,
+  "hash": "776fa8352a88baffa2e2b668967fb517",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B06X9CKQQC\",[[\"color\",\"antique\"]]]",
+   "[\"B07KHZZJ7H\",[[\"color\",\"antique\"]]]",
+   "[\"B07MPTK3GY\",[[\"color\",\"antique\"]]]",
+   "[\"B08CY6GQ19\",[[\"color\",\"antique brass (set of 3)\"]]]",
+   "[\"B091M5QR63\",[[\"color\",\"antique brass - 2 pack\"]]]",
+   "[\"B09875899Q\",[[\"color\",\"antique wood\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "antique"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "b4ddbab9ec9953af"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "antique"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:living room",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve been sorting through my living room setup lately, and I’ve heard that antique pieces under $70 work really well to tie a cozy space together when browsing kitchen islands sections.",
+ "render_attempts": 2,
+ "sample_id": "c1b00ff1ce438fa3",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the kitchen islands instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "21a9ae74c860d660"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the kitchen islands instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4ea0a609c29c7ba5"
+  },
+  {
+   "announcement": "Also, it needs to be bronze finish.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3e0a17d8ad21da0d"
+  },
+  {
+   "announcement": "Also, it needs to be solid wood.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4026c0e828a8c989"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d8b376d5b8075606"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dfb4a6260497be35"
+  },
+  {
+   "announcement": "Actually, make it 1-light pendant instead of antique.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "618cc574f373525b"
+  },
+  {
+   "announcement": "Actually, make it 1 light 2 pack instead of antique.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8efcf51d9b7a1d91"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 6,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 6,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for the pendant lights for ceiling lights for living room.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "231fab56b1a5d199",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,201 @@
+{
+ "sample_id": "8f45c2b9ab701644",
+ "tree_id": "84db157ad43497ab",
+ "adapter": "webshop",
+ "cluster": "makeup remover",
+ "goal_idx": 105,
+ "split": "test",
+ "source_instruction": "i am looking for a 25 pack of micellar makeup remover wipes that are sulfate free.",
+ "query": "Hey, can you help me grab a makeup remover from this section? I need it to be paraben free, my budget\u2019s under $20, and make sure you pick that one, the pack size I always get, yeah? I don\u2019t wanna have to run back to exchange it later.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "factual_error"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+factual_error",
+  "family": "expression+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:sulfate free"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:sulfate free",
+    "sulfate free",
+    "paraben free"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:sulfate free",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:sulfate free",
+     "=",
+     "paraben free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "a10fdbcd0181245a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 100,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 39,
+    "true_card": 2,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 5,
+    "true_card": 2,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "563f7da942ffae49",
+  "conditions": [
+   [
+    "attr:sulfate free",
+    "=",
+    "sulfate free"
+   ],
+   [
+    "option:0",
+    "=",
+    "25 count (pack of 2)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:sulfate free",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B01M7TXD6R\",[[\"size\",\"25 count (pack of 2)\"]]]",
+   "[\"B08V51WBX6\",[[\"size\",\"3 count (pack of 1)\"]]]"
+  ],
+  "hash": "096bae91e6f6a5a6a59c2e59c350482b"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7a729cb9fdff023f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup remover instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b2a1a5eacfdd73cd",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup remover instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "76c708d39457424a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be eyelash extension."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "81afa151fae47c06",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dead skin."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "3f03ccd821bbeafa",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6046e34ed7b4c004",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1e5477dd2aa6adfb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.25 ounce (pack of 1) instead of 25 count (pack of 2)."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f1ca18c4b1a24712",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.4 ounce (pack of 1) instead of 25 count (pack of 2)."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

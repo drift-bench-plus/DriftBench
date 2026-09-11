@@ -1,0 +1,276 @@
+{
+ "sample_id": "a43278cf1be4f0a9",
+ "tree_id": "eb58d4a53414bf5c",
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "goal_idx": 314,
+ "split": "test",
+ "source_instruction": "i would like a 10 foot long copper coaxial cable.",
+ "query": "Ugh, I spent all morning troubleshooting my backyard bird feeder\u2014those squirrels keep chewing through the suet cage, I had to run to the hardware store for extra zip ties, and now I\u2019m convinced the neighbor\u2019s cat is stalking the cardinal pair that\u2019s been nesting by my porch. I even stopped to pet a golden retriever that dragged its owner over to say hi on the walk back, totally threw off my whole errand schedule. Oh right, while I\u2019m browsing the satellite television section, I need a coaxial cable, preferably the copper one with a white weather boot that\u2019s 10ft long, and don\u2019t show me anything that goes over my cap, yeah?",
+ "strategy_ids": [
+  "lexical_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "lexical_ambiguity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "lexical_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "my cap",
+    "placements": [
+     [
+      "price_upper",
+      "40"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I spent all morning troubleshooting my backyard bird feeder\u2014those squirrels keep chewing through the suet cage, I had to run to the hardware store for extra zip ties, and now I\u2019m convinced the neighbor\u2019s cat is stalking the cardinal pair that\u2019s been nesting by my porch. I even stopped to pet a golden retriever that dragged its owner over to say hi on the walk back, totally threw off my whole errand schedule.",
+  "retained": [
+   "attr:coaxial cable",
+   "option:0",
+   "option:1"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:coaxial cable",
+     "=",
+     "coaxial cable"
+    ],
+    [
+     "option:0",
+     "=",
+     "copper, weather boot - white"
+    ],
+    [
+     "option:1",
+     "=",
+     "10ft"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "5a46e7bf7b772957"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 70,
+  "lit_card": 123,
+  "components": {
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     70,
+     123
+    ],
+    "true_card": 70,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "ae487cbe50fb33e5",
+  "conditions": [
+   [
+    "attr:coaxial cable",
+    "=",
+    "coaxial cable"
+   ],
+   [
+    "option:0",
+    "=",
+    "copper, weather boot - white"
+   ],
+   [
+    "option:1",
+    "=",
+    "10ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 70,
+  "value": [
+   "[\"B073KRBFSV\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KRCZPZ\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KRGXKV\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KS45WW\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KSFT82\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KSKPS1\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KT97P6\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KT97PL\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KV3QM5\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KV3QPX\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KVDN75\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KVHWN3\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KVHWP6\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KWB1CH\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KX9B82\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KXN9G6\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KXY1HX\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KY92N6\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KYC8R3\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KYH41C\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KYNSDP\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KYSF7V\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KZ5SJL\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KZ7ZDW\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KZ8V5T\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KZFZZS\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KZTXYF\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073KZW4RW\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L11212\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L19GGM\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L1B9W3\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L1KSMQ\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L1RPYT\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L1TR5F\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L23SL9\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L26QNP\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L2CX5Y\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L2K3S1\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L2LCH5\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L2R6YL\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L2RDKV\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L2TRC1\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L2VVP4\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L368RR\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L3HDHZ\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L3SNW4\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L3SNWW\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L3VNCG\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L3VWN7\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L3WYTS\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L3XPNN\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L434XB\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L44ZBG\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L4KBVJ\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L4WH86\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L56VL8\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L7K1XN\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073L9BGZN\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073LB3ZW6\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073LBXJ9T\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073VB832J\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073VBKQ97\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073VBNQFG\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073VBRQSN\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073VBV3RQ\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B073VBZJYL\",[[\"size\",\"10ft\"],[\"style\",\"solid copper w |  weather boot - white\"]]]",
+   "[\"B07CQ96G4F\",[[\"material type\",\"copper, weather boot - white\"],[\"size\",\"10ft\"]]]",
+   "[\"B07CQB2FZK\",[[\"material type\",\"copper, weather boot - white\"],[\"size\",\"10ft\"]]]",
+   "[\"B07MHQJ8ZZ\",[[\"color\",\"rg6 copper w |  weather boot - white\"],[\"size\",\"10ft\"]]]"
+  ],
+  "hash": "bf98637eb82dcdff6cc4ff8d70b75ca6"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0d4271e27a5b21d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7845bdf8528c5ec1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "140d676351859f35",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be high speed."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "765fb4eb889f666f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be aluminum alloy."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "33cc321fd5f61afc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "3fa27d67df69180a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "28a984b6d42e0617",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it quadshield solid copper - black instead of copper, weather boot - white."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d54ccf34c40388aa",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it copper, weather boot - black instead of copper, weather boot - white."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

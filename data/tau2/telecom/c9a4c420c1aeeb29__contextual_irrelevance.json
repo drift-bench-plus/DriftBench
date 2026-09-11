@@ -1,0 +1,104 @@
+{
+ "sample_id": "c9a4c420c1aeeb29__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "c9a4c420c1aeeb29",
+ "query": "I went to a local bakery this morning and tried their new matcha croissant, it was so buttery and had just the right amount of matcha sweetness, I even bought a second one to eat tomorrow. Then on my way back to the hotel I stopped at a little street market and picked up a hand-painted ceramic mug that has a cute little cat illustration on the side, it\u2019s already become my favorite thing I\u2019ve bought on this trip. I also spent an hour wandering around the old town square earlier, watching street performers play folk music and people take photos with the old clock tower. Anyway I need help figuring out why my MMS won\u2019t send at all right now, my APN MMS settings seem to be messed up, I have my mobile data mode turned off completely, I already used up all my data for the billing cycle, I\u2019m traveling abroad right now and I have data roaming turned off too.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I went to a local bakery this morning and tried their new matcha croissant, it was so buttery and had just the right amount of matcha sweetness, I even bought a second one to eat tomorrow. Then on my way back to the hotel I stopped at a little street market and picked up a hand-painted ceramic mug that has a cute little cat illustration on the side, it\u2019s already become my favorite thing I\u2019ve bought on this trip. I also spent an hour wandering around the old town square earlier, watching street performers play folk music and people take photos with the old clock tower.",
+  "retained": [
+   "fault:break_apn_mms_setting",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

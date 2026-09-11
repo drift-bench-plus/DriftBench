@@ -1,0 +1,200 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's slippers",
+ "fidelity_notes": [],
+ "goal_idx": 182,
+ "ground_truth": {
+  "cardinality": 21,
+  "hash": "6cf2f6f7e629d8e1bcc10a634f242b5d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08FYC36G1\",[[\"color\",\"gray leopard\"]]]",
+   "[\"B098T7T4ZD\",[[\"color\",\"c gray\"]]]",
+   "[\"B09BRDRZX2\",[[\"color\",\"z01-gray\"]]]",
+   "[\"B09DD8KHVN\",[[\"color\",\"b-gray-male\"]]]",
+   "[\"B09DFHY4CK\",[[\"color\",\"gray-b\"]]]",
+   "[\"B09DGCQL47\",[[\"color\",\"01#gray\"]]]",
+   "[\"B09DPD473C\",[[\"color\",\"gray\"]]]",
+   "[\"B09DRZ2M2T\",[[\"color\",\"gray\"]]]",
+   "[\"B09HHJ1M7D\",[[\"color\",\"a-gray\"]]]",
+   "[\"B09JF3D6D3\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09JFDGWC8\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09JFLMKBY\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09JFMHVYR\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09KBS2K6V\",[[\"color\",\"gray2\"]]]",
+   "[\"B09KCCDRX2\",[[\"color\",\"a gray\"]]]",
+   "[\"B09LYT6QVC\",[[\"color\",\"gray-c\"]]]",
+   "[\"B09LYZTMVR\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09MDLG3PC\",[[\"color\",\"gray#a1\"]]]",
+   "[\"B09MHZGCBD\",[[\"color\",\"gray#a1\"]]]",
+   "[\"B09PJH8VZF\",[[\"color\",\"z01# gray\"]]]",
+   "[\"B09PN2BFG8\",[[\"color\",\"a-gray\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:memory foam",
+    "=",
+    "memory foam"
+   ],
+   [
+    "attr:open toe",
+    "=",
+    "open toe"
+   ],
+   [
+    "option:0",
+    "=",
+    "c-gray"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "5f8dc065bfa386ba"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:memory foam",
+     "=",
+     "memory foam"
+    ],
+    [
+     "attr:open toe",
+     "=",
+     "open toe"
+    ],
+    [
+     "option:0",
+     "=",
+     "c-gray"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:memory foam",
+   "attr:open toe",
+   "option:0"
+  ],
+  "spec_id": "052a6af8410e4ae7",
+  "strategy_id": "vagueness_subjectivity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for men’s slippers with memory foam and an open toe design in c-gray, at a good price.",
+ "render_attempts": 1,
+ "sample_id": "5a1ccdb8340a454e",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's slippers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "43214916f8a9cc81"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's slippers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "aa8882388e062e56"
+  },
+  {
+   "announcement": "Also, it needs to be boots women.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3eb33d3ad5a5bab3"
+  },
+  {
+   "announcement": "Also, it needs to be fleece lined.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bc69617a5bb809a3"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "85320c11a5b32ffd"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d42d4c51807773b7"
+  },
+  {
+   "announcement": "Actually, make it 10-10.5 women | 8.5-9 men instead of c-gray.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7547c8327599e33d"
+  },
+  {
+   "announcement": "Actually, make it (us7-8) instead of c-gray.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "942e03922a9fa987"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 26,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 21,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need grey memory foam slippers with open toes.",
+ "split": "test",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "tree_id": "605cd47c1d0bcc72",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

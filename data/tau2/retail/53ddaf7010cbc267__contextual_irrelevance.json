@@ -1,0 +1,93 @@
+{
+ "sample_id": "53ddaf7010cbc267__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "53ddaf7010cbc267",
+ "query": "Last weekend I took my golden retriever to the new dog park near the community center, and he had so much fun chasing after a frisbee with a group of other puppies, I even ended up exchanging contact info with one of the other owners so we can set up playdates later. I also tried that new matcha boba shop on Oak Street yesterday, the taro flavor with 50% sugar and extra pearls was absolutely perfect, I'm already planning to go back again this weekend to try their honeydew smoothie. Oh right, I also need to return some items from my delivered order, I'd like to return items 9612497925, 7127170374, and 6268080249 from order #W1679211, and please process the refund to my paypal_3022415 payment method.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I took my golden retriever to the new dog park near the community center, and he had so much fun chasing after a frisbee with a group of other puppies, I even ended up exchanging contact info with one of the other owners so we can set up playdates later. I also tried that new matcha boba shop on Oak Street yesterday, the taro flavor with 50% sugar and extra pearls was absolutely perfect, I'm already planning to go back again this weekend to try their honeydew smoothie. Oh right, ",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"9612497925\",\"7127170374\",\"6268080249\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W1679211\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_3022415\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"9612497925\",\"7127170374\",\"6268080249\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W1679211\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_3022415\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

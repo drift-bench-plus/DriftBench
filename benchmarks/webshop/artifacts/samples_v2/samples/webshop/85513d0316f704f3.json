@@ -1,0 +1,212 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's jeans",
+ "fidelity_notes": [],
+ "goal_idx": 187,
+ "ground_truth": {
+  "cardinality": 14,
+  "hash": "938126760c08a4a95f65b0f8dd2b933d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B082SZDTBD\",[[\"color\",\"zz-zmblack\"],[\"size\",\"large\"]]]",
+   "[\"B0831NKRD1\",[[\"color\",\"z-black\"],[\"size\",\"large\"]]]",
+   "[\"B0862B9PRX\",[[\"color\",\"z-azblack\"],[\"size\",\"large\"]]]",
+   "[\"B08TRLG75L\",[[\"color\",\"a3-black\"],[\"size\",\"large\"]]]",
+   "[\"B09FY8BW8C\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09G3CKQTK\",[[\"color\",\"z-black\"],[\"size\",\"large\"]]]",
+   "[\"B09NL53BGX\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09NW1GRCX\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09PDVZTC2\",[[\"color\",\"z-xablack\"],[\"size\",\"large\"]]]",
+   "[\"B09Q6KSK33\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09QS643MZ\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09R78GYSC\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09R9Z4FTF\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09S3T5D9P\",[[\"color\",\"black\"],[\"size\",\"large\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:regular fit",
+    "=",
+    "regular fit"
+   ],
+   [
+    "attr:tummy control",
+    "=",
+    "tummy control"
+   ],
+   [
+    "attr:wide leg",
+    "=",
+    "wide leg"
+   ],
+   [
+    "option:0",
+    "=",
+    "zz-zmblack"
+   ],
+   [
+    "option:1",
+    "=",
+    "3x-large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "5bd22867d5ca40ec"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:regular fit",
+     "=",
+     "regular fit"
+    ],
+    [
+     "attr:tummy control",
+     "=",
+     "tummy control"
+    ],
+    [
+     "attr:wide leg",
+     "=",
+     "wide leg"
+    ],
+    [
+     "option:0",
+     "=",
+     "zz-zmblack"
+    ],
+    [
+     "option:1",
+     "=",
+     "3x-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:regular fit",
+   "attr:tummy control",
+   "attr:wide leg",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that regular fit women’s jeans with tummy control and a wide leg in zz-zmblack, size 3x-large, are really nice when they cost under 20 dollars.",
+ "render_attempts": 3,
+ "sample_id": "85513d0316f704f3",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "3e364b66ebaf1ae0"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f7c6a7ddaa9569bc"
+  },
+  {
+   "announcement": "Also, it needs to be faux fur.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ccab9a04e2f2b298"
+  },
+  {
+   "announcement": "Also, it needs to be cover ups.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ff16305f7d17fa18"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9b89ab0a3eddbe8b"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c65173f379274efc"
+  },
+  {
+   "announcement": "Actually, make it #1 grey instead of zz-zmblack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "748bbbfc86394322"
+  },
+  {
+   "announcement": "Actually, make it #1 yellow instead of zz-zmblack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "efbf63abfbaa79e6"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 14,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 14,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a wide leg jeans with regular fit and tummy control. also, choose 3x large zz-zm black colored one.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "afd276490054ad37",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,839 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B089Z2S9XT",
+    "cluster": "non-dairy milks",
+    "name": "DaVinci Gourmet Sugar-Free Egg Nog Syrup, 25.4 Ounce (Pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "egg nog"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "18e99b3e2fb9e702fec43e70fc7d3287",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B089Z2S9XT\",[[\"flavor name\",\"egg nog\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "67237a1870713a0b",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B089Z2S9XT",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "egg nog"
+     ],
+     "name": "DaVinci Gourmet Sugar-Free Egg Nog Syrup, 25.4 Ounce (Pack of 4)",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": "4de48923debc5582",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B06XSGZKC7",
+    "cluster": "non-dairy milks",
+    "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "cacao nibs"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2dffe4d99c272f21066a35be27c00557",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B06XSGZKC7\",[[\"flavor\",\"cacao nibs\"]]]",
+     "[\"B08VYDSFV8\",[[\"flavor name\",\"cacao nibs\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "a68891af7741449d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B06XSGZKC7",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [
+      "cacao nibs"
+     ],
+     "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": "1d47f577b27cc337",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NZDB484",
+    "cluster": "non-dairy milks",
+    "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles"
+   },
+   "bound_slots": [
+    "attr:ice cream",
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:ice cream",
+     "=",
+     "ice cream"
+    ],
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "salted caramel"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2c89931ccd962a9d5c247f82b5f8a4ad",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B004ADZEI6\",[[\"flavor\",\"caramel\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "b0505eb938e82759",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B09NZDB484",
+     "attributes": [
+      "ice cream",
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "salted caramel"
+     ],
+     "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NZDB484",
+    "cluster": "non-dairy milks",
+    "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles"
+   },
+   "bound_slots": [
+    "attr:snack mix",
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:snack mix",
+     "=",
+     "snack mix"
+    ],
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "salted caramel"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2c89931ccd962a9d5c247f82b5f8a4ad",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B004ADZEI6\",[[\"flavor\",\"caramel\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "e099de74a80441e4",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B09NZDB484",
+     "attributes": [
+      "snack mix",
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "salted caramel"
+     ],
+     "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NZDB484",
+    "cluster": "non-dairy milks",
+    "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "538e5e40a083ecf18f36f2d846d3bad2",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000GZCVQK\",[]]",
+     "[\"B004ADZEI6\",[]]",
+     "[\"B005IW3U98\",[]]",
+     "[\"B006K3RQNA\",[]]",
+     "[\"B007KI1V80\",[]]",
+     "[\"B0091G4RQM\",[]]",
+     "[\"B00AUDCIIO\",[]]",
+     "[\"B00DQM1EFO\",[]]",
+     "[\"B00H9ZEOR4\",[]]",
+     "[\"B00KQ0XBQ4\",[]]",
+     "[\"B015QHXVI4\",[]]",
+     "[\"B018DLECAG\",[]]",
+     "[\"B01CU5ZJIU\",[]]",
+     "[\"B01FRFMF64\",[]]",
+     "[\"B01G4I8VUM\",[]]",
+     "[\"B01GZBNWLG\",[]]",
+     "[\"B01LIM9DHY\",[]]",
+     "[\"B01LQY8FVO\",[]]",
+     "[\"B06VSPVQBR\",[]]",
+     "[\"B07234YXYJ\",[]]",
+     "[\"B07392NYFG\",[]]",
+     "[\"B073BJ8SF7\",[]]",
+     "[\"B0746C31HV\",[]]",
+     "[\"B074ZGHZK7\",[]]",
+     "[\"B0751W2GMF\",[]]",
+     "[\"B075F8Q33R\",[]]",
+     "[\"B076JGCBP1\",[]]",
+     "[\"B076JH2P5B\",[]]",
+     "[\"B076VSH8BZ\",[]]",
+     "[\"B0779GGM2H\",[]]",
+     "[\"B077S9R9KT\",[]]",
+     "[\"B079LGC8CW\",[]]",
+     "[\"B079SBBV3W\",[]]",
+     "[\"B07C3ZKHQN\",[]]",
+     "[\"B07CZB4YB6\",[]]",
+     "[\"B07JDRNKVW\",[]]",
+     "[\"B07KQNG859\",[]]",
+     "[\"B07QM9GTKC\",[]]",
+     "[\"B07QX2N3CJ\",[]]",
+     "[\"B07QX2NKHF\",[]]",
+     "[\"B07QYH165M\",[]]",
+     "[\"B07RFNT4CV\",[]]",
+     "[\"B07SVCG4CS\",[]]",
+     "[\"B07VBXWV5C\",[]]",
+     "[\"B07VPWWZY4\",[]]",
+     "[\"B07VS2TM82\",[]]",
+     "[\"B07WWS96PK\",[]]",
+     "[\"B07XMQB9ZF\",[]]",
+     "[\"B07Y3X6B29\",[]]",
+     "[\"B07ZS2L675\",[]]",
+     "[\"B081NM6HCF\",[]]",
+     "[\"B082LQTXJZ\",[]]",
+     "[\"B0831TNQCM\",[]]",
+     "[\"B083K3X8KK\",[]]",
+     "[\"B085RM8VTC\",[]]",
+     "[\"B0861GJSH5\",[]]",
+     "[\"B086B7B8VS\",[]]",
+     "[\"B086BLMX1N\",[]]",
+     "[\"B086MJYXFC\",[]]",
+     "[\"B0872VP8QR\",[]]",
+     "[\"B088HZMQ39\",[]]",
+     "[\"B089P4DNJ6\",[]]",
+     "[\"B08B4CT82D\",[]]",
+     "[\"B08DRLH51L\",[]]",
+     "[\"B08DRP6RFN\",[]]",
+     "[\"B08L6X1V9J\",[]]",
+     "[\"B08QV8F24C\",[]]",
+     "[\"B08QZQYG7L\",[]]",
+     "[\"B08RYC2YSZ\",[]]",
+     "[\"B08RZDH537\",[]]",
+     "[\"B08S1RKHTY\",[]]",
+     "[\"B08TB8R78N\",[]]",
+     "[\"B093CPDYH4\",[]]",
+     "[\"B095JDWKMV\",[]]",
+     "[\"B096L4TH2V\",[]]",
+     "[\"B09D9D7QJS\",[]]",
+     "[\"B09DM67JT3\",[]]",
+     "[\"B09F71B599\",[]]",
+     "[\"B09GX8GXM1\",[]]",
+     "[\"B09HHNQ8FT\",[]]",
+     "[\"B09NS3HYLV\",[]]",
+     "[\"B09NZDB484\",[]]",
+     "[\"B09QY22Y71\",[]]",
+     "[\"B09R81WK97\",[]]",
+     "[\"B09R98DW1G\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "d82ab4c29a64a6cc",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B09NZDB484",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NZDB484",
+    "cluster": "non-dairy milks",
+    "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "salted caramel"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1755cd957167f0ee9ec0060d4640183a",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003Q4TWF6\",[[\"flavor name\",\"salted caramel\"]]]",
+     "[\"B004ADZEI6\",[[\"flavor\",\"caramel\"]]]",
+     "[\"B00CWTZ408\",[[\"flavor name\",\"sugar free salted caramel\"]]]",
+     "[\"B01MSDW3L2\",[[\"flavor name\",\"salted caramel\"]]]",
+     "[\"B077S9R9KT\",[[\"flavor name\",\"caramel\"]]]",
+     "[\"B07CZB4YB6\",[[\"flavor name\",\"caramel and chocolate\"]]]",
+     "[\"B07PML8RX2\",[[\"flavor name\",\"salted caramel\"]]]",
+     "[\"B089Z2S9XT\",[[\"flavor name\",\"caramel\"]]]",
+     "[\"B099NZN8TJ\",[[\"flavor name\",\"caramel\"]]]",
+     "[\"B09FQFMSYQ\",[[\"flavor\",\"vanilla caramel\"]]]",
+     "[\"B09FV873MW\",[[\"flavor name\",\"caramel\"]]]",
+     "[\"B09HJTDRQF\",[[\"flavor name\",\"chocolate salted caramel\"]]]",
+     "[\"B09NZDB484\",[[\"flavor name\",\"salted caramel\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9440f04302ad64d5",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B09NZDB484",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "salted caramel"
+     ],
+     "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+     "price_upper": 1000000,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NZDB484",
+    "cluster": "non-dairy milks",
+    "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "1 bag"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "009f0b9019d9f2f3387e84ea50dd7dad",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B005IW3U98\",[[\"number of items\",\"1\"]]]",
+     "[\"B07VPWWZY4\",[[\"number of items\",\"1\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "71cf7c994736b5b3",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B09NZDB484",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "1 bag"
+     ],
+     "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NZDB484",
+    "cluster": "non-dairy milks",
+    "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "1 ounce (pack of 100)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0236965f3a8535dd07bedc715892ef0f",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B005IW3U98\",[[\"number of items\",\"1\"]]]",
+     "[\"B00AUDCIIO\",[[\"size\",\"10.2 ounce (pack of 1)\"]]]",
+     "[\"B00H9ZEOR4\",[[\"size\",\"9 ounce (pack of 1)\"]]]",
+     "[\"B015QHXVI4\",[[\"size\",\"8 ounce (pack of 1)\"]]]",
+     "[\"B075F8Q33R\",[[\"size\",\"9 ounce (pack of 1)\"]]]",
+     "[\"B0779GGM2H\",[[\"scent\",\"1 lb (pack of 1)\"]]]",
+     "[\"B07JDRNKVW\",[[\"size\",\"4 ounce (pack of 4)\"]]]",
+     "[\"B07QM9GTKC\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+     "[\"B07SVCG4CS\",[[\"size\",\"1.15 ounce (pack of 10)\"]]]",
+     "[\"B07VPWWZY4\",[[\"number of items\",\"1\"]]]",
+     "[\"B07VS2TM82\",[[\"size\",\"9 ounce (pack of 1)\"]]]",
+     "[\"B085RM8VTC\",[[\"size\",\"9 ounce (pack of 1)\"]]]",
+     "[\"B0872VP8QR\",[[\"size\",\"10 ounce (pack of 1)\"]]]",
+     "[\"B08L6X1V9J\",[[\"size\",\"4 ounce (pack of 4)\"]]]",
+     "[\"B095JDWKMV\",[[\"size\",\"(pack of 2)\"]]]",
+     "[\"B09D9D7QJS\",[[\"size\",\"pack of 1\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f5ede238d7215487",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B09NZDB484",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "1 ounce (pack of 100)"
+     ],
+     "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B089Z2S9XT",
+     "cluster": "non-dairy milks",
+     "name": "DaVinci Gourmet Sugar-Free Egg Nog Syrup, 25.4 Ounce (Pack of 4)",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups"
+    }
+   },
+   "dst": "67237a1870713a0b",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "4de48923debc5582",
+   "src": "3fea2e58369d2aed"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B06XSGZKC7",
+     "cluster": "non-dairy milks",
+     "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+    }
+   },
+   "dst": "a68891af7741449d",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "1d47f577b27cc337",
+   "src": "3fea2e58369d2aed"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:ice cream",
+      "=",
+      "ice cream"
+     ]
+    ]
+   },
+   "dst": "b0505eb938e82759",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3fea2e58369d2aed"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:snack mix",
+      "=",
+      "snack mix"
+     ]
+    ]
+   },
+   "dst": "e099de74a80441e4",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3fea2e58369d2aed"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "salted caramel"
+     ]
+    ]
+   },
+   "dst": "d82ab4c29a64a6cc",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3fea2e58369d2aed"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      20
+     ]
+    ]
+   },
+   "dst": "9440f04302ad64d5",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3fea2e58369d2aed"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "salted caramel",
+      "1 bag"
+     ]
+    ]
+   },
+   "dst": "71cf7c994736b5b3",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3fea2e58369d2aed"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "salted caramel",
+      "1 ounce (pack of 100)"
+     ]
+    ]
+   },
+   "dst": "f5ede238d7215487",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3fea2e58369d2aed"
+  }
+ ],
+ "env_id": "webshop_9d7f93bba691e1ed",
+ "env_spec": {
+  "cluster": "non-dairy milks",
+  "env_id": "webshop_9d7f93bba691e1ed",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B09NZDB484",
+   "cluster": "non-dairy milks",
+   "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+   "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles"
+  },
+  "bound_slots": [
+   "attr:sugar free",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:sugar free",
+    "=",
+    "sugar free"
+   ],
+   [
+    "option:0",
+    "=",
+    "salted caramel"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "ground_truth": {
+   "hash": "9aa8950c9008dbd23e1c0f9fc8daa382",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B004ADZEI6\",[[\"flavor\",\"caramel\"]]]",
+    "[\"B077S9R9KT\",[[\"flavor name\",\"caramel\"]]]",
+    "[\"B07CZB4YB6\",[[\"flavor name\",\"caramel and chocolate\"]]]",
+    "[\"B09NZDB484\",[[\"flavor name\",\"salted caramel\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "3fea2e58369d2aed",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "non-dairy milks",
+   "goal": {
+    "asin": "B09NZDB484",
+    "attributes": [
+     "sugar free"
+    ],
+    "category": "",
+    "goal_options": [
+     "salted caramel"
+    ],
+    "name": "Lakanto Sugar Free Chocolate Truffles - Sweetened with Monk Fruit, Keto Diet Friendly, Vegan, 1 Net Carb, Creamy, Smooth, Delicious - Mint",
+    "price_upper": 20,
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Chocolate › Chocolate Truffles",
+    "query": "non-dairy milks"
+   }
+  },
+  "source_record": "0996266cf9ba7f11",
+  "unbound_slots": [
+   "attr:ice cream",
+   "attr:snack mix",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "8c96b5310b014540"
+}

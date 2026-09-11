@@ -1,0 +1,217 @@
+{
+ "sample_id": "5720c2e10ef5a42c",
+ "tree_id": "e606b03f74962051",
+ "adapter": "webshop",
+ "cluster": "non-dairy milks",
+ "goal_idx": 150,
+ "split": "test",
+ "source_instruction": "i am looking for a low sugar granola bar that is soy and diary free. pick the pack of 3 weighing 10 ounces.",
+ "query": "Hey, since you probably don\u2019t have any truly low sugar non-dairy milks in stock right now, can you grab me some dairy free, soy free options from this section? I just need whatever multi-pack size you\u2019ve got that fits, and make sure the total doesn\u2019t go over $40, yeah? I don\u2019t wanna end up with anything that\u2019ll mess up my dietary restrictions, so double check those labels for me before you pick one out.",
+ "strategy_ids": [
+  "false_presupposition",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+insufficient_information",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "false_presupposition",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "you probably don\u2019t have any truly low sugar non-dairy milks in stock right now",
+    "condition": null,
+    "about": [
+     "attr:low sugar",
+     "low sugar"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:dairy free",
+   "attr:low sugar",
+   "attr:soy free",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dairy free",
+     "=",
+     "dairy free"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "41793935c9737478"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 94,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 22,
+    "true_card": 2,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 13,
+    "true_card": 2,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "3ccaf14bd0fc63d1",
+  "conditions": [
+   [
+    "attr:dairy free",
+    "=",
+    "dairy free"
+   ],
+   [
+    "attr:low sugar",
+    "=",
+    "low sugar"
+   ],
+   [
+    "attr:soy free",
+    "=",
+    "soy free"
+   ],
+   [
+    "option:0",
+    "=",
+    "10 ounce (pack of 3)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B08F2QT47F\",[[\"size\",\"10 ounce (pack of 3)\"]]]",
+   "[\"B091M7DJM2\",[[\"size\",\"7 ounce (pack of 3)\"]]]"
+  ],
+  "hash": "fbff7fa1169d5380ab5de66d9531ab9b"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "67237a1870713a0b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the non-dairy milks instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a68891af7741449d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the non-dairy milks instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "dda697bd9deae6fb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be brown rice."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ed7c9fb58d3a1158",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gluten free."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c5e082bb8fd8b331",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "daccff96aed61e91",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "bf626b4ddc70affd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 count instead of 10 ounce (pack of 3)."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c2c2ab0f02ff469a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 count (pack of 1) instead of 10 ounce (pack of 3)."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "sample_id": "2ac0eba0fafe9731__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "2ac0eba0fafe9731",
+ "query": "I just got back from walking my golden retriever this afternoon, he chased a butterfly all the way across the neighborhood park and ended up rolling in a patch of clover, I had to wipe his paws three times before I let him back in the house. Oh, and I tried that new matcha latte from the caf\u00e9 down the street on my way home, it was way less bitter than the one I usually get, I think I\u2019m going to order it again tomorrow. Also, I spent half an hour rearranging my bookshelf earlier, I finally sorted all my fiction novels by genre instead of just shoving them on the shelf randomly, it looks so much neater now. Anyway, I need to exchange some items from my delivered order #W2378156. I want to change the items with SKUs 1151293680 and 4983901480 to 7706410293 and 7747408585 respectively, and please use the payment method credit_card_9513926 for any additional fees related to this exchange.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from walking my golden retriever this afternoon, he chased a butterfly all the way across the neighborhood park and ended up rolling in a patch of clover, I had to wipe his paws three times before I let him back in the house. Oh, and I tried that new matcha latte from the caf\u00e9 down the street on my way home, it was way less bitter than the one I usually get, I think I\u2019m going to order it again tomorrow. Also, I spent half an hour rearranging my bookshelf earlier, I finally sorted all my fiction novels by genre instead of just shoving them on the shelf randomly, it looks so much neater now.",
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"1151293680\",\"4983901480\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"7706410293\",\"7747408585\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W2378156\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_9513926\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"1151293680\",\"4983901480\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"7706410293\",\"7747408585\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W2378156\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_9513926\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

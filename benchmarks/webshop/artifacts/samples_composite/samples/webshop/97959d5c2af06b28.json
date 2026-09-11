@@ -1,0 +1,228 @@
+{
+ "sample_id": "97959d5c2af06b28",
+ "tree_id": "8beb5f007cd49886",
+ "adapter": "webshop",
+ "cluster": "deodorants & antiperspirants",
+ "goal_idx": 358,
+ "split": "test",
+ "source_instruction": "what deodorants do you have that are alcohol free and very long lasting?",
+ "query": "Ugh, I swear the crosswalk signal by the gym entrance is broken this week\u2014 I stood there mashing the button for a full three minutes yesterday while a group of guys on those beat-up rental scooters zoomed through the intersection like they were auditioning for a street race, and I almost missed the start of my spin class because of it. The barista at the little caf\u00e9 right next to the gym also remembered my order today, which made that whole annoying wait worth it, honestly; she even added an extra shot of oat milk cold foam without me asking, said she noticed I\u2019d been dragging the last couple mornings after late shifts at the bookstore. I also found a crumpled $5 bill tucked in the pocket of my old workout leggings when I pulled them out of the dryer last night, which felt like such a tiny, random win that I stopped to pet every stray cat I passed on my walk over here. Hey, can you help me grab a deodorant from this section? I need it to be really long lasting so I don\u2019t have to reapply it after my gym sessions, and also make sure it\u2019s got that built-in glittery finish for fun, y\u2019know? Oh right, I can\u2019t go over that one for the price, same as I always stick to when I\u2019m picking up body care stuff.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "referential_ambiguity",
+  "contextual_irrelevance",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+referential_ambiguity+contextual_irrelevance+insufficient_information",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "referential_ambiguity",
+   "contextual_irrelevance",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "attr:alcohol free"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:alcohol free"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "it\u2019s got that built-in glittery finish for fun",
+    "condition": [
+     "attr:glittery finish",
+     "=",
+     "built-in glittery finish"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear the crosswalk signal by the gym entrance is broken this week\u2014 I stood there mashing the button for a full three minutes yesterday while a group of guys on those beat-up rental scooters zoomed through the intersection like they were auditioning for a street race, and I almost missed the start of my spin class because of it. The barista at the little caf\u00e9 right next to the gym also remembered my order today, which made that whole annoying wait worth it, honestly; she even added an extra shot of oat milk cold foam without me asking, said she noticed I\u2019d been dragging the last couple mornings after late shifts at the bookstore. I also found a crumpled $5 bill tucked in the pocket of my old workout leggings when I pulled them out of the dryer last night, which felt like such a tiny, random win that I stopped to pet every stray cat I passed on my walk over here.",
+  "retained": [
+   "attr:long lasting"
+  ],
+  "hidden_slots": [
+   "attr:alcohol free",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:long lasting",
+     "=",
+     "long lasting"
+    ],
+    [
+     "attr:glittery finish",
+     "=",
+     "built-in glittery finish"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "c1a805cbc80666f3"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 11,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 11,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 16,
+    "true_card": 11,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 192,
+    "true_card": 11,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "9e4803fe86169ce2",
+  "conditions": [
+   [
+    "attr:alcohol free",
+    "=",
+    "alcohol free"
+   ],
+   [
+    "attr:long lasting",
+    "=",
+    "long lasting"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:alcohol free",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 11,
+  "value": [
+   "[\"B00BN9OW6K\",[]]",
+   "[\"B013UKOWAA\",[]]",
+   "[\"B01N7E0O2P\",[]]",
+   "[\"B076391VVY\",[]]",
+   "[\"B07PTVLHDT\",[]]",
+   "[\"B07SV8N5JW\",[]]",
+   "[\"B0874W6L83\",[]]",
+   "[\"B08TNZK3ZM\",[]]",
+   "[\"B094NXKBT6\",[]]",
+   "[\"B09MZKP5ZT\",[]]",
+   "[\"B09MZL9CMT\",[]]"
+  ],
+  "hash": "100c49ccd741d272926cad1335034ae6"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1e74e8c9f7b4475b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the deodorants & antiperspirants instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "d445613bda664ed7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the deodorants & antiperspirants instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "5575f5845cbead32",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dermatologist tested."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "dc12910e077290f8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be sulfate free."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "7bfb9a59e93c19a3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a8ffeff40ee86d3c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "88e226262c673689",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 20."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d9178178ff28c649",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 instead of 20."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

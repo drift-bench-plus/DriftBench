@@ -1,0 +1,172 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair masks",
+ "fidelity_notes": [],
+ "goal_idx": 1,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "eaeed664bc822c58bdbbe1148d954487",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07ZNTM2L5\",[[\"size\",\"120ml\"]]]",
+   "[\"B08MWSHXLX\",[[\"size\",\"120ml+cs\"]]]",
+   "[\"B09QHQYYM5\",[[\"color\",\"120ml | 4 oz\"]]]",
+   "[\"B09R4RJSFP\",[[\"color\",\"120ml\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair treatment",
+    "=",
+    "hair treatment"
+   ],
+   [
+    "option:0",
+    "=",
+    "120ml"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "3f8e6661d251c449"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair treatment",
+     "=",
+     "hair treatment"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair treatment",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for hair treatment products in the hair masks section, with the usual one for the volume, and my budget is no more than 120.",
+ "render_attempts": 1,
+ "sample_id": "baca3c8232156fbd",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair masks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4b823fdb647c9844"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair masks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7123ef47a28d1d28"
+  },
+  {
+   "announcement": "Also, it needs to be argan oil.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "60065ca6773ebdef"
+  },
+  {
+   "announcement": "Also, it needs to be damaged hair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f4dae67bcc315fc0"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6eed8e07f9a1b595"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ef4fa821c157a4b6"
+  },
+  {
+   "announcement": "Actually, make it 1 fl oz (pack of 1) instead of 120ml.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "902e8b23b07e6366"
+  },
+  {
+   "announcement": "Actually, make it 1 instead of 120ml.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fb28fb69f963d471"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 406,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a 120 ml hair mask treatment",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "42281034fc0d2f5c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

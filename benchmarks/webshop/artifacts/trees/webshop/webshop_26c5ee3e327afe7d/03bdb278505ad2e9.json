@@ -1,0 +1,860 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B082N5YV7R",
+    "cluster": "breads & bakery",
+    "name": "Duncan Hines Keto Friendly Dessert Cups Walnut Fudge Brownie Mix, Walnut Brownie Cake Cup, 30 oz (Pack of 12)",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Mixes › Brownies"
+   },
+   "bound_slots": [
+    "attr:keto friendly",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:keto friendly",
+     "=",
+     "keto friendly"
+    ],
+    [
+     "option:0",
+     "=",
+     "keto friendly double chocolate cake cup"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "131bc55212221b9991e41a2da516bcdd",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00HBGCVXA\",[[\"flavor name\",\"chocolate\"]]]",
+     "[\"B00I0DI0Z6\",[[\"style\",\"double chocolate chunk\"]]]",
+     "[\"B01E1TQTQO\",[[\"flavor name\",\"chocolate\"]]]",
+     "[\"B07KNWMYMR\",[[\"flavor name\",\"oregon hazelnut chocolate\"]]]",
+     "[\"B07SBDG3CR\",[[\"flavor name\",\"peanut butter chocolate (pack of 1)\"]]]",
+     "[\"B07YSWL849\",[[\"flavor name\",\"sea salt dark chocolate\"]]]",
+     "[\"B082N5YV7R\",[[\"flavor name\",\"keto friendly double chocolate cake cup\"]]]",
+     "[\"B08T6C82TN\",[[\"flavor\",\"chocolate\"]]]",
+     "[\"B099NVLYY3\",[[\"flavor name\",\"chocolate keto\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "6da6ddcafa09e269",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breads & bakery",
+    "goal": {
+     "asin": "B082N5YV7R",
+     "attributes": [
+      "keto friendly"
+     ],
+     "category": "",
+     "goal_options": [
+      "keto friendly double chocolate cake cup"
+     ],
+     "name": "Duncan Hines Keto Friendly Dessert Cups Walnut Fudge Brownie Mix, Walnut Brownie Cake Cup, 30 oz (Pack of 12)",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Mixes › Brownies",
+     "query": "breads & bakery"
+    }
+   },
+   "source_record": "b720c81382ba2328",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B009P2IUZQ",
+    "cluster": "breads & bakery",
+    "name": "Dang Toasted Coconut Chips | Original | 1 Pack | Vegan, Gluten Free, Non GMO, Healthy Snacks Made with Whole Foods | 3.17 Oz Resealable Bag",
+    "product_category": "Grocery & Gourmet Food › Produce › Dried Fruits & Vegetables › Dried Fruits › Dried Coconut"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:plant based",
+    "attr:soy free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:plant based",
+     "=",
+     "plant based"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "option:0",
+     "=",
+     "3.17 ounce (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2007546bb754a97abfe948c65a49eb76",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B009P2IUZQ\",[[\"size\",\"3.17 ounce (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "1f6225fde59968dc",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breads & bakery",
+    "goal": {
+     "asin": "B009P2IUZQ",
+     "attributes": [
+      "soy free",
+      "plant based",
+      "gluten free"
+     ],
+     "category": "",
+     "goal_options": [
+      "3.17 ounce (pack of 1)"
+     ],
+     "name": "Dang Toasted Coconut Chips | Original | 1 Pack | Vegan, Gluten Free, Non GMO, Healthy Snacks Made with Whole Foods | 3.17 Oz Resealable Bag",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Produce › Dried Fruits & Vegetables › Dried Fruits › Dried Coconut",
+     "query": "breads & bakery"
+    }
+   },
+   "source_record": "80ed9884dcee38cd",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B00WFDKDIO",
+    "cluster": "breads & bakery",
+    "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars"
+   },
+   "bound_slots": [
+    "attr:easy use",
+    "attr:gluten free",
+    "attr:non gmo",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ],
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "variety pack"
+    ],
+    [
+     "option:1",
+     "=",
+     "12 count (pack of 7)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1776e73dff305fe98fadddd183150555",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08B8ZHBK2\",[[\"flavor name\",\"variety pack\"],[\"size\",\"7 ounce (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "a4f8784d3ca9082e",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breads & bakery",
+    "goal": {
+     "asin": "B00WFDKDIO",
+     "attributes": [
+      "easy use",
+      "gluten free",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [
+      "variety pack",
+      "12 count (pack of 7)"
+     ],
+     "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars",
+     "query": "breads & bakery"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B00WFDKDIO",
+    "cluster": "breads & bakery",
+    "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars"
+   },
+   "bound_slots": [
+    "attr:0g trans",
+    "attr:gluten free",
+    "attr:non gmo",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:0g trans",
+     "=",
+     "0g trans"
+    ],
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "variety pack"
+    ],
+    [
+     "option:1",
+     "=",
+     "12 count (pack of 7)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "4705d5cacfb4734fe4a06c65a886b338",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00WFDKDIO\",[[\"flavor name\",\"variety pack\"],[\"size\",\"12 count (pack of 7)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "62eb6218b480cdb2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breads & bakery",
+    "goal": {
+     "asin": "B00WFDKDIO",
+     "attributes": [
+      "0g trans",
+      "gluten free",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [
+      "variety pack",
+      "12 count (pack of 7)"
+     ],
+     "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars",
+     "query": "breads & bakery"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B00WFDKDIO",
+    "cluster": "breads & bakery",
+    "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:non gmo",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:1",
+     "=",
+     "12 count (pack of 7)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "3aa0bc2ecab570cc6b49b646ffb1f77b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00WFDKDIO\",[[\"size\",\"12 count (pack of 7)\"]]]",
+     "[\"B014Q36UWI\",[[\"size\",\"7.2 ounce (pack of 1)\"]]]",
+     "[\"B01LL3FQQC\",[[\"size\",\"50 count (pack of 1)\"]]]",
+     "[\"B07YSWL849\",[[\"size\",\"12 count (pack of 1)\"]]]",
+     "[\"B08B8ZHBK2\",[[\"size\",\"7 ounce (pack of 1)\"]]]",
+     "[\"B08KT6RSFV\",[[\"size\",\"1 count (pack of 1)\"]]]",
+     "[\"B09BK8S4RS\",[[\"size\",\"pack of 3\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "713431c87ef68b7d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breads & bakery",
+    "goal": {
+     "asin": "B00WFDKDIO",
+     "attributes": [
+      "gluten free",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [
+      "12 count (pack of 7)"
+     ],
+     "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars",
+     "query": "breads & bakery"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B00WFDKDIO",
+    "cluster": "breads & bakery",
+    "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:non gmo",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "variety pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "69260983012ad54316a7d198c5ab34a6",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B009P2IUZQ\",[[\"flavor name\",\"variety pack\"]]]",
+     "[\"B00O1KPHQW\",[[\"flavor name\",\"muffins variety pack\"]]]",
+     "[\"B00WFDKDIO\",[[\"flavor name\",\"variety pack\"]]]",
+     "[\"B078WJF5WC\",[[\"flavor name\",\"taster variety pack\"]]]",
+     "[\"B07YSWL849\",[[\"flavor name\",\"variety\"]]]",
+     "[\"B08B8ZHBK2\",[[\"flavor name\",\"variety pack\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "a9b210ac95a3c43c",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breads & bakery",
+    "goal": {
+     "asin": "B00WFDKDIO",
+     "attributes": [
+      "gluten free",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [
+      "variety pack"
+     ],
+     "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars",
+     "query": "breads & bakery"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B00WFDKDIO",
+    "cluster": "breads & bakery",
+    "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:non gmo",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "11 ounce (pack of 12)"
+    ],
+    [
+     "option:1",
+     "=",
+     "12 count (pack of 7)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1097f3046621f0100b3155701a2088f9",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B014Q36UWI\",[[\"size\",\"7.2 ounce (pack of 1)\"]]]",
+     "[\"B07YSWL849\",[[\"size\",\"12 count (pack of 1)\"]]]",
+     "[\"B08B8ZHBK2\",[[\"size\",\"7 ounce (pack of 1)\"]]]",
+     "[\"B09BK8S4RS\",[[\"size\",\"pack of 3\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "5fd0830c1731bea7",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breads & bakery",
+    "goal": {
+     "asin": "B00WFDKDIO",
+     "attributes": [
+      "gluten free",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [
+      "11 ounce (pack of 12)",
+      "12 count (pack of 7)"
+     ],
+     "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars",
+     "query": "breads & bakery"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B00WFDKDIO",
+    "cluster": "breads & bakery",
+    "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:non gmo",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "12"
+    ],
+    [
+     "option:1",
+     "=",
+     "12 count (pack of 7)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "4978d3fe50ea84c2a2fd7b6a2ae8d08b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00WFDKDIO\",[[\"size\",\"12 count (pack of 7)\"]]]",
+     "[\"B07YSWL849\",[[\"size\",\"12 count (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7443574b220999b8",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "breads & bakery",
+    "goal": {
+     "asin": "B00WFDKDIO",
+     "attributes": [
+      "gluten free",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [
+      "12",
+      "12 count (pack of 7)"
+     ],
+     "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars",
+     "query": "breads & bakery"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B082N5YV7R",
+     "cluster": "breads & bakery",
+     "name": "Duncan Hines Keto Friendly Dessert Cups Walnut Fudge Brownie Mix, Walnut Brownie Cake Cup, 30 oz (Pack of 12)",
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Mixes › Brownies"
+    }
+   },
+   "dst": "6da6ddcafa09e269",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "b720c81382ba2328",
+   "src": "befb9681ace0d113"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B009P2IUZQ",
+     "cluster": "breads & bakery",
+     "name": "Dang Toasted Coconut Chips | Original | 1 Pack | Vegan, Gluten Free, Non GMO, Healthy Snacks Made with Whole Foods | 3.17 Oz Resealable Bag",
+     "product_category": "Grocery & Gourmet Food › Produce › Dried Fruits & Vegetables › Dried Fruits › Dried Coconut"
+    }
+   },
+   "dst": "1f6225fde59968dc",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "80ed9884dcee38cd",
+   "src": "befb9681ace0d113"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:easy use",
+      "=",
+      "easy use"
+     ]
+    ]
+   },
+   "dst": "a4f8784d3ca9082e",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "befb9681ace0d113"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:0g trans",
+      "=",
+      "0g trans"
+     ]
+    ]
+   },
+   "dst": "62eb6218b480cdb2",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "befb9681ace0d113"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "variety pack"
+     ]
+    ]
+   },
+   "dst": "713431c87ef68b7d",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "befb9681ace0d113"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:1",
+      "=",
+      "12 count (pack of 7)"
+     ]
+    ]
+   },
+   "dst": "a9b210ac95a3c43c",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "befb9681ace0d113"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "variety pack",
+      "11 ounce (pack of 12)"
+     ]
+    ]
+   },
+   "dst": "5fd0830c1731bea7",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "befb9681ace0d113"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "variety pack",
+      "12"
+     ]
+    ]
+   },
+   "dst": "7443574b220999b8",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "befb9681ace0d113"
+  }
+ ],
+ "env_id": "webshop_26c5ee3e327afe7d",
+ "env_spec": {
+  "cluster": "breads & bakery",
+  "env_id": "webshop_26c5ee3e327afe7d",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B00WFDKDIO",
+   "cluster": "breads & bakery",
+   "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+   "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars"
+  },
+  "bound_slots": [
+   "attr:gluten free",
+   "attr:non gmo",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "attr:non gmo",
+    "=",
+    "non gmo"
+   ],
+   [
+    "option:0",
+    "=",
+    "variety pack"
+   ],
+   [
+    "option:1",
+    "=",
+    "12 count (pack of 7)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "ground_truth": {
+   "hash": "f08ab26df53fcc6fc5ab246ee4ca0264",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B00WFDKDIO\",[[\"flavor name\",\"variety pack\"],[\"size\",\"12 count (pack of 7)\"]]]",
+    "[\"B07YSWL849\",[[\"flavor name\",\"variety\"],[\"size\",\"12 count (pack of 1)\"]]]",
+    "[\"B08B8ZHBK2\",[[\"flavor name\",\"variety pack\"],[\"size\",\"7 ounce (pack of 1)\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "befb9681ace0d113",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "breads & bakery",
+   "goal": {
+    "asin": "B00WFDKDIO",
+    "attributes": [
+     "gluten free",
+     "non gmo"
+    ],
+    "category": "",
+    "goal_options": [
+     "variety pack",
+     "12 count (pack of 7)"
+    ],
+    "name": "Nature's Bakery Gluten Free Fig Bars, Raspberry, Real Fruit, Vegan, Non-GMO, Snack bar, 1 box with 6 twin packs (6 twin packs)",
+    "price_upper": 20,
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Bars › Fruit Bars",
+    "query": "breads & bakery"
+   }
+  },
+  "source_record": "e621c24d65df4fb4",
+  "unbound_slots": [
+   "attr:0g trans",
+   "attr:easy use",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "tree_id": "03bdb278505ad2e9"
+}

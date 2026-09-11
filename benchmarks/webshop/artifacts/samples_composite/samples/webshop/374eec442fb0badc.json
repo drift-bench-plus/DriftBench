@@ -1,0 +1,198 @@
+{
+ "sample_id": "374eec442fb0badc",
+ "tree_id": "30e10c7e03627f9c",
+ "adapter": "webshop",
+ "cluster": "makeup remover",
+ "goal_idx": 234,
+ "split": "test",
+ "source_instruction": "i'm looking for hyaluronic acid  for skin care moisturizers.",
+ "query": "Hey, can you help me pick out a makeup remover? I only want cruelty-free options, and I\u2019m looking for ones that have that nice, popular hydrating skincare ingredient everyone raves about for plump, soft skin, y\u2019know? I just need something with a reasonable price tag, nothing too over the top for my budget right now.",
+ "strategy_ids": [
+  "vagueness_subjectivity",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "vagueness_subjectivity+insufficient_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "vagueness_subjectivity",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "insufficient_information": "attr:hyaluronic acid"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:hyaluronic acid"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:cruelty free"
+  ],
+  "hidden_slots": [
+   "attr:hyaluronic acid",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:cruelty free",
+     "=",
+     "cruelty free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "e1df7630a663cdee"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 8,
+  "lit_card": 67,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 10,
+    "true_card": 8,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 57,
+    "true_card": 8,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "2c13fb2e30f2e9f3",
+  "conditions": [
+   [
+    "attr:cruelty free",
+    "=",
+    "cruelty free"
+   ],
+   [
+    "attr:hyaluronic acid",
+    "=",
+    "hyaluronic acid"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:hyaluronic acid",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 8,
+  "value": [
+   "[\"B07DNK9Q41\",[]]",
+   "[\"B07KQSQ7K2\",[]]",
+   "[\"B07PCTJ4Y1\",[]]",
+   "[\"B083VRVSRL\",[]]",
+   "[\"B0897YWVW2\",[]]",
+   "[\"B0897ZFHX2\",[]]",
+   "[\"B08WXDVCDT\",[]]",
+   "[\"B09GTMYYYR\",[]]"
+  ],
+  "hash": "53ff36aed83a1b343a3b675006b0349d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "563f7da942ffae49",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup remover instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7a729cb9fdff023f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup remover instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a7ef73e0cddac4e7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be face wash."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f6fe8eff1c9f9c55",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be tea tree."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "3dafc78b2bf9cb08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ef460974a372bc04",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "8a0f5406fcada828",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 60 instead of 30."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b2dc2738d3e6372d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 50 instead of 30."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

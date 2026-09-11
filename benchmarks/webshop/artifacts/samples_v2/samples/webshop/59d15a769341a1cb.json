@@ -1,0 +1,221 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair treatment oils",
+ "fidelity_notes": [],
+ "goal_idx": 174,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "691f1072e2b49fe01f86b69d93dc6a7d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B088LGSRTG\",[[\"size\",\"7 fl oz (pack of 3)\"],[\"style\",\"conditioner\"]]]",
+   "[\"B08JSH5FKJ\",[[\"size\",\"14 fl oz (pack of 3)\"],[\"style\",\"conditioner\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:natural hair",
+    "=",
+    "natural hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "7 fl oz (pack of 3)"
+   ],
+   [
+    "option:1",
+    "=",
+    "conditioner"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "7e6c178f1ef18663"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "7 fl oz (pack of 3)"
+     ],
+     [
+      "option:0",
+      "3 units of unspecified volume each"
+     ]
+    ],
+    "surface": "a pack of three"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "7 fl oz (pack of 3)"
+    ],
+    [
+     "option:1",
+     "=",
+     "conditioner"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "3 units of unspecified volume each"
+    ],
+    [
+     "option:1",
+     "=",
+     "conditioner"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:natural hair",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "2516c5d94ef2ad2b",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for some hair treatment oils for natural hair, I need conditioner options that come in a pack of three, and I want to make sure it’s light, all under $20.",
+ "render_attempts": 2,
+ "sample_id": "59d15a769341a1cb",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair treatment oils instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "53e294edf352a6cf"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair treatment oils instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7cc446afb81cc0ac"
+  },
+  {
+   "announcement": "Also, it needs to be damaged hair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5ea257971345868d"
+  },
+  {
+   "announcement": "Also, it needs to be aloe vera.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6a1db6384c6d4c43"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2fe17382e85ec3f4"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "de935e7fde707d33"
+  },
+  {
+   "announcement": "Actually, make it 1 ounce instead of 7 fl oz (pack of 3).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7b612a4687aadc24"
+  },
+  {
+   "announcement": "Actually, make it 11 ounce (pack of 1) instead of 7 fl oz (pack of 3).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c132ef3f0a8a88f8"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   2,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a conditioner that comes in a pack of three for natural hair.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "27435fd52d082942",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

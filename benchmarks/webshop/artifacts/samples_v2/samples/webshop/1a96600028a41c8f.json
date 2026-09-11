@@ -1,0 +1,188 @@
+{
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "fidelity_notes": [],
+ "goal_idx": 454,
+ "ground_truth": {
+  "cardinality": 12,
+  "hash": "bb819f6ae78c106b0f985e162778906e",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00WD017GQ\",[[\"color\",\"black\"],[\"size\",\"15ft\"]]]",
+   "[\"B0171EUOZI\",[[\"color\",\"black\"],[\"size\",\"1.5ft\"]]]",
+   "[\"B06XKX4J3X\",[[\"color\",\"black\"],[\"number of items\",\"1\"]]]",
+   "[\"B0793KLG2Q\",[[\"color\",\"black\"],[\"size\",\"[1-pack] 1.5ft\"]]]",
+   "[\"B07B9K659S\",[[\"color\",\"black\"],[\"size\",\"1.5ft\"]]]",
+   "[\"B07HC46N93\",[[\"color\",\"cat-5e - black\"],[\"size\",\"5ft\"]]]",
+   "[\"B07LBDLDTT\",[[\"color\",\"dual male to male rca - black\"],[\"size\",\"5ft\"]]]",
+   "[\"B08538V513\",[[\"color\",\"black\"],[\"size\",\"16.5ft\"]]]",
+   "[\"B08Q77CWP2\",[[\"color\",\"black\"],[\"number of items\",\"1\"]]]",
+   "[\"B08Q7G2L16\",[[\"color\",\"black\"],[\"number of items\",\"1\"]]]",
+   "[\"B08Q7NLJJM\",[[\"color\",\"black\"],[\"number of items\",\"1\"]]]",
+   "[\"B08Q7Z6KD8\",[[\"color\",\"black\"],[\"number of items\",\"1\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:gold plated",
+    "=",
+    "gold plated"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "option:1",
+    "=",
+    "1.5ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "7845bdf8528c5ec1"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gold plated",
+     "=",
+     "gold plated"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "option:1",
+     "=",
+     "1.5ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:gold plated",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that gold plated satellite television accessories in black, 1.5ft long, work really well when they cost under 30 dollars.",
+ "render_attempts": 1,
+ "sample_id": "1a96600028a41c8f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "d54ccf34c40388aa"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e01e37c0dbf4584a"
+  },
+  {
+   "announcement": "Also, it needs to be tv antenna.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "88af880a38c00f61"
+  },
+  {
+   "announcement": "Also, it needs to be high resolution.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a03a5e500963993e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0437358f2c2e3f05"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b0bdff4c6ac6cc62"
+  },
+  {
+   "announcement": "Actually, make it 1 outlet instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "88f47d033233e65f"
+  },
+  {
+   "announcement": "Actually, make it 1 ft instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "97d7e684988c51c5"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 12,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 12,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want a 1.5 foot long black gold plated hdmi cable.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "f486890a6ac048db",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

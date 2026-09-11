@@ -1,0 +1,126 @@
+{
+ "sample_id": "97bc3180a291157f__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "97bc3180a291157f",
+ "query": "Last weekend I took my golden retriever to the new off-leash dog park downtown, and he had so much fun chasing after a frisbee that he ended up falling asleep in the car on the ride home before we even stopped for his favorite peanut butter treat. I also tried that new matcha boba shop on 5th Street yesterday, the taro boba pearls were so chewy and they had just the right amount of sweetness, I\u2019m already planning to go back again this weekend with my roommate who\u2019s been craving boba for weeks. Oh right, the reason I called is I\u2019m currently abroad and can\u2019t get any mobile data to work at all. I checked my settings, airplane mode is turned on, I think my network preference might be set incorrectly, my data mode is off, data saver mode is switched on, I already exceeded my monthly data usage limit, and I also have roaming turned off right now. Can you help me figure out how to fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I took my golden retriever to the new off-leash dog park downtown, and he had so much fun chasing after a frisbee that he ended up falling asleep in the car on the ride home before we even stopped for his favorite peanut butter treat. I also tried that new matcha boba shop on 5th Street yesterday, the taro boba pearls were so chewy and they had just the right amount of sweetness, I\u2019m already planning to go back again this weekend with my roommate who\u2019s been craving boba for weeks. Oh right, the reason I called is ",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:data_mode_off",
+   "fault:data_saver_mode_on",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

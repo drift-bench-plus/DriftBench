@@ -1,0 +1,193 @@
+{
+ "adapter": "webshop",
+ "cluster": "snack crackers",
+ "fidelity_notes": [],
+ "goal_idx": 295,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "a0224d570f7df2c3223eacbb797fd00e",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08TFJ4QCJ\",[[\"flavor name\",\"chocolate chip pecan\"],[\"size\",\"6 ounce (pack of 1)\"]]]",
+   "[\"B093CLC753\",[[\"flavor name\",\"chocolate\"],[\"size\",\"1 pack\"]]]",
+   "[\"B09QNXZQT2\",[[\"flavor name\",\"chocolate\"],[\"size\",\"12 pack\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:low calorie",
+    "=",
+    "low calorie"
+   ],
+   [
+    "option:0",
+    "=",
+    "lemon,chocolate,cream cheese"
+   ],
+   [
+    "option:1",
+    "=",
+    "1 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "3333d3bf6b11b5b0"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "irrelevant_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [
+   {
+    "condition": [
+     "attr:non-GMO project verified",
+     "=",
+     "true"
+    ],
+    "text": "non-GMO project verified label"
+   }
+  ],
+  "family": "parameter",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low calorie",
+     "=",
+     "low calorie"
+    ],
+    [
+     "option:0",
+     "=",
+     "lemon,chocolate,cream cheese"
+    ],
+    [
+     "option:1",
+     "=",
+     "1 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ],
+    [
+     "attr:non-GMO project verified",
+     "=",
+     "true"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:low calorie",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "7f76df6299a0e48c",
+  "strategy_id": "irrelevant_information",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for low calorie snack crackers with lemon, chocolate, and cream cheese flavors, coming in 1 pack, priced under $20, and also I want them to have a non-GMO project verified label.",
+ "render_attempts": 3,
+ "sample_id": "28cd48f8dee74666",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the snack crackers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "28a7f51b4d9a6cc2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the snack crackers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "575719c4dd47a4cf"
+  },
+  {
+   "announcement": "Also, it needs to be artificial colors.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2443186f14ced29b"
+  },
+  {
+   "announcement": "Also, it needs to be brown rice.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dd4733caf4a63373"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "92ef28655709698f"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cbf4f3e418500da5"
+  },
+  {
+   "announcement": "Actually, make it .2 set (4.15 ounce (pack of 3)) instead of lemon,chocolate,cream cheese.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bf402128ec7b86b5"
+  },
+  {
+   "announcement": "Actually, make it .4 set (4.15 ounce (pack of 3)) instead of lemon,chocolate,cream cheese.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "df5fef21c98869d5"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "extras",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "can you find me 1 pack of low calorie wheat flour sandwich crackers that are lemon, chocolate, and cream cheese flavored?",
+ "split": "test",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "tree_id": "862faadd688e3901",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

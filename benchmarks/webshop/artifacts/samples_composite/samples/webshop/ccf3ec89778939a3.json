@@ -1,0 +1,230 @@
+{
+ "sample_id": "ccf3ec89778939a3",
+ "tree_id": "9cfee87f9d3a9079",
+ "adapter": "webshop",
+ "cluster": "women's shorts",
+ "goal_idx": 189,
+ "split": "test",
+ "source_instruction": "i'm looking for high waisted denim shorts distressed jeans for women.",
+ "query": "My neighbor\u2019s tabby cat got stuck in the oak tree at the end of the block yesterday, and half the street turned out to coax it down with tuna treats and a rickety old ladder someone dragged from their garage. I spent almost an hour out there holding the ladder steady, and by the time the cat hopped down on its own I was so sunburned across my shoulders I had to slather aloe vera all over when I got home. I also remembered I left my iced lavender latte on the porch rail the whole time, and it was totally watery and warm by the time I got back to it. I\u2019ve heard that women\u2019s shorts with button closure, cut in a slim fit in a size large, and priced under $20, hold up really well to walking around the neighborhood on random warm afternoons.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+indirect_intent",
+  "family": "intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "indirect_intent"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "My neighbor\u2019s tabby cat got stuck in the oak tree at the end of the block yesterday, and half the street turned out to coax it down with tuna treats and a rickety old ladder someone dragged from their garage. I spent almost an hour out there holding the ladder steady, and by the time the cat hopped down on its own I was so sunburned across my shoulders I had to slather aloe vera all over when I got home. I also remembered I left my iced lavender latte on the porch rail the whole time, and it was totally watery and warm by the time I got back to it.",
+  "retained": [
+   "attr:button closure",
+   "attr:slim fit",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:button closure",
+     "=",
+     "button closure"
+    ],
+    [
+     "attr:slim fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "02bc26d92e3e4721"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 50,
+  "lit_card": 50,
+  "components": {}
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "aa65457558c46e24",
+  "conditions": [
+   [
+    "attr:button closure",
+    "=",
+    "button closure"
+   ],
+   [
+    "attr:slim fit",
+    "=",
+    "slim fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 50,
+  "value": [
+   "[\"B072BYKXHD\",[[\"size\",\"large\"]]]",
+   "[\"B07BHG46RP\",[[\"size\",\"large\"]]]",
+   "[\"B07KL4BMJG\",[[\"size\",\"large\"]]]",
+   "[\"B07PYTZ7Z5\",[[\"size\",\"large\"]]]",
+   "[\"B07PYZ9RN7\",[[\"size\",\"large\"]]]",
+   "[\"B07R8KC9MM\",[[\"size\",\"large\"]]]",
+   "[\"B07RPNJXQQ\",[[\"size\",\"large\"]]]",
+   "[\"B082TKHMVN\",[[\"size\",\"large\"]]]",
+   "[\"B086JQZTJR\",[[\"size\",\"large\"]]]",
+   "[\"B089DVSFXZ\",[[\"size\",\"x-large\"]]]",
+   "[\"B08BBY1QSC\",[[\"size\",\"large\"]]]",
+   "[\"B08BR2QXF4\",[[\"size\",\"large\"]]]",
+   "[\"B08MJW1K9B\",[[\"size\",\"large\"]]]",
+   "[\"B08Q77RYN8\",[[\"size\",\"large\"]]]",
+   "[\"B08RB6R2Q9\",[[\"size\",\"large\"]]]",
+   "[\"B08SBM9636\",[[\"size\",\"large\"]]]",
+   "[\"B08SBMGKQD\",[[\"size\",\"large\"]]]",
+   "[\"B08SJ7C9VW\",[[\"size\",\"large\"]]]",
+   "[\"B08XMQXW7K\",[[\"size\",\"x-large\"]]]",
+   "[\"B08ZXMF6HN\",[[\"size\",\"xx-large\"]]]",
+   "[\"B091CTCMFQ\",[[\"size\",\"large\"]]]",
+   "[\"B091FGZY28\",[[\"size\",\"large\"]]]",
+   "[\"B091L8MDZZ\",[[\"size\",\"large\"]]]",
+   "[\"B0925SJJD3\",[[\"size\",\"large\"]]]",
+   "[\"B093H9TCF8\",[[\"size\",\"large\"]]]",
+   "[\"B096LQSTVM\",[[\"size\",\"large\"]]]",
+   "[\"B096LRPJYR\",[[\"size\",\"large\"]]]",
+   "[\"B096LRWC7X\",[[\"size\",\"large\"]]]",
+   "[\"B096S435NG\",[[\"size\",\"large\"]]]",
+   "[\"B096SNC5DJ\",[[\"size\",\"large\"]]]",
+   "[\"B0976T9DY8\",[[\"size\",\"large\"]]]",
+   "[\"B097HMYRFM\",[[\"size\",\"large\"]]]",
+   "[\"B097HN61Y3\",[[\"size\",\"large\"]]]",
+   "[\"B097N7CMV8\",[[\"size\",\"large\"]]]",
+   "[\"B097N8C2RW\",[[\"size\",\"large\"]]]",
+   "[\"B097NFY74J\",[[\"size\",\"large\"]]]",
+   "[\"B098PXYQK8\",[[\"size\",\"large\"]]]",
+   "[\"B09F5Q16WG\",[[\"size\",\"large\"]]]",
+   "[\"B09KRVBSG6\",[[\"size\",\"large\"]]]",
+   "[\"B09NR5SH6C\",[[\"size\",\"large\"]]]",
+   "[\"B09PZYPVP7\",[[\"size\",\"large\"]]]",
+   "[\"B09Q3KJKW1\",[[\"size\",\"large\"]]]",
+   "[\"B09QFVG8P6\",[[\"size\",\"large\"]]]",
+   "[\"B09QFX2G29\",[[\"size\",\"large\"]]]",
+   "[\"B09QKBR7LG\",[[\"size\",\"large\"]]]",
+   "[\"B09QL3D2HD\",[[\"size\",\"large\"]]]",
+   "[\"B09RZVC64G\",[[\"size\",\"large\"]]]",
+   "[\"B09SGG1PSK\",[[\"size\",\"large\"]]]",
+   "[\"B09STMDJ8J\",[[\"size\",\"large\"]]]",
+   "[\"B09SYKXKP4\",[[\"size\",\"large\"]]]"
+  ],
+  "hash": "287d099a552a7d970f3873cf379e6c30"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "b53410b3de234fbb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f908266184f596e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "033af430dd5e19f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be relaxed fit."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9cb85c427584c708",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cargo pants."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2adecee36a55cdcc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "501a949367f70ba5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4b8fc187311d922f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01 beige instead of large."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c11ca83c08dd730e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #03 gray instead of large."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

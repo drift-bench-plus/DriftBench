@@ -1,0 +1,104 @@
+{
+ "sample_id": "4b54d5dfd5e4958b__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "4b54d5dfd5e4958b",
+ "query": "I was just walking my golden retriever puppy earlier, he kept stopping to sniff every dandelion on the sidewalk and even tried to carry a half-eaten popsicle stick home, I had to wrestle it out of his mouth so he wouldn\u2019t get sick. Then I stopped by the little boba shop on the corner, their taro milk tea with 50% sugar and extra pearls was way sweeter than usual today, I think the new barista might have messed up the recipe. When I got home I tried to stream my favorite show on my phone but it wouldn\u2019t load, I think my network connection is acting really bad, the VPN I use keeps cutting out too, I checked and mobile data is turned off right now and data saver mode is switched on, can you help me fix this so I can use my mobile internet properly?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was just walking my golden retriever puppy earlier, he kept stopping to sniff every dandelion on the sidewalk and even tried to carry a half-eaten popsicle stick home, I had to wrestle it out of his mouth so he wouldn\u2019t get sick. Then I stopped by the little boba shop on the corner, their taro milk tea with 50% sugar and extra pearls was way sweeter than usual today, I think the new barista might have messed up the recipe.",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:bad_vpn",
+   "fault:data_mode_off",
+   "fault:data_saver_mode_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_vpn",
+     "=",
+     "bad_vpn"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_vpn",
+    "=",
+    "bad_vpn"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,178 @@
+{
+ "adapter": "webshop",
+ "cluster": "live plants",
+ "fidelity_notes": [],
+ "goal_idx": 255,
+ "ground_truth": {
+  "cardinality": 10,
+  "hash": "1667779d2a4e29b0b399c6ffa7d52b79",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07WGVP4ZS\",[[\"color\",\"black\"]]]",
+   "[\"B08MQ9ZPDX\",[[\"color\",\"black\"]]]",
+   "[\"B092TZ6VPJ\",[[\"color\",\"blue black white\"]]]",
+   "[\"B09DFLS85N\",[[\"color\",\"red black\"]]]",
+   "[\"B09GLYMLY9\",[[\"color\",\"red black\"]]]",
+   "[\"B09HKGD4KT\",[[\"color\",\"black white blue\"]]]",
+   "[\"B09JJSLX2Q\",[[\"color\",\"brown black\"]]]",
+   "[\"B09KC59GGY\",[[\"color\",\"black white\"]]]",
+   "[\"B09KLK2HR8\",[[\"color\",\"black yellow\"]]]",
+   "[\"B09LYFF1BY\",[[\"color\",\"fuchsia black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy clean",
+    "=",
+    "easy clean"
+   ],
+   [
+    "option:0",
+    "=",
+    "red black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "7b26a524abaecccf"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy clean",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for live plants that are easy to clean, priced under 30 dollars, and come in that one color option I was checking out earlier.",
+ "render_attempts": 1,
+ "sample_id": "9489da4d3d8b71ca",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the live plants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a3cc2f6f86b76a34"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the live plants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e078b026ade5b401"
+  },
+  {
+   "announcement": "Also, it needs to be living room.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3d45f1b1e4b2196b"
+  },
+  {
+   "announcement": "Also, it needs to be easy install.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ab7f5a82ae8c4a76"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "253d8c81b62f5abc"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "423a6a76cd9c74af"
+  },
+  {
+   "announcement": "Actually, make it .2 instead of red black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "708db76dc3ce6ed0"
+  },
+  {
+   "announcement": "Actually, make it .4 instead of red black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9b6b1706b479504a"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 89,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 10,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for red black color shower curtains that are easy to clean.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "dc1c44a0a21bf664",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

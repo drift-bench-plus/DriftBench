@@ -1,0 +1,199 @@
+{
+ "sample_id": "18f0518ca75d568b",
+ "tree_id": "0e753744b15f4583",
+ "adapter": "webshop",
+ "cluster": "headphones",
+ "goal_idx": 213,
+ "split": "test",
+ "source_instruction": "i want silver and noise cancelling earbuds.",
+ "query": "My cousin just adopted a tiny tabby kitten last week and she\u2019s been obsessing over getting it the perfect feather wand, she even spent three hours comparing different catnip blends last night and keeps sending me blurry photos of the kitten napping on her laptop keyboard. Oh and I saw someone on the bus yesterday eating a matcha croissant that looked so good I\u2019m planning to stop by the bakery after this, I hope they haven\u2019t sold out by the time I get there. Anyway, I\u2019m looking for headphones in this section, they need to have active noise cancelling, I want the white-silver color option, they have to be $30 or under, and make sure they come with a detachable 3.5mm audio cable too.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+contextual_irrelevance",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "make sure they come with a detachable 3.5mm audio cable too",
+    "condition": [
+     "attr:accessory",
+     "=",
+     "detachable 3.5mm audio cable"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "My cousin just adopted a tiny tabby kitten last week and she\u2019s been obsessing over getting it the perfect feather wand, she even spent three hours comparing different catnip blends last night and keeps sending me blurry photos of the kitten napping on her laptop keyboard. Oh and I saw someone on the bus yesterday eating a matcha croissant that looked so good I\u2019m planning to stop by the bakery after this, I hope they haven\u2019t sold out by the time I get there.",
+  "retained": [
+   "attr:noise cancelling",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:noise cancelling",
+     "=",
+     "noise cancelling"
+    ],
+    [
+     "option:0",
+     "=",
+     "white-silver"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:accessory",
+     "=",
+     "detachable 3.5mm audio cable"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "f009d8fa93c2e2d4"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 8,
+  "lit_card": 1,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 8,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "8bc5949360d672c9",
+  "conditions": [
+   [
+    "attr:noise cancelling",
+    "=",
+    "noise cancelling"
+   ],
+   [
+    "option:0",
+    "=",
+    "white-silver"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 8,
+  "value": [
+   "[\"B07TYTJ5M1\",[[\"color\",\"silver\"]]]",
+   "[\"B083ZQGG4R\",[[\"color\",\"silver\"]]]",
+   "[\"B089W5RDKV\",[[\"color\",\"silver\"]]]",
+   "[\"B08Y8G1YZN\",[[\"color\",\"silver\"]]]",
+   "[\"B091DXBFFQ\",[[\"color\",\"silver\"]]]",
+   "[\"B09GJZZDQP\",[[\"color\",\"white-silver\"]]]",
+   "[\"B09LXNRQVZ\",[[\"color\",\"silver\"]]]",
+   "[\"B09S5L57D5\",[[\"color\",\"silver\"]]]"
+  ],
+  "hash": "abd81fb3989f261d17dfcea304be12ad"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7f764ac432fe9619",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the headphones instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a378bd1c6a654d36",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the headphones instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "073c9f6121813974",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wireless earbuds."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7ee209cc2f948a74",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be audio cable."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4b6493956c64e7c4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e6ad588664e893bb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7973db25f4efdd9e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 3 pack instead of white-silver."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "8890af7279bdaa58",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 7-black1 instead of white-silver."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

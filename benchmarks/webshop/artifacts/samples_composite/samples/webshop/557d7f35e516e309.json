@@ -1,0 +1,193 @@
+{
+ "sample_id": "557d7f35e516e309",
+ "tree_id": "dc1c44a0a21bf664",
+ "adapter": "webshop",
+ "cluster": "live plants",
+ "goal_idx": 255,
+ "split": "test",
+ "source_instruction": "i am looking for red black color shower curtains that are easy to clean.",
+ "query": "Ugh, I just remembered I left my laundry in the washer this morning when I ran out, it\u2019s probably all mildewed by now, and I still haven\u2019t picked up that cherry lemon seltzer I\u2019ve been craving all week, plus my cat knocked over my favorite ceramic mug last night so I need to grab a new one sometime soon too. Anyway, I\u2019m looking for live plants that are super easy to clean, come in that sharp red and black color scheme I love, and are priced at a good, reasonable amount.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+vagueness_subjectivity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I just remembered I left my laundry in the washer this morning when I ran out, it\u2019s probably all mildewed by now, and I still haven\u2019t picked up that cherry lemon seltzer I\u2019ve been craving all week, plus my cat knocked over my favorite ceramic mug last night so I need to grab a new one sometime soon too. Anyway,",
+  "retained": [
+   "attr:easy clean",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "option:0",
+     "=",
+     "red black"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "efaa396caa32a58e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 10,
+  "lit_card": 14,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 14,
+    "true_card": 10,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "7b26a524abaecccf",
+  "conditions": [
+   [
+    "attr:easy clean",
+    "=",
+    "easy clean"
+   ],
+   [
+    "option:0",
+    "=",
+    "red black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 10,
+  "value": [
+   "[\"B07WGVP4ZS\",[[\"color\",\"black\"]]]",
+   "[\"B08MQ9ZPDX\",[[\"color\",\"black\"]]]",
+   "[\"B092TZ6VPJ\",[[\"color\",\"blue black white\"]]]",
+   "[\"B09DFLS85N\",[[\"color\",\"red black\"]]]",
+   "[\"B09GLYMLY9\",[[\"color\",\"red black\"]]]",
+   "[\"B09HKGD4KT\",[[\"color\",\"black white blue\"]]]",
+   "[\"B09JJSLX2Q\",[[\"color\",\"brown black\"]]]",
+   "[\"B09KC59GGY\",[[\"color\",\"black white\"]]]",
+   "[\"B09KLK2HR8\",[[\"color\",\"black yellow\"]]]",
+   "[\"B09LYFF1BY\",[[\"color\",\"fuchsia black\"]]]"
+  ],
+  "hash": "1667779d2a4e29b0b399c6ffa7d52b79"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "a3cc2f6f86b76a34",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the live plants instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e078b026ade5b401",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the live plants instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3d45f1b1e4b2196b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be living room."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ab7f5a82ae8c4a76",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy install."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "253d8c81b62f5abc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "423a6a76cd9c74af",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "708db76dc3ce6ed0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .2 instead of red black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "9b6b1706b479504a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .4 instead of red black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

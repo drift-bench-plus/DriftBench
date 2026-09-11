@@ -1,0 +1,256 @@
+{
+ "sample_id": "e33fbd736a8909cc",
+ "tree_id": "65cb993c1e993bf8",
+ "adapter": "webshop",
+ "cluster": "home office furniture sets",
+ "goal_idx": 403,
+ "split": "test",
+ "source_instruction": "looking for ceramic drink coasters that is set of 6 with cup holder",
+ "query": "I was browsing the home office furniture sets section earlier even though I\u2019ve been thinking about pieces that work for the living room. I\u2019ve heard people say the ones priced under $50 hold up really well for regular daily use, and that one people keep raving about checks all the boxes for what folks usually pick when they\u2019re kitting out a shared seating space.",
+ "strategy_ids": [
+  "indirect_intent",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+referential_ambiguity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:living room",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "5051bbb0bbf5b421"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 73,
+  "lit_card": 456,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 456,
+    "true_card": 73,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "2e3e95e7b95e7533",
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "set of 6 with cup holder"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 73,
+  "value": [
+   "[\"B07X5SMDGX\",[[\"color\",\"6\"]]]",
+   "[\"B091T5CGYG\",[[\"size\",\"set of 6\"]]]",
+   "[\"B099NB72ZV\",[[\"size\",\"set of 5\"]]]",
+   "[\"B09F9QJSQV\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09F9QZ18P\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09F9SX5YX\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09FY2C67G\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J89ZKFM\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8B6HZP\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8BXGK5\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8C5X4W\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8C68N5\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8C7GKG\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8C7ZFL\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8C81F3\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8C8474\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8CB2SL\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8CB4KV\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8CD2XS\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8CD63N\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8CDP5S\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8CDPWJ\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8CJ86Y\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8CJW34\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8CP9GJ\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8D8Y12\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8DMLCS\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8DNTPP\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8DNY6Y\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8DPJR3\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8DVS54\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8F37BY\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8F5HSS\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8FT18G\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8HRYYS\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8HXFZ4\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8K4KQ8\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8KDZ8G\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8SLBKD\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09J8V6RYF\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09LH925LF\",[[\"item package quantity\",\"6\"]]]",
+   "[\"B09MDWTTBY\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDXRX21\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDY1YMD\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDY2RGK\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDY3J32\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDY3VSW\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDYGF6C\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDYK3XG\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDYRYW5\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDYS682\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDYVRYP\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDYVTCW\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDYWSRK\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDYZ2FS\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDYZNGM\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDYZSQM\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZ2129\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZ2C15\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZ51MX\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZBGZQ\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZBKWC\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZBNC7\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZGQTL\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZHWF9\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZM3WH\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZQVG1\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZRN8G\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZSHKB\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZVTV6\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MDZWY7S\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MF114L1\",[[\"size\",\"set of 6\"]]]",
+   "[\"B09MF144FP\",[[\"size\",\"set of 6\"]]]"
+  ],
+  "hash": "3a5f5dbcefc7e495c76728ac7d615071"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "563c8ea629ef4032",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the home office furniture sets instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7308c010a919a9c0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the home office furniture sets instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "230fdc596f2727a0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dining chair."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "872963284c377d22",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy install."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "824d01b3a907907d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c7e8a18de5934da4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "52141c846c213e5c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.20x3.9inx4 instead of set of 6 with cup holder."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b60e794f16251176",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 seat instead of set of 6 with cup holder."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

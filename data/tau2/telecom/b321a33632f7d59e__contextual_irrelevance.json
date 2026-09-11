@@ -1,0 +1,104 @@
+{
+ "sample_id": "b321a33632f7d59e__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "b321a33632f7d59e",
+ "query": "I was out walking my golden retriever this morning and he ended up chasing a squirrel right into a patch of wild blackberries, so I had to spend twenty minutes picking thorns out of his fur and wiping purple berry stains off his paws when I got home. Then I remembered I still need to order that custom phone case I\u2019ve been eyeing with the constellation print, I just can\u2019t decide if I want the matte finish or the glossy one that glows in the dark. I also just finished baking a batch of chocolate chip cookies, they\u2019re still warm on the counter and I swear they turned out chewy just the way I like them for the first time ever. Anyway, I\u2019m having some issues with my phone: my APN settings seem to be all messed up, my line got suspended because I have an overdue bill and my contract just ended, my SIM card is locked with a PIN I can\u2019t remember right now, and I think the SIM card might have gotten unseated when I tripped over the dog earlier. I really need help fixing this so I can use my phone again.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was out walking my golden retriever this morning and he ended up chasing a squirrel right into a patch of wild blackberries, so I had to spend twenty minutes picking thorns out of his fur and wiping purple berry stains off his paws when I got home. Then I remembered I still need to order that custom phone case I\u2019ve been eyeing with the constellation print, I just can\u2019t decide if I want the matte finish or the glossy one that glows in the dark. I also just finished baking a batch of chocolate chip cookies, they\u2019re still warm on the counter and I swear they turned out chewy just the way I like them for the first time ever.",
+  "retained": [
+   "fault:break_apn_settings",
+   "fault:contract_end_suspension",
+   "fault:lock_sim_card_pin",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:contract_end_suspension",
+     "=",
+     "contract_end_suspension"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:contract_end_suspension",
+    "=",
+    "contract_end_suspension"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

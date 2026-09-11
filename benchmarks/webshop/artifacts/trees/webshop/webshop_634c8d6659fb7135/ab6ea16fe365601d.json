@@ -1,0 +1,811 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B07MHGDC71",
+    "cluster": "puffed snacks",
+    "name": "Buc-ee's Peanut Brittle in a Resealable Bag, Two 5 Ounce Bags (10 Ounces Total)",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Candy & Chocolate › Brittle"
+   },
+   "bound_slots": [
+    "attr:resealable bag",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "241f6b8d38200131cf11675cf4dbea8a",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00DOVR7ZI\",[]]",
+     "[\"B07BZGSB3X\",[]]",
+     "[\"B07H1PMV8W\",[]]",
+     "[\"B07H1PX889\",[]]",
+     "[\"B07JKMFWK5\",[]]",
+     "[\"B07MFT5X9L\",[]]",
+     "[\"B07MHGDC71\",[]]",
+     "[\"B07MYRK3YZ\",[]]",
+     "[\"B07QVH7ZM8\",[]]",
+     "[\"B07Y29ZDJ2\",[]]",
+     "[\"B084ZCBYNR\",[]]",
+     "[\"B0853DYVK4\",[]]",
+     "[\"B085WBJPHV\",[]]",
+     "[\"B08DP6HW45\",[]]",
+     "[\"B08HJQ5YQQ\",[]]",
+     "[\"B08W2XSDST\",[]]",
+     "[\"B08YX9685W\",[]]",
+     "[\"B091C99XDT\",[]]",
+     "[\"B0927Y8Z96\",[]]",
+     "[\"B094TVM5PJ\",[]]",
+     "[\"B095PTR8G9\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "2508133ff4226586",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "puffed snacks",
+    "goal": {
+     "asin": "B07MHGDC71",
+     "attributes": [
+      "resealable bag"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Buc-ee's Peanut Brittle in a Resealable Bag, Two 5 Ounce Bags (10 Ounces Total)",
+     "price_upper": 30,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Candy & Chocolate › Brittle",
+     "query": "puffed snacks"
+    }
+   },
+   "source_record": "65a381980cd1cc73",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B01KUTWRY2",
+    "cluster": "puffed snacks",
+    "name": "Moon Cheese - 100% Natural Cheese Snack - Gouda - 2 oz - 12 Pack",
+    "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "pepper jack"
+    ],
+    [
+     "option:1",
+     "=",
+     "12 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "86a2a2cca561c517b1b479f3f2d550c2",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B01KUTWRY2\",[[\"flavor name\",\"pepper jack\"],[\"size\",\"2 ounce (pack of 12)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "07dfe3067d09168b",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "puffed snacks",
+    "goal": {
+     "asin": "B01KUTWRY2",
+     "attributes": [
+      "gluten free"
+     ],
+     "category": "",
+     "goal_options": [
+      "pepper jack",
+      "12 pack"
+     ],
+     "name": "Moon Cheese - 100% Natural Cheese Snack - Gouda - 2 oz - 12 Pack",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks",
+     "query": "puffed snacks"
+    }
+   },
+   "source_record": "54034b68ce8a0c12",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09M968ZCM",
+    "cluster": "puffed snacks",
+    "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+    "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars"
+   },
+   "bound_slots": [
+    "attr:high protein",
+    "attr:low carb",
+    "attr:low sugar",
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:high protein",
+     "=",
+     "high protein"
+    ],
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "29098c2eb8484ae9a3ad2305c7d043b7",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09M968ZCM\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "e1b9c512a7aa2577",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "puffed snacks",
+    "goal": {
+     "asin": "B09M968ZCM",
+     "attributes": [
+      "high protein",
+      "low carb",
+      "low sugar",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+     "price_upper": 40,
+     "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars",
+     "query": "puffed snacks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09M968ZCM",
+    "cluster": "puffed snacks",
+    "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+    "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars"
+   },
+   "bound_slots": [
+    "attr:dietary fiber",
+    "attr:high protein",
+    "attr:low carb",
+    "attr:low sugar",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dietary fiber",
+     "=",
+     "dietary fiber"
+    ],
+    [
+     "attr:high protein",
+     "=",
+     "high protein"
+    ],
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "b61572ca040fe884dfa24c67160a9f48",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B097QC1R46\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "8977ef4b8517936b",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "puffed snacks",
+    "goal": {
+     "asin": "B09M968ZCM",
+     "attributes": [
+      "dietary fiber",
+      "high protein",
+      "low carb",
+      "low sugar"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+     "price_upper": 40,
+     "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars",
+     "query": "puffed snacks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09M968ZCM",
+    "cluster": "puffed snacks",
+    "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+    "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars"
+   },
+   "bound_slots": [
+    "attr:high protein",
+    "attr:low carb",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:high protein",
+     "=",
+     "high protein"
+    ],
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "3c82caf6da79f883c36fc5755aa5e1eb",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07BNPYK9M\",[]]",
+     "[\"B07FFB1KR4\",[]]",
+     "[\"B07MHTMFSJ\",[]]",
+     "[\"B07RVC8T2G\",[]]",
+     "[\"B081B7XLW6\",[]]",
+     "[\"B081P6L92H\",[]]",
+     "[\"B088LW14W8\",[]]",
+     "[\"B08LR27CRD\",[]]",
+     "[\"B08LR2MHPF\",[]]",
+     "[\"B08NTWX6J1\",[]]",
+     "[\"B08P28NXH3\",[]]",
+     "[\"B08T2122SB\",[]]",
+     "[\"B097QC1R46\",[]]",
+     "[\"B09M968ZCM\",[]]",
+     "[\"B09N7WZZBW\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "0671e049fbda5c48",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "puffed snacks",
+    "goal": {
+     "asin": "B09M968ZCM",
+     "attributes": [
+      "high protein",
+      "low carb"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+     "price_upper": 40,
+     "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars",
+     "query": "puffed snacks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09M968ZCM",
+    "cluster": "puffed snacks",
+    "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+    "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars"
+   },
+   "bound_slots": [
+    "attr:low carb",
+    "attr:low sugar",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0e3af99103a2363f44a5eed935bbe58f",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B009D5546S\",[]]",
+     "[\"B07FFB1KR4\",[]]",
+     "[\"B07KN925H5\",[]]",
+     "[\"B07XFH3W1D\",[]]",
+     "[\"B08V88JBQ9\",[]]",
+     "[\"B097QC1R46\",[]]",
+     "[\"B097QL8BGX\",[]]",
+     "[\"B09M968ZCM\",[]]",
+     "[\"B09MWQKM6V\",[]]",
+     "[\"B09QLMQJ9S\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "a381b9a72687d1f6",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "puffed snacks",
+    "goal": {
+     "asin": "B09M968ZCM",
+     "attributes": [
+      "low carb",
+      "low sugar"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+     "price_upper": 40,
+     "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars",
+     "query": "puffed snacks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09M968ZCM",
+    "cluster": "puffed snacks",
+    "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+    "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars"
+   },
+   "bound_slots": [
+    "attr:high protein",
+    "attr:low carb",
+    "attr:low sugar",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:high protein",
+     "=",
+     "high protein"
+    ],
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ba5829ceda889f8e5755abb7a3dee4ce",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07FFB1KR4\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "b965401fe11713fa",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "puffed snacks",
+    "goal": {
+     "asin": "B09M968ZCM",
+     "attributes": [
+      "high protein",
+      "low carb",
+      "low sugar"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+     "price_upper": 20,
+     "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars",
+     "query": "puffed snacks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09M968ZCM",
+    "cluster": "puffed snacks",
+    "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+    "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars"
+   },
+   "bound_slots": [
+    "attr:high protein",
+    "attr:low carb",
+    "attr:low sugar",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:high protein",
+     "=",
+     "high protein"
+    ],
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "baebbded2e5d5821cdb43bbc975b8ee0",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07FFB1KR4\",[]]",
+     "[\"B09M968ZCM\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "3afa82882e8bb29e",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "puffed snacks",
+    "goal": {
+     "asin": "B09M968ZCM",
+     "attributes": [
+      "high protein",
+      "low carb",
+      "low sugar"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+     "price_upper": 30,
+     "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars",
+     "query": "puffed snacks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07MHGDC71",
+     "cluster": "puffed snacks",
+     "name": "Buc-ee's Peanut Brittle in a Resealable Bag, Two 5 Ounce Bags (10 Ounces Total)",
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Candy & Chocolate › Brittle"
+    }
+   },
+   "dst": "2508133ff4226586",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "65a381980cd1cc73",
+   "src": "252ee08c0d5f3876"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B01KUTWRY2",
+     "cluster": "puffed snacks",
+     "name": "Moon Cheese - 100% Natural Cheese Snack - Gouda - 2 oz - 12 Pack",
+     "product_category": "Grocery & Gourmet Food › Snacks & Sweets › Snack Foods › Puffed Snacks"
+    }
+   },
+   "dst": "07dfe3067d09168b",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "54034b68ce8a0c12",
+   "src": "252ee08c0d5f3876"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:non gmo",
+      "=",
+      "non gmo"
+     ]
+    ]
+   },
+   "dst": "e1b9c512a7aa2577",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "252ee08c0d5f3876"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:dietary fiber",
+      "=",
+      "dietary fiber"
+     ]
+    ]
+   },
+   "dst": "8977ef4b8517936b",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "252ee08c0d5f3876"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:low sugar",
+      "=",
+      "low sugar"
+     ]
+    ]
+   },
+   "dst": "0671e049fbda5c48",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "252ee08c0d5f3876"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:high protein",
+      "=",
+      "high protein"
+     ]
+    ]
+   },
+   "dst": "a381b9a72687d1f6",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "252ee08c0d5f3876"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "price_upper",
+      "<=",
+      40,
+      20
+     ]
+    ]
+   },
+   "dst": "b965401fe11713fa",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "252ee08c0d5f3876"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "price_upper",
+      "<=",
+      40,
+      30
+     ]
+    ]
+   },
+   "dst": "3afa82882e8bb29e",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "252ee08c0d5f3876"
+  }
+ ],
+ "env_id": "webshop_634c8d6659fb7135",
+ "env_spec": {
+  "cluster": "puffed snacks",
+  "env_id": "webshop_634c8d6659fb7135",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B09M968ZCM",
+   "cluster": "puffed snacks",
+   "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+   "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars"
+  },
+  "bound_slots": [
+   "attr:high protein",
+   "attr:low carb",
+   "attr:low sugar",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:high protein",
+    "=",
+    "high protein"
+   ],
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "attr:low sugar",
+    "=",
+    "low sugar"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "ground_truth": {
+   "hash": "fb124530b817f8c6ac32c8579763d015",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B07FFB1KR4\",[]]",
+    "[\"B097QC1R46\",[]]",
+    "[\"B09M968ZCM\",[]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "252ee08c0d5f3876",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "puffed snacks",
+   "goal": {
+    "asin": "B09M968ZCM",
+    "attributes": [
+     "high protein",
+     "low sugar",
+     "low carb"
+    ],
+    "category": "",
+    "goal_options": [],
+    "name": "Built Bar 12 Pack High Protein and Energy Bars - Low Carb, Low Calorie, Low Sugar - Covered in 100% Real Chocolate - Delicious, Healthy Snack - Gluten Free (Coconut Puff)",
+    "price_upper": 40,
+    "product_category": "Health & Household › Diet & Sports Nutrition › Nutrition Bars & Drinks › Nutrition Bars › Protein Bars",
+    "query": "puffed snacks"
+   }
+  },
+  "source_record": "13def8e908d11d6e",
+  "unbound_slots": [
+   "attr:dietary fiber",
+   "attr:high protein",
+   "attr:low sugar",
+   "attr:non gmo",
+   "price_upper"
+  ]
+ },
+ "tree_id": "ab6ea16fe365601d"
+}

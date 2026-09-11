@@ -1,0 +1,176 @@
+{
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "fidelity_notes": [],
+ "goal_idx": 14,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "378e737758ee2fd9d73092ce154074ee",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B003DNL9XI\",[[\"flavor name\",\"raspberry ice\"]]]",
+   "[\"B004M8TKA2\",[[\"flavor name\",\"raspberry\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:caffeine free",
+    "=",
+    "caffeine free"
+   ],
+   [
+    "option:0",
+    "=",
+    "raspberry ice"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "cfccaba15ac2f0b3"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:caffeine free",
+     "=",
+     "caffeine free"
+    ],
+    [
+     "option:0",
+     "=",
+     "blackberry ice"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:caffeine free",
+   "price_upper"
+  ],
+  "spec_id": "9ce22f1b628a6aef",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "option:0",
+    "raspberry ice",
+    "blackberry ice"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a caffeine free blackberry ice beverage, and my budget for it is 60.",
+ "render_attempts": 1,
+ "sample_id": "06fa3f6da51fe15d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2398dab1f90987e2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "38b64bfd9d3bf2d4"
+  },
+  {
+   "announcement": "Also, it needs to be gluten free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "91eb23f820f2ce8a"
+  },
+  {
+   "announcement": "Also, it needs to be drink mix.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ec5a60e5c8d12100"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "594fd1f2b914436e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c8432e0bba46470c"
+  },
+  {
+   "announcement": "Actually, make it 0.24 ounce (pack of 30) instead of raspberry ice.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0431dfb89d394f4a"
+  },
+  {
+   "announcement": "Actually, make it .4 pack - 25.4 fl oz (pack of 1) instead of raspberry ice.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cbbe2c7daf6cee44"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 7,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a caffeine free raspberry ice flavored drink mix.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "5b368617daf53a03",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

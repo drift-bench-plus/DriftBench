@@ -1,0 +1,192 @@
+{
+ "adapter": "webshop",
+ "cluster": "bags & cases",
+ "fidelity_notes": [],
+ "goal_idx": 337,
+ "ground_truth": {
+  "cardinality": 24,
+  "hash": "deacd35f4dfa55a0545b37e401bce1b8",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07F45NBF2\",[[\"color\",\"mermaid scale 1\"]]]",
+   "[\"B07GSXR6FM\",[[\"color\",\"c\"]]]",
+   "[\"B07P5WR8X6\",[[\"color\",\"c\"]]]",
+   "[\"B07X6NTRY1\",[[\"color\",\"mermaid scale\"]]]",
+   "[\"B07ZF67KZD\",[[\"color\",\"mermaid\"]]]",
+   "[\"B07ZVQ4P6N\",[[\"color\",\"c\"]]]",
+   "[\"B081N41FZ7\",[[\"color\",\"c\"]]]",
+   "[\"B082FVNHWH\",[[\"color\",\"mermaid\"]]]",
+   "[\"B082YMS9LN\",[[\"color\",\"c mermaid scales\"]]]",
+   "[\"B084GQVTL8\",[[\"color\",\"c\"]]]",
+   "[\"B086MH7GQK\",[[\"style\",\"mermaid b\"]]]",
+   "[\"B08P1JPFWD\",[[\"color\",\"c\"]]]",
+   "[\"B08X27J1KL\",[[\"color\",\"mermaid scale\"]]]",
+   "[\"B08Y925DDH\",[[\"color\",\"mermaid scales\"]]]",
+   "[\"B094NTV8G4\",[[\"color\",\"mermaid\"]]]",
+   "[\"B095BKFRM2\",[[\"color\",\"mermaid\"]]]",
+   "[\"B095YPPQTQ\",[[\"color\",\"c\"]]]",
+   "[\"B09836Y43J\",[[\"color\",\"c\"]]]",
+   "[\"B0991Q1STV\",[[\"color\",\"mermaid fish scales\"]]]",
+   "[\"B09BQ62W4S\",[[\"color\",\"mermaid scales\"]]]",
+   "[\"B09C4T3XBB\",[[\"color\",\"mermaid scales\"]]]",
+   "[\"B09C5D96FT\",[[\"color\",\"mermaid shining scales\"]]]",
+   "[\"B09CP91H6J\",[[\"color\",\"mermaid\"]]]",
+   "[\"B09MCF64RM\",[[\"color\",\"c\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "option:0",
+    "=",
+    "c mermaid scales"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "c123b853f0cb44fe"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high quality",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for high quality mermaid scales bags & cases that are under $20, and make sure they have that one too.",
+ "render_attempts": 1,
+ "sample_id": "0f2cdcda112bab1c",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bags & cases instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5022045ab82ac014"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bags & cases instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "ddf874ccce3c6424"
+  },
+  {
+   "announcement": "Also, it needs to be hair dryer.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2847491f9874db48"
+  },
+  {
+   "announcement": "Also, it needs to be heavy duty.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c9f5a59555916f6e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "38c3096be757f540"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e1eb7c7d15d9f991"
+  },
+  {
+   "announcement": "Actually, make it #flower instead of c mermaid scales.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "121458914261deaf"
+  },
+  {
+   "announcement": "Actually, make it #flower_1 instead of c mermaid scales.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8d07ed51a46b9816"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 1420,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 24,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a high quality cosmetic bag. also the c mermaid scales color is what i prefer.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "a32a6803f92d78b8",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

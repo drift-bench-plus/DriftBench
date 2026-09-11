@@ -1,0 +1,377 @@
+{
+ "sample_id": "b4d0b29e396e3af9",
+ "tree_id": "0ff2f728e25e19b5",
+ "adapter": "webshop",
+ "cluster": "men's sandals",
+ "goal_idx": 106,
+ "split": "test",
+ "source_instruction": "i m looking for a 8 no. vinyl acetate man's sandals",
+ "query": "Hey, can you help me look through these men's sandals? I need a pair made with vinyl acrylate, size 8, and I don\u2019t want to go over that one.",
+ "strategy_ids": [
+  "factual_error",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+referential_ambiguity",
+  "family": "expression+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark"
+  ],
+  "components": [
+   "factual_error",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "factual_error": "attr:vinyl acetate"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:vinyl acetate",
+    "vinyl acetate",
+    "vinyl acrylate"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:vinyl acetate",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:vinyl acetate",
+     "=",
+     "vinyl acrylate"
+    ],
+    [
+     "option:0",
+     "=",
+     "8"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "aeb6087824e0b46c"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 178,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 178,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 248,
+    "true_card": 178,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "309bb9a748809fa2",
+  "conditions": [
+   [
+    "attr:vinyl acetate",
+    "=",
+    "vinyl acetate"
+   ],
+   [
+    "option:0",
+    "=",
+    "8"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:vinyl acetate",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 178,
+  "value": [
+   "[\"B005GP9ECE\",[[\"size\",\"8\"]]]",
+   "[\"B005HO2DL8\",[[\"size\",\"8\"]]]",
+   "[\"B00EI8J240\",[[\"size\",\"8\"]]]",
+   "[\"B011V56KTC\",[[\"size\",\"8\"]]]",
+   "[\"B01FRNVFI0\",[[\"size\",\"8\"]]]",
+   "[\"B01HC4WAPY\",[[\"size\",\"9 women | 8 men\"]]]",
+   "[\"B0714M2F8F\",[[\"size\",\"8\"]]]",
+   "[\"B0721PB9NR\",[[\"size\",\"8\"]]]",
+   "[\"B078WTN6CZ\",[[\"size\",\"8\"]]]",
+   "[\"B079ZP8WTF\",[[\"size\",\"8-9\"]]]",
+   "[\"B07B9VTKW2\",[[\"size\",\"8\"]]]",
+   "[\"B07C8983D3\",[[\"size\",\"8\"]]]",
+   "[\"B07CMZSM65\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B07CN8XSKK\",[[\"size\",\"8\"]]]",
+   "[\"B07FKNRRHJ\",[[\"size\",\"8\"]]]",
+   "[\"B07FKSGDN3\",[[\"size\",\"8\"]]]",
+   "[\"B07G2JKM1F\",[[\"size\",\"8\"]]]",
+   "[\"B07KBGRKYB\",[[\"size\",\"6 women | 8 men\"]]]",
+   "[\"B07P5FHBC1\",[[\"size\",\"s7 | 8\"]]]",
+   "[\"B07PHCHX7L\",[[\"size\",\"8\"]]]",
+   "[\"B07PL1B72D\",[[\"size\",\"8\"]]]",
+   "[\"B07Q42GMG9\",[[\"size\",\"8\"]]]",
+   "[\"B07QCWQBQ1\",[[\"size\",\"8\"]]]",
+   "[\"B07QQYWBHV\",[[\"size\",\"8.5\"]]]",
+   "[\"B07R3KJZJL\",[[\"size\",\"8\"]]]",
+   "[\"B07R5WN5J7\",[[\"size\",\"8\"]]]",
+   "[\"B07RD6D85J\",[[\"size\",\"8\"]]]",
+   "[\"B07S6N9BKN\",[[\"size\",\"8\"]]]",
+   "[\"B07S854DWY\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B07S975Y8V\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B07SH6BJZL\",[[\"size\",\"8\"]]]",
+   "[\"B07SJHZYCR\",[[\"size\",\"8\"]]]",
+   "[\"B07SL975BQ\",[[\"size\",\"8\"]]]",
+   "[\"B07SS4Z1H4\",[[\"size\",\"8\"]]]",
+   "[\"B07T2CQKBL\",[[\"size\",\"8\"]]]",
+   "[\"B07T9CBC67\",[[\"size\",\"8\"]]]",
+   "[\"B07TJJK69Q\",[[\"size\",\"8\"]]]",
+   "[\"B07TKMCDG5\",[[\"size\",\"8\"]]]",
+   "[\"B07V1TZXS8\",[[\"size\",\"8\"]]]",
+   "[\"B07VC2B67T\",[[\"size\",\"us 8  |  asian 41\"]]]",
+   "[\"B07VV5W5RC\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B07VZ7G7RF\",[[\"size\",\"8\"]]]",
+   "[\"B07WG38993\",[[\"size\",\"8\"]]]",
+   "[\"B07WNPT6ZD\",[[\"size\",\"8\"]]]",
+   "[\"B07WR36V9Z\",[[\"size\",\"8\"]]]",
+   "[\"B07WVPLGZ6\",[[\"size\",\"8\"]]]",
+   "[\"B07X9DY2G6\",[[\"size\",\"8\"]]]",
+   "[\"B07XGZV8KK\",[[\"size\",\"8\"]]]",
+   "[\"B07ZH95LHK\",[[\"size\",\"8\"]]]",
+   "[\"B07ZTZWC18\",[[\"size\",\"8 women | 7 men\"]]]",
+   "[\"B0811LMBX9\",[[\"size\",\"8\"]]]",
+   "[\"B081NY7FLK\",[[\"size\",\"8.5 wide\"]]]",
+   "[\"B082BRGJK4\",[[\"size\",\"8.5 women | 8.5 men\"]]]",
+   "[\"B082M1LBQF\",[[\"size\",\"8\"]]]",
+   "[\"B082SG4N84\",[[\"size\",\"8\"]]]",
+   "[\"B0836QF5CS\",[[\"size\",\"7.5-8 women | 4.5-5 men\"]]]",
+   "[\"B0842WBN99\",[[\"size\",\"8\"]]]",
+   "[\"B084KQ8T81\",[[\"size\",\"8\"]]]",
+   "[\"B084R9KM7B\",[[\"size\",\"8\"]]]",
+   "[\"B0862GTP27\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B0878S99D8\",[[\"size\",\"8-9 women | 6.5-7.5 men\"]]]",
+   "[\"B087Z5Q711\",[[\"size\",\"8\"]]]",
+   "[\"B087ZCJ9RY\",[[\"size\",\"8\"]]]",
+   "[\"B088BFBQPC\",[[\"size\",\"8\"]]]",
+   "[\"B088J7NQKG\",[[\"size\",\"8-8.5 women | 6-6.5 men\"]]]",
+   "[\"B089KG4N58\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B089KH4FB5\",[[\"size\",\"8\"]]]",
+   "[\"B08B3YP712\",[[\"size\",\"9.5 wide women | 8 men\"]]]",
+   "[\"B08B6WNZ9N\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B08BR56QMV\",[[\"size\",\"8\"]]]",
+   "[\"B08BZRC9VH\",[[\"size\",\"8\"]]]",
+   "[\"B08BZT1Y9L\",[[\"size\",\"8\"]]]",
+   "[\"B08C2FPYYF\",[[\"size\",\"8\"]]]",
+   "[\"B08C2LDPXT\",[[\"size\",\"8\"]]]",
+   "[\"B08C2QS2G9\",[[\"size\",\"8\"]]]",
+   "[\"B08CNNC8S3\",[[\"size\",\"8\"]]]",
+   "[\"B08D37JXJW\",[[\"size\",\"8\"]]]",
+   "[\"B08DR4G9CG\",[[\"size\",\"8\"]]]",
+   "[\"B08F8HQMBJ\",[[\"size\",\"8\"]]]",
+   "[\"B08JFC6P9M\",[[\"size\",\"8\"]]]",
+   "[\"B08JVB1MB8\",[[\"size\",\"8\"]]]",
+   "[\"B08KGW1FJ6\",[[\"size\",\"8\"]]]",
+   "[\"B08KL1XRSJ\",[[\"size\",\"8\"]]]",
+   "[\"B08LBPZWNW\",[[\"size\",\"9-10 women | 7-8 men\"]]]",
+   "[\"B08M36LH1B\",[[\"size\",\"8\"]]]",
+   "[\"B08MV7QD21\",[[\"size\",\"8\"]]]",
+   "[\"B08NVNNC1F\",[[\"size\",\"8\"]]]",
+   "[\"B08NVQX89H\",[[\"size\",\"8\"]]]",
+   "[\"B08P6WWRP3\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B08QC3F3P4\",[[\"size\",\"8\"]]]",
+   "[\"B08QDPP16F\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B08QGMPSWP\",[[\"size\",\"8\"]]]",
+   "[\"B08QJJ53D4\",[[\"size\",\"8\"]]]",
+   "[\"B08R6K1VF6\",[[\"size\",\"8\"]]]",
+   "[\"B08RCKKJCV\",[[\"size\",\"8\"]]]",
+   "[\"B08RSJVFLG\",[[\"size\",\"8\"]]]",
+   "[\"B08SJHBFM4\",[[\"size\",\"8\"]]]",
+   "[\"B08T24TZTY\",[[\"size\",\"8\"]]]",
+   "[\"B08T6GQ4JP\",[[\"size\",\"8.5 women | 6.5 men\"]]]",
+   "[\"B08TDPRLB6\",[[\"size\",\"8\"]]]",
+   "[\"B08TDV859V\",[[\"size\",\"8\"]]]",
+   "[\"B08TDWB65B\",[[\"size\",\"8\"]]]",
+   "[\"B08TDWDYB6\",[[\"size\",\"8\"]]]",
+   "[\"B08TDZ9L84\",[[\"size\",\"8\"]]]",
+   "[\"B08TF527JH\",[[\"size\",\"8\"]]]",
+   "[\"B08TF7BT5R\",[[\"size\",\"8\"]]]",
+   "[\"B08TFCLHQW\",[[\"size\",\"8\"]]]",
+   "[\"B08TQQ2H83\",[[\"size\",\"8 women | 8 men\"]]]",
+   "[\"B08TR5SY7S\",[[\"size\",\"8 narrow women | 8 narrow men\"]]]",
+   "[\"B08V8MW14L\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B08VDKS5SS\",[[\"size\",\"8-8.5 women | 6-6.5 men\"]]]",
+   "[\"B08XPBW9ZK\",[[\"size\",\"8\"]]]",
+   "[\"B08YCX9G97\",[[\"size\",\"8\"]]]",
+   "[\"B08YMHL5GK\",[[\"size\",\"7.5-8 women | 5.5-6 men\"]]]",
+   "[\"B08Z396WH4\",[[\"size\",\"8\"]]]",
+   "[\"B08Z3SXBR4\",[[\"size\",\"8\"]]]",
+   "[\"B0912LHTDV\",[[\"size\",\"8\"]]]",
+   "[\"B0912PX4ZH\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B0916KV3SM\",[[\"size\",\"8\"]]]",
+   "[\"B091L4HBBL\",[[\"size\",\"7-8\"]]]",
+   "[\"B091T43MFG\",[[\"size\",\"8\"]]]",
+   "[\"B0928BLLLY\",[[\"size\",\"8\"]]]",
+   "[\"B0928N4MSX\",[[\"size\",\"8-9 women | 6.5-7.5 men\"]]]",
+   "[\"B0928YPH7G\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B092PWHM2X\",[[\"size\",\"8 women | 7 men\"]]]",
+   "[\"B09362GDGX\",[[\"size\",\"8-8.5 women | 6-6.5 men\"]]]",
+   "[\"B093K844G1\",[[\"size\",\"8.5\"]]]",
+   "[\"B093TN2CM4\",[[\"size\",\"8\"]]]",
+   "[\"B093YFD6SZ\",[[\"size\",\"8\"]]]",
+   "[\"B0946JBLC9\",[[\"size\",\"8\"]]]",
+   "[\"B094RC6WG1\",[[\"size\",\"7.5-8 women | 6.5-7 men\"]]]",
+   "[\"B094XCVZYF\",[[\"size\",\"8\"]]]",
+   "[\"B094XXN47W\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B095P68DGP\",[[\"size\",\"8\"]]]",
+   "[\"B095WLP29B\",[[\"size\",\"8\"]]]",
+   "[\"B096DN5PNY\",[[\"size\",\"8\"]]]",
+   "[\"B096KSWMGQ\",[[\"size\",\"8\"]]]",
+   "[\"B096XH6ZVD\",[[\"size\",\"7.5-8.5 women | 6.5-7.5 men\"]]]",
+   "[\"B096ZS3934\",[[\"size\",\"6 women | 8 men\"]]]",
+   "[\"B097KK44VJ\",[[\"size\",\"8\"]]]",
+   "[\"B0982JBB12\",[[\"size\",\"8\"]]]",
+   "[\"B098LXKC9W\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B099MSFZCZ\",[[\"size\",\"8-8.5 women | 6-6.5 men\"]]]",
+   "[\"B099NW4Z5X\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B099X485FS\",[[\"size\",\"8.5\"]]]",
+   "[\"B099YBGTL6\",[[\"size\",\"8\"]]]",
+   "[\"B099ZFDXB4\",[[\"size\",\"8\"]]]",
+   "[\"B09B7XC1Z3\",[[\"size\",\"7-8 women | 6.5-7 men\"]]]",
+   "[\"B09B7Z2D4N\",[[\"size\",\"8\"]]]",
+   "[\"B09BHZTSWD\",[[\"size\",\"7.5-8 women | 6.5-7 men\"]]]",
+   "[\"B09BX6P4B5\",[[\"size\",\"8\"]]]",
+   "[\"B09BYZKWGF\",[[\"size\",\"8\"]]]",
+   "[\"B09CT1VNPN\",[[\"size\",\"8.5 women | 7 men\"]]]",
+   "[\"B09CZG528W\",[[\"size\",\"8\"]]]",
+   "[\"B09F8NCPH7\",[[\"size\",\"8\"]]]",
+   "[\"B09FSLPV1H\",[[\"size\",\"7-8 women | 6-7 men\"]]]",
+   "[\"B09GYLT9CJ\",[[\"size\",\"8\"]]]",
+   "[\"B09HL4Z44T\",[[\"size\",\"8 women | 6 men\"]]]",
+   "[\"B09JW7XJVL\",[[\"size\",\"8.5\"]]]",
+   "[\"B09JWYQNPN\",[[\"size\",\"8\"]]]",
+   "[\"B09JX18S3J\",[[\"size\",\"8\"]]]",
+   "[\"B09KYFZBTD\",[[\"size\",\"8\"]]]",
+   "[\"B09KYHHKLV\",[[\"size\",\"8\"]]]",
+   "[\"B09L7JCNDY\",[[\"size\",\"8\"]]]",
+   "[\"B09LQ6RZKY\",[[\"size\",\"7.5-8.5 women | 6-7 men\"]]]",
+   "[\"B09MLTXZKP\",[[\"size\",\"7-8 women | 6-7 men\"]]]",
+   "[\"B09NKKCR92\",[[\"size\",\"8\"]]]",
+   "[\"B09NRCGDWH\",[[\"size\",\"8-8.5 women | 6.5-7 men\"]]]",
+   "[\"B09P4DTXXR\",[[\"size\",\"8\"]]]",
+   "[\"B09PDG5WRK\",[[\"size\",\"7.5-8 women | 5.5-6 men\"]]]",
+   "[\"B09PHM3BRF\",[[\"size\",\"8-9\"]]]",
+   "[\"B09Q64JNKR\",[[\"size\",\"7-8 women | 6-6.5 men\"]]]",
+   "[\"B09Q8MNWMN\",[[\"size\",\"8\"]]]",
+   "[\"B09Q8S12JB\",[[\"size\",\"8.5\"]]]",
+   "[\"B09QGFVQ6Z\",[[\"size\",\"8\"]]]",
+   "[\"B09QKBLH3Y\",[[\"size\",\"8\"]]]",
+   "[\"B09QPWSXTN\",[[\"size\",\"8\"]]]",
+   "[\"B09QXB4KKS\",[[\"size\",\"8.5 wide\"]]]"
+  ],
+  "hash": "0a95620e50a416534233741f3458ea1f"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "8c9a80f8d507cbca",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's sandals instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "9f0661ffef164eff",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's sandals instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "17362f042edfc3a5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be comfortable fit."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "5528837bf39f51ec",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be memory foam."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "17eb94ff3e486021",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4f6445d26771cacc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "2e57db652fdb9c45",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1-1.5 big kid instead of 8."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c6ba928d150824a9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 narrow instead of 8."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

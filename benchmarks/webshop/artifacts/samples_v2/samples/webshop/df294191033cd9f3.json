@@ -1,0 +1,180 @@
+{
+ "adapter": "webshop",
+ "cluster": "face makeup",
+ "fidelity_notes": [],
+ "goal_idx": 65,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "3b80347334716596798ded5c52bfa14f",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B073Q4RHF9\",[[\"color\",\"sassy\"]]]",
+   "[\"B073WGFRM1\",[[\"color\",\"sassy\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:dark circles",
+    "=",
+    "dark circles"
+   ],
+   [
+    "option:0",
+    "=",
+    "sassy"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "e545ba2f106aa687"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dark circles",
+     "=",
+     "sassy"
+    ],
+    [
+     "option:0",
+     "=",
+     "sassy"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:dark circles",
+     "dark circles"
+    ],
+    "alternative": [
+     "attr:dark circles",
+     "sassy"
+    ],
+    "condition": null,
+    "text": "Since you probably don't have face makeup products that specifically target dark circles"
+   }
+  ],
+  "retained": [
+   "attr:dark circles",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "f4aa5f5685104bb8",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don't have face makeup products that specifically target dark circles, could you find me a sassy one that works as an under-eye pick instead, with a price limit of 40?",
+ "render_attempts": 1,
+ "sample_id": "df294191033cd9f3",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the face makeup instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0199d13ad410cb7d"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the face makeup instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a8e44c73234cf3cc"
+  },
+  {
+   "announcement": "Also, it needs to be anti aging.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2eb7329cd5375a88"
+  },
+  {
+   "announcement": "Also, it needs to be non toxic.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cd278cbd6773c5a3"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "56c6472de033f744"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d6dba3de9ecbca22"
+  },
+  {
+   "announcement": "Actually, make it #01 instead of sassy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "039b3ef8588cccad"
+  },
+  {
+   "announcement": "Actually, make it (03 buff beige) instead of sassy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c64d6894f5bb4b29"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a concealer for dark circles that is in the color sassy",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "b7f56949ca18947a",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

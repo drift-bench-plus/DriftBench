@@ -1,0 +1,205 @@
+{
+ "sample_id": "ee4605c284f60972",
+ "tree_id": "7369755e5ef71902",
+ "adapter": "webshop",
+ "cluster": "iphone accessories",
+ "goal_idx": 246,
+ "split": "test",
+ "source_instruction": "i need a  grey protective airpods 3  case cover which is compatible with apple.",
+ "query": "I spent my whole walk over here thinking about how my neighbor\u2019s tabby cat keeps sneaking onto my fire escape to knock over my succulent pots, I tried putting down citrus peels to deter it yesterday but it just batted those right onto the floor too, and I still need to pick up more potting soil this weekend to repot the string of pearls that got damaged last time. Oh right, I\u2019m looking for a d-grey full body skin wrap that\u2019s compatible with Apple iPhones, and I can\u2019t spend more than $20 on it.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "factual_error"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+factual_error",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:case cover"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:case cover",
+    "case cover",
+    "full body skin wrap"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent my whole walk over here thinking about how my neighbor\u2019s tabby cat keeps sneaking onto my fire escape to knock over my succulent pots, I tried putting down citrus peels to deter it yesterday but it just batted those right onto the floor too, and I still need to pick up more potting soil this weekend to repot the string of pearls that got damaged last time.",
+  "retained": [
+   "attr:compatible apple",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:case cover"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:case cover",
+     "=",
+     "full body skin wrap"
+    ],
+    [
+     "attr:compatible apple",
+     "=",
+     "compatible apple"
+    ],
+    [
+     "option:0",
+     "=",
+     "d-grey"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "1c90a9eba7e083b3"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 5,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 5,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "b28b8518a196ebfb",
+  "conditions": [
+   [
+    "attr:case cover",
+    "=",
+    "case cover"
+   ],
+   [
+    "attr:compatible apple",
+    "=",
+    "compatible apple"
+   ],
+   [
+    "option:0",
+    "=",
+    "d-grey"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:case cover"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 5,
+  "value": [
+   "[\"B081ZJKF2F\",[[\"color\",\"c-grey\"]]]",
+   "[\"B08BP6P1TM\",[[\"color\",\"grey | white marble\"]]]",
+   "[\"B08GP9KQ2L\",[[\"color\",\"grey | rose\"]]]",
+   "[\"B09KZ4FFDP\",[[\"color\",\"d-grey\"]]]",
+   "[\"B09KZNFD8T\",[[\"color\",\"d-grey\"]]]"
+  ],
+  "hash": "9f922a65c847bce1a6968376521b3107"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "14b2abfb13d4ee17",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the iphone accessories instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e2332715c61df1bb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the iphone accessories instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "1c3a64b5cea3865b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dust proof."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b33efdf173634046",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy carry."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "126d738cf41914b3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "76eba0de596a9cfd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "99b1f35e4ede5728",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1. black instead of d-grey."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "aeffce7ddd6eb7bd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 3. black+multicolor ties instead of d-grey."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

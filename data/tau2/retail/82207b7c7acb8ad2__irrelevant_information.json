@@ -1,0 +1,210 @@
+{
+ "sample_id": "82207b7c7acb8ad2__irrelevant_information",
+ "domain": "retail",
+ "tree_id": "82207b7c7acb8ad2",
+ "query": "Hi there, I just bought a waterproof phone pouch for my upcoming beach trip, and I need to make a few updates: first, please update my saved user address under user ID mei_patel_7272 to 445 Maple Drive, Suite 394, Fort Worth, TX 76165, USA. Then, for pending order #W9583042 and pending order #W4082615, change their shipping addresses to that same 445 Maple Drive, Suite 394, Fort Worth, TX 76165, USA. Finally, for order #W4082615, swap item 9779102705 for item 1096508426 and use paypal_4768213 as the payment method for the adjustment.",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "irrelevant_information",
+  "family": "parameter",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "I just bought a waterproof phone pouch for my upcoming beach trip",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_pending_order_address:address1",
+   "arg:1:modify_pending_order_address:address2",
+   "arg:1:modify_pending_order_address:city",
+   "arg:1:modify_pending_order_address:country",
+   "arg:1:modify_pending_order_address:order_id",
+   "arg:1:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_address:zip",
+   "arg:2:modify_user_address:address1",
+   "arg:2:modify_user_address:address2",
+   "arg:2:modify_user_address:city",
+   "arg:2:modify_user_address:country",
+   "arg:2:modify_user_address:state",
+   "arg:2:modify_user_address:user_id",
+   "arg:2:modify_user_address:zip",
+   "arg:3:modify_pending_order_items:item_ids",
+   "arg:3:modify_pending_order_items:new_item_ids",
+   "arg:3:modify_pending_order_items:order_id",
+   "arg:3:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "0ed793ed0a85c866"
+ },
+ "signature": {
+  "verdict": "ok_pragmatic_extra",
+  "executable": false,
+  "readings": 0,
+  "note": "extra detail is not expressible as a condition in this domain; string checks only"
+ },
+ "executable_admission": false,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"445 Maple Drive\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 394\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"Fort Worth\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W9583042\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"76165\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address1",
+    "=",
+    "\"445 Maple Drive\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 394\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:city",
+    "=",
+    "\"Fort Worth\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "=",
+    "\"#W4082615\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:zip",
+    "=",
+    "\"76165\""
+   ],
+   [
+    "arg:2:modify_user_address:address1",
+    "=",
+    "\"445 Maple Drive\""
+   ],
+   [
+    "arg:2:modify_user_address:address2",
+    "=",
+    "\"Suite 394\""
+   ],
+   [
+    "arg:2:modify_user_address:city",
+    "=",
+    "\"Fort Worth\""
+   ],
+   [
+    "arg:2:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:2:modify_user_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:2:modify_user_address:user_id",
+    "=",
+    "\"mei_patel_7272\""
+   ],
+   [
+    "arg:2:modify_user_address:zip",
+    "=",
+    "\"76165\""
+   ],
+   [
+    "arg:3:modify_pending_order_items:item_ids",
+    "=",
+    "[\"9779102705\"]"
+   ],
+   [
+    "arg:3:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"1096508426\"]"
+   ],
+   [
+    "arg:3:modify_pending_order_items:order_id",
+    "=",
+    "\"#W4082615\""
+   ],
+   [
+    "arg:3:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_4768213\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

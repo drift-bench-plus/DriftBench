@@ -1,0 +1,33 @@
+# tau2 generation config.
+#
+# RECOVERED 2026-08-19, not guessed. Every tau2 tree JSON stores the config it was built
+# under (`Tree.build(config=...)`), and all 483 stored graphs -- retail, airline and
+# telecom alike -- agree on exactly these six values. So this half is EXACT: regenerating
+# under it reproduces the stored ids.
+#
+# Note two values differ from the webshop/ sibling and must not be "corrected":
+#   seed: 7                    (perturbation uses 42)
+#   require_full_quota: false  (perturbation uses true)
+# The second is why tau2 graphs may be missing a whole operator category.
+
+seed: 7
+depth: 1
+balanced_branching: true
+require_full_quota: false
+branching: 8
+min_gt_moved_edges: 1
+
+# Scope (ruling 2026-08-19): retail and airline. Telecom is registered and has stored
+# graphs, but is out of scope -- its faults are observable, so axis B had no effect.
+tau2_retail: {}          # empty => adapter falls back to $TAU2_DATA/domains/retail/
+tau2_airline: {}         # empty => adapter falls back to $TAU2_DATA/domains/airline/
+
+paths:
+  artifacts: artifacts
+  reports: reports
+  cache: artifacts/cache
+  webshop_repo: ../../../external/webshop/WebShop  # unused for tau2 domains
+  webshop_derived: ../../../external/webshop  # unused for tau2 domains
+  agentbench_repo: ../../../external/AgentBench  # unused for tau2 domains
+
+workers: 4

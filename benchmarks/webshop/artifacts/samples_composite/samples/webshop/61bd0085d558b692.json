@@ -1,0 +1,291 @@
+{
+ "sample_id": "61bd0085d558b692",
+ "tree_id": "9cfee87f9d3a9079",
+ "adapter": "webshop",
+ "cluster": "women's shorts",
+ "goal_idx": 189,
+ "split": "test",
+ "source_instruction": "i'm looking for high waisted denim shorts distressed jeans for women.",
+ "query": "I spent my entire Saturday morning helping my neighbor rescue her tiny tabby cat that got wedged in the slats of her old backyard fence, and by the time we got him out, he was purring so loud I could feel it through my work gloves, and she pressed a jar of her homemade wild blackberry jam into my hands as a thank you. I walked home with the jam tucked under my arm, stopped to watch a group of kids chase a monarch butterfly through the overgrown empty lot at the end of the block, and realized I\u2019d forgotten to grab my favorite iced lavender latte from the corner coffee shop on my way back. I sat on my front porch for a bit after that, twisting open the jam jar to sneak a tiny taste with my finger, and watched a pair of robins hop across my lawn tugging worms out of the damp grass, and that\u2019s when I remembered I needed to get my errand done before the afternoon thunderstorms rolled in. I\u2019m browsing the women\u2019s shorts section looking for a good pair to wear to weekend farmers markets and casual walks, y\u2019know? I need them to have a button closure and be slim fit, since I hate when baggy shorts bunch up when I\u2019m moving around. Oh, and they absolutely have to have a built-in reinforced loop for clipping on a reusable water bottle carabiner, that\u2019s non-negotiable for me. I don\u2019t want to spend a crazy amount, just a reasonable price that feels like a solid deal, nothing over what makes sense for everyday shorts. Can you pull up options that check all those boxes for me?",
+ "strategy_ids": [
+  "insufficient_information",
+  "irrelevant_information",
+  "vagueness_subjectivity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+irrelevant_information+vagueness_subjectivity+contextual_irrelevance",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "irrelevant_information",
+   "vagueness_subjectivity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "they absolutely have to have a built-in reinforced loop for clipping on a reusable water bottle carabiner, that\u2019s non-negotiable for me",
+    "condition": [
+     "attr:feature",
+     "=",
+     "built-in reinforced loop for clipping on a reusable water bottle carabiner"
+    ]
+   },
+   {
+    "text": "looking for a good pair to wear to weekend farmers markets and casual walks",
+    "condition": [
+     "attr:usage scenario",
+     "=",
+     "weekend farmers markets and casual walks"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent my entire Saturday morning helping my neighbor rescue her tiny tabby cat that got wedged in the slats of her old backyard fence, and by the time we got him out, he was purring so loud I could feel it through my work gloves, and she pressed a jar of her homemade wild blackberry jam into my hands as a thank you. I walked home with the jam tucked under my arm, stopped to watch a group of kids chase a monarch butterfly through the overgrown empty lot at the end of the block, and realized I\u2019d forgotten to grab my favorite iced lavender latte from the corner coffee shop on my way back. I sat on my front porch for a bit after that, twisting open the jam jar to sneak a tiny taste with my finger, and watched a pair of robins hop across my lawn tugging worms out of the damp grass, and that\u2019s when I remembered I needed to get my errand done before the afternoon thunderstorms rolled in.",
+  "retained": [
+   "attr:button closure",
+   "attr:slim fit"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:button closure",
+     "=",
+     "button closure"
+    ],
+    [
+     "attr:slim fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "attr:feature",
+     "=",
+     "built-in reinforced loop for clipping on a reusable water bottle carabiner"
+    ],
+    [
+     "attr:usage scenario",
+     "=",
+     "weekend farmers markets and casual walks"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "395739432a9d5b8c"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 50,
+  "lit_card": 0,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 56,
+    "true_card": 50,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 50,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 65,
+    "true_card": 50,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "aa65457558c46e24",
+  "conditions": [
+   [
+    "attr:button closure",
+    "=",
+    "button closure"
+   ],
+   [
+    "attr:slim fit",
+    "=",
+    "slim fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 50,
+  "value": [
+   "[\"B072BYKXHD\",[[\"size\",\"large\"]]]",
+   "[\"B07BHG46RP\",[[\"size\",\"large\"]]]",
+   "[\"B07KL4BMJG\",[[\"size\",\"large\"]]]",
+   "[\"B07PYTZ7Z5\",[[\"size\",\"large\"]]]",
+   "[\"B07PYZ9RN7\",[[\"size\",\"large\"]]]",
+   "[\"B07R8KC9MM\",[[\"size\",\"large\"]]]",
+   "[\"B07RPNJXQQ\",[[\"size\",\"large\"]]]",
+   "[\"B082TKHMVN\",[[\"size\",\"large\"]]]",
+   "[\"B086JQZTJR\",[[\"size\",\"large\"]]]",
+   "[\"B089DVSFXZ\",[[\"size\",\"x-large\"]]]",
+   "[\"B08BBY1QSC\",[[\"size\",\"large\"]]]",
+   "[\"B08BR2QXF4\",[[\"size\",\"large\"]]]",
+   "[\"B08MJW1K9B\",[[\"size\",\"large\"]]]",
+   "[\"B08Q77RYN8\",[[\"size\",\"large\"]]]",
+   "[\"B08RB6R2Q9\",[[\"size\",\"large\"]]]",
+   "[\"B08SBM9636\",[[\"size\",\"large\"]]]",
+   "[\"B08SBMGKQD\",[[\"size\",\"large\"]]]",
+   "[\"B08SJ7C9VW\",[[\"size\",\"large\"]]]",
+   "[\"B08XMQXW7K\",[[\"size\",\"x-large\"]]]",
+   "[\"B08ZXMF6HN\",[[\"size\",\"xx-large\"]]]",
+   "[\"B091CTCMFQ\",[[\"size\",\"large\"]]]",
+   "[\"B091FGZY28\",[[\"size\",\"large\"]]]",
+   "[\"B091L8MDZZ\",[[\"size\",\"large\"]]]",
+   "[\"B0925SJJD3\",[[\"size\",\"large\"]]]",
+   "[\"B093H9TCF8\",[[\"size\",\"large\"]]]",
+   "[\"B096LQSTVM\",[[\"size\",\"large\"]]]",
+   "[\"B096LRPJYR\",[[\"size\",\"large\"]]]",
+   "[\"B096LRWC7X\",[[\"size\",\"large\"]]]",
+   "[\"B096S435NG\",[[\"size\",\"large\"]]]",
+   "[\"B096SNC5DJ\",[[\"size\",\"large\"]]]",
+   "[\"B0976T9DY8\",[[\"size\",\"large\"]]]",
+   "[\"B097HMYRFM\",[[\"size\",\"large\"]]]",
+   "[\"B097HN61Y3\",[[\"size\",\"large\"]]]",
+   "[\"B097N7CMV8\",[[\"size\",\"large\"]]]",
+   "[\"B097N8C2RW\",[[\"size\",\"large\"]]]",
+   "[\"B097NFY74J\",[[\"size\",\"large\"]]]",
+   "[\"B098PXYQK8\",[[\"size\",\"large\"]]]",
+   "[\"B09F5Q16WG\",[[\"size\",\"large\"]]]",
+   "[\"B09KRVBSG6\",[[\"size\",\"large\"]]]",
+   "[\"B09NR5SH6C\",[[\"size\",\"large\"]]]",
+   "[\"B09PZYPVP7\",[[\"size\",\"large\"]]]",
+   "[\"B09Q3KJKW1\",[[\"size\",\"large\"]]]",
+   "[\"B09QFVG8P6\",[[\"size\",\"large\"]]]",
+   "[\"B09QFX2G29\",[[\"size\",\"large\"]]]",
+   "[\"B09QKBR7LG\",[[\"size\",\"large\"]]]",
+   "[\"B09QL3D2HD\",[[\"size\",\"large\"]]]",
+   "[\"B09RZVC64G\",[[\"size\",\"large\"]]]",
+   "[\"B09SGG1PSK\",[[\"size\",\"large\"]]]",
+   "[\"B09STMDJ8J\",[[\"size\",\"large\"]]]",
+   "[\"B09SYKXKP4\",[[\"size\",\"large\"]]]"
+  ],
+  "hash": "287d099a552a7d970f3873cf379e6c30"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "b53410b3de234fbb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f908266184f596e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "033af430dd5e19f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be relaxed fit."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9cb85c427584c708",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cargo pants."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2adecee36a55cdcc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "501a949367f70ba5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4b8fc187311d922f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01 beige instead of large."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c11ca83c08dd730e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #03 gray instead of large."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

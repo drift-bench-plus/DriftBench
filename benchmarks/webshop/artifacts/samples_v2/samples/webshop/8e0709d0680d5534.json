@@ -1,0 +1,195 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's athletic shoes",
+ "fidelity_notes": [],
+ "goal_idx": 254,
+ "ground_truth": {
+  "cardinality": 6,
+  "hash": "c5bf660792b81a9dc40598124a5c8177",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07L5DX8GP\",[[\"color\",\"02 | dark | grey\"],[\"size\",\"10\"]]]",
+   "[\"B07SHWM3BX\",[[\"color\",\"white | dark silver metallic\"],[\"size\",\"10\"]]]",
+   "[\"B08B1MCFKL\",[[\"color\",\"dark denim | red orange\"],[\"size\",\"10\"]]]",
+   "[\"B08QBHDRC1\",[[\"color\",\"dark gray | red\"],[\"size\",\"10\"]]]",
+   "[\"B097R39VPH\",[[\"color\",\"dark green022\"],[\"size\",\"10\"]]]",
+   "[\"B09BFMY58R\",[[\"color\",\"dark grey\"],[\"size\",\"10\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:ethylene vinyl",
+    "=",
+    "ethylene vinyl"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark denim | red orange"
+   ],
+   [
+    "option:1",
+    "=",
+    "10"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "bb4678ed5513f5d0"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 4,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ethylene vinyl",
+     "=",
+     "different durable upper material"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark denim | red orange"
+    ],
+    [
+     "option:1",
+     "=",
+     "10"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:ethylene vinyl",
+     "ethylene vinyl"
+    ],
+    "alternative": [
+     "attr:ethylene vinyl",
+     "different durable upper material"
+    ],
+    "condition": null,
+    "text": "Since you probably don’t have men’s athletic shoes with ethylene vinyl material in dark denim with red orange accents in size 10"
+   }
+  ],
+  "retained": [
+   "attr:ethylene vinyl",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "e2676268919ae2f6",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don’t have men’s athletic shoes with ethylene vinyl material in dark denim with red orange accents in size 10, I’m looking for similar pairs under $120 with a different durable upper material instead.",
+ "render_attempts": 4,
+ "sample_id": "8e0709d0680d5534",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's athletic shoes instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "36e60c9cbfb05597"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's athletic shoes instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5464523a27a90747"
+  },
+  {
+   "announcement": "Also, it needs to be anti slip.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4917911363dffea9"
+  },
+  {
+   "announcement": "Also, it needs to be arch support.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e7ceba1fead480e6"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0aea792080e4756e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b408ba44b9a10e4c"
+  },
+  {
+   "announcement": "Actually, make it 10 women | 10 men instead of dark denim | red orange.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "32a041a56ad124c2"
+  },
+  {
+   "announcement": "Actually, make it 10-11 women | 8-9 men instead of dark denim | red orange.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a30ce134fa3d3734"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 6,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "0dace2897e600df4",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

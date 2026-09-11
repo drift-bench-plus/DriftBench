@@ -1,0 +1,339 @@
+{
+ "sample_id": "54e5d2590d51c5a0",
+ "tree_id": "1ce18d923203f256",
+ "adapter": "webshop",
+ "cluster": "digital cameras",
+ "goal_idx": 32,
+ "split": "test",
+ "source_instruction": "please show me a digital camera. my favorite brand is casio, my husnband  told me about model exilim ex-z120 7. is there a batteries included too ? isn't it",
+ "query": "I swear my weekend hike yesterday was almost derailed by the silliest thing\u2014my favorite trail mix bag split open right as I hit the overlook where the wild blueberries grow thick this time of year, I spent ten minutes scrambling to scoop the nut and dried cranberry mix into an empty water bottle before the squirrels swarmed it. I also ran into that retired park ranger who always brings his border collie on the trails, he told me the old fire tower up on the north ridge is finally open to the public again after being closed for repairs for almost two years, I\u2019m already planning to trek up there next Saturday to catch the sunset over the valley. On the way back to my car I even spotted a family of turkeys herding their tiny, fuzzy poults across the access road, I had to sit in my idling car for five whole minutes waiting for them to meander across so I didn\u2019t spook them, it was so cute I almost forgot I was already running late to meet my friend for tacos.\nHey, I\u2019m looking for digital cameras, right? First off, they absolutely have to come with batteries included, I don\u2019t want to mess around tracking those down separately. Also, I need to make sure it\u2019s got that thing I always look for to get closer shots without making everything blurry, I\u2019m sure you know what I mean. Oh, and I only want to spend up to that one, same as the last time I grabbed a small electronics gadget for my kid\u2019s school project. Also, make sure every option comes with a detachable neon pink wrist strap, I\u2019ve been really into those lately for keeping track of my stuff when I\u2019m out hiking.",
+ "strategy_ids": [
+  "insufficient_information",
+  "referential_ambiguity",
+  "irrelevant_information",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+referential_ambiguity+irrelevant_information+contextual_irrelevance",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "referential_ambiguity",
+   "irrelevant_information",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "attr:optical zoom"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:optical zoom"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "make sure every option comes with a detachable neon pink wrist strap, I\u2019ve been really into those lately for keeping track of my stuff when I\u2019m out hiking",
+    "condition": [
+     "attr:detachable neon pink wrist strap",
+     "=",
+     "detachable neon pink wrist strap"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I swear my weekend hike yesterday was almost derailed by the silliest thing\u2014my favorite trail mix bag split open right as I hit the overlook where the wild blueberries grow thick this time of year, I spent ten minutes scrambling to scoop the nut and dried cranberry mix into an empty water bottle before the squirrels swarmed it. I also ran into that retired park ranger who always brings his border collie on the trails, he told me the old fire tower up on the north ridge is finally open to the public again after being closed for repairs for almost two years, I\u2019m already planning to trek up there next Saturday to catch the sunset over the valley. On the way back to my car I even spotted a family of turkeys herding their tiny, fuzzy poults across the access road, I had to sit in my idling car for five whole minutes waiting for them to meander across so I didn\u2019t spook them, it was so cute I almost forgot I was already running late to meet my friend for tacos.",
+  "retained": [
+   "attr:batteries included"
+  ],
+  "hidden_slots": [
+   "attr:optical zoom",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:batteries included",
+     "=",
+     "batteries included"
+    ],
+    [
+     "attr:detachable neon pink wrist strap",
+     "=",
+     "detachable neon pink wrist strap"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "75e468a8b3545fff"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 122,
+  "lit_card": 0,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 176,
+    "true_card": 122,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 144,
+    "true_card": 122,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 122,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "02f79fc486665f81",
+  "conditions": [
+   [
+    "attr:batteries included",
+    "=",
+    "batteries included"
+   ],
+   [
+    "attr:optical zoom",
+    "=",
+    "optical zoom"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "attr:optical zoom",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 122,
+  "value": [
+   "[\"B000038ABH\",[]]",
+   "[\"B00004R8VC\",[]]",
+   "[\"B00004R8VE\",[]]",
+   "[\"B00004RDMR\",[]]",
+   "[\"B00004TH2W\",[]]",
+   "[\"B00004TH2X\",[]]",
+   "[\"B00004TH2Y\",[]]",
+   "[\"B00004TJ7O\",[]]",
+   "[\"B00004WGNF\",[]]",
+   "[\"B000058TLP\",[]]",
+   "[\"B000059Y4N\",[]]",
+   "[\"B00005ATZO\",[]]",
+   "[\"B00005B6TI\",[]]",
+   "[\"B00005B6UF\",[]]",
+   "[\"B00005LVWB\",[]]",
+   "[\"B00005NHAC\",[]]",
+   "[\"B00005NHAK\",[]]",
+   "[\"B00005NVPW\",[]]",
+   "[\"B00005OAY3\",[]]",
+   "[\"B00005Q5ZC\",[]]",
+   "[\"B00005Q7DG\",[]]",
+   "[\"B00005QI59\",[]]",
+   "[\"B000063BGY\",[]]",
+   "[\"B000063CWO\",[]]",
+   "[\"B000063S4I\",[]]",
+   "[\"B000063S4J\",[]]",
+   "[\"B000063VYI\",[]]",
+   "[\"B00006412G\",[]]",
+   "[\"B000066EW5\",[]]",
+   "[\"B000067BEG\",[]]",
+   "[\"B000067BI8\",[]]",
+   "[\"B000068BRB\",[]]",
+   "[\"B000068BRE\",[]]",
+   "[\"B000069J9O\",[]]",
+   "[\"B00006AFD2\",[]]",
+   "[\"B00006BSTZ\",[]]",
+   "[\"B00006FMPP\",[]]",
+   "[\"B00006RZ1I\",[]]",
+   "[\"B00008IHTY\",[]]",
+   "[\"B00008IOEJ\",[]]",
+   "[\"B00008KIW8\",[]]",
+   "[\"B00008NDZY\",[]]",
+   "[\"B00008O2YO\",[]]",
+   "[\"B00008O35Y\",[]]",
+   "[\"B00008OE46\",[]]",
+   "[\"B00008OE5G\",[]]",
+   "[\"B00009VS6P\",[]]",
+   "[\"B00009VSBE\",[]]",
+   "[\"B00009VSG6\",[]]",
+   "[\"B00009VSIM\",[]]",
+   "[\"B00009WN9P\",[]]",
+   "[\"B0000AAAYY\",[]]",
+   "[\"B0000APONO\",[]]",
+   "[\"B0000C8VF9\",[]]",
+   "[\"B0000C8WLU\",[]]",
+   "[\"B0001EY1JQ\",[]]",
+   "[\"B0001FT3I4\",[]]",
+   "[\"B0001G6U8O\",[]]",
+   "[\"B0001G6UCA\",[]]",
+   "[\"B0001G6UES\",[]]",
+   "[\"B0001G6UF2\",[]]",
+   "[\"B0001GUOIQ\",[]]",
+   "[\"B00022PTTS\",[]]",
+   "[\"B0002AHQL4\",[]]",
+   "[\"B0002RS9A4\",[]]",
+   "[\"B0007CZ3D0\",[]]",
+   "[\"B0007CZ3EE\",[]]",
+   "[\"B0007GIXS8\",[]]",
+   "[\"B0007KQUP2\",[]]",
+   "[\"B0007LW2US\",[]]",
+   "[\"B0007MVHZS\",[]]",
+   "[\"B0007VTU9Y\",[]]",
+   "[\"B0009JQROU\",[]]",
+   "[\"B0009XQPHU\",[]]",
+   "[\"B000A7B9XU\",[]]",
+   "[\"B000A7B9YE\",[]]",
+   "[\"B000AOFVZK\",[]]",
+   "[\"B000AXMEDI\",[]]",
+   "[\"B000CCOFZM\",[]]",
+   "[\"B000CSBZLI\",[]]",
+   "[\"B000CSC0BM\",[]]",
+   "[\"B000CSYXCG\",[]]",
+   "[\"B000E65Y10\",[]]",
+   "[\"B000EMPPBS\",[]]",
+   "[\"B000GT6HAM\",[]]",
+   "[\"B000H7FXAS\",[]]",
+   "[\"B000HZXX0W\",[]]",
+   "[\"B000I1VEWO\",[]]",
+   "[\"B000JCMH4Q\",[]]",
+   "[\"B000M0X62W\",[]]",
+   "[\"B000MD3AH0\",[]]",
+   "[\"B000MD4UGK\",[]]",
+   "[\"B000QY3GPQ\",[]]",
+   "[\"B000TGQ66M\",[]]",
+   "[\"B000V1VG2E\",[]]",
+   "[\"B000V22SAM\",[]]",
+   "[\"B000VQ5VLQ\",[]]",
+   "[\"B0011Z9VKI\",[]]",
+   "[\"B001283FDS\",[]]",
+   "[\"B0012YA4YK\",[]]",
+   "[\"B001EQ4C8U\",[]]",
+   "[\"B001HKHKNW\",[]]",
+   "[\"B001WYKC5Q\",[]]",
+   "[\"B002HEWA1E\",[]]",
+   "[\"B002LITT3I\",[]]",
+   "[\"B002LITT3S\",[]]",
+   "[\"B0035WTVMI\",[]]",
+   "[\"B003B4BCHW\",[]]",
+   "[\"B003NZKUMW\",[]]",
+   "[\"B003NZKUP4\",[]]",
+   "[\"B004HO58JI\",[]]",
+   "[\"B004HW73TI\",[]]",
+   "[\"B006T7QXOA\",[]]",
+   "[\"B00B46XRI6\",[]]",
+   "[\"B00B4ZLJ5U\",[]]",
+   "[\"B00CD9JO3U\",[]]",
+   "[\"B00EFILR6E\",[]]",
+   "[\"B00HGE3CWG\",[]]",
+   "[\"B01HN372O8\",[]]",
+   "[\"B073PSKNQC\",[]]",
+   "[\"B09JNR1913\",[]]",
+   "[\"B09S1FJNGM\",[]]"
+  ],
+  "hash": "5affd74b41b6cdddff4edd277479907e"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0fbdc21648c3ecd2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the digital cameras instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ead79380ddcd9a74",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the digital cameras instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "54f8eba6777b6fea",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be motion detection."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7f3311598faacf4a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be light weight."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9586c74c1bf1895e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d6fa49c5835dc685",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "ccefd4270796a0cf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 120."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f9f24e2e0b3036f6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 120."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

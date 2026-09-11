@@ -1,0 +1,236 @@
+{
+ "sample_id": "b98a329ac770d840",
+ "tree_id": "52f3182b25d07fc5",
+ "adapter": "webshop",
+ "cluster": "makeup sets",
+ "goal_idx": 79,
+ "split": "test",
+ "source_instruction": "i'm looking for a set of makeup brushes in the color peaceful purple to help me with my eyeshadow makeup.",
+ "query": "I stopped at the little bakery stand right by the mall entrance on my way in today, and the sweet, warm smell of fresh lavender shortbread hit me so hard I almost lingered there long enough to miss the store\u2019s opening announcement. The barista at the attached coffee spot was passing out tiny sample cups of iced honey lavender latte, too, and it was so smooth and lightly floral I almost grabbed a full size before I remembered I already had a half-drunk cold brew in my tote bag slung over my shoulder. A kid walking past with their parent had on the cutest fuzzy purple dinosaur backpack covered in glittery star stickers, and they waved at me when I smiled at it, which made the whole start of my errand run feel way brighter than I expected when I dragged myself out of the house this morning. I\u2019ve heard the makeup sets section has options that include peaceful purple eye gloss in them, and I don\u2019t go over that amount I always stick to for small makeup picks.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "factual_error",
+  "contextual_irrelevance",
+  "indirect_intent"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+factual_error+contextual_irrelevance+indirect_intent",
+  "family": "expression+intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "factual_error",
+   "contextual_irrelevance",
+   "indirect_intent"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "factual_error": "attr:eye shadow"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:eye shadow",
+    "eye shadow",
+    "eye gloss"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped at the little bakery stand right by the mall entrance on my way in today, and the sweet, warm smell of fresh lavender shortbread hit me so hard I almost lingered there long enough to miss the store\u2019s opening announcement. The barista at the attached coffee spot was passing out tiny sample cups of iced honey lavender latte, too, and it was so smooth and lightly floral I almost grabbed a full size before I remembered I already had a half-drunk cold brew in my tote bag slung over my shoulder. A kid walking past with their parent had on the cutest fuzzy purple dinosaur backpack covered in glittery star stickers, and they waved at me when I smiled at it, which made the whole start of my errand run feel way brighter than I expected when I dragged myself out of the house this morning.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:eye shadow",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:eye shadow",
+     "=",
+     "eye gloss"
+    ],
+    [
+     "option:0",
+     "=",
+     "peaceful purple"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "602e09da70e2b406"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 31,
+  "lit_card": 0,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 34,
+    "true_card": 31,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 31,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "141a43f4ed09923f",
+  "conditions": [
+   [
+    "attr:eye shadow",
+    "=",
+    "eye shadow"
+   ],
+   [
+    "option:0",
+    "=",
+    "peaceful purple"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:eye shadow",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 31,
+  "value": [
+   "[\"B002GEHN8U\",[[\"color\",\"purple storm\"]]]",
+   "[\"B07RHS5STR\",[[\"color\",\"purple\"]]]",
+   "[\"B07RKP9ZNR\",[[\"color\",\"purple\"]]]",
+   "[\"B07TTL47W6\",[[\"color\",\"eyeshadow palette-dream purple\"]]]",
+   "[\"B07TWRMR11\",[[\"color\",\"purple\"]]]",
+   "[\"B07W5CSYN7\",[[\"color\",\"purple\"]]]",
+   "[\"B07WR8CF1C\",[[\"color\",\"purple\"]]]",
+   "[\"B07Z1D43L9\",[[\"color\",\"purple\"]]]",
+   "[\"B07Z327WPV\",[[\"color\",\"purple clear\"]]]",
+   "[\"B07ZPP2RT9\",[[\"color\",\"purple\"]]]",
+   "[\"B07ZR3PG55\",[[\"color\",\"dpurple\"]]]",
+   "[\"B083GN5R3L\",[[\"color\",\"purple\"]]]",
+   "[\"B083VSPMS5\",[[\"color\",\"purple\"]]]",
+   "[\"B08CB6CZQS\",[[\"color\",\"purple\"]]]",
+   "[\"B08GHY1SGJ\",[[\"color\",\"purple\"]]]",
+   "[\"B08TTRJHSC\",[[\"color\",\"purple\"]]]",
+   "[\"B092D3214H\",[[\"color\",\"neon purple\"]]]",
+   "[\"B092HVC11D\",[[\"color\",\"purple\"]]]",
+   "[\"B0936J9YZS\",[[\"color\",\"purple\"]]]",
+   "[\"B094QYJRSM\",[[\"color\",\"purple\"]]]",
+   "[\"B095TWK6H7\",[[\"color\",\"peaceful purple\"]]]",
+   "[\"B096FBZMKB\",[[\"color\",\"purple\"]]]",
+   "[\"B098CXPRT1\",[[\"style\",\"purple-12pcs\"]]]",
+   "[\"B098KXFL7C\",[[\"color\",\"purple\"]]]",
+   "[\"B0991RTYH3\",[[\"color\",\"18 pcs purple\"]]]",
+   "[\"B099VX8KP6\",[[\"color\",\"purple\"]]]",
+   "[\"B09C1L7D4D\",[[\"color\",\"purple\"]]]",
+   "[\"B09GG7KVW9\",[[\"color\",\"purple\"]]]",
+   "[\"B09JJSF3LG\",[[\"color\",\"purple\"]]]",
+   "[\"B09L86BY3P\",[[\"color\",\"neon purple\"]]]",
+   "[\"B09MQ93DN8\",[[\"color\",\"purple\"]]]"
+  ],
+  "hash": "aace0bc4f62f74f5c8d68ee5ad1c40d9"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "3c4aca41b8fb98f6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup sets instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "4a58c89b8d2e01ea",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the makeup sets instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ef975830c90023fd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy apply."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f423ab59d9e290c9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be animal testing."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "557a1291b84ccbf9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8a9af56e302a9b9a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0f1ae4a56b37ea96",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it \" dusty rose (large) instead of peaceful purple."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3c3fcafbff031d1f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #02 sunset instead of peaceful purple."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

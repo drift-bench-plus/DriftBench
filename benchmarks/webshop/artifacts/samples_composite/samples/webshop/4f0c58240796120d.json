@@ -1,0 +1,226 @@
+{
+ "sample_id": "4f0c58240796120d",
+ "tree_id": "c2ab603af1b7f24f",
+ "adapter": "webshop",
+ "cluster": "hdmi cables",
+ "goal_idx": 464,
+ "split": "test",
+ "source_instruction": "i'm looking for a high performance hdmi to displayport adapter cable that's easy to use.",
+ "query": "Hey, I\u2019m looking for HDMI cables right now, can you help me out? I need ones that are super easy to use and have really high performance first and foremost, since I know the totally lag-free, zero-signal-loss ones seem to be totally out of stock everywhere right now, I\u2019m fine going with the regular solid high-performance picks instead. Oh, and I don\u2019t want to go over that one for the price, yeah?",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "false_presupposition"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+false_presupposition",
+  "family": "expression+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "false_presupposition"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "since I know the totally lag-free, zero-signal-loss ones seem to be totally out of stock everywhere right now",
+    "condition": null,
+    "about": [
+     "attr:high performance",
+     "high performance"
+    ],
+    "alternative": [
+     "attr:high performance",
+     "regular solid high-performance"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:easy use",
+   "attr:high performance"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ],
+    [
+     "attr:high performance",
+     "=",
+     "regular solid high-performance"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "9d7be7bce4200452"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 22,
+  "lit_card": 21,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 24,
+    "true_card": 22,
+    "readings": 1
+   },
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 19,
+    "true_card": 22,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "9797c32faf70ba0b",
+  "conditions": [
+   [
+    "attr:easy use",
+    "=",
+    "easy use"
+   ],
+   [
+    "attr:high performance",
+    "=",
+    "high performance"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 22,
+  "value": [
+   "[\"B071YDFZ3P\",[]]",
+   "[\"B077SZKGRY\",[]]",
+   "[\"B077Y1YVVJ\",[]]",
+   "[\"B07BKVRPWV\",[]]",
+   "[\"B07D1HVDX1\",[]]",
+   "[\"B07D2HSH4D\",[]]",
+   "[\"B07F9GFZYD\",[]]",
+   "[\"B07JF9LVW4\",[]]",
+   "[\"B07K7CK998\",[]]",
+   "[\"B07NSY4R1X\",[]]",
+   "[\"B07RL7GGXP\",[]]",
+   "[\"B08731PN5T\",[]]",
+   "[\"B088YP6TDQ\",[]]",
+   "[\"B08CRPRG2S\",[]]",
+   "[\"B08CXDZ1CC\",[]]",
+   "[\"B08L8RNHT2\",[]]",
+   "[\"B08QD8418Z\",[]]",
+   "[\"B08YRPL65H\",[]]",
+   "[\"B093X3K7SF\",[]]",
+   "[\"B0991J7Y3Y\",[]]",
+   "[\"B09MLSBV6C\",[]]",
+   "[\"B09PHGHCBX\",[]]"
+  ],
+  "hash": "99c92516a6bf32ba989802910b24b24f"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "024281688ee7612e",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hdmi cables instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "857ccfb5d204e736",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hdmi cables instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "12e252ea4188bdba",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be light weight."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f5f63a5d07b137cc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ultra hd."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "790aa44e4234f068",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b1c12af62517b899",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0a900d5e7fde9f87",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 40."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "514d8aa6c30f16a4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 40."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

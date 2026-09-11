@@ -1,0 +1,93 @@
+{
+ "sample_id": "83ee553f624fdbe8__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "83ee553f624fdbe8",
+ "query": "I recently adopted a little orange tabby kitten last week, he's been getting into everything around the house and just yesterday he knocked over my potted mint plant on the windowsill. I spent almost an hour cleaning up the soil off the carpet and had to move all my small houseplants up to the high shelf in the living room so he can't reach them. I also just tried a new matcha latte recipe this morning that I found on a food blog, it had a little bit of honey and oat milk and it tasted way better than the ones I usually buy from the cafe down the street. I need to process a return for my delivered order #W9571698, the items I want to return are 5952720925, 9973034634, 7381052709 and 6065192424, and I'd like the refund to go back to gift_card_7250692 please.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I recently adopted a little orange tabby kitten last week, he's been getting into everything around the house and just yesterday he knocked over my potted mint plant on the windowsill. I spent almost an hour cleaning up the soil off the carpet and had to move all my small houseplants up to the high shelf in the living room so he can't reach them. I also just tried a new matcha latte recipe this morning that I found on a food blog, it had a little bit of honey and oat milk and it tasted way better than the ones I usually buy from the cafe down the street.",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"5952720925\",\"9973034634\",\"7381052709\",\"6065192424\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W9571698\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_7250692\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"5952720925\",\"9973034634\",\"7381052709\",\"6065192424\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W9571698\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_7250692\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

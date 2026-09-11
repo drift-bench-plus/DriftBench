@@ -1,0 +1,200 @@
+{
+ "adapter": "webshop",
+ "cluster": "tv stands",
+ "fidelity_notes": [],
+ "goal_idx": 297,
+ "ground_truth": {
+  "cardinality": 15,
+  "hash": "a77b2c47de26d2431032484c3d8ccf71",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B081RCDYLL\",[[\"color\",\"wood\"]]]",
+   "[\"B085T5HZJV\",[[\"color\",\"wood\"]]]",
+   "[\"B0928536Z6\",[[\"material type\",\"wood\"]]]",
+   "[\"B09D35XVND\",[[\"color\",\"wood color\"]]]",
+   "[\"B09FQ4DK7B\",[[\"color\",\"wood\"]]]",
+   "[\"B09NDNRGWB\",[[\"color\",\"fir wood\"]]]",
+   "[\"B09PDVFBY7\",[[\"color\",\"fir wood\"]]]",
+   "[\"B09PG58HHW\",[[\"color\",\"fir wood\"]]]",
+   "[\"B09Q16QXMY\",[[\"color\",\"fir wood\"]]]",
+   "[\"B09Q17LMQB\",[[\"color\",\"fir wood\"]]]",
+   "[\"B09Q8RK9LS\",[[\"color\",\"fir wood\"]]]",
+   "[\"B09Q8WY2ZY\",[[\"color\",\"fir wood\"]]]",
+   "[\"B09QM4L4H7\",[[\"size\",\"wood 32-65''\"]]]",
+   "[\"B09SG6DDC7\",[[\"color\",\"wood color\"]]]",
+   "[\"B09SL12TCL\",[[\"color\",\"wood color\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "attr:storage space",
+    "=",
+    "storage space"
+   ],
+   [
+    "option:0",
+    "=",
+    "wood"
+   ],
+   [
+    "price_upper",
+    "<=",
+    180
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "31a20ac490b8e085"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 6,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "attr:storage space",
+     "=",
+     "storage space"
+    ],
+    [
+     "option:0",
+     "=",
+     "metal"
+    ],
+    [
+     "price_upper",
+     "<=",
+     180
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:living room",
+   "attr:storage space",
+   "price_upper"
+  ],
+  "spec_id": "620ae24bbf34d4db",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "option:0",
+    "wood",
+    "metal"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a TV stand with living room placement, storage space, and a metal build, and my budget is $180.",
+ "render_attempts": 6,
+ "sample_id": "1e0ebd454a0970b7",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the tv stands instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "bc2e69bf6573dd4e"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the tv stands instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f319ac30bfc523b6"
+  },
+  {
+   "announcement": "Also, it needs to be dining room.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ece561e3b185ccfd"
+  },
+  {
+   "announcement": "Also, it needs to be remote control.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "efc7174d04ee02e8"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "36e97d07529d4088"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "54dd9c37d503f953"
+  },
+  {
+   "announcement": "Actually, make it 1 pack instead of wood.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2867859285f8b74c"
+  },
+  {
+   "announcement": "Actually, make it 18.1''x13.4'' instead of wood.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3b2b532155c96a2e"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 15,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want a tv stand made of wood and has a storage space. it should be suitable for my living room.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "ff8d70fc7137993d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

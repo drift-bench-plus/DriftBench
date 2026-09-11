@@ -1,0 +1,193 @@
+{
+ "adapter": "webshop",
+ "cluster": "window coverings",
+ "fidelity_notes": [],
+ "goal_idx": 227,
+ "ground_truth": {
+  "cardinality": 8,
+  "hash": "22f5b1b93ee71096e34804711a51aa3a",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07RRSGYWK\",[[\"color\",\"gray\"],[\"size\",\"36\\\"w x 72\\\"h\"]]]",
+   "[\"B09CGHW1CP\",[[\"color\",\"gray\"],[\"size\",\"72\\\"w x 72\\\"h\"]]]",
+   "[\"B09DVKC4MV\",[[\"color\",\"gray - light filtering\"],[\"size\",\"72\\\"w x 72\\\"h\"]]]",
+   "[\"B09JZ84S8D\",[[\"color\",\"gray\"],[\"size\",\"72\\\"w x 72\\\"h\"]]]",
+   "[\"B09KV26B8S\",[[\"color\",\"gray\"],[\"size\",\"72\\\"w x 72\\\"h\"]]]",
+   "[\"B09L4HSKLK\",[[\"color\",\"light gray\"],[\"size\",\"72\\\"w x 72\\\"h\"]]]",
+   "[\"B09L6DLV9B\",[[\"color\",\"purple-gray\"],[\"size\",\"72\\\"w x 36\\\"h\"]]]",
+   "[\"B09NBQ9WG3\",[[\"color\",\"gray\"],[\"size\",\"72\\\"w x 36\\\"h\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy install",
+    "=",
+    "easy install"
+   ],
+   [
+    "option:0",
+    "=",
+    "gray"
+   ],
+   [
+    "option:1",
+    "=",
+    "96\"w x 72\"h"
+   ],
+   [
+    "price_upper",
+    "<=",
+    280
+   ]
+  ],
+  "hidden_slots": [
+   "option:1"
+  ],
+  "intent_id": "7dba2c02f001f90d"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "option:1"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy install",
+     "=",
+     "easy install"
+    ],
+    [
+     "option:0",
+     "=",
+     "gray"
+    ],
+    [
+     "option:1",
+     "=",
+     "96\"w x 78\"h"
+    ],
+    [
+     "price_upper",
+     "<=",
+     280
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy install",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "0fa0cabd05680fb2",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "option:1",
+    "96\"w x 72\"h",
+    "96\"w x 78\"h"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for easy to install window coverings in gray with dimensions of 96\"w x 78\"h, and my budget is $280.",
+ "render_attempts": 1,
+ "sample_id": "aa9db0fcd1b0a615",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the window coverings instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4320bc1a7db3f1da"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the window coverings instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "55eaa6a799a5c634"
+  },
+  {
+   "announcement": "Also, it needs to be home office.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "075b532d8ac7f3c3"
+  },
+  {
+   "announcement": "Also, it needs to be white item.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "959fce64fdc3e7f3"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1500537b9503f998"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d04081db4c7fbf97"
+  },
+  {
+   "announcement": "Actually, make it #18 instead of gray.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0ca5c9018e2b62b5"
+  },
+  {
+   "announcement": "Actually, make it #13 instead of gray.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6199ecac002a15ac"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 5,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 8,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for 96\"w x 72\"h roller shades of gray color and it is east to install.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "6b13d6923a1f76ef",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,204 @@
+{
+ "sample_id": "45a24464dfb5147d",
+ "tree_id": "9e6997230fbcbfb5",
+ "adapter": "webshop",
+ "cluster": "toothpaste",
+ "goal_idx": 21,
+ "split": "test",
+ "source_instruction": "i  need fluoide free toothpaste for fresh breath.",
+ "query": "Oh man, I saw the funniest thing on the way over here earlier\u2014someone\u2019s golden retriever trotted right into the coffee shop, stole a whole blueberry muffin off the pickup counter, and bolted out the door before the barista could even react. I also stopped to pet a tiny tabby cat curled up on a park bench that kept headbutting my hand for scratches, and I remembered I need to pick up laundry detergent on my way home later too, plus drop off that overdue library book about backyard vegetable gardening I\u2019ve had for three weeks. Anyway, I\u2019m looking for toothpaste right now, it has to be fluoride free and work really well for fresh breath, and I don\u2019t want to go over that one for the price.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh man, I saw the funniest thing on the way over here earlier\u2014someone\u2019s golden retriever trotted right into the coffee shop, stole a whole blueberry muffin off the pickup counter, and bolted out the door before the barista could even react. I also stopped to pet a tiny tabby cat curled up on a park bench that kept headbutting my hand for scratches, and I remembered I need to pick up laundry detergent on my way home later too, plus drop off that overdue library book about backyard vegetable gardening I\u2019ve had for three weeks.",
+  "retained": [
+   "attr:fluoride free",
+   "attr:fresh breath"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:fluoride free",
+     "=",
+     "fluoride free"
+    ],
+    [
+     "attr:fresh breath",
+     "=",
+     "fresh breath"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "20cb95785fad166d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 21,
+  "lit_card": 23,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 23,
+    "true_card": 21,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "69dc1296e101714d",
+  "conditions": [
+   [
+    "attr:fluoride free",
+    "=",
+    "fluoride free"
+   ],
+   [
+    "attr:fresh breath",
+    "=",
+    "fresh breath"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 21,
+  "value": [
+   "[\"B000E3DX5W\",[]]",
+   "[\"B00692AHS8\",[]]",
+   "[\"B00DZNP1Y4\",[]]",
+   "[\"B01CWYEUWK\",[]]",
+   "[\"B077KJ6LT9\",[]]",
+   "[\"B07GT3YKXK\",[]]",
+   "[\"B07HHBZXSF\",[]]",
+   "[\"B07HJWFCBS\",[]]",
+   "[\"B07MNTKBTH\",[]]",
+   "[\"B07V9PR7LW\",[]]",
+   "[\"B07ZML21XH\",[]]",
+   "[\"B081SGNY71\",[]]",
+   "[\"B0821T9FSW\",[]]",
+   "[\"B0849R7MY1\",[]]",
+   "[\"B08HW1JFR6\",[]]",
+   "[\"B08N1J39Q8\",[]]",
+   "[\"B08Y6F32HY\",[]]",
+   "[\"B09L47X9R6\",[]]",
+   "[\"B09MQQWNJB\",[]]",
+   "[\"B09SCPZ512\",[]]",
+   "[\"B09SCVNW6X\",[]]"
+  ],
+  "hash": "9138c5db994df4fb1209cdb0329a2d97"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6131833197b2580f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ee2213fe4b5062d6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "47a34d0c6c3bc65c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be essential oils."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e7a0f81847ba9e8d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be electric toothbrush."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a58bb0a5beed6f1d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ba8e2e740978484f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "361a770f729a23ac",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 30."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "716c6606d891b77f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 30."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

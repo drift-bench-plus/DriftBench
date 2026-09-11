@@ -1,0 +1,212 @@
+{
+ "adapter": "webshop",
+ "cluster": "eyes makeup",
+ "fidelity_notes": [],
+ "goal_idx": 328,
+ "ground_truth": {
+  "cardinality": 38,
+  "hash": "7fe9b08e1a1cb4f9a0c046151075d665",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B06XBCFGQM\",[[\"style\",\"14mm\"]]]",
+   "[\"B06XCR5ZFR\",[[\"size\",\"12mm | 13mm | 14mm\"]]]",
+   "[\"B06XG8D93P\",[[\"size\",\"14mm\"]]]",
+   "[\"B06XR9JPMR\",[[\"size\",\"14mm\"]]]",
+   "[\"B0739L41N2\",[[\"style\",\"14mm\"]]]",
+   "[\"B07CF7L379\",[[\"size\",\"4d 0.07d 14mm\"]]]",
+   "[\"B07CV5RW8W\",[[\"size\",\"14mm\"]]]",
+   "[\"B07CXNMH5M\",[[\"size\",\"3d 0.10d 14mm\"]]]",
+   "[\"B07P5WSLX5\",[[\"style\",\"14mm\"]]]",
+   "[\"B07PGLY2TM\",[[\"style\",\"14mm\"]]]",
+   "[\"B07PYPGQ8B\",[[\"scent name\",\"0.03-c-mix 8-14mm\"]]]",
+   "[\"B07QPFBMPN\",[[\"style\",\"14mm\"]]]",
+   "[\"B07QY6QD5N\",[[\"size\",\"14 mm\"]]]",
+   "[\"B07VV13D1Z\",[[\"size\",\"14mm\"]]]",
+   "[\"B07X45QS64\",[[\"size\",\"14mm\"]]]",
+   "[\"B07Y31WVH9\",[[\"size\",\"14 mm\"]]]",
+   "[\"B082TZNX7D\",[[\"size\",\"14 mm\"]]]",
+   "[\"B083XWN14Q\",[[\"size\",\"14 mm\"]]]",
+   "[\"B085T9CWGD\",[[\"size\",\"14 mm\"]]]",
+   "[\"B086MJMHZT\",[[\"size\",\"14mm\"]]]",
+   "[\"B087WYC4L3\",[[\"size\",\"8-14mm mixed tray\"]]]",
+   "[\"B08CDB2D86\",[[\"size\",\"14mm\"]]]",
+   "[\"B08DNJD767\",[[\"style\",\"8-10-12-14mm\"]]]",
+   "[\"B08DQWMM4J\",[[\"size\",\"14 mm\"]]]",
+   "[\"B08HB4TNKL\",[[\"style\",\"20d-14mm\"]]]",
+   "[\"B08J2L144F\",[[\"size\",\"14mm\"]]]",
+   "[\"B08NV2KRYP\",[[\"size\",\"14mm\"]]]",
+   "[\"B08R5Y8HBF\",[[\"style\",\"14mm\"]]]",
+   "[\"B091MK99ZB\",[[\"style\",\"20d-14mm\"]]]",
+   "[\"B0923TKY62\",[[\"size\",\"14mm\"]]]",
+   "[\"B0923WP7DV\",[[\"size\",\"14mm\"]]]",
+   "[\"B09278TNHM\",[[\"style\",\"cat-eye|9-14mm\"]]]",
+   "[\"B09BZ939LC\",[[\"size\",\"14mm\"]]]",
+   "[\"B09N6ZKPF6\",[[\"size\",\"14mm\"]]]",
+   "[\"B09NBP2C4D\",[[\"pattern name\",\"14mm-18mm-5 styles\"]]]",
+   "[\"B09QMBY6J7\",[[\"size\",\"14 mm\"]]]",
+   "[\"B09S61MW7B\",[[\"style\",\"l-14mm\"]]]",
+   "[\"B09S64HLR4\",[[\"size\",\"8-14mm\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "option:0",
+    "=",
+    "14mm"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "88ece6ca67c52df7"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "12mm"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high quality",
+   "price_upper"
+  ],
+  "spec_id": "6546fd42402e86d6",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "option:0",
+    "14mm",
+    "12mm"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for high quality eye makeup with a 12mm option, and my price limit is 30.",
+ "render_attempts": 1,
+ "sample_id": "c3dfe157c2283978",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the eyes makeup instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f616970b8d4caeb8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the eyes makeup instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "fc030cdb3d955da4"
+  },
+  {
+   "announcement": "Also, it needs to be cruelty free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3adb59d094eb5b6f"
+  },
+  {
+   "announcement": "Also, it needs to be quality materials.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fddc5fc18bb9fed3"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "215debb8697c3dea"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "55380f6ad4a36f5a"
+  },
+  {
+   "announcement": "Actually, make it #2 brown coffee instead of 14mm.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6fdd5bff086d0275"
+  },
+  {
+   "announcement": "Actually, make it #5 orange instead of 14mm.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ef54cb8cca23d05e"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 38,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 38,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for some high quality 14mm false eyelashes.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "8936f0bdc086e964",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

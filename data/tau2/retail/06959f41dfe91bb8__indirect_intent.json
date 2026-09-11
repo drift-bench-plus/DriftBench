@@ -1,0 +1,368 @@
+{
+ "sample_id": "06959f41dfe91bb8__indirect_intent",
+ "domain": "retail",
+ "tree_id": "06959f41dfe91bb8",
+ "query": "I have three pending orders numbered #W2166301, #W2466703 and #W6832752 that are all still waiting to be shipped out, and my current account linked to user id yusuf_hernandez_6785 has a saved address along with the shipping address on those orders all listed as 565 Maple Drive, Suite 501, Washington, DC, 20307, USA.",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "indirect_intent",
+  "family": "intention",
+  "mask_kind": "oblique",
+  "kinds": [
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_pending_order_address:address1",
+   "arg:1:modify_pending_order_address:address2",
+   "arg:1:modify_pending_order_address:city",
+   "arg:1:modify_pending_order_address:country",
+   "arg:1:modify_pending_order_address:order_id",
+   "arg:1:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_address:zip",
+   "arg:2:modify_pending_order_address:address1",
+   "arg:2:modify_pending_order_address:address2",
+   "arg:2:modify_pending_order_address:city",
+   "arg:2:modify_pending_order_address:country",
+   "arg:2:modify_pending_order_address:order_id",
+   "arg:2:modify_pending_order_address:state",
+   "arg:2:modify_pending_order_address:zip",
+   "arg:3:modify_user_address:address1",
+   "arg:3:modify_user_address:address2",
+   "arg:3:modify_user_address:city",
+   "arg:3:modify_user_address:country",
+   "arg:3:modify_user_address:state",
+   "arg:3:modify_user_address:user_id",
+   "arg:3:modify_user_address:zip"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"565 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 501\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"Washington\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W2166301\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"DC\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"20307\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address1",
+     "=",
+     "\"565 Maple Drive\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 501\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:city",
+     "=",
+     "\"Washington\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:order_id",
+     "=",
+     "\"#W2466703\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:state",
+     "=",
+     "\"DC\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:zip",
+     "=",
+     "\"20307\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:address1",
+     "=",
+     "\"565 Maple Drive\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 501\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:city",
+     "=",
+     "\"Washington\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:order_id",
+     "=",
+     "\"#W6832752\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:state",
+     "=",
+     "\"DC\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:zip",
+     "=",
+     "\"20307\""
+    ],
+    [
+     "arg:3:modify_user_address:address1",
+     "=",
+     "\"565 Maple Drive\""
+    ],
+    [
+     "arg:3:modify_user_address:address2",
+     "=",
+     "\"Suite 501\""
+    ],
+    [
+     "arg:3:modify_user_address:city",
+     "=",
+     "\"Washington\""
+    ],
+    [
+     "arg:3:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:3:modify_user_address:state",
+     "=",
+     "\"DC\""
+    ],
+    [
+     "arg:3:modify_user_address:user_id",
+     "=",
+     "\"yusuf_hernandez_6785\""
+    ],
+    [
+     "arg:3:modify_user_address:zip",
+     "=",
+     "\"20307\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "8d9ebde1bce95b92"
+ },
+ "signature": {
+  "rule": "oblique",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"565 Maple Drive\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 501\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"Washington\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W2166301\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"DC\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"20307\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address1",
+    "=",
+    "\"565 Maple Drive\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 501\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:city",
+    "=",
+    "\"Washington\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "=",
+    "\"#W2466703\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:state",
+    "=",
+    "\"DC\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:zip",
+    "=",
+    "\"20307\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:address1",
+    "=",
+    "\"565 Maple Drive\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 501\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:city",
+    "=",
+    "\"Washington\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:order_id",
+    "=",
+    "\"#W6832752\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:state",
+    "=",
+    "\"DC\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:zip",
+    "=",
+    "\"20307\""
+   ],
+   [
+    "arg:3:modify_user_address:address1",
+    "=",
+    "\"565 Maple Drive\""
+   ],
+   [
+    "arg:3:modify_user_address:address2",
+    "=",
+    "\"Suite 501\""
+   ],
+   [
+    "arg:3:modify_user_address:city",
+    "=",
+    "\"Washington\""
+   ],
+   [
+    "arg:3:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:3:modify_user_address:state",
+    "=",
+    "\"DC\""
+   ],
+   [
+    "arg:3:modify_user_address:user_id",
+    "=",
+    "\"yusuf_hernandez_6785\""
+   ],
+   [
+    "arg:3:modify_user_address:zip",
+    "=",
+    "\"20307\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "sample_id": "4c3604c3845db50b__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "4c3604c3845db50b",
+ "query": "Oh hey, I just had the best iced matcha latte from the new caf\u00e9 down my street this afternoon, they added a little extra vanilla syrup and it was so smooth I almost drank the whole thing in two sips. Also my cat just figured out how to open the snack cabinet last night, I caught her sitting on the counter gnawing on a pack of tuna treats like she owned the place. Oh and I binged the first three episodes of that new fantasy series everyone\u2019s talking about last night, the costume design is insane I can\u2019t stop thinking about the lead character\u2019s embroidered cloak. Anyway, I need to cancel two of my pending orders please, the first one is order #W3289292 and the reason is I no longer need it, the second one is order #W9722559 and the cancellation reason is also no longer needed.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh hey, I just had the best iced matcha latte from the new caf\u00e9 down my street this afternoon, they added a little extra vanilla syrup and it was so smooth I almost drank the whole thing in two sips. Also my cat just figured out how to open the snack cabinet last night, I caught her sitting on the counter gnawing on a pack of tuna treats like she owned the place. Oh and I binged the first three episodes of that new fantasy series everyone\u2019s talking about last night, the costume design is insane I can\u2019t stop thinking about the lead character\u2019s embroidered cloak.",
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W3289292\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:1:cancel_pending_order:order_id",
+     "=",
+     "\"#W9722559\""
+    ],
+    [
+     "arg:1:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W3289292\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:1:cancel_pending_order:order_id",
+    "=",
+    "\"#W9722559\""
+   ],
+   [
+    "arg:1:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

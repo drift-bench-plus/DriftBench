@@ -1,0 +1,1488 @@
+{
+ "adapter": "tau2_airline",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [],
+    "writes": [
+     "update_reservation_flights",
+     "update_reservation_flights",
+     "update_reservation_flights",
+     "update_reservation_flights",
+     "update_reservation_flights"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:update_reservation_flights:cabin",
+    "arg:0:update_reservation_flights:flights",
+    "arg:0:update_reservation_flights:payment_id",
+    "arg:0:update_reservation_flights:reservation_id",
+    "arg:1:update_reservation_flights:cabin",
+    "arg:1:update_reservation_flights:flights",
+    "arg:1:update_reservation_flights:payment_id",
+    "arg:1:update_reservation_flights:reservation_id",
+    "arg:2:update_reservation_flights:cabin",
+    "arg:2:update_reservation_flights:flights",
+    "arg:2:update_reservation_flights:payment_id",
+    "arg:2:update_reservation_flights:reservation_id",
+    "arg:3:update_reservation_flights:cabin",
+    "arg:3:update_reservation_flights:flights",
+    "arg:3:update_reservation_flights:payment_id",
+    "arg:3:update_reservation_flights:reservation_id",
+    "arg:4:update_reservation_flights:cabin",
+    "arg:4:update_reservation_flights:flights",
+    "arg:4:update_reservation_flights:payment_id",
+    "arg:4:update_reservation_flights:reservation_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-21\",\"flight_number\":\"HAT028\"},{\"date\":\"2024-05-21\",\"flight_number\":\"HAT277\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"credit_card_2929732\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"JG7FMM\""
+    ],
+    [
+     "arg:1:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:1:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-28\",\"flight_number\":\"HAT080\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT076\"},{\"date\":\"2024-05-30\",\"flight_number\":\"HAT255\"},{\"date\":\"2024-05-30\",\"flight_number\":\"HAT148\"}]"
+    ],
+    [
+     "arg:1:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_3481935\""
+    ],
+    [
+     "arg:1:update_reservation_flights:reservation_id",
+     "=",
+     "\"2FBBAH\""
+    ],
+    [
+     "arg:2:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:2:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-24\",\"flight_number\":\"HAT232\"},{\"date\":\"2024-05-24\",\"flight_number\":\"HAT228\"}]"
+    ],
+    [
+     "arg:2:update_reservation_flights:payment_id",
+     "=",
+     "\"credit_card_2929732\""
+    ],
+    [
+     "arg:2:update_reservation_flights:reservation_id",
+     "=",
+     "\"X7BYG1\""
+    ],
+    [
+     "arg:3:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:3:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-23\",\"flight_number\":\"HAT084\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT175\"}]"
+    ],
+    [
+     "arg:3:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6847880\""
+    ],
+    [
+     "arg:3:update_reservation_flights:reservation_id",
+     "=",
+     "\"EQ1G6C\""
+    ],
+    [
+     "arg:4:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:4:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-21\",\"flight_number\":\"HAT276\"},{\"date\":\"2024-05-22\",\"flight_number\":\"HAT279\"}]"
+    ],
+    [
+     "arg:4:update_reservation_flights:payment_id",
+     "=",
+     "\"credit_card_9525117\""
+    ],
+    [
+     "arg:4:update_reservation_flights:reservation_id",
+     "=",
+     "\"BOH180\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1c2ce2d6e09b2edfccb546531c7c0bc3",
+    "kind": "statehash",
+    "value": "{\"db\":\"361a067372a4d57d23d10cfc560ba8d24cfd10862bb079be2c0e180459cefbbf\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "70c6383a9cb6cfc9",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-21",
+         "flight_number": "HAT028"
+        },
+        {
+         "date": "2024-05-21",
+         "flight_number": "HAT277"
+        }
+       ],
+       "payment_id": "credit_card_2929732",
+       "reservation_id": "JG7FMM"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT080"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT076"
+        },
+        {
+         "date": "2024-05-30",
+         "flight_number": "HAT255"
+        },
+        {
+         "date": "2024-05-30",
+         "flight_number": "HAT148"
+        }
+       ],
+       "payment_id": "gift_card_3481935",
+       "reservation_id": "2FBBAH"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-24",
+         "flight_number": "HAT232"
+        },
+        {
+         "date": "2024-05-24",
+         "flight_number": "HAT228"
+        }
+       ],
+       "payment_id": "credit_card_2929732",
+       "reservation_id": "X7BYG1"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-23",
+         "flight_number": "HAT084"
+        },
+        {
+         "date": "2024-05-23",
+         "flight_number": "HAT175"
+        }
+       ],
+       "payment_id": "gift_card_6847880",
+       "reservation_id": "EQ1G6C"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-21",
+         "flight_number": "HAT276"
+        },
+        {
+         "date": "2024-05-22",
+         "flight_number": "HAT279"
+        }
+       ],
+       "payment_id": "credit_card_9525117",
+       "reservation_id": "BOH180"
+      },
+      "name": "update_reservation_flights"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "18",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details",
+     "search_direct_flight"
+    ],
+    "writes": [
+     "update_reservation_flights"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:update_reservation_flights:cabin",
+    "arg:0:update_reservation_flights:flights",
+    "arg:0:update_reservation_flights:payment_id",
+    "arg:0:update_reservation_flights:reservation_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT266\"},{\"date\":\"2024-05-27\",\"flight_number\":\"HAT112\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_5634230\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"1N99U6\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1e503557c925b7950c522cf1ec0b0d9d",
+    "kind": "statehash",
+    "value": "{\"db\":\"dc171787dd84f7436c2ad66827f301e6cbdbe72167fcc1e3133dd08eb36778a5\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "d1bcffdd69b0ab17",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "flights": [
+        {
+         "date": "2024-05-19",
+         "flight_number": "HAT266"
+        },
+        {
+         "date": "2024-05-27",
+         "flight_number": "HAT112"
+        }
+       ],
+       "payment_id": "gift_card_5634230",
+       "reservation_id": "1N99U6"
+      },
+      "name": "update_reservation_flights"
+     }
+    ],
+    "reads": [
+     "get_reservation_details",
+     "search_direct_flight"
+    ]
+   },
+   "source_record": "30",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details"
+    ],
+    "writes": [
+     "cancel_reservation",
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "also:1:update_reservation_baggages",
+    "arg:0:cancel_reservation:reservation_id",
+    "arg:1:book_reservation:cabin",
+    "arg:1:book_reservation:destination",
+    "arg:1:book_reservation:flight_type",
+    "arg:1:book_reservation:flights",
+    "arg:1:book_reservation:insurance",
+    "arg:1:book_reservation:origin",
+    "arg:1:book_reservation:passengers",
+    "arg:1:book_reservation:payment_methods",
+    "arg:1:book_reservation:total_baggages",
+    "arg:1:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "also:1:update_reservation_baggages",
+     "=",
+     "{\"nonfree_baggages\":1,\"payment_id\":\"credit_card_7686643\",\"reservation_id\":\"D9R9S0\",\"total_baggages\":3}"
+    ],
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"VA5SGQ\""
+    ],
+    [
+     "arg:1:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:1:book_reservation:destination",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:1:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:1:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT169\"},{\"date\":\"2024-05-19\",\"flight_number\":\"HAT033\"}]"
+    ],
+    [
+     "arg:1:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:1:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:1:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1967-03-12\",\"first_name\":\"Raj\",\"last_name\":\"Brown\"}]"
+    ],
+    [
+     "arg:1:book_reservation:payment_methods",
+     "=",
+     "[\"credit_card_8003957\"]"
+    ],
+    [
+     "arg:1:book_reservation:total_baggages",
+     "=",
+     "1"
+    ],
+    [
+     "arg:1:book_reservation:user_id",
+     "=",
+     "\"raj_brown_5782\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "36213035dc2a0f47de334b228ceb47f2",
+    "kind": "statehash",
+    "value": "{\"db\":\"fcf70cddc455729eb577c75e602716f3a86732c7b6e275d587a3b4f921fd24da\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "5a490fd269d1cf98",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "VA5SGQ"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "JFK",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-17",
+         "flight_number": "HAT169"
+        },
+        {
+         "date": "2024-05-19",
+         "flight_number": "HAT033"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "DTW",
+       "passengers": [
+        {
+         "dob": "1967-03-12",
+         "first_name": "Raj",
+         "last_name": "Brown"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 282,
+         "payment_id": "credit_card_8003957"
+        }
+       ],
+       "total_baggages": 1,
+       "user_id": "raj_brown_5782"
+      },
+      "name": "book_reservation"
+     },
+     {
+      "arguments": {
+       "nonfree_baggages": 1,
+       "payment_id": "credit_card_7686643",
+       "reservation_id": "D9R9S0",
+       "total_baggages": 3
+      },
+      "name": "update_reservation_baggages"
+     }
+    ],
+    "reads": [
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details"
+    ],
+    "writes": [
+     "cancel_reservation",
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "also:0:update_reservation_baggages",
+    "arg:0:cancel_reservation:reservation_id",
+    "arg:1:book_reservation:cabin",
+    "arg:1:book_reservation:destination",
+    "arg:1:book_reservation:flight_type",
+    "arg:1:book_reservation:flights",
+    "arg:1:book_reservation:insurance",
+    "arg:1:book_reservation:origin",
+    "arg:1:book_reservation:passengers",
+    "arg:1:book_reservation:payment_methods",
+    "arg:1:book_reservation:total_baggages",
+    "arg:1:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "also:0:update_reservation_baggages",
+     "=",
+     "{\"nonfree_baggages\":0,\"payment_id\":\"credit_card_7686643\",\"reservation_id\":\"41WSQQ\",\"total_baggages\":3}"
+    ],
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"VA5SGQ\""
+    ],
+    [
+     "arg:1:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:1:book_reservation:destination",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:1:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:1:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT169\"},{\"date\":\"2024-05-19\",\"flight_number\":\"HAT033\"}]"
+    ],
+    [
+     "arg:1:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:1:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:1:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1967-03-12\",\"first_name\":\"Raj\",\"last_name\":\"Brown\"}]"
+    ],
+    [
+     "arg:1:book_reservation:payment_methods",
+     "=",
+     "[\"credit_card_8003957\"]"
+    ],
+    [
+     "arg:1:book_reservation:total_baggages",
+     "=",
+     "1"
+    ],
+    [
+     "arg:1:book_reservation:user_id",
+     "=",
+     "\"raj_brown_5782\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "7cac13e01f9a0a0504b30a9e4d2bf279",
+    "kind": "statehash",
+    "value": "{\"db\":\"5a0b01f2e3fc226425bf90a6db730468870dbb1e7c4fcb50656a308e589791b5\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "4f12b9b62718a750",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "VA5SGQ"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "JFK",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-17",
+         "flight_number": "HAT169"
+        },
+        {
+         "date": "2024-05-19",
+         "flight_number": "HAT033"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "DTW",
+       "passengers": [
+        {
+         "dob": "1967-03-12",
+         "first_name": "Raj",
+         "last_name": "Brown"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 282,
+         "payment_id": "credit_card_8003957"
+        }
+       ],
+       "total_baggages": 1,
+       "user_id": "raj_brown_5782"
+      },
+      "name": "book_reservation"
+     },
+     {
+      "arguments": {
+       "nonfree_baggages": 0,
+       "payment_id": "credit_card_7686643",
+       "reservation_id": "41WSQQ",
+       "total_baggages": 3
+      },
+      "name": "update_reservation_baggages"
+     }
+    ],
+    "reads": [
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details"
+    ],
+    "writes": [
+     "cancel_reservation",
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:1:book_reservation:cabin",
+    "arg:1:book_reservation:destination",
+    "arg:1:book_reservation:flight_type",
+    "arg:1:book_reservation:flights",
+    "arg:1:book_reservation:insurance",
+    "arg:1:book_reservation:origin",
+    "arg:1:book_reservation:passengers",
+    "arg:1:book_reservation:payment_methods",
+    "arg:1:book_reservation:total_baggages",
+    "arg:1:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "arg:1:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:1:book_reservation:destination",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:1:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:1:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT169\"},{\"date\":\"2024-05-19\",\"flight_number\":\"HAT033\"}]"
+    ],
+    [
+     "arg:1:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:1:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:1:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1967-03-12\",\"first_name\":\"Raj\",\"last_name\":\"Brown\"}]"
+    ],
+    [
+     "arg:1:book_reservation:payment_methods",
+     "=",
+     "[\"credit_card_8003957\"]"
+    ],
+    [
+     "arg:1:book_reservation:total_baggages",
+     "=",
+     "1"
+    ],
+    [
+     "arg:1:book_reservation:user_id",
+     "=",
+     "\"raj_brown_5782\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "32f1c4ca858719824e0690febca383d4",
+    "kind": "statehash",
+    "value": "{\"db\":\"120a20ef863131d31782af76232150717d5b8933b6b375708c66f14f214c5f1f\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "26d8f76ac2b3a126",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "JFK",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-17",
+         "flight_number": "HAT169"
+        },
+        {
+         "date": "2024-05-19",
+         "flight_number": "HAT033"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "DTW",
+       "passengers": [
+        {
+         "dob": "1967-03-12",
+         "first_name": "Raj",
+         "last_name": "Brown"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 282,
+         "payment_id": "credit_card_8003957"
+        }
+       ],
+       "total_baggages": 1,
+       "user_id": "raj_brown_5782"
+      },
+      "name": "book_reservation"
+     }
+    ],
+    "reads": [
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details"
+    ],
+    "writes": [
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:book_reservation:cabin",
+    "arg:0:book_reservation:destination",
+    "arg:0:book_reservation:flight_type",
+    "arg:0:book_reservation:flights",
+    "arg:0:book_reservation:insurance",
+    "arg:0:book_reservation:origin",
+    "arg:0:book_reservation:passengers",
+    "arg:0:book_reservation:payment_methods",
+    "arg:0:book_reservation:total_baggages",
+    "arg:0:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT169\"},{\"date\":\"2024-05-19\",\"flight_number\":\"HAT033\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1967-03-12\",\"first_name\":\"Raj\",\"last_name\":\"Brown\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"credit_card_8003957\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "1"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"raj_brown_5782\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "32f1c4ca858719824e0690febca383d4",
+    "kind": "statehash",
+    "value": "{\"db\":\"120a20ef863131d31782af76232150717d5b8933b6b375708c66f14f214c5f1f\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "f13fc76d49b288ce",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "JFK",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-17",
+         "flight_number": "HAT169"
+        },
+        {
+         "date": "2024-05-19",
+         "flight_number": "HAT033"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "DTW",
+       "passengers": [
+        {
+         "dob": "1967-03-12",
+         "first_name": "Raj",
+         "last_name": "Brown"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 282,
+         "payment_id": "credit_card_8003957"
+        }
+       ],
+       "total_baggages": 1,
+       "user_id": "raj_brown_5782"
+      },
+      "name": "book_reservation"
+     }
+    ],
+    "reads": [
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details"
+    ],
+    "writes": [
+     "cancel_reservation",
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:cancel_reservation:reservation_id",
+    "arg:1:book_reservation:cabin",
+    "arg:1:book_reservation:destination",
+    "arg:1:book_reservation:flight_type",
+    "arg:1:book_reservation:flights",
+    "arg:1:book_reservation:insurance",
+    "arg:1:book_reservation:origin",
+    "arg:1:book_reservation:passengers",
+    "arg:1:book_reservation:payment_methods",
+    "arg:1:book_reservation:total_baggages",
+    "arg:1:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"VA5SGQ\""
+    ],
+    [
+     "arg:1:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:1:book_reservation:destination",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:1:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:1:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT169\"},{\"date\":\"2024-05-19\",\"flight_number\":\"HAT212\"}]"
+    ],
+    [
+     "arg:1:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:1:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:1:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1967-03-12\",\"first_name\":\"Raj\",\"last_name\":\"Brown\"}]"
+    ],
+    [
+     "arg:1:book_reservation:payment_methods",
+     "=",
+     "[\"credit_card_8003957\"]"
+    ],
+    [
+     "arg:1:book_reservation:total_baggages",
+     "=",
+     "1"
+    ],
+    [
+     "arg:1:book_reservation:user_id",
+     "=",
+     "\"raj_brown_5782\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0690290cdc092dd601d4426b0db62170",
+    "kind": "statehash",
+    "value": "{\"db\":\"765cd2e0af56b0a6756f092ea2dec4a383c352c206f3e0c6ba01b4b700f4fa77\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "f6235b7bff0341a9",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "VA5SGQ"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "JFK",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-17",
+         "flight_number": "HAT169"
+        },
+        {
+         "date": "2024-05-19",
+         "flight_number": "HAT212"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "DTW",
+       "passengers": [
+        {
+         "dob": "1967-03-12",
+         "first_name": "Raj",
+         "last_name": "Brown"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 363,
+         "payment_id": "credit_card_8003957"
+        }
+       ],
+       "total_baggages": 1,
+       "user_id": "raj_brown_5782"
+      },
+      "name": "book_reservation"
+     }
+    ],
+    "reads": [
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_reservation_details"
+    ],
+    "writes": [
+     "cancel_reservation",
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:cancel_reservation:reservation_id",
+    "arg:1:book_reservation:cabin",
+    "arg:1:book_reservation:destination",
+    "arg:1:book_reservation:flight_type",
+    "arg:1:book_reservation:flights",
+    "arg:1:book_reservation:insurance",
+    "arg:1:book_reservation:origin",
+    "arg:1:book_reservation:passengers",
+    "arg:1:book_reservation:payment_methods",
+    "arg:1:book_reservation:total_baggages",
+    "arg:1:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"VA5SGQ\""
+    ],
+    [
+     "arg:1:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:1:book_reservation:destination",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:1:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:1:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT169\"},{\"date\":\"2024-05-19\",\"flight_number\":\"HAT033\"}]"
+    ],
+    [
+     "arg:1:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:1:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:1:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1967-03-12\",\"first_name\":\"Raj\",\"last_name\":\"Brown\"}]"
+    ],
+    [
+     "arg:1:book_reservation:payment_methods",
+     "=",
+     "[\"credit_card_8003957\"]"
+    ],
+    [
+     "arg:1:book_reservation:total_baggages",
+     "=",
+     "2"
+    ],
+    [
+     "arg:1:book_reservation:user_id",
+     "=",
+     "\"raj_brown_5782\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1b7c5f992f79cc007a15f5747ebadda2",
+    "kind": "statehash",
+    "value": "{\"db\":\"650e498dd270cac07b1e867d25e25d6995c21c329f5cc74280cfe963f7c71348\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "189da7a53c7c9dcf",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "VA5SGQ"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "JFK",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-17",
+         "flight_number": "HAT169"
+        },
+        {
+         "date": "2024-05-19",
+         "flight_number": "HAT033"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 1,
+       "origin": "DTW",
+       "passengers": [
+        {
+         "dob": "1967-03-12",
+         "first_name": "Raj",
+         "last_name": "Brown"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 332,
+         "payment_id": "credit_card_8003957"
+        }
+       ],
+       "total_baggages": 2,
+       "user_id": "raj_brown_5782"
+      },
+      "name": "book_reservation"
+     }
+    ],
+    "reads": [
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "min_gt_moved_edges": 1,
+  "require_full_quota": false,
+  "seed": 7
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "airline_request",
+     "reads": [],
+     "writes": [
+      "update_reservation_flights",
+      "update_reservation_flights",
+      "update_reservation_flights",
+      "update_reservation_flights",
+      "update_reservation_flights"
+     ]
+    }
+   },
+   "dst": "70c6383a9cb6cfc9",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "18",
+   "src": "0e02007f75298307"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "airline_request",
+     "reads": [
+      "get_reservation_details",
+      "search_direct_flight"
+     ],
+     "writes": [
+      "update_reservation_flights"
+     ]
+    }
+   },
+   "dst": "d1bcffdd69b0ab17",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "30",
+   "src": "0e02007f75298307"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "also:1:update_reservation_baggages",
+      "=",
+      "{\"nonfree_baggages\":1,\"payment_id\":\"credit_card_7686643\",\"reservation_id\":\"D9R9S0\",\"total_baggages\":3}"
+     ]
+    ]
+   },
+   "dst": "5a490fd269d1cf98",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "0e02007f75298307"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "also:0:update_reservation_baggages",
+      "=",
+      "{\"nonfree_baggages\":0,\"payment_id\":\"credit_card_7686643\",\"reservation_id\":\"41WSQQ\",\"total_baggages\":3}"
+     ]
+    ]
+   },
+   "dst": "4f12b9b62718a750",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "0e02007f75298307"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "arg:0:cancel_reservation:reservation_id",
+      "=",
+      "\"VA5SGQ\""
+     ]
+    ]
+   },
+   "dst": "26d8f76ac2b3a126",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "0e02007f75298307"
+  },
+  {
+   "delta": {
+    "removed_request": "cancel_reservation"
+   },
+   "dst": "f13fc76d49b288ce",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "0e02007f75298307"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "arg:1:book_reservation:flights",
+      "=",
+      "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT169\"},{\"date\":\"2024-05-19\",\"flight_number\":\"HAT033\"}]",
+      "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT169\"},{\"date\":\"2024-05-19\",\"flight_number\":\"HAT212\"}]"
+     ]
+    ]
+   },
+   "dst": "f6235b7bff0341a9",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "0e02007f75298307"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "arg:1:book_reservation:total_baggages",
+      "=",
+      "1",
+      "2"
+     ]
+    ]
+   },
+   "dst": "189da7a53c7c9dcf",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "0e02007f75298307"
+  }
+ ],
+ "env_id": "tau2_airline_desk",
+ "env_spec": {
+  "domain": "airline",
+  "env_id": "tau2_airline_desk",
+  "env_key": "tau2_airline_desk",
+  "initialization": {},
+  "solo_mode": false
+ },
+ "root": {
+  "base": {
+   "kind": "airline_request",
+   "reads": [
+    "get_reservation_details"
+   ],
+   "writes": [
+    "cancel_reservation",
+    "book_reservation"
+   ]
+  },
+  "bound_slots": [
+   "arg:0:cancel_reservation:reservation_id",
+   "arg:1:book_reservation:cabin",
+   "arg:1:book_reservation:destination",
+   "arg:1:book_reservation:flight_type",
+   "arg:1:book_reservation:flights",
+   "arg:1:book_reservation:insurance",
+   "arg:1:book_reservation:origin",
+   "arg:1:book_reservation:passengers",
+   "arg:1:book_reservation:payment_methods",
+   "arg:1:book_reservation:total_baggages",
+   "arg:1:book_reservation:user_id"
+  ],
+  "conditions": [
+   [
+    "arg:0:cancel_reservation:reservation_id",
+    "=",
+    "\"VA5SGQ\""
+   ],
+   [
+    "arg:1:book_reservation:cabin",
+    "=",
+    "\"economy\""
+   ],
+   [
+    "arg:1:book_reservation:destination",
+    "=",
+    "\"JFK\""
+   ],
+   [
+    "arg:1:book_reservation:flight_type",
+    "=",
+    "\"round_trip\""
+   ],
+   [
+    "arg:1:book_reservation:flights",
+    "=",
+    "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT169\"},{\"date\":\"2024-05-19\",\"flight_number\":\"HAT033\"}]"
+   ],
+   [
+    "arg:1:book_reservation:insurance",
+    "=",
+    "\"no\""
+   ],
+   [
+    "arg:1:book_reservation:origin",
+    "=",
+    "\"DTW\""
+   ],
+   [
+    "arg:1:book_reservation:passengers",
+    "=",
+    "[{\"dob\":\"1967-03-12\",\"first_name\":\"Raj\",\"last_name\":\"Brown\"}]"
+   ],
+   [
+    "arg:1:book_reservation:payment_methods",
+    "=",
+    "[\"credit_card_8003957\"]"
+   ],
+   [
+    "arg:1:book_reservation:total_baggages",
+    "=",
+    "1"
+   ],
+   [
+    "arg:1:book_reservation:user_id",
+    "=",
+    "\"raj_brown_5782\""
+   ]
+  ],
+  "ground_truth": {
+   "hash": "dcafd911cdf9458b5d14221ef9a25d54",
+   "kind": "statehash",
+   "value": "{\"db\":\"55e7aa074a761cbd34fa82c9e24650c951b9cefd33e70e3a5568242602349aaa\",\"errors\":[]}"
+  },
+  "gt_extensional": false,
+  "intent_id": "0e02007f75298307",
+  "is_seed": true,
+  "recipe": {
+   "actions": [
+    {
+     "arguments": {
+      "reservation_id": "VA5SGQ"
+     },
+     "name": "cancel_reservation"
+    },
+    {
+     "arguments": {
+      "cabin": "economy",
+      "destination": "JFK",
+      "flight_type": "round_trip",
+      "flights": [
+       {
+        "date": "2024-05-17",
+        "flight_number": "HAT169"
+       },
+       {
+        "date": "2024-05-19",
+        "flight_number": "HAT033"
+       }
+      ],
+      "insurance": "no",
+      "nonfree_baggages": 0,
+      "origin": "DTW",
+      "passengers": [
+       {
+        "dob": "1967-03-12",
+        "first_name": "Raj",
+        "last_name": "Brown"
+       }
+      ],
+      "payment_methods": [
+       {
+        "amount": 282,
+        "payment_id": "credit_card_8003957"
+       }
+      ],
+      "total_baggages": 1,
+      "user_id": "raj_brown_5782"
+     },
+     "name": "book_reservation"
+    }
+   ],
+   "reads": [
+    "get_reservation_details"
+   ]
+  },
+  "source_record": "29",
+  "unbound_slots": [
+   "also:0:update_reservation_baggages",
+   "also:1:update_reservation_baggages",
+   "arg:0:cancel_reservation:reservation_id",
+   "arg:1:book_reservation:flights",
+   "arg:1:book_reservation:total_baggages"
+  ]
+ },
+ "tree_id": "fe1ee2473ef4a1d9"
+}

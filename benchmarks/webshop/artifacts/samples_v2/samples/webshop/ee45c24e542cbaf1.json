@@ -1,0 +1,201 @@
+{
+ "adapter": "webshop",
+ "cluster": "area rugs",
+ "fidelity_notes": [],
+ "goal_idx": 248,
+ "ground_truth": {
+  "cardinality": 25,
+  "hash": "374e34b9466252e7798abfa74da59779",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00CO2VO5C\",[[\"color\",\"red  |  ivory\"],[\"size\",\"9 ft x 12 ft\"]]]",
+   "[\"B00NC2HKQK\",[[\"color\",\"ivory\"],[\"size\",\"9 ft x 12 ft\"]]]",
+   "[\"B00PQA2610\",[[\"color\",\"navy  |  ivory\"],[\"size\",\"6 ft x 9 ft\"]]]",
+   "[\"B0181DGI8U\",[[\"color\",\"ivory\"],[\"size\",\"2 ft 3 in x 3 ft 11 in\"]]]",
+   "[\"B01B9A5M2U\",[[\"color\",\"ivory | silver\"],[\"size\",\"9 ft x 12 ft\"]]]",
+   "[\"B01DW8ODJ0\",[[\"color\",\"ivory\"],[\"size\",\"2 ft x 3 ft\"]]]",
+   "[\"B01DW95JOW\",[[\"color\",\"ivory\"],[\"size\",\"2 ft x 3 ft\"]]]",
+   "[\"B01GS1PTN2\",[[\"color\",\"navy  |  ivory\"],[\"size\",\"9 ft x 12 ft\"]]]",
+   "[\"B01GS1Z1YY\",[[\"color\",\"navy | ivory\"],[\"size\",\"2' 2\\\" x 9'\"]]]",
+   "[\"B01MYZMIHB\",[[\"color\",\"ivory | navy\"],[\"size\",\"9'\"]]]",
+   "[\"B073PC3PWD\",[[\"color\",\"ivory  |  multi\"],[\"size\",\"9 ft x 9 ft\"]]]",
+   "[\"B077Y582ZF\",[[\"color\",\"navy | ivory\"],[\"size\",\"9 ft x 12 ft\"]]]",
+   "[\"B07HFKMQHB\",[[\"color\",\"ivory\"],[\"size\",\"9 ft x 12 ft\"]]]",
+   "[\"B07JJDXFJL\",[[\"color\",\"red  |  ivory\"],[\"size\",\"9 ft x 9 ft\"]]]",
+   "[\"B07K2T7C5P\",[[\"color\",\"ivory | pink\"],[\"size\",\"2 ft x 4 ft\"]]]",
+   "[\"B07K3DBFX7\",[[\"color\",\"navy | ivory\"],[\"size\",\"2 ft x 4 ft\"]]]",
+   "[\"B07V3961WB\",[[\"color\",\"ivory | pink\"],[\"size\",\"9 ft x 12 ft\"]]]",
+   "[\"B082LJ5GKD\",[[\"color\",\"navy  |  ivory\"],[\"size\",\"2 ft x 9 ft\"]]]",
+   "[\"B086L4XJDW\",[[\"color\",\"ivory | navy\"],[\"size\",\"2' x 9'\"]]]",
+   "[\"B087N4ZSHL\",[[\"color\",\"ivory\"],[\"size\",\"2 ft x 8 ft\"]]]",
+   "[\"B08CLXNBBS\",[[\"color\",\"ivory\"],[\"size\",\"2 ft x 8 ft\"]]]",
+   "[\"B08VNBV6NV\",[[\"color\",\"ivory 6\"],[\"size\",\"9 ft x 12 ft\"]]]",
+   "[\"B08VNLZTJ9\",[[\"color\",\"ivory 5\"],[\"size\",\"9 ft x 12 ft\"]]]",
+   "[\"B08W5BL6JJ\",[[\"color\",\"ivory 1\"],[\"size\",\"9 ft x 12 ft\"]]]",
+   "[\"B08W5CBMRM\",[[\"color\",\"ivory 1\"],[\"size\",\"9 ft x 12 ft\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:dining room",
+    "=",
+    "dining room"
+   ],
+   [
+    "option:0",
+    "=",
+    "navy  |  ivory"
+   ],
+   [
+    "option:1",
+    "=",
+    "2 ft x 9 ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    170
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "f03cbbdb67ad5c9b"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dining room",
+     "=",
+     "dining room"
+    ],
+    [
+     "option:0",
+     "=",
+     "navy  |  ivory"
+    ],
+    [
+     "option:1",
+     "=",
+     "2 ft x 9 ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     170
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning repotting my snake plant and pothos, and I’m trying to figure out the best spot for a new hanging macramé planter I picked up at the local craft fair last weekend. The craft fair had so many cute homemade candles too, I grabbed a vanilla cedar one that’s been making my whole apartment smell amazing all day. I even stopped at the bakery on the way home and picked up a lemon scone that was still warm from the oven.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:dining room",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning repotting my snake plant and pothos, and I’m trying to figure out the best spot for a new hanging macramé planter I picked up at the local craft fair last weekend. The craft fair had so many cute homemade candles too, I grabbed a vanilla cedar one that’s been making my whole apartment smell amazing all day. I even stopped at the bakery on the way home and picked up a lemon scone that was still warm from the oven. Now I’m looking for area rugs for the dining room, I want one that comes in navy or ivory, sized 2 ft x 9 ft, and my price limit is $170.",
+ "render_attempts": 1,
+ "sample_id": "ee45c24e542cbaf1",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the area rugs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2304ea46e3ffdb25"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the area rugs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4df8086c9876a888"
+  },
+  {
+   "announcement": "Also, it needs to be gray item.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cad8128e521c6353"
+  },
+  {
+   "announcement": "Also, it needs to be non slip.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f6c1b783670928b7"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0e9af9ebe1f918ca"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bbad473000db8de0"
+  },
+  {
+   "announcement": "Actually, make it 1 ft 10 in x 2 ft 10 in instead of navy  |  ivory.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "35f8be9a9157cf49"
+  },
+  {
+   "announcement": "Actually, make it \"6'7\" x 9' instead of navy  |  ivory.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f293e2abc11ab141"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 25,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 25,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like a 2 foot by 9 foot long navy floor runner for my dining room.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "1a51f2a02dce7feb",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,183 @@
+{
+ "adapter": "webshop",
+ "cluster": "decorative mirrors",
+ "fidelity_notes": [],
+ "goal_idx": 118,
+ "ground_truth": {
+  "cardinality": 18,
+  "hash": "66c7afaf210939dfbc3b01bb6c31b18c",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07LGYJLRX\",[[\"color\",\"d\"]]]",
+   "[\"B07LGZB8W6\",[[\"color\",\"d\"]]]",
+   "[\"B07MMWSSQ2\",[[\"color\",\"d\"]]]",
+   "[\"B0821KNWQF\",[[\"color\",\"d\"]]]",
+   "[\"B0836JV99X\",[[\"color\",\"d\"]]]",
+   "[\"B083CVMM5B\",[[\"color\",\"d\"]]]",
+   "[\"B08CH1977X\",[[\"color\",\"d\"]]]",
+   "[\"B08HS843JX\",[[\"color\",\"d\"]]]",
+   "[\"B08LDM11F4\",[[\"color\",\"d\"]]]",
+   "[\"B08MFH9HQJ\",[[\"color\",\"d\"]]]",
+   "[\"B08NBK6DWF\",[[\"color\",\"d\"]]]",
+   "[\"B08NV9QDQS\",[[\"color\",\"d\"]]]",
+   "[\"B08X9ZVYGL\",[[\"color\",\"d\"]]]",
+   "[\"B08XYX55PB\",[[\"color\",\"d\"]]]",
+   "[\"B08XYZS7MC\",[[\"color\",\"d\"]]]",
+   "[\"B095YLWYCM\",[[\"size\",\"d\"]]]",
+   "[\"B09L76JXWB\",[[\"color\",\"d\"]]]",
+   "[\"B09P4VC71X\",[[\"color\",\"d\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:wall mounted",
+    "=",
+    "wall mounted"
+   ],
+   [
+    "option:0",
+    "=",
+    "d"
+   ],
+   [
+    "price_upper",
+    "<=",
+    180
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "0cd0d9ebc39fe71e"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:wall mounted",
+     "=",
+     "wall mounted"
+    ],
+    [
+     "option:0",
+     "=",
+     "d"
+    ],
+    [
+     "price_upper",
+     "<=",
+     180
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:wall mounted",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that wall mounted decorative mirrors in option d work really well for small entryways, and they usually cost around 180 or less.",
+ "render_attempts": 2,
+ "sample_id": "7ea55d16c413f831",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the decorative mirrors instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "26c7220a1a52f4d2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the decorative mirrors instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "3bdc77f054335cab"
+  },
+  {
+   "announcement": "Also, it needs to be dining room.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "21ea7763b00a43eb"
+  },
+  {
+   "announcement": "Also, it needs to be wall art.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d24d1df2a7d4f315"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c2dc65952e69dab2"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d5e068520bf23372"
+  },
+  {
+   "announcement": "Actually, make it 23.6\" instead of d.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "008a45e16706f62c"
+  },
+  {
+   "announcement": "Actually, make it 20\" instead of d.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6980307ade20caaa"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 18,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 18,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a wall mounted mirror in the color d.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "f77cd43988662c2f",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

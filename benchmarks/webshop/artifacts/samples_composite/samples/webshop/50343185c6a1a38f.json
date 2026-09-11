@@ -1,0 +1,198 @@
+{
+ "sample_id": "50343185c6a1a38f",
+ "tree_id": "6a8dd7045af7540c",
+ "adapter": "webshop",
+ "cluster": "body care",
+ "goal_idx": 10,
+ "split": "test",
+ "source_instruction": "i am looking fresh scent body lotion for dry skin.",
+ "query": "I was out walking my golden retriever this morning and he stopped to roll in a whole patch of clover that was absolutely swarming with bumblebees, I froze so still I swear I didn\u2019t breathe for a full minute waiting for him to get stung. When I got home I realized I left my favorite reusable iced coffee tumbler on the park bench, the one with the little hand-painted sunflowers on it my cousin got me for my birthday last year. I even stopped to ask the barista at the corner shop if anyone had turned it in, but no one had dropped it off yet. Anyway, can you help me find body care stuff for flaky sun-scorched skin that has that fresh vibe, for under $20?",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:dry skin"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:dry skin",
+    "dry skin",
+    "flaky sun-scorched skin"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was out walking my golden retriever this morning and he stopped to roll in a whole patch of clover that was absolutely swarming with bumblebees, I froze so still I swear I didn\u2019t breathe for a full minute waiting for him to get stung. When I got home I realized I left my favorite reusable iced coffee tumbler on the park bench, the one with the little hand-painted sunflowers on it my cousin got me for my birthday last year. I even stopped to ask the barista at the corner shop if anyone had turned it in, but no one had dropped it off yet. Anyway,",
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:dry skin"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dry skin",
+     "=",
+     "flaky sun-scorched skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "fresh"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "a5e02c6010871afb"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 9,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 9,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "e528bc01f86f4414",
+  "conditions": [
+   [
+    "attr:dry skin",
+    "=",
+    "dry skin"
+   ],
+   [
+    "option:0",
+    "=",
+    "fresh"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:dry skin"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 9,
+  "value": [
+   "[\"B00OQ1ZKO0\",[[\"scent\",\"fresh\"]]]",
+   "[\"B07NNXYHNM\",[[\"scent\",\"invigorating ocean-fresh fragrance\"]]]",
+   "[\"B07TFHZT47\",[[\"scent\",\"fresh sea salt\"]]]",
+   "[\"B0837311RV\",[[\"scent\",\"active + fresh\"]]]",
+   "[\"B086K1S96X\",[[\"scent\",\"extra fresh\"]]]",
+   "[\"B0875R9D9Q\",[[\"style\",\"fresh and fruity\"]]]",
+   "[\"B087Y28XLM\",[[\"scent\",\"fresh\"]]]",
+   "[\"B08DDYN4GB\",[[\"style\",\"fresh fusion\"]]]",
+   "[\"B08ZG91F9V\",[[\"scent\",\"fresh pomelo\"]]]"
+  ],
+  "hash": "1dfd531d953bd15d0f3978c308a1cdf6"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "44da8667d447c513",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the body care instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b7549c1d6038c0f0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the body care instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "472cbbfd796b790d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gluten free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "89313d391a559d1d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be clinically proven."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6aa9bbbf0d6a16e5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b7898de2d8a7134d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "887ef28075d55a56",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 101.2 ounce instead of fresh."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c5cf16a76ef4d72c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 12 fl oz (pack of 1) instead of fresh."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

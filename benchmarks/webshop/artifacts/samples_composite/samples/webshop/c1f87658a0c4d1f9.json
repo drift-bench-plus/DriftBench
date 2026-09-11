@@ -1,0 +1,208 @@
+{
+ "sample_id": "c1f87658a0c4d1f9",
+ "tree_id": "b2894a281f6aafa7",
+ "adapter": "webshop",
+ "cluster": "toothpaste",
+ "goal_idx": 457,
+ "split": "test",
+ "source_instruction": "i'm looking for a toothpaste for teeth whitening in blueberry scent",
+ "query": "Ugh, I swear the neighbor\u2019s tabby keeps sneaking onto my fire escape to knock over my potted succulents, I had to tape little plastic spikes along the railing last night and I still found chewed-up succulent leaves by my doormat this morning. Oh and I burned my oatmeal so bad the smoke alarm went off right as I was rushing out the door, I\u2019m pretty sure the guy down the hall thought there was an actual fire. Anyway, I\u2019m in the toothpaste section right now, can you grab me a teeth whitening toothpaste under $20? I want that one, y\u2019know?",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear the neighbor\u2019s tabby keeps sneaking onto my fire escape to knock over my potted succulents, I had to tape little plastic spikes along the railing last night and I still found chewed-up succulent leaves by my doormat this morning. Oh and I burned my oatmeal so bad the smoke alarm went off right as I was rushing out the door, I\u2019m pretty sure the guy down the hall thought there was an actual fire.",
+  "retained": [
+   "attr:teeth whitening",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:teeth whitening",
+     "=",
+     "teeth whitening"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d1bda2bb3e59592f"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 25,
+  "lit_card": 658,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 658,
+    "true_card": 25,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "a010ac81c363ca1d",
+  "conditions": [
+   [
+    "attr:teeth whitening",
+    "=",
+    "teeth whitening"
+   ],
+   [
+    "option:0",
+    "=",
+    "blueberry"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 25,
+  "value": [
+   "[\"B08LPPWQSH\",[[\"color\",\"blueberry taste\"]]]",
+   "[\"B09CN4ZPZQ\",[[\"flavor name\",\"blueberry\"]]]",
+   "[\"B09D96J2HR\",[[\"color\",\"blueberries\"]]]",
+   "[\"B09DGNDBRM\",[[\"color\",\"12 lower 8 inlaid blue drill set\"]]]",
+   "[\"B09L56MK6J\",[[\"color\",\"blue\"]]]",
+   "[\"B09L5LDQK6\",[[\"color\",\"blue\"]]]",
+   "[\"B09M2SWDNB\",[[\"color\",\"blue\"]]]",
+   "[\"B09NC681PJ\",[[\"color\",\"blue\"]]]",
+   "[\"B09P3LB83H\",[[\"pattern name\",\"blueberry\"]]]",
+   "[\"B09PHL4214\",[[\"color\",\"blueberry\"]]]",
+   "[\"B09PHLSFCP\",[[\"scent\",\"blueberry\"]]]",
+   "[\"B09QPHM761\",[[\"color\",\"blue\"]]]",
+   "[\"B09QQL7S3P\",[[\"color\",\"1pc blue\"]]]",
+   "[\"B09QQM4W65\",[[\"color\",\"blueberry\"]]]",
+   "[\"B09QQMVZ37\",[[\"color\",\"blueberry + passion fruit\"]]]",
+   "[\"B09QXG91MS\",[[\"flavor name\",\"blueberry\"]]]",
+   "[\"B09R3MZ2RT\",[[\"color\",\"blue\"]]]",
+   "[\"B09R3VJLZZ\",[[\"color\",\"2pcs blue\"]]]",
+   "[\"B09R42YXKG\",[[\"color\",\"1pcs blue\"]]]",
+   "[\"B09R9MYMCH\",[[\"color\",\"blue\"]]]",
+   "[\"B09S6JJ43N\",[[\"size\",\"blueberry-bright white\"]]]",
+   "[\"B09S6MW1K1\",[[\"color\",\"blue\"]]]",
+   "[\"B09SB8QZLD\",[[\"color\",\"(blueberry + passion fruit)\"]]]",
+   "[\"B09SCVVTYX\",[[\"color\",\"blueberry + passion fruit\"]]]",
+   "[\"B09SZ5K381\",[[\"color\",\"blueberry\"]]]"
+  ],
+  "hash": "97eb677077ab1e1eecf550f5dccbfea9"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6131833197b2580f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ee2213fe4b5062d6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "22fb45aa9d62758a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy use."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c65b1d3c17f173ee",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be electric toothbrush."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6a2bd68117e8855d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b91cb9d2e07ccb07",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "af7f9d25c95f43f1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 2pcs 50ml instead of blueberry."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cb90bdf142c22029",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 2pcsteeth repair instead of blueberry."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,230 @@
+{
+ "sample_id": "78cde05230184e53",
+ "tree_id": "d8635b8c1de27ad3",
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "goal_idx": 409,
+ "split": "test",
+ "source_instruction": "i am looking for tulua apple cider vinegar lemon ginger flavored fruit juice that is certified organic.",
+ "query": "Ugh, I swear the community garden plot I signed up for back in spring is out to test every last bit of my patience this week. I showed up yesterday to water my tomato plants and found that a family of very bold, very chonky squirrels had chewed through half the mesh covering I put up to keep critters out, and they\u2019d nibbled right through three of my almost-ripe heirloom tomatoes too. On the walk over to the garden this morning I even stopped to say hi to the fluffy orange feral cat that hangs out by the entrance, and the little guy straight up stole the blueberry muffin I\u2019d stashed in my tote bag for my post-watering snack before I could even blink. I was still laughing about that silly little heist when I cut through the grocery store on my way home, figuring I\u2019d knock a few things off my list instead of making a separate trip later.\nHey there, I\u2019m browsing the beverages section right now trying to grab some nice certified organic vinegar, y\u2019know? I want one that comes with a free reusable silicone pour spout bundled right with the bottle, and I\u2019m only looking to spend a reasonable amount on it since I don\u2019t wanna blow my grocery budget this week. Wait, actually, hold on, I know I had a specific kind I loved last time but I\u2019m totally blanking on the exact flavor and brand I need to pick up. Can you help me track down the right option that fits what I\u2019m looking for?",
+ "strategy_ids": [
+  "insufficient_information",
+  "contextual_irrelevance",
+  "irrelevant_information",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+contextual_irrelevance+irrelevant_information+vagueness_subjectivity",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "contextual_irrelevance",
+   "irrelevant_information",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "comes with a free reusable silicone pour spout bundled right with the bottle",
+    "condition": [
+     "attr:free_gift",
+     "=",
+     "free reusable silicone pour spout"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear the community garden plot I signed up for back in spring is out to test every last bit of my patience this week. I showed up yesterday to water my tomato plants and found that a family of very bold, very chonky squirrels had chewed through half the mesh covering I put up to keep critters out, and they\u2019d nibbled right through three of my almost-ripe heirloom tomatoes too. On the walk over to the garden this morning I even stopped to say hi to the fluffy orange feral cat that hangs out by the entrance, and the little guy straight up stole the blueberry muffin I\u2019d stashed in my tote bag for my post-watering snack before I could even blink. I was still laughing about that silly little heist when I cut through the grocery store on my way home, figuring I\u2019d knock a few things off my list instead of making a separate trip later.",
+  "retained": [
+   "attr:certified organic"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "attr:free_gift",
+     "=",
+     "free reusable silicone pour spout"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "09063337b0a05adc"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 13,
+  "lit_card": 0,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 64,
+    "true_card": 13,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 13,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 15,
+    "true_card": 13,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "9abc84ff04905971",
+  "conditions": [
+   [
+    "attr:certified organic",
+    "=",
+    "certified organic"
+   ],
+   [
+    "option:0",
+    "=",
+    "tulua apple cider vinegar lemon ginger"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 13,
+  "value": [
+   "[\"B007PY8M9A\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B078Y9KGCD\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B07C63XYP4\",[[\"flavor name\",\"lemon-lime\"]]]",
+   "[\"B07GBGZZLC\",[[\"flavor\",\"apple cider vinegar lemon ginger\"]]]",
+   "[\"B07S6ZTGLY\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B087MBRQ51\",[[\"flavor name\",\"ginger lemon\"]]]",
+   "[\"B08DYDRTV1\",[[\"flavor name\",\"ginger lemonade\"]]]",
+   "[\"B08FV8RR9Y\",[[\"flavor name\",\"lemon\"]]]",
+   "[\"B08HTR6M9M\",[[\"flavor name\",\"ginger lemon\"]]]",
+   "[\"B08LP34HMM\",[[\"flavor name\",\"ginger lemon honey (pack of 2)\"]]]",
+   "[\"B08XZXPK93\",[[\"flavor name\",\"lemon pepper chicken\"]]]",
+   "[\"B0936QYZ8K\",[[\"flavor name\",\"lemon\"]]]",
+   "[\"B09BK4W8GB\",[[\"flavor name\",\"ginger lemon\"]]]"
+  ],
+  "hash": "b498997477baf2189a9bcf9d017cf856"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2398dab1f90987e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "38b64bfd9d3bf2d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bdef8c355e557c44",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cane sugar."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f18b778e27fff9a6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be natural flavors."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "09e1f35be0713809",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "af12f9b9de3bb07b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "681e7aa62244ea97",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.23 ounce (pack of 75) instead of tulua apple cider vinegar lemon ginger."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7fab184d8b90ce08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.21 ounce (pack of 10) instead of tulua apple cider vinegar lemon ginger."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

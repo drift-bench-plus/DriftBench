@@ -1,0 +1,251 @@
+{
+ "sample_id": "3f9cbbd8346c8108",
+ "tree_id": "99ee37f57edab9b0",
+ "adapter": "webshop",
+ "cluster": "eyes care",
+ "goal_idx": 112,
+ "split": "test",
+ "source_instruction": "i am looking for anti aging cream with green tea and hyaluronic acid. i want it to be effective for dark circles",
+ "query": "Hey, I\u2019m looking for eye care products that target anti-aging concerns and dark circles, right? Since you probably don\u2019t have any eye treatments with green tea in stock right now, just go ahead and pull options that have hyaluronic acid instead. I don\u2019t want anything too expensive, so just show me the ones that fit a reasonable budget, yeah?",
+ "strategy_ids": [
+  "insufficient_information",
+  "false_presupposition"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+false_presupposition",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "false_presupposition"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you probably don\u2019t have any eye treatments with green tea in stock right now",
+    "condition": null,
+    "about": [
+     "attr:green tea",
+     "green tea"
+    ],
+    "alternative": [
+     "attr:green tea",
+     "hyaluronic acid"
+    ]
+   }
+  ],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:anti aging",
+   "attr:dark circles",
+   "attr:green tea",
+   "attr:hyaluronic acid"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:anti aging",
+     "=",
+     "anti aging"
+    ],
+    [
+     "attr:dark circles",
+     "=",
+     "dark circles"
+    ],
+    [
+     "attr:green tea",
+     "=",
+     "hyaluronic acid"
+    ],
+    [
+     "attr:hyaluronic acid",
+     "=",
+     "hyaluronic acid"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "f19e5e4c1796f275"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 28,
+  "lit_card": 237,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 29,
+    "true_card": 28,
+    "readings": 1
+   },
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 216,
+    "true_card": 28,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "8ce16fb1d9f9b7a2",
+  "conditions": [
+   [
+    "attr:anti aging",
+    "=",
+    "anti aging"
+   ],
+   [
+    "attr:dark circles",
+    "=",
+    "dark circles"
+   ],
+   [
+    "attr:green tea",
+    "=",
+    "green tea"
+   ],
+   [
+    "attr:hyaluronic acid",
+    "=",
+    "hyaluronic acid"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 28,
+  "value": [
+   "[\"B00QL67MY4\",[]]",
+   "[\"B00V51DXBG\",[]]",
+   "[\"B01M23Z4LJ\",[]]",
+   "[\"B06XS125JK\",[]]",
+   "[\"B06ZYJ7CQT\",[]]",
+   "[\"B074Q2C6ZP\",[]]",
+   "[\"B0773LK7NN\",[]]",
+   "[\"B07D1S6PLD\",[]]",
+   "[\"B07FB4W274\",[]]",
+   "[\"B07H42C5F9\",[]]",
+   "[\"B07KLWNNY4\",[]]",
+   "[\"B07PJYLM6N\",[]]",
+   "[\"B07Q519L97\",[]]",
+   "[\"B07R7LPLV5\",[]]",
+   "[\"B07V5LG4ZV\",[]]",
+   "[\"B07XV8QS53\",[]]",
+   "[\"B081TQXPLR\",[]]",
+   "[\"B085XM84VT\",[]]",
+   "[\"B08H8MZQV6\",[]]",
+   "[\"B08JP2QL8Y\",[]]",
+   "[\"B08JYJHQJP\",[]]",
+   "[\"B08YFMBZ96\",[]]",
+   "[\"B08YLS39HF\",[]]",
+   "[\"B093VYLMVQ\",[]]",
+   "[\"B095KYX53F\",[]]",
+   "[\"B09JGNN2RW\",[]]",
+   "[\"B09KKSPXMS\",[]]",
+   "[\"B09S5WTZR3\",[]]"
+  ],
+  "hash": "eeb4f3b24c22ac83999074edcda1111c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "31199fda12e2aa6d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the eyes care instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "9e362248c18ad1ea",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the eyes care instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "06bb8b73bfc9f9b4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be certified organic."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "56c8a11bdcf6b182",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dead skin."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a3f11cc0de82ea83",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c1b0f577c1f3d241",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "78fb62fbf4cb28af",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 50."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b3c25188d320575a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 50."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

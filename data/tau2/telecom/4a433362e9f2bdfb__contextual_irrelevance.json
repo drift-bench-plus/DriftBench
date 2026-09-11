@@ -1,0 +1,93 @@
+{
+ "sample_id": "4a433362e9f2bdfb__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "4a433362e9f2bdfb",
+ "query": "I was walking my golden retriever this morning and he chased a squirrel right into a patch of wild dandelions, ended up covered in little yellow fluff that I\u2019m still picking off his coat. I stopped at the corner caf\u00e9 on my way home to grab an iced oat milk latte, and they had those new lavender shortbread cookies out, so I picked one up and it was way sweeter than I expected, I had to drink half my latte just to cut the sugar. I also spent 20 minutes on the bus trying to beat the new level of that puzzle game I\u2019ve been playing, and I still couldn\u2019t get past the last matching tile, it\u2019s so frustrating. Anyway, I\u2019m having some issues with my phone: my APN settings aren\u2019t working properly, my SIM card is locked and asking for a PIN I don\u2019t remember right now, and I just found out my line got suspended because I forgot to pay my overdue bill, could you help me sort all this out?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever this morning and he chased a squirrel right into a patch of wild dandelions, ended up covered in little yellow fluff that I\u2019m still picking off his coat. I stopped at the corner caf\u00e9 on my way home to grab an iced oat milk latte, and they had those new lavender shortbread cookies out, so I picked one up and it was way sweeter than I expected, I had to drink half my latte just to cut the sugar. I also spent 20 minutes on the bus trying to beat the new level of that puzzle game I\u2019ve been playing, and I still couldn\u2019t get past the last matching tile, it\u2019s so frustrating. Anyway,",
+  "retained": [
+   "fault:break_apn_settings",
+   "fault:lock_sim_card_pin",
+   "fault:overdue_bill_suspension"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ],
+    [
+     "fault:overdue_bill_suspension",
+     "=",
+     "overdue_bill_suspension"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

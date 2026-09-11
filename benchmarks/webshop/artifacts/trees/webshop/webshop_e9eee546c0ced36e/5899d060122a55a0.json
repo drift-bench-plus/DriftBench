@@ -1,0 +1,965 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B07VS875WL",
+    "cluster": "furniture sets",
+    "name": "RYB HOME White Curtains Sheer - Linen Textured Wave Semi Sheer Farmhouse Window Curtain Set for Bedroom Living Room Office Diffuse Sunlight Furniture Protect, 52 x 90 inches, 1 Pair",
+    "product_category": "Home & Kitchen › Home Décor Products › Window Treatments › Curtains & Drapes › Panels"
+   },
+   "bound_slots": [
+    "attr:living room",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "grey"
+    ],
+    [
+     "option:1",
+     "=",
+     "w 52 x l 90 | pair"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1a45777a6a4284d6121ffc209f01adb3",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07VS875WL\",[[\"color\",\"dove grey\"],[\"size\",\"w 52 x l 90 | pair\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "974edfde024964de",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "furniture sets",
+    "goal": {
+     "asin": "B07VS875WL",
+     "attributes": [
+      "living room"
+     ],
+     "category": "",
+     "goal_options": [
+      "grey",
+      "w 52 x l 90 | pair"
+     ],
+     "name": "RYB HOME White Curtains Sheer - Linen Textured Wave Semi Sheer Farmhouse Window Curtain Set for Bedroom Living Room Office Diffuse Sunlight Furniture Protect, 52 x 90 inches, 1 Pair",
+     "price_upper": 40,
+     "product_category": "Home & Kitchen › Home Décor Products › Window Treatments › Curtains & Drapes › Panels",
+     "query": "furniture sets"
+    }
+   },
+   "source_record": "fffd528042964afb",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08H5898QC",
+    "cluster": "furniture sets",
+    "name": "BELLEZE Modern 50 Inch Farmhouse Electric Fireplace TV Stand & Media Entertainment Center Console Table for TVs up to 55 Inch with Open Storage Shelves & Cabinets - Kenton (Espresso)",
+    "product_category": "Home & Kitchen › Furniture › Living Room Furniture › TV & Media Furniture › Television Stands & Entertainment Centers"
+   },
+   "bound_slots": [
+    "attr:storage space",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:storage space",
+     "=",
+     "storage space"
+    ],
+    [
+     "price_upper",
+     "<=",
+     320
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2e99d034ca529614a6229e2c914e2bb7",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0030GEPDE\",[]]",
+     "[\"B00369O382\",[]]",
+     "[\"B00L3NQQKQ\",[]]",
+     "[\"B00MEHXXSI\",[]]",
+     "[\"B00VZ4TEX4\",[]]",
+     "[\"B013MBB1WO\",[]]",
+     "[\"B01GR11BTO\",[]]",
+     "[\"B06XPSTN9P\",[]]",
+     "[\"B071JMBC1Z\",[]]",
+     "[\"B072BN36B3\",[]]",
+     "[\"B075S1GG5L\",[]]",
+     "[\"B07BGRMGB7\",[]]",
+     "[\"B07CSGTJY5\",[]]",
+     "[\"B07D7VPDYD\",[]]",
+     "[\"B07DL72VZ9\",[]]",
+     "[\"B07FW7YX86\",[]]",
+     "[\"B07JFVFH7Z\",[]]",
+     "[\"B07K4CH6ZN\",[]]",
+     "[\"B07KSMQH4D\",[]]",
+     "[\"B07MGYBCN9\",[]]",
+     "[\"B07NDQLPTD\",[]]",
+     "[\"B07P3YRRRP\",[]]",
+     "[\"B07PJVG5RT\",[]]",
+     "[\"B07PPRRXSH\",[]]",
+     "[\"B07SDF3MTT\",[]]",
+     "[\"B07SVKZSFN\",[]]",
+     "[\"B07THVJZBH\",[]]",
+     "[\"B07TZPF6PM\",[]]",
+     "[\"B07W5XDVY7\",[]]",
+     "[\"B07WDFRVDH\",[]]",
+     "[\"B07X3XVHVN\",[]]",
+     "[\"B07XFK9VMM\",[]]",
+     "[\"B07Z7SYJWM\",[]]",
+     "[\"B07ZJWKPY3\",[]]",
+     "[\"B081THLTBD\",[]]",
+     "[\"B081TKHD4N\",[]]",
+     "[\"B083GT598S\",[]]",
+     "[\"B0847KR9JZ\",[]]",
+     "[\"B085M6LZ1H\",[]]",
+     "[\"B086TGWD9N\",[]]",
+     "[\"B087JBYD9D\",[]]",
+     "[\"B0881NSX5G\",[]]",
+     "[\"B0883F3DSD\",[]]",
+     "[\"B08949JZ1T\",[]]",
+     "[\"B089GNXFYW\",[]]",
+     "[\"B089KB9843\",[]]",
+     "[\"B08BCLFNRS\",[]]",
+     "[\"B08D6YYTY4\",[]]",
+     "[\"B08FQTDGZB\",[]]",
+     "[\"B08H5898QC\",[]]",
+     "[\"B08JD42YGJ\",[]]",
+     "[\"B08KXRJRV3\",[]]",
+     "[\"B08L63J3DS\",[]]",
+     "[\"B08MDXK75R\",[]]",
+     "[\"B08MVN5DM9\",[]]",
+     "[\"B08NFTQ5DB\",[]]",
+     "[\"B08NPYS8ZL\",[]]",
+     "[\"B08P1NGB2R\",[]]",
+     "[\"B08PVCK78Q\",[]]",
+     "[\"B08QTRQQBF\",[]]",
+     "[\"B08QV1NZ7Y\",[]]",
+     "[\"B08S7GXZRX\",[]]",
+     "[\"B08SM34BBS\",[]]",
+     "[\"B08TCF7TDH\",[]]",
+     "[\"B08VF1NF43\",[]]",
+     "[\"B08YDK5MTJ\",[]]",
+     "[\"B08Z743HJM\",[]]",
+     "[\"B08ZMRCMHW\",[]]",
+     "[\"B0914ZLJB9\",[]]",
+     "[\"B091GVB4DL\",[]]",
+     "[\"B091KMK56Z\",[]]",
+     "[\"B092R893P6\",[]]",
+     "[\"B092W7BC5G\",[]]",
+     "[\"B094C13THN\",[]]",
+     "[\"B094YQ886N\",[]]",
+     "[\"B095LVNP7X\",[]]",
+     "[\"B095WF4BYK\",[]]",
+     "[\"B096W5PQ3T\",[]]",
+     "[\"B096W791DH\",[]]",
+     "[\"B097GY8XBW\",[]]",
+     "[\"B0982XLQVB\",[]]",
+     "[\"B098QRBFHY\",[]]",
+     "[\"B098QSK8RH\",[]]",
+     "[\"B0991Q8M2T\",[]]",
+     "[\"B0997PLGYJ\",[]]",
+     "[\"B099DDNWX8\",[]]",
+     "[\"B09B3Q9S17\",[]]",
+     "[\"B09BV98RYT\",[]]",
+     "[\"B09BZ8YBNL\",[]]",
+     "[\"B09CK1F4MM\",[]]",
+     "[\"B09D784VPB\",[]]",
+     "[\"B09DBM1W4V\",[]]",
+     "[\"B09DP3JPP3\",[]]",
+     "[\"B09H6M49N9\",[]]",
+     "[\"B09HH162SB\",[]]",
+     "[\"B09K7MQF7M\",[]]",
+     "[\"B09KCBJYXH\",[]]",
+     "[\"B09L7WZQ4F\",[]]",
+     "[\"B09LHK4LYQ\",[]]",
+     "[\"B09LLLC65G\",[]]",
+     "[\"B09LM5H3GC\",[]]",
+     "[\"B09MR2RKRC\",[]]",
+     "[\"B09NKV5Z3D\",[]]",
+     "[\"B09NXJBVBY\",[]]",
+     "[\"B09PBSL3KZ\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "0ae5c48b2903e9fa",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "furniture sets",
+    "goal": {
+     "asin": "B08H5898QC",
+     "attributes": [
+      "storage space"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "BELLEZE Modern 50 Inch Farmhouse Electric Fireplace TV Stand & Media Entertainment Center Console Table for TVs up to 55 Inch with Open Storage Shelves & Cabinets - Kenton (Espresso)",
+     "price_upper": 320,
+     "product_category": "Home & Kitchen › Furniture › Living Room Furniture › TV & Media Furniture › Television Stands & Entertainment Centers",
+     "query": "furniture sets"
+    }
+   },
+   "source_record": "5c4765c6061c76c5",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07RT28DLG",
+    "cluster": "furniture sets",
+    "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+    "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets"
+   },
+   "bound_slots": [
+    "attr:faux leather",
+    "attr:super soft",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:faux leather",
+     "=",
+     "faux leather"
+    ],
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ],
+    [
+     "option:0",
+     "=",
+     "twin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     100
+    ]
+   ],
+   "ground_truth": {
+    "hash": "341800706d06eeae5bce63d2b8702eae",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00CWCUTVE\",[[\"size\",\"twin | twin xl\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7b8179935897d332",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "furniture sets",
+    "goal": {
+     "asin": "B07RT28DLG",
+     "attributes": [
+      "faux leather",
+      "super soft"
+     ],
+     "category": "",
+     "goal_options": [
+      "twin"
+     ],
+     "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+     "price_upper": 100,
+     "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets",
+     "query": "furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07RT28DLG",
+    "cluster": "furniture sets",
+    "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+    "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets"
+   },
+   "bound_slots": [
+    "attr:super soft",
+    "attr:white item",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ],
+    [
+     "attr:white item",
+     "=",
+     "white item"
+    ],
+    [
+     "option:0",
+     "=",
+     "twin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     100
+    ]
+   ],
+   "ground_truth": {
+    "hash": "8b10c81e14d4834da757fc0dce6499c3",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B073Q36J45\",[[\"size\",\"twin\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "caa736e1395318ea",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "furniture sets",
+    "goal": {
+     "asin": "B07RT28DLG",
+     "attributes": [
+      "super soft",
+      "white item"
+     ],
+     "category": "",
+     "goal_options": [
+      "twin"
+     ],
+     "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+     "price_upper": 100,
+     "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets",
+     "query": "furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07RT28DLG",
+    "cluster": "furniture sets",
+    "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+    "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets"
+   },
+   "bound_slots": [
+    "attr:super soft",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     100
+    ]
+   ],
+   "ground_truth": {
+    "hash": "9018170c0e22097c2bdcd0857aae80b7",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00CWCUTVE\",[]]",
+     "[\"B00JS7JBEM\",[]]",
+     "[\"B00KTH3470\",[]]",
+     "[\"B00Q7OAKV2\",[]]",
+     "[\"B016N09WH2\",[]]",
+     "[\"B01BX7FVPC\",[]]",
+     "[\"B01L90K32E\",[]]",
+     "[\"B01NBVU4D6\",[]]",
+     "[\"B06VX6BD2C\",[]]",
+     "[\"B06XB3F5GS\",[]]",
+     "[\"B073Q36J45\",[]]",
+     "[\"B0756DPJDV\",[]]",
+     "[\"B076MSFPMQ\",[]]",
+     "[\"B076X4M2QX\",[]]",
+     "[\"B0778S9QW7\",[]]",
+     "[\"B077KJ8K99\",[]]",
+     "[\"B0785KGPB6\",[]]",
+     "[\"B07C1YH7FR\",[]]",
+     "[\"B07G2SNWHD\",[]]",
+     "[\"B07G9P3XHM\",[]]",
+     "[\"B07JLGD5WF\",[]]",
+     "[\"B07KKH48DG\",[]]",
+     "[\"B07PYFK5BB\",[]]",
+     "[\"B07QMCZB76\",[]]",
+     "[\"B07QQ8VCWL\",[]]",
+     "[\"B07RGS2CC3\",[]]",
+     "[\"B07RLQYCSC\",[]]",
+     "[\"B07RRZ5GCK\",[]]",
+     "[\"B07RT28DLG\",[]]",
+     "[\"B07TSHZKL1\",[]]",
+     "[\"B07TZL55G6\",[]]",
+     "[\"B07W882DXL\",[]]",
+     "[\"B07WZBXSK3\",[]]",
+     "[\"B081JBV7QM\",[]]",
+     "[\"B08228LTKC\",[]]",
+     "[\"B084C1B9MY\",[]]",
+     "[\"B084ZXSD65\",[]]",
+     "[\"B08539JP33\",[]]",
+     "[\"B085H9FRCL\",[]]",
+     "[\"B0871BH9BB\",[]]",
+     "[\"B087BP19BQ\",[]]",
+     "[\"B08GX3W969\",[]]",
+     "[\"B08HK39749\",[]]",
+     "[\"B08HZ199B7\",[]]",
+     "[\"B08J3P686D\",[]]",
+     "[\"B08RDHZCGX\",[]]",
+     "[\"B08S9RPTNV\",[]]",
+     "[\"B08VS817R1\",[]]",
+     "[\"B08ZLPKQGZ\",[]]",
+     "[\"B0936FLVWF\",[]]",
+     "[\"B0938BP9KD\",[]]",
+     "[\"B09CB4MXZN\",[]]",
+     "[\"B09GTYC7XQ\",[]]",
+     "[\"B09L4D1H4Z\",[]]",
+     "[\"B09LTPFGNW\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "ddb1cf3c2cc154d7",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "furniture sets",
+    "goal": {
+     "asin": "B07RT28DLG",
+     "attributes": [
+      "super soft"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+     "price_upper": 100,
+     "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets",
+     "query": "furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07RT28DLG",
+    "cluster": "furniture sets",
+    "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+    "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets"
+   },
+   "bound_slots": [
+    "attr:super soft",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ],
+    [
+     "option:0",
+     "=",
+     "twin"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "07498fcc5540c820ae721a183c1e584c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00CWCUTVE\",[[\"size\",\"twin | twin xl\"]]]",
+     "[\"B00Q7OAKV2\",[[\"size\",\"twin\"]]]",
+     "[\"B00TI6ZMYG\",[[\"size\",\"twin\"]]]",
+     "[\"B01L90K32E\",[[\"size\",\"twin\"]]]",
+     "[\"B01MU3EZ7U\",[[\"size\",\"twin\"]]]",
+     "[\"B01NBVU4D6\",[[\"size\",\"twin\"]]]",
+     "[\"B073Q36J45\",[[\"size\",\"twin\"]]]",
+     "[\"B0756DPJDV\",[[\"size\",\"twin\"]]]",
+     "[\"B076X4M2QX\",[[\"size\",\"twin\"]]]",
+     "[\"B0778S9QW7\",[[\"size\",\"twin\"]]]",
+     "[\"B077KJ8K99\",[[\"size\",\"twin\"]]]",
+     "[\"B0785KGPB6\",[[\"size\",\"twin\"]]]",
+     "[\"B07G2SNWHD\",[[\"size\",\"twin\"]]]",
+     "[\"B07G9P3XHM\",[[\"size\",\"twin\"]]]",
+     "[\"B07KKH48DG\",[[\"size\",\"twin size\"]]]",
+     "[\"B07PYFK5BB\",[[\"color\",\"batman emblem comforter twin 68'' x 86''\"]]]",
+     "[\"B07QMCZB76\",[[\"size\",\"twin(68-by-88-inches)\"]]]",
+     "[\"B07RLQYCSC\",[[\"size\",\"twin\"]]]",
+     "[\"B07RRZ5GCK\",[[\"size\",\"twin\"]]]",
+     "[\"B07RT28DLG\",[[\"size\",\"twin\"]]]",
+     "[\"B07TSHZKL1\",[[\"size\",\"twin\"]]]",
+     "[\"B07TZL55G6\",[[\"size\",\"5 piece twin size\"]]]",
+     "[\"B08228LTKC\",[[\"size\",\"twin (flat sheets only)\"]]]",
+     "[\"B084C1B9MY\",[[\"size\",\"twin\"]]]",
+     "[\"B084ZXSD65\",[[\"size\",\"twin\"]]]",
+     "[\"B08539JP33\",[[\"size\",\"5 piece twin size\"]]]",
+     "[\"B08S9RPTNV\",[[\"size\",\"twin\"]]]",
+     "[\"B09CB4MXZN\",[[\"size\",\"(3 piece) twin size\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "aa36a6f7f86fb9da",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "furniture sets",
+    "goal": {
+     "asin": "B07RT28DLG",
+     "attributes": [
+      "super soft"
+     ],
+     "category": "",
+     "goal_options": [
+      "twin"
+     ],
+     "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+     "price_upper": 1000000,
+     "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets",
+     "query": "furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07RT28DLG",
+    "cluster": "furniture sets",
+    "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+    "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets"
+   },
+   "bound_slots": [
+    "attr:super soft",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ],
+    [
+     "option:0",
+     "=",
+     "08 midnight black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     100
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0d471ae75842f57284a841793c8ff197",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00KTH3470\",[[\"color\",\"black\"]]]",
+     "[\"B00Q7OAKV2\",[[\"color\",\"black\"]]]",
+     "[\"B01BX7FVPC\",[[\"color\",\"blue - black panther\"]]]",
+     "[\"B01L90K32E\",[[\"color\",\"black - among us\"]]]",
+     "[\"B0756DPJDV\",[[\"color\",\"black blue\"]]]",
+     "[\"B0785KGPB6\",[[\"color\",\"black red\"]]]",
+     "[\"B07G9P3XHM\",[[\"color\",\"multi - black panther\"]]]",
+     "[\"B07KKH48DG\",[[\"color\",\"white black\"]]]",
+     "[\"B07PYFK5BB\",[[\"color\",\"black\"]]]",
+     "[\"B07QMCZB76\",[[\"color\",\"black\"]]]",
+     "[\"B07RRZ5GCK\",[[\"color\",\"white - blackpink\"]]]",
+     "[\"B07RT28DLG\",[[\"color\",\"black - blackpink\"]]]",
+     "[\"B07TSHZKL1\",[[\"color\",\"tricolor-black\"]]]",
+     "[\"B07W882DXL\",[[\"color\",\"black\"]]]",
+     "[\"B0871BH9BB\",[[\"color\",\"black vintage\"]]]",
+     "[\"B08GX3W969\",[[\"color\",\"black\"]]]",
+     "[\"B08HK39749\",[[\"color\",\"velvet blackish green\"]]]",
+     "[\"B08HZ199B7\",[[\"color\",\"knit solid blackish green\"]]]",
+     "[\"B08RDHZCGX\",[[\"color\",\"black\"]]]",
+     "[\"B0938BP9KD\",[[\"color\",\"black\"]]]",
+     "[\"B09LTPFGNW\",[[\"color\",\"black\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f5d148477a59901e",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "furniture sets",
+    "goal": {
+     "asin": "B07RT28DLG",
+     "attributes": [
+      "super soft"
+     ],
+     "category": "",
+     "goal_options": [
+      "08 midnight black"
+     ],
+     "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+     "price_upper": 100,
+     "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets",
+     "query": "furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07RT28DLG",
+    "cluster": "furniture sets",
+    "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+    "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets"
+   },
+   "bound_slots": [
+    "attr:super soft",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ],
+    [
+     "option:0",
+     "=",
+     "04 dove grey"
+    ],
+    [
+     "price_upper",
+     "<=",
+     100
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2073fdc8ea3767966ba1c8df5cf74f40",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B073Q36J45\",[[\"color\",\"teal grey\"]]]",
+     "[\"B0756DPJDV\",[[\"color\",\"grey\"]]]",
+     "[\"B076X4M2QX\",[[\"color\",\"grey\"]]]",
+     "[\"B07KKH48DG\",[[\"color\",\"red grey\"]]]",
+     "[\"B07TSHZKL1\",[[\"color\",\"grey\"]]]",
+     "[\"B07W882DXL\",[[\"color\",\"grey\"]]]",
+     "[\"B07WZBXSK3\",[[\"color\",\"b-grey rose\"]]]",
+     "[\"B0871BH9BB\",[[\"color\",\"grey\"]]]",
+     "[\"B08GX3W969\",[[\"color\",\"grey\"]]]",
+     "[\"B08HZ199B7\",[[\"color\",\"knit solid grey\"]]]",
+     "[\"B08RDHZCGX\",[[\"color\",\"grey\"]]]",
+     "[\"B09GTYC7XQ\",[[\"color\",\"grey\"]]]",
+     "[\"B09L4D1H4Z\",[[\"color\",\"grey\"]]]",
+     "[\"B09LTPFGNW\",[[\"color\",\"deep grey\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "bd8e7fa9d9f6abc7",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "furniture sets",
+    "goal": {
+     "asin": "B07RT28DLG",
+     "attributes": [
+      "super soft"
+     ],
+     "category": "",
+     "goal_options": [
+      "04 dove grey"
+     ],
+     "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+     "price_upper": 100,
+     "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets",
+     "query": "furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07VS875WL",
+     "cluster": "furniture sets",
+     "name": "RYB HOME White Curtains Sheer - Linen Textured Wave Semi Sheer Farmhouse Window Curtain Set for Bedroom Living Room Office Diffuse Sunlight Furniture Protect, 52 x 90 inches, 1 Pair",
+     "product_category": "Home & Kitchen › Home Décor Products › Window Treatments › Curtains & Drapes › Panels"
+    }
+   },
+   "dst": "974edfde024964de",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "fffd528042964afb",
+   "src": "b61ee25dbfa1ae5c"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B08H5898QC",
+     "cluster": "furniture sets",
+     "name": "BELLEZE Modern 50 Inch Farmhouse Electric Fireplace TV Stand & Media Entertainment Center Console Table for TVs up to 55 Inch with Open Storage Shelves & Cabinets - Kenton (Espresso)",
+     "product_category": "Home & Kitchen › Furniture › Living Room Furniture › TV & Media Furniture › Television Stands & Entertainment Centers"
+    }
+   },
+   "dst": "0ae5c48b2903e9fa",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "5c4765c6061c76c5",
+   "src": "b61ee25dbfa1ae5c"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:faux leather",
+      "=",
+      "faux leather"
+     ]
+    ]
+   },
+   "dst": "7b8179935897d332",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b61ee25dbfa1ae5c"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:white item",
+      "=",
+      "white item"
+     ]
+    ]
+   },
+   "dst": "caa736e1395318ea",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b61ee25dbfa1ae5c"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "twin"
+     ]
+    ]
+   },
+   "dst": "ddb1cf3c2cc154d7",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b61ee25dbfa1ae5c"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      100
+     ]
+    ]
+   },
+   "dst": "aa36a6f7f86fb9da",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b61ee25dbfa1ae5c"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "twin",
+      "08 midnight black"
+     ]
+    ]
+   },
+   "dst": "f5d148477a59901e",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b61ee25dbfa1ae5c"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "twin",
+      "04 dove grey"
+     ]
+    ]
+   },
+   "dst": "bd8e7fa9d9f6abc7",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "b61ee25dbfa1ae5c"
+  }
+ ],
+ "env_id": "webshop_e9eee546c0ced36e",
+ "env_spec": {
+  "cluster": "furniture sets",
+  "env_id": "webshop_e9eee546c0ced36e",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B07RT28DLG",
+   "cluster": "furniture sets",
+   "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+   "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets"
+  },
+  "bound_slots": [
+   "attr:super soft",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:super soft",
+    "=",
+    "super soft"
+   ],
+   [
+    "option:0",
+    "=",
+    "twin"
+   ],
+   [
+    "price_upper",
+    "<=",
+    100
+   ]
+  ],
+  "ground_truth": {
+   "hash": "d877fc362546d018ff5e724077da519d",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B00CWCUTVE\",[[\"size\",\"twin | twin xl\"]]]",
+    "[\"B00Q7OAKV2\",[[\"size\",\"twin\"]]]",
+    "[\"B01L90K32E\",[[\"size\",\"twin\"]]]",
+    "[\"B01NBVU4D6\",[[\"size\",\"twin\"]]]",
+    "[\"B073Q36J45\",[[\"size\",\"twin\"]]]",
+    "[\"B0756DPJDV\",[[\"size\",\"twin\"]]]",
+    "[\"B076X4M2QX\",[[\"size\",\"twin\"]]]",
+    "[\"B0778S9QW7\",[[\"size\",\"twin\"]]]",
+    "[\"B077KJ8K99\",[[\"size\",\"twin\"]]]",
+    "[\"B0785KGPB6\",[[\"size\",\"twin\"]]]",
+    "[\"B07G2SNWHD\",[[\"size\",\"twin\"]]]",
+    "[\"B07G9P3XHM\",[[\"size\",\"twin\"]]]",
+    "[\"B07KKH48DG\",[[\"size\",\"twin size\"]]]",
+    "[\"B07PYFK5BB\",[[\"color\",\"batman emblem comforter twin 68'' x 86''\"]]]",
+    "[\"B07QMCZB76\",[[\"size\",\"twin(68-by-88-inches)\"]]]",
+    "[\"B07RLQYCSC\",[[\"size\",\"twin\"]]]",
+    "[\"B07RRZ5GCK\",[[\"size\",\"twin\"]]]",
+    "[\"B07RT28DLG\",[[\"size\",\"twin\"]]]",
+    "[\"B07TSHZKL1\",[[\"size\",\"twin\"]]]",
+    "[\"B07TZL55G6\",[[\"size\",\"5 piece twin size\"]]]",
+    "[\"B08228LTKC\",[[\"size\",\"twin (flat sheets only)\"]]]",
+    "[\"B084C1B9MY\",[[\"size\",\"twin\"]]]",
+    "[\"B084ZXSD65\",[[\"size\",\"twin\"]]]",
+    "[\"B08539JP33\",[[\"size\",\"5 piece twin size\"]]]",
+    "[\"B08S9RPTNV\",[[\"size\",\"twin\"]]]",
+    "[\"B09CB4MXZN\",[[\"size\",\"(3 piece) twin size\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "b61ee25dbfa1ae5c",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "furniture sets",
+   "goal": {
+    "asin": "B07RT28DLG",
+    "attributes": [
+     "super soft"
+    ],
+    "category": "",
+    "goal_options": [
+     "twin"
+    ],
+    "name": "Jay Franco Disney Minnie Mouse Lashes Bed Set, Full",
+    "price_upper": 100,
+    "product_category": "Home & Kitchen › Bedding › Kids' Bedding › Comforters & Sets › Comforter Sets",
+    "query": "furniture sets"
+   }
+  },
+  "source_record": "f775a71f2a8448b5",
+  "unbound_slots": [
+   "attr:faux leather",
+   "attr:white item",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "5899d060122a55a0"
+}

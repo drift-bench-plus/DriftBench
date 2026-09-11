@@ -1,0 +1,104 @@
+{
+ "sample_id": "f9ba2b78ae3246d8__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "f9ba2b78ae3246d8",
+ "query": "I planted a new batch of strawberry seedlings on my balcony last weekend, and I was so happy to see that three of them have already sprouted tiny new leaves this morning. I also tried a new matcha latte recipe yesterday, adding a little honey and oat milk, and it turned out way better than the ones I buy at the caf\u00e9 down the street. Oh, and my cat knocked over a small potted succulent last night, I spent almost 20 minutes cleaning up the spilled soil off the floor. Anyway, I need to do an exchange for my delivered order #W6390527, I want to change the item 8384507844 to item 1569765161, and use paypal_7644869 as the payment method for any additional fees related to this exchange.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I planted a new batch of strawberry seedlings on my balcony last weekend, and I was so happy to see that three of them have already sprouted tiny new leaves this morning. I also tried a new matcha latte recipe yesterday, adding a little honey and oat milk, and it turned out way better than the ones I buy at the caf\u00e9 down the street. Oh, and my cat knocked over a small potted succulent last night, I spent almost 20 minutes cleaning up the spilled soil off the floor.",
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"8384507844\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"1569765161\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W6390527\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_7644869\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"8384507844\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"1569765161\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W6390527\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_7644869\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

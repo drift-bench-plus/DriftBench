@@ -1,0 +1,176 @@
+{
+ "adapter": "webshop",
+ "cluster": "book cases",
+ "fidelity_notes": [],
+ "goal_idx": 91,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "6e0d9dc4b592db101ad68e651589dce7",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B000IHJF60\",[[\"pattern name\",\"bookshelf\"]]]",
+   "[\"B071PFD34C\",[[\"style\",\"bookshelf\"]]]",
+   "[\"B07D5GCKN1\",[[\"size\",\"4 tier bookshelf\"]]]",
+   "[\"B07K125KWT\",[[\"style\",\"bookshelf\"]]]",
+   "[\"B07NXTKYQP\",[[\"style\",\"bookshelf\"]]]",
+   "[\"B07TD71QG5\",[[\"style\",\"book shelf\"]]]",
+   "[\"B07ZHDRDKJ\",[[\"color\",\"desktop bookshelf\"]]]",
+   "[\"B08MTPY4L2\",[[\"size\",\"bookshelf\"]]]",
+   "[\"B094NPHYFP\",[[\"style\",\"bookshelf + console table\"]]]",
+   "[\"B0962JQVDS\",[[\"size\",\"2 tier bookshelf\"]]]",
+   "[\"B09BTL32DL\",[[\"size\",\"3-tier bookshelf\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "bookshelf"
+   ],
+   [
+    "price_upper",
+    "<=",
+    360
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "946a366c2e8235d0"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "bookshelf"
+    ],
+    [
+     "price_upper",
+     "<=",
+     360
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning repotting my pothos and snake plants, and I accidentally knocked over a bag of potting soil all over the kitchen counter. It took me almost an hour to sweep it up and wipe down every surface, and I still keep finding little crumbs of soil near the toaster. My cat also kept trying to bat at the perlite bits while I was cleaning, which made the whole mess way harder to fix. Anyway,",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:living room",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning repotting my pothos and snake plants, and I accidentally knocked over a bag of potting soil all over the kitchen counter. It took me almost an hour to sweep it up and wipe down every surface, and I still keep finding little crumbs of soil near the toaster. My cat also kept trying to bat at the perlite bits while I was cleaning, which made the whole mess way harder to fix. Anyway, I’m looking for a bookshelf for my living room, and my price limit is $360.",
+ "render_attempts": 2,
+ "sample_id": "9adde99af48a9465",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the book cases instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "198a92208e4d83b8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the book cases instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "914fd2f575c67194"
+  },
+  {
+   "announcement": "Also, it needs to be white finish.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1d4801cf8f023042"
+  },
+  {
+   "announcement": "Also, it needs to be high density.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4a6f24b8b25abace"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9b662fb902e446f2"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a402d548572f6f42"
+  },
+  {
+   "announcement": "Actually, make it 13x6.7x10.4in instead of bookshelf.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "954f79ecb61493a6"
+  },
+  {
+   "announcement": "Actually, make it 100*20*30cm instead of bookshelf.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f7b730af980f0939"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 11,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want a bookshelf for my living room.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "43e0d32fad30ad57",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

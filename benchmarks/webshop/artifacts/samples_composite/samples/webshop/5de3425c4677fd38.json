@@ -1,0 +1,215 @@
+{
+ "sample_id": "5de3425c4677fd38",
+ "tree_id": "912962a8a6cdcc1d",
+ "adapter": "webshop",
+ "cluster": "wall art",
+ "goal_idx": 470,
+ "split": "test",
+ "source_instruction": "i'd like to buy a ready to hang toilet paper holder for size 24 by 30 rolls.",
+ "query": "Ugh, I spent 20 minutes this morning trying to get my cat to stop knocking over my pothos off the windowsill, I even bought those sticky furniture pads but he just yowls and bats at the leaves anyway, and my neighbor dropped off a jar of pickled okra yesterday that tastes way more vinegary than I expected, I still have to text them back about that later. Anyway, I\u2019m looking for wall art that\u2019s ready to hang, 24x30 size, and I don\u2019t want to go over that one for the price, yeah?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+referential_ambiguity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I spent 20 minutes this morning trying to get my cat to stop knocking over my pothos off the windowsill, I even bought those sticky furniture pads but he just yowls and bats at the leaves anyway, and my neighbor dropped off a jar of pickled okra yesterday that tastes way more vinegary than I expected, I still have to text them back about that later.",
+  "retained": [
+   "attr:ready hang",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ready hang",
+     "=",
+     "ready hang"
+    ],
+    [
+     "option:0",
+     "=",
+     "24x30"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b00205dbaf178bff"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 32,
+  "lit_card": 53,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 53,
+    "true_card": 32,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "ca93d2952e5e9a11",
+  "conditions": [
+   [
+    "attr:ready hang",
+    "=",
+    "ready hang"
+   ],
+   [
+    "option:0",
+    "=",
+    "24x30"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 32,
+  "value": [
+   "[\"B076263GKX\",[[\"size\",\"24x30\"]]]",
+   "[\"B07628R531\",[[\"size\",\"24x30\"]]]",
+   "[\"B07629T5ZV\",[[\"size\",\"24x30\"]]]",
+   "[\"B0762FJM71\",[[\"size\",\"24x30\"]]]",
+   "[\"B0762G4N8B\",[[\"size\",\"24x30\"]]]",
+   "[\"B079TKZ615\",[[\"size\",\"24x30\"]]]",
+   "[\"B07F3DP6Y8\",[[\"size\",\"24x30\"]]]",
+   "[\"B07F3FVWXP\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRHFHSS\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRHZ9WT\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRKYB28\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRPP334\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRQ165L\",[[\"size\",\"24x30\"]]]",
+   "[\"B07GRSTTVP\",[[\"size\",\"24x30\"]]]",
+   "[\"B07N2XRWZ4\",[[\"size\",\"24x30\"]]]",
+   "[\"B07N2XYJNH\",[[\"size\",\"24x30\"]]]",
+   "[\"B07N2XZMBZ\",[[\"size\",\"24x30\"]]]",
+   "[\"B07N2YV7ZL\",[[\"size\",\"24x30\"]]]",
+   "[\"B07PYLF6LJ\",[[\"size\",\"24x30\"]]]",
+   "[\"B07PZQF14Z\",[[\"size\",\"24x30\"]]]",
+   "[\"B07TTV7CLK\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YND718B\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YNDBQCK\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YNDM1BX\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YNF9FM1\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YNFJF3V\",[[\"size\",\"24x30\"]]]",
+   "[\"B07YNFMLJW\",[[\"size\",\"24x30\"]]]",
+   "[\"B082JMDPXT\",[[\"size\",\"24x30\"]]]",
+   "[\"B0886L3L47\",[[\"size\",\"24x30\"]]]",
+   "[\"B089RS4K3G\",[[\"size\",\"24x30\"]]]",
+   "[\"B08C3TJWBT\",[[\"size\",\"24x30\"]]]",
+   "[\"B08C3X6X2W\",[[\"size\",\"24x30\"]]]"
+  ],
+  "hash": "9e78c11c1970f629d54c64f18d9b2fc5"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1c0e3d17cba331da",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the wall art instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "61d09d4438f77caa",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the wall art instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3523f84fcf881d9b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be white item."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "74b901c3489427c4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wood finish."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "18f9debe4bd88d7b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "76e3781c81ff3286",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "91a5d4373a5d3c3a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 instead of 24x30."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "ae37d5d06c8cd578",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #02 instead of 24x30."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

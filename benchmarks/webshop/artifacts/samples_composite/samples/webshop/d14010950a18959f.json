@@ -1,0 +1,236 @@
+{
+ "sample_id": "d14010950a18959f",
+ "tree_id": "5d4fd9ec663a5aa6",
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "goal_idx": 320,
+ "split": "test",
+ "source_instruction": "i'm looking for a high speed 180 foot coaxial cable with a trishield nickel-plated fitting.",
+ "query": "I stopped by the food court on my way in earlier, and the pretzel stand was pumping out that warm, buttery smell that sticks to your jacket for hours after you walk past. I grabbed a sample of their new cinnamon sugar pretzel bite, and it was so chewy and sweet I almost waited in the 10-person line to get a whole order, but I remembered I had a water bottle in my bag that was starting to leak a little through the side pocket, so I kept moving. The parking lot was absolutely chaotic when I pulled up too, some guy in a huge pickup truck was taking up two whole spots right up front and yelling at a minivan driver who tried to squeeze into the space next to him, it was way more drama than I expected for a random Tuesday afternoon. I\u2019m over in the satellite TV section right now. I\u2019ve heard the coaxial cables with that nice trishield nickel-plated fitting in black, the long one, work well, and I\u2019ve heard those are fast too, no lag when using them. I\u2019ve also heard those never go over 40 bucks total.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "insufficient_information",
+  "indirect_intent",
+  "lexical_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+insufficient_information+indirect_intent+lexical_ambiguity",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "insufficient_information",
+   "indirect_intent",
+   "lexical_ambiguity"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "option:1",
+   "insufficient_information": "attr:high speed"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:high speed"
+  ],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "the long one",
+    "placements": [
+     [
+      "option:1",
+      "180ft"
+     ],
+     [
+      "option:1",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the food court on my way in earlier, and the pretzel stand was pumping out that warm, buttery smell that sticks to your jacket for hours after you walk past. I grabbed a sample of their new cinnamon sugar pretzel bite, and it was so chewy and sweet I almost waited in the 10-person line to get a whole order, but I remembered I had a water bottle in my bag that was starting to leak a little through the side pocket, so I kept moving. The parking lot was absolutely chaotic when I pulled up too, some guy in a huge pickup truck was taking up two whole spots right up front and yelling at a minivan driver who tried to squeeze into the space next to him, it was way more drama than I expected for a random Tuesday afternoon.",
+  "retained": [
+   "attr:coaxial cable",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:high speed",
+   "option:1"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:coaxial cable",
+     "=",
+     "coaxial cable"
+    ],
+    [
+     "option:0",
+     "=",
+     "trishield nickel-plated fitting -black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "9e578c4e5d709698"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 103,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 78,
+    "true_card": 6,
+    "readings": 1
+   },
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     6,
+     11
+    ],
+    "true_card": 6,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "a97b0811c1293bf2",
+  "conditions": [
+   [
+    "attr:coaxial cable",
+    "=",
+    "coaxial cable"
+   ],
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "trishield nickel-plated fitting -black"
+   ],
+   [
+    "option:1",
+    "=",
+    "180ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:high speed",
+   "option:1"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B073KYYVTR\",[[\"size\",\"180ft\"],[\"style\",\"trishield - black\"]]]",
+   "[\"B073L11212\",[[\"size\",\"180ft\"],[\"style\",\"trishield - black\"]]]",
+   "[\"B0741RSZTQ\",[[\"color\",\"trishield - black\"],[\"size\",\"180ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"material type\",\"trishield - black\"],[\"size\",\"180ft\"]]]",
+   "[\"B07CQB2FZK\",[[\"material type\",\"trishield - black\"],[\"size\",\"180ft\"]]]",
+   "[\"B099RJGRRZ\",[[\"color\",\"black\"],[\"size\",\"10ft\"]]]"
+  ],
+  "hash": "aef60d0f10e9c08464c10f288bda8f91"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0d4271e27a5b21d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7845bdf8528c5ec1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "85bd5621240e760a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be plug play."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b577976f68268712",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be tv antenna."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2a96c477821a0237",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "77f9df05cfbdee46",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3be879a912e17c9d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it quad rg11 aerial w |  weather boot - black instead of trishield nickel-plated fitting -black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "8f37bd79e98c1f79",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it direct burial w |  weather boot - orange instead of trishield nickel-plated fitting -black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

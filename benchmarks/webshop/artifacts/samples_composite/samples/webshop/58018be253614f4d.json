@@ -1,0 +1,213 @@
+{
+ "sample_id": "58018be253614f4d",
+ "tree_id": "4bf3161f1925a51d",
+ "adapter": "webshop",
+ "cluster": "digital cameras",
+ "goal_idx": 181,
+ "split": "test",
+ "source_instruction": "i'm looking for a ultra hd digital camera with optical zoom lens.",
+ "query": "I stopped by the community garden on my walk home yesterday, and the sun hit the tomato plants just right so all the little fuzzy hairs on the vines glowed like fine gold thread. One of the regular gardeners was passing out samples of the first ripe cherry tomatoes of the season, warm from the sun and so sweet they tasted like summer packed into a tiny, juicy bite, and I ended up chatting for 20 minutes about how they kept the squirrels off their beds this year by stringing old CD\u2019s along the fence posts to glint and startle them away. I even spotted a tiny baby rabbit huddled under the sunflower patch, its ears still fuzzy and too big for its head, munching on a stray clover leaf like it didn\u2019t have a single care in the whole world. I\u2019ve heard that digital cameras with solid optical zoom work really well for capturing those little close-up, far-off moments that feel too special to fumble with a phone for. I\u2019ve also heard there are little lens cleaning cloths that pair perfectly with those cameras, with the whole combination coming in under $20. I\u2019ve heard those same camera options deliver that crisp, super sharp picture quality, you know the good stuff, nothing blurry or grainy even when you zoom in far.",
+ "strategy_ids": [
+  "insufficient_information",
+  "syntactic_ambiguity",
+  "indirect_intent",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+syntactic_ambiguity+indirect_intent+contextual_irrelevance",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "syntactic_ambiguity",
+   "indirect_intent",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "syntactic_ambiguity": "price_upper",
+   "insufficient_information": "attr:ultra hd"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:ultra hd"
+  ],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "with the whole combination coming in under $20",
+    "placements": [
+     [
+      "price_upper",
+      "20"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the community garden on my walk home yesterday, and the sun hit the tomato plants just right so all the little fuzzy hairs on the vines glowed like fine gold thread. One of the regular gardeners was passing out samples of the first ripe cherry tomatoes of the season, warm from the sun and so sweet they tasted like summer packed into a tiny, juicy bite, and I ended up chatting for 20 minutes about how they kept the squirrels off their beds this year by stringing old CD\u2019s along the fence posts to glint and startle them away. I even spotted a tiny baby rabbit huddled under the sunflower patch, its ears still fuzzy and too big for its head, munching on a stray clover leaf like it didn\u2019t have a single care in the whole world.",
+  "retained": [
+   "attr:optical zoom"
+  ],
+  "hidden_slots": [
+   "attr:ultra hd",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:optical zoom",
+     "=",
+     "optical zoom"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "a863294240b244da"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 5,
+  "lit_card": 2122,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 163,
+    "true_card": 5,
+    "readings": 1
+   },
+   "syntactic_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     5,
+     27
+    ],
+    "true_card": 5,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "58b28923f0df7081",
+  "conditions": [
+   [
+    "attr:optical zoom",
+    "=",
+    "optical zoom"
+   ],
+   [
+    "attr:ultra hd",
+    "=",
+    "ultra hd"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:ultra hd",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 5,
+  "value": [
+   "[\"B07KTCSG5C\",[]]",
+   "[\"B07N96YVSW\",[]]",
+   "[\"B07S5CVRM3\",[]]",
+   "[\"B07T7399JK\",[]]",
+   "[\"B08L5ZGKCZ\",[]]"
+  ],
+  "hash": "9cc52a7e15ea915683b85712867bad44"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "02f79fc486665f81",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the digital cameras instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "0fbdc21648c3ecd2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the digital cameras instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "2ab436ac9c205950",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be memory card."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "da2f908b79213029",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ac adapter."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1e0f6db5b43d27f9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2fc57d4f8542e40f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5e6bd26b4654fa66",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 80 instead of 20."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "eea9da11b80f248b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 instead of 20."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

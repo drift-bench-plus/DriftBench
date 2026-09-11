@@ -1,0 +1,941 @@
+{
+ "adapter": "tau2_retail",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [],
+    "writes": [
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "exchange_delivered_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip",
+    "arg:1:modify_pending_order_items:item_ids",
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "arg:1:modify_pending_order_items:order_id",
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "arg:2:exchange_delivered_order_items:item_ids",
+    "arg:2:exchange_delivered_order_items:new_item_ids",
+    "arg:2:exchange_delivered_order_items:order_id",
+    "arg:2:exchange_delivered_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"144 Lakeview Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 925\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W4219264\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"10228\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"8886009523\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"2407258246\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4219264\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_1620755\""
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"6341716129\"]"
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"8302289002\"]"
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W3445693\""
+    ],
+    [
+     "arg:2:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_1620755\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "039bf3bd60eef21b03d02860430fcb8b",
+    "kind": "statehash",
+    "value": "{\"db\":\"0089a38140d5fb73906b4984b8742ce6e6a73bd08894ee370274fc84adfcb44c\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "1558966fb77683b5",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "144 Lakeview Drive",
+       "address2": "Suite 925",
+       "city": "New York",
+       "country": "USA",
+       "order_id": "#W4219264",
+       "state": "NY",
+       "zip": "10228"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "8886009523"
+       ],
+       "new_item_ids": [
+        "2407258246"
+       ],
+       "order_id": "#W4219264",
+       "payment_method_id": "credit_card_1620755"
+      },
+      "name": "modify_pending_order_items"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "6341716129"
+       ],
+       "new_item_ids": [
+        "8302289002"
+       ],
+       "order_id": "#W3445693",
+       "payment_method_id": "credit_card_1620755"
+      },
+      "name": "exchange_delivered_order_items"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "102",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "calculate"
+    ],
+    "writes": [
+     "return_delivered_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:return_delivered_order_items:item_ids",
+    "arg:0:return_delivered_order_items:order_id",
+    "arg:0:return_delivered_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"2872451762\",\"9534205511\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W9502127\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_2433177\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "041291d6059408a6c70f2d06be9c42c9",
+    "kind": "statehash",
+    "value": "{\"db\":\"3e78643a771521156d2d2422415af35b76ec58d69bb832cc943f09b66b68aaa9\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "a8844bc2f8a581b1",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "item_ids": [
+        "2872451762",
+        "9534205511"
+       ],
+       "order_id": "#W9502127",
+       "payment_method_id": "paypal_2433177"
+      },
+      "name": "return_delivered_order_items"
+     }
+    ],
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "calculate"
+    ]
+   },
+   "source_record": "47",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_order_details"
+    ],
+    "writes": [
+     "modify_pending_order_address",
+     "modify_user_address",
+     "modify_pending_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip",
+    "arg:1:modify_user_address:address1",
+    "arg:1:modify_user_address:address2",
+    "arg:1:modify_user_address:city",
+    "arg:1:modify_user_address:country",
+    "arg:1:modify_user_address:state",
+    "arg:1:modify_user_address:user_id",
+    "arg:1:modify_user_address:zip",
+    "arg:2:modify_pending_order_items:item_ids",
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "arg:2:modify_pending_order_items:order_id",
+    "arg:2:modify_pending_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"445 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 394\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"Fort Worth\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W9583042\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"76165\""
+    ],
+    [
+     "arg:1:modify_user_address:address1",
+     "=",
+     "\"445 Maple Drive\""
+    ],
+    [
+     "arg:1:modify_user_address:address2",
+     "=",
+     "\"Suite 394\""
+    ],
+    [
+     "arg:1:modify_user_address:city",
+     "=",
+     "\"Fort Worth\""
+    ],
+    [
+     "arg:1:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_user_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:1:modify_user_address:user_id",
+     "=",
+     "\"mei_patel_7272\""
+    ],
+    [
+     "arg:1:modify_user_address:zip",
+     "=",
+     "\"76165\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:item_ids",
+     "=",
+     "[\"9779102705\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"1096508426\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4082615\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_4768213\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "3d691fc5c14a36687fff6889f86a42f6",
+    "kind": "statehash",
+    "value": "{\"db\":\"82065930035ff2eaed69c30a3aeda922d4f678c5293a06ac570a8d7f05769fa3\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "9f068d97c09bb97b",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "445 Maple Drive",
+       "address2": "Suite 394",
+       "city": "Fort Worth",
+       "country": "USA",
+       "order_id": "#W9583042",
+       "state": "TX",
+       "zip": "76165"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "address1": "445 Maple Drive",
+       "address2": "Suite 394",
+       "city": "Fort Worth",
+       "country": "USA",
+       "state": "TX",
+       "user_id": "mei_patel_7272",
+       "zip": "76165"
+      },
+      "name": "modify_user_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "9779102705"
+       ],
+       "new_item_ids": [
+        "1096508426"
+       ],
+       "order_id": "#W4082615",
+       "payment_method_id": "paypal_4768213"
+      },
+      "name": "modify_pending_order_items"
+     }
+    ],
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_order_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "retail_request",
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_order_details"
+    ],
+    "writes": [
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:modify_pending_order_address:address1",
+    "arg:0:modify_pending_order_address:address2",
+    "arg:0:modify_pending_order_address:city",
+    "arg:0:modify_pending_order_address:country",
+    "arg:0:modify_pending_order_address:order_id",
+    "arg:0:modify_pending_order_address:state",
+    "arg:0:modify_pending_order_address:zip",
+    "arg:1:modify_pending_order_address:address1",
+    "arg:1:modify_pending_order_address:address2",
+    "arg:1:modify_pending_order_address:city",
+    "arg:1:modify_pending_order_address:country",
+    "arg:1:modify_pending_order_address:order_id",
+    "arg:1:modify_pending_order_address:state",
+    "arg:1:modify_pending_order_address:zip",
+    "arg:2:modify_pending_order_items:item_ids",
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "arg:2:modify_pending_order_items:order_id",
+    "arg:2:modify_pending_order_items:payment_method_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"445 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 394\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"Fort Worth\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W9583042\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"76165\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address1",
+     "=",
+     "\"445 Maple Drive\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 394\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:city",
+     "=",
+     "\"Fort Worth\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:order_id",
+     "=",
+     "\"#W4082615\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:zip",
+     "=",
+     "\"76165\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:item_ids",
+     "=",
+     "[\"9779102705\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"1096508426\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4082615\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_4768213\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "99355677e0140dccdfef9ef0b0f363b4",
+    "kind": "statehash",
+    "value": "{\"db\":\"15b54ab94e8b7c77a7be5280db340002492d02028e320905b39b80e6cab6de3d\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "6c41159aeca0bdc9",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "address1": "445 Maple Drive",
+       "address2": "Suite 394",
+       "city": "Fort Worth",
+       "country": "USA",
+       "order_id": "#W9583042",
+       "state": "TX",
+       "zip": "76165"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "address1": "445 Maple Drive",
+       "address2": "Suite 394",
+       "city": "Fort Worth",
+       "country": "USA",
+       "order_id": "#W4082615",
+       "state": "TX",
+       "zip": "76165"
+      },
+      "name": "modify_pending_order_address"
+     },
+     {
+      "arguments": {
+       "item_ids": [
+        "9779102705"
+       ],
+       "new_item_ids": [
+        "1096508426"
+       ],
+       "order_id": "#W4082615",
+       "payment_method_id": "paypal_4768213"
+      },
+      "name": "modify_pending_order_items"
+     }
+    ],
+    "reads": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_order_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "min_gt_moved_edges": 1,
+  "require_full_quota": false,
+  "seed": 7
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "retail_request",
+     "reads": [],
+     "writes": [
+      "modify_pending_order_address",
+      "modify_pending_order_items",
+      "exchange_delivered_order_items"
+     ]
+    }
+   },
+   "dst": "1558966fb77683b5",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "102",
+   "src": "0ed952f7f656e558"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "retail_request",
+     "reads": [
+      "find_user_id_by_name_zip",
+      "get_order_details",
+      "get_order_details",
+      "get_order_details",
+      "calculate",
+      "calculate"
+     ],
+     "writes": [
+      "return_delivered_order_items"
+     ]
+    }
+   },
+   "dst": "a8844bc2f8a581b1",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "47",
+   "src": "0ed952f7f656e558"
+  },
+  {
+   "delta": {
+    "removed_request": "modify_pending_order_address"
+   },
+   "dst": "9f068d97c09bb97b",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "0ed952f7f656e558"
+  },
+  {
+   "delta": {
+    "removed_request": "modify_user_address"
+   },
+   "dst": "6c41159aeca0bdc9",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "0ed952f7f656e558"
+  }
+ ],
+ "env_id": "tau2_retail_shop",
+ "env_spec": {
+  "domain": "retail",
+  "env_id": "tau2_retail_shop",
+  "env_key": "tau2_retail_shop",
+  "initialization": {},
+  "solo_mode": false
+ },
+ "root": {
+  "base": {
+   "kind": "retail_request",
+   "reads": [
+    "find_user_id_by_name_zip",
+    "get_user_details",
+    "get_order_details",
+    "get_order_details",
+    "get_product_details",
+    "get_order_details"
+   ],
+   "writes": [
+    "modify_pending_order_address",
+    "modify_pending_order_address",
+    "modify_user_address",
+    "modify_pending_order_items"
+   ]
+  },
+  "bound_slots": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_pending_order_address:address1",
+   "arg:1:modify_pending_order_address:address2",
+   "arg:1:modify_pending_order_address:city",
+   "arg:1:modify_pending_order_address:country",
+   "arg:1:modify_pending_order_address:order_id",
+   "arg:1:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_address:zip",
+   "arg:2:modify_user_address:address1",
+   "arg:2:modify_user_address:address2",
+   "arg:2:modify_user_address:city",
+   "arg:2:modify_user_address:country",
+   "arg:2:modify_user_address:state",
+   "arg:2:modify_user_address:user_id",
+   "arg:2:modify_user_address:zip",
+   "arg:3:modify_pending_order_items:item_ids",
+   "arg:3:modify_pending_order_items:new_item_ids",
+   "arg:3:modify_pending_order_items:order_id",
+   "arg:3:modify_pending_order_items:payment_method_id"
+  ],
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"445 Maple Drive\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 394\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"Fort Worth\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W9583042\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"76165\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address1",
+    "=",
+    "\"445 Maple Drive\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 394\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:city",
+    "=",
+    "\"Fort Worth\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "=",
+    "\"#W4082615\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:zip",
+    "=",
+    "\"76165\""
+   ],
+   [
+    "arg:2:modify_user_address:address1",
+    "=",
+    "\"445 Maple Drive\""
+   ],
+   [
+    "arg:2:modify_user_address:address2",
+    "=",
+    "\"Suite 394\""
+   ],
+   [
+    "arg:2:modify_user_address:city",
+    "=",
+    "\"Fort Worth\""
+   ],
+   [
+    "arg:2:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:2:modify_user_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:2:modify_user_address:user_id",
+    "=",
+    "\"mei_patel_7272\""
+   ],
+   [
+    "arg:2:modify_user_address:zip",
+    "=",
+    "\"76165\""
+   ],
+   [
+    "arg:3:modify_pending_order_items:item_ids",
+    "=",
+    "[\"9779102705\"]"
+   ],
+   [
+    "arg:3:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"1096508426\"]"
+   ],
+   [
+    "arg:3:modify_pending_order_items:order_id",
+    "=",
+    "\"#W4082615\""
+   ],
+   [
+    "arg:3:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_4768213\""
+   ]
+  ],
+  "ground_truth": {
+   "hash": "c1c91a7dd9344c323619b2e921e467c3",
+   "kind": "statehash",
+   "value": "{\"db\":\"c3bd28c101572f04483eac972adc7fd520cef4bba4959848120690ed0c762700\",\"errors\":[]}"
+  },
+  "gt_extensional": false,
+  "intent_id": "0ed952f7f656e558",
+  "is_seed": true,
+  "recipe": {
+   "actions": [
+    {
+     "arguments": {
+      "address1": "445 Maple Drive",
+      "address2": "Suite 394",
+      "city": "Fort Worth",
+      "country": "USA",
+      "order_id": "#W9583042",
+      "state": "TX",
+      "zip": "76165"
+     },
+     "name": "modify_pending_order_address"
+    },
+    {
+     "arguments": {
+      "address1": "445 Maple Drive",
+      "address2": "Suite 394",
+      "city": "Fort Worth",
+      "country": "USA",
+      "order_id": "#W4082615",
+      "state": "TX",
+      "zip": "76165"
+     },
+     "name": "modify_pending_order_address"
+    },
+    {
+     "arguments": {
+      "address1": "445 Maple Drive",
+      "address2": "Suite 394",
+      "city": "Fort Worth",
+      "country": "USA",
+      "state": "TX",
+      "user_id": "mei_patel_7272",
+      "zip": "76165"
+     },
+     "name": "modify_user_address"
+    },
+    {
+     "arguments": {
+      "item_ids": [
+       "9779102705"
+      ],
+      "new_item_ids": [
+       "1096508426"
+      ],
+      "order_id": "#W4082615",
+      "payment_method_id": "paypal_4768213"
+     },
+     "name": "modify_pending_order_items"
+    }
+   ],
+   "reads": [
+    "find_user_id_by_name_zip",
+    "get_user_details",
+    "get_order_details",
+    "get_order_details",
+    "get_product_details",
+    "get_order_details"
+   ]
+  },
+  "source_record": "42",
+  "unbound_slots": []
+ },
+ "tree_id": "29676ba9759725e5"
+}

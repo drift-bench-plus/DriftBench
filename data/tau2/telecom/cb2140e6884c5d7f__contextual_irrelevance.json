@@ -1,0 +1,148 @@
+{
+ "sample_id": "cb2140e6884c5d7f__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "cb2140e6884c5d7f",
+ "query": "I spent the morning at the new community dog park watching all the golden retrievers play fetch in the grass, there was even one little puppy that kept stealing everyone\u2019s tennis balls and running off to hide them under the picnic tables. On my way home I stopped at that new bakery on 5th Street and picked up a lemon poppy seed muffin that was still warm from the oven, it had the perfect amount of glaze on top and wasn\u2019t too sweet. I also was reminded I need to pick up more cat litter on my way out tomorrow, my little tabby has been going through it way faster than usual lately. Anyway, I\u2019m having issues with my phone right now: airplane mode is turned on, my network preference is acting up, wifi calling isn\u2019t working properly, my SMS app doesn\u2019t have the right permissions, data mode is off, I\u2019ve exceeded my data usage limit, I think my SIM card might be unseated, I\u2019m currently abroad and roaming is turned off so I can\u2019t get any of my services to work right.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent the morning at the new community dog park watching all the golden retrievers play fetch in the grass, there was even one little puppy that kept stealing everyone\u2019s tennis balls and running off to hide them under the picnic tables. On my way home I stopped at that new bakery on 5th Street and picked up a lemon poppy seed muffin that was still warm from the oven, it had the perfect amount of glaze on top and wasn\u2019t too sweet. I also was reminded I need to pick up more cat litter on my way out tomorrow, my little tabby has been going through it way faster than usual lately. Anyway,",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:bad_wifi_calling",
+   "fault:break_app_sms_permission",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_app_sms_permission",
+    "=",
+    "break_app_sms_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

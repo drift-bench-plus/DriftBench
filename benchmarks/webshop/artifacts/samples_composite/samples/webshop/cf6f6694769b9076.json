@@ -1,0 +1,176 @@
+{
+ "sample_id": "cf6f6694769b9076",
+ "tree_id": "c4c4c7f9535d9d5e",
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "goal_idx": 316,
+ "split": "test",
+ "source_instruction": "i am looking for a high speed 150 ft coaxial cable",
+ "query": "I spent my whole weekend deep cleaning the back patio, pulling up all the dandelions that had snuck between the pavers, hanging those new string lights that glow soft gold after dusk, and even testing out the new s'mores maker I got for my birthday, which works way better than the old rusted fire pit we used to drag out every summer. My neighbor stopped by last night to drop off a jar of her homemade peach jam, and we ended up chatting for almost an hour about how her rescue cat keeps sneaking onto the patio furniture to nap in the sun, even though she bought him that fancy plush cat bed that's supposed to be temperature controlled. I've heard that stuff in the satellite television section that runs at high speed works well when it's 150 ft, and I never go over 40 when I'm picking up things for that setup.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+indirect_intent",
+  "family": "intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "indirect_intent"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I spent my whole weekend deep cleaning the back patio, pulling up all the dandelions that had snuck between the pavers, hanging those new string lights that glow soft gold after dusk, and even testing out the new s'mores maker I got for my birthday, which works way better than the old rusted fire pit we used to drag out every summer. My neighbor stopped by last night to drop off a jar of her homemade peach jam, and we ended up chatting for almost an hour about how her rescue cat keeps sneaking onto the patio furniture to nap in the sun, even though she bought him that fancy plush cat bed that's supposed to be temperature controlled.",
+  "retained": [
+   "attr:high speed",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "option:0",
+     "=",
+     "150 ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "02bc26d92e3e4721"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 7,
+  "lit_card": 7,
+  "components": {}
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "18789ead90bd1547",
+  "conditions": [
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "150 ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 7,
+  "value": [
+   "[\"B073KYYVTR\",[[\"size\",\"150ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"150ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"150 ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"size\",\"150 ft\"]]]",
+   "[\"B07CQB2FZK\",[[\"size\",\"150 ft\"]]]",
+   "[\"B07HC46N93\",[[\"size\",\"150ft\"]]]",
+   "[\"B096KVYFN5\",[[\"size\",\"10 ft\"]]]"
+  ],
+  "hash": "1c663ba9716b940ea3e329b20f45c7e7"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0d4271e27a5b21d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7845bdf8528c5ec1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3ce77db907d63aba",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be smart tv."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bb6c86836e686516",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gold plated."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "16e5a39f0975db79",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e05fdcce4645d715",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "672fc4fef32e57cb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it 50 ft instead of 150 ft."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b9abd5f3ef6187cf",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it 135ft instead of 150 ft."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

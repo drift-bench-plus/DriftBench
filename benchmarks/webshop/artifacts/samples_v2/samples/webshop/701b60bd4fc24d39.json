@@ -1,0 +1,174 @@
+{
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "fidelity_notes": [],
+ "goal_idx": 299,
+ "ground_truth": {
+  "cardinality": 9,
+  "hash": "e81fe6ee894677304ad7f936066ca58b",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0171EUOZI\",[[\"size\",\"10ft (2 pack)\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"1ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"1ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"1ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"material type\",\"1ft - 3 pack\"]]]",
+   "[\"B07CQB2FZK\",[[\"material type\",\"1ft - 3 pack\"]]]",
+   "[\"B07HC46N93\",[[\"size\",\"1ft\"]]]",
+   "[\"B099RJGRRZ\",[[\"size\",\"1ft\"]]]",
+   "[\"B09MV8B4PK\",[[\"item package quantity\",\"3\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "1ft - 3 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "91474c75ad5d4e6f"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "option:0",
+     "=",
+     "1ft - 3 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high speed",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that high speed satellite television gear works really well, and the 1ft - 3 pack option is supposed to be pretty solid, and I’ve got 40 bucks set aside for that kind of stuff right now.",
+ "render_attempts": 1,
+ "sample_id": "701b60bd4fc24d39",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0d4271e27a5b21d4"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7845bdf8528c5ec1"
+  },
+  {
+   "announcement": "Also, it needs to be high performance.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "47488dd1d7b025ea"
+  },
+  {
+   "announcement": "Also, it needs to be smart tv.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "49738ef791abe26a"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e05fdcce4645d715"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f400a0f986c9f63f"
+  },
+  {
+   "announcement": "Actually, make it 150 ft instead of 1ft - 3 pack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "18789ead90bd1547"
+  },
+  {
+   "announcement": "Actually, make it 50 ft instead of 1ft - 3 pack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "672fc4fef32e57cb"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 9,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 9,
+  "verdict": "ok"
+ },
+ "source_instruction": "look for a high speed coaxial cable that is about 1 foot. three per pack would be nice.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "262ba9c552d0626c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

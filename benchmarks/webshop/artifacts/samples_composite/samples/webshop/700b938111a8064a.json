@@ -1,0 +1,196 @@
+{
+ "sample_id": "700b938111a8064a",
+ "tree_id": "d8635b8c1de27ad3",
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "goal_idx": 409,
+ "split": "test",
+ "source_instruction": "i am looking for tulua apple cider vinegar lemon ginger flavored fruit juice that is certified organic.",
+ "query": "Ugh, I just spent 20 minutes in the snack aisle staring at those weird pickle-flavored protein bars that everyone on my neighborhood Facebook group won\u2019t stop raving about, and I swear the self-checkout machine kept beeping at me like I was trying to sneak a whole case of sparkling water out without paying, plus my reusable tote bag\u2019s strap broke right as I was grabbing a pack of those honey-lemon throat lozenges I keep in my purse for dry commutes. Oh, and I totally forgot to text my roommate back about whether she wanted me to pick up those frozen mango chunks she likes for her morning smoothies, too. Can you help me find a good certified organic bottle of Tulua apple cider vinegar lemon ginger? I don\u2019t want anything over a reasonable price, y\u2019know?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+vagueness_subjectivity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I just spent 20 minutes in the snack aisle staring at those weird pickle-flavored protein bars that everyone on my neighborhood Facebook group won\u2019t stop raving about, and I swear the self-checkout machine kept beeping at me like I was trying to sneak a whole case of sparkling water out without paying, plus my reusable tote bag\u2019s strap broke right as I was grabbing a pack of those honey-lemon throat lozenges I keep in my purse for dry commutes. Oh, and I totally forgot to text my roommate back about whether she wanted me to pick up those frozen mango chunks she likes for her morning smoothies, too.",
+  "retained": [
+   "attr:certified organic",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "tulua apple cider vinegar lemon ginger"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "efaa396caa32a58e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 13,
+  "lit_card": 15,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 15,
+    "true_card": 13,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "9abc84ff04905971",
+  "conditions": [
+   [
+    "attr:certified organic",
+    "=",
+    "certified organic"
+   ],
+   [
+    "option:0",
+    "=",
+    "tulua apple cider vinegar lemon ginger"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 13,
+  "value": [
+   "[\"B007PY8M9A\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B078Y9KGCD\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B07C63XYP4\",[[\"flavor name\",\"lemon-lime\"]]]",
+   "[\"B07GBGZZLC\",[[\"flavor\",\"apple cider vinegar lemon ginger\"]]]",
+   "[\"B07S6ZTGLY\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B087MBRQ51\",[[\"flavor name\",\"ginger lemon\"]]]",
+   "[\"B08DYDRTV1\",[[\"flavor name\",\"ginger lemonade\"]]]",
+   "[\"B08FV8RR9Y\",[[\"flavor name\",\"lemon\"]]]",
+   "[\"B08HTR6M9M\",[[\"flavor name\",\"ginger lemon\"]]]",
+   "[\"B08LP34HMM\",[[\"flavor name\",\"ginger lemon honey (pack of 2)\"]]]",
+   "[\"B08XZXPK93\",[[\"flavor name\",\"lemon pepper chicken\"]]]",
+   "[\"B0936QYZ8K\",[[\"flavor name\",\"lemon\"]]]",
+   "[\"B09BK4W8GB\",[[\"flavor name\",\"ginger lemon\"]]]"
+  ],
+  "hash": "b498997477baf2189a9bcf9d017cf856"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2398dab1f90987e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "38b64bfd9d3bf2d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bdef8c355e557c44",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cane sugar."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f18b778e27fff9a6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be natural flavors."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "09e1f35be0713809",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "af12f9b9de3bb07b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "681e7aa62244ea97",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.23 ounce (pack of 75) instead of tulua apple cider vinegar lemon ginger."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7fab184d8b90ce08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.21 ounce (pack of 10) instead of tulua apple cider vinegar lemon ginger."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

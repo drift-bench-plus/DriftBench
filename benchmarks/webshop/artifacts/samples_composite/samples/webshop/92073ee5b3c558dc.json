@@ -1,0 +1,186 @@
+{
+ "sample_id": "92073ee5b3c558dc",
+ "tree_id": "4944911280127eae",
+ "adapter": "webshop",
+ "cluster": "video surveillance",
+ "goal_idx": 184,
+ "split": "test",
+ "source_instruction": "i am looking for 3mp motion detection security camera.",
+ "query": "Oh man, I spent 20 minutes this morning trying to get my sourdough starter to stop smelling like old gym socks\u2014turns out I fed it way too much whole wheat flour yesterday and it went a little feral, so I had to dump half of it and feed it a tiny bit of bread flour to calm it down. I also remembered I need to pick up those fuzzy cat socks I saw last week with the little tuna fish prints on them before they sell out, my tabby would lose her mind if I missed those. Oh, and I\u2019ve been meaning to rewatch that old 90s skateboarding video my friends and I used to loop in high school, I can\u2019t remember if it\u2019s on the free streaming service or if I have to dig out my old DVD copy. Anyway, I\u2019m looking for video surveillance cameras right now\u2014they have to have motion detection, 3mp resolution is what I\u2019m going for, and the most I want to spend is that one.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+referential_ambiguity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh man, I spent 20 minutes this morning trying to get my sourdough starter to stop smelling like old gym socks\u2014turns out I fed it way too much whole wheat flour yesterday and it went a little feral, so I had to dump half of it and feed it a tiny bit of bread flour to calm it down. I also remembered I need to pick up those fuzzy cat socks I saw last week with the little tuna fish prints on them before they sell out, my tabby would lose her mind if I missed those. Oh, and I\u2019ve been meaning to rewatch that old 90s skateboarding video my friends and I used to loop in high school, I can\u2019t remember if it\u2019s on the free streaming service or if I have to dig out my old DVD copy.",
+  "retained": [
+   "attr:motion detection",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:motion detection",
+     "=",
+     "motion detection"
+    ],
+    [
+     "option:0",
+     "=",
+     "3mp"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b00205dbaf178bff"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 8,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 8,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "7278ebab2e56407b",
+  "conditions": [
+   [
+    "attr:motion detection",
+    "=",
+    "motion detection"
+   ],
+   [
+    "option:0",
+    "=",
+    "3mp"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B08B7TXXWF\",[[\"color\",\"3mp\"]]]",
+   "[\"B08W57SX4J\",[[\"size\",\"3mp camera\"]]]",
+   "[\"B08ZN3Q4DN\",[[\"color\",\"3mp\"]]]"
+  ],
+  "hash": "6ec2e226b6b811002787153ab9ba1992"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "18a6cd52da3d2b94",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the video surveillance instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6a0c0bc79e73076",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the video surveillance instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "267155914c5d4abe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mobile phone."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "876e17877673602d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be rechargeable battery."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "353171591dacb3bf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8c7e8e0461c8e66b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "6d3ee0bb9e3d45f9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 female to 4 male (1 pack) instead of 3mp."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "dcb428f641864c08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pc instead of 3mp."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

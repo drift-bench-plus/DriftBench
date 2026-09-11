@@ -1,0 +1,187 @@
+{
+ "adapter": "webshop",
+ "cluster": "home office chairs",
+ "fidelity_notes": [],
+ "goal_idx": 387,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "7088edd52cdddf9f73f55aa114f53364",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0843SFXGL\",[[\"color\",\"3011-grey\"]]]",
+   "[\"B08JTRCSR2\",[[\"color\",\"light grey\"]]]",
+   "[\"B08QV9M623\",[[\"color\",\"grey\"]]]",
+   "[\"B08S3LDF8K\",[[\"color\",\"grey\"]]]",
+   "[\"B098L6VVZK\",[[\"color\",\"grey\"]]]",
+   "[\"B09KC4VQWG\",[[\"color\",\"fossil grey\"]]]",
+   "[\"B09KLWDXWQ\",[[\"color\",\"grey\"]]]",
+   "[\"B09L41ZP46\",[[\"color\",\"grey\"]]]",
+   "[\"B09MW1RFVQ\",[[\"color\",\"grey-3\"]]]",
+   "[\"B09NRDW9ZK\",[[\"color\",\"grey\"]]]",
+   "[\"B09PN9WXPB\",[[\"color\",\"grey\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy assemble",
+    "=",
+    "easy assemble"
+   ],
+   [
+    "attr:mid century",
+    "=",
+    "mid century"
+   ],
+   [
+    "option:0",
+    "=",
+    "grey"
+   ],
+   [
+    "price_upper",
+    "<=",
+    160
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "7d3190a0898ecd17"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy assemble",
+     "=",
+     "easy assemble"
+    ],
+    [
+     "attr:mid century",
+     "=",
+     "mid century"
+    ],
+    [
+     "option:0",
+     "=",
+     "grey"
+    ],
+    [
+     "price_upper",
+     "<=",
+     160
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning repotting my snake plant and pothos, and I’m pretty sure I overwatered the pothos because the leaves are already looking a little droopy at the edges. I also tried a new matcha latte recipe with oat milk and a dash of cinnamon, but it turned out way too bitter even after I added an extra spoonful of honey. On top of that, my favorite knit throw got snagged on the edge of the coffee table when I was moving the planters, and I haven’t figured out how to fix the loose thread yet.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy assemble",
+   "attr:mid century",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning repotting my snake plant and pothos, and I’m pretty sure I overwatered the pothos because the leaves are already looking a little droopy at the edges. I also tried a new matcha latte recipe with oat milk and a dash of cinnamon, but it turned out way too bitter even after I added an extra spoonful of honey. On top of that, my favorite knit throw got snagged on the edge of the coffee table when I was moving the planters, and I haven’t figured out how to fix the loose thread yet. I’m looking for home office chairs that are easy to assemble with a mid century style, I’d prefer a grey option if available, and my budget is under $160.",
+ "render_attempts": 1,
+ "sample_id": "c930b02420611e3d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office chairs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1410d19fdd6bf8b2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office chairs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a8a0e1fd3281152f"
+  },
+  {
+   "announcement": "Also, it needs to be non slip.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7705bff68cd9fd8a"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e81c3c6963bcf206"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "20fad2416e9881e2"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f22bc499ecb7427d"
+  },
+  {
+   "announcement": "Actually, make it 6030blue instead of grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "53f712376a2da3d7"
+  },
+  {
+   "announcement": "Actually, make it 6422yellow instead of grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c3b357773a299a9b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 11,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a mid century home office desk chair that is easy to assemble. please choose the grey velvet one.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "ad256d2ea858759d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

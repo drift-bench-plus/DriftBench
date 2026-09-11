@@ -1,0 +1,182 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's jeans",
+ "fidelity_notes": [],
+ "goal_idx": 20,
+ "ground_truth": {
+  "cardinality": 14,
+  "hash": "b83112cd83b7624bd23c7ca16b0826a4",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B000IBH612\",[[\"color\",\"tan\"]]]",
+   "[\"B005DIGPNA\",[[\"color\",\"tan\"]]]",
+   "[\"B01H7ENCMO\",[[\"special size\",\"standard\"]]]",
+   "[\"B07336HLSP\",[[\"special size\",\"standard\"]]]",
+   "[\"B07336W4MP\",[[\"color\",\"titan - waterless\"]]]",
+   "[\"B073V4382Z\",[[\"fit type\",\"standard\"]]]",
+   "[\"B074KJ5LD3\",[[\"special size\",\"standard\"]]]",
+   "[\"B075CQ3FG6\",[[\"special size\",\"standard\"]]]",
+   "[\"B077PHGLJN\",[[\"fit type\",\"standard\"]]]",
+   "[\"B077R99SVL\",[[\"special size\",\"standard\"]]]",
+   "[\"B07HNYC7W4\",[[\"special size\",\"standard\"]]]",
+   "[\"B07PJ2YHKM\",[[\"color\",\"tan\"]]]",
+   "[\"B082QPZXC6\",[[\"color\",\"tan\"]]]",
+   "[\"B08Q8QYG1L\",[[\"color\",\"tan\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:machine wash",
+    "=",
+    "machine wash"
+   ],
+   [
+    "option:0",
+    "=",
+    "standard"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "033d403b63d1f58f"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:machine wash",
+     "=",
+     "machine wash"
+    ],
+    [
+     "option:0",
+     "=",
+     "standard"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:machine wash",
+   "option:0"
+  ],
+  "spec_id": "052a6af8410e4ae7",
+  "strategy_id": "vagueness_subjectivity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for men’s jeans that are machine washable, come in a standard style, and have a good price.",
+ "render_attempts": 1,
+ "sample_id": "865f2719baa23c14",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1f3b01e202185b13"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "cc0c20dc6378e118"
+  },
+  {
+   "announcement": "Also, it needs to be easy care.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e5d073cd91daae11"
+  },
+  {
+   "announcement": "Also, it needs to be elastic waist.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "eb6744886f262701"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5756aafb894501ad"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "913d4bc8df615ab6"
+  },
+  {
+   "announcement": "Actually, make it #3357 camo m instead of standard.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0be7b820456a4ada"
+  },
+  {
+   "announcement": "Actually, make it #3357 z green instead of standard.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "825b85dd870decff"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 20,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 14,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for standard sized levi strauss & co. men's carpenter jeans that are machine washable.",
+ "split": "test",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "tree_id": "d874232a2b086326",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

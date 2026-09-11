@@ -1,0 +1,82 @@
+{
+ "sample_id": "69dfbdc2abd7a5ec__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "69dfbdc2abd7a5ec",
+ "query": "Hey, I just wanted to gush a little first\u2014my neighbor brought over homemade matcha mochi this morning and it\u2019s so good, I\u2019ve already eaten three of them and I\u2019m trying really hard not to go back for a fourth before lunch. Also my cat knocked over my potted basil earlier, I spent ten minutes cleaning soil off the floor and now the poor plant is looking a little sad, I hope it recovers. Oh right, I actually wanted to ask for help with something: I need to cancel my pending order #W2417020, the reason is I no longer need the items.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey, I just wanted to gush a little first\u2014my neighbor brought over homemade matcha mochi this morning and it\u2019s so good, I\u2019ve already eaten three of them and I\u2019m trying really hard not to go back for a fourth before lunch. Also my cat knocked over my potted basil earlier, I spent ten minutes cleaning soil off the floor and now the poor plant is looking a little sad, I hope it recovers.",
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W2417020\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W2417020\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

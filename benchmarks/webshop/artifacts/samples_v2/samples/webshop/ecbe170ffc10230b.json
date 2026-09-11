@@ -1,0 +1,229 @@
+{
+ "adapter": "webshop",
+ "cluster": "makeup sets",
+ "fidelity_notes": [],
+ "goal_idx": 79,
+ "ground_truth": {
+  "cardinality": 31,
+  "hash": "aace0bc4f62f74f5c8d68ee5ad1c40d9",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B002GEHN8U\",[[\"color\",\"purple storm\"]]]",
+   "[\"B07RHS5STR\",[[\"color\",\"purple\"]]]",
+   "[\"B07RKP9ZNR\",[[\"color\",\"purple\"]]]",
+   "[\"B07TTL47W6\",[[\"color\",\"eyeshadow palette-dream purple\"]]]",
+   "[\"B07TWRMR11\",[[\"color\",\"purple\"]]]",
+   "[\"B07W5CSYN7\",[[\"color\",\"purple\"]]]",
+   "[\"B07WR8CF1C\",[[\"color\",\"purple\"]]]",
+   "[\"B07Z1D43L9\",[[\"color\",\"purple\"]]]",
+   "[\"B07Z327WPV\",[[\"color\",\"purple clear\"]]]",
+   "[\"B07ZPP2RT9\",[[\"color\",\"purple\"]]]",
+   "[\"B07ZR3PG55\",[[\"color\",\"dpurple\"]]]",
+   "[\"B083GN5R3L\",[[\"color\",\"purple\"]]]",
+   "[\"B083VSPMS5\",[[\"color\",\"purple\"]]]",
+   "[\"B08CB6CZQS\",[[\"color\",\"purple\"]]]",
+   "[\"B08GHY1SGJ\",[[\"color\",\"purple\"]]]",
+   "[\"B08TTRJHSC\",[[\"color\",\"purple\"]]]",
+   "[\"B092D3214H\",[[\"color\",\"neon purple\"]]]",
+   "[\"B092HVC11D\",[[\"color\",\"purple\"]]]",
+   "[\"B0936J9YZS\",[[\"color\",\"purple\"]]]",
+   "[\"B094QYJRSM\",[[\"color\",\"purple\"]]]",
+   "[\"B095TWK6H7\",[[\"color\",\"peaceful purple\"]]]",
+   "[\"B096FBZMKB\",[[\"color\",\"purple\"]]]",
+   "[\"B098CXPRT1\",[[\"style\",\"purple-12pcs\"]]]",
+   "[\"B098KXFL7C\",[[\"color\",\"purple\"]]]",
+   "[\"B0991RTYH3\",[[\"color\",\"18 pcs purple\"]]]",
+   "[\"B099VX8KP6\",[[\"color\",\"purple\"]]]",
+   "[\"B09C1L7D4D\",[[\"color\",\"purple\"]]]",
+   "[\"B09GG7KVW9\",[[\"color\",\"purple\"]]]",
+   "[\"B09JJSF3LG\",[[\"color\",\"purple\"]]]",
+   "[\"B09L86BY3P\",[[\"color\",\"neon purple\"]]]",
+   "[\"B09MQ93DN8\",[[\"color\",\"purple\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:eye shadow",
+    "=",
+    "eye shadow"
+   ],
+   [
+    "option:0",
+    "=",
+    "peaceful purple"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "141a43f4ed09923f"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "peaceful purple"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "nice violet shade that’s really cool"
+   }
+  ],
+  "attempt": 4,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:eye shadow",
+     "=",
+     "eye shadow"
+    ],
+    [
+     "option:0",
+     "=",
+     "peaceful purple"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   [
+    [
+     "attr:eye shadow",
+     "=",
+     "eye shadow"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:eye shadow",
+   "price_upper"
+  ],
+  "spec_id": "80f5e889f4f236fe",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a makeup set from this section that’s under $30, includes eye shadow, and has a nice violet shade that’s really cool.",
+ "render_attempts": 4,
+ "sample_id": "ecbe170ffc10230b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the makeup sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "3c4aca41b8fb98f6"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the makeup sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4a58c89b8d2e01ea"
+  },
+  {
+   "announcement": "Also, it needs to be easy apply.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ef975830c90023fd"
+  },
+  {
+   "announcement": "Also, it needs to be animal testing.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f423ab59d9e290c9"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "557a1291b84ccbf9"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8a9af56e302a9b9a"
+  },
+  {
+   "announcement": "Actually, make it \" dusty rose (large) instead of peaceful purple.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0f1ae4a56b37ea96"
+  },
+  {
+   "announcement": "Actually, make it #02 sunset instead of peaceful purple.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3c3fcafbff031d1f"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   31,
+   492
+  ],
+  "rule": "ambiguous",
+  "true_card": 31,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a set of makeup brushes in the color peaceful purple to help me with my eyeshadow makeup.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "52f3182b25d07fc5",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

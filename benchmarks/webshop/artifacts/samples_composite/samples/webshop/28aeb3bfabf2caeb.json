@@ -1,0 +1,198 @@
+{
+ "sample_id": "28aeb3bfabf2caeb",
+ "tree_id": "262ba9c552d0626c",
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "goal_idx": 299,
+ "split": "test",
+ "source_instruction": "look for a high speed coaxial cable that is about 1 foot. three per pack would be nice.",
+ "query": "Ugh, I spent my whole morning trying to troubleshoot why my kitchen toaster keeps burning every slice of sourdough I put in it, even on the lowest setting, and I think I might need to replace the crumb tray that somehow got warped when my cousin used it to reheat leftover pizza last weekend. Also, my neighbor stopped by earlier to rant about how the community garden\u2019s tomato plants are all getting eaten by tiny hornworms and none of the organic sprays they\u2019ve tried are working at all. Anyway, I\u2019m browsing the satellite television section right now and I need something with ultra-fast latency, plus the 1ft - 3 pack option, and it can\u2019t cost more than $40 total.",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:high speed"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:high speed",
+    "high speed",
+    "ultra-fast latency"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I spent my whole morning trying to troubleshoot why my kitchen toaster keeps burning every slice of sourdough I put in it, even on the lowest setting, and I think I might need to replace the crumb tray that somehow got warped when my cousin used it to reheat leftover pizza last weekend. Also, my neighbor stopped by earlier to rant about how the community garden\u2019s tomato plants are all getting eaten by tiny hornworms and none of the organic sprays they\u2019ve tried are working at all.",
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:high speed"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high speed",
+     "=",
+     "ultra-fast latency"
+    ],
+    [
+     "option:0",
+     "=",
+     "1ft - 3 pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "49a57964db95f2d0"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 9,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 9,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "91474c75ad5d4e6f",
+  "conditions": [
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "1ft - 3 pack"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:high speed"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 9,
+  "value": [
+   "[\"B0171EUOZI\",[[\"size\",\"10ft (2 pack)\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"1ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"1ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"1ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"material type\",\"1ft - 3 pack\"]]]",
+   "[\"B07CQB2FZK\",[[\"material type\",\"1ft - 3 pack\"]]]",
+   "[\"B07HC46N93\",[[\"size\",\"1ft\"]]]",
+   "[\"B099RJGRRZ\",[[\"size\",\"1ft\"]]]",
+   "[\"B09MV8B4PK\",[[\"item package quantity\",\"3\"]]]"
+  ],
+  "hash": "e81fe6ee894677304ad7f936066ca58b"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0d4271e27a5b21d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7845bdf8528c5ec1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the satellite television instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "47488dd1d7b025ea",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be high performance."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "49738ef791abe26a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be smart tv."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e05fdcce4645d715",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f400a0f986c9f63f",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "18789ead90bd1547",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it 150 ft instead of 1ft - 3 pack."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "672fc4fef32e57cb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, make it 50 ft instead of 1ft - 3 pack."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

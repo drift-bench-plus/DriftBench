@@ -1,0 +1,209 @@
+{
+ "sample_id": "c17c32725ea69e75",
+ "tree_id": "12d5734d35c6cd87",
+ "adapter": "webshop",
+ "cluster": "pantry staples",
+ "goal_idx": 489,
+ "split": "test",
+ "source_instruction": "i'm looking for a 32 ounce package of gluten free almond flour.",
+ "query": "Hey, I\u2019m grabbing stuff from the pantry staples section right now\u2014can you help me find options? I need ones that are definitely gluten free, come in the 32 ounce size, and oh, make sure they have that little non-GMO Project Verified butterfly logo on the packaging too, I\u2019ve been really into picking those up lately. Oh right, and don\u2019t let me go over that one for the total, you know the limit I always stick to when I\u2019m restocking my pantry shelves.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+referential_ambiguity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "make sure they have that little non-GMO Project Verified butterfly logo on the packaging too",
+    "condition": [
+     "attr:non-GMO Project Verified",
+     "=",
+     "non-GMO Project Verified"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:gluten free",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "32 ounce"
+    ],
+    [
+     "attr:non-GMO Project Verified",
+     "=",
+     "non-GMO Project Verified"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "e4c451bbe4a171de"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 4,
+  "lit_card": 5,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 3,
+    "true_card": 4,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 6,
+    "true_card": 4,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "08486ec40a329416",
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "option:0",
+    "=",
+    "32 ounce"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 4,
+  "value": [
+   "[\"B001EO5S1C\",[[\"size\",\"32 ounce (pack of 6)\"]]]",
+   "[\"B00S5AZRYG\",[[\"size\",\"24 ounce\"]]]",
+   "[\"B013PTSCWU\",[[\"size\",\"21 ounce\"]]]",
+   "[\"B09913B3WZ\",[[\"size\",\"32 ounce\"]]]"
+  ],
+  "hash": "af976802a7a2caac58116a098c8b9e4b"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7e8bafccb35e5707",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6215ee8575f5182",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "65f2292138e4b7f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be great gift."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bd35a16081691216",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gift basket."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5b80cf5427dfc468",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ce695cf84de8b47c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1bc641492c1156bd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .2 pack - 1 pound instead of 32 ounce."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5f959bce39642f69",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .10 set(2 ounce (pack of 1)) instead of 32 ounce."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

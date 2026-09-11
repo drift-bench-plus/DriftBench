@@ -1,0 +1,194 @@
+{
+ "sample_id": "b5cfddc5189a1c7a",
+ "tree_id": "4d24bdf435a70c92",
+ "adapter": "webshop",
+ "cluster": "refillable containers",
+ "goal_idx": 111,
+ "split": "test",
+ "source_instruction": "i am looking for travel foaming dispenser for hand soap. please choose rose gold and silver pump head.",
+ "query": "Ugh, I just got back from walking my golden retriever and he rolled in a huge patch of clover right after I gave him a bath, I swear he does it on purpose to mess with me. Then I stopped to get an iced lavender latte on the way home and the barista put way too much syrup in it, it\u2019s so cloying I can barely sip it, and I also realized I forgot to pick up the replacement lavender dryer sheets I needed last week. I\u2019m looking for refillable containers that are rose gold with a silver pump head, at a good price point that makes sense for what I\u2019m buying.",
+ "strategy_ids": [
+  "vagueness_subjectivity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "vagueness_subjectivity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "vagueness_subjectivity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I just got back from walking my golden retriever and he rolled in a huge patch of clover right after I gave him a bath, I swear he does it on purpose to mess with me. Then I stopped to get an iced lavender latte on the way home and the barista put way too much syrup in it, it\u2019s so cloying I can barely sip it, and I also realized I forgot to pick up the replacement lavender dryer sheets I needed last week.",
+  "retained": [
+   "attr:rose gold",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:rose gold",
+     "=",
+     "rose gold"
+    ],
+    [
+     "option:0",
+     "=",
+     "silver pump head"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "a72bf8967d78077a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 11,
+  "lit_card": 12,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 12,
+    "true_card": 11,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "b01a8f2276717361",
+  "conditions": [
+   [
+    "attr:rose gold",
+    "=",
+    "rose gold"
+   ],
+   [
+    "option:0",
+    "=",
+    "silver pump head"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 11,
+  "value": [
+   "[\"B0842CFRWY\",[[\"color\",\"silver\"]]]",
+   "[\"B085W67P7L\",[[\"color\",\"silver pump head\"]]]",
+   "[\"B08GY8991Y\",[[\"color\",\"silver\"]]]",
+   "[\"B08HGSVDZ6\",[[\"color\",\"silver\"]]]",
+   "[\"B08HQCBLL5\",[[\"color\",\"silver\"]]]",
+   "[\"B08J6R2CM4\",[[\"color\",\"silver\"]]]",
+   "[\"B08JBXDSW3\",[[\"color\",\"silver\"]]]",
+   "[\"B08LDLRJ7Y\",[[\"color\",\"silver\"]]]",
+   "[\"B09172HG6F\",[[\"color\",\"silver\"]]]",
+   "[\"B09GB2JXL7\",[[\"color\",\"silver\"]]]",
+   "[\"B09PLD5NWJ\",[[\"color\",\"silver ball\"]]]"
+  ],
+  "hash": "475d6f51ba7ab07fbaeaab9a287d053d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "38761bc5eb7aeb9a",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the refillable containers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "523e1485ba534c14",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the refillable containers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "84853f59cf236428",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be quality materials."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a953ad96d18c095e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be shampoo conditioner."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "755e44492b494502",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d3bf42b4b826c60b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "57e065657e5b8bef",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 count (pack of 1) instead of silver pump head."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "bb8de87feede8b85",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 count (pack of 1) instead of silver pump head."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

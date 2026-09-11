@@ -1,0 +1,104 @@
+{
+ "sample_id": "5552c3b516de34dd__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "5552c3b516de34dd",
+ "query": "My houseplant that I picked up from the market last week just started blooming these tiny, soft pink flowers, I was so surprised I even took a dozen photos to send to my mom earlier. The stray cat that hangs around our apartment building finally let me pet her this morning too, she even rubbed up against my ankle and I gave her a little bit of tuna I had left over from breakfast. I also just finished watching the first season of that new cozy mystery show everyone's been talking about, the plot twist at the end of episode 6 had me gasping out loud I didn't see it coming at all. Anyway, I need to do an exchange for my delivered order #W7209932, I want to exchange item 5047954489 for item 9354168549, and use gift_card_2611937 as the payment method for any difference that comes up with the exchange.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "My houseplant that I picked up from the market last week just started blooming these tiny, soft pink flowers, I was so surprised I even took a dozen photos to send to my mom earlier. The stray cat that hangs around our apartment building finally let me pet her this morning too, she even rubbed up against my ankle and I gave her a little bit of tuna I had left over from breakfast. I also just finished watching the first season of that new cozy mystery show everyone's been talking about, the plot twist at the end of episode 6 had me gasping out loud I didn't see it coming at all.",
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"5047954489\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"9354168549\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W7209932\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_2611937\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"5047954489\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"9354168549\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W7209932\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_2611937\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

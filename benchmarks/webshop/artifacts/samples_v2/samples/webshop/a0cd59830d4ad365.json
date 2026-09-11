@@ -1,0 +1,206 @@
+{
+ "adapter": "webshop",
+ "cluster": "headphones",
+ "fidelity_notes": [],
+ "goal_idx": 213,
+ "ground_truth": {
+  "cardinality": 8,
+  "hash": "abd81fb3989f261d17dfcea304be12ad",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07TYTJ5M1\",[[\"color\",\"silver\"]]]",
+   "[\"B083ZQGG4R\",[[\"color\",\"silver\"]]]",
+   "[\"B089W5RDKV\",[[\"color\",\"silver\"]]]",
+   "[\"B08Y8G1YZN\",[[\"color\",\"silver\"]]]",
+   "[\"B091DXBFFQ\",[[\"color\",\"silver\"]]]",
+   "[\"B09GJZZDQP\",[[\"color\",\"white-silver\"]]]",
+   "[\"B09LXNRQVZ\",[[\"color\",\"silver\"]]]",
+   "[\"B09S5L57D5\",[[\"color\",\"silver\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:noise cancelling",
+    "=",
+    "noise cancelling"
+   ],
+   [
+    "option:0",
+    "=",
+    "white-silver"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "8bc5949360d672c9"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "white-silver"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "in white-silver"
+   }
+  ],
+  "attempt": 1,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:noise cancelling",
+     "=",
+     "noise cancelling"
+    ],
+    [
+     "option:0",
+     "=",
+     "white-silver"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   [
+    [
+     "attr:noise cancelling",
+     "=",
+     "noise cancelling"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:noise cancelling",
+   "price_upper"
+  ],
+  "spec_id": "ff0dddd9b92c86a3",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for noise cancelling headphones and a soft fabric storage pouch in white-silver under $30.",
+ "render_attempts": 1,
+ "sample_id": "a0cd59830d4ad365",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the headphones instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7f764ac432fe9619"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the headphones instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a378bd1c6a654d36"
+  },
+  {
+   "announcement": "Also, it needs to be wireless earbuds.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "073c9f6121813974"
+  },
+  {
+   "announcement": "Also, it needs to be audio cable.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7ee209cc2f948a74"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4b6493956c64e7c4"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e6ad588664e893bb"
+  },
+  {
+   "announcement": "Actually, make it 3 pack instead of white-silver.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7973db25f4efdd9e"
+  },
+  {
+   "announcement": "Actually, make it 7-black1 instead of white-silver.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8890af7279bdaa58"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   8,
+   592
+  ],
+  "rule": "ambiguous",
+  "true_card": 8,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want silver and noise cancelling earbuds.",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "0e753744b15f4583",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

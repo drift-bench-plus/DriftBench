@@ -1,0 +1,169 @@
+{
+ "adapter": "webshop",
+ "cluster": "bags & cases",
+ "fidelity_notes": [],
+ "goal_idx": 338,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "a9815157111f457628a5e0f64832db96",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B082YMS9LN\",[[\"color\",\"corgi dog\"]]]",
+   "[\"B08RYZT6MB\",[[\"color\",\"corgi\"]]]",
+   "[\"B09GLYQ5P2\",[[\"color\",\"corgi dog's paw print\"]]]",
+   "[\"B09GM5V85P\",[[\"color\",\"corgi\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:nail art",
+    "=",
+    "nail art"
+   ],
+   [
+    "option:0",
+    "=",
+    "corgi dog"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "9de96cf97e64bf13"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 4,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:nail art",
+     "=",
+     "nail art"
+    ],
+    [
+     "option:0",
+     "=",
+     "corgi dog"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning trying to teach my neighbor’s parrot to say silly phrases, and it kept squawking about sunflower seeds instead of learning the lines I practiced. Later, I popped into a local bakery to grab a matcha scone, and the barista gave me an extra dollop of clotted cream that was so rich and sweet. I also spent a few minutes scrolling through posts about backyard vegetable gardens, daydreaming about planting cherry tomatoes and basil next spring.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:nail art",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning trying to teach my neighbor’s parrot to say silly phrases, and it kept squawking about sunflower seeds instead of learning the lines I practiced. Later, I popped into a local bakery to grab a matcha scone, and the barista gave me an extra dollop of clotted cream that was so rich and sweet. I also spent a few minutes scrolling through posts about backyard vegetable gardens, daydreaming about planting cherry tomatoes and basil next spring. I’m shopping in the bags & cases section, and I need something with nail art, I’d prefer a corgi dog design, and my price limit is 20.",
+ "render_attempts": 4,
+ "sample_id": "0f92f624f096afaa",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bags & cases instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5022045ab82ac014"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bags & cases instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "ddf874ccce3c6424"
+  },
+  {
+   "announcement": "Also, it needs to be easy use.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9e770a5a41c83862"
+  },
+  {
+   "announcement": "Also, it needs to be face wash.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b2c927a8ff6d02c1"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "26e9450478304702"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ea7325f7f6c0685f"
+  },
+  {
+   "announcement": "Actually, make it #galaxy instead of corgi dog.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "69232cb9dd527bb9"
+  },
+  {
+   "announcement": "Actually, make it #flower instead of corgi dog.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f116f8d6bacc1912"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 4,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like a corgi dog cosmetic bag for my nail art.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "c5d6e9ca2f95b495",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

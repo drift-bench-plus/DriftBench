@@ -1,0 +1,82 @@
+{
+ "sample_id": "119240178f1a28db__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "119240178f1a28db",
+ "query": "I was walking my golden retriever this morning and he ended up rolling in a patch of wild clover, so I had to stop by the pet store on my way home to pick up extra dog shampoo. When I was checking out, the cashier was telling me about this new local bakery that makes the most amazing matcha croissants, I even jotted down the address so I can go try them this weekend. Oh right, I also wanted to ask for help with my phone: my SMS permissions aren't working properly right now, and my mobile data mode is turned off, can you help me figure out what's going on?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever this morning and he ended up rolling in a patch of wild clover, so I had to stop by the pet store on my way home to pick up extra dog shampoo. When I was checking out, the cashier was telling me about this new local bakery that makes the most amazing matcha croissants, I even jotted down the address so I can go try them this weekend. Oh right, I also wanted to ask for help with my phone:",
+  "retained": [
+   "fault:break_app_sms_permission",
+   "fault:data_mode_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_app_sms_permission",
+    "=",
+    "break_app_sms_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

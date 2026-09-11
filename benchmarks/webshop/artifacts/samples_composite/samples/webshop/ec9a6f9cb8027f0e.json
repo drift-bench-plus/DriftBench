@@ -1,0 +1,199 @@
+{
+ "sample_id": "ec9a6f9cb8027f0e",
+ "tree_id": "96f35bb21ef1d3ab",
+ "adapter": "webshop",
+ "cluster": "boomboxes & portable radios",
+ "goal_idx": 362,
+ "split": "test",
+ "source_instruction": "i'm looking for a jet-4 bluetooth portable speaker",
+ "query": "Ugh, I\u2019ve been stressing so much this week because my neighbor\u2019s golden retriever keeps digging up the heirloom marigolds I planted along my fence line, I tried putting down that prickly mesh stuff last weekend and it didn\u2019t work at all, plus I burned my oatmeal so bad this morning the smoke alarm went off and my roommate thought we were having an actual house fire. Oh, anyway, I\u2019m looking for a boombox or portable radio right now, it needs to have stereo sound, I want the grey color option, it has to be under $120, and it absolutely has to come with a detachable shoulder strap included.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+irrelevant_information",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "it absolutely has to come with a detachable shoulder strap included",
+    "condition": [
+     "attr:detachable shoulder strap",
+     "=",
+     "included"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I\u2019ve been stressing so much this week because my neighbor\u2019s golden retriever keeps digging up the heirloom marigolds I planted along my fence line, I tried putting down that prickly mesh stuff last weekend and it didn\u2019t work at all, plus I burned my oatmeal so bad this morning the smoke alarm went off and my roommate thought we were having an actual house fire. Oh, anyway,",
+  "retained": [
+   "attr:stereo sound",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:stereo sound",
+     "=",
+     "stereo sound"
+    ],
+    [
+     "option:0",
+     "=",
+     "grey"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ],
+    [
+     "attr:detachable shoulder strap",
+     "=",
+     "included"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "ac09475a19ea281c"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 8,
+  "lit_card": 2,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 2,
+    "true_card": 8,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "bf9e9d34dff61b2c",
+  "conditions": [
+   [
+    "attr:stereo sound",
+    "=",
+    "stereo sound"
+   ],
+   [
+    "option:0",
+    "=",
+    "grey"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 8,
+  "value": [
+   "[\"B017WOQHAS\",[[\"color\",\"cloudy grey\"]]]",
+   "[\"B07H9T6TJQ\",[[\"color\",\"grey\"]]]",
+   "[\"B07W7442RZ\",[[\"color\",\"grey\"]]]",
+   "[\"B07X2Z97SG\",[[\"color\",\"grey\"]]]",
+   "[\"B07X43JBY8\",[[\"color\",\"grey\"]]]",
+   "[\"B083JNJX1Z\",[[\"color\",\"grey\"]]]",
+   "[\"B08DCY9MS5\",[[\"color\",\"grey\"]]]",
+   "[\"B092Z8C9FH\",[[\"color\",\"deep grey\"]]]"
+  ],
+  "hash": "8488d6cb1636b52d389ea9a496112225"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "018c4ca2ea5e520a",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the boomboxes & portable radios instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "5a700a421cf0e71e",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the boomboxes & portable radios instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "79372386c01fd8fd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mobile phone."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bdbf67b8a3fbf71e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be power bank."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c06df852db62e4eb",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "de90d71107914b61",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "43bd53e1a6e575a2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it black instead of grey."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "43e44837b6061a34",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it beartapeyellow instead of grey."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,201 @@
+{
+ "adapter": "webshop",
+ "cluster": "deli & prepared foods",
+ "fidelity_notes": [],
+ "goal_idx": 204,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "5e5d2b95ef0626f66d23e8276b3a6dfb",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0037507EE\",[[\"flavor name\",\"sweet & spicy\"]]]",
+   "[\"B003RWVFEI\",[[\"flavor name\",\"sweet & spicy\"]]]",
+   "[\"B0173GV8ZY\",[[\"flavor name\",\"sweet and spicy tuna salad\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:ready eat",
+    "=",
+    "ready eat"
+   ],
+   [
+    "option:0",
+    "=",
+    "sweet & spicy"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "3aefe6af3116e824"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "sweet & spicy"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "has a nice kick to it"
+   }
+  ],
+  "attempt": 5,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ready eat",
+     "=",
+     "ready eat"
+    ],
+    [
+     "option:0",
+     "=",
+     "sweet & spicy"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   [
+    [
+     "attr:ready eat",
+     "=",
+     "ready eat"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:ready eat",
+   "price_upper"
+  ],
+  "spec_id": "11c02ad708eef367",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for something ready to eat in the deli & prepared foods section that’s under $30, make sure it has a nice kick to it.",
+ "render_attempts": 5,
+ "sample_id": "0e44d42f7ddc8b99",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the deli & prepared foods instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "9f4ec545c1d51ffa"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the deli & prepared foods instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f3fa665e15e37d6c"
+  },
+  {
+   "announcement": "Also, it needs to be fat free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7399910ca29f99b7"
+  },
+  {
+   "announcement": "Also, it needs to be gluten free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c68b04e6e27349eb"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a26a1475dafd3fc1"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f7ee1ea771e28f3d"
+  },
+  {
+   "announcement": "Actually, make it .10 pack.--30 fl oz (pack of 2) instead of sweet & spicy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0bf9d482353cdff3"
+  },
+  {
+   "announcement": "Actually, make it 12 instead of sweet & spicy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "be84d1202e6eb480"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   3,
+   24
+  ],
+  "rule": "ambiguous",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm searching for canned skinless and boneless pink salmon which is ready to eat. also, i want sweet and spicy flavor.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "bf9ae0dc92dd221e",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

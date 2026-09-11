@@ -1,0 +1,255 @@
+{
+ "sample_id": "b2a2002e75b9ad8b",
+ "tree_id": "e25643dd0c2ae512",
+ "adapter": "webshop",
+ "cluster": "bar stools",
+ "goal_idx": 96,
+ "split": "test",
+ "source_instruction": "i need the yongquiang 26\" set of 4 metal bar height stools in black.  i want the ones for a dining room.",
+ "query": "Hey, I\u2019m looking at the bar stools in this section right now, can you help me pick one? I need it to work for my dining room, be 26 inches tall, cost no more than $270, come with that built-in cup holder on the side, and y\u2019know, get me that one color I always go for? I don\u2019t wanna end up with something too bright or weird, just the usual for me.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+referential_ambiguity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "come with that built-in cup holder on the side",
+    "condition": [
+     "attr:feature",
+     "=",
+     "built-in side cup holder"
+    ]
+   },
+   {
+    "text": "I don\u2019t wanna end up with something too bright or weird, just the usual for me",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:dining room",
+   "option:1",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dining room",
+     "=",
+     "dining room"
+    ],
+    [
+     "option:1",
+     "=",
+     "26 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     270
+    ],
+    [
+     "attr:feature",
+     "=",
+     "built-in side cup holder"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 6,
+  "spec_id": "48450584209ab112"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 35,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 35,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 40,
+    "true_card": 35,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 6,
+ "hidden_intent": {
+  "intent_id": "0e1b68eaa8ab45a2",
+  "conditions": [
+   [
+    "attr:dining room",
+    "=",
+    "dining room"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "option:1",
+    "=",
+    "26 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    270
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 35,
+  "value": [
+   "[\"B073XK4Y1T\",[[\"color\",\"matte black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07524SWFW\",[[\"color\",\"black\"],[\"size\",\"24 inch\"]]]",
+   "[\"B07525BSV2\",[[\"color\",\"cocoa brown  |  black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B075L7V9NW\",[[\"color\",\"matte black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B076D7Y712\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B076D88WBK\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B076D8VYRJ\",[[\"color\",\"matte black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B076DKRWVC\",[[\"color\",\"matte black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B0779PTJ67\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B0779VP37K\",[[\"color\",\"matte black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B0797MZDFS\",[[\"color\",\"matte black wood top high back\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B079BR6W8J\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07FT473Z2\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07FT9VT92\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07FTC477C\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07J688MBG\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07KY9CWQW\",[[\"color\",\"matte black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B07KZVLN3Y\",[[\"color\",\"black\"],[\"size\",\"24 inch\"]]]",
+   "[\"B07KZVQ3WB\",[[\"color\",\"low back black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07QDN1P4H\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B07QHSS59Q\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B07VRKX59W\",[[\"color\",\"black\"],[\"size\",\"24 inch\"]]]",
+   "[\"B0855F56QP\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B0869KMKLS\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B088ZRCVHP\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B08DKWGB2T\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B08DKXJXSY\",[[\"color\",\"distressed gold black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B08DXQYWQQ\",[[\"color\",\"distressed black gold\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B08H24GH77\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B08JJ2563H\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B08T5Z3HFR\",[[\"color\",\"matte black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B08Y8MG7YH\",[[\"color\",\"black\"],[\"size\",\"65cm(26 inch)\"]]]",
+   "[\"B092Z2WT6W\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B09MLGXK4H\",[[\"color\",\"black\"],[\"size\",\"swivel 26 inch\"]]]",
+   "[\"B09NSQQFLN\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]"
+  ],
+  "hash": "a2d37654086087b988760763e07a3d9d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6ef9144c08537686",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bar stools instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b065fa878d7d3391",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bar stools instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "6f134fd162420572",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be white finish."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b5f98ee2ac037c12",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy install."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2778d399899c4b9b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "bb21a21723da4f66",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "6cb5a6a66b4e66ed",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 26 inch instead of black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "e59b1b53961a0e6e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 26\" counter height instead of black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

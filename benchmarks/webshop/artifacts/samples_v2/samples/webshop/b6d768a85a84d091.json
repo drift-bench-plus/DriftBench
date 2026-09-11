@@ -1,0 +1,178 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair treatment oils",
+ "fidelity_notes": [],
+ "goal_idx": 174,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "691f1072e2b49fe01f86b69d93dc6a7d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B088LGSRTG\",[[\"size\",\"7 fl oz (pack of 3)\"],[\"style\",\"conditioner\"]]]",
+   "[\"B08JSH5FKJ\",[[\"size\",\"14 fl oz (pack of 3)\"],[\"style\",\"conditioner\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:natural hair",
+    "=",
+    "natural hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "7 fl oz (pack of 3)"
+   ],
+   [
+    "option:1",
+    "=",
+    "conditioner"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "7e6c178f1ef18663"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "7 fl oz (pack of 3)"
+    ],
+    [
+     "option:1",
+     "=",
+     "conditioner"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:natural hair",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that natural hair hair treatment oils work really well, and there’s a 7 fl oz pack of 3 conditioner option that’s supposed to be great for under 20 dollars.",
+ "render_attempts": 2,
+ "sample_id": "b6d768a85a84d091",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair treatment oils instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "53e294edf352a6cf"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair treatment oils instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7cc446afb81cc0ac"
+  },
+  {
+   "announcement": "Also, it needs to be damaged hair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5ea257971345868d"
+  },
+  {
+   "announcement": "Also, it needs to be aloe vera.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6a1db6384c6d4c43"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2fe17382e85ec3f4"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "de935e7fde707d33"
+  },
+  {
+   "announcement": "Actually, make it 1 ounce instead of 7 fl oz (pack of 3).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7b612a4687aadc24"
+  },
+  {
+   "announcement": "Actually, make it 11 ounce (pack of 1) instead of 7 fl oz (pack of 3).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c132ef3f0a8a88f8"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 2,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a conditioner that comes in a pack of three for natural hair.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "27435fd52d082942",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

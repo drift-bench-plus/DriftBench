@@ -1,0 +1,82 @@
+{
+ "sample_id": "e2d14bea6e159754__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "e2d14bea6e159754",
+ "query": "I was out walking my golden retriever this morning and he chased a squirrel right into a patch of dandelions, rolled around so much his fur is full of fluffy yellow seeds I\u2019ve been picking out for an hour now. On the way home I popped into that new bubble tea shop on the corner, got a taro milk tea with boba, and it was way sweeter than I expected, I think I\u2019ll ask for half sugar next time. I also just remembered I need to pick up a new pack of rechargeable AA batteries for my TV remote later, the old ones died last night when I was in the middle of my favorite show. Anyways, my phone isn\u2019t working at all right now, I can\u2019t make or receive calls or use mobile data, I\u2019m not sure if it\u2019s because my line got suspended from an overdue bill and my contract ending, or if the SIM card just came unseated in the tray, can you help me figure this out?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was out walking my golden retriever this morning and he chased a squirrel right into a patch of dandelions, rolled around so much his fur is full of fluffy yellow seeds I\u2019ve been picking out for an hour now. On the way home I popped into that new bubble tea shop on the corner, got a taro milk tea with boba, and it was way sweeter than I expected, I think I\u2019ll ask for half sugar next time. I also just remembered I need to pick up a new pack of rechargeable AA batteries for my TV remote later, the old ones died last night when I was in the middle of my favorite show.",
+  "retained": [
+   "fault:contract_end_suspension",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:contract_end_suspension",
+     "=",
+     "contract_end_suspension"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:contract_end_suspension",
+    "=",
+    "contract_end_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

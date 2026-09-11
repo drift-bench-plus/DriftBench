@@ -1,0 +1,115 @@
+{
+ "sample_id": "6ec3219809543779__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "6ec3219809543779",
+ "query": "I adopted the cutest little tabby kitten from the shelter yesterday, she\u2019s already figured out how to knock my mug off the coffee table when she wants attention. I\u2019ve also been trying out this new sourdough recipe and I finally got a loaf with a properly crispy crust this morning, it tasted amazing with some homemade strawberry jam. Oh, and I\u2019ve been binging this new fantasy drama series, the plot twists have kept me up way too late the past three nights. Anyway, I\u2019m having an issue with my mobile service right now \u2013 my network connection is really bad, my SMS app permissions seem to be broken, mobile data is turned off, I\u2019ve already exceeded my monthly data usage limit, and I\u2019m currently abroad with roaming disabled so nothing\u2019s working properly, I need help fixing this.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I adopted the cutest little tabby kitten from the shelter yesterday, she\u2019s already figured out how to knock my mug off the coffee table when she wants attention. I\u2019ve also been trying out this new sourdough recipe and I finally got a loaf with a properly crispy crust this morning, it tasted amazing with some homemade strawberry jam. Oh, and I\u2019ve been binging this new fantasy drama series, the plot twists have kept me up way too late the past three nights.",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:break_app_sms_permission",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:break_app_sms_permission",
+    "=",
+    "break_app_sms_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

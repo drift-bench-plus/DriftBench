@@ -1,0 +1,184 @@
+{
+ "sample_id": "f6157293f121c88d__referential_ambiguity",
+ "domain": "retail",
+ "tree_id": "f6157293f121c88d",
+ "query": "Hi there, I need to modify my pending order #W2466703 first: replace item 9385662952 with 8733974883, and use the usual one as the payment method for the adjustment. Also, could you update my address linked to user id yusuf_hernandez_6785 to 565 Maple Drive, Suite 501, Washington, DC, USA, postcode 20307?",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:1:modify_user_address:address1",
+   "arg:1:modify_user_address:address2",
+   "arg:1:modify_user_address:city",
+   "arg:1:modify_user_address:country",
+   "arg:1:modify_user_address:state",
+   "arg:1:modify_user_address:user_id",
+   "arg:1:modify_user_address:zip"
+  ],
+  "hidden_slots": [
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"9385662952\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"8733974883\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W2466703\""
+    ],
+    [
+     "arg:1:modify_user_address:address1",
+     "=",
+     "\"565 Maple Drive\""
+    ],
+    [
+     "arg:1:modify_user_address:address2",
+     "=",
+     "\"Suite 501\""
+    ],
+    [
+     "arg:1:modify_user_address:city",
+     "=",
+     "\"Washington\""
+    ],
+    [
+     "arg:1:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_user_address:state",
+     "=",
+     "\"DC\""
+    ],
+    [
+     "arg:1:modify_user_address:user_id",
+     "=",
+     "\"yusuf_hernandez_6785\""
+    ],
+    [
+     "arg:1:modify_user_address:zip",
+     "=",
+     "\"20307\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "2d88f76ff58153e8"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"9385662952\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"8733974883\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W2466703\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_7529813\""
+   ],
+   [
+    "arg:1:modify_user_address:address1",
+    "=",
+    "\"565 Maple Drive\""
+   ],
+   [
+    "arg:1:modify_user_address:address2",
+    "=",
+    "\"Suite 501\""
+   ],
+   [
+    "arg:1:modify_user_address:city",
+    "=",
+    "\"Washington\""
+   ],
+   [
+    "arg:1:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_user_address:state",
+    "=",
+    "\"DC\""
+   ],
+   [
+    "arg:1:modify_user_address:user_id",
+    "=",
+    "\"yusuf_hernandez_6785\""
+   ],
+   [
+    "arg:1:modify_user_address:zip",
+    "=",
+    "\"20307\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

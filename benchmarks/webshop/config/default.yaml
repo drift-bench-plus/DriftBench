@@ -1,0 +1,59 @@
+# Intent-tree generation config.
+# Anything outside `paths` and `workers` participates in the config hash, i.e. changing
+# it changes tree identity.  Where the data lives and how many processes read it must not.
+
+seed: 42
+depth: 1                 # D1 -- depth>=2 scores against the parent's post-action state
+# N=8 means 2 refinements + 2 relaxations + 2 substitutions + 2 pivots. Balanced layers are
+# what make the runtime's category-probability vector honourable: a tree missing a category
+# cannot supply the shift that vector asks for.
+balanced_branching: true
+# WebShop keeps the strict rule (ruling 2026-08-19: "I really don't want to change WebShop
+# or Retail sample size"). It yields 257 graphs and 1,780 samples, which is plenty, so the
+# clean 25/25/30/20 shift mix is worth the 39-of-87 graphs the rule discards.
+# Loosen this ONLY for a benchmark that is actually short of data.
+require_full_quota: true
+branching: 8             # D2 -- per layer: one root + up to 8 first-layer intents
+min_gt_moved_edges: 1    # D7 -- a tree whose every branch leaves the answer unchanged is vacuous
+
+repos:                   # pinned inputs
+  agentbench: d1e4a10db08c87075c78972e48ecc182be03e2d5
+  webshop: 64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd
+
+paths:
+  # External checkouts; see the repository README for the pinned commits.
+  webshop_repo: ../../external/webshop/WebShop
+  webshop_derived: ../../external/webshop
+  agentbench_repo: ../../external/AgentBench
+  artifacts: artifacts
+  reports: reports
+  cache: artifacts/cache
+
+docker:
+  os_image: intent-tree/os:v1
+  os_base_digest: sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f
+  # Deviation (recorded): official local-os/default apt-installs python3/git/vim/curl/
+  # wget/unzip/zip/tree.  ports.ubuntu.com is unreachable from this network, so we ship
+  # the bare base.  Measured impact: 3/1000 training tasks reference a missing package,
+  # 0 in reference commands.  See docker/os.Dockerfile.
+  os_apt_packages_installed: false
+  mysql_image: mysql:8
+  mysql_digest: sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb
+  mysql_port: 33060          # published on 127.0.0.1 only
+  mysql_password: password   # official harness value (dbbench/environment.py)
+  label: intent-tree         # every container we create carries this label
+  cpus: 2
+  memory: 1g                 # mirrors official os_interaction limits (1 GB / 2 vCPU)
+  exec_timeout_s: 30         # agentrl default exec timeout; our choice to keep it
+  sql_timeout_s: 60          # official dbbench statement timeout (task.py:152)
+
+workers: 4
+
+webshop:
+  # WebShop's official split is implied by goal_idx (see webshop/build_goal_index.py):
+  # test = 0-499, eval = 500-1499, train = 1500+.  Roots come from the split we are
+  # building a benchmark for; retrieval may draw on a wider set, because a retrieved
+  # branch is a sibling intent and carries no answer of its own into the root.
+  root_splits: [test]
+  retrieval_splits: [test, eval]
+  max_resident_clusters: 2      # LRU bound; one cluster is up to ~7k products

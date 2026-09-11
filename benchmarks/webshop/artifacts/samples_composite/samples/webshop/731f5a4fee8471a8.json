@@ -1,0 +1,214 @@
+{
+ "sample_id": "731f5a4fee8471a8",
+ "tree_id": "4944911280127eae",
+ "adapter": "webshop",
+ "cluster": "video surveillance",
+ "goal_idx": 184,
+ "split": "test",
+ "source_instruction": "i am looking for 3mp motion detection security camera.",
+ "query": "Hey, I swung by that little community garden plot I\u2019ve been tending on my walk over here today, and you won\u2019t believe what I spotted when I knelt down to check on the cherry tomato plants I put in a couple weeks back. A tiny baby cottontail rabbit was curled up right under the sprawling cucumber vines, munching on a stray clover leaf like it didn\u2019t have a care in the world, and it let me sit there watching it for a full five minutes before it hopped slow as anything into the hedge at the edge of the lot. I also noticed the sunflowers I planted right along the fence line finally popped their first little bright yellow buds open, and there were three bumblebees bumbling around between them so heavy with pollen they could barely stay airborne when they moved from one flower to the next. I even ran into Mrs. Henderson from two blocks over while I was there, and she gave me a paper bag full of the juiciest-looking purple plums off the tree in her backyard, said her tree produced way more than her family could possibly eat this year so she\u2019s handing them out to everyone she sees at the garden.\nI\u2019m looking for a video surveillance cam for my front porch that has heat signature tracking, y\u2019know? I definitely don\u2019t want to go over that one price point we talked about last time I was picking up security gear. I just need the regular resolution version, nothing fancy or higher end than what most people grab for basic home use. Can you point me to the options that fit what I\u2019m after?",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance",
+  "referential_ambiguity",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance+referential_ambiguity+insufficient_information",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance",
+   "referential_ambiguity",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "factual_error": "attr:motion detection",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:motion detection",
+    "motion detection",
+    "heat signature tracking"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey, I swung by that little community garden plot I\u2019ve been tending on my walk over here today, and you won\u2019t believe what I spotted when I knelt down to check on the cherry tomato plants I put in a couple weeks back. A tiny baby cottontail rabbit was curled up right under the sprawling cucumber vines, munching on a stray clover leaf like it didn\u2019t have a care in the world, and it let me sit there watching it for a full five minutes before it hopped slow as anything into the hedge at the edge of the lot. I also noticed the sunflowers I planted right along the fence line finally popped their first little bright yellow buds open, and there were three bumblebees bumbling around between them so heavy with pollen they could barely stay airborne when they moved from one flower to the next. I even ran into Mrs. Henderson from two blocks over while I was there, and she gave me a paper bag full of the juiciest-looking purple plums off the tree in her backyard, said her tree produced way more than her family could possibly eat this year so she\u2019s handing them out to everyone she sees at the garden.",
+  "retained": [],
+  "hidden_slots": [
+   "attr:motion detection",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:motion detection",
+     "=",
+     "heat signature tracking"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "7663b28e1aa13e32"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 8,
+    "true_card": 3,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1475,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "7278ebab2e56407b",
+  "conditions": [
+   [
+    "attr:motion detection",
+    "=",
+    "motion detection"
+   ],
+   [
+    "option:0",
+    "=",
+    "3mp"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [
+   "attr:motion detection",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B08B7TXXWF\",[[\"color\",\"3mp\"]]]",
+   "[\"B08W57SX4J\",[[\"size\",\"3mp camera\"]]]",
+   "[\"B08ZN3Q4DN\",[[\"color\",\"3mp\"]]]"
+  ],
+  "hash": "6ec2e226b6b811002787153ab9ba1992"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "18a6cd52da3d2b94",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the video surveillance instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6a0c0bc79e73076",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the video surveillance instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "267155914c5d4abe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mobile phone."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "876e17877673602d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be rechargeable battery."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "353171591dacb3bf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8c7e8e0461c8e66b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "6d3ee0bb9e3d45f9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 female to 4 male (1 pack) instead of 3mp."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "dcb428f641864c08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pc instead of 3mp."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

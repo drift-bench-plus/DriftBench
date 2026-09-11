@@ -1,0 +1,217 @@
+{
+ "sample_id": "62fbc4bc6b52a21a",
+ "tree_id": "9998e10e55e4c8df",
+ "adapter": "webshop",
+ "cluster": "women's flats",
+ "goal_idx": 41,
+ "split": "test",
+ "source_instruction": "i am looking for winter warm ankle boots for women. my size is 7.5.",
+ "query": "Ugh, I spent my whole walk over here fuming because the barista at the corner caf\u00e9 completely messed up my oat milk latte this morning\u2014they added vanilla syrup when I explicitly asked for no sweetener, and it was so scalding I burned my tongue the second I took a sip. Then I missed the crosswalk light because a group of tourists stopped right in the middle of the sidewalk to take photos of a random squirrel climbing a fire hydrant, so I had to wait an extra three minutes just to get across the street. I also just realized I left my favorite lip balm in the pocket of the jacket I dropped off at the dry cleaner yesterday, and I\u2019m already kicking myself because that stuff was basically impossible to find in stock the last time I bought it. Anyway, can you help me look for women\u2019s flats that are summer breathable, come in a size 7.5, and don\u2019t cost more than $30?",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:winter warm"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:winter warm",
+    "winter warm",
+    "summer breathable"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I spent my whole walk over here fuming because the barista at the corner caf\u00e9 completely messed up my oat milk latte this morning\u2014they added vanilla syrup when I explicitly asked for no sweetener, and it was so scalding I burned my tongue the second I took a sip. Then I missed the crosswalk light because a group of tourists stopped right in the middle of the sidewalk to take photos of a random squirrel climbing a fire hydrant, so I had to wait an extra three minutes just to get across the street. I also just realized I left my favorite lip balm in the pocket of the jacket I dropped off at the dry cleaner yesterday, and I\u2019m already kicking myself because that stuff was basically impossible to find in stock the last time I bought it. Anyway,",
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:winter warm"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:winter warm",
+     "=",
+     "summer breathable"
+    ],
+    [
+     "option:0",
+     "=",
+     "7.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "f233a36f89ceee43"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 28,
+  "lit_card": 3,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 3,
+    "true_card": 28,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "78ce867d31453fa0",
+  "conditions": [
+   [
+    "attr:winter warm",
+    "=",
+    "winter warm"
+   ],
+   [
+    "option:0",
+    "=",
+    "7.5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:winter warm"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 28,
+  "value": [
+   "[\"B07BMLVX16\",[[\"size\",\"us:7.5(cn:37)\"]]]",
+   "[\"B07HF57J75\",[[\"size\",\"5.5\"]]]",
+   "[\"B07RRND2YB\",[[\"size\",\"5\"]]]",
+   "[\"B07VHNQXYD\",[[\"size\",\"7.5\"]]]",
+   "[\"B081M1632W\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B081T63T3Z\",[[\"size\",\"us:6.5-7=cn:37\"]]]",
+   "[\"B081T7ZCYM\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B08BXMR79H\",[[\"size\",\"7\"]]]",
+   "[\"B08BXNGCP4\",[[\"size\",\"7\"]]]",
+   "[\"B08TMTGPV6\",[[\"size\",\"5.5\"]]]",
+   "[\"B08W3D5642\",[[\"size\",\"7\"]]]",
+   "[\"B0995XLWYH\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09B3ZGXK6\",[[\"size\",\"7\"]]]",
+   "[\"B09DQ6VYGT\",[[\"size\",\"7\"]]]",
+   "[\"B09HC7FPDC\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09JCDQ9FD\",[[\"size\",\"7\"]]]",
+   "[\"B09K74T4LZ\",[[\"size\",\"7.5 wide\"]]]",
+   "[\"B09LCNVMBV\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09LSWJ2Z6\",[[\"size\",\"7\"]]]",
+   "[\"B09M2B4NZ9\",[[\"size\",\"7\"]]]",
+   "[\"B09MLTB56D\",[[\"size\",\"5.5\"]]]",
+   "[\"B09MMYV8M8\",[[\"size\",\"5.5\"]]]",
+   "[\"B09MZGL7QP\",[[\"size\",\"7\"]]]",
+   "[\"B09NRRZ1T1\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09PNKGWYX\",[[\"size\",\"5.5\"]]]",
+   "[\"B09PNLX519\",[[\"size\",\"5.5\"]]]",
+   "[\"B09Q3HJSNH\",[[\"size\",\"6.5-7\"]]]",
+   "[\"B09QSW7LZ3\",[[\"size\",\"7\"]]]"
+  ],
+  "hash": "10780f8862e30169f606b5787d3c3c9c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "646f70b4c5c8559d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's flats instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "9ec03bda172208c6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's flats instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "21ba9ea19270a5ad",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dress shoes."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "581542e413602d22",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ankle strap."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1184f8f88f0e0b08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ceb2d92dc22e7e53",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "294b895897f50415",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 005 grey instead of 7.5."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "e04a87be2f029d6f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01-khaki instead of 7.5."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

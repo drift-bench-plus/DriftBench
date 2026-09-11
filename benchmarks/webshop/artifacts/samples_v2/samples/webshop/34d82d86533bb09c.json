@@ -1,0 +1,185 @@
+{
+ "adapter": "webshop",
+ "cluster": "bedroom sets",
+ "fidelity_notes": [],
+ "goal_idx": 494,
+ "ground_truth": {
+  "cardinality": 9,
+  "hash": "f96511199a3f0e0756a126bdf1801884",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B084MMGH45\",[[\"size\",\"24 inch\"]]]",
+   "[\"B084MN7WRR\",[[\"size\",\"24 inch\"]]]",
+   "[\"B08JHW4QS1\",[[\"size\",\"24 inch, 3 pack\"]]]",
+   "[\"B08SBJ26K6\",[[\"size\",\"24-inch\"]]]",
+   "[\"B08T1T8VLS\",[[\"size\",\"24-inch\"]]]",
+   "[\"B091T7D9G4\",[[\"size\",\"24 inch,set of 3\"]]]",
+   "[\"B09C1DZYH7\",[[\"size\",\"24\\\"\"]]]",
+   "[\"B09J9WW8TK\",[[\"size\",\"24\"]]]",
+   "[\"B09N8HVQMV\",[[\"size\",\"24 inch\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "attr:wall mounted",
+    "=",
+    "wall mounted"
+   ],
+   [
+    "option:0",
+    "=",
+    "24 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    80
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "bb4b97aa766ba3b9"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "attr:wall mounted",
+     "=",
+     "wall mounted"
+    ],
+    [
+     "option:0",
+     "=",
+     "24 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     80
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just finished planting a new batch of cherry tomatoes and basil on my apartment balcony this morning, and I’ve been worrying nonstop about whether the recent sudden temperature drops at night will stunt their growth or make the basil leaves turn yellow and bitter. I also spent twenty minutes yesterday rearranging my small collection of succulents to catch more morning sun, and I’m still not sure if I placed the zebra haworthia far enough away from the prickly pear cactus to avoid them tangling roots as they grow. Oh, and I’ve been meaning to pick up a small bag of organic potting mix on my way home later because the bag I had left got damp and moldy after last week’s rain.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:living room",
+   "attr:wall mounted",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just finished planting a new batch of cherry tomatoes and basil on my apartment balcony this morning, and I’ve been worrying nonstop about whether the recent sudden temperature drops at night will stunt their growth or make the basil leaves turn yellow and bitter. I also spent twenty minutes yesterday rearranging my small collection of succulents to catch more morning sun, and I’m still not sure if I placed the zebra haworthia far enough away from the prickly pear cactus to avoid them tangling roots as they grow. Oh, and I’ve been meaning to pick up a small bag of organic potting mix on my way home later because the bag I had left got damp and moldy after last week’s rain. I’m looking for a wall mounted 24 inch TV for my living room, and my price limit is 80.",
+ "render_attempts": 2,
+ "sample_id": "34d82d86533bb09c",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bedroom sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "071b7fafdced26f0"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bedroom sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "6814f2e833d7f41e"
+  },
+  {
+   "announcement": "Also, it needs to be heavy duty.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "11fbf9e0b09cbd93"
+  },
+  {
+   "announcement": "Also, it needs to be fully assembled.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5c62ecee35bd1407"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "68e041285c41860a"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a2bfde865c639da0"
+  },
+  {
+   "announcement": "Actually, make it 1 pack instead of 24 inch.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "652b6c155b269538"
+  },
+  {
+   "announcement": "Actually, make it 1#gold (no comforter) instead of 24 inch.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "92533d7b1f305671"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 9,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 9,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am searching for a wall mounted floating shelf for my living room. it should be 24 inch size and natural color.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "91fe57209e8b9164",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

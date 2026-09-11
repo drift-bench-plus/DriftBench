@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "bathing accessories",
+ "fidelity_notes": [],
+ "goal_idx": 428,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "f3b26d222c1b98e79f872c1a57cf5b25",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08MXTT8GD\",[[\"size\",\"35.4 inch\"]]]",
+   "[\"B09NKX8NK2\",[[\"color\",\"4\"]]]",
+   "[\"B09PJXZBSQ\",[[\"color\",\"4\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy clean",
+    "=",
+    "easy clean"
+   ],
+   [
+    "attr:non toxic",
+    "=",
+    "non toxic"
+   ],
+   [
+    "option:0",
+    "=",
+    "4"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "6656f40fb250fd25"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "attr:non toxic",
+     "=",
+     "non toxic"
+    ],
+    [
+     "option:0",
+     "=",
+     "4"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning repotting my collection of variegated pothos, and I’m so relieved I finally found the perfect terracotta pots with drainage holes at the local garden center—they even had tiny matching saucers to catch excess water so my windowsill won’t get stained. On my way home, I stopped by the bakery down the street and picked up a warm cinnamon roll with extra cream cheese frosting, and it was so gooey and sweet that I’m still thinking about the crumbs that stuck to the paper wrapper. I also spent ten minutes helping a kid retrieve their stuck kite from a low tree branch in the park, and their excited little wave when they ran off with it made my whole day feel brighter.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy clean",
+   "attr:non toxic",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning repotting my collection of variegated pothos, and I’m so relieved I finally found the perfect terracotta pots with drainage holes at the local garden center—they even had tiny matching saucers to catch excess water so my windowsill won’t get stained. On my way home, I stopped by the bakery down the street and picked up a warm cinnamon roll with extra cream cheese frosting, and it was so gooey and sweet that I’m still thinking about the crumbs that stuck to the paper wrapper. I also spent ten minutes helping a kid retrieve their stuck kite from a low tree branch in the park, and their excited little wave when they ran off with it made my whole day feel brighter. Anyway, I’m looking for bathing accessories that are easy to clean and non-toxic, I want option 4, and my price limit is $20.",
+ "render_attempts": 1,
+ "sample_id": "669282db06c2c380",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bathing accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "874df47adf6060c1"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bathing accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "af15b930ca3ad6b5"
+  },
+  {
+   "announcement": "Also, it needs to be eco friendly.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9c939fb96813a4a8"
+  },
+  {
+   "announcement": "Also, it needs to be bath brush.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bb9162b47c4ec4ce"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a279649fc7a73a97"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d46bd7a631f30213"
+  },
+  {
+   "announcement": "Actually, make it (2 packs)-navy blue,black instead of 4.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4011e10894cf476e"
+  },
+  {
+   "announcement": "Actually, make it (2 packs)-red,black instead of 4.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5503e93e1c9c9e4c"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like a #4 bath sponge that is non toxic and easy to keep clean.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "e62d90d19a98bad1",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

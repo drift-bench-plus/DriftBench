@@ -1,0 +1,188 @@
+{
+ "sample_id": "de3acda1e58df44a",
+ "tree_id": "0e753744b15f4583",
+ "adapter": "webshop",
+ "cluster": "headphones",
+ "goal_idx": 213,
+ "split": "test",
+ "source_instruction": "i want silver and noise cancelling earbuds.",
+ "query": "Ugh, I swear my cat knocked over my favorite potted succulent this morning and got soil all over the living room rug, I spent like 20 minutes scrubbing it out before I even thought about making coffee. Also I realized I forgot to pick up more cat litter on my last grocery run, so I have to swing by the pet store after this too, and I still haven\u2019t figured out what to bring to my friend\u2019s potluck this weekend, maybe those chocolate chip cookies I baked last time? Wait, anyway, I need noise cancelling headphones, white-silver would be nice.",
+ "strategy_ids": [
+  "insufficient_information",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+contextual_irrelevance",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear my cat knocked over my favorite potted succulent this morning and got soil all over the living room rug, I spent like 20 minutes scrubbing it out before I even thought about making coffee. Also I realized I forgot to pick up more cat litter on my last grocery run, so I have to swing by the pet store after this too, and I still haven\u2019t figured out what to bring to my friend\u2019s potluck this weekend, maybe those chocolate chip cookies I baked last time? Wait, anyway,",
+  "retained": [
+   "attr:noise cancelling",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:noise cancelling",
+     "=",
+     "noise cancelling"
+    ],
+    [
+     "option:0",
+     "=",
+     "white-silver"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "6f190fc07fb9504e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 8,
+  "lit_card": 18,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 18,
+    "true_card": 8,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "8bc5949360d672c9",
+  "conditions": [
+   [
+    "attr:noise cancelling",
+    "=",
+    "noise cancelling"
+   ],
+   [
+    "option:0",
+    "=",
+    "white-silver"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 8,
+  "value": [
+   "[\"B07TYTJ5M1\",[[\"color\",\"silver\"]]]",
+   "[\"B083ZQGG4R\",[[\"color\",\"silver\"]]]",
+   "[\"B089W5RDKV\",[[\"color\",\"silver\"]]]",
+   "[\"B08Y8G1YZN\",[[\"color\",\"silver\"]]]",
+   "[\"B091DXBFFQ\",[[\"color\",\"silver\"]]]",
+   "[\"B09GJZZDQP\",[[\"color\",\"white-silver\"]]]",
+   "[\"B09LXNRQVZ\",[[\"color\",\"silver\"]]]",
+   "[\"B09S5L57D5\",[[\"color\",\"silver\"]]]"
+  ],
+  "hash": "abd81fb3989f261d17dfcea304be12ad"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7f764ac432fe9619",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the headphones instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a378bd1c6a654d36",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the headphones instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "073c9f6121813974",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wireless earbuds."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7ee209cc2f948a74",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be audio cable."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4b6493956c64e7c4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e6ad588664e893bb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7973db25f4efdd9e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 3 pack instead of white-silver."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "8890af7279bdaa58",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 7-black1 instead of white-silver."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

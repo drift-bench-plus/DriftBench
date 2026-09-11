@@ -1,0 +1,190 @@
+{
+ "adapter": "webshop",
+ "cluster": "toothpaste",
+ "fidelity_notes": [],
+ "goal_idx": 457,
+ "ground_truth": {
+  "cardinality": 25,
+  "hash": "97eb677077ab1e1eecf550f5dccbfea9",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08LPPWQSH\",[[\"color\",\"blueberry taste\"]]]",
+   "[\"B09CN4ZPZQ\",[[\"flavor name\",\"blueberry\"]]]",
+   "[\"B09D96J2HR\",[[\"color\",\"blueberries\"]]]",
+   "[\"B09DGNDBRM\",[[\"color\",\"12 lower 8 inlaid blue drill set\"]]]",
+   "[\"B09L56MK6J\",[[\"color\",\"blue\"]]]",
+   "[\"B09L5LDQK6\",[[\"color\",\"blue\"]]]",
+   "[\"B09M2SWDNB\",[[\"color\",\"blue\"]]]",
+   "[\"B09NC681PJ\",[[\"color\",\"blue\"]]]",
+   "[\"B09P3LB83H\",[[\"pattern name\",\"blueberry\"]]]",
+   "[\"B09PHL4214\",[[\"color\",\"blueberry\"]]]",
+   "[\"B09PHLSFCP\",[[\"scent\",\"blueberry\"]]]",
+   "[\"B09QPHM761\",[[\"color\",\"blue\"]]]",
+   "[\"B09QQL7S3P\",[[\"color\",\"1pc blue\"]]]",
+   "[\"B09QQM4W65\",[[\"color\",\"blueberry\"]]]",
+   "[\"B09QQMVZ37\",[[\"color\",\"blueberry + passion fruit\"]]]",
+   "[\"B09QXG91MS\",[[\"flavor name\",\"blueberry\"]]]",
+   "[\"B09R3MZ2RT\",[[\"color\",\"blue\"]]]",
+   "[\"B09R3VJLZZ\",[[\"color\",\"2pcs blue\"]]]",
+   "[\"B09R42YXKG\",[[\"color\",\"1pcs blue\"]]]",
+   "[\"B09R9MYMCH\",[[\"color\",\"blue\"]]]",
+   "[\"B09S6JJ43N\",[[\"size\",\"blueberry-bright white\"]]]",
+   "[\"B09S6MW1K1\",[[\"color\",\"blue\"]]]",
+   "[\"B09SB8QZLD\",[[\"color\",\"(blueberry + passion fruit)\"]]]",
+   "[\"B09SCVVTYX\",[[\"color\",\"blueberry + passion fruit\"]]]",
+   "[\"B09SZ5K381\",[[\"color\",\"blueberry\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:teeth whitening",
+    "=",
+    "teeth whitening"
+   ],
+   [
+    "option:0",
+    "=",
+    "blueberry"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "a010ac81c363ca1d"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "insufficient_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "parameter",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "withhold"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:teeth whitening",
+     "=",
+     "teeth whitening"
+    ],
+    [
+     "option:0",
+     "=",
+     "blueberry"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "withhold",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:teeth whitening",
+   "option:0"
+  ],
+  "spec_id": "c823de44de5012d2",
+  "strategy_id": "insufficient_information",
+  "substituted": [],
+  "withheld": [
+   "price_upper"
+  ]
+ },
+ "misalignments": 1,
+ "query": "I'm looking for blueberry flavored toothpaste with teeth whitening benefits, can you help me find some options?",
+ "render_attempts": 3,
+ "sample_id": "13eb973cc8b1bc59",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the toothpaste instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "6131833197b2580f"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the toothpaste instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "ee2213fe4b5062d6"
+  },
+  {
+   "announcement": "Also, it needs to be easy use.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "22fb45aa9d62758a"
+  },
+  {
+   "announcement": "Also, it needs to be electric toothbrush.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c65b1d3c17f173ee"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6a2bd68117e8855d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b91cb9d2e07ccb07"
+  },
+  {
+   "announcement": "Actually, make it 2pcs 50ml instead of blueberry.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "af7f9d25c95f43f1"
+  },
+  {
+   "announcement": "Actually, make it 2pcsteeth repair instead of blueberry.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cb90bdf142c22029"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 31,
+  "ok": true,
+  "rule": "withheld",
+  "true_card": 25,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a toothpaste for teeth whitening in blueberry scent",
+ "split": "test",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "tree_id": "b2894a281f6aafa7",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

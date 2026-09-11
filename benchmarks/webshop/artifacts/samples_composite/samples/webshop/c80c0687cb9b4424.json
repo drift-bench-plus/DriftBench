@@ -1,0 +1,416 @@
+{
+ "sample_id": "c80c0687cb9b4424",
+ "tree_id": "62aaf53595183105",
+ "adapter": "webshop",
+ "cluster": "hair extensions, wigs & accessories",
+ "goal_idx": 219,
+ "split": "test",
+ "source_instruction": "na",
+ "query": "I stopped by that little community park on my walk over here today, y\u2019know? The old oak tree by the playground was dropping all these crinkly golden acorns, and a group of tiny kids in fuzzy dinosaur rain boots were racing each other to stuff as many as they could into their overalls pockets, cackling so loud the sparrows took off from the nearby fence in a big fluttery cloud. One of them tripped over a raised tree root and went straight down into a patch of soft clover, but they just popped right back up grinning, holding up the biggest acorn I\u2019ve ever seen like they\u2019d just won a giant trophy, and even the parent who\u2019d been rushing over to check on them cracked up laughing instead of fussing. The whole air smelled like fresh-cut grass and the cinnamon sugar donuts the snack stand by the tennis courts was selling, and I almost grabbed a bag before I remembered I\u2019d popped in here to look for a couple things first. Hey, I\u2019m looking for hair extensions or wigs made of synthetic hair, y\u2019know? Since you probably don\u2019t have any that are fully made of synthetic hair anyway, I guess I\u2019ll just check out whatever similar fake hair pieces you\u2019ve got. I need something in that cool dark two-tone vibe I saw a girl wearing last week, nothing specific to name exactly. And I\u2019m only looking for options that are a good, reasonable price, nothing over what feels fair for that kind of item.",
+ "strategy_ids": [
+  "false_presupposition",
+  "contextual_irrelevance",
+  "insufficient_information",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+contextual_irrelevance+insufficient_information+vagueness_subjectivity",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "false_presupposition",
+   "contextual_irrelevance",
+   "insufficient_information",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you probably don\u2019t have any that are fully made of synthetic hair anyway",
+    "condition": null,
+    "about": [
+     "attr:synthetic hair",
+     "synthetic hair"
+    ],
+    "alternative": [
+     "attr:synthetic hair",
+     "similar fake hair pieces"
+    ]
+   }
+  ],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I stopped by that little community park on my walk over here today, y\u2019know? The old oak tree by the playground was dropping all these crinkly golden acorns, and a group of tiny kids in fuzzy dinosaur rain boots were racing each other to stuff as many as they could into their overalls pockets, cackling so loud the sparrows took off from the nearby fence in a big fluttery cloud. One of them tripped over a raised tree root and went straight down into a patch of soft clover, but they just popped right back up grinning, holding up the biggest acorn I\u2019ve ever seen like they\u2019d just won a giant trophy, and even the parent who\u2019d been rushing over to check on them cracked up laughing instead of fussing. The whole air smelled like fresh-cut grass and the cinnamon sugar donuts the snack stand by the tennis courts was selling, and I almost grabbed a bag before I remembered I\u2019d popped in here to look for a couple things first.",
+  "retained": [
+   "attr:synthetic hair"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:synthetic hair",
+     "=",
+     "similar fake hair pieces"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "a10504be8f301a06"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 199,
+  "lit_card": 0,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 199,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 723,
+    "true_card": 199,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 229,
+    "true_card": 199,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "6364f0d6bec1e2be",
+  "conditions": [
+   [
+    "attr:synthetic hair",
+    "=",
+    "synthetic hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "black blue"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 199,
+  "value": [
+   "[\"B00QNE2V6S\",[[\"color\",\"jet black\"]]]",
+   "[\"B00QQKPIC8\",[[\"color\",\"jet black\"]]]",
+   "[\"B0121Z4RL4\",[[\"color\",\"1b-off black\"]]]",
+   "[\"B019A0EPHO\",[[\"color\",\"black\"]]]",
+   "[\"B01G6081CG\",[[\"color\",\"1b-off black\"]]]",
+   "[\"B01HKMVTXC\",[[\"color\",\"1b-off black\"]]]",
+   "[\"B01J7VN28Y\",[[\"color\",\"black purple\"]]]",
+   "[\"B06XGLVHC4\",[[\"color\",\"dark black\"]]]",
+   "[\"B06XRB23NG\",[[\"color\",\"black to brown\"]]]",
+   "[\"B0721X3L5T\",[[\"color\",\"jet black\"]]]",
+   "[\"B0775F444K\",[[\"color\",\"black-20''\"]]]",
+   "[\"B07BK5P92H\",[[\"color\",\"17 inches = 120 grams, natural black | hon...\"]]]",
+   "[\"B07CVYQSC6\",[[\"color\",\"black to silver grey-bw\"]]]",
+   "[\"B07DFQQ3H7\",[[\"color\",\"1 black\"]]]",
+   "[\"B07DLFKYYV\",[[\"color\",\"black\"]]]",
+   "[\"B07FTDW1XW\",[[\"color\",\"natural black\"]]]",
+   "[\"B07FXL6YH9\",[[\"color\",\"black-dark blue\"]]]",
+   "[\"B07G6TSTWF\",[[\"color\",\"black\"]]]",
+   "[\"B07G6WT8CB\",[[\"color\",\"2# black brown\"]]]",
+   "[\"B07GGR2KVQ\",[[\"color\",\"dark black\"]]]",
+   "[\"B07GRLYZ4X\",[[\"color\",\"black to dark blue to sky blue\"]]]",
+   "[\"B07GS83CRY\",[[\"color\",\"black-1b\"]]]",
+   "[\"B07GXKC635\",[[\"color\",\"jet black\"]]]",
+   "[\"B07J67P1S4\",[[\"color\",\"black grey\"]]]",
+   "[\"B07JMYQJXY\",[[\"color\",\"black\"]]]",
+   "[\"B07JMZBVKR\",[[\"color\",\"black\"]]]",
+   "[\"B07JVJ6D5Y\",[[\"color\",\"black mix brown\"]]]",
+   "[\"B07K896VR7\",[[\"color\",\"black to silver grey\"]]]",
+   "[\"B07K9HVPJ6\",[[\"color\",\"black & blonde\"]]]",
+   "[\"B07KVDXKL9\",[[\"color\",\"natural black\"]]]",
+   "[\"B07MCV7JKH\",[[\"color\",\"natural black\"]]]",
+   "[\"B07MF6KSHD\",[[\"color\",\"black\"]]]",
+   "[\"B07NVYVHVC\",[[\"color\",\"ht2 almost black\"]]]",
+   "[\"B07NWBLSM1\",[[\"color\",\"1# jet black natural\"]]]",
+   "[\"B07QYQL1GC\",[[\"color\",\"black\"]]]",
+   "[\"B07SLK5T1B\",[[\"color\",\"black\"]]]",
+   "[\"B07SR14MG2\",[[\"color\",\"dark black curly\"]]]",
+   "[\"B07SR7BZLT\",[[\"color\",\"black-purple-blue\"]]]",
+   "[\"B07SZJC3TN\",[[\"color\",\"1b#-off black\"]]]",
+   "[\"B07VGG8169\",[[\"color\",\"black\"]]]",
+   "[\"B07VKZ52ZL\",[[\"color\",\"black-\"]]]",
+   "[\"B07VYXPSWB\",[[\"color\",\"black04\"]]]",
+   "[\"B07X28ZBYQ\",[[\"color\",\"dark black-curly\"]]]",
+   "[\"B07X5V3B61\",[[\"color\",\"#1b-black[4packs]\"]]]",
+   "[\"B07XWR7LW4\",[[\"color\",\"black\"]]]",
+   "[\"B07YFZVHLM\",[[\"color\",\"black\"]]]",
+   "[\"B07Z7RGS69\",[[\"color\",\"black\"]]]",
+   "[\"B07ZF43GLZ\",[[\"color\",\"black\"]]]",
+   "[\"B07ZGFV66R\",[[\"color\",\"brown black\"]]]",
+   "[\"B0812FJ146\",[[\"color\",\"#1b black\"]]]",
+   "[\"B08155HKTC\",[[\"color\",\"jet black\"]]]",
+   "[\"B0816GY2BD\",[[\"color\",\"black\"]]]",
+   "[\"B0816QKY4R\",[[\"color\",\"black+purple\"]]]",
+   "[\"B0816QTTXG\",[[\"color\",\"black\"]]]",
+   "[\"B0819G196W\",[[\"color\",\"black\"]]]",
+   "[\"B081H3Y3RS\",[[\"color\",\"black brown hair & blue crystal\"]]]",
+   "[\"B081L3G2K4\",[[\"color\",\"black\"]]]",
+   "[\"B081LCWDYK\",[[\"color\",\"black\"]]]",
+   "[\"B081N4PHWC\",[[\"color\",\"1# natural black-18\\\" curly#\"]]]",
+   "[\"B081Z9BVHV\",[[\"color\",\"dark brown-20\\\" yaki kinky(black cap)\"]]]",
+   "[\"B083JCSXQF\",[[\"color\",\"1b#-natural black\"]]]",
+   "[\"B086QJD52C\",[[\"color\",\"1b# off black natural\"]]]",
+   "[\"B0888HDZT2\",[[\"color\",\"black\"]]]",
+   "[\"B088FNNVZ8\",[[\"color\",\"natural black #1b\"]]]",
+   "[\"B088RD3ZF8\",[[\"color\",\"black to grey\"]]]",
+   "[\"B089G5TGBP\",[[\"color\",\"black\"]]]",
+   "[\"B08B61JQDL\",[[\"color\",\"black | white\"]]]",
+   "[\"B08BZM24XR\",[[\"color\",\"off black#1b\"]]]",
+   "[\"B08C5BYVQR\",[[\"color\",\"black\"]]]",
+   "[\"B08CB3YLZ4\",[[\"color\",\"straight-dark black\"]]]",
+   "[\"B08CN7RVM3\",[[\"color\",\"2pcs-dark black\"]]]",
+   "[\"B08DCSJ3BH\",[[\"color\",\"black\"]]]",
+   "[\"B08F3PT7QJ\",[[\"color\",\"bleach blonde-black beanie hat\"]]]",
+   "[\"B08F76JSKS\",[[\"color\",\"black brown-straight\"]]]",
+   "[\"B08FBXCGZ1\",[[\"color\",\"neat-dark black\"]]]",
+   "[\"B08FDFGPTS\",[[\"color\",\"brown black(4#)\"]]]",
+   "[\"B08FF4F5M3\",[[\"color\",\"1 jet black\"]]]",
+   "[\"B08GCNH8CK\",[[\"color\",\"dark black\"]]]",
+   "[\"B08GH4VYK4\",[[\"color\",\"1#-jet black\"]]]",
+   "[\"B08GPNLM7C\",[[\"color\",\"natural black tip gray -#113\"]]]",
+   "[\"B08H5DCD65\",[[\"color\",\"black brown #2\"]]]",
+   "[\"B08H5MLKZ4\",[[\"color\",\"natural black\"]]]",
+   "[\"B08H87DJHL\",[[\"color\",\"black\"]]]",
+   "[\"B08HGMKVSX\",[[\"color\",\"black\"]]]",
+   "[\"B08HWQ7LSB\",[[\"color\",\"black + purple\"]]]",
+   "[\"B08HY637JW\",[[\"color\",\"black\"]]]",
+   "[\"B08J3VYZQP\",[[\"color\",\"black brown- curly hair\"]]]",
+   "[\"B08J46LXQL\",[[\"color\",\"jet black\"]]]",
+   "[\"B08J7D7FDJ\",[[\"color\",\"black\"]]]",
+   "[\"B08JH5NWKN\",[[\"color\",\"black\"]]]",
+   "[\"B08JJJ661M\",[[\"color\",\"1b-off black\"]]]",
+   "[\"B08JLGBSXZ\",[[\"color\",\"off black\"]]]",
+   "[\"B08JLQT4FX\",[[\"color\",\"blue&black\"]]]",
+   "[\"B08KY633DX\",[[\"color\",\"black brown\"]]]",
+   "[\"B08L7KB789\",[[\"color\",\"black to blonde ombre\"]]]",
+   "[\"B08LF12HFQ\",[[\"color\",\"natural black\"]]]",
+   "[\"B08LG7XJLS\",[[\"color\",\"brown black\"]]]",
+   "[\"B08LSTZNB5\",[[\"color\",\"black\"]]]",
+   "[\"B08M5QTJ7P\",[[\"color\",\"black\"]]]",
+   "[\"B08M93XHC8\",[[\"color\",\"black\"]]]",
+   "[\"B08MT4SXY9\",[[\"color\",\"black brown-wavy\"]]]",
+   "[\"B08N5TRXJL\",[[\"color\",\"black brown #2\"]]]",
+   "[\"B08ND858MX\",[[\"color\",\"1b#natural black\"]]]",
+   "[\"B08NJQ9HCX\",[[\"color\",\"black\"]]]",
+   "[\"B08NSH1ZN4\",[[\"color\",\"purple & black\"]]]",
+   "[\"B08NSZWRD7\",[[\"color\",\"black\"]]]",
+   "[\"B08P53X4G3\",[[\"color\",\"black\"]]]",
+   "[\"B08P6HBCKL\",[[\"color\",\"black\"]]]",
+   "[\"B08PP87VY7\",[[\"color\",\"brown-black\"]]]",
+   "[\"B08PP8QS9P\",[[\"color\",\"natural black\"]]]",
+   "[\"B08PTYGBDQ\",[[\"color\",\"brown black\"]]]",
+   "[\"B08Q3NH1BB\",[[\"color\",\"1b#(natural black)\"]]]",
+   "[\"B08QRL2V1G\",[[\"color\",\"black\"]]]",
+   "[\"B08R1VPVXX\",[[\"color\",\"black\"]]]",
+   "[\"B08RC66SHJ\",[[\"color\",\"black\"]]]",
+   "[\"B08RSB3MZD\",[[\"color\",\"black & blue\"]]]",
+   "[\"B08T9FMSFM\",[[\"color\",\"1b# pure black\"]]]",
+   "[\"B08TBHNXB8\",[[\"color\",\"black\"]]]",
+   "[\"B08TLKDVHP\",[[\"color\",\"jet black\"]]]",
+   "[\"B08TTFW9KJ\",[[\"color\",\"20''-natural black\"]]]",
+   "[\"B08TW56941\",[[\"color\",\"black\"]]]",
+   "[\"B08V12D96J\",[[\"color\",\"black to blonde\"]]]",
+   "[\"B08VHHVFLT\",[[\"color\",\"hc#brown black\"]]]",
+   "[\"B08WYHX9SK\",[[\"color\",\"black\"]]]",
+   "[\"B08X4J2X2V\",[[\"color\",\"t-dark black\"]]]",
+   "[\"B08XM384C4\",[[\"color\",\"black\"]]]",
+   "[\"B08ZD5WP9N\",[[\"color\",\"#1 black\"]]]",
+   "[\"B091751JRJ\",[[\"color\",\"black\"]]]",
+   "[\"B091FWK8SY\",[[\"color\",\"black\"]]]",
+   "[\"B091MDZMMY\",[[\"color\",\"natural black\"]]]",
+   "[\"B0921V3P96\",[[\"color\",\"darkest brown tend to black, 4\"]]]",
+   "[\"B0922Z4CKV\",[[\"color\",\"black\"]]]",
+   "[\"B0925JW49V\",[[\"color\",\"deep wave headband wig natural black\"]]]",
+   "[\"B0928MP897\",[[\"color\",\"black.long\"]]]",
+   "[\"B093HZDQF5\",[[\"color\",\"jet black -#120\"]]]",
+   "[\"B093KW4LP7\",[[\"color\",\"natural black\"]]]",
+   "[\"B0947T44LF\",[[\"color\",\"black mix brown(no bangs)\"]]]",
+   "[\"B094FCQMC4\",[[\"color\",\"(black brown)\"]]]",
+   "[\"B094R4XJPX\",[[\"color\",\"black-16inch\"]]]",
+   "[\"B095C8JJPC\",[[\"color\",\"jet black\"]]]",
+   "[\"B095PKTQ44\",[[\"color\",\"brownish black + purple\"]]]",
+   "[\"B095W1QR8P\",[[\"color\",\"dark black--18\\\" curly\"]]]",
+   "[\"B0967K4D4G\",[[\"color\",\"hair net(100 pcs)-black\"]]]",
+   "[\"B09681JYHB\",[[\"color\",\"black\"]]]",
+   "[\"B096KW7ZY9\",[[\"color\",\"black\"]]]",
+   "[\"B096KYCK8W\",[[\"color\",\"black\"]]]",
+   "[\"B096RQ3KFT\",[[\"color\",\"black to dark blue\"]]]",
+   "[\"B096TWM8GT\",[[\"color\",\"natural black\"]]]",
+   "[\"B096XN91SG\",[[\"color\",\"black\"]]]",
+   "[\"B0978V4R2H\",[[\"color\",\"1-black 1pc\"]]]",
+   "[\"B097BPF73M\",[[\"color\",\"black\"]]]",
+   "[\"B097DFS7MH\",[[\"color\",\"black\"]]]",
+   "[\"B097TGZTWD\",[[\"color\",\"brown-black\"]]]",
+   "[\"B097ZGSVB9\",[[\"color\",\"black\"]]]",
+   "[\"B0989XGSS2\",[[\"color\",\"black\"]]]",
+   "[\"B09BDWH8SF\",[[\"color\",\"black\"]]]",
+   "[\"B09BTMBW2B\",[[\"color\",\"black\"]]]",
+   "[\"B09BTNNZTC\",[[\"color\",\"1# black\"]]]",
+   "[\"B09C1VN1B9\",[[\"color\",\"half white half black\"]]]",
+   "[\"B09C8C4ZVJ\",[[\"color\",\"xb-black\"]]]",
+   "[\"B09CD9N84C\",[[\"color\",\"black\"]]]",
+   "[\"B09D7DPW3Z\",[[\"color\",\"dark black\"]]]",
+   "[\"B09DFQTYVJ\",[[\"pattern name\",\"5pcs-black mixed gray\"]]]",
+   "[\"B09DG3BRH2\",[[\"color\",\"#black-royalblue-skyblue\"]]]",
+   "[\"B09DPCNP6X\",[[\"color\",\"dark black\"]]]",
+   "[\"B09DVR76ZQ\",[[\"color\",\"black\"]]]",
+   "[\"B09DVWTWQB\",[[\"color\",\"black\"]]]",
+   "[\"B09FPFPRND\",[[\"color\",\"e-1b black-\"]]]",
+   "[\"B09GFYJZPY\",[[\"color\",\"black\"]]]",
+   "[\"B09GY3775X\",[[\"color\",\"black+blue\"]]]",
+   "[\"B09H6GGKB7\",[[\"color\",\"jet black\"]]]",
+   "[\"B09HBMV4K3\",[[\"color\",\"s-black | blue | sky blue\"]]]",
+   "[\"B09HXG5N64\",[[\"color\",\"black\"]]]",
+   "[\"B09J1GPGSY\",[[\"color\",\"blacktblue\"]]]",
+   "[\"B09JBV9341\",[[\"color\",\"black\"]]]",
+   "[\"B09JNP4LBC\",[[\"color\",\"black-ombre-blue\"]]]",
+   "[\"B09JP4FX3J\",[[\"color\",\"black\"]]]",
+   "[\"B09K3W3H45\",[[\"color\",\"brown-black\"]]]",
+   "[\"B09KQW13D7\",[[\"color\",\"black\"]]]",
+   "[\"B09LCC3Q4C\",[[\"color\",\"black\"]]]",
+   "[\"B09LH3Q2W8\",[[\"color\",\"black\"]]]",
+   "[\"B09M9PBKDM\",[[\"color\",\"black\"]]]",
+   "[\"B09MDZ8JDX\",[[\"color\",\"black brown\"]]]",
+   "[\"B09N2HP2CZ\",[[\"color\",\"black color\"]]]",
+   "[\"B09NBNL1W9\",[[\"color\",\"1# jet black\"]]]",
+   "[\"B09NX3F9N2\",[[\"color\",\"black\"]]]",
+   "[\"B09NZYXKG9\",[[\"color\",\"a03#curly hair-brown-black\"]]]",
+   "[\"B09P3NLNGT\",[[\"color\",\"black\"]]]",
+   "[\"B09P3PJMW2\",[[\"color\",\"black\"]]]",
+   "[\"B09PDF3PWD\",[[\"color\",\"jet black\"]]]",
+   "[\"B09PDQQ4QN\",[[\"color\",\"black\"]]]",
+   "[\"B09PL1W99R\",[[\"color\",\"natural black\"]]]",
+   "[\"B09PL29525\",[[\"color\",\"black\"]]]",
+   "[\"B09PLBQ4YC\",[[\"color\",\"black dark blue light blue\"]]]",
+   "[\"B09PLC2QV8\",[[\"color\",\"black blue\"]]]",
+   "[\"B09QPLFNJH\",[[\"color\",\"black\"]]]",
+   "[\"B09R7MVG8R\",[[\"color\",\"black\"]]]",
+   "[\"B09SBLF9KN\",[[\"color\",\"black brown\"]]]",
+   "[\"B09T66HPR3\",[[\"color\",\"black blue pink\"]]]"
+  ],
+  "hash": "f1d45cd629571ac1ae6348a0135ffd8b"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2b702871dfd53145",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair extensions, wigs & accessories instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "679243e994beeb02",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair extensions, wigs & accessories instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b973cf95889d4ff9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair oil."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e3f1b75008d30f61",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair scalp."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "93b8ddc2349ba6fc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b2fd72e3e69ae65e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "327aa512a335cc7b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1011 dark ash blonde instead of black blue."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "eb59406e10f3137c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #17a | 60 ash blonde highlights instead of black blue."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

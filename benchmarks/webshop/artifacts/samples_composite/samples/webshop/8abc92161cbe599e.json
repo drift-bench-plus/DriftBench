@@ -1,0 +1,256 @@
+{
+ "sample_id": "8abc92161cbe599e",
+ "tree_id": "9216f73aedd91c61",
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "goal_idx": 257,
+ "split": "test",
+ "source_instruction": "i would like to buy a sugar free powder drink mix that is a nice source of vitamin.",
+ "query": "Oh man, I swear the community garden plot I\u2019ve been tending all spring is out to test every last bit of my patience this week. I showed up yesterday morning thinking I\u2019d just pull a few quick weeds and harvest the handful of cherry tomatoes that were finally blushing red, only to find that a family of squirrels had chewed straight through the trellis I built for my sugar snap peas, knocked over three of my potted basil starts, and left half-eaten strawberry tops scattered all across the corner where I planted wildflower seeds for the local bees. I stood there for a good five minutes holding my little harvest basket just staring at the mess, trying not to laugh because honestly, the squirrels around here are so bold they\u2019ll sit on the park bench right next to you and beg for pretzel bites like they pay rent in the neighborhood. I spent nearly two hours after work yesterday retying the pea vines, repotting the basil, and rigging up this silly janky contraption made of old aluminum pie plates and twine that\u2019s supposed to spin in the wind and scare them off, so I\u2019m really hoping that works long enough for me to get at least one full salad out of my plot this summer.\nHey, I\u2019m grabbing drinks from the beverage section right now, can you help me find something? I need a pick-me-up that\u2019s a source of vitamins, and oh, it has to have that official non-GMO project verified seal on the bottle, yeah? Also I don\u2019t want to go over a bill, y\u2019know? I\u2019ve been cutting back on sweet stuff lately so make sure it fits that, thanks.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "contextual_irrelevance",
+  "lexical_ambiguity",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+contextual_irrelevance+lexical_ambiguity+insufficient_information",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "contextual_irrelevance",
+   "lexical_ambiguity",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "price_upper",
+   "insufficient_information": "attr:sugar free"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:sugar free"
+  ],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "a bill",
+    "placements": [
+     [
+      "price_upper",
+      "30"
+     ],
+     [
+      "price_upper",
+      "100"
+     ]
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "text": "it has to have that official non-GMO project verified seal on the bottle",
+    "condition": [
+     "attr:non-GMO project verified",
+     "=",
+     "non-GMO project verified"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh man, I swear the community garden plot I\u2019ve been tending all spring is out to test every last bit of my patience this week. I showed up yesterday morning thinking I\u2019d just pull a few quick weeds and harvest the handful of cherry tomatoes that were finally blushing red, only to find that a family of squirrels had chewed straight through the trellis I built for my sugar snap peas, knocked over three of my potted basil starts, and left half-eaten strawberry tops scattered all across the corner where I planted wildflower seeds for the local bees. I stood there for a good five minutes holding my little harvest basket just staring at the mess, trying not to laugh because honestly, the squirrels around here are so bold they\u2019ll sit on the park bench right next to you and beg for pretzel bites like they pay rent in the neighborhood. I spent nearly two hours after work yesterday retying the pea vines, repotting the basil, and rigging up this silly janky contraption made of old aluminum pie plates and twine that\u2019s supposed to spin in the wind and scare them off, so I\u2019m really hoping that works long enough for me to get at least one full salad out of my plot this summer.",
+  "retained": [
+   "attr:source vitamin"
+  ],
+  "hidden_slots": [
+   "attr:sugar free",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:source vitamin",
+     "=",
+     "source vitamin"
+    ],
+    [
+     "attr:non-GMO project verified",
+     "=",
+     "non-GMO project verified"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "8b7ef2885c816796"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 27,
+  "lit_card": 10,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 27,
+    "readings": 1
+   },
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     27,
+     31
+    ],
+    "true_card": 27,
+    "readings": 2
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 72,
+    "true_card": 27,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "66ef3824efb73be0",
+  "conditions": [
+   [
+    "attr:source vitamin",
+    "=",
+    "source vitamin"
+   ],
+   [
+    "attr:sugar free",
+    "=",
+    "sugar free"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:sugar free",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 27,
+  "value": [
+   "[\"B003L2EYWY\",[]]",
+   "[\"B00AAV8SOY\",[]]",
+   "[\"B00QUEP5AA\",[]]",
+   "[\"B00V994MAK\",[]]",
+   "[\"B01BO1STRE\",[]]",
+   "[\"B077T3SP3V\",[]]",
+   "[\"B07WS1NPBF\",[]]",
+   "[\"B07X4YMXP4\",[]]",
+   "[\"B07X512KZT\",[]]",
+   "[\"B07YBKK1ZH\",[]]",
+   "[\"B07YBKLX1V\",[]]",
+   "[\"B07YBKXWRC\",[]]",
+   "[\"B07YBL7Y7X\",[]]",
+   "[\"B083X5QTF1\",[]]",
+   "[\"B083X82WPD\",[]]",
+   "[\"B083X8316R\",[]]",
+   "[\"B083XFGLB3\",[]]",
+   "[\"B083XK3VQX\",[]]",
+   "[\"B083XNN3N4\",[]]",
+   "[\"B083XPRHHJ\",[]]",
+   "[\"B086M9LK7F\",[]]",
+   "[\"B08HFC5BYW\",[]]",
+   "[\"B0971VV99P\",[]]",
+   "[\"B09BK2GKDL\",[]]",
+   "[\"B09D8MXL3Z\",[]]",
+   "[\"B09D8PZ66T\",[]]",
+   "[\"B09D8RFJSS\",[]]"
+  ],
+  "hash": "46e372c9be71b9151dcfd0d4230a7305"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2398dab1f90987e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "da047bca05a1a6e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "1a62ab686e6b7e59",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be fat free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a52a8a1f5602b3f2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be caffeine free."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5b87a2d67c36e780",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "bd2d989d817143b5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3327c262ffed39a9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 30."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7ae27133249ab1e8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 instead of 30."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

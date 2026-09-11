@@ -1,0 +1,93 @@
+{
+ "sample_id": "f06731e997ad9a0a__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "f06731e997ad9a0a",
+ "query": "I spent last weekend hiking up the local state park trail, and the wild blueberries I found along the way were so sweet I ended up picking a whole container to bring home. I tried making a small batch of blueberry pancakes with them yesterday morning, and they turned out so fluffy even my roommate who doesn\u2019t usually like sweet breakfasts asked for a second serving. I also signed up for a beginner pottery class that starts next week, I\u2019m really excited to try making my own mug even if my first few attempts end up lopsided. Anyway, I\u2019m having some issues with my phone right now: airplane mode is turned on, my APN settings seem to be broken, and I think my SIM card might be unseated so I can\u2019t get any mobile connection at all, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent last weekend hiking up the local state park trail, and the wild blueberries I found along the way were so sweet I ended up picking a whole container to bring home. I tried making a small batch of blueberry pancakes with them yesterday morning, and they turned out so fluffy even my roommate who doesn\u2019t usually like sweet breakfasts asked for a second serving. I also signed up for a beginner pottery class that starts next week, I\u2019m really excited to try making my own mug even if my first few attempts end up lopsided. Anyway, ",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_settings",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

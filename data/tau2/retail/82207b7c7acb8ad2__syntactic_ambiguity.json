@@ -1,0 +1,477 @@
+{
+ "sample_id": "82207b7c7acb8ad2__syntactic_ambiguity",
+ "domain": "retail",
+ "tree_id": "82207b7c7acb8ad2",
+ "query": "Hi there, I need to update the shipping address for order #W9583042, replace the item 9779102705 with 1096508426 for order #W4082615, update my account address linked to user ID mei_patel_7272, and switch the payment method to paypal_4768213 for the order that has the item swap. All the addresses use 445 Maple Drive, Suite 394, Fort Worth, TX 76165, USA.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "switch the payment method to paypal_4768213 for the order that has the item swap",
+    "placements": [
+     [
+      "arg:3:modify_pending_order_items:payment_method_id",
+      "\"paypal_4768213\""
+     ],
+     [
+      "arg:3:modify_pending_order_items:payment_method_id",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_pending_order_address:address1",
+   "arg:1:modify_pending_order_address:address2",
+   "arg:1:modify_pending_order_address:city",
+   "arg:1:modify_pending_order_address:country",
+   "arg:1:modify_pending_order_address:order_id",
+   "arg:1:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_address:zip",
+   "arg:2:modify_user_address:address1",
+   "arg:2:modify_user_address:address2",
+   "arg:2:modify_user_address:city",
+   "arg:2:modify_user_address:country",
+   "arg:2:modify_user_address:state",
+   "arg:2:modify_user_address:user_id",
+   "arg:2:modify_user_address:zip",
+   "arg:3:modify_pending_order_items:item_ids",
+   "arg:3:modify_pending_order_items:new_item_ids",
+   "arg:3:modify_pending_order_items:order_id"
+  ],
+  "hidden_slots": [
+   "arg:3:modify_pending_order_items:payment_method_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"445 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 394\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"Fort Worth\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W9583042\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"76165\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address1",
+     "=",
+     "\"445 Maple Drive\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 394\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:city",
+     "=",
+     "\"Fort Worth\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:order_id",
+     "=",
+     "\"#W4082615\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:zip",
+     "=",
+     "\"76165\""
+    ],
+    [
+     "arg:2:modify_user_address:address1",
+     "=",
+     "\"445 Maple Drive\""
+    ],
+    [
+     "arg:2:modify_user_address:address2",
+     "=",
+     "\"Suite 394\""
+    ],
+    [
+     "arg:2:modify_user_address:city",
+     "=",
+     "\"Fort Worth\""
+    ],
+    [
+     "arg:2:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:2:modify_user_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:2:modify_user_address:user_id",
+     "=",
+     "\"mei_patel_7272\""
+    ],
+    [
+     "arg:2:modify_user_address:zip",
+     "=",
+     "\"76165\""
+    ],
+    [
+     "arg:3:modify_pending_order_items:item_ids",
+     "=",
+     "[\"9779102705\"]"
+    ],
+    [
+     "arg:3:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"1096508426\"]"
+    ],
+    [
+     "arg:3:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4082615\""
+    ],
+    [
+     "arg:3:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"paypal_4768213\""
+    ]
+   ],
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"445 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 394\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"Fort Worth\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W9583042\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"76165\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address1",
+     "=",
+     "\"445 Maple Drive\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 394\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:city",
+     "=",
+     "\"Fort Worth\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:order_id",
+     "=",
+     "\"#W4082615\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:zip",
+     "=",
+     "\"76165\""
+    ],
+    [
+     "arg:2:modify_user_address:address1",
+     "=",
+     "\"445 Maple Drive\""
+    ],
+    [
+     "arg:2:modify_user_address:address2",
+     "=",
+     "\"Suite 394\""
+    ],
+    [
+     "arg:2:modify_user_address:city",
+     "=",
+     "\"Fort Worth\""
+    ],
+    [
+     "arg:2:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:2:modify_user_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:2:modify_user_address:user_id",
+     "=",
+     "\"mei_patel_7272\""
+    ],
+    [
+     "arg:2:modify_user_address:zip",
+     "=",
+     "\"76165\""
+    ],
+    [
+     "arg:3:modify_pending_order_items:item_ids",
+     "=",
+     "[\"9779102705\"]"
+    ],
+    [
+     "arg:3:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"1096508426\"]"
+    ],
+    [
+     "arg:3:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4082615\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "a2656051372b1465"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"445 Maple Drive\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 394\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"Fort Worth\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W9583042\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"76165\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address1",
+    "=",
+    "\"445 Maple Drive\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 394\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:city",
+    "=",
+    "\"Fort Worth\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "=",
+    "\"#W4082615\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:zip",
+    "=",
+    "\"76165\""
+   ],
+   [
+    "arg:2:modify_user_address:address1",
+    "=",
+    "\"445 Maple Drive\""
+   ],
+   [
+    "arg:2:modify_user_address:address2",
+    "=",
+    "\"Suite 394\""
+   ],
+   [
+    "arg:2:modify_user_address:city",
+    "=",
+    "\"Fort Worth\""
+   ],
+   [
+    "arg:2:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:2:modify_user_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:2:modify_user_address:user_id",
+    "=",
+    "\"mei_patel_7272\""
+   ],
+   [
+    "arg:2:modify_user_address:zip",
+    "=",
+    "\"76165\""
+   ],
+   [
+    "arg:3:modify_pending_order_items:item_ids",
+    "=",
+    "[\"9779102705\"]"
+   ],
+   [
+    "arg:3:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"1096508426\"]"
+   ],
+   [
+    "arg:3:modify_pending_order_items:order_id",
+    "=",
+    "\"#W4082615\""
+   ],
+   [
+    "arg:3:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"paypal_4768213\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:3:modify_pending_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

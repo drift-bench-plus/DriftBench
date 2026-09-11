@@ -1,0 +1,271 @@
+{
+ "sample_id": "dd9c33466240f6ea",
+ "tree_id": "5f41369d95d174cb",
+ "adapter": "webshop",
+ "cluster": "shampoo & conditioner",
+ "goal_idx": 473,
+ "split": "test",
+ "source_instruction": "i am looking for a sulfate & paraben free shampoo",
+ "query": "Hey there, I\u2019m looking to pick up a new shampoo that\u2019s totally paraben free and sulfate free, right? I need it to also have the Leaping Bunny cruelty-free certification, that\u2019s a non-negotiable for me. I\u2019m only willing to spend a reasonable amount on it, nothing too wild, since I don\u2019t want to blow my budget on hair care this month.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+vagueness_subjectivity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "have the Leaping Bunny cruelty-free certification",
+    "condition": [
+     "attr:cruelty free",
+     "=",
+     "Leaping Bunny certified"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:paraben free",
+   "attr:sulfate free",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:paraben free",
+     "=",
+     "paraben free"
+    ],
+    [
+     "attr:sulfate free",
+     "=",
+     "sulfate free"
+    ],
+    [
+     "option:0",
+     "=",
+     "shampoo"
+    ],
+    [
+     "attr:cruelty free",
+     "=",
+     "Leaping Bunny certified"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "3f4f0f96d0cec5da"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 55,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 55,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 64,
+    "true_card": 55,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "56ea4f78a3c5e812",
+  "conditions": [
+   [
+    "attr:paraben free",
+    "=",
+    "paraben free"
+   ],
+   [
+    "attr:sulfate free",
+    "=",
+    "sulfate free"
+   ],
+   [
+    "option:0",
+    "=",
+    "shampoo"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 55,
+  "value": [
+   "[\"B001NQWDLO\",[[\"color\",\"shampoo\"]]]",
+   "[\"B002KG28PW\",[[\"style\",\"shampoo\"]]]",
+   "[\"B0048F5ATO\",[[\"style\",\"shampoo\"]]]",
+   "[\"B004KATJVC\",[[\"style\",\"shampoo\"]]]",
+   "[\"B00CQ8452S\",[[\"pattern name\",\"shampoo\"]]]",
+   "[\"B00CQ84F0U\",[[\"style\",\"shampoo\"]]]",
+   "[\"B00RIBTBFY\",[[\"style\",\"shampoo - fl oz 11.83\"]]]",
+   "[\"B00RIBX3T4\",[[\"style\",\"shampoo - fl oz 11.8\"]]]",
+   "[\"B00TU2FVKI\",[[\"style\",\"shampoo - fl oz 11.83\"]]]",
+   "[\"B01D554F7A\",[[\"style\",\"shampoo - fl oz 11.83\"]]]",
+   "[\"B01ERGEB34\",[[\"style\",\"dry shampoo - fl oz 3.4\"]]]",
+   "[\"B01HQH8H5E\",[[\"style\",\"shampoo - fl oz 11.8\"]]]",
+   "[\"B01KFU1WZG\",[[\"style\",\"shampoo\"]]]",
+   "[\"B01MTJ4KOF\",[[\"style\",\"shampoo\"]]]",
+   "[\"B01N3K1GPZ\",[[\"style\",\"shampoo\"]]]",
+   "[\"B01N8X4SU4\",[[\"style\",\"shampoo - fl oz 11.83\"]]]",
+   "[\"B0784P7P16\",[[\"style\",\"shampoo & conditioner\"]]]",
+   "[\"B078W7F9R5\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07D5HX9CG\",[[\"color\",\"shampoo\"]]]",
+   "[\"B07H4ZWQZR\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07H533Q6K\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07HMK15G9\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07HMP3GW9\",[[\"style name\",\"dry shampoo\"]]]",
+   "[\"B07J5H8G4Y\",[[\"size\",\"shampoo | conditioner (pack of 2)\"]]]",
+   "[\"B07K92VV2V\",[[\"style\",\"shampoo & conditioner bundle\"]]]",
+   "[\"B07N7LRJZF\",[[\"size\",\"shampoo citrus 2 pack\"]]]",
+   "[\"B07NP2SJMZ\",[[\"color\",\"50:50 shampoo\"]]]",
+   "[\"B07QD2PXHG\",[[\"style\",\"shampoo & conditioner set\"]]]",
+   "[\"B07R4Y4TJW\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07TK36W5Z\",[[\"size\",\"shampoo\"]]]",
+   "[\"B082YG62JM\",[[\"style\",\"shampoo\"]]]",
+   "[\"B0842YD1CX\",[[\"style\",\"shampoo\"]]]",
+   "[\"B0882JHCTC\",[[\"style name\",\"shampoo\"]]]",
+   "[\"B088Y7K59G\",[[\"style\",\"solid shampoo and conditioner bar set (citrus)\"]]]",
+   "[\"B08CYCBCTT\",[[\"size\",\"shampoo 2 pack\"]]]",
+   "[\"B08KXFNV1X\",[[\"style name\",\"shampoo\"]]]",
+   "[\"B08LJ6B1X1\",[[\"style\",\"shampoo & conditioner\"]]]",
+   "[\"B08M4GXGFJ\",[[\"style\",\"dream curls shampoo\"]]]",
+   "[\"B08M7FDBLL\",[[\"style\",\"shampoo\"]]]",
+   "[\"B08M7FN48L\",[[\"style\",\"shampoo\"]]]",
+   "[\"B08NCS66Q1\",[[\"style name\",\"shampoo & conditioner set\"]]]",
+   "[\"B08ZQXKB9R\",[[\"style\",\"shampoo & conditioner\"]]]",
+   "[\"B091G2R6MH\",[[\"style\",\"shampoo - pack of 2\"]]]",
+   "[\"B094KVN6S7\",[[\"style\",\"shampoo\"]]]",
+   "[\"B096SY8Q78\",[[\"pattern name\",\"dry scalp shampoo\"]]]",
+   "[\"B098GS5SF8\",[[\"style\",\"shampoo\"]]]",
+   "[\"B098KJDZJD\",[[\"style\",\"shampoo\"]]]",
+   "[\"B09DJQ1WDT\",[[\"flavor name\",\"shampoo\"]]]",
+   "[\"B09FB1YXF1\",[[\"color\",\"clarifying shampoo bar\"]]]",
+   "[\"B09KQZ9GTK\",[[\"size\",\"shampoo\"]]]",
+   "[\"B09L2CT1PQ\",[[\"style\",\"shampoo\"]]]",
+   "[\"B09LR99XBK\",[[\"style\",\"32 oz shampoo\"]]]",
+   "[\"B09LR9LHPG\",[[\"style\",\"shampoo & conditioner\"]]]",
+   "[\"B09PJ47CQN\",[[\"style\",\"shampoo\"]]]",
+   "[\"B09PZ75KBP\",[[\"style\",\"shampoo\"]]]"
+  ],
+  "hash": "e090f0c2af03d699e23797947d8f3e45"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "8707c7b808a5f4f7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the shampoo & conditioner instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "d19018b0158cfda5",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the shampoo & conditioner instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7f3318ffd3f42ab0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be high quality."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cf3d523dcaea2160",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "00cfff8904fa1faa",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "640955d25d6eb158",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "41ed5b627e1bfef1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1.7 ounce (travel size) instead of shampoo."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "bcd80182c1bb4145",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 12 fl oz instead of shampoo."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

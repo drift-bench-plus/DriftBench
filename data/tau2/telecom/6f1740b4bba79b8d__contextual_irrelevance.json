@@ -1,0 +1,104 @@
+{
+ "sample_id": "6f1740b4bba79b8d__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "6f1740b4bba79b8d",
+ "query": "I was out walking my golden retriever puppy this morning and he managed to chase a squirrel straight into a patch of dandelions, so now his whole coat is covered in fluffy yellow seeds that I\u2019ve been trying to brush out for the past hour. I also just tried that new iced lavender latte from the coffee shop down the street, and it was way sweeter than I expected, I think I might have to ask for half the syrup next time I go. Oh, and my favorite houseplant that I\u2019ve been tending to for six months finally sprouted a new leaf yesterday, I was so excited I took like ten photos of it to send to my mom. I\u2019m having some issues with my mobile service right now: airplane mode is turned on, my network preferences are acting up, my APN MMS settings seem to be broken, and I think I\u2019ve exceeded my data usage limit, can you help me fix these problems?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was out walking my golden retriever puppy this morning and he managed to chase a squirrel straight into a patch of dandelions, so now his whole coat is covered in fluffy yellow seeds that I\u2019ve been trying to brush out for the past hour. I also just tried that new iced lavender latte from the coffee shop down the street, and it was way sweeter than I expected, I think I might have to ask for half the syrup next time I go. Oh, and my favorite houseplant that I\u2019ve been tending to for six months finally sprouted a new leaf yesterday, I was so excited I took like ten photos of it to send to my mom.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:break_apn_mms_setting",
+   "fault:data_usage_exceeded"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

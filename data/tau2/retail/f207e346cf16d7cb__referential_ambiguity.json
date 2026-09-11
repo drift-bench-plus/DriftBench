@@ -1,0 +1,283 @@
+{
+ "sample_id": "f207e346cf16d7cb__referential_ambiguity",
+ "domain": "retail",
+ "tree_id": "f207e346cf16d7cb",
+ "query": "Hi there, I need to process a few returns first: I want to return item 8479046075 from order #W8660475, item 7824298782 from order #W9218746, and both 4900661478 and 3614853563 from order #W6239298, all refunded to credit_card_2112420. Then for my pending order #W4860251, could you update my shipping address to 921 Park Avenue, Suite 892, Chicago, IL, 60612, USA, and also swap item 5209958006 out for that one, with any price adjustment charged to the same card on file?",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "arg:3:modify_pending_order_items:new_item_ids",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id",
+   "arg:1:return_delivered_order_items:item_ids",
+   "arg:1:return_delivered_order_items:order_id",
+   "arg:1:return_delivered_order_items:payment_method_id",
+   "arg:2:modify_pending_order_address:address1",
+   "arg:2:modify_pending_order_address:address2",
+   "arg:2:modify_pending_order_address:city",
+   "arg:2:modify_pending_order_address:country",
+   "arg:2:modify_pending_order_address:order_id",
+   "arg:2:modify_pending_order_address:state",
+   "arg:2:modify_pending_order_address:zip",
+   "arg:3:modify_pending_order_items:item_ids",
+   "arg:3:modify_pending_order_items:order_id",
+   "arg:3:modify_pending_order_items:payment_method_id",
+   "arg:4:return_delivered_order_items:item_ids",
+   "arg:4:return_delivered_order_items:order_id",
+   "arg:4:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [
+   "arg:3:modify_pending_order_items:new_item_ids"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"8479046075\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W8660475\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_2112420\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:item_ids",
+     "=",
+     "[\"7824298782\"]"
+    ],
+    [
+     "arg:1:return_delivered_order_items:order_id",
+     "=",
+     "\"#W9218746\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_2112420\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:address1",
+     "=",
+     "\"921 Park Avenue\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 892\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:city",
+     "=",
+     "\"Chicago\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:order_id",
+     "=",
+     "\"#W4860251\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:state",
+     "=",
+     "\"IL\""
+    ],
+    [
+     "arg:2:modify_pending_order_address:zip",
+     "=",
+     "\"60612\""
+    ],
+    [
+     "arg:3:modify_pending_order_items:item_ids",
+     "=",
+     "[\"5209958006\"]"
+    ],
+    [
+     "arg:3:modify_pending_order_items:order_id",
+     "=",
+     "\"#W4860251\""
+    ],
+    [
+     "arg:3:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_2112420\""
+    ],
+    [
+     "arg:4:return_delivered_order_items:item_ids",
+     "=",
+     "[\"4900661478\",\"3614853563\"]"
+    ],
+    [
+     "arg:4:return_delivered_order_items:order_id",
+     "=",
+     "\"#W6239298\""
+    ],
+    [
+     "arg:4:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_2112420\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "883af8c349d066d8"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"8479046075\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W8660475\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_2112420\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:item_ids",
+    "=",
+    "[\"7824298782\"]"
+   ],
+   [
+    "arg:1:return_delivered_order_items:order_id",
+    "=",
+    "\"#W9218746\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_2112420\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:address1",
+    "=",
+    "\"921 Park Avenue\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 892\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:city",
+    "=",
+    "\"Chicago\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:order_id",
+    "=",
+    "\"#W4860251\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:state",
+    "=",
+    "\"IL\""
+   ],
+   [
+    "arg:2:modify_pending_order_address:zip",
+    "=",
+    "\"60612\""
+   ],
+   [
+    "arg:3:modify_pending_order_items:item_ids",
+    "=",
+    "[\"5209958006\"]"
+   ],
+   [
+    "arg:3:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"8964750292\"]"
+   ],
+   [
+    "arg:3:modify_pending_order_items:order_id",
+    "=",
+    "\"#W4860251\""
+   ],
+   [
+    "arg:3:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_2112420\""
+   ],
+   [
+    "arg:4:return_delivered_order_items:item_ids",
+    "=",
+    "[\"4900661478\",\"3614853563\"]"
+   ],
+   [
+    "arg:4:return_delivered_order_items:order_id",
+    "=",
+    "\"#W6239298\""
+   ],
+   [
+    "arg:4:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_2112420\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:3:modify_pending_order_items:new_item_ids"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

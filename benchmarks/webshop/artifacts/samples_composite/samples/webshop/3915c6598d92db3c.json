@@ -1,0 +1,249 @@
+{
+ "sample_id": "3915c6598d92db3c",
+ "tree_id": "7efcc8896f7304fe",
+ "adapter": "webshop",
+ "cluster": "shampoo & conditioner",
+ "goal_idx": 327,
+ "split": "test",
+ "source_instruction": "i would like a 3.4 oz dry shampoo that is paraben free.",
+ "query": "Hey, I\u2019m looking through the shampoo & conditioner section right now for a paraben-free option, y\u2019know? I need to grab that kind of dry shampoo, don\u2019t worry about listing all the random sizes or anything, just make sure it fits with that one budget limit I always stick to when I pick up hair stuff. It\u2019d be great if you can pull up options that check those boxes for me quick.",
+ "strategy_ids": [
+  "insufficient_information",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+referential_ambiguity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:paraben free"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:paraben free",
+     "=",
+     "paraben free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "5721b60f7986c5c9"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 59,
+  "lit_card": 541,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 455,
+    "true_card": 59,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 64,
+    "true_card": 59,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "ac6aec0f0119c26a",
+  "conditions": [
+   [
+    "attr:paraben free",
+    "=",
+    "paraben free"
+   ],
+   [
+    "option:0",
+    "=",
+    "dry shampoo - fl oz 3.4"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 59,
+  "value": [
+   "[\"B001NQWDLO\",[[\"color\",\"shampoo\"]]]",
+   "[\"B002KG28PW\",[[\"style\",\"shampoo\"]]]",
+   "[\"B002SVAJK0\",[[\"size\",\"4 fl oz\"]]]",
+   "[\"B0048F5ATO\",[[\"style\",\"shampoo\"]]]",
+   "[\"B004KATJVC\",[[\"style\",\"shampoo\"]]]",
+   "[\"B00CQ8452S\",[[\"pattern name\",\"shampoo\"]]]",
+   "[\"B00CQ84F0U\",[[\"style\",\"shampoo\"]]]",
+   "[\"B00LOYJ4CG\",[[\"size\",\"shampoo\"]]]",
+   "[\"B00RIBTBFY\",[[\"style\",\"shampoo - fl oz 3.38\"]]]",
+   "[\"B00RIBX3T4\",[[\"style\",\"shampoo - fl oz 3.4\"]]]",
+   "[\"B00TU2FVKI\",[[\"style\",\"shampoo - fl oz 3.38\"]]]",
+   "[\"B019HCHHXO\",[[\"design\",\"shampoo\"]]]",
+   "[\"B01D554F7A\",[[\"style\",\"shampoo - fl oz 3.38\"]]]",
+   "[\"B01ERGEB34\",[[\"style\",\"dry shampoo - fl oz 3.4\"]]]",
+   "[\"B01HQH8H5E\",[[\"style\",\"shampoo - fl oz 3.4\"]]]",
+   "[\"B01MTJ4KOF\",[[\"style\",\"shampoo\"]]]",
+   "[\"B01N3K1GPZ\",[[\"style\",\"shampoo\"]]]",
+   "[\"B01N8X4SU4\",[[\"style\",\"shampoo - fl oz 3.38\"]]]",
+   "[\"B075XRYW8T\",[[\"style\",\"shampoo\"]]]",
+   "[\"B077RWDFM5\",[[\"style\",\"shampoo\"]]]",
+   "[\"B078W7F9R5\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07D5HX9CG\",[[\"color\",\"shampoo\"]]]",
+   "[\"B07HMK15G9\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07HMP3GW9\",[[\"style name\",\"dry shampoo\"]]]",
+   "[\"B07HZ2LZDC\",[[\"scent name\",\"shampoo\"]]]",
+   "[\"B07JQHHTSS\",[[\"style name\",\"shampoo\"]]]",
+   "[\"B07JVM772X\",[[\"size\",\"3.4 fl oz.\"]]]",
+   "[\"B07P7F5PB3\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07R4Y4TJW\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07TK36W5Z\",[[\"size\",\"shampoo\"]]]",
+   "[\"B07VKQFHDY\",[[\"style name\",\"shampoo\"]]]",
+   "[\"B081QK9539\",[[\"style\",\"shampoo\"]]]",
+   "[\"B082YG62JM\",[[\"style\",\"shampoo\"]]]",
+   "[\"B0842YD1CX\",[[\"size\",\"3 fl. oz\"]]]",
+   "[\"B086PFX6VP\",[[\"style\",\"shampoo\"]]]",
+   "[\"B0882JHCTC\",[[\"style name\",\"shampoo\"]]]",
+   "[\"B0891YQ7XN\",[[\"scent\",\"shampoo\"]]]",
+   "[\"B08HNMLQ82\",[[\"style\",\"shampoo\"]]]",
+   "[\"B08K457RJ1\",[[\"size\",\"3.4 fl oz.\"]]]",
+   "[\"B08KXC1465\",[[\"style\",\"shampoo\"]]]",
+   "[\"B08KXFNV1X\",[[\"style name\",\"shampoo\"]]]",
+   "[\"B08LY96NQZ\",[[\"style\",\"shampoo\"]]]",
+   "[\"B08M7FDBLL\",[[\"style\",\"shampoo\"]]]",
+   "[\"B08M7FN48L\",[[\"style\",\"shampoo\"]]]",
+   "[\"B091NLY8WS\",[[\"style\",\"shampoo\"]]]",
+   "[\"B094KVN6S7\",[[\"style\",\"shampoo\"]]]",
+   "[\"B0971CN3ZG\",[[\"scent\",\"shampoo\"]]]",
+   "[\"B098GS5SF8\",[[\"style\",\"shampoo\"]]]",
+   "[\"B098KJDZJD\",[[\"style\",\"shampoo\"]]]",
+   "[\"B098R9QWZ6\",[[\"style\",\"shampoo\"]]]",
+   "[\"B098RCRRGQ\",[[\"style\",\"shampoo\"]]]",
+   "[\"B098RCTB95\",[[\"style\",\"shampoo\"]]]",
+   "[\"B09DJQ1WDT\",[[\"flavor name\",\"shampoo\"]]]",
+   "[\"B09KQZ9GTK\",[[\"size\",\"shampoo\"]]]",
+   "[\"B09L2CT1PQ\",[[\"style\",\"shampoo\"]]]",
+   "[\"B09L2MNGHW\",[[\"style\",\"shampoo\"]]]",
+   "[\"B09LR99XBK\",[[\"style\",\"32 oz shampoo\"]]]",
+   "[\"B09PJ47CQN\",[[\"style\",\"shampoo\"]]]",
+   "[\"B09PZ75KBP\",[[\"style\",\"shampoo\"]]]"
+  ],
+  "hash": "a0e9881141cbfc42558275faa8a9d09a"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "8707c7b808a5f4f7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the shampoo & conditioner instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "d19018b0158cfda5",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the shampoo & conditioner instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7c8f260e1443c208",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be animal testing."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cb3f36bd932459d6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be certified organic."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "340b915fcec0a089",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9b87ea2b25692d72",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cfe3b049239e4291",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10.14 fl oz (pack of 1) instead of dry shampoo - fl oz 3.4."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "e241477e4eae4591",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1.7 fl oz (pack of 1) instead of dry shampoo - fl oz 3.4."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

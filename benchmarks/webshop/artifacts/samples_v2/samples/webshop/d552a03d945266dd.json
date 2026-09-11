@@ -1,0 +1,188 @@
+{
+ "adapter": "webshop",
+ "cluster": "puffed snacks",
+ "fidelity_notes": [],
+ "goal_idx": 149,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "fb124530b817f8c6ac32c8579763d015",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07FFB1KR4\",[]]",
+   "[\"B097QC1R46\",[]]",
+   "[\"B09M968ZCM\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high protein",
+    "=",
+    "high protein"
+   ],
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "attr:low sugar",
+    "=",
+    "low sugar"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:low sugar"
+  ],
+  "intent_id": "252ee08c0d5f3876"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "attr:low sugar"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high protein",
+     "=",
+     "high protein"
+    ],
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "no sugar"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high protein",
+   "attr:low carb",
+   "price_upper"
+  ],
+  "spec_id": "d00537efae73c4c8",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "attr:low sugar",
+    "low sugar",
+    "no sugar"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for puffed snacks that have high protein, low carb, and no sugar, and I want to keep the price under $40.",
+ "render_attempts": 1,
+ "sample_id": "d552a03d945266dd",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the puffed snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "07dfe3067d09168b"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the puffed snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2508133ff4226586"
+  },
+  {
+   "announcement": "Also, it needs to be dietary fiber.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8977ef4b8517936b"
+  },
+  {
+   "announcement": "Also, it needs to be non gmo.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e1b9c512a7aa2577"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0671e049fbda5c48"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a381b9a72687d1f6"
+  },
+  {
+   "announcement": "Actually, make it 30 instead of 40.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3afa82882e8bb29e"
+  },
+  {
+   "announcement": "Actually, make it 20 instead of 40.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b965401fe11713fa"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 4,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a high protein energy bar with low sugar and low carb.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "ab6ea16fe365601d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

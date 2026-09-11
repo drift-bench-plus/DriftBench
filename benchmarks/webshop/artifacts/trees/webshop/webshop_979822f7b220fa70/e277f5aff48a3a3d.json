@@ -1,0 +1,1259 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B07PGJWVQP",
+    "cluster": "men's boots",
+    "name": "Kodiak Crusade",
+    "product_category": "Clothing, Shoes & Jewelry › Men"
+   },
+   "bound_slots": [
+    "attr:rubber sole",
+    "attr:water resistant",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:rubber sole",
+     "=",
+     "rubber sole"
+    ],
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "medium brown"
+    ],
+    [
+     "price_upper",
+     "<=",
+     80
+    ]
+   ],
+   "ground_truth": {
+    "hash": "f243dff29f35f83690daa646349ebe1b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07KBW5DQB\",[[\"color\",\"brown waxed canvas\"]]]",
+     "[\"B07PGJWVQP\",[[\"color\",\"medium brown\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "3ca6249d4622f681",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's boots",
+    "goal": {
+     "asin": "B07PGJWVQP",
+     "attributes": [
+      "water resistant",
+      "rubber sole"
+     ],
+     "category": "",
+     "goal_options": [
+      "medium brown"
+     ],
+     "name": "Kodiak Crusade",
+     "price_upper": 80,
+     "product_category": "Clothing, Shoes & Jewelry › Men",
+     "query": "men's boots"
+    }
+   },
+   "source_record": "0691ef5af199284c",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B000XESVO0",
+    "cluster": "men's boots",
+    "name": "Timberland PRO Men's Pit Boss 6 Inch Steel Safety Toe Industrial Work Boot",
+    "product_category": "Clothing, Shoes & Jewelry › Men"
+   },
+   "bound_slots": [
+    "attr:rubber sole",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:rubber sole",
+     "=",
+     "rubber sole"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "option:1",
+     "=",
+     "11.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ],
+   "ground_truth": {
+    "hash": "158eee699ad64276256dc78121f0b1ea",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000A1GW1U\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B000AS9CFQ\",[[\"color\",\"black oily\"],[\"size\",\"11\"]]]",
+     "[\"B000DLAPVA\",[[\"color\",\"brown | black\"],[\"size\",\"11\"]]]",
+     "[\"B000G377XY\",[[\"color\",\"black waterproof oiled smooth leather\"],[\"size\",\"11\"]]]",
+     "[\"B000OL55KU\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000VX37WO\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000VX6YOC\",[[\"color\",\"black nubuck\"],[\"size\",\"11\"]]]",
+     "[\"B000XEAMSS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XELF3O\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XEPBZ2\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XEPCOC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XEPCYW\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XERAOW\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XERPLK\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XERQRS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XESUZK\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XESVCM\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XESVO0\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XETPL8\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XEW67S\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XEWKPQ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XEX18Q\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XEYS42\",[[\"color\",\"black\"],[\"size\",\"11.5 wide\"]]]",
+     "[\"B000XF0RIC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XF165A\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B000XF8DD8\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B0018LREJK\",[[\"color\",\"black deertan\"],[\"size\",\"5.5\"]]]",
+     "[\"B001A5PO3C\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B001BXTKV0\",[[\"color\",\"black | white - 26\"],[\"size\",\"11\"]]]",
+     "[\"B001FS50SS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B001LMIXOG\",[[\"color\",\"black\"],[\"size\",\"11.5 x-wide\"]]]",
+     "[\"B00318RUL0\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B003TO4VCM\",[[\"color\",\"jet black\"],[\"size\",\"11\"]]]",
+     "[\"B0059GOY8O\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B005A4HFZY\",[[\"color\",\"black distress velvet\"],[\"size\",\"11\"]]]",
+     "[\"B006NWLVQ6\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B006WX8WOU\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B007G6LTVU\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B007KHWQAS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B007KJAN1A\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B007Y5ZRGG\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B008J5F8GE\",[[\"color\",\"black olive | inca gold\"],[\"size\",\"11\"]]]",
+     "[\"B008VPU1QO\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B009139FJ4\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B009L545B0\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B009SPPHG0\",[[\"color\",\"dark brown | black\"],[\"size\",\"11\"]]]",
+     "[\"B00AZOCA3Q\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B00AZODB0W\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B00BFABYFE\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B00CX7TM9S\",[[\"color\",\"black oil tanned\"],[\"size\",\"11\"]]]",
+     "[\"B00EVBIQK0\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B00F5UEU38\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B00GF10GYI\",[[\"color\",\"black | rock\"],[\"size\",\"11\"]]]",
+     "[\"B00IJJSF42\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+     "[\"B00IV398K6\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B00LNS04PO\",[[\"color\",\"black wyoming\"],[\"size\",\"11\"]]]",
+     "[\"B00MU6A8HC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B00NLHUBGM\",[[\"color\",\"jet black | birch | charcoal\"],[\"size\",\"11\"]]]",
+     "[\"B00QR0LQAU\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B00RDFBV3A\",[[\"color\",\"black | black\"],[\"size\",\"5-5.5\"]]]",
+     "[\"B00RKM68HU\",[[\"color\",\"black smooth leather ballistic nylon\"],[\"size\",\"5\"]]]",
+     "[\"B00T3JALL2\",[[\"color\",\"tnf black & tnf black\"],[\"size\",\"11\"]]]",
+     "[\"B00U883ZHE\",[[\"color\",\"black smooth\"],[\"size\",\"11\"]]]",
+     "[\"B00XIM6G2I\",[[\"color\",\"black pebbled\"],[\"size\",\"11\"]]]",
+     "[\"B013VPB0KY\",[[\"color\",\"black | grey\"],[\"size\",\"11\"]]]",
+     "[\"B019T9E6CA\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B01AKRCH6W\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B01BBLWTCI\",[[\"color\",\"black | black | metallic silver\"],[\"size\",\"11\"]]]",
+     "[\"B01BXG2HIM\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+     "[\"B01C6YUCLE\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B01INZDW1M\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B01ITL8KBW\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B01KXSEII8\",[[\"color\",\"black leather | charcoal trim\"],[\"size\",\"11.5\"]]]",
+     "[\"B01MU12RPI\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B01MV2TBWB\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B01MY6YY4N\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B01MZXTVQI\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B01N6G4ZWA\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B01NBL2R80\",[[\"color\",\"black | cordovan\"],[\"size\",\"11\"]]]",
+     "[\"B06XKLSV5X\",[[\"color\",\"black mesh and synthetic\"],[\"size\",\"11\"]]]",
+     "[\"B06XRR98LQ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B06ZXXD81R\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B06ZXXN5BC\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B06ZZF235D\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B071D7VRK5\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B0721JSYVR\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B072MZ1D61\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B073C52DZT\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B073F3ZHFX\",[[\"color\",\"black\"],[\"size\",\"11.5 wide\"]]]",
+     "[\"B073RNMKTJ\",[[\"color\",\"black | charcoal\"],[\"size\",\"11.5 wide\"]]]",
+     "[\"B076SRHPLG\",[[\"color\",\"black (001) | black\"],[\"size\",\"11\"]]]",
+     "[\"B0777ZDRW6\",[[\"color\",\"black embossed leather\"],[\"size\",\"11\"]]]",
+     "[\"B077815LX4\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B0779KPS9Z\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B0787PGFGS\",[[\"color\",\"black | columbia grey\"],[\"size\",\"11\"]]]",
+     "[\"B078F5NXJ4\",[[\"color\",\"black | bright red\"],[\"size\",\"11\"]]]",
+     "[\"B078SZCVNM\",[[\"color\",\"black | black | empire yellow\"],[\"size\",\"11\"]]]",
+     "[\"B078WG39DB\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+     "[\"B078XY4KBZ\",[[\"color\",\"olive | black\"],[\"size\",\"11.5\"]]]",
+     "[\"B0792H8LW1\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B0796DK7Q3\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B0796DQVG1\",[[\"color\",\"black | white\"],[\"size\",\"11.5\"]]]",
+     "[\"B079G3RNZV\",[[\"color\",\"castlerock | black | metallic silver\"],[\"size\",\"11\"]]]",
+     "[\"B079G4HGR4\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B079H2QZKC\",[[\"color\",\"espresso black cement\"],[\"size\",\"11\"]]]",
+     "[\"B079TDZ279\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B07B6CXS72\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07BMZSTXT\",[[\"color\",\"smoke new black\"],[\"size\",\"11\"]]]",
+     "[\"B07C69W8ZW\",[[\"color\",\"black | black dyneema\"],[\"size\",\"5-5.5\"]]]",
+     "[\"B07CQDF57W\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+     "[\"B07CS41HWL\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07CZQ9726\",[[\"color\",\"black nubuck\"],[\"size\",\"11.5\"]]]",
+     "[\"B07D4Y7VFH\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07F2K1QJ4\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07FL7DSFQ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07FXYLHM7\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07G4921MM\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07HCJHC42\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07J1BJRT4\",[[\"color\",\"chipmunk, black\"],[\"size\",\"11\"]]]",
+     "[\"B07J2K5CSG\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07JMF835K\",[[\"color\",\"black nubuck\"],[\"size\",\"11.5\"]]]",
+     "[\"B07JWVHTH1\",[[\"color\",\"black, ti grey steel\"],[\"size\",\"11\"]]]",
+     "[\"B07JWX1G39\",[[\"color\",\"black, columbia grey\"],[\"size\",\"11\"]]]",
+     "[\"B07K9J26CS\",[[\"color\",\"pebble grey | black\"],[\"size\",\"11\"]]]",
+     "[\"B07KJV7PDR\",[[\"color\",\"black dark grey\"],[\"size\",\"11\"]]]",
+     "[\"B07KJZC4BT\",[[\"color\",\"black, dark stone\"],[\"size\",\"11\"]]]",
+     "[\"B07KJZH8HT\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07KRJP6K8\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07KZGK593\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07KZJ8GVX\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07L959T21\",[[\"color\",\"black leather\"],[\"size\",\"11.5\"]]]",
+     "[\"B07L9CJLZS\",[[\"color\",\"black leather\"],[\"size\",\"11.5\"]]]",
+     "[\"B07LB5G878\",[[\"color\",\"roasted chestnut | black | gum\"],[\"size\",\"11\"]]]",
+     "[\"B07M6SGF16\",[[\"color\",\"black | white\"],[\"size\",\"11\"]]]",
+     "[\"B07M7P8CWP\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07MC1Q3XX\",[[\"color\",\"black black wr black wr\"],[\"size\",\"11\"]]]",
+     "[\"B07MDBN33H\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+     "[\"B07MFYH5Y6\",[[\"color\",\"black | magnet\"],[\"size\",\"11\"]]]",
+     "[\"B07MGX92P6\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+     "[\"B07MJ3JV3W\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+     "[\"B07MNRMN5S\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07MPS995H\",[[\"color\",\"black tnl\"],[\"size\",\"5\"]]]",
+     "[\"B07MQ9NCB1\",[[\"color\",\"tobacco, black\"],[\"size\",\"11\"]]]",
+     "[\"B07MR98LTZ\",[[\"color\",\"black full-grain\"],[\"size\",\"11\"]]]",
+     "[\"B07MYB68SH\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07MYBP9K1\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B07N11N8BL\",[[\"color\",\"black | grey\"],[\"size\",\"11\"]]]",
+     "[\"B07N11Z8TM\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07N25FTRF\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07NDZLQNT\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07NJ4YYQG\",[[\"color\",\"british khaki | tnf black\"],[\"size\",\"11.5\"]]]",
+     "[\"B07NNP89P9\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07NVBR678\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07P8P8YJP\",[[\"color\",\"black leather\"],[\"size\",\"11.5\"]]]",
+     "[\"B07P8SF2BV\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07PBCMGGB\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B07QB3Q77F\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07QBR4V96\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07QHN2M5B\",[[\"color\",\"wp black leather\"],[\"size\",\"11\"]]]",
+     "[\"B07QP9WLDK\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07QPCDWD3\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07QRMTVKC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07QRTVYYV\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07QW9J3G2\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07RR1GM8N\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07RS4RC46\",[[\"color\",\"black kid suede\"],[\"size\",\"11\"]]]",
+     "[\"B07RXW38DS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07RXWHD3Y\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+     "[\"B07S28HX3T\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+     "[\"B07SMQ6LXL\",[[\"color\",\"black | grey | grey\"],[\"size\",\"11\"]]]",
+     "[\"B07STGPFPC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07SY82VKM\",[[\"color\",\"black cherry\"],[\"size\",\"11\"]]]",
+     "[\"B07T3ZC4F5\",[[\"color\",\"dk.brown black\"],[\"size\",\"11\"]]]",
+     "[\"B07TBTHS7F\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07TLMXH6L\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07V6X5YB7\",[[\"color\",\"black | white\"],[\"size\",\"11\"]]]",
+     "[\"B07VCVBX7L\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07VR217W1\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+     "[\"B07VXS3C8T\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07VXS42VT\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07VYVTY2S\",[[\"color\",\"black | white\"],[\"size\",\"11\"]]]",
+     "[\"B07W95C73N\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B07WRSKJHL\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07WYKLSKF\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B07YDG4LD6\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B081PLBZ1D\",[[\"color\",\"black | lagoon\"],[\"size\",\"11\"]]]",
+     "[\"B082N689SP\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B082V57TB6\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B082Y5L3QJ\",[[\"color\",\"black | black\"],[\"size\",\"5\"]]]",
+     "[\"B082Y5TZD3\",[[\"color\",\"black | black\"],[\"size\",\"11\"]]]",
+     "[\"B082Y61DWN\",[[\"color\",\"black | buff check\"],[\"size\",\"11\"]]]",
+     "[\"B083KZWQ7Z\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B083QS4ZDS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B083Z1X73L\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B084121FLX\",[[\"color\",\"black | black suede\"],[\"size\",\"11-11.5\"]]]",
+     "[\"B0842SV7FQ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B0843HW29F\",[[\"color\",\"black | black\"],[\"size\",\"11-11.5\"]]]",
+     "[\"B0845FGQJR\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B0846G22W1\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B084C9K5TM\",[[\"color\",\"black | black\"],[\"size\",\"11\"]]]",
+     "[\"B084DD5S95\",[[\"color\",\"black nylon\"],[\"size\",\"11.5\"]]]",
+     "[\"B084DFDCX6\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B084DRWD73\",[[\"color\",\"black sde\"],[\"size\",\"11\"]]]",
+     "[\"B084DS5RW6\",[[\"color\",\"black sde\"],[\"size\",\"11\"]]]",
+     "[\"B084LN873W\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B084WGGS16\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B084WQ418G\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B084XPQQFZ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B085261W9W\",[[\"color\",\"black multi\"],[\"size\",\"11\"]]]",
+     "[\"B0853Q5HP3\",[[\"color\",\"stone green | black\"],[\"size\",\"11\"]]]",
+     "[\"B085B6MXYT\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B085V8P9ZY\",[[\"color\",\"black crazyhorse\"],[\"size\",\"11\"]]]",
+     "[\"B085V8XB5R\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B085V9QV7G\",[[\"color\",\"black multi\"],[\"size\",\"11\"]]]",
+     "[\"B085VV47RZ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B088ZT19F4\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B0891134CZ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08B7SNZ2X\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08B838TDG\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08C51KH4B\",[[\"color\",\"bmy684-black\"],[\"size\",\"11\"]]]",
+     "[\"B08C9Z7XJN\",[[\"color\",\"black | olive\"],[\"size\",\"11\"]]]",
+     "[\"B08CBM1L9D\",[[\"color\",\"black | magnet\"],[\"size\",\"11\"]]]",
+     "[\"B08CF4B12Q\",[[\"color\",\"black (001) | black\"],[\"size\",\"11\"]]]",
+     "[\"B08CG232NV\",[[\"color\",\"black | grey\"],[\"size\",\"11\"]]]",
+     "[\"B08CG4D238\",[[\"color\",\"black | grey\"],[\"size\",\"11\"]]]",
+     "[\"B08CGF5XS9\",[[\"color\",\"black | grey\"],[\"size\",\"11\"]]]",
+     "[\"B08CMRF98M\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08DNMJY23\",[[\"color\",\"black leather | gray sole\"],[\"size\",\"11\"]]]",
+     "[\"B08DXL6R9Z\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08F1Z22B7\",[[\"color\",\"black-b\"],[\"size\",\"11\"]]]",
+     "[\"B08FVN24FZ\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B08FWRF2P6\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08G5CMK18\",[[\"color\",\"black | black\"],[\"size\",\"11\"]]]",
+     "[\"B08GTRSKG3\",[[\"color\",\"black iris | orange\"],[\"size\",\"11\"]]]",
+     "[\"B08HSHQGCZ\",[[\"color\",\"black vegan\"],[\"size\",\"11\"]]]",
+     "[\"B08KTC655F\",[[\"color\",\"black | black\"],[\"size\",\"11\"]]]",
+     "[\"B08KTCHL69\",[[\"color\",\"black | black\"],[\"size\",\"11\"]]]",
+     "[\"B08KTDGK1X\",[[\"color\",\"black | black\"],[\"size\",\"11\"]]]",
+     "[\"B08KTF9SC2\",[[\"color\",\"black | black\"],[\"size\",\"11\"]]]",
+     "[\"B08KTGS8N5\",[[\"color\",\"black | black\"],[\"size\",\"11\"]]]",
+     "[\"B08L5S2K22\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08MNYKD3T\",[[\"color\",\"black, ti grey steel\"],[\"size\",\"11\"]]]",
+     "[\"B08MNZSFM2\",[[\"color\",\"dark grey | black\"],[\"size\",\"11\"]]]",
+     "[\"B08NJQDYQ8\",[[\"color\",\"regular black\"],[\"size\",\"11.5\"]]]",
+     "[\"B08P8P7WBK\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08P8RT17W\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08PDWD5S1\",[[\"color\",\"graphite | black\"],[\"size\",\"11\"]]]",
+     "[\"B08Q8QPCFR\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08Q8QY91K\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08Q8TLWJC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08QTNQKZL\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08QV6X3KG\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08QVF5LYQ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08QW4JS86\",[[\"color\",\"black nubuck\"],[\"size\",\"11\"]]]",
+     "[\"B08QW4WSB9\",[[\"color\",\"black nubuck\"],[\"size\",\"11\"]]]",
+     "[\"B08QW5CQ9W\",[[\"color\",\"black nubuck\"],[\"size\",\"11\"]]]",
+     "[\"B08QW5MVCQ\",[[\"color\",\"black full grain\"],[\"size\",\"11\"]]]",
+     "[\"B08R7KKTJZ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08R7KL3KD\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08R7KNXZ1\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08R7L6G3X\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08R7M2WPK\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08RS4LF7W\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B08RSCKJ7H\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B08SPXN948\",[[\"color\",\"black waterproof | dove gray\"],[\"size\",\"11\"]]]",
+     "[\"B08SQ5CRF1\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08SQ738PR\",[[\"color\",\"black water resistant | micro chip\"],[\"size\",\"11\"]]]",
+     "[\"B08SQRZQKF\",[[\"color\",\"black water resistant | black\"],[\"size\",\"11\"]]]",
+     "[\"B08SQYDFDN\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08THJH8D9\",[[\"color\",\"black textile\"],[\"size\",\"11\"]]]",
+     "[\"B08VX1D9VN\",[[\"color\",\"black, dark stone\"],[\"size\",\"11\"]]]",
+     "[\"B08WN91RFW\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B08WNC1DNG\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08WNLWLT6\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B08WNQF8Q5\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B08X25BSSR\",[[\"color\",\"black\"],[\"size\",\"5.5\"]]]",
+     "[\"B08X7CBMV9\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08XZQXG72\",[[\"color\",\"black multi\"],[\"size\",\"11\"]]]",
+     "[\"B08Y2SSNWJ\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B08ZHPKF8R\",[[\"color\",\"black crazyhorse\"],[\"size\",\"11\"]]]",
+     "[\"B08ZJ1ZXWH\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B08ZJWHQKT\",[[\"color\",\"black leather | suede | ripstop\"],[\"size\",\"11\"]]]",
+     "[\"B08ZJXJBXC\",[[\"color\",\"black leather | suede\"],[\"size\",\"11\"]]]",
+     "[\"B08ZJYJSSV\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+     "[\"B0931VPY1K\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B093TQMTP2\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B0948KWG9M\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B095CK6M2V\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B095S946QN\",[[\"color\",\"black milled leather\"],[\"size\",\"11\"]]]",
+     "[\"B095VMPFZS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B095XCKFSP\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B0977P5T79\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B097CPHCXF\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B097N8QFYY\",[[\"color\",\"black multi\"],[\"size\",\"11\"]]]",
+     "[\"B097N9K3F6\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B097NBDLT2\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B097ZMTN84\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B097ZN7FVJ\",[[\"color\",\"buff, black\"],[\"size\",\"11\"]]]",
+     "[\"B097ZNCHJG\",[[\"color\",\"black, dark stone\"],[\"size\",\"11\"]]]",
+     "[\"B098BGJML5\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B098BGVD2R\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B098BHHQNL\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+     "[\"B098BRZ5XC\",[[\"color\",\"tobacco, black\"],[\"size\",\"11\"]]]",
+     "[\"B098CJ62F1\",[[\"color\",\"fallen, black\"],[\"size\",\"11\"]]]",
+     "[\"B098CPQZRB\",[[\"color\",\"tobacco, black\"],[\"size\",\"11\"]]]",
+     "[\"B099KQVP48\",[[\"color\",\"black crazy horse\"],[\"size\",\"11\"]]]",
+     "[\"B099QKR7XW\",[[\"color\",\"black full grain\"],[\"size\",\"11\"]]]",
+     "[\"B09BLYBBNR\",[[\"color\",\"black milled leather | gray sole\"],[\"size\",\"11\"]]]",
+     "[\"B09BQNM3GC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B09BQPCRRC\",[[\"color\",\"black | magnet\"],[\"size\",\"11\"]]]",
+     "[\"B09CFV9Q7M\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B09H5MC9ST\",[[\"color\",\"black crazy horse\"],[\"size\",\"11\"]]]",
+     "[\"B09L29JQP7\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+     "[\"B09MSL38BN\",[[\"color\",\"black crazy horse\"],[\"size\",\"11\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "5f18ea6ec89f4634",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's boots",
+    "goal": {
+     "asin": "B000XESVO0",
+     "attributes": [
+      "rubber sole"
+     ],
+     "category": "",
+     "goal_options": [
+      "black",
+      "11.5"
+     ],
+     "name": "Timberland PRO Men's Pit Boss 6 Inch Steel Safety Toe Industrial Work Boot",
+     "price_upper": 110,
+     "product_category": "Clothing, Shoes & Jewelry › Men",
+     "query": "men's boots"
+    }
+   },
+   "source_record": "53814d291250bdbc",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GYJSMW3",
+    "cluster": "men's boots",
+    "name": "Cole Haan Men's Zerogrand Hiker II",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots"
+   },
+   "bound_slots": [
+    "attr:rubber outsole",
+    "attr:shoes men",
+    "attr:water resistant",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:rubber outsole",
+     "=",
+     "rubber outsole"
+    ],
+    [
+     "attr:shoes men",
+     "=",
+     "shoes men"
+    ],
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark coffee | black"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ],
+   "ground_truth": {
+    "hash": "6eee91a296355b3da5871cc3b0895449",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09L29JQP7\",[[\"color\",\"black\"],[\"size\",\"10\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f692008da3d58819",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's boots",
+    "goal": {
+     "asin": "B07GYJSMW3",
+     "attributes": [
+      "rubber outsole",
+      "shoes men",
+      "water resistant"
+     ],
+     "category": "",
+     "goal_options": [
+      "dark coffee | black",
+      "10.5"
+     ],
+     "name": "Cole Haan Men's Zerogrand Hiker II",
+     "price_upper": 110,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots",
+     "query": "men's boots"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GYJSMW3",
+    "cluster": "men's boots",
+    "name": "Cole Haan Men's Zerogrand Hiker II",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots"
+   },
+   "bound_slots": [
+    "attr:ankle boots",
+    "attr:rubber outsole",
+    "attr:water resistant",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:ankle boots",
+     "=",
+     "ankle boots"
+    ],
+    [
+     "attr:rubber outsole",
+     "=",
+     "rubber outsole"
+    ],
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark coffee | black"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ],
+   "ground_truth": {
+    "hash": "7e0bdc0e96d1b7191166b45fe537c9d2",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0931VPY1K\",[[\"color\",\"black\"],[\"size\",\"10\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9f8c2cd4eadf64a2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's boots",
+    "goal": {
+     "asin": "B07GYJSMW3",
+     "attributes": [
+      "ankle boots",
+      "rubber outsole",
+      "water resistant"
+     ],
+     "category": "",
+     "goal_options": [
+      "dark coffee | black",
+      "10.5"
+     ],
+     "name": "Cole Haan Men's Zerogrand Hiker II",
+     "price_upper": 110,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots",
+     "query": "men's boots"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GYJSMW3",
+    "cluster": "men's boots",
+    "name": "Cole Haan Men's Zerogrand Hiker II",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots"
+   },
+   "bound_slots": [
+    "attr:rubber outsole",
+    "attr:water resistant",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:rubber outsole",
+     "=",
+     "rubber outsole"
+    ],
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ],
+   "ground_truth": {
+    "hash": "d2c803a475f919aeb0942ae0477c6d7e",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00104RRK6\",[[\"size\",\"5\"]]]",
+     "[\"B0012FGIMQ\",[[\"size\",\"5\"]]]",
+     "[\"B008J5F8GE\",[[\"size\",\"10\"]]]",
+     "[\"B00ARV53TU\",[[\"size\",\"10\"]]]",
+     "[\"B00BFABQPM\",[[\"size\",\"5\"]]]",
+     "[\"B0163FZ5E6\",[[\"size\",\"10\"]]]",
+     "[\"B073F3JHJK\",[[\"size\",\"10\"]]]",
+     "[\"B079DDHSZ8\",[[\"size\",\"10.5\"]]]",
+     "[\"B07GYJSMW3\",[[\"size\",\"10\"]]]",
+     "[\"B07KBW5DQB\",[[\"size\",\"10\"]]]",
+     "[\"B07KRJP6K8\",[[\"size\",\"10\"]]]",
+     "[\"B07LB5G878\",[[\"size\",\"10\"]]]",
+     "[\"B07MC1Q3XX\",[[\"size\",\"10\"]]]",
+     "[\"B07T3ZC4F5\",[[\"size\",\"10\"]]]",
+     "[\"B0864Y7C8L\",[[\"size\",\"10\"]]]",
+     "[\"B088B7VTKK\",[[\"size\",\"10\"]]]",
+     "[\"B08JFX8KNH\",[[\"size\",\"10\"]]]",
+     "[\"B08Q8PCLFX\",[[\"size\",\"10\"]]]",
+     "[\"B08Q8QPCFR\",[[\"size\",\"10\"]]]",
+     "[\"B08Q8TLWJC\",[[\"size\",\"10\"]]]",
+     "[\"B08R7KKTJZ\",[[\"size\",\"10\"]]]",
+     "[\"B08R7M2WPK\",[[\"size\",\"10\"]]]",
+     "[\"B08SQ738PR\",[[\"size\",\"10\"]]]",
+     "[\"B08SQRZQKF\",[[\"size\",\"10\"]]]",
+     "[\"B08SQYDFDN\",[[\"size\",\"10\"]]]",
+     "[\"B08SW3M9RQ\",[[\"size\",\"5\"]]]",
+     "[\"B08WC2MWWJ\",[[\"size\",\"10\"]]]",
+     "[\"B08Y2SSNWJ\",[[\"size\",\"5\"]]]",
+     "[\"B0931VPY1K\",[[\"size\",\"10\"]]]",
+     "[\"B095S946QN\",[[\"size\",\"10\"]]]",
+     "[\"B09B2K6RR7\",[[\"size\",\"10\"]]]",
+     "[\"B09L29JQP7\",[[\"size\",\"10\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "d4ed623bcbc1d0c3",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's boots",
+    "goal": {
+     "asin": "B07GYJSMW3",
+     "attributes": [
+      "rubber outsole",
+      "water resistant"
+     ],
+     "category": "",
+     "goal_options": [
+      "10.5"
+     ],
+     "name": "Cole Haan Men's Zerogrand Hiker II",
+     "price_upper": 110,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots",
+     "query": "men's boots"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GYJSMW3",
+    "cluster": "men's boots",
+    "name": "Cole Haan Men's Zerogrand Hiker II",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots"
+   },
+   "bound_slots": [
+    "attr:rubber outsole",
+    "attr:water resistant",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:rubber outsole",
+     "=",
+     "rubber outsole"
+    ],
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark coffee | black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ],
+   "ground_truth": {
+    "hash": "f579f062a62b311354bb927e622822b7",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B008J5F8GE\",[[\"color\",\"slate black | harvest gold\"]]]",
+     "[\"B073F3ZHFX\",[[\"color\",\"black\"]]]",
+     "[\"B079DDHSZ8\",[[\"color\",\"black wr | black\"]]]",
+     "[\"B07GYJSMW3\",[[\"color\",\"black | black\"]]]",
+     "[\"B07KRJP6K8\",[[\"color\",\"black\"]]]",
+     "[\"B07LB5G878\",[[\"color\",\"black\"]]]",
+     "[\"B07MC1Q3XX\",[[\"color\",\"black\"]]]",
+     "[\"B07T3ZC4F5\",[[\"color\",\"dk.brown black\"]]]",
+     "[\"B088T3S4DD\",[[\"color\",\"black20701\"]]]",
+     "[\"B08Q8QPCFR\",[[\"color\",\"black\"]]]",
+     "[\"B08Q8TLWJC\",[[\"color\",\"black\"]]]",
+     "[\"B08R7KKTJZ\",[[\"color\",\"black\"]]]",
+     "[\"B08R7M2WPK\",[[\"color\",\"black\"]]]",
+     "[\"B08SQ738PR\",[[\"color\",\"black water resistant | micro chip\"]]]",
+     "[\"B08SQRZQKF\",[[\"color\",\"black water resistant | black\"]]]",
+     "[\"B08SQYDFDN\",[[\"color\",\"black\"]]]",
+     "[\"B08SW3M9RQ\",[[\"color\",\"black leather | quilted stretch\"]]]",
+     "[\"B08Y2SSNWJ\",[[\"color\",\"black\"]]]",
+     "[\"B0931VPY1K\",[[\"color\",\"black\"]]]",
+     "[\"B095S946QN\",[[\"color\",\"black milled leather\"]]]",
+     "[\"B09L29JQP7\",[[\"color\",\"black\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "255db2f6ecc3ed8d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's boots",
+    "goal": {
+     "asin": "B07GYJSMW3",
+     "attributes": [
+      "rubber outsole",
+      "water resistant"
+     ],
+     "category": "",
+     "goal_options": [
+      "dark coffee | black"
+     ],
+     "name": "Cole Haan Men's Zerogrand Hiker II",
+     "price_upper": 110,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots",
+     "query": "men's boots"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GYJSMW3",
+    "cluster": "men's boots",
+    "name": "Cole Haan Men's Zerogrand Hiker II",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots"
+   },
+   "bound_slots": [
+    "attr:rubber outsole",
+    "attr:water resistant",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:rubber outsole",
+     "=",
+     "rubber outsole"
+    ],
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "10"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ],
+   "ground_truth": {
+    "hash": "333ca7447d94a70e39ca955ef8834185",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B008J5F8GE\",[[\"size\",\"10\"]]]",
+     "[\"B00ARV53TU\",[[\"size\",\"10\"]]]",
+     "[\"B0163FZ5E6\",[[\"size\",\"10\"]]]",
+     "[\"B073F3JHJK\",[[\"size\",\"10\"]]]",
+     "[\"B079DDHSZ8\",[[\"size\",\"10.5\"]]]",
+     "[\"B07GYJSMW3\",[[\"size\",\"10\"]]]",
+     "[\"B07KBW5DQB\",[[\"size\",\"10\"]]]",
+     "[\"B07KRJP6K8\",[[\"size\",\"10\"]]]",
+     "[\"B07LB5G878\",[[\"size\",\"10\"]]]",
+     "[\"B07MC1Q3XX\",[[\"size\",\"10\"]]]",
+     "[\"B07T3ZC4F5\",[[\"size\",\"10\"]]]",
+     "[\"B0864Y7C8L\",[[\"size\",\"10\"]]]",
+     "[\"B088B7VTKK\",[[\"size\",\"10\"]]]",
+     "[\"B08JFX8KNH\",[[\"size\",\"10\"]]]",
+     "[\"B08Q8PCLFX\",[[\"size\",\"10\"]]]",
+     "[\"B08Q8QPCFR\",[[\"size\",\"10\"]]]",
+     "[\"B08Q8TLWJC\",[[\"size\",\"10\"]]]",
+     "[\"B08R7KKTJZ\",[[\"size\",\"10\"]]]",
+     "[\"B08R7M2WPK\",[[\"size\",\"10\"]]]",
+     "[\"B08SQ738PR\",[[\"size\",\"10\"]]]",
+     "[\"B08SQRZQKF\",[[\"size\",\"10\"]]]",
+     "[\"B08SQYDFDN\",[[\"size\",\"10\"]]]",
+     "[\"B08WC2MWWJ\",[[\"size\",\"10\"]]]",
+     "[\"B0931VPY1K\",[[\"size\",\"10\"]]]",
+     "[\"B095S946QN\",[[\"size\",\"10\"]]]",
+     "[\"B09B2K6RR7\",[[\"size\",\"10\"]]]",
+     "[\"B09L29JQP7\",[[\"size\",\"10\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "2b3642a31f1c8dfa",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's boots",
+    "goal": {
+     "asin": "B07GYJSMW3",
+     "attributes": [
+      "rubber outsole",
+      "water resistant"
+     ],
+     "category": "",
+     "goal_options": [
+      "10",
+      "10.5"
+     ],
+     "name": "Cole Haan Men's Zerogrand Hiker II",
+     "price_upper": 110,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots",
+     "query": "men's boots"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GYJSMW3",
+    "cluster": "men's boots",
+    "name": "Cole Haan Men's Zerogrand Hiker II",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots"
+   },
+   "bound_slots": [
+    "attr:rubber outsole",
+    "attr:water resistant",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:rubber outsole",
+     "=",
+     "rubber outsole"
+    ],
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "03-dark brown"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ],
+   "ground_truth": {
+    "hash": "7bbb239dc13f6254c68279942d1fbc6d",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B008J5F8GE\",[[\"color\",\"cascade brown | raven\"],[\"size\",\"10\"]]]",
+     "[\"B07KBW5DQB\",[[\"color\",\"brown waxed canvas\"],[\"size\",\"10\"]]]",
+     "[\"B07KRJP6K8\",[[\"color\",\"brown\"],[\"size\",\"10\"]]]",
+     "[\"B07T3ZC4F5\",[[\"color\",\"170390-khaki brown\"],[\"size\",\"10\"]]]",
+     "[\"B088B7VTKK\",[[\"color\",\"chukka boots673-yellow brown\"],[\"size\",\"10\"]]]",
+     "[\"B08Q8PCLFX\",[[\"color\",\"blocked brown\"],[\"size\",\"10\"]]]",
+     "[\"B08Q8QPCFR\",[[\"color\",\"caramel brown\"],[\"size\",\"10\"]]]",
+     "[\"B08Q8TLWJC\",[[\"color\",\"caramel brown\"],[\"size\",\"10\"]]]",
+     "[\"B08R7KKTJZ\",[[\"color\",\"tan | brown\"],[\"size\",\"10\"]]]",
+     "[\"B08R7M2WPK\",[[\"color\",\"brown | gum\"],[\"size\",\"10\"]]]",
+     "[\"B08SQ738PR\",[[\"color\",\"wren brown waterproof | dark roast\"],[\"size\",\"10\"]]]",
+     "[\"B08SQRZQKF\",[[\"color\",\"wren brown water resistant | dark roast\"],[\"size\",\"10\"]]]",
+     "[\"B08Y2SSNWJ\",[[\"color\",\"brown\"],[\"size\",\"5\"]]]",
+     "[\"B0931VPY1K\",[[\"color\",\"dark brown\"],[\"size\",\"10\"]]]",
+     "[\"B095S946QN\",[[\"color\",\"brown crazy horse\"],[\"size\",\"10\"]]]",
+     "[\"B09L29JQP7\",[[\"color\",\"brown\"],[\"size\",\"10\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f3c78ba93f78f089",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's boots",
+    "goal": {
+     "asin": "B07GYJSMW3",
+     "attributes": [
+      "rubber outsole",
+      "water resistant"
+     ],
+     "category": "",
+     "goal_options": [
+      "03-dark brown",
+      "10.5"
+     ],
+     "name": "Cole Haan Men's Zerogrand Hiker II",
+     "price_upper": 110,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots",
+     "query": "men's boots"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07PGJWVQP",
+     "cluster": "men's boots",
+     "name": "Kodiak Crusade",
+     "product_category": "Clothing, Shoes & Jewelry › Men"
+    }
+   },
+   "dst": "3ca6249d4622f681",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "0691ef5af199284c",
+   "src": "60e19d3dbe7900f1"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B000XESVO0",
+     "cluster": "men's boots",
+     "name": "Timberland PRO Men's Pit Boss 6 Inch Steel Safety Toe Industrial Work Boot",
+     "product_category": "Clothing, Shoes & Jewelry › Men"
+    }
+   },
+   "dst": "5f18ea6ec89f4634",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "53814d291250bdbc",
+   "src": "60e19d3dbe7900f1"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:shoes men",
+      "=",
+      "shoes men"
+     ]
+    ]
+   },
+   "dst": "f692008da3d58819",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "60e19d3dbe7900f1"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:ankle boots",
+      "=",
+      "ankle boots"
+     ]
+    ]
+   },
+   "dst": "9f8c2cd4eadf64a2",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "60e19d3dbe7900f1"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "dark coffee | black"
+     ]
+    ]
+   },
+   "dst": "d4ed623bcbc1d0c3",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "60e19d3dbe7900f1"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:1",
+      "=",
+      "10.5"
+     ]
+    ]
+   },
+   "dst": "255db2f6ecc3ed8d",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "60e19d3dbe7900f1"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "dark coffee | black",
+      "10"
+     ]
+    ]
+   },
+   "dst": "2b3642a31f1c8dfa",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "60e19d3dbe7900f1"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "dark coffee | black",
+      "03-dark brown"
+     ]
+    ]
+   },
+   "dst": "f3c78ba93f78f089",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "60e19d3dbe7900f1"
+  }
+ ],
+ "env_id": "webshop_979822f7b220fa70",
+ "env_spec": {
+  "cluster": "men's boots",
+  "env_id": "webshop_979822f7b220fa70",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B07GYJSMW3",
+   "cluster": "men's boots",
+   "name": "Cole Haan Men's Zerogrand Hiker II",
+   "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots"
+  },
+  "bound_slots": [
+   "attr:rubber outsole",
+   "attr:water resistant",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:rubber outsole",
+    "=",
+    "rubber outsole"
+   ],
+   [
+    "attr:water resistant",
+    "=",
+    "water resistant"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark coffee | black"
+   ],
+   [
+    "option:1",
+    "=",
+    "10.5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    110
+   ]
+  ],
+  "ground_truth": {
+   "hash": "edd86f062f77dc8c5ef9994ab7429e96",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B008J5F8GE\",[[\"color\",\"slate black | harvest gold\"],[\"size\",\"10\"]]]",
+    "[\"B079DDHSZ8\",[[\"color\",\"black wr | black\"],[\"size\",\"10.5\"]]]",
+    "[\"B07GYJSMW3\",[[\"color\",\"black | black\"],[\"size\",\"10\"]]]",
+    "[\"B07KRJP6K8\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+    "[\"B07LB5G878\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+    "[\"B07MC1Q3XX\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+    "[\"B07T3ZC4F5\",[[\"color\",\"dk.brown black\"],[\"size\",\"10\"]]]",
+    "[\"B08Q8QPCFR\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+    "[\"B08Q8TLWJC\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+    "[\"B08R7KKTJZ\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+    "[\"B08R7M2WPK\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+    "[\"B08SQ738PR\",[[\"color\",\"black water resistant | micro chip\"],[\"size\",\"10\"]]]",
+    "[\"B08SQRZQKF\",[[\"color\",\"black water resistant | black\"],[\"size\",\"10\"]]]",
+    "[\"B08SQYDFDN\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+    "[\"B08SW3M9RQ\",[[\"color\",\"black leather | quilted stretch\"],[\"size\",\"5\"]]]",
+    "[\"B08Y2SSNWJ\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+    "[\"B0931VPY1K\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+    "[\"B095S946QN\",[[\"color\",\"black milled leather\"],[\"size\",\"10\"]]]",
+    "[\"B09L29JQP7\",[[\"color\",\"black\"],[\"size\",\"10\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "60e19d3dbe7900f1",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "men's boots",
+   "goal": {
+    "asin": "B07GYJSMW3",
+    "attributes": [
+     "water resistant",
+     "rubber outsole"
+    ],
+    "category": "",
+    "goal_options": [
+     "dark coffee | black",
+     "10.5"
+    ],
+    "name": "Cole Haan Men's Zerogrand Hiker II",
+    "price_upper": 110,
+    "product_category": "Clothing, Shoes & Jewelry › Men › Shoes › Outdoor › Hiking & Trekking › Hiking Boots",
+    "query": "men's boots"
+   }
+  },
+  "source_record": "6b14aa1abf5ecbc3",
+  "unbound_slots": [
+   "attr:ankle boots",
+   "attr:shoes men",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "tree_id": "e277f5aff48a3a3d"
+}

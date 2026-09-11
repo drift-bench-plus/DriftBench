@@ -1,0 +1,324 @@
+{
+ "sample_id": "7ae8e67774fbb692",
+ "tree_id": "8493e66bd2d41a9b",
+ "adapter": "webshop",
+ "cluster": "women's bodysuit tops",
+ "goal_idx": 356,
+ "split": "test",
+ "source_instruction": "i am looking for a short sleeve deep v neck solid color crop top.",
+ "query": "I stopped at the little community farmers\u2019 market on my walk over today, and the stand run by the retired couple who grow the juiciest sun-warmed peaches had their first batch of the season out, all fuzzy and smelling like pure summer. I ended up lingering for ten minutes chatting with them about the stray calico cat that\u2019s been napping on their crates of cherry tomatoes lately; she\u2019s got a tiny white patch on her chest that looks like a lopsided heart, and they\u2019ve started leaving out a little bowl of cold water for her every morning even though they\u2019re pretty sure she already has a home three blocks over. A kid selling homemade lemonade from a rickety card table at the market entrance gave me an extra splash of strawberry syrup for free when I mentioned I\u2019d walked all the way from the east side neighborhood, and it was so cold it made my teeth tingle in the best way. Over in the women's bodysuit tops section, short sleeve options exist, and there\u2019s that one print I always go for, the one that feels instantly familiar every time I spot it. I\u2019ve heard nothing over the amount I'm okay with spending lines up well for what fits my current budget, yeah?",
+ "strategy_ids": [
+  "indirect_intent",
+  "insufficient_information",
+  "contextual_irrelevance",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+insufficient_information+contextual_irrelevance+referential_ambiguity",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "indirect_intent",
+   "insufficient_information",
+   "contextual_irrelevance",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped at the little community farmers\u2019 market on my walk over today, and the stand run by the retired couple who grow the juiciest sun-warmed peaches had their first batch of the season out, all fuzzy and smelling like pure summer. I ended up lingering for ten minutes chatting with them about the stray calico cat that\u2019s been napping on their crates of cherry tomatoes lately; she\u2019s got a tiny white patch on her chest that looks like a lopsided heart, and they\u2019ve started leaving out a little bowl of cold water for her every morning even though they\u2019re pretty sure she already has a home three blocks over. A kid selling homemade lemonade from a rickety card table at the market entrance gave me an extra splash of strawberry syrup for free when I mentioned I\u2019d walked all the way from the east side neighborhood, and it was so cold it made my teeth tingle in the best way.",
+  "retained": [
+   "attr:short sleeve"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:short sleeve",
+     "=",
+     "short sleeve"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "94b261bcf53bd75b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 128,
+  "lit_card": 1899,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 130,
+    "true_card": 128,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1812,
+    "true_card": 128,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "9b4b7f42aaa14a17",
+  "conditions": [
+   [
+    "attr:short sleeve",
+    "=",
+    "short sleeve"
+   ],
+   [
+    "option:0",
+    "=",
+    "multicoloured plants"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 128,
+  "value": [
+   "[\"B06Y149YB2\",[[\"color\",\"wine red polka dot\"]]]",
+   "[\"B073ZCFMHR\",[[\"color\",\"wine red\"]]]",
+   "[\"B074DWKYR8\",[[\"color\",\"wine red\"]]]",
+   "[\"B077Z4T5VD\",[[\"color\",\"multicoloured plants\"]]]",
+   "[\"B07G77PDH6\",[[\"color\",\"red button\"]]]",
+   "[\"B07GW9MC8L\",[[\"color\",\"rose red\"]]]",
+   "[\"B07HJC1Z66\",[[\"color\",\"long sleeve red\"]]]",
+   "[\"B07KDT72GN\",[[\"color\",\"wine red\"]]]",
+   "[\"B07KZS6NCR\",[[\"color\",\"multicoloured plaid\"]]]",
+   "[\"B07RKVWC8Y\",[[\"color\",\"red | o-neck\"]]]",
+   "[\"B07RYR3XH3\",[[\"color\",\"wine red\"]]]",
+   "[\"B07T66SFPL\",[[\"color\",\"long sleeve red\"]]]",
+   "[\"B07VNMW4PY\",[[\"color\",\"long sleeve red\"]]]",
+   "[\"B07WH519XF\",[[\"color\",\"red stripes\"]]]",
+   "[\"B07WQV8L81\",[[\"color\",\"rose red\"]]]",
+   "[\"B07Y8LF71Z\",[[\"color\",\"purplish red\"]]]",
+   "[\"B07YCQKMGM\",[[\"color\",\"long sleeve red\"]]]",
+   "[\"B07ZGGCBJC\",[[\"color\",\"wine red\"]]]",
+   "[\"B07ZHWYF1X\",[[\"color\",\"long sleeve-red\"]]]",
+   "[\"B08397V44D\",[[\"color\",\"long sleeve red\"]]]",
+   "[\"B08399RYJ9\",[[\"color\",\"long sleeve red\"]]]",
+   "[\"B084ZSV5TV\",[[\"color\",\"wine red\"]]]",
+   "[\"B085Y8DV8J\",[[\"color\",\"long sleeve red\"]]]",
+   "[\"B089YK478M\",[[\"color\",\"10-wine red\"]]]",
+   "[\"B08FJD3JFV\",[[\"color\",\"long sleeve red\"]]]",
+   "[\"B08GLGQ9HD\",[[\"color\",\"mock neck -rose red\"]]]",
+   "[\"B08K7K2K9Q\",[[\"color\",\"long sleeve red\"]]]",
+   "[\"B08N6P4MB7\",[[\"color\",\"long sleeve red\"]]]",
+   "[\"B08QVYQQJG\",[[\"color\",\"red-(with snap crotch)\"]]]",
+   "[\"B08T61H3C6\",[[\"color\",\"z3a-red\"]]]",
+   "[\"B08XMB88BG\",[[\"color\",\"wine red\"]]]",
+   "[\"B08YQJTSPH\",[[\"color\",\"38# wine red\"]]]",
+   "[\"B08ZXTVYB5\",[[\"color\",\"rose red\"]]]",
+   "[\"B0952VZQNW\",[[\"color\",\"wine red\"]]]",
+   "[\"B095VSYK55\",[[\"color\",\"y01-red\"]]]",
+   "[\"B097BGJ7JD\",[[\"color\",\"wine red\"]]]",
+   "[\"B098P9L2W1\",[[\"color\",\"c - 5 red\"]]]",
+   "[\"B0999J831K\",[[\"color\",\"long sleeve red (mock neck)\"]]]",
+   "[\"B09C1HD14R\",[[\"color\",\"red\"]]]",
+   "[\"B09CGWDDP2\",[[\"color\",\"wine red\"]]]",
+   "[\"B09CV36RJ2\",[[\"color\",\"21ab - za6 red\"]]]",
+   "[\"B09DGM4Z3H\",[[\"color\",\"c1-red\"]]]",
+   "[\"B09DQ65QFF\",[[\"color\",\"b4- m7 - wine red\"]]]",
+   "[\"B09F3SJKFP\",[[\"color\",\"as1- t1-red\"]]]",
+   "[\"B09FSGW8Z6\",[[\"color\",\"wine red\"]]]",
+   "[\"B09FX374WK\",[[\"color\",\"wine red\"]]]",
+   "[\"B09GG1S983\",[[\"color\",\"wine red\"]]]",
+   "[\"B09GYJDYYN\",[[\"color\",\"bkpp1- zl1-red\"]]]",
+   "[\"B09K389C6T\",[[\"color\",\"6-watermelon red\"]]]",
+   "[\"B09K451F4Q\",[[\"color\",\"srs-a140-red\"]]]",
+   "[\"B09K4WPHZJ\",[[\"color\",\"a02 button pullover sweater turtle cowl neck tops red\"]]]",
+   "[\"B09KN68SYQ\",[[\"color\",\"c1-red\"]]]",
+   "[\"B09L17C2SF\",[[\"color\",\"women printing pullover sweatshirts tops 04 red\"]]]",
+   "[\"B09LMN9LRZ\",[[\"color\",\"tops for women casual fall-red\"]]]",
+   "[\"B09LVDB27J\",[[\"color\",\"wine-red\"]]]",
+   "[\"B09MLSDX1M\",[[\"color\",\"srs3-love193-red\"]]]",
+   "[\"B09MVNSRSL\",[[\"color\",\"wine red\"]]]",
+   "[\"B09NDCSZZ6\",[[\"color\",\"c-red\"]]]",
+   "[\"B09NNDWMDG\",[[\"color\",\"spring tees-a083-red\"]]]",
+   "[\"B09NNGN3BY\",[[\"color\",\"spring tees-a025-red\"]]]",
+   "[\"B09NQBFCV1\",[[\"color\",\"tops for women -a072-red\"]]]",
+   "[\"B09NQD3GS9\",[[\"color\",\"tops for women -a207-red\"]]]",
+   "[\"B09NRNDZ18\",[[\"color\",\"tops-02-a1 red\"]]]",
+   "[\"B09NTMLVW5\",[[\"color\",\"wine red\"]]]",
+   "[\"B09P1HDBLJ\",[[\"color\",\"red\"]]]",
+   "[\"B09P2P29NN\",[[\"color\",\"red\"]]]",
+   "[\"B09P2Y8WVV\",[[\"color\",\"dressy tops for women-red\"]]]",
+   "[\"B09P3G6T5D\",[[\"color\",\"i-watermelon red\"]]]",
+   "[\"B09P4R5DXC\",[[\"color\",\"tshirts-a013-red\"]]]",
+   "[\"B09P4Z4MQF\",[[\"color\",\"spring summer tops-a207-red\"]]]",
+   "[\"B09P7GSL7K\",[[\"color\",\"red\"]]]",
+   "[\"B09P7SZKJP\",[[\"color\",\"red womens tops\"]]]",
+   "[\"B09P8BK84W\",[[\"color\",\"red\"]]]",
+   "[\"B09P8QGL7V\",[[\"color\",\"red\"]]]",
+   "[\"B09P8QQW32\",[[\"color\",\"red\"]]]",
+   "[\"B09PGC9KPQ\",[[\"color\",\"wine-red\"]]]",
+   "[\"B09PH7D2G7\",[[\"color\",\"wine red\"]]]",
+   "[\"B09PLHWJKG\",[[\"color\",\"best tops-av288-red\"]]]",
+   "[\"B09PLHY18B\",[[\"color\",\"best tops-av242-red\"]]]",
+   "[\"B09PLHYH5J\",[[\"color\",\"best tops-av274-red\"]]]",
+   "[\"B09PLK29WK\",[[\"color\",\"best tops-av315-red\"]]]",
+   "[\"B09PLK6X1P\",[[\"color\",\"best tops-av308-red5\"]]]",
+   "[\"B09PMW2S1F\",[[\"color\",\"best tops-av408-red\"]]]",
+   "[\"B09PMXGKV3\",[[\"color\",\"best tops-av349-red\"]]]",
+   "[\"B09PNNYLVK\",[[\"color\",\"watermelon red 01\"]]]",
+   "[\"B09PXX3FQC\",[[\"color\",\"red\"]]]",
+   "[\"B09PY5F6PN\",[[\"color\",\"facai-bd0455-watermelon red\"]]]",
+   "[\"B09PYDFR2T\",[[\"color\",\"wine red\"]]]",
+   "[\"B09Q34G29M\",[[\"color\",\"wine red\"]]]",
+   "[\"B09Q6DDHC7\",[[\"color\",\"tops 408 red\"]]]",
+   "[\"B09Q8FZ9ZT\",[[\"color\",\"21ab - zp5 red\"]]]",
+   "[\"B09Q92V76D\",[[\"color\",\"b1-sleeveless-red\"]]]",
+   "[\"B09QFHH6H6\",[[\"color\",\"tops 403 red\"]]]",
+   "[\"B09QFZ7PZ2\",[[\"color\",\"#18 cute summer tops red\"]]]",
+   "[\"B09QFZCFC1\",[[\"color\",\"tanks-a212-red\"]]]",
+   "[\"B09QFZRZ73\",[[\"color\",\"tanks-a282-red\"]]]",
+   "[\"B09QHJT7V4\",[[\"color\",\"red\"]]]",
+   "[\"B09QHXTGV6\",[[\"color\",\"b1-watermelon red\"]]]",
+   "[\"B09QHYY2B4\",[[\"color\",\"a1-cold shoulder-red\"]]]",
+   "[\"B09QJJFJ1N\",[[\"color\",\"syx-a07-red\"]]]",
+   "[\"B09QKXQXTW\",[[\"color\",\"women blouse a01 red\"]]]",
+   "[\"B09QKY5LBG\",[[\"color\",\"red\"]]]",
+   "[\"B09QL7K813\",[[\"color\",\"facai-a137-watermelon red\"]]]",
+   "[\"B09QMF764R\",[[\"color\",\"ts1016 wine red\"]]]",
+   "[\"B09QSVC831\",[[\"color\",\"b2-vest-red\"]]]",
+   "[\"B09QSW65KJ\",[[\"color\",\"c3-shoulder-red\"]]]",
+   "[\"B09QW7PDYN\",[[\"color\",\"hndj-a186-a01red\"]]]",
+   "[\"B09QXFCY92\",[[\"color\",\"women tops a04 red\"]]]",
+   "[\"B09R7JTV9Q\",[[\"color\",\"gxfc-s004-red\"]]]",
+   "[\"B09R7K14NB\",[[\"color\",\"gxfc-s193-red\"]]]",
+   "[\"B09R7X9RHD\",[[\"color\",\"gxfc-s270-red\"]]]",
+   "[\"B09R7Y3F4G\",[[\"color\",\"gxfc-s225-red\"]]]",
+   "[\"B09R9BZS29\",[[\"color\",\"c1-red\"]]]",
+   "[\"B09RB5PF8L\",[[\"color\",\"gxfc-s396-red\"]]]",
+   "[\"B09RB6DP69\",[[\"color\",\"gxfc-s401-red\"]]]",
+   "[\"B09RB6DP6G\",[[\"color\",\"gxfc-s550-red\"]]]",
+   "[\"B09RB79N59\",[[\"color\",\"gwc-a186-watermelon red\"]]]",
+   "[\"B09RB87FDB\",[[\"color\",\"gwc-a133-watermelon red\"]]]",
+   "[\"B09RF41QPF\",[[\"color\",\"causal shirts-a005-red\"]]]",
+   "[\"B09RFF2F6T\",[[\"color\",\"a04 cute t shirts for girls red\"]]]",
+   "[\"B09RH7JRNM\",[[\"color\",\"c-red\"]]]",
+   "[\"B09RMDDS4Z\",[[\"color\",\"\u720653 - red\"]]]",
+   "[\"B09RP6BRTG\",[[\"color\",\"fcbf-a003-wine red\"]]]",
+   "[\"B09RQHHJB5\",[[\"color\",\"yffs-a186-red\"]]]",
+   "[\"B09RQJJQP8\",[[\"color\",\"yffs-a226-red\"]]]",
+   "[\"B09RWNY5M1\",[[\"color\",\"a04 rock graphic tees red\"]]]",
+   "[\"B09S3NCL25\",[[\"color\",\"1-watermelon red\"]]]",
+   "[\"B09S5XQTTN\",[[\"color\",\"womens tops 01 red\"]]]"
+  ],
+  "hash": "4af0a79a7c634ee346eb091a7329f388"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "8402376b426f61f8",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's bodysuit tops instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "d9a633f6a08b34d0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's bodysuit tops instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "6d351e60913c69f6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be laundry bag."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "98c68fd0c525b433",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be sandals women."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a04c11e3989e85ec",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ce1e8d06f3899d8f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cac19e1d2c7d52bd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #03 hoodies for women pullover blue instead of multicoloured plants."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "fe8d1fca787a4aa0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01-purple instead of multicoloured plants."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

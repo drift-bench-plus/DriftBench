@@ -1,0 +1,865 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B077T3SP3V",
+    "cluster": "beverages",
+    "name": "Wyler’s Light Singles-To-Go Sugar Free Drink Mix, Cherry, 8 CT Per Box (Pack of 1)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "fruit punch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0d38337340cca11181055d15b608b268",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00D3A828Q\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B077T3SP3V\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B07PGLHYB6\",[[\"flavor\",\"fruit punch\"]]]",
+     "[\"B07SXBW9ZC\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B086XHTQMS\",[[\"flavor name\",\"fruit-puch\"]]]",
+     "[\"B08L9S4K39\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B099H8D9XZ\",[[\"flavor name\",\"fruit-puch\"]]]",
+     "[\"B09GK16X81\",[[\"flavor name\",\"fruit punch\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "2398dab1f90987e2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B077T3SP3V",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "fruit punch"
+     ],
+     "name": "Wyler’s Light Singles-To-Go Sugar Free Drink Mix, Cherry, 8 CT Per Box (Pack of 1)",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes",
+     "query": "beverages"
+    }
+   },
+   "source_record": "a25c9d6c424dcb8b",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B01DQ8VYHA",
+    "cluster": "beverages",
+    "name": "Kool-Aid Unsweetened Drink Mixes, 12-pc. Assortment",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes"
+   },
+   "bound_slots": [
+    "attr:source vitamin",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:source vitamin",
+     "=",
+     "source vitamin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2e5db765d6235b814ccb650f837f0fd5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0000GJ7DK\",[]]",
+     "[\"B0010XPXJO\",[]]",
+     "[\"B0010XRUOK\",[]]",
+     "[\"B0010XRUV8\",[]]",
+     "[\"B003GADAN0\",[]]",
+     "[\"B003L2EYWY\",[]]",
+     "[\"B0040R91DQ\",[]]",
+     "[\"B008JA73RG\",[]]",
+     "[\"B00AAV8SOY\",[]]",
+     "[\"B00D5FSLE4\",[]]",
+     "[\"B00D5FSLNK\",[]]",
+     "[\"B00D5FSNNI\",[]]",
+     "[\"B00DT54U7M\",[]]",
+     "[\"B00F88MA02\",[]]",
+     "[\"B00IIWPMHS\",[]]",
+     "[\"B00JD792DM\",[]]",
+     "[\"B00QF2L1PU\",[]]",
+     "[\"B00QUEP5AA\",[]]",
+     "[\"B00RB8Q8TQ\",[]]",
+     "[\"B00V994MAK\",[]]",
+     "[\"B01BO1STRE\",[]]",
+     "[\"B01DQ8VYHA\",[]]",
+     "[\"B01FISY1D0\",[]]",
+     "[\"B01FISY5VS\",[]]",
+     "[\"B01KIGD4EE\",[]]",
+     "[\"B077T3SP3V\",[]]",
+     "[\"B07LC819M5\",[]]",
+     "[\"B07R6Y3Y3R\",[]]",
+     "[\"B07WS1NPBF\",[]]",
+     "[\"B07X4YMXP4\",[]]",
+     "[\"B07X512KZT\",[]]",
+     "[\"B07YBKK1ZH\",[]]",
+     "[\"B07YBKLX1V\",[]]",
+     "[\"B07YBKXWRC\",[]]",
+     "[\"B07YBL7Y7X\",[]]",
+     "[\"B083X82WPD\",[]]",
+     "[\"B083X8316R\",[]]",
+     "[\"B083XFGLB3\",[]]",
+     "[\"B083XK3VQX\",[]]",
+     "[\"B083XNN3N4\",[]]",
+     "[\"B083XPRHHJ\",[]]",
+     "[\"B086M9LK7F\",[]]",
+     "[\"B08XY5SH65\",[]]",
+     "[\"B092MYHRL8\",[]]",
+     "[\"B0959BPZ13\",[]]",
+     "[\"B0959R6MCZ\",[]]",
+     "[\"B095X9K87M\",[]]",
+     "[\"B09BJYPMD5\",[]]",
+     "[\"B09BK2GKDL\",[]]",
+     "[\"B09D8MXL3Z\",[]]",
+     "[\"B09D8PZ66T\",[]]",
+     "[\"B09D8RFJSS\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "38b64bfd9d3bf2d4",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B01DQ8VYHA",
+     "attributes": [
+      "source vitamin"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Kool-Aid Unsweetened Drink Mixes, 12-pc. Assortment",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes",
+     "query": "beverages"
+    }
+   },
+   "source_record": "fb502ffe71333495",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GBGZZLC",
+    "cluster": "beverages",
+    "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:cane sugar",
+    "attr:certified organic",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:cane sugar",
+     "=",
+     "cane sugar"
+    ],
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "tulua apple cider vinegar lemon ginger"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "189478ac6848577fac020dc9ac047c90",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B078Y9KGCD\",[[\"flavor name\",\"lemon lime\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "bdef8c355e557c44",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B07GBGZZLC",
+     "attributes": [
+      "cane sugar",
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [
+      "tulua apple cider vinegar lemon ginger"
+     ],
+     "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GBGZZLC",
+    "cluster": "beverages",
+    "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "attr:natural flavors",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "attr:natural flavors",
+     "=",
+     "natural flavors"
+    ],
+    [
+     "option:0",
+     "=",
+     "tulua apple cider vinegar lemon ginger"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "189478ac6848577fac020dc9ac047c90",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B078Y9KGCD\",[[\"flavor name\",\"lemon lime\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f18b778e27fff9a6",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B07GBGZZLC",
+     "attributes": [
+      "certified organic",
+      "natural flavors"
+     ],
+     "category": "",
+     "goal_options": [
+      "tulua apple cider vinegar lemon ginger"
+     ],
+     "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GBGZZLC",
+    "cluster": "beverages",
+    "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "699c13cb2d30995a98bfd1723ce640dc",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000SATFY4\",[]]",
+     "[\"B001BOIVZA\",[]]",
+     "[\"B001M1IP5S\",[]]",
+     "[\"B002GPG6BE\",[]]",
+     "[\"B007PY8M9A\",[]]",
+     "[\"B00F0X0IFY\",[]]",
+     "[\"B00I5LNILE\",[]]",
+     "[\"B00IB7DSCG\",[]]",
+     "[\"B00KPTPIJO\",[]]",
+     "[\"B012H64TTM\",[]]",
+     "[\"B01JQNKV64\",[]]",
+     "[\"B071P6J1ZR\",[]]",
+     "[\"B07238WLLR\",[]]",
+     "[\"B07238WLLT\",[]]",
+     "[\"B074JGJ6VC\",[]]",
+     "[\"B075BLLVWZ\",[]]",
+     "[\"B076574KNN\",[]]",
+     "[\"B07849NVP7\",[]]",
+     "[\"B078J65L6B\",[]]",
+     "[\"B078Y9KGCD\",[]]",
+     "[\"B07C63XYP4\",[]]",
+     "[\"B07C995YRF\",[]]",
+     "[\"B07GBGZZLC\",[]]",
+     "[\"B07RW7HMV8\",[]]",
+     "[\"B07S6ZTGLY\",[]]",
+     "[\"B07W5B75DG\",[]]",
+     "[\"B08372M3FS\",[]]",
+     "[\"B0868W9HCF\",[]]",
+     "[\"B086H2ZVLG\",[]]",
+     "[\"B0876Y1TLR\",[]]",
+     "[\"B0876YNQ47\",[]]",
+     "[\"B087DWXS5X\",[]]",
+     "[\"B087F8QWYV\",[]]",
+     "[\"B087MBRQ51\",[]]",
+     "[\"B087NYMZ9R\",[]]",
+     "[\"B089T68GG2\",[]]",
+     "[\"B08BDQ38JZ\",[]]",
+     "[\"B08BPVVZR5\",[]]",
+     "[\"B08DL6W9QK\",[]]",
+     "[\"B08DYDRTV1\",[]]",
+     "[\"B08FV8RR9Y\",[]]",
+     "[\"B08FVMWDXB\",[]]",
+     "[\"B08GP451PQ\",[]]",
+     "[\"B08HTR6M9M\",[]]",
+     "[\"B08JRBKJ6Z\",[]]",
+     "[\"B08KWPBNCY\",[]]",
+     "[\"B08LP34HMM\",[]]",
+     "[\"B08LZQ71Q2\",[]]",
+     "[\"B08MWW7WZP\",[]]",
+     "[\"B08P91FV3F\",[]]",
+     "[\"B08QW6W2FJ\",[]]",
+     "[\"B08XZXPK93\",[]]",
+     "[\"B08YHRY6PJ\",[]]",
+     "[\"B091D2DLHC\",[]]",
+     "[\"B092VDXNXZ\",[]]",
+     "[\"B0936QYZ8K\",[]]",
+     "[\"B0947CW7K6\",[]]",
+     "[\"B09489FS9S\",[]]",
+     "[\"B099833J3N\",[]]",
+     "[\"B09BK4W8GB\",[]]",
+     "[\"B09FPZ64XV\",[]]",
+     "[\"B09H3N2S1J\",[]]",
+     "[\"B09HBZR8QM\",[]]",
+     "[\"B09PTMLSSZ\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "09e1f35be0713809",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B07GBGZZLC",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GBGZZLC",
+    "cluster": "beverages",
+    "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "tulua apple cider vinegar lemon ginger"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "f89fb5f1d6d6eeb53e79d43a5650c276",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B007PY8M9A\",[[\"flavor name\",\"lemon lime\"]]]",
+     "[\"B078Y9KGCD\",[[\"flavor name\",\"lemon lime\"]]]",
+     "[\"B07C63XYP4\",[[\"flavor name\",\"lemon-lime\"]]]",
+     "[\"B07GBGZZLC\",[[\"flavor\",\"apple cider vinegar lemon ginger\"]]]",
+     "[\"B07S6ZTGLY\",[[\"flavor name\",\"lemon lime\"]]]",
+     "[\"B087MBRQ51\",[[\"flavor name\",\"ginger lemon\"]]]",
+     "[\"B088ZQRPM8\",[[\"flavor name\",\"ginger lemon\"]]]",
+     "[\"B08DYDRTV1\",[[\"flavor name\",\"ginger lemonade\"]]]",
+     "[\"B08FV8RR9Y\",[[\"flavor name\",\"lemon\"]]]",
+     "[\"B08HTR6M9M\",[[\"flavor name\",\"ginger lemon\"]]]",
+     "[\"B08LP34HMM\",[[\"flavor name\",\"ginger lemon honey (pack of 2)\"]]]",
+     "[\"B08XZXPK93\",[[\"flavor name\",\"lemon pepper chicken\"]]]",
+     "[\"B0936QYZ8K\",[[\"flavor name\",\"lemon\"]]]",
+     "[\"B096D7BB3P\",[[\"flavor name\",\"coconut lemon water - 12 pack\"]]]",
+     "[\"B09BK4W8GB\",[[\"flavor name\",\"ginger lemon\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "af12f9b9de3bb07b",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B07GBGZZLC",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [
+      "tulua apple cider vinegar lemon ginger"
+     ],
+     "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+     "price_upper": 1000000,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GBGZZLC",
+    "cluster": "beverages",
+    "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "0.23 ounce (pack of 75)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0af90424cd64843220aa55181dd174c8",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00F0X0IFY\",[[\"size\",\"12 ounce (pack of 12)\"]]]",
+     "[\"B087F8QWYV\",[[\"size\",\"2.5 ounce (pack of 12)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "681e7aa62244ea97",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B07GBGZZLC",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [
+      "0.23 ounce (pack of 75)"
+     ],
+     "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GBGZZLC",
+    "cluster": "beverages",
+    "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "0.21 ounce (pack of 10)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0e0013db63788690a829b110d694fd39",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00F0X0IFY\",[[\"size\",\"12 ounce (pack of 12)\"]]]",
+     "[\"B078Y9KGCD\",[[\"size\",\"10 ounce (pack of 12)\"]]]",
+     "[\"B07GBGZZLC\",[[\"size\",\"2 ounce (pack of 12)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7fab184d8b90ce08",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B07GBGZZLC",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [
+      "0.21 ounce (pack of 10)"
+     ],
+     "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B077T3SP3V",
+     "cluster": "beverages",
+     "name": "Wyler’s Light Singles-To-Go Sugar Free Drink Mix, Cherry, 8 CT Per Box (Pack of 1)",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes"
+    }
+   },
+   "dst": "2398dab1f90987e2",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "a25c9d6c424dcb8b",
+   "src": "9abc84ff04905971"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B01DQ8VYHA",
+     "cluster": "beverages",
+     "name": "Kool-Aid Unsweetened Drink Mixes, 12-pc. Assortment",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes"
+    }
+   },
+   "dst": "38b64bfd9d3bf2d4",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "fb502ffe71333495",
+   "src": "9abc84ff04905971"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:cane sugar",
+      "=",
+      "cane sugar"
+     ]
+    ]
+   },
+   "dst": "bdef8c355e557c44",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "9abc84ff04905971"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:natural flavors",
+      "=",
+      "natural flavors"
+     ]
+    ]
+   },
+   "dst": "f18b778e27fff9a6",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "9abc84ff04905971"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "tulua apple cider vinegar lemon ginger"
+     ]
+    ]
+   },
+   "dst": "09e1f35be0713809",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "9abc84ff04905971"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      60
+     ]
+    ]
+   },
+   "dst": "af12f9b9de3bb07b",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "9abc84ff04905971"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "tulua apple cider vinegar lemon ginger",
+      "0.23 ounce (pack of 75)"
+     ]
+    ]
+   },
+   "dst": "681e7aa62244ea97",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "9abc84ff04905971"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "tulua apple cider vinegar lemon ginger",
+      "0.21 ounce (pack of 10)"
+     ]
+    ]
+   },
+   "dst": "7fab184d8b90ce08",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "9abc84ff04905971"
+  }
+ ],
+ "env_id": "webshop_f88bf6b57df18466",
+ "env_spec": {
+  "cluster": "beverages",
+  "env_id": "webshop_f88bf6b57df18466",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B07GBGZZLC",
+   "cluster": "beverages",
+   "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+   "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+  },
+  "bound_slots": [
+   "attr:certified organic",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:certified organic",
+    "=",
+    "certified organic"
+   ],
+   [
+    "option:0",
+    "=",
+    "tulua apple cider vinegar lemon ginger"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "ground_truth": {
+   "hash": "b498997477baf2189a9bcf9d017cf856",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B007PY8M9A\",[[\"flavor name\",\"lemon lime\"]]]",
+    "[\"B078Y9KGCD\",[[\"flavor name\",\"lemon lime\"]]]",
+    "[\"B07C63XYP4\",[[\"flavor name\",\"lemon-lime\"]]]",
+    "[\"B07GBGZZLC\",[[\"flavor\",\"apple cider vinegar lemon ginger\"]]]",
+    "[\"B07S6ZTGLY\",[[\"flavor name\",\"lemon lime\"]]]",
+    "[\"B087MBRQ51\",[[\"flavor name\",\"ginger lemon\"]]]",
+    "[\"B08DYDRTV1\",[[\"flavor name\",\"ginger lemonade\"]]]",
+    "[\"B08FV8RR9Y\",[[\"flavor name\",\"lemon\"]]]",
+    "[\"B08HTR6M9M\",[[\"flavor name\",\"ginger lemon\"]]]",
+    "[\"B08LP34HMM\",[[\"flavor name\",\"ginger lemon honey (pack of 2)\"]]]",
+    "[\"B08XZXPK93\",[[\"flavor name\",\"lemon pepper chicken\"]]]",
+    "[\"B0936QYZ8K\",[[\"flavor name\",\"lemon\"]]]",
+    "[\"B09BK4W8GB\",[[\"flavor name\",\"ginger lemon\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "9abc84ff04905971",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "beverages",
+   "goal": {
+    "asin": "B07GBGZZLC",
+    "attributes": [
+     "certified organic"
+    ],
+    "category": "",
+    "goal_options": [
+     "tulua apple cider vinegar lemon ginger"
+    ],
+    "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+    "price_upper": 60,
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+    "query": "beverages"
+   }
+  },
+  "source_record": "83a88c524486c55d",
+  "unbound_slots": [
+   "attr:cane sugar",
+   "attr:natural flavors",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "d8635b8c1de27ad3"
+}

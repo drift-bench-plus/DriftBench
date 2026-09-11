@@ -1,0 +1,148 @@
+{
+ "sample_id": "119d4f345f4e878a__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "119d4f345f4e878a",
+ "query": "I was walking my golden retriever puppy this morning and he ran right through a mud puddle, so I had to stop by the pet store on the way home to pick up a special oatmeal shampoo to get his fur clean. I also grabbed a new chew toy shaped like a rubber duck that he\u2019s been carrying around the house nonstop, he even tried to bring it with him when I went to make coffee a little while ago. I was planning to video call my cousin who just moved to Tokyo to show her the silly thing, but I\u2019m having a bunch of issues with my phone service right now. Airplane mode is stuck on, my network preference settings seem to be messed up, WiFi calling isn\u2019t working at all, the messaging app I use won\u2019t access storage, mobile data is turned off but I can\u2019t toggle it back on, I got an alert that I exceeded my data usage limit, my phone keeps saying there\u2019s no SIM card detected even though I haven\u2019t taken it out, and I\u2019m currently traveling abroad but I forgot to turn roaming on before I left so I can\u2019t get any signal at all.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever puppy this morning and he ran right through a mud puddle, so I had to stop by the pet store on the way home to pick up a special oatmeal shampoo to get his fur clean. I also grabbed a new chew toy shaped like a rubber duck that he\u2019s been carrying around the house nonstop, he even tried to bring it with him when I went to make coffee a little while ago. I was planning to video call my cousin who just moved to Tokyo to show her the silly thing, but I\u2019m having a bunch of issues with my phone service right now.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:bad_wifi_calling",
+   "fault:break_app_storage_permission",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

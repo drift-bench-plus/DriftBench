@@ -1,0 +1,186 @@
+{
+ "adapter": "webshop",
+ "cluster": "lenses",
+ "fidelity_notes": [],
+ "goal_idx": 224,
+ "ground_truth": {
+  "cardinality": 12,
+  "hash": "2553f4ecacfc598d18803c55ac9840d1",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08PB4N723\",[[\"color\",\"colorful\"]]]",
+   "[\"B08V4ZK45W\",[[\"color\",\"colorful\"]]]",
+   "[\"B099QRPR3R\",[[\"color\",\"colorful\"]]]",
+   "[\"B09DKBFXRR\",[[\"color\",\"colorful\"]]]",
+   "[\"B09DSHDKC5\",[[\"color\",\"colorful\"]]]",
+   "[\"B09F9K2WNC\",[[\"color\",\"colorful+colorful\"]]]",
+   "[\"B09F9LG4R8\",[[\"color\",\"colorful+colorful\"]]]",
+   "[\"B09FF7TJ67\",[[\"color\",\"colorful\"]]]",
+   "[\"B09HH4FZG9\",[[\"color\",\"colorful\"]]]",
+   "[\"B09K3QVXYC\",[[\"color\",\"colorful\"]]]",
+   "[\"B09KG97T9N\",[[\"color\",\"colorful2\"]]]",
+   "[\"B09KRBR7X2\",[[\"color\",\"colorful\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy install",
+    "=",
+    "easy install"
+   ],
+   [
+    "option:0",
+    "=",
+    "colorful2"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "a30a8a150afddc1b"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy install",
+     "=",
+     "easy install"
+    ],
+    [
+     "option:0",
+     "=",
+     "colorful3"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy install",
+   "price_upper"
+  ],
+  "spec_id": "16de5ddaa69323c6",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "option:0",
+    "colorful2",
+    "colorful3"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for lenses that are easy to install, come in the colorful3 style, and cost no more than $20.",
+ "render_attempts": 3,
+ "sample_id": "0e75ccd3994b39d7",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the lenses instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1517a244d9504ae9"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the lenses instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "85f39e39db8e90bf"
+  },
+  {
+   "announcement": "Also, it needs to be mobile phone.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0bad715d11460afe"
+  },
+  {
+   "announcement": "Also, it needs to be cell phone.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fb6ba468d36b1eb1"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7c9aeb5ac88b2c30"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e5da61292c368f52"
+  },
+  {
+   "announcement": "Actually, make it 1.12-lfgm-1222 instead of colorful2.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0c38e02fc0cf18d7"
+  },
+  {
+   "announcement": "Actually, make it 12 | screen protector*4+lens protector*2 instead of colorful2.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5e8b176f43c14dc1"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 12,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 12,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am lookong for a colorful2 for screen protectors wihich is easy ti install",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "ff38c7a67b21dab5",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

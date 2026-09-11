@@ -1,0 +1,207 @@
+{
+ "adapter": "webshop",
+ "cluster": "body care",
+ "fidelity_notes": [],
+ "goal_idx": 10,
+ "ground_truth": {
+  "cardinality": 9,
+  "hash": "1dfd531d953bd15d0f3978c308a1cdf6",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00OQ1ZKO0\",[[\"scent\",\"fresh\"]]]",
+   "[\"B07NNXYHNM\",[[\"scent\",\"invigorating ocean-fresh fragrance\"]]]",
+   "[\"B07TFHZT47\",[[\"scent\",\"fresh sea salt\"]]]",
+   "[\"B0837311RV\",[[\"scent\",\"active + fresh\"]]]",
+   "[\"B086K1S96X\",[[\"scent\",\"extra fresh\"]]]",
+   "[\"B0875R9D9Q\",[[\"style\",\"fresh and fruity\"]]]",
+   "[\"B087Y28XLM\",[[\"scent\",\"fresh\"]]]",
+   "[\"B08DDYN4GB\",[[\"style\",\"fresh fusion\"]]]",
+   "[\"B08ZG91F9V\",[[\"scent\",\"fresh pomelo\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:dry skin",
+    "=",
+    "dry skin"
+   ],
+   [
+    "option:0",
+    "=",
+    "fresh"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "e528bc01f86f4414"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "fresh"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "with a fresh scent"
+   }
+  ],
+  "attempt": 3,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "fresh"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   [
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:dry skin",
+   "price_upper"
+  ],
+  "spec_id": "0067a9b85aedf2b4",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a body lotion for dry skin and a small travel-sized lip balm with a fresh scent under $20 total.",
+ "render_attempts": 3,
+ "sample_id": "ca678a2f591416f8",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the body care instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "44da8667d447c513"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the body care instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b7549c1d6038c0f0"
+  },
+  {
+   "announcement": "Also, it needs to be gluten free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "472cbbfd796b790d"
+  },
+  {
+   "announcement": "Also, it needs to be clinically proven.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "89313d391a559d1d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6aa9bbbf0d6a16e5"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b7898de2d8a7134d"
+  },
+  {
+   "announcement": "Actually, make it 101.2 ounce instead of fresh.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "887ef28075d55a56"
+  },
+  {
+   "announcement": "Actually, make it 12 fl oz (pack of 1) instead of fresh.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c5cf16a76ef4d72c"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   9,
+   454
+  ],
+  "rule": "ambiguous",
+  "true_card": 9,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking fresh scent body lotion for dry skin.",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "6a8dd7045af7540c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

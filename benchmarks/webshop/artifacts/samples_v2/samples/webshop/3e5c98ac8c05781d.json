@@ -1,0 +1,183 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's sandals",
+ "fidelity_notes": [],
+ "goal_idx": 419,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "3f208400ceb6621b1d071c0ab7b4e3ba",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B085LSYPYK\",[[\"color\",\"dark clay\"]]]",
+   "[\"B08C2YHSY3\",[[\"color\",\"dark sand nubuck\"]]]",
+   "[\"B08CDQMTTS\",[[\"color\",\"dark olive\"]]]",
+   "[\"B08CDS4MD1\",[[\"color\",\"belay dark olive multi\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:ankle strap",
+    "=",
+    "ankle strap"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark clay"
+   ],
+   [
+    "price_upper",
+    "<=",
+    110
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "9f0661ffef164eff"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 4,
+  "components": [
+   "irrelevant_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [
+   {
+    "condition": [
+     "attr:detachable shoehorn",
+     "=",
+     "detachable shoehorn"
+    ],
+    "text": "detachable shoehorn"
+   }
+  ],
+  "family": "parameter",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ankle strap",
+     "=",
+     "ankle strap"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark clay"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ],
+    [
+     "attr:detachable shoehorn",
+     "=",
+     "detachable shoehorn"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:ankle strap",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "6c7e6b332c05eb21",
+  "strategy_id": "irrelevant_information",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for men’s sandals with an ankle strap, in dark clay, under $110, and they need to come with a detachable shoehorn.",
+ "render_attempts": 4,
+ "sample_id": "3e5c98ac8c05781d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's sandals instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "309bb9a748809fa2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's sandals instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "8c9a80f8d507cbca"
+  },
+  {
+   "announcement": "Also, it needs to be price_band under_100.",
+   "gt_moved": false,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "89cd36c85f99b02d"
+  },
+  {
+   "announcement": "Also, it needs to be rubber outsole.",
+   "gt_moved": false,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a8bea1071004ee3e"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "581f41bcbfe7342d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a86f3722e8d71f27"
+  },
+  {
+   "announcement": "Actually, make it 10 narrow instead of dark clay.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3c0f8f1546a7ff17"
+  },
+  {
+   "announcement": "Actually, make it 1-1.5 big kid instead of dark clay.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c1be8db284c11098"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "extras",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for men's dark clay color ankle strap sandals.",
+ "split": "test",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "tree_id": "c424f4486fa5b143",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,321 @@
+{
+ "sample_id": "4ff81e6422af76dc",
+ "tree_id": "9cfee87f9d3a9079",
+ "adapter": "webshop",
+ "cluster": "women's shorts",
+ "goal_idx": 189,
+ "split": "test",
+ "source_instruction": "i'm looking for high waisted denim shorts distressed jeans for women.",
+ "query": "Ugh, you won\u2019t believe the chaos that went down at my community garden plot this morning! I showed up right at 8 a.m. with my little trowel and a bag of sunflower seeds I\u2019d saved from last year\u2019s blooms, only to find that the group of baby bunnies that\u2019s been hanging around the edge of the fence had chewed straight through the twine trellis I built for my sugar snap peas. Half the vines were flopped over in the dirt, and one of the bunnies was just sitting there munching on a pea tendril like it owned the place, twitching its little nose at me when I tried to shoo it off. I spent almost an hour propping the vines back up, rigging a new trellis out of extra bamboo stakes I had stashed in my car, and leaving a little bowl of leftover carrot peels by the fence to hopefully distract them from my plants for the rest of the week.\nHey, I\u2019m looking through the women\u2019s shorts section right now for a pair I can wear to my weekend picnic next Saturday! I need them to be slim fit, size large, with a snap closure, and I\u2019d really like them to have reinforced belt loops too, that\u2019s a must-have for me. I don\u2019t want to overspend, so just show me options at a good price, yeah? Wait, hold on, no, actually make sure they don\u2019t have any weird scratchy tags on the inside either, I hate those. Oh right, and they should be casual enough to throw on with a plain tee when I run errands too.",
+ "strategy_ids": [
+  "vagueness_subjectivity",
+  "irrelevant_information",
+  "contextual_irrelevance",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "vagueness_subjectivity+irrelevant_information+contextual_irrelevance+factual_error",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "vagueness_subjectivity",
+   "irrelevant_information",
+   "contextual_irrelevance",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "factual_error": "attr:button closure"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:button closure",
+    "button closure",
+    "snap closure"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "have reinforced belt loops too, that's a must-have for me",
+    "condition": [
+     "attr:belt loops",
+     "=",
+     "reinforced"
+    ]
+   },
+   {
+    "text": "make sure they don't have any weird scratchy tags on the inside either",
+    "condition": [
+     "attr:tags",
+     "=",
+     "no scratchy inside tags"
+    ]
+   },
+   {
+    "text": "they should be casual enough to throw on with a plain tee when I run errands too",
+    "condition": [
+     "attr:style",
+     "=",
+     "casual"
+    ]
+   },
+   {
+    "text": "I can wear to my weekend picnic next Saturday",
+    "condition": null
+   },
+   {
+    "text": "just show me options at a good price",
+    "condition": null
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, you won\u2019t believe the chaos that went down at my community garden plot this morning! I showed up right at 8 a.m. with my little trowel and a bag of sunflower seeds I\u2019d saved from last year\u2019s blooms, only to find that the group of baby bunnies that\u2019s been hanging around the edge of the fence had chewed straight through the twine trellis I built for my sugar snap peas. Half the vines were flopped over in the dirt, and one of the bunnies was just sitting there munching on a pea tendril like it owned the place, twitching its little nose at me when I tried to shoo it off. I spent almost an hour propping the vines back up, rigging a new trellis out of extra bamboo stakes I had stashed in my car, and leaving a little bowl of leftover carrot peels by the fence to hopefully distract them from my plants for the rest of the week.",
+  "retained": [
+   "attr:slim fit",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:button closure",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:button closure",
+     "=",
+     "snap closure"
+    ],
+    [
+     "attr:slim fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "large"
+    ],
+    [
+     "attr:belt loops",
+     "=",
+     "reinforced"
+    ],
+    [
+     "attr:tags",
+     "=",
+     "no scratchy inside tags"
+    ],
+    [
+     "attr:style",
+     "=",
+     "casual"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "d9f622088ce1341a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 50,
+  "lit_card": 0,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 65,
+    "true_card": 50,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 50,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 50,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "aa65457558c46e24",
+  "conditions": [
+   [
+    "attr:button closure",
+    "=",
+    "button closure"
+   ],
+   [
+    "attr:slim fit",
+    "=",
+    "slim fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:button closure",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 50,
+  "value": [
+   "[\"B072BYKXHD\",[[\"size\",\"large\"]]]",
+   "[\"B07BHG46RP\",[[\"size\",\"large\"]]]",
+   "[\"B07KL4BMJG\",[[\"size\",\"large\"]]]",
+   "[\"B07PYTZ7Z5\",[[\"size\",\"large\"]]]",
+   "[\"B07PYZ9RN7\",[[\"size\",\"large\"]]]",
+   "[\"B07R8KC9MM\",[[\"size\",\"large\"]]]",
+   "[\"B07RPNJXQQ\",[[\"size\",\"large\"]]]",
+   "[\"B082TKHMVN\",[[\"size\",\"large\"]]]",
+   "[\"B086JQZTJR\",[[\"size\",\"large\"]]]",
+   "[\"B089DVSFXZ\",[[\"size\",\"x-large\"]]]",
+   "[\"B08BBY1QSC\",[[\"size\",\"large\"]]]",
+   "[\"B08BR2QXF4\",[[\"size\",\"large\"]]]",
+   "[\"B08MJW1K9B\",[[\"size\",\"large\"]]]",
+   "[\"B08Q77RYN8\",[[\"size\",\"large\"]]]",
+   "[\"B08RB6R2Q9\",[[\"size\",\"large\"]]]",
+   "[\"B08SBM9636\",[[\"size\",\"large\"]]]",
+   "[\"B08SBMGKQD\",[[\"size\",\"large\"]]]",
+   "[\"B08SJ7C9VW\",[[\"size\",\"large\"]]]",
+   "[\"B08XMQXW7K\",[[\"size\",\"x-large\"]]]",
+   "[\"B08ZXMF6HN\",[[\"size\",\"xx-large\"]]]",
+   "[\"B091CTCMFQ\",[[\"size\",\"large\"]]]",
+   "[\"B091FGZY28\",[[\"size\",\"large\"]]]",
+   "[\"B091L8MDZZ\",[[\"size\",\"large\"]]]",
+   "[\"B0925SJJD3\",[[\"size\",\"large\"]]]",
+   "[\"B093H9TCF8\",[[\"size\",\"large\"]]]",
+   "[\"B096LQSTVM\",[[\"size\",\"large\"]]]",
+   "[\"B096LRPJYR\",[[\"size\",\"large\"]]]",
+   "[\"B096LRWC7X\",[[\"size\",\"large\"]]]",
+   "[\"B096S435NG\",[[\"size\",\"large\"]]]",
+   "[\"B096SNC5DJ\",[[\"size\",\"large\"]]]",
+   "[\"B0976T9DY8\",[[\"size\",\"large\"]]]",
+   "[\"B097HMYRFM\",[[\"size\",\"large\"]]]",
+   "[\"B097HN61Y3\",[[\"size\",\"large\"]]]",
+   "[\"B097N7CMV8\",[[\"size\",\"large\"]]]",
+   "[\"B097N8C2RW\",[[\"size\",\"large\"]]]",
+   "[\"B097NFY74J\",[[\"size\",\"large\"]]]",
+   "[\"B098PXYQK8\",[[\"size\",\"large\"]]]",
+   "[\"B09F5Q16WG\",[[\"size\",\"large\"]]]",
+   "[\"B09KRVBSG6\",[[\"size\",\"large\"]]]",
+   "[\"B09NR5SH6C\",[[\"size\",\"large\"]]]",
+   "[\"B09PZYPVP7\",[[\"size\",\"large\"]]]",
+   "[\"B09Q3KJKW1\",[[\"size\",\"large\"]]]",
+   "[\"B09QFVG8P6\",[[\"size\",\"large\"]]]",
+   "[\"B09QFX2G29\",[[\"size\",\"large\"]]]",
+   "[\"B09QKBR7LG\",[[\"size\",\"large\"]]]",
+   "[\"B09QL3D2HD\",[[\"size\",\"large\"]]]",
+   "[\"B09RZVC64G\",[[\"size\",\"large\"]]]",
+   "[\"B09SGG1PSK\",[[\"size\",\"large\"]]]",
+   "[\"B09STMDJ8J\",[[\"size\",\"large\"]]]",
+   "[\"B09SYKXKP4\",[[\"size\",\"large\"]]]"
+  ],
+  "hash": "287d099a552a7d970f3873cf379e6c30"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "b53410b3de234fbb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f908266184f596e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "033af430dd5e19f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be relaxed fit."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9cb85c427584c708",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cargo pants."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2adecee36a55cdcc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "501a949367f70ba5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4b8fc187311d922f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01 beige instead of large."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c11ca83c08dd730e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #03 gray instead of large."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

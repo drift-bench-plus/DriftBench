@@ -1,0 +1,82 @@
+{
+ "sample_id": "9cb3234a3d4555a4__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "9cb3234a3d4555a4",
+ "query": "I was walking around the city center earlier and tried the local matcha latte from that little corner shop everyone posts about, it\u2019s so creamy and not bitter at all, I even picked up a small tin to bring back home for my mom. On the way back to my hotel I stopped at a street market and got a hand-carved wooden keychain that has the city\u2019s skyline on it, it\u2019s such a nice little souvenir. I was just about to text my friend a photo of it when I realized I can\u2019t get any mobile data or send any texts at all right now, I have airplane mode turned on and I\u2019m abroad with roaming turned off, can you help me figure out why my mobile service isn\u2019t working?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking around the city center earlier and tried the local matcha latte from that little corner shop everyone posts about, it\u2019s so creamy and not bitter at all, I even picked up a small tin to bring back home for my mom. On the way back to my hotel I stopped at a street market and got a hand-carved wooden keychain that has the city\u2019s skyline on it, it\u2019s such a nice little souvenir.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

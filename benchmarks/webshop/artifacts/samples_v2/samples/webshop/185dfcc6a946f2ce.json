@@ -1,0 +1,247 @@
+{
+ "adapter": "webshop",
+ "cluster": "tripods & monopods",
+ "fidelity_notes": [],
+ "goal_idx": 355,
+ "ground_truth": {
+  "cardinality": 69,
+  "hash": "68a999caa57351ef46976c4633b6de3f",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00LEO51YQ\",[]]",
+   "[\"B00M17CYNG\",[]]",
+   "[\"B014EQFYE2\",[]]",
+   "[\"B074QRPJ5F\",[]]",
+   "[\"B075163951\",[]]",
+   "[\"B07MF1Z61X\",[]]",
+   "[\"B07PJ6RTHX\",[]]",
+   "[\"B07PK9Q627\",[]]",
+   "[\"B07QZY8Y4X\",[]]",
+   "[\"B081L9BGPT\",[]]",
+   "[\"B081PN7VDH\",[]]",
+   "[\"B0821GKMK2\",[]]",
+   "[\"B0821GTZVD\",[]]",
+   "[\"B084L1X9JT\",[]]",
+   "[\"B084MFQN85\",[]]",
+   "[\"B0876WQ9XT\",[]]",
+   "[\"B08FYN9TMC\",[]]",
+   "[\"B08FZDXY3R\",[]]",
+   "[\"B08GC7HZ4V\",[]]",
+   "[\"B08GCQS9GL\",[]]",
+   "[\"B08H8LZRJ8\",[]]",
+   "[\"B08HN63535\",[]]",
+   "[\"B08HV8Q9VV\",[]]",
+   "[\"B08HVDYN4S\",[]]",
+   "[\"B08HVGKQFQ\",[]]",
+   "[\"B08HVJ6R9T\",[]]",
+   "[\"B08HWNDKJY\",[]]",
+   "[\"B08HWR6C22\",[]]",
+   "[\"B08J3D287S\",[]]",
+   "[\"B08JCVG3CB\",[]]",
+   "[\"B08KD1974X\",[]]",
+   "[\"B08NXM2M7R\",[]]",
+   "[\"B08SQBGKZJ\",[]]",
+   "[\"B08SVRZQKS\",[]]",
+   "[\"B08SW9Y72X\",[]]",
+   "[\"B08T255P8L\",[]]",
+   "[\"B095W8ZNY5\",[]]",
+   "[\"B09699W3W9\",[]]",
+   "[\"B097RPV8G6\",[]]",
+   "[\"B097RQDY66\",[]]",
+   "[\"B097RQM4VG\",[]]",
+   "[\"B097RR276V\",[]]",
+   "[\"B0987J6TV8\",[]]",
+   "[\"B098956C15\",[]]",
+   "[\"B0989CY71R\",[]]",
+   "[\"B0989JPYNP\",[]]",
+   "[\"B098L1X519\",[]]",
+   "[\"B098P2LYP8\",[]]",
+   "[\"B098P4GFXK\",[]]",
+   "[\"B098P4XXL9\",[]]",
+   "[\"B0994SDJ3M\",[]]",
+   "[\"B099WDKTW7\",[]]",
+   "[\"B099WKXHK1\",[]]",
+   "[\"B09C2DPQKP\",[]]",
+   "[\"B09DT1VZNJ\",[]]",
+   "[\"B09FDXBVYF\",[]]",
+   "[\"B09H37W2H7\",[]]",
+   "[\"B09H59CSTC\",[]]",
+   "[\"B09HNDX66P\",[]]",
+   "[\"B09HNFC8BB\",[]]",
+   "[\"B09J2JXYJF\",[]]",
+   "[\"B09J39SZV2\",[]]",
+   "[\"B09J3VC7N8\",[]]",
+   "[\"B09JB1SLKQ\",[]]",
+   "[\"B09L5SHNQB\",[]]",
+   "[\"B09Q3KLC6S\",[]]",
+   "[\"B09Q3N3J87\",[]]",
+   "[\"B09RHYDLQL\",[]]",
+   "[\"B09SY8H9BW\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:carbon fiber",
+    "=",
+    "carbon fiber"
+   ],
+   [
+    "attr:easy carry",
+    "=",
+    "easy carry"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "75610cff0958fca6"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:carbon fiber",
+     "=",
+     "sturdy lightweight material"
+    ],
+    [
+     "attr:easy carry",
+     "=",
+     "easy carry"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:carbon fiber",
+     "carbon fiber"
+    ],
+    "alternative": [
+     "attr:carbon fiber",
+     "sturdy lightweight material"
+    ],
+    "condition": null,
+    "text": "carbon fiber tripods and monopods probably aren’t available in this section"
+   }
+  ],
+  "retained": [
+   "attr:carbon fiber",
+   "attr:easy carry",
+   "price_upper"
+  ],
+  "spec_id": "d5a28e24d639bcaf",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since carbon fiber tripods and monopods probably aren’t available in this section, could you find me an easy carry option under $120 that’s made of a sturdy lightweight material instead?",
+ "render_attempts": 2,
+ "sample_id": "185dfcc6a946f2ce",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the tripods & monopods instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5c672a673f0f31e4"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the tripods & monopods instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "eec093c597267088"
+  },
+  {
+   "announcement": "Also, it needs to be carrying case.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b4687b303f27bd6b"
+  },
+  {
+   "announcement": "Also, it needs to be phone holder.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ccca1543a52dbbf5"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cf653970add6536b"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e1a7d126a13d8635"
+  },
+  {
+   "announcement": "Actually, make it 30 instead of 120.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "788f1c7d8fa22e3e"
+  },
+  {
+   "announcement": "Actually, make it 40 instead of 120.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "997ddd069706d14c"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 69,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need an easy to carry tripod made of carbon fiber for my camera.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "8808708ed9611ef1",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

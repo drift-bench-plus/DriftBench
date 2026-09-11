@@ -1,0 +1,254 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's dress shirts",
+ "fidelity_notes": [],
+ "goal_idx": 261,
+ "ground_truth": {
+  "cardinality": 40,
+  "hash": "0a5d0b8656e2d245a3ed20379628bc12",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B001EJ5O16\",[[\"color\",\"black\"]]]",
+   "[\"B01K6M3K80\",[[\"color\",\"black\"]]]",
+   "[\"B07GV6W1ZJ\",[[\"color\",\"3# black\"]]]",
+   "[\"B07H5MY76F\",[[\"color\",\"za-black\"]]]",
+   "[\"B07V67FBVM\",[[\"color\",\"black\"]]]",
+   "[\"B07WMRKKYM\",[[\"color\",\"black104\"]]]",
+   "[\"B083DYT4TQ\",[[\"color\",\"#01black\"]]]",
+   "[\"B085VHPFRZ\",[[\"color\",\"black\"]]]",
+   "[\"B08HQVMZQB\",[[\"color\",\"short sleeve-black\"]]]",
+   "[\"B096K82XG1\",[[\"color\",\"black+dark green\"]]]",
+   "[\"B099WSMYKT\",[[\"color\",\"black\"]]]",
+   "[\"B09BVZH9KL\",[[\"color\",\"black\"]]]",
+   "[\"B09GXMHD8Q\",[[\"color\",\"black & blue\"]]]",
+   "[\"B09HCJG4RV\",[[\"color\",\"black\"]]]",
+   "[\"B09HJFD12B\",[[\"color\",\"black\"]]]",
+   "[\"B09HNJ28YC\",[[\"color\",\"black\"]]]",
+   "[\"B09LCP32RM\",[[\"color\",\"black wrinkle free dress shirt\"]]]",
+   "[\"B09LMDYV5T\",[[\"color\",\"black\"]]]",
+   "[\"B09LTNB2N8\",[[\"color\",\"black\"]]]",
+   "[\"B09N72SNCK\",[[\"color\",\"black\"]]]",
+   "[\"B09P3VJG25\",[[\"color\",\"black\"]]]",
+   "[\"B09P3X1XHT\",[[\"color\",\"a-black\"]]]",
+   "[\"B09P3XPKKJ\",[[\"color\",\"c-black\"]]]",
+   "[\"B09P3YKCFX\",[[\"color\",\"black\"]]]",
+   "[\"B09PB9VHS2\",[[\"color\",\"b-black\"]]]",
+   "[\"B09PDF9P58\",[[\"color\",\"138-black\"]]]",
+   "[\"B09PFVD29J\",[[\"color\",\"black\"]]]",
+   "[\"B09PFVVKSR\",[[\"color\",\"a-black\"]]]",
+   "[\"B09PFW686G\",[[\"color\",\"a-black\"]]]",
+   "[\"B09PFWDMCS\",[[\"color\",\"black\"]]]",
+   "[\"B09PFX2GQ2\",[[\"color\",\"a-black\"]]]",
+   "[\"B09PFYK8Q4\",[[\"color\",\"a-black\"]]]",
+   "[\"B09PVCDC8D\",[[\"color\",\"black\"]]]",
+   "[\"B09PVD2DM4\",[[\"color\",\"black\"]]]",
+   "[\"B09QQB26T6\",[[\"color\",\"black\"]]]",
+   "[\"B09QQNT8VC\",[[\"color\",\"r-aa-black\"]]]",
+   "[\"B09QX6CTXG\",[[\"color\",\"black\"]]]",
+   "[\"B09R1XFNKW\",[[\"color\",\"b-black\"]]]",
+   "[\"B09R1XYP1Y\",[[\"color\",\"black\"]]]",
+   "[\"B09RJ54VT6\",[[\"color\",\"p-aa-black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:long sleeve",
+    "=",
+    "long sleeve"
+   ],
+   [
+    "attr:polyester cotton",
+    "=",
+    "polyester cotton"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "b8858ee0f7869f44"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "price_upper",
+      "20"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ],
+    "surface": "under $20"
+   }
+  ],
+  "attempt": 4,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:long sleeve",
+     "=",
+     "long sleeve"
+    ],
+    [
+     "attr:polyester cotton",
+     "=",
+     "polyester cotton"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     "20"
+    ]
+   ],
+   [
+    [
+     "attr:long sleeve",
+     "=",
+     "long sleeve"
+    ],
+    [
+     "attr:polyester cotton",
+     "=",
+     "polyester cotton"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:long sleeve",
+   "attr:polyester cotton",
+   "option:0"
+  ],
+  "spec_id": "72f25981197f1cf2",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a men’s long-sleeve polyester-cotton dress shirt and a black pocket square under $20.",
+ "render_attempts": 4,
+ "sample_id": "9b54696cff72b23b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's dress shirts instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "188c0e5ddcbb94e9"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's dress shirts instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "ff8c6a81bd4ae9c4"
+  },
+  {
+   "announcement": "Also, it needs to be tunic tops.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c6d106d769ae064a"
+  },
+  {
+   "announcement": "Also, it needs to be tops women.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "effb0925978e69ff"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "147d6a63de3db6ef"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9c7fde7f361bd3bd"
+  },
+  {
+   "announcement": "Actually, make it #4red instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "72e1e0a972f02334"
+  },
+  {
+   "announcement": "Actually, make it #273 sky blue instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "82a9cd66bb9c0b71"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   40,
+   72
+  ],
+  "rule": "ambiguous",
+  "true_card": 40,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a black leopard print polyester-cotton shirt with long sleeves.",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "e31ccaa2616c0e17",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

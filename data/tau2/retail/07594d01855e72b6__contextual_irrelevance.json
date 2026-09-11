@@ -1,0 +1,104 @@
+{
+ "sample_id": "07594d01855e72b6__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "07594d01855e72b6",
+ "query": "Hi there, I just wanted to say I tried the new matcha shortbread cookies I ordered from your snack section last week and they\u2019re so good, I already placed another order for three boxes to give to my coworkers. Oh also, my neighbor asked me to ask if you\u2019ll restock the lemon scented dish soap you had on sale last month, she uses it all the time and couldn\u2019t find it on the site anymore. Oh and my cat knocked over a mug on my desk this morning and spilled coffee all over my mousepad, I had to go dry it off with a hair dryer, what a mess. Anyway, I need to cancel two of my pending orders please, order #W5056519 and order #W5995614, both were ordered by mistake.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hi there, I just wanted to say I tried the new matcha shortbread cookies I ordered from your snack section last week and they\u2019re so good, I already placed another order for three boxes to give to my coworkers. Oh also, my neighbor asked me to ask if you\u2019ll restock the lemon scented dish soap you had on sale last month, she uses it all the time and couldn\u2019t find it on the site anymore. Oh and my cat knocked over a mug on my desk this morning and spilled coffee all over my mousepad, I had to go dry it off with a hair dryer, what a mess.",
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W5056519\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"ordered by mistake\""
+    ],
+    [
+     "arg:1:cancel_pending_order:order_id",
+     "=",
+     "\"#W5995614\""
+    ],
+    [
+     "arg:1:cancel_pending_order:reason",
+     "=",
+     "\"ordered by mistake\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W5056519\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"ordered by mistake\""
+   ],
+   [
+    "arg:1:cancel_pending_order:order_id",
+    "=",
+    "\"#W5995614\""
+   ],
+   [
+    "arg:1:cancel_pending_order:reason",
+    "=",
+    "\"ordered by mistake\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

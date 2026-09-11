@@ -1,0 +1,181 @@
+{
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "fidelity_notes": [],
+ "goal_idx": 409,
+ "ground_truth": {
+  "cardinality": 13,
+  "hash": "b498997477baf2189a9bcf9d017cf856",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B007PY8M9A\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B078Y9KGCD\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B07C63XYP4\",[[\"flavor name\",\"lemon-lime\"]]]",
+   "[\"B07GBGZZLC\",[[\"flavor\",\"apple cider vinegar lemon ginger\"]]]",
+   "[\"B07S6ZTGLY\",[[\"flavor name\",\"lemon lime\"]]]",
+   "[\"B087MBRQ51\",[[\"flavor name\",\"ginger lemon\"]]]",
+   "[\"B08DYDRTV1\",[[\"flavor name\",\"ginger lemonade\"]]]",
+   "[\"B08FV8RR9Y\",[[\"flavor name\",\"lemon\"]]]",
+   "[\"B08HTR6M9M\",[[\"flavor name\",\"ginger lemon\"]]]",
+   "[\"B08LP34HMM\",[[\"flavor name\",\"ginger lemon honey (pack of 2)\"]]]",
+   "[\"B08XZXPK93\",[[\"flavor name\",\"lemon pepper chicken\"]]]",
+   "[\"B0936QYZ8K\",[[\"flavor name\",\"lemon\"]]]",
+   "[\"B09BK4W8GB\",[[\"flavor name\",\"ginger lemon\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:certified organic",
+    "=",
+    "certified organic"
+   ],
+   [
+    "option:0",
+    "=",
+    "tulua apple cider vinegar lemon ginger"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "9abc84ff04905971"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:certified organic",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for certified organic beverages under $60, and I want that one specific kind I got before with the apple cider vinegar, lemon, and ginger flavor.",
+ "render_attempts": 1,
+ "sample_id": "c3fb87c9a2652d71",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2398dab1f90987e2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "38b64bfd9d3bf2d4"
+  },
+  {
+   "announcement": "Also, it needs to be cane sugar.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bdef8c355e557c44"
+  },
+  {
+   "announcement": "Also, it needs to be natural flavors.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f18b778e27fff9a6"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "09e1f35be0713809"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "af12f9b9de3bb07b"
+  },
+  {
+   "announcement": "Actually, make it 0.23 ounce (pack of 75) instead of tulua apple cider vinegar lemon ginger.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "681e7aa62244ea97"
+  },
+  {
+   "announcement": "Actually, make it 0.21 ounce (pack of 10) instead of tulua apple cider vinegar lemon ginger.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7fab184d8b90ce08"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 64,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 13,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for tulua apple cider vinegar lemon ginger flavored fruit juice that is certified organic.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "d8635b8c1de27ad3",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,187 @@
+{
+ "adapter": "webshop",
+ "cluster": "bar stools",
+ "fidelity_notes": [],
+ "goal_idx": 170,
+ "ground_truth": {
+  "cardinality": 13,
+  "hash": "68ef4afe2468ba82e9a13bdab4df9006",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01DWGRHCW\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B01DWGRKBU\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B071F9VR56\",[[\"size\",\"25.5\\\" counter height\"]]]",
+   "[\"B07B5HWV1C\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07B5NKTTG\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07D481FC6\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07VMB63DC\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07WX5ZZ8Q\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B07XPXVHCM\",[[\"size\",\"26\\\" counter height\"]]]",
+   "[\"B084W2RZQN\",[[\"style\",\"counter height\"]]]",
+   "[\"B0851GZM55\",[[\"size\",\"counter height\"]]]",
+   "[\"B08568W6MS\",[[\"size\",\"counter height\"]]]",
+   "[\"B08FRP1B4Q\",[[\"size\",\"26 inch counter height\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:faux leather",
+    "=",
+    "faux leather"
+   ],
+   [
+    "option:0",
+    "=",
+    "counter height"
+   ],
+   [
+    "price_upper",
+    "<=",
+    180
+   ]
+  ],
+  "hidden_slots": [
+   "attr:faux leather"
+  ],
+  "intent_id": "dbfbddff4bf8b6af"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "attr:faux leather"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:faux leather",
+     "=",
+     "faux suede"
+    ],
+    [
+     "option:0",
+     "=",
+     "counter height"
+    ],
+    [
+     "price_upper",
+     "<=",
+     180
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "0c6dfc07cf88fe76",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "attr:faux leather",
+    "faux leather",
+    "faux suede"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for bar stools made of faux suede, preferably counter height, and my budget is $180.",
+ "render_attempts": 1,
+ "sample_id": "0e17e71c4a366b39",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bar stools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "6ef9144c08537686"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bar stools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b065fa878d7d3391"
+  },
+  {
+   "announcement": "Also, it needs to be stainless steel.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "38e844ba96ef565b"
+  },
+  {
+   "announcement": "Also, it needs to be fully assembled.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "650f9bffc4c925fb"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "13323d7bcc61568c"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f19e4f78dbc85ff3"
+  },
+  {
+   "announcement": "Actually, make it 18\" instead of counter height.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4025cc74d85253f7"
+  },
+  {
+   "announcement": "Actually, make it 1 pack instead of counter height.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ba4669ff7a779dec"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 13,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a  counter height size barstools of faux leather",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "e48d643599e8be60",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

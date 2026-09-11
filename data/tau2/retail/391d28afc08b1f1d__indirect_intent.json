@@ -1,0 +1,137 @@
+{
+ "sample_id": "391d28afc08b1f1d__indirect_intent",
+ "domain": "retail",
+ "tree_id": "391d28afc08b1f1d",
+ "query": "I just realized the shipping address I put down for my recent order is under my user ID lucas_santos_6600, and the full address listed there is 943 Maple Drive, Suite 356, Chicago, IL 60621, USA. I remember someone mentioned that when there's a mismatch between the saved address and where you actually want an order sent, those are the exact details you have to note down.",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "indirect_intent",
+  "family": "intention",
+  "mask_kind": "oblique",
+  "kinds": [
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_user_address:address1",
+   "arg:0:modify_user_address:address2",
+   "arg:0:modify_user_address:city",
+   "arg:0:modify_user_address:country",
+   "arg:0:modify_user_address:state",
+   "arg:0:modify_user_address:user_id",
+   "arg:0:modify_user_address:zip"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_user_address:address1",
+     "=",
+     "\"943 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_user_address:address2",
+     "=",
+     "\"Suite 356\""
+    ],
+    [
+     "arg:0:modify_user_address:city",
+     "=",
+     "\"Chicago\""
+    ],
+    [
+     "arg:0:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_user_address:state",
+     "=",
+     "\"IL\""
+    ],
+    [
+     "arg:0:modify_user_address:user_id",
+     "=",
+     "\"lucas_santos_6600\""
+    ],
+    [
+     "arg:0:modify_user_address:zip",
+     "=",
+     "\"60621\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "8d9ebde1bce95b92"
+ },
+ "signature": {
+  "rule": "oblique",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_user_address:address1",
+    "=",
+    "\"943 Maple Drive\""
+   ],
+   [
+    "arg:0:modify_user_address:address2",
+    "=",
+    "\"Suite 356\""
+   ],
+   [
+    "arg:0:modify_user_address:city",
+    "=",
+    "\"Chicago\""
+   ],
+   [
+    "arg:0:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_user_address:state",
+    "=",
+    "\"IL\""
+   ],
+   [
+    "arg:0:modify_user_address:user_id",
+    "=",
+    "\"lucas_santos_6600\""
+   ],
+   [
+    "arg:0:modify_user_address:zip",
+    "=",
+    "\"60621\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

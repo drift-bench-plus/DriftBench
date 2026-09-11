@@ -1,0 +1,220 @@
+{
+ "sample_id": "fc9068f710d0f5fa",
+ "tree_id": "81761b8dd22467b2",
+ "adapter": "webshop",
+ "cluster": "women's socks & hosiery",
+ "goal_idx": 397,
+ "split": "test",
+ "source_instruction": "i am looking for a women's socks made up of polyester cotton which is washable in machine. also choose black or semi mint rush green color.",
+ "query": "I\u2019m looking for women\u2019s socks and hosiery made of that polyester cotton blend, y\u2019know? I want them in that one, the usual color options I always grab. Also don\u2019t forget that thing I always need for my clothes so I don\u2019t have to mess around with hand washing, and I don\u2019t wanna spend more than 30 bucks on \u2018em total.",
+ "strategy_ids": [
+  "insufficient_information",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+referential_ambiguity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "insufficient_information": "attr:machine wash"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:machine wash"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:polyester cotton",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:machine wash",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:polyester cotton",
+     "=",
+     "polyester cotton"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "c0934fc156a8b502"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 19,
+  "lit_card": 72,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 29,
+    "true_card": 19,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 41,
+    "true_card": 19,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "f8ae5d899d5b9541",
+  "conditions": [
+   [
+    "attr:machine wash",
+    "=",
+    "machine wash"
+   ],
+   [
+    "attr:polyester cotton",
+    "=",
+    "polyester cotton"
+   ],
+   [
+    "option:0",
+    "=",
+    "black | semi turbo pink | semi mint rush green"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:machine wash",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 19,
+  "value": [
+   "[\"B00FM6X37E\",[[\"color\",\"black\"]]]",
+   "[\"B00IE0E0TU\",[[\"color\",\"black\"]]]",
+   "[\"B015J9Y5E8\",[[\"color\",\"black with bluish (6 pairs)\"]]]",
+   "[\"B073QF83MW\",[[\"color\",\"black\"]]]",
+   "[\"B07DQ6PSQ4\",[[\"color\",\"black | white vent\"]]]",
+   "[\"B07FXS3R3J\",[[\"color\",\"black\"]]]",
+   "[\"B07JDZD513\",[[\"color\",\"black\"]]]",
+   "[\"B07M6WHT26\",[[\"color\",\"9 pairs |  3*black +3*white +3*light pink\"]]]",
+   "[\"B07V34W82P\",[[\"color\",\"grey | black\"]]]",
+   "[\"B087R6XY9X\",[[\"color\",\"3 black+3 grey\"]]]",
+   "[\"B08FWB2N64\",[[\"color\",\"loose top black\"]]]",
+   "[\"B08J1L1GFD\",[[\"color\",\"black\"]]]",
+   "[\"B08JWD1SKH\",[[\"color\",\"black | signal pink | white\"]]]",
+   "[\"B091DCM8YQ\",[[\"color\",\"black | semi turbo pink | semi mint rush green\"]]]",
+   "[\"B091DFZ99Q\",[[\"color\",\"black | signal pink | white\"]]]",
+   "[\"B093CLPFHY\",[[\"color\",\"black\"]]]",
+   "[\"B0983756Z3\",[[\"color\",\"hiking light heather grey | black - 2 pair pack\"]]]",
+   "[\"B098NRRHSZ\",[[\"color\",\"6 pairs black\"]]]",
+   "[\"B09CJ88Y61\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "f36add6bb5df3b03f70cb3c51193a78b"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "27d9242830c82b01",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's socks & hosiery instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "81acdd316d3964c7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's socks & hosiery instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "44f9a571749c539d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be closed toe."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "85795a29038dfeac",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be casual shoes."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6cef30ec25743dce",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8014cf40a47df239",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b5d05c2165fb0b9a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 2x-large (1 pair) instead of black | semi turbo pink | semi mint rush green."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "e90cb012f287b6df",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 2# yellow instead of black | semi turbo pink | semi mint rush green."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,193 @@
+{
+ "adapter": "webshop",
+ "cluster": "refillable containers",
+ "fidelity_notes": [],
+ "goal_idx": 228,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "ccbd1a24458d09bc1ef2f724458160d2",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0869L2CBJ\",[[\"color\",\"clear\"]]]",
+   "[\"B087Q9MMNT\",[[\"color\",\"clear\"]]]",
+   "[\"B08PV5Y6J3\",[[\"size\",\"clear-15pcs\"]]]",
+   "[\"B08TWYMLLR\",[[\"color\",\"clear\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:bpa free",
+    "=",
+    "bpa free"
+   ],
+   [
+    "attr:eco friendly",
+    "=",
+    "eco friendly"
+   ],
+   [
+    "option:0",
+    "=",
+    "clear-15pcs"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "79a7cdeed610e1fb"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 4,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:bpa free",
+     "=",
+     "bpa free"
+    ],
+    [
+     "attr:eco friendly",
+     "=",
+     "bpa free"
+    ],
+    [
+     "option:0",
+     "=",
+     "clear-15pcs"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:eco friendly",
+     "eco friendly"
+    ],
+    "alternative": [
+     "attr:eco friendly",
+     "bpa free"
+    ],
+    "condition": null,
+    "text": "Since you probably don’t have fully eco friendly refillable containers in stock"
+   }
+  ],
+  "retained": [
+   "attr:bpa free",
+   "attr:eco friendly",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "f46e97a20edf43bc",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don’t have fully eco friendly refillable containers in stock, I’m looking for BPA free refillable containers in the clear-15pcs option, with a price limit of $30.",
+ "render_attempts": 4,
+ "sample_id": "59d7bf856057e846",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the refillable containers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "38761bc5eb7aeb9a"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the refillable containers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "523e1485ba534c14"
+  },
+  {
+   "announcement": "Also, it needs to be easy use.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6fe858f649b25fe7"
+  },
+  {
+   "announcement": "Also, it needs to be fine mist.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c3c79a7e79301e88"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7cc584968461e75f"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bea7ef1fa4ebcc42"
+  },
+  {
+   "announcement": "Actually, make it 100 pack 3 oz push up containers instead of clear-15pcs.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4a9abb5f8cfaf0fc"
+  },
+  {
+   "announcement": "Actually, make it 100-pack instead of clear-15pcs.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "67c4f48fa699d05a"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 67,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a set of 15 bpa free and eco-friendly jars.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "eb43999f65ad6ee4",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

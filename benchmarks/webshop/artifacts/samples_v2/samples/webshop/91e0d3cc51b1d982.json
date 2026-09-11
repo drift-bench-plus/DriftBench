@@ -1,0 +1,234 @@
+{
+ "adapter": "webshop",
+ "cluster": "binoculars & scopes",
+ "fidelity_notes": [],
+ "goal_idx": 180,
+ "ground_truth": {
+  "cardinality": 69,
+  "hash": "3ef5a5dae25571bd95b7f7abe01509c2",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B071PBFT1R\",[]]",
+   "[\"B075NZ72FM\",[]]",
+   "[\"B07H884WJD\",[]]",
+   "[\"B07K7HGCMJ\",[]]",
+   "[\"B07MJT6SMR\",[]]",
+   "[\"B07QD5N347\",[]]",
+   "[\"B07QNNJKDW\",[]]",
+   "[\"B07RGTH3Q9\",[]]",
+   "[\"B07S21DY1V\",[]]",
+   "[\"B07S62VPSC\",[]]",
+   "[\"B07SNR97W8\",[]]",
+   "[\"B07SZBZ4W4\",[]]",
+   "[\"B07Y3BZK6V\",[]]",
+   "[\"B0872P6WRB\",[]]",
+   "[\"B08C597KLX\",[]]",
+   "[\"B08D8X8W5F\",[]]",
+   "[\"B08DCNLF86\",[]]",
+   "[\"B08FMM86JN\",[]]",
+   "[\"B08FMXLH4S\",[]]",
+   "[\"B08H4VHJ6D\",[]]",
+   "[\"B08M62Q3JC\",[]]",
+   "[\"B08QMNSNYG\",[]]",
+   "[\"B08SBF5HM9\",[]]",
+   "[\"B08TLH4679\",[]]",
+   "[\"B08TWJZGYN\",[]]",
+   "[\"B08W2ZYFC6\",[]]",
+   "[\"B08WYKQ5ZS\",[]]",
+   "[\"B08XY82535\",[]]",
+   "[\"B08XZLM4BB\",[]]",
+   "[\"B08YF11QJT\",[]]",
+   "[\"B08YWVP7HT\",[]]",
+   "[\"B091GJQP8Q\",[]]",
+   "[\"B0924P7BHN\",[]]",
+   "[\"B092LYFWX4\",[]]",
+   "[\"B093BJ2SJ8\",[]]",
+   "[\"B093BJ46R7\",[]]",
+   "[\"B094QWTWYR\",[]]",
+   "[\"B09521DY42\",[]]",
+   "[\"B095BMYHWW\",[]]",
+   "[\"B097L5W3NJ\",[]]",
+   "[\"B097YN59KX\",[]]",
+   "[\"B0983CMJ44\",[]]",
+   "[\"B099ZK3XTK\",[]]",
+   "[\"B09BFLCHNY\",[]]",
+   "[\"B09DCYX1PL\",[]]",
+   "[\"B09DKRRPRK\",[]]",
+   "[\"B09DS3RSPK\",[]]",
+   "[\"B09DVP1Z8Q\",[]]",
+   "[\"B09H1XRHBP\",[]]",
+   "[\"B09JG53D7N\",[]]",
+   "[\"B09JKLBHF1\",[]]",
+   "[\"B09K44L8RL\",[]]",
+   "[\"B09KLSDM25\",[]]",
+   "[\"B09KV367BR\",[]]",
+   "[\"B09NSMMFQN\",[]]",
+   "[\"B09P4NMRGL\",[]]",
+   "[\"B09P4PC9XV\",[]]",
+   "[\"B09P6DZDJY\",[]]",
+   "[\"B09P8HTBCC\",[]]",
+   "[\"B09P8JTQZ4\",[]]",
+   "[\"B09PBQ2SCK\",[]]",
+   "[\"B09PDW5XW7\",[]]",
+   "[\"B09PG7KR21\",[]]",
+   "[\"B09PG8G135\",[]]",
+   "[\"B09PRFNBZ8\",[]]",
+   "[\"B09PZ81R8M\",[]]",
+   "[\"B09QFXV91S\",[]]",
+   "[\"B09R46T44J\",[]]",
+   "[\"B09SYL1WTQ\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:bird watching",
+    "=",
+    "bird watching"
+   ],
+   [
+    "attr:easy use",
+    "=",
+    "easy use"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "4b9a501c58a8e42e"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:bird watching",
+     "=",
+     "bird watching"
+    ],
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I’ve been trying to train my pet goldfish to nudge a tiny floating hoop around its tank for the past two weeks, and it’s finally starting to get the hang of it—last night it even did three loops in a row before darting off to nibble on its fish flakes. I also just finished repotting all my succulents on the windowsill, making sure each one has just the right amount of gritty soil so their roots don’t get soggy when I water them. I’ve also been binging a silly reality show about competitive cupcake decorating, and I keep daydreaming about trying to make a vanilla cupcake with raspberry filling this weekend.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:bird watching",
+   "attr:easy use",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve been trying to train my pet goldfish to nudge a tiny floating hoop around its tank for the past two weeks, and it’s finally starting to get the hang of it—last night it even did three loops in a row before darting off to nibble on its fish flakes. I also just finished repotting all my succulents on the windowsill, making sure each one has just the right amount of gritty soil so their roots don’t get soggy when I water them. I’ve also been binging a silly reality show about competitive cupcake decorating, and I keep daydreaming about trying to make a vanilla cupcake with raspberry filling this weekend. Now, I’m looking for binoculars for bird watching that are easy to use, and my budget is $40.",
+ "render_attempts": 1,
+ "sample_id": "91e0d3cc51b1d982",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the binoculars & scopes instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "302b8f4c0fbfb494"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the binoculars & scopes instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "5679f5ab0e139928"
+  },
+  {
+   "announcement": "Also, it needs to be light weight.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b95074d20046e0b3"
+  },
+  {
+   "announcement": "Also, it needs to be power amplifier.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f34945ad39851e1c"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "564f1d4c0a888673"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d45d65ee772dabcf"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of 40.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a16b2e8a1f07c1d5"
+  },
+  {
+   "announcement": "Actually, make it 20 instead of 40.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "da7a1952d5cc6a1e"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 69,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 69,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for binocular for bird watching.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "582e11e87cd872bd",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

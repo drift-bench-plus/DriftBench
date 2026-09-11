@@ -1,0 +1,229 @@
+{
+ "adapter": "webshop",
+ "cluster": "furniture sets",
+ "fidelity_notes": [],
+ "goal_idx": 56,
+ "ground_truth": {
+  "cardinality": 26,
+  "hash": "d877fc362546d018ff5e724077da519d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00CWCUTVE\",[[\"size\",\"twin | twin xl\"]]]",
+   "[\"B00Q7OAKV2\",[[\"size\",\"twin\"]]]",
+   "[\"B01L90K32E\",[[\"size\",\"twin\"]]]",
+   "[\"B01NBVU4D6\",[[\"size\",\"twin\"]]]",
+   "[\"B073Q36J45\",[[\"size\",\"twin\"]]]",
+   "[\"B0756DPJDV\",[[\"size\",\"twin\"]]]",
+   "[\"B076X4M2QX\",[[\"size\",\"twin\"]]]",
+   "[\"B0778S9QW7\",[[\"size\",\"twin\"]]]",
+   "[\"B077KJ8K99\",[[\"size\",\"twin\"]]]",
+   "[\"B0785KGPB6\",[[\"size\",\"twin\"]]]",
+   "[\"B07G2SNWHD\",[[\"size\",\"twin\"]]]",
+   "[\"B07G9P3XHM\",[[\"size\",\"twin\"]]]",
+   "[\"B07KKH48DG\",[[\"size\",\"twin size\"]]]",
+   "[\"B07PYFK5BB\",[[\"color\",\"batman emblem comforter twin 68'' x 86''\"]]]",
+   "[\"B07QMCZB76\",[[\"size\",\"twin(68-by-88-inches)\"]]]",
+   "[\"B07RLQYCSC\",[[\"size\",\"twin\"]]]",
+   "[\"B07RRZ5GCK\",[[\"size\",\"twin\"]]]",
+   "[\"B07RT28DLG\",[[\"size\",\"twin\"]]]",
+   "[\"B07TSHZKL1\",[[\"size\",\"twin\"]]]",
+   "[\"B07TZL55G6\",[[\"size\",\"5 piece twin size\"]]]",
+   "[\"B08228LTKC\",[[\"size\",\"twin (flat sheets only)\"]]]",
+   "[\"B084C1B9MY\",[[\"size\",\"twin\"]]]",
+   "[\"B084ZXSD65\",[[\"size\",\"twin\"]]]",
+   "[\"B08539JP33\",[[\"size\",\"5 piece twin size\"]]]",
+   "[\"B08S9RPTNV\",[[\"size\",\"twin\"]]]",
+   "[\"B09CB4MXZN\",[[\"size\",\"(3 piece) twin size\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:super soft",
+    "=",
+    "super soft"
+   ],
+   [
+    "option:0",
+    "=",
+    "twin"
+   ],
+   [
+    "price_upper",
+    "<=",
+    100
+   ]
+  ],
+  "hidden_slots": [
+   "attr:super soft"
+  ],
+  "intent_id": "b61ee25dbfa1ae5c"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "attr:super soft",
+      "super soft"
+     ],
+     [
+      "attr:super soft",
+      "light in weight"
+     ]
+    ],
+    "surface": "really light"
+   }
+  ],
+  "attempt": 4,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:super soft"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ],
+    [
+     "option:0",
+     "=",
+     "twin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     100
+    ]
+   ],
+   [
+    [
+     "attr:super soft",
+     "=",
+     "light in weight"
+    ],
+    [
+     "option:0",
+     "=",
+     "twin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     100
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "d7fabacfd3e68a2b",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a twin furniture set that’s really light, and I don’t want to spend more than $100 on it.",
+ "render_attempts": 4,
+ "sample_id": "7531c4f013a088b2",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the furniture sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0ae5c48b2903e9fa"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the furniture sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "974edfde024964de"
+  },
+  {
+   "announcement": "Also, it needs to be faux leather.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7b8179935897d332"
+  },
+  {
+   "announcement": "Also, it needs to be white item.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "caa736e1395318ea"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "aa36a6f7f86fb9da"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ddb1cf3c2cc154d7"
+  },
+  {
+   "announcement": "Actually, make it 04 dove grey instead of twin.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bd8e7fa9d9f6abc7"
+  },
+  {
+   "announcement": "Actually, make it 08 midnight black instead of twin.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f5d148477a59901e"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   26,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 26,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want a super soft jay franco disney minnie mouse twin bed set.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "5899d060122a55a0",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

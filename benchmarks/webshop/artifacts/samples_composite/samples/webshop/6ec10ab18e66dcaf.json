@@ -1,0 +1,195 @@
+{
+ "sample_id": "6ec10ab18e66dcaf",
+ "tree_id": "c424f4486fa5b143",
+ "adapter": "webshop",
+ "cluster": "men's sandals",
+ "goal_idx": 419,
+ "split": "test",
+ "source_instruction": "i am looking for men's dark clay color ankle strap sandals.",
+ "query": "Man, I spent all morning troubleshooting my leaky kitchen faucet, replaced the aerator twice and still can\u2019t get the drip to stop, plus my neighbor\u2019s tabby cat keeps sneaking onto my fire escape to knock over my succulent pots, I had to move all the little potted plants inside last night before they got shattered on the sidewalk. I\u2019m looking through the men\u2019s sandals section right now, can you find me pairs that have an ankle strap, come in dark clay color, are under $110, and also have a built-in bottle opener on the footbed?",
+ "strategy_ids": [
+  "irrelevant_information",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+contextual_irrelevance",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "have a built-in bottle opener on the footbed",
+    "condition": [
+     "attr:built-in bottle opener",
+     "=",
+     "built-in bottle opener on the footbed"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Man, I spent all morning troubleshooting my leaky kitchen faucet, replaced the aerator twice and still can\u2019t get the drip to stop, plus my neighbor\u2019s tabby cat keeps sneaking onto my fire escape to knock over my succulent pots, I had to move all the little potted plants inside last night before they got shattered on the sidewalk.",
+  "retained": [
+   "attr:ankle strap",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:ankle strap",
+     "=",
+     "ankle strap"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark clay"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ],
+    [
+     "attr:built-in bottle opener",
+     "=",
+     "built-in bottle opener on the footbed"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "94b8b20efb8e3806"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 4,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 4,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "9f0661ffef164eff",
+  "conditions": [
+   [
+    "attr:ankle strap",
+    "=",
+    "ankle strap"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark clay"
+   ],
+   [
+    "price_upper",
+    "<=",
+    110
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 4,
+  "value": [
+   "[\"B085LSYPYK\",[[\"color\",\"dark clay\"]]]",
+   "[\"B08C2YHSY3\",[[\"color\",\"dark sand nubuck\"]]]",
+   "[\"B08CDQMTTS\",[[\"color\",\"dark olive\"]]]",
+   "[\"B08CDS4MD1\",[[\"color\",\"belay dark olive multi\"]]]"
+  ],
+  "hash": "3f208400ceb6621b1d071c0ab7b4e3ba"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "309bb9a748809fa2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's sandals instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "8c9a80f8d507cbca",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's sandals instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "89cd36c85f99b02d",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be price_band under_100."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a8bea1071004ee3e",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be rubber outsole."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "581f41bcbfe7342d",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a86f3722e8d71f27",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3c0f8f1546a7ff17",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 narrow instead of dark clay."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c1be8db284c11098",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1-1.5 big kid instead of dark clay."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

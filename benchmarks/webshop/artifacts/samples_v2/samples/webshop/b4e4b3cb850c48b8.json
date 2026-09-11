@@ -1,0 +1,169 @@
+{
+ "adapter": "webshop",
+ "cluster": "non-dairy milks",
+ "fidelity_notes": [],
+ "goal_idx": 272,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "9aa8950c9008dbd23e1c0f9fc8daa382",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B004ADZEI6\",[[\"flavor\",\"caramel\"]]]",
+   "[\"B077S9R9KT\",[[\"flavor name\",\"caramel\"]]]",
+   "[\"B07CZB4YB6\",[[\"flavor name\",\"caramel and chocolate\"]]]",
+   "[\"B09NZDB484\",[[\"flavor name\",\"salted caramel\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:sugar free",
+    "=",
+    "sugar free"
+   ],
+   [
+    "option:0",
+    "=",
+    "salted caramel"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "3fea2e58369d2aed"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "salted caramel"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:sugar free",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that sugar free salted caramel non-dairy milks under twenty dollars are really hard to track down lately.",
+ "render_attempts": 1,
+ "sample_id": "b4e4b3cb850c48b8",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the non-dairy milks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "67237a1870713a0b"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the non-dairy milks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a68891af7741449d"
+  },
+  {
+   "announcement": "Also, it needs to be ice cream.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b0505eb938e82759"
+  },
+  {
+   "announcement": "Also, it needs to be snack mix.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e099de74a80441e4"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9440f04302ad64d5"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d82ab4c29a64a6cc"
+  },
+  {
+   "announcement": "Actually, make it 1 bag instead of salted caramel.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "71cf7c994736b5b3"
+  },
+  {
+   "announcement": "Actually, make it 1 ounce (pack of 100) instead of salted caramel.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f5ede238d7215487"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 4,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like some sugar free salted caramel truffles.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "8c96b5310b014540",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

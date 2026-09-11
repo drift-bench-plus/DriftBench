@@ -1,0 +1,82 @@
+{
+ "sample_id": "3b1327acc596a315__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "3b1327acc596a315",
+ "query": "I spent the weekend hiking at the nearby national park and took so many beautiful photos of the fall foliage, I can\u2019t wait to print them out and hang a few in my apartment. I also tried that new matcha bakery downtown yesterday, their red bean scone was so flaky and perfectly sweet, I\u2019m already planning to go back next weekend. Oh, and my cat just learned how to open the kitchen cabinet where I keep her treats, I\u2019ve had to move them to a higher shelf already, she\u2019s way too clever for her own good. Anyway, I\u2019m having some issues with my phone right now, I think my line might be suspended because I have an overdue bill, and I also suspect my SIM card might have come unseated, can you help me fix these problems?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent the weekend hiking at the nearby national park and took so many beautiful photos of the fall foliage, I can't wait to print them out and hang a few in my apartment. I also tried that new matcha bakery downtown yesterday, their red bean scone was so flaky and perfectly sweet, I'm already planning to go back next weekend. Oh, and my cat just learned how to open the kitchen cabinet where I keep her treats, I've had to move them to a higher shelf already, she's way too clever for her own good.",
+  "retained": [
+   "fault:overdue_bill_suspension",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:overdue_bill_suspension",
+     "=",
+     "overdue_bill_suspension"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,232 @@
+{
+ "sample_id": "e36fbc3166d67116",
+ "tree_id": "1cd4e81b8fbad67c",
+ "adapter": "webshop",
+ "cluster": "bar stools",
+ "goal_idx": 440,
+ "split": "test",
+ "source_instruction": "i want to find a barstool made out of faux leather and stainless steel.  i want the one in black.",
+ "query": "I\u2019m looking for bar stools right now, and I need ones with faux suede upholstery, stainless steel frames, in the black and stainless steel color option, all under $120. Oh, and make sure they come with built-in under-seat cup holders too, that\u2019s a must for me.",
+ "strategy_ids": [
+  "factual_error",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+irrelevant_information",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:faux leather"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:faux leather",
+    "faux leather",
+    "faux suede"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "faux suede upholstery",
+    "condition": [
+     "attr:faux leather",
+     "=",
+     "faux suede"
+    ]
+   },
+   {
+    "text": "built-in under-seat cup holders",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:stainless steel",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:faux leather"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:faux leather",
+     "=",
+     "faux suede"
+    ],
+    [
+     "attr:stainless steel",
+     "=",
+     "stainless steel"
+    ],
+    [
+     "option:0",
+     "=",
+     "black | stainless steel"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ],
+    [
+     "attr:faux leather",
+     "=",
+     "faux suede"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "9be677df8bbccf05"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 6,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "b5da4ff0d66d0ce2",
+  "conditions": [
+   [
+    "attr:faux leather",
+    "=",
+    "faux leather"
+   ],
+   [
+    "attr:stainless steel",
+    "=",
+    "stainless steel"
+   ],
+   [
+    "option:0",
+    "=",
+    "black | stainless steel"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "attr:faux leather"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B01DWGRENE\",[[\"color\",\"chrome base finish | black\"]]]",
+   "[\"B01DWGRESY\",[[\"color\",\"chrome finish | black\"]]]",
+   "[\"B071LMB16R\",[[\"color\",\"black\"]]]",
+   "[\"B07TVRWRQR\",[[\"color\",\"black\"]]]",
+   "[\"B07WYL5JTX\",[[\"color\",\"black\"]]]",
+   "[\"B091DG574T\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "8350314bc69f9daf4a2fae6c26b64643"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6ef9144c08537686",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bar stools instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b065fa878d7d3391",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bar stools instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9784606009c9a950",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wood frame."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d00819d1c929ab77",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mid century."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9ab988bef87ace79",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b52781acb9726f78",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7d229aef311a0bbe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 26\" metal footrest instead of black | stainless steel."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "91cb6f4ce841b642",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 26\" height seat instead of black | stainless steel."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,236 @@
+{
+ "sample_id": "31e74cc35c176846",
+ "tree_id": "4944911280127eae",
+ "adapter": "webshop",
+ "cluster": "video surveillance",
+ "goal_idx": 184,
+ "split": "test",
+ "source_instruction": "i am looking for 3mp motion detection security camera.",
+ "query": "I spent all last weekend helping my next-door neighbor patch up the raised garden beds along the side of her house, and let me tell you, those old cedar planks were way more rotted out than either of us expected when we first pried the broken edges off. We ended up making a random run to the local nursery halfway through the project because she decided she wanted to tuck in a whole row of lavender and trailing strawberry plants along the front edge of the beds instead of sticking to the tomato and basil starts she\u2019d already bought back in early spring. By the time we finished up Sunday evening, we were both covered in wood chips and potting soil, and she sent me home with a jar of the wild blackberry jam she canned last summer that\u2019s so good I\u2019ve been slathering it on every piece of toast I\u2019ve made all week. I\u2019m looking for a video surveillance camera and a little wall mount for it with 3mp resolution, I want it to have reliable motion detection so it alerts me when someone\u2019s on my porch, it should be weatherproof for outdoor use too. Can you show me options that fit what I\u2019m after? I don\u2019t have a super strict budget I\u2019m working with right now so just pull whatever makes sense for home use.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "contextual_irrelevance",
+  "insufficient_information",
+  "syntactic_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+contextual_irrelevance+insufficient_information+syntactic_ambiguity",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "contextual_irrelevance",
+   "insufficient_information",
+   "syntactic_ambiguity"
+  ],
+  "assigned_slots": {
+   "syntactic_ambiguity": "option:0",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "with 3mp resolution",
+    "placements": [
+     [
+      "option:0",
+      "3mp"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "text": "a little wall mount for it",
+    "condition": null
+   },
+   {
+    "text": "it should be weatherproof for outdoor use too",
+    "condition": [
+     "attr:weatherproof",
+     "=",
+     "weatherproof"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent all last weekend helping my next-door neighbor patch up the raised garden beds along the side of her house, and let me tell you, those old cedar planks were way more rotted out than either of us expected when we first pried the broken edges off. We ended up making a random run to the local nursery halfway through the project because she decided she wanted to tuck in a whole row of lavender and trailing strawberry plants along the front edge of the beds instead of sticking to the tomato and basil starts she\u2019d already bought back in early spring. By the time we finished up Sunday evening, we were both covered in wood chips and potting soil, and she sent me home with a jar of the wild blackberry jam she canned last summer that\u2019s so good I\u2019ve been slathering it on every piece of toast I\u2019ve made all week.",
+  "retained": [
+   "attr:motion detection"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:motion detection",
+     "=",
+     "motion detection"
+    ],
+    [
+     "attr:weatherproof",
+     "=",
+     "weatherproof"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "1ae1e4f5afb6b9b8"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 744,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 8,
+    "true_card": 3,
+    "readings": 1
+   },
+   "syntactic_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     3,
+     1475
+    ],
+    "true_card": 3,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "7278ebab2e56407b",
+  "conditions": [
+   [
+    "attr:motion detection",
+    "=",
+    "motion detection"
+   ],
+   [
+    "option:0",
+    "=",
+    "3mp"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B08B7TXXWF\",[[\"color\",\"3mp\"]]]",
+   "[\"B08W57SX4J\",[[\"size\",\"3mp camera\"]]]",
+   "[\"B08ZN3Q4DN\",[[\"color\",\"3mp\"]]]"
+  ],
+  "hash": "6ec2e226b6b811002787153ab9ba1992"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "18a6cd52da3d2b94",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the video surveillance instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6a0c0bc79e73076",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the video surveillance instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "267155914c5d4abe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mobile phone."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "876e17877673602d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be rechargeable battery."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "353171591dacb3bf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8c7e8e0461c8e66b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "6d3ee0bb9e3d45f9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 female to 4 male (1 pack) instead of 3mp."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "dcb428f641864c08",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pc instead of 3mp."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

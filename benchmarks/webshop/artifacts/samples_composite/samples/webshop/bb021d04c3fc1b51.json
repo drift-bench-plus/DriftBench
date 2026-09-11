@@ -1,0 +1,226 @@
+{
+ "sample_id": "bb021d04c3fc1b51",
+ "tree_id": "4cd8d2085e9784ed",
+ "adapter": "webshop",
+ "cluster": "hair extensions, wigs & accessories",
+ "goal_idx": 415,
+ "split": "test",
+ "source_instruction": "i want dark black clip-in hair extensions. it should be 17\" in size when curly.",
+ "query": "Hey, I\u2019m looking for hair extensions, the 17-inch curly ones that are that usual color I always get, right? Oh, and they absolutely have to come with that little free satin storage pouch for wigs, I don\u2019t want any that don\u2019t include that. My total budget is $30 max, can you help me track those down quickly?",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+irrelevant_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "they absolutely have to come with that little free satin storage pouch for wigs, I don\u2019t want any that don\u2019t include that",
+    "condition": [
+     "attr:accessory",
+     "=",
+     "free satin storage pouch for wigs"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:hair extensions",
+   "option:1",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:1",
+     "=",
+     "17\"-curly"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:accessory",
+     "=",
+     "free satin storage pouch for wigs"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "f423fa6a962713c7"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 10,
+  "lit_card": 0,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 16,
+    "true_card": 10,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 10,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "910a93f82b24c236",
+  "conditions": [
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark black"
+   ],
+   [
+    "option:1",
+    "=",
+    "17\"-curly"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 10,
+  "value": [
+   "[\"B01IHCUSL8\",[[\"color\",\"dark black\"],[\"size\",\"17\\\" curly\"]]]",
+   "[\"B06X9T6WLP\",[[\"color\",\"dark black\"],[\"size\",\"17 inch curly\"]]]",
+   "[\"B071HW7PJX\",[[\"color\",\"1bt0906 black to sliver grey\"],[\"size\",\"curly\"]]]",
+   "[\"B07GGR2KVQ\",[[\"color\",\"dark black\"],[\"size\",\"17\\\"-curly\"]]]",
+   "[\"B07VKZ52ZL\",[[\"color\",\"black-\"],[\"size\",\"17\\\"-curly\"]]]",
+   "[\"B0816QXBWB\",[[\"color\",\"black\"],[\"size\",\"curly\"]]]",
+   "[\"B08QYZT9BD\",[[\"color\",\"curly-dark black\"],[\"size\",\"16\\\"-curly\"]]]",
+   "[\"B0932FBT59\",[[\"color\",\"dark black\"],[\"size\",\"12\\\"-curly\"]]]",
+   "[\"B095NZMMMN\",[[\"color\",\"dark black\"],[\"size\",\"17''curly\"]]]",
+   "[\"B0989JL16Z\",[[\"color\",\"dark black - 1#\"],[\"size\",\"18\\\"-curly\"]]]"
+  ],
+  "hash": "9f0a4326afecbcf639493c2782f77241"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2b702871dfd53145",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair extensions, wigs & accessories instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "679243e994beeb02",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair extensions, wigs & accessories instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "2ede2213f871b456",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair accessories."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "586c8c7e25a04628",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be natural hair."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "378a77d391826e8e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f8f7268b13fe5a0f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c90811c4590cd116",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #16 instead of dark black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cc658688068b6fe1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #16 | 22 light blonde highlights instead of dark black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

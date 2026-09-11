@@ -1,0 +1,207 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair masks",
+ "fidelity_notes": [],
+ "goal_idx": 134,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "90176e4ab26993cadc51a224f65706ee",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01DPWDWG8\",[[\"color\",\"dark blonde\"],[\"size\",\"2 ounce (pack of 1)\"]]]",
+   "[\"B07N33D4TH\",[[\"color\",\"dark blonde\"],[\"size\",\"pack of 5\"]]]",
+   "[\"B07NSRHCHG\",[[\"color\",\"dark blonde\"],[\"size\",\"0.34 fl oz (pack of 1)\"]]]",
+   "[\"B07TSPZ1F3\",[[\"color\",\"dark iced blonde\"],[\"size\",\"1 count (pack of 1)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair dye",
+    "=",
+    "hair dye"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark blonde"
+   ],
+   [
+    "option:1",
+    "=",
+    "pack of 5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    110
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "efe2f7b5f336a793"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "irrelevant_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [
+   {
+    "condition": [
+     "attr:section",
+     "=",
+     "hair masks"
+    ],
+    "text": "in the hair masks section"
+   },
+   {
+    "condition": [
+     "option:free_gift",
+     "=",
+     "heat-resistant styling glove"
+    ],
+    "text": "come with a free heat-resistant styling glove"
+   }
+  ],
+  "family": "parameter",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair dye",
+     "=",
+     "hair dye"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark blonde"
+    ],
+    [
+     "option:1",
+     "=",
+     "pack of 5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ],
+    [
+     "attr:section",
+     "=",
+     "hair masks"
+    ],
+    [
+     "option:free_gift",
+     "=",
+     "heat-resistant styling glove"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair dye",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "baff051e05d18c08",
+  "strategy_id": "irrelevant_information",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for hair dye in the hair masks section, in a dark blonde shade, sold as a pack of 5, with a price limit of $110, and I want it to come with a free heat-resistant styling glove.",
+ "render_attempts": 2,
+ "sample_id": "0b3743219ef6689f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair masks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4b823fdb647c9844"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair masks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7123ef47a28d1d28"
+  },
+  {
+   "announcement": "Also, it needs to be spray bottle.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c719f015851daec1"
+  },
+  {
+   "announcement": "Also, it needs to be cruelty free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ccc0405932b31660"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0c6a64dde0503620"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4bca940c17beac1d"
+  },
+  {
+   "announcement": "Actually, make it 1 count (pack of 1) instead of dark blonde.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0e408e3d6d2bb8bf"
+  },
+  {
+   "announcement": "Actually, make it #burgundy instead of dark blonde.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "736af1cf8195bdda"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "extras",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a pack of 5 dark blonde hair dye touch up spray.",
+ "split": "test",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "tree_id": "ea8a9dced9bc42df",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

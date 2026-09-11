@@ -1,0 +1,199 @@
+{
+ "adapter": "webshop",
+ "cluster": "breads & bakery",
+ "fidelity_notes": [],
+ "goal_idx": 104,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "f08ab26df53fcc6fc5ab246ee4ca0264",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00WFDKDIO\",[[\"flavor name\",\"variety pack\"],[\"size\",\"12 count (pack of 7)\"]]]",
+   "[\"B07YSWL849\",[[\"flavor name\",\"variety\"],[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B08B8ZHBK2\",[[\"flavor name\",\"variety pack\"],[\"size\",\"7 ounce (pack of 1)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "attr:non gmo",
+    "=",
+    "non gmo"
+   ],
+   [
+    "option:0",
+    "=",
+    "variety pack"
+   ],
+   [
+    "option:1",
+    "=",
+    "12 count (pack of 7)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:1"
+  ],
+  "intent_id": "befb9681ace0d113"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "option:1"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "variety pack"
+    ],
+    [
+     "option:1",
+     "=",
+     "12 count (pack of 8)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:gluten free",
+   "attr:non gmo",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "3575c6ecb9ca0976",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "option:1",
+    "12 count (pack of 7)",
+    "12 count (pack of 8)"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for gluten free, non gmo breads from the breads & bakery section, and I want a variety pack with 12 count (pack of 8), and my price limit is 20.",
+ "render_attempts": 1,
+ "sample_id": "49258c1e783ea474",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the breads & bakery instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1f6225fde59968dc"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the breads & bakery instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "6da6ddcafa09e269"
+  },
+  {
+   "announcement": "Also, it needs to be 0g trans.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "62eb6218b480cdb2"
+  },
+  {
+   "announcement": "Also, it needs to be easy use.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a4f8784d3ca9082e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "713431c87ef68b7d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a9b210ac95a3c43c"
+  },
+  {
+   "announcement": "Actually, make it 11 ounce (pack of 12) instead of variety pack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5fd0830c1731bea7"
+  },
+  {
+   "announcement": "Actually, make it 12 instead of variety pack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7443574b220999b8"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 2,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a gluten free non gmo fig bar packet of 7. and i choose the variety pack",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "03bdb278505ad2e9",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,910 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B01HU10MSG",
+    "cluster": "hair loss products",
+    "name": "Shilo Wig Color Chocolate Swirl - Noriko Wigs 15\" Long Soft Layers Monofilament Top Synthetic Natural Looking Bundle w/ Comb, MaxWigs Hairloss Booklet",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Wigs"
+   },
+   "bound_slots": [
+    "attr:natural hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "darkchocolate"
+    ],
+    [
+     "price_upper",
+     "<=",
+     360
+    ]
+   ],
+   "ground_truth": {
+    "hash": "115ee0475c05feadf87bd421f4cf3f38",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00ZPTH388\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B01CUQBJQ0\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B01CYVAV2O\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B01CYVYKI0\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B01GOO7530\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B01HU10MSG\",[[\"color\",\"darkchocolate\"]]]",
+     "[\"B01HU58VP8\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B01IAA1O60\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B077B61X1P\",[[\"color\",\"chocolateswirl\"]]]",
+     "[\"B078XKTFVB\",[[\"color\",\"r6 | 30h chocolate copper\"]]]",
+     "[\"B07FW6WT8H\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B07N1QSB5T\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B07N8DSJ4Z\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B07NBVMD3P\",[[\"color\",\"g4+ dark chocolate mist\"]]]",
+     "[\"B07NCC6JDC\",[[\"color\",\"r6 | 30h chocolate copper\"]]]",
+     "[\"B07NDLGGS1\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B07NPKBQ7C\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B07NY3NCTT\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07P2HCFNQ\",[[\"color\",\"chocolate rooted\"]]]",
+     "[\"B07PHVJMKM\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07RSSPRK3\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B07SKX5P7V\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07T57FXSM\",[[\"color\",\"chocolate rooted\"]]]",
+     "[\"B07T76LP44\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B07T8WP9YX\",[[\"color\",\"hot chocolate mix\"]]]",
+     "[\"B07TMRR64G\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B08428CDPD\",[[\"color\",\"chocolate swirl\"]]]",
+     "[\"B084294KQT\",[[\"color\",\"chocolate swirl\"]]]",
+     "[\"B084B1D3V4\",[[\"color\",\"chocolate pretzel\"]]]",
+     "[\"B084B1GC8R\",[[\"color\",\"chocolate pretzel\"]]]",
+     "[\"B0857H2JLC\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B0859HFQ1Q\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B0859HT1G7\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B085LRNPCK\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B085LS1KZ7\",[[\"color\",\"r6 dark chocolate\"]]]",
+     "[\"B086K378KP\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B086K5GM8Y\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YV6S91\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YV8YX2\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YVTP6L\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YVY2DQ\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YW3Q6K\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B089YWJ5SJ\",[[\"color\",\"chocolate mix\"]]]",
+     "[\"B08JH3CDKW\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B08JH3ZLCX\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B08L9RVLPL\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B08LQTY9S8\",[[\"color\",\"gl4-8 dark chocolate\"]]]",
+     "[\"B08PDKH8Y7\",[[\"color\",\"chocolate rooted\"]]]",
+     "[\"B08S428V6F\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B08ZCW1MM2\",[[\"color\",\"dark chocolate\"]]]",
+     "[\"B0917L2DBN\",[[\"color\",\"rl6 | 8 dark chocolate\"]]]",
+     "[\"B09R4ZJYS6\",[[\"color\",\"613 white chocolate\"]]]",
+     "[\"B09R4ZN3NB\",[[\"color\",\"613 white chocolate\"]]]",
+     "[\"B09RH81MNH\",[[\"color\",\"613rn white chocolate natural\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f0bfa433247a8172",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B01HU10MSG",
+     "attributes": [
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "darkchocolate"
+     ],
+     "name": "Shilo Wig Color Chocolate Swirl - Noriko Wigs 15\" Long Soft Layers Monofilament Top Synthetic Natural Looking Bundle w/ Comb, MaxWigs Hairloss Booklet",
+     "price_upper": 360,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Wigs",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": "940a0ac94a43555b",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08FY3WDDJ",
+    "cluster": "hair loss products",
+    "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:hair loss",
+    "attr:synthetic hair",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair loss",
+     "=",
+     "hair loss"
+    ],
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1af03ccc77c0fb9ccbf19163362a6e2a",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B01N8YVP43\",[]]",
+     "[\"B07427VMRZ\",[]]",
+     "[\"B07429L7WZ\",[]]",
+     "[\"B0742BV2JG\",[]]",
+     "[\"B0742JH3JT\",[]]",
+     "[\"B07K328CPH\",[]]",
+     "[\"B07L3QNWB6\",[]]",
+     "[\"B07MQ8G1LC\",[]]",
+     "[\"B07P8VYDGL\",[]]",
+     "[\"B07PPHZPRV\",[]]",
+     "[\"B07PR7ZNBD\",[]]",
+     "[\"B07PYH7ZVF\",[]]",
+     "[\"B07QXCWLHS\",[]]",
+     "[\"B089M937YX\",[]]",
+     "[\"B089QL1SVF\",[]]",
+     "[\"B08DX5J739\",[]]",
+     "[\"B08FY3WDDJ\",[]]",
+     "[\"B08NYMVR1D\",[]]",
+     "[\"B08PC8QTFB\",[]]",
+     "[\"B08QCL4SB5\",[]]",
+     "[\"B08XND7S6M\",[]]",
+     "[\"B08XNDHHRF\",[]]",
+     "[\"B08ZNR6GW1\",[]]",
+     "[\"B0928MJQCN\",[]]",
+     "[\"B092MJ5ZY3\",[]]",
+     "[\"B095B9DNLL\",[]]",
+     "[\"B095N8WX77\",[]]",
+     "[\"B098DPBD42\",[]]",
+     "[\"B098T89QPQ\",[]]",
+     "[\"B09917NLTG\",[]]",
+     "[\"B09925FV26\",[]]",
+     "[\"B09BCFNMMJ\",[]]",
+     "[\"B09C2L8FFC\",[]]",
+     "[\"B09FXQBB5J\",[]]",
+     "[\"B09HK1C5W5\",[]]",
+     "[\"B09J14LSR4\",[]]",
+     "[\"B09KRXCPP1\",[]]",
+     "[\"B09KX8NW3T\",[]]",
+     "[\"B09MHV1G8W\",[]]",
+     "[\"B09P51BFWM\",[]]",
+     "[\"B09PQQHBS1\",[]]",
+     "[\"B09QLW8N3Z\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7e0918b55ee9dfe8",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B08FY3WDDJ",
+     "attributes": [
+      "synthetic hair",
+      "hair loss"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+     "price_upper": 60,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": "2211fd0f4ab5d776",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07SKN25VL",
+    "cluster": "hair loss products",
+    "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:easy apply",
+    "attr:hair extensions",
+    "attr:natural hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:easy apply",
+     "=",
+     "easy apply"
+    ],
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "ash blonde-straight(new)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ad9f7aa22a1b72d7ca4748378a4bb8a5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07SKN25VL\",[[\"color\",\"ash blonde-straight(new)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "5973a8db332a940d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B07SKN25VL",
+     "attributes": [
+      "easy apply",
+      "hair extensions",
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "ash blonde-straight(new)"
+     ],
+     "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+     "price_upper": 30,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07SKN25VL",
+    "cluster": "hair loss products",
+    "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:hair extensions",
+    "attr:natural hair",
+    "attr:synthetic hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "ash blonde-straight(new)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ad9f7aa22a1b72d7ca4748378a4bb8a5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07SKN25VL\",[[\"color\",\"ash blonde-straight(new)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "a284e41e512d47f2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B07SKN25VL",
+     "attributes": [
+      "hair extensions",
+      "natural hair",
+      "synthetic hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "ash blonde-straight(new)"
+     ],
+     "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+     "price_upper": 30,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07SKN25VL",
+    "cluster": "hair loss products",
+    "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:hair extensions",
+    "attr:natural hair",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "82c0d70aa1a01ddee4cc115ee1e25bc9",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0155HHQVS\",[]]",
+     "[\"B074HR9KR5\",[]]",
+     "[\"B07JMXKFX9\",[]]",
+     "[\"B07SKN25VL\",[]]",
+     "[\"B07V5TLJQR\",[]]",
+     "[\"B07ZR4VM17\",[]]",
+     "[\"B08762SVZ4\",[]]",
+     "[\"B08GYH1C8Y\",[]]",
+     "[\"B08HX2JFV2\",[]]",
+     "[\"B08Q3P75B4\",[]]",
+     "[\"B08Z3FHJLB\",[]]",
+     "[\"B096969VX2\",[]]",
+     "[\"B096984ST8\",[]]",
+     "[\"B09699BYXW\",[]]",
+     "[\"B096FTZZZH\",[]]",
+     "[\"B09C3PHCM9\",[]]",
+     "[\"B09HBKHQDV\",[]]",
+     "[\"B09K62T12J\",[]]",
+     "[\"B09KXRMRC9\",[]]",
+     "[\"B09M3JMXB7\",[]]",
+     "[\"B09M3JPKTW\",[]]",
+     "[\"B09N3VXZKW\",[]]",
+     "[\"B09PDPSL8F\",[]]",
+     "[\"B09PFRR4M6\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "0d76b3e8809e0095",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B07SKN25VL",
+     "attributes": [
+      "hair extensions",
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+     "price_upper": 30,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07SKN25VL",
+    "cluster": "hair loss products",
+    "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:hair extensions",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "ash blonde-straight(new)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "12b2847d024fe6c5d9fa8ed3549d075f",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07CZKHLV6\",[[\"color\",\"pale ash blonde\"]]]",
+     "[\"B07SKN25VL\",[[\"color\",\"ash blonde-straight(new)\"]]]",
+     "[\"B07SQ9ZFFD\",[[\"color\",\"ash blonde-straight\"]]]",
+     "[\"B07TWZNNL8\",[[\"color\",\"light brown & ash blonde\"]]]",
+     "[\"B07YSBK5W4\",[[\"color\",\"ash blonde & bleach blonde\"]]]",
+     "[\"B08B8S4LL5\",[[\"color\",\"ash blonde mix bleach blonde-straight hair\"]]]",
+     "[\"B08KVNKJFL\",[[\"color\",\"pale ash blonde\"]]]",
+     "[\"B08L3J3N5B\",[[\"color\",\"ash blonde-l\"]]]",
+     "[\"B08Q3P75B4\",[[\"color\",\"3 clips-#18p613 ash blonde&bleach blonde\"]]]",
+     "[\"B08QHVXHG9\",[[\"color\",\"#18 | 613 ash blonde | bleach blonde\"]]]",
+     "[\"B08RP6V5KZ\",[[\"color\",\"ash blonde - straight\"]]]",
+     "[\"B08YDCSF8G\",[[\"color\",\"ash blonde&bleach blonde\"]]]",
+     "[\"B091T8C4ZS\",[[\"color\",\"cap hair-curly-#12p24 light brown & ash blonde\"]]]",
+     "[\"B0943WF6SS\",[[\"color\",\"ash blonde&bleach blonde\"]]]",
+     "[\"B095B9DNLL\",[[\"color\",\"ash blonde\"]]]",
+     "[\"B095W93Z3Z\",[[\"color\",\"ash blonde&bleach blonde #18p613\"]]]",
+     "[\"B096M319FV\",[[\"color\",\"ash blonde\"]]]",
+     "[\"B09MHV1G8W\",[[\"color\",\"ombre brown to ash blonde\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "30746340711aa1b8",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B07SKN25VL",
+     "attributes": [
+      "hair extensions"
+     ],
+     "category": "",
+     "goal_options": [
+      "ash blonde-straight(new)"
+     ],
+     "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+     "price_upper": 30,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07SKN25VL",
+    "cluster": "hair loss products",
+    "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:hair extensions",
+    "attr:natural hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "#1b | 4 | 27 black to dark brown with caramel blonde"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "02ec2b5b72f5e260ba31cbf921cd38c6",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07SKN25VL\",[[\"color\",\"dark black-curly\"]]]",
+     "[\"B08Q3P75B4\",[[\"color\",\"3 clips-#01 dark black\"]]]",
+     "[\"B08Z3FHJLB\",[[\"color\",\"air black\"]]]",
+     "[\"B096FTZZZH\",[[\"color\",\"black\"]]]",
+     "[\"B09M3JMXB7\",[[\"color\",\"black brown\"]]]",
+     "[\"B09M3JPKTW\",[[\"color\",\"black brown\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9438334d193f4ce5",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B07SKN25VL",
+     "attributes": [
+      "hair extensions",
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "#1b | 4 | 27 black to dark brown with caramel blonde"
+     ],
+     "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+     "price_upper": 30,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07SKN25VL",
+    "cluster": "hair loss products",
+    "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+   },
+   "bound_slots": [
+    "attr:hair extensions",
+    "attr:natural hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "#1b | 18 | 60 black to ash blonde with platinum blonde"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1b5aaf7f09a729b55b41a2bf872375f2",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07SKN25VL\",[[\"color\",\"ash blonde-curly\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9148a38d70370cb4",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair loss products",
+    "goal": {
+     "asin": "B07SKN25VL",
+     "attributes": [
+      "hair extensions",
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "#1b | 18 | 60 black to ash blonde with platinum blonde"
+     ],
+     "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+     "price_upper": 30,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+     "query": "hair loss products"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B01HU10MSG",
+     "cluster": "hair loss products",
+     "name": "Shilo Wig Color Chocolate Swirl - Noriko Wigs 15\" Long Soft Layers Monofilament Top Synthetic Natural Looking Bundle w/ Comb, MaxWigs Hairloss Booklet",
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Wigs"
+    }
+   },
+   "dst": "f0bfa433247a8172",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "940a0ac94a43555b",
+   "src": "987efa7e02bec6dd"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B08FY3WDDJ",
+     "cluster": "hair loss products",
+     "name": "S-noilite Clip In Mono Topper with Bangs 100% Real Human Hair Crown Toppers with Wispy Bangs 10 Inch 32g Dark Brown Top Hairpiece For Women with Thinning Hair/Gray Hair/Short Hair/Hair Loss #2",
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+    }
+   },
+   "dst": "7e0918b55ee9dfe8",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "2211fd0f4ab5d776",
+   "src": "987efa7e02bec6dd"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:easy apply",
+      "=",
+      "easy apply"
+     ]
+    ]
+   },
+   "dst": "5973a8db332a940d",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "987efa7e02bec6dd"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:synthetic hair",
+      "=",
+      "synthetic hair"
+     ]
+    ]
+   },
+   "dst": "a284e41e512d47f2",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "987efa7e02bec6dd"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "ash blonde-straight(new)"
+     ]
+    ]
+   },
+   "dst": "0d76b3e8809e0095",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "987efa7e02bec6dd"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:natural hair",
+      "=",
+      "natural hair"
+     ]
+    ]
+   },
+   "dst": "30746340711aa1b8",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "987efa7e02bec6dd"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "ash blonde-straight(new)",
+      "#1b | 4 | 27 black to dark brown with caramel blonde"
+     ]
+    ]
+   },
+   "dst": "9438334d193f4ce5",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "987efa7e02bec6dd"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "ash blonde-straight(new)",
+      "#1b | 18 | 60 black to ash blonde with platinum blonde"
+     ]
+    ]
+   },
+   "dst": "9148a38d70370cb4",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "987efa7e02bec6dd"
+  }
+ ],
+ "env_id": "webshop_bc68cbbdf1f0c5e6",
+ "env_spec": {
+  "cluster": "hair loss products",
+  "env_id": "webshop_bc68cbbdf1f0c5e6",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B07SKN25VL",
+   "cluster": "hair loss products",
+   "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+   "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces"
+  },
+  "bound_slots": [
+   "attr:hair extensions",
+   "attr:natural hair",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "attr:natural hair",
+    "=",
+    "natural hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "ash blonde-straight(new)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "ground_truth": {
+   "hash": "c69eaa912388ecbea54de5864fc533d0",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B07SKN25VL\",[[\"color\",\"ash blonde-straight(new)\"]]]",
+    "[\"B08Q3P75B4\",[[\"color\",\"3 clips-#18p613 ash blonde&bleach blonde\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "987efa7e02bec6dd",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "hair loss products",
+   "goal": {
+    "asin": "B07SKN25VL",
+    "attributes": [
+     "hair extensions",
+     "natural hair"
+    ],
+    "category": "",
+    "goal_options": [
+     "ash blonde-straight(new)"
+    ],
+    "name": "22\"-26\" V Part Clip in Hair Extensions 3/4 Full Thick Curly Wavy Straight Clip on Synthetic Hair Extension Hairpieces",
+    "price_upper": 30,
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Extensions, Wigs & Accessories › Hairpieces",
+    "query": "hair loss products"
+   }
+  },
+  "source_record": "36df5c18d7691bf7",
+  "unbound_slots": [
+   "attr:easy apply",
+   "attr:natural hair",
+   "attr:synthetic hair",
+   "option:0"
+  ]
+ },
+ "tree_id": "4da7bb9708eab174"
+}

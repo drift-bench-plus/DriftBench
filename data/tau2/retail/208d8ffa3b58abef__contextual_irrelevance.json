@@ -1,0 +1,291 @@
+{
+ "sample_id": "208d8ffa3b58abef__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "208d8ffa3b58abef",
+ "query": "I picked up the cutest golden retriever puppy from the local shelter this morning, he\u2019s already figured out how to drag his favorite plush squirrel toy all around the living room and even tried to sneak a bite of the blueberry muffin I was eating for breakfast. I also just finished planting a whole row of sunflower seeds along my backyard fence, I\u2019m already excited to see how tall they get by the end of summer now that the weather\u2019s finally staying warm. Oh, I also wanted to let you know I need two updates to my account and order: first, please update my user profile (user ID ethan_garcia_1261) to have two addresses saved: one is 101 Highway, no second address line, New York, NY, USA, 10001, and the other is 667 Highland Drive, Suite 865, Denver, CO, USA, 80280. Second, please update the shipping address for my pending order #W9911714 to 101 Highway, no second address line, New York, NY, USA, 10001.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I picked up the cutest golden retriever puppy from the local shelter this morning, he\u2019s already figured out how to drag his favorite plush squirrel toy all around the living room and even tried to sneak a bite of the blueberry muffin I was eating for breakfast. I also just finished planting a whole row of sunflower seeds along my backyard fence, I\u2019m already excited to see how tall they get by the end of summer now that the weather\u2019s finally staying warm.",
+  "retained": [
+   "arg:0:modify_user_address:address1",
+   "arg:0:modify_user_address:address2",
+   "arg:0:modify_user_address:city",
+   "arg:0:modify_user_address:country",
+   "arg:0:modify_user_address:state",
+   "arg:0:modify_user_address:user_id",
+   "arg:0:modify_user_address:zip",
+   "arg:1:modify_pending_order_address:address1",
+   "arg:1:modify_pending_order_address:address2",
+   "arg:1:modify_pending_order_address:city",
+   "arg:1:modify_pending_order_address:country",
+   "arg:1:modify_pending_order_address:order_id",
+   "arg:1:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_address:zip",
+   "arg:2:modify_user_address:address1",
+   "arg:2:modify_user_address:address2",
+   "arg:2:modify_user_address:city",
+   "arg:2:modify_user_address:country",
+   "arg:2:modify_user_address:state",
+   "arg:2:modify_user_address:user_id",
+   "arg:2:modify_user_address:zip"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_user_address:address1",
+     "=",
+     "\"101 Highway\""
+    ],
+    [
+     "arg:0:modify_user_address:address2",
+     "=",
+     "\"\""
+    ],
+    [
+     "arg:0:modify_user_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_user_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_user_address:user_id",
+     "=",
+     "\"ethan_garcia_1261\""
+    ],
+    [
+     "arg:0:modify_user_address:zip",
+     "=",
+     "\"10001\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address1",
+     "=",
+     "\"101 Highway\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address2",
+     "=",
+     "\"\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:order_id",
+     "=",
+     "\"#W9911714\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:zip",
+     "=",
+     "\"10001\""
+    ],
+    [
+     "arg:2:modify_user_address:address1",
+     "=",
+     "\"667 Highland Drive\""
+    ],
+    [
+     "arg:2:modify_user_address:address2",
+     "=",
+     "\"Suite 865\""
+    ],
+    [
+     "arg:2:modify_user_address:city",
+     "=",
+     "\"Denver\""
+    ],
+    [
+     "arg:2:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:2:modify_user_address:state",
+     "=",
+     "\"CO\""
+    ],
+    [
+     "arg:2:modify_user_address:user_id",
+     "=",
+     "\"ethan_garcia_1261\""
+    ],
+    [
+     "arg:2:modify_user_address:zip",
+     "=",
+     "\"80280\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_user_address:address1",
+    "=",
+    "\"101 Highway\""
+   ],
+   [
+    "arg:0:modify_user_address:address2",
+    "=",
+    "\"\""
+   ],
+   [
+    "arg:0:modify_user_address:city",
+    "=",
+    "\"New York\""
+   ],
+   [
+    "arg:0:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_user_address:state",
+    "=",
+    "\"NY\""
+   ],
+   [
+    "arg:0:modify_user_address:user_id",
+    "=",
+    "\"ethan_garcia_1261\""
+   ],
+   [
+    "arg:0:modify_user_address:zip",
+    "=",
+    "\"10001\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address1",
+    "=",
+    "\"101 Highway\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address2",
+    "=",
+    "\"\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:city",
+    "=",
+    "\"New York\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "=",
+    "\"#W9911714\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:state",
+    "=",
+    "\"NY\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:zip",
+    "=",
+    "\"10001\""
+   ],
+   [
+    "arg:2:modify_user_address:address1",
+    "=",
+    "\"667 Highland Drive\""
+   ],
+   [
+    "arg:2:modify_user_address:address2",
+    "=",
+    "\"Suite 865\""
+   ],
+   [
+    "arg:2:modify_user_address:city",
+    "=",
+    "\"Denver\""
+   ],
+   [
+    "arg:2:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:2:modify_user_address:state",
+    "=",
+    "\"CO\""
+   ],
+   [
+    "arg:2:modify_user_address:user_id",
+    "=",
+    "\"ethan_garcia_1261\""
+   ],
+   [
+    "arg:2:modify_user_address:zip",
+    "=",
+    "\"80280\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

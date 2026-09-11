@@ -1,0 +1,104 @@
+{
+ "sample_id": "4797e5e8847e3e49__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "4797e5e8847e3e49",
+ "query": "My cat just knocked over my favorite potted succulent this morning, I had to spend 20 minutes cleaning soil off the carpet and making sure she didn't eat any of the leaves. Also, I was super excited to try the new matcha latte from the caf\u00e9 down the street earlier, but they accidentally gave me an oat milk one even though I asked for almond, it was still good but not exactly what I wanted. Oh, and my neighbor just dropped off a bag of homemade chocolate chip cookies they baked this weekend, they're still warm and taste amazing. Anyway, I need to exchange an item from my delivered order #W6390527: I want to swap item 8384507844 for item 7624783998, and use paypal_7644869 as the payment method for any additional costs related to the exchange.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "My cat just knocked over my favorite potted succulent this morning, I had to spend 20 minutes cleaning soil off the carpet and making sure she didn't eat any of the leaves. Also, I was super excited to try the new matcha latte from the caf\u00e9 down the street earlier, but they accidentally gave me an oat milk one even though I asked for almond, it was still good but not exactly what I wanted. Oh, and my neighbor just dropped off a bag of homemade chocolate chip cookies they baked this weekend, they're still warm and taste amazing.",
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"8384507844\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"7624783998\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W6390527\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_7644869\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"8384507844\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"7624783998\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W6390527\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_7644869\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

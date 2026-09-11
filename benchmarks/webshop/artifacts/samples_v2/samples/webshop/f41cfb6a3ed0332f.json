@@ -1,0 +1,219 @@
+{
+ "adapter": "webshop",
+ "cluster": "scrubs & body treatments",
+ "fidelity_notes": [],
+ "goal_idx": 44,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "90c33fe23e4bdded47fc4c880d2f77a9",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07FQGKJ2L\",[[\"color\",\"black\"]]]",
+   "[\"B08L4TPN5K\",[[\"color\",\"black-nylon\"]]]",
+   "[\"B099RPD1Y9\",[[\"color\",\"black\"]]]",
+   "[\"B09N3T6LM3\",[[\"color\",\"black\"]]]",
+   "[\"B09NRHVW7L\",[[\"color\",\"black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:dead skin",
+    "=",
+    "dead skin"
+   ],
+   [
+    "attr:dry skin",
+    "=",
+    "dry skin"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "48e4186a339eabad"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "black"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "in black under $20"
+   }
+  ],
+  "attempt": 3,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dead skin",
+     "=",
+     "dead skin"
+    ],
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   [
+    [
+     "attr:dead skin",
+     "=",
+     "dead skin"
+    ],
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:dead skin",
+   "attr:dry skin",
+   "price_upper"
+  ],
+  "spec_id": "44c9c8862824cac9",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a body scrub that works for dead skin and dry skin, plus a small travel-sized loofah, in black under $20.",
+ "render_attempts": 3,
+ "sample_id": "f41cfb6a3ed0332f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the scrubs & body treatments instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "333cec1c9afa1c06"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the scrubs & body treatments instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e4e1a79008f22c72"
+  },
+  {
+   "announcement": "Also, it needs to be high quality.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "94a8969bece51ff5"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c881ba6a31468dfd"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "462de9e8f40d9506"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5194ff0af0601836"
+  },
+  {
+   "announcement": "Actually, make it 12 ounce (pack of 1) instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7626914993b7ebac"
+  },
+  {
+   "announcement": "Actually, make it 10 ounce (pack of 1) instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bf845d47384531e4"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   5,
+   90
+  ],
+  "rule": "ambiguous",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a body scrub for dead and dry skin. also choose black colored one.",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "8cfe2abf4cb62ade",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,294 @@
+{
+ "sample_id": "208d8ffa3b58abef__referential_ambiguity",
+ "domain": "retail",
+ "tree_id": "208d8ffa3b58abef",
+ "query": "Hi there, could you help me update my user account address to 667 Highland Drive, Suite 865, Denver, CO, 80280, USA for my account ethan_garcia_1261? Also I need to change the shipping address for that one pending order to 101 Highway, New York, NY, 10001, USA, please.",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_user_address:address1",
+   "arg:0:modify_user_address:address2",
+   "arg:0:modify_user_address:city",
+   "arg:0:modify_user_address:country",
+   "arg:0:modify_user_address:state",
+   "arg:0:modify_user_address:user_id",
+   "arg:0:modify_user_address:zip",
+   "arg:1:modify_pending_order_address:address1",
+   "arg:1:modify_pending_order_address:address2",
+   "arg:1:modify_pending_order_address:city",
+   "arg:1:modify_pending_order_address:country",
+   "arg:1:modify_pending_order_address:state",
+   "arg:1:modify_pending_order_address:zip",
+   "arg:2:modify_user_address:address1",
+   "arg:2:modify_user_address:address2",
+   "arg:2:modify_user_address:city",
+   "arg:2:modify_user_address:country",
+   "arg:2:modify_user_address:state",
+   "arg:2:modify_user_address:user_id",
+   "arg:2:modify_user_address:zip"
+  ],
+  "hidden_slots": [
+   "arg:1:modify_pending_order_address:order_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_user_address:address1",
+     "=",
+     "\"101 Highway\""
+    ],
+    [
+     "arg:0:modify_user_address:address2",
+     "=",
+     "\"\""
+    ],
+    [
+     "arg:0:modify_user_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:0:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_user_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:0:modify_user_address:user_id",
+     "=",
+     "\"ethan_garcia_1261\""
+    ],
+    [
+     "arg:0:modify_user_address:zip",
+     "=",
+     "\"10001\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address1",
+     "=",
+     "\"101 Highway\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:address2",
+     "=",
+     "\"\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:city",
+     "=",
+     "\"New York\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:state",
+     "=",
+     "\"NY\""
+    ],
+    [
+     "arg:1:modify_pending_order_address:zip",
+     "=",
+     "\"10001\""
+    ],
+    [
+     "arg:2:modify_user_address:address1",
+     "=",
+     "\"667 Highland Drive\""
+    ],
+    [
+     "arg:2:modify_user_address:address2",
+     "=",
+     "\"Suite 865\""
+    ],
+    [
+     "arg:2:modify_user_address:city",
+     "=",
+     "\"Denver\""
+    ],
+    [
+     "arg:2:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:2:modify_user_address:state",
+     "=",
+     "\"CO\""
+    ],
+    [
+     "arg:2:modify_user_address:user_id",
+     "=",
+     "\"ethan_garcia_1261\""
+    ],
+    [
+     "arg:2:modify_user_address:zip",
+     "=",
+     "\"80280\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "3cb66f7a31a5c5fe"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_user_address:address1",
+    "=",
+    "\"101 Highway\""
+   ],
+   [
+    "arg:0:modify_user_address:address2",
+    "=",
+    "\"\""
+   ],
+   [
+    "arg:0:modify_user_address:city",
+    "=",
+    "\"New York\""
+   ],
+   [
+    "arg:0:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_user_address:state",
+    "=",
+    "\"NY\""
+   ],
+   [
+    "arg:0:modify_user_address:user_id",
+    "=",
+    "\"ethan_garcia_1261\""
+   ],
+   [
+    "arg:0:modify_user_address:zip",
+    "=",
+    "\"10001\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address1",
+    "=",
+    "\"101 Highway\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:address2",
+    "=",
+    "\"\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:city",
+    "=",
+    "\"New York\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:order_id",
+    "=",
+    "\"#W9911714\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:state",
+    "=",
+    "\"NY\""
+   ],
+   [
+    "arg:1:modify_pending_order_address:zip",
+    "=",
+    "\"10001\""
+   ],
+   [
+    "arg:2:modify_user_address:address1",
+    "=",
+    "\"667 Highland Drive\""
+   ],
+   [
+    "arg:2:modify_user_address:address2",
+    "=",
+    "\"Suite 865\""
+   ],
+   [
+    "arg:2:modify_user_address:city",
+    "=",
+    "\"Denver\""
+   ],
+   [
+    "arg:2:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:2:modify_user_address:state",
+    "=",
+    "\"CO\""
+   ],
+   [
+    "arg:2:modify_user_address:user_id",
+    "=",
+    "\"ethan_garcia_1261\""
+   ],
+   [
+    "arg:2:modify_user_address:zip",
+    "=",
+    "\"80280\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:1:modify_pending_order_address:order_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

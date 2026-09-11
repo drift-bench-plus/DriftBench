@@ -1,0 +1,282 @@
+{
+ "sample_id": "0fb102ac92d931f7",
+ "tree_id": "9cfee87f9d3a9079",
+ "adapter": "webshop",
+ "cluster": "women's shorts",
+ "goal_idx": 189,
+ "split": "test",
+ "source_instruction": "i'm looking for high waisted denim shorts distressed jeans for women.",
+ "query": "Hey, I\u2019m looking for women\u2019s shorts right now. I need ones with a button closure, slim fit, and they absolutely have to be big for me, plus they need to have a built-in reusable silicone straw holder attached to the side pocket, and they can\u2019t cost more than $20. Wait, make sure the button closure is secure too, I don\u2019t want them popping open when I\u2019m out walking.",
+ "strategy_ids": [
+  "lexical_ambiguity",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "lexical_ambiguity+irrelevant_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "lexical_ambiguity",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "big",
+    "placements": [
+     [
+      "option:0",
+      "large"
+     ],
+     [
+      "option:0",
+      "extra large"
+     ]
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "text": "they need to have a built-in reusable silicone straw holder attached to the side pocket",
+    "condition": null
+   },
+   {
+    "text": "make sure the button closure is secure too, I don\u2019t want them popping open when I\u2019m out walking",
+    "condition": [
+     "attr:button closure",
+     "=",
+     "secure (not popping open when walking)"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:button closure",
+   "attr:slim fit",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:button closure",
+     "=",
+     "button closure"
+    ],
+    [
+     "attr:slim fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ],
+    [
+     "attr:button closure",
+     "=",
+     "secure (not popping open when walking)"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "882934652ef3d02f"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 50,
+  "lit_card": 0,
+  "components": {
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     50,
+     49
+    ],
+    "true_card": 50,
+    "readings": 2
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 50,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "aa65457558c46e24",
+  "conditions": [
+   [
+    "attr:button closure",
+    "=",
+    "button closure"
+   ],
+   [
+    "attr:slim fit",
+    "=",
+    "slim fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 50,
+  "value": [
+   "[\"B072BYKXHD\",[[\"size\",\"large\"]]]",
+   "[\"B07BHG46RP\",[[\"size\",\"large\"]]]",
+   "[\"B07KL4BMJG\",[[\"size\",\"large\"]]]",
+   "[\"B07PYTZ7Z5\",[[\"size\",\"large\"]]]",
+   "[\"B07PYZ9RN7\",[[\"size\",\"large\"]]]",
+   "[\"B07R8KC9MM\",[[\"size\",\"large\"]]]",
+   "[\"B07RPNJXQQ\",[[\"size\",\"large\"]]]",
+   "[\"B082TKHMVN\",[[\"size\",\"large\"]]]",
+   "[\"B086JQZTJR\",[[\"size\",\"large\"]]]",
+   "[\"B089DVSFXZ\",[[\"size\",\"x-large\"]]]",
+   "[\"B08BBY1QSC\",[[\"size\",\"large\"]]]",
+   "[\"B08BR2QXF4\",[[\"size\",\"large\"]]]",
+   "[\"B08MJW1K9B\",[[\"size\",\"large\"]]]",
+   "[\"B08Q77RYN8\",[[\"size\",\"large\"]]]",
+   "[\"B08RB6R2Q9\",[[\"size\",\"large\"]]]",
+   "[\"B08SBM9636\",[[\"size\",\"large\"]]]",
+   "[\"B08SBMGKQD\",[[\"size\",\"large\"]]]",
+   "[\"B08SJ7C9VW\",[[\"size\",\"large\"]]]",
+   "[\"B08XMQXW7K\",[[\"size\",\"x-large\"]]]",
+   "[\"B08ZXMF6HN\",[[\"size\",\"xx-large\"]]]",
+   "[\"B091CTCMFQ\",[[\"size\",\"large\"]]]",
+   "[\"B091FGZY28\",[[\"size\",\"large\"]]]",
+   "[\"B091L8MDZZ\",[[\"size\",\"large\"]]]",
+   "[\"B0925SJJD3\",[[\"size\",\"large\"]]]",
+   "[\"B093H9TCF8\",[[\"size\",\"large\"]]]",
+   "[\"B096LQSTVM\",[[\"size\",\"large\"]]]",
+   "[\"B096LRPJYR\",[[\"size\",\"large\"]]]",
+   "[\"B096LRWC7X\",[[\"size\",\"large\"]]]",
+   "[\"B096S435NG\",[[\"size\",\"large\"]]]",
+   "[\"B096SNC5DJ\",[[\"size\",\"large\"]]]",
+   "[\"B0976T9DY8\",[[\"size\",\"large\"]]]",
+   "[\"B097HMYRFM\",[[\"size\",\"large\"]]]",
+   "[\"B097HN61Y3\",[[\"size\",\"large\"]]]",
+   "[\"B097N7CMV8\",[[\"size\",\"large\"]]]",
+   "[\"B097N8C2RW\",[[\"size\",\"large\"]]]",
+   "[\"B097NFY74J\",[[\"size\",\"large\"]]]",
+   "[\"B098PXYQK8\",[[\"size\",\"large\"]]]",
+   "[\"B09F5Q16WG\",[[\"size\",\"large\"]]]",
+   "[\"B09KRVBSG6\",[[\"size\",\"large\"]]]",
+   "[\"B09NR5SH6C\",[[\"size\",\"large\"]]]",
+   "[\"B09PZYPVP7\",[[\"size\",\"large\"]]]",
+   "[\"B09Q3KJKW1\",[[\"size\",\"large\"]]]",
+   "[\"B09QFVG8P6\",[[\"size\",\"large\"]]]",
+   "[\"B09QFX2G29\",[[\"size\",\"large\"]]]",
+   "[\"B09QKBR7LG\",[[\"size\",\"large\"]]]",
+   "[\"B09QL3D2HD\",[[\"size\",\"large\"]]]",
+   "[\"B09RZVC64G\",[[\"size\",\"large\"]]]",
+   "[\"B09SGG1PSK\",[[\"size\",\"large\"]]]",
+   "[\"B09STMDJ8J\",[[\"size\",\"large\"]]]",
+   "[\"B09SYKXKP4\",[[\"size\",\"large\"]]]"
+  ],
+  "hash": "287d099a552a7d970f3873cf379e6c30"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "b53410b3de234fbb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f908266184f596e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's shorts instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "033af430dd5e19f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be relaxed fit."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9cb85c427584c708",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cargo pants."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2adecee36a55cdcc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "501a949367f70ba5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "4b8fc187311d922f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01 beige instead of large."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c11ca83c08dd730e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #03 gray instead of large."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

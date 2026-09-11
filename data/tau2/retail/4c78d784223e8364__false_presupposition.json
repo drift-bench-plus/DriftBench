@@ -1,0 +1,185 @@
+{
+ "sample_id": "4c78d784223e8364__false_presupposition",
+ "domain": "retail",
+ "tree_id": "4c78d784223e8364",
+ "query": "Since you probably can't process returns to the gift card gift_card_3491931, you can refund that amount to my account balance instead, and first cancel my two pending orders #W4836353 and #W7342738 for the reason that they're no longer needed, then process returns for the items 5669664287, 4900990404, 9862136885 and 6777246137 from delivered order #W4597054 and the item 8277474082 from delivered order #W7773202.",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "false_presupposition",
+  "family": "premise",
+  "mask_kind": "falsify",
+  "kinds": [
+   "falsify"
+  ],
+  "components": [
+   "false_presupposition"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you probably can't process returns to the gift card gift_card_3491931",
+    "condition": null,
+    "about": [
+     "arg:2:return_delivered_order_items:payment_method_id",
+     "\"gift_card_3491931\""
+    ],
+    "alternative": [
+     "arg:2:return_delivered_order_items:payment_method_id",
+     "account balance"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason",
+   "arg:2:return_delivered_order_items:item_ids",
+   "arg:2:return_delivered_order_items:order_id",
+   "arg:2:return_delivered_order_items:payment_method_id",
+   "arg:3:return_delivered_order_items:item_ids",
+   "arg:3:return_delivered_order_items:order_id",
+   "arg:3:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W4836353\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:1:cancel_pending_order:order_id",
+     "=",
+     "\"#W7342738\""
+    ],
+    [
+     "arg:1:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:item_ids",
+     "=",
+     "[\"5669664287\",\"4900990404\",\"9862136885\",\"6777246137\"]"
+    ],
+    [
+     "arg:2:return_delivered_order_items:order_id",
+     "=",
+     "\"#W4597054\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:payment_method_id",
+     "=",
+     "account balance"
+    ],
+    [
+     "arg:3:return_delivered_order_items:item_ids",
+     "=",
+     "[\"8277474082\"]"
+    ],
+    [
+     "arg:3:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7773202\""
+    ],
+    [
+     "arg:3:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_3491931\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "6231689f2c2090e3"
+ },
+ "signature": {
+  "rule": "presupposed",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W4836353\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:1:cancel_pending_order:order_id",
+    "=",
+    "\"#W7342738\""
+   ],
+   [
+    "arg:1:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:item_ids",
+    "=",
+    "[\"5669664287\",\"4900990404\",\"9862136885\",\"6777246137\"]"
+   ],
+   [
+    "arg:2:return_delivered_order_items:order_id",
+    "=",
+    "\"#W4597054\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_3491931\""
+   ],
+   [
+    "arg:3:return_delivered_order_items:item_ids",
+    "=",
+    "[\"8277474082\"]"
+   ],
+   [
+    "arg:3:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7773202\""
+   ],
+   [
+    "arg:3:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_3491931\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:2:return_delivered_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

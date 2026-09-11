@@ -1,0 +1,203 @@
+{
+ "sample_id": "99cf8e2152bb7033__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "99cf8e2152bb7033",
+ "query": "I just spent the whole afternoon planting hydrangea bushes in my backyard, and I\u2019m really hoping they survive the upcoming warm spell we\u2019re supposed to get next week. I also just tried that new matcha boba shop downtown that everyone\u2019s been posting about, and their taro milk tea with extra pearls was way better than I expected, I\u2019ll definitely be going back this weekend. Oh, and my cat just knocked over my potted succulent off the windowsill an hour ago, I had to spend ages cleaning up the soil off the floor. Anyway, I need to make a few changes to my pending orders: first, for order #W5056519, please update the shipping address to 380 Maple Drive, Suite 960, San Diego, CA 92101, USA, and also swap item 7902309762 in that order for item 1573035764, charging the difference to payment method credit_card_3095586. Then, please cancel my other pending order #W5995614, the reason is I ordered it by mistake.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the whole afternoon planting hydrangea bushes in my backyard, and I\u2019m really hoping they survive the upcoming warm spell we\u2019re supposed to get next week. I also just tried that new matcha boba shop downtown that everyone\u2019s been posting about, and their taro milk tea with extra pearls was way better than I expected, I\u2019ll definitely be going back this weekend. Oh, and my cat just knocked over my potted succulent off the windowsill an hour ago, I had to spend ages cleaning up the soil off the floor.",
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_pending_order_items:item_ids",
+   "arg:1:modify_pending_order_items:new_item_ids",
+   "arg:1:modify_pending_order_items:order_id",
+   "arg:1:modify_pending_order_items:payment_method_id",
+   "arg:2:cancel_pending_order:order_id",
+   "arg:2:cancel_pending_order:reason"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"380 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 960\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"San Diego\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W5056519\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"CA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"92101\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"7902309762\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"1573035764\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W5056519\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3095586\""
+    ],
+    [
+     "arg:2:cancel_pending_order:order_id",
+     "=",
+     "\"#W5995614\""
+    ],
+    [
+     "arg:2:cancel_pending_order:reason",
+     "=",
+     "\"ordered by mistake\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"380 Maple Drive\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 960\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"San Diego\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W5056519\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"CA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"92101\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:item_ids",
+    "=",
+    "[\"7902309762\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"1573035764\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:order_id",
+    "=",
+    "\"#W5056519\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_3095586\""
+   ],
+   [
+    "arg:2:cancel_pending_order:order_id",
+    "=",
+    "\"#W5995614\""
+   ],
+   [
+    "arg:2:cancel_pending_order:reason",
+    "=",
+    "\"ordered by mistake\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

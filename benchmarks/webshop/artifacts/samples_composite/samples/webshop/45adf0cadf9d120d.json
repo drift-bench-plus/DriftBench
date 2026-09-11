@@ -1,0 +1,207 @@
+{
+ "sample_id": "45adf0cadf9d120d",
+ "tree_id": "8beb5f007cd49886",
+ "adapter": "webshop",
+ "cluster": "deodorants & antiperspirants",
+ "goal_idx": 358,
+ "split": "test",
+ "source_instruction": "what deodorants do you have that are alcohol free and very long lasting?",
+ "query": "I stopped by the food court on my way over here just now, and the new mango boba stand right by the entrance had the longest line I\u2019ve seen all month\u2014people were snaked all the way past the pretzel stand, holding those bright orange cups, and I swear I could smell the sweet ripe mango and chewy tapioca even from three storefronts away. I ran into my old neighbor Lila while I was waiting for my friend to grab her order, and she was telling me her rescue tabby just figured out how to open the kitchen cabinet that holds all her fancy ceramic mugs, so she\u2019s had to stack all her heavy cookbooks in front of the door to keep him from knocking everything onto the tile floor. The weather\u2019s been so weirdly muggy this week too, even with the breeze coming through the mall skylights, my cotton shirt was sticking a little to my shoulders before I even made it halfway down this row of stores. I\u2019ve heard there are deodorant and antiperspirant options right in this section that are totally alcohol free, with no harsh alcohol ingredients at all, the kind that holds up well enough for regular use. I\u2019ve also heard none of those options sit over that one price limit I always stick to.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "insufficient_information",
+  "indirect_intent",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+insufficient_information+indirect_intent+referential_ambiguity",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "insufficient_information",
+   "indirect_intent",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "attr:long lasting"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:long lasting"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the food court on my way over here just now, and the new mango boba stand right by the entrance had the longest line I\u2019ve seen all month\u2014people were snaked all the way past the pretzel stand, holding those bright orange cups, and I swear I could smell the sweet ripe mango and chewy tapioca even from three storefronts away. I ran into my old neighbor Lila while I was waiting for my friend to grab her order, and she was telling me her rescue tabby just figured out how to open the kitchen cabinet that holds all her fancy ceramic mugs, so she\u2019s had to stack all her heavy cookbooks in front of the door to keep him from knocking everything onto the tile floor. The weather\u2019s been so weirdly muggy this week too, even with the breeze coming through the mall skylights, my cotton shirt was sticking a little to my shoulders before I even made it halfway down this row of stores.",
+  "retained": [
+   "attr:alcohol free"
+  ],
+  "hidden_slots": [
+   "attr:long lasting",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:alcohol free",
+     "=",
+     "alcohol free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "6eaa2d85c892000e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 11,
+  "lit_card": 86,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 39,
+    "true_card": 11,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 16,
+    "true_card": 11,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "9e4803fe86169ce2",
+  "conditions": [
+   [
+    "attr:alcohol free",
+    "=",
+    "alcohol free"
+   ],
+   [
+    "attr:long lasting",
+    "=",
+    "long lasting"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:long lasting",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 11,
+  "value": [
+   "[\"B00BN9OW6K\",[]]",
+   "[\"B013UKOWAA\",[]]",
+   "[\"B01N7E0O2P\",[]]",
+   "[\"B076391VVY\",[]]",
+   "[\"B07PTVLHDT\",[]]",
+   "[\"B07SV8N5JW\",[]]",
+   "[\"B0874W6L83\",[]]",
+   "[\"B08TNZK3ZM\",[]]",
+   "[\"B094NXKBT6\",[]]",
+   "[\"B09MZKP5ZT\",[]]",
+   "[\"B09MZL9CMT\",[]]"
+  ],
+  "hash": "100c49ccd741d272926cad1335034ae6"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1e74e8c9f7b4475b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the deodorants & antiperspirants instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "d445613bda664ed7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the deodorants & antiperspirants instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "5575f5845cbead32",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dermatologist tested."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "dc12910e077290f8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be sulfate free."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "7bfb9a59e93c19a3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a8ffeff40ee86d3c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "88e226262c673689",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 20."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d9178178ff28c649",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 instead of 20."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

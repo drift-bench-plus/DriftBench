@@ -1,0 +1,126 @@
+{
+ "sample_id": "70177a43dedc3557__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "70177a43dedc3557",
+ "query": "I just got back from picking up my new cat from the animal shelter this afternoon, she\u2019s the cutest little tabby with white paws and a tiny pink nose, I\u2019ve already set up a little cat tree by my window so she can watch the birds outside. Oh and I stopped at the bakery on my way home and picked up a matcha scone and a lavender latte, they were both so good I\u2019m already thinking about going back tomorrow to get another one to share with my roommate. My phone isn\u2019t connecting to the internet at all right now, I checked and airplane mode is turned on, my network preference seems to be set wrong, the WiFi calling feature isn\u2019t working properly, I got a notification that I\u2019ve exceeded my monthly data usage limit, I think my SIM card might be unseated, and I\u2019m currently abroad right now and I have roaming turned off so I\u2019m not sure what to do to get my service working again.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from picking up my new cat from the animal shelter this afternoon, she\u2019s the cutest little tabby with white paws and a tiny pink nose, I\u2019ve already set up a little cat tree by my window so she can watch the birds outside. Oh and I stopped at the bakery on my way home and picked up a matcha scone and a lavender latte, they were both so good I\u2019m already thinking about going back tomorrow to get another one to share with my roommate.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:bad_wifi_calling",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

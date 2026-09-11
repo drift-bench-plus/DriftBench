@@ -1,0 +1,780 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B089Z2S9XT",
+    "cluster": "non-dairy milks",
+    "name": "DaVinci Gourmet Sugar-Free Egg Nog Syrup, 25.4 Ounce (Pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "egg nog"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "18e99b3e2fb9e702fec43e70fc7d3287",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B089Z2S9XT\",[[\"flavor name\",\"egg nog\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "67237a1870713a0b",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B089Z2S9XT",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "egg nog"
+     ],
+     "name": "DaVinci Gourmet Sugar-Free Egg Nog Syrup, 25.4 Ounce (Pack of 4)",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": "4de48923debc5582",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07234YXYJ",
+    "cluster": "non-dairy milks",
+    "name": "Pyure Organic Liquid Vanilla Stevia Drops | Stevia Liquid Sweetener Keto Sugar Substitutes | Zero Calorie, Zero Sugar, Zero Carb | Plant-Based Sugar Free Liquid Stevia Extract |1.8 oz (1 Pack)",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Syrups, Sugars & Sweeteners › Sugar Substitutes › Stevia"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "simply sweet"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "4bb098464e03d27a13a9b63fdefb1962",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07234YXYJ\",[[\"flavor name\",\"simply sweet\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "e5958b68e2938544",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B07234YXYJ",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "simply sweet"
+     ],
+     "name": "Pyure Organic Liquid Vanilla Stevia Drops | Stevia Liquid Sweetener Keto Sugar Substitutes | Zero Calorie, Zero Sugar, Zero Carb | Plant-Based Sugar Free Liquid Stevia Extract |1.8 oz (1 Pack)",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Syrups, Sugars & Sweeteners › Sugar Substitutes › Stevia",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": "ba5f5c3dcaa867b3",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B06XSGZKC7",
+    "cluster": "non-dairy milks",
+    "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "attr:non gmo",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "cacao nibs"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "54bc8fd504fcf5b423e9ccca31090840",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B06XSGZKC7\",[[\"flavor\",\"cacao nibs\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "11ff0c6efeeced73",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B06XSGZKC7",
+     "attributes": [
+      "certified organic",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [
+      "cacao nibs"
+     ],
+     "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B06XSGZKC7",
+    "cluster": "non-dairy milks",
+    "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "attr:hot chocolate",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "attr:hot chocolate",
+     "=",
+     "hot chocolate"
+    ],
+    [
+     "option:0",
+     "=",
+     "cacao nibs"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "c81c0663332734a565652ec9c48c51ad",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08VYDSFV8\",[[\"flavor name\",\"cacao nibs\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "0b50145e807237a5",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B06XSGZKC7",
+     "attributes": [
+      "certified organic",
+      "hot chocolate"
+     ],
+     "category": "",
+     "goal_options": [
+      "cacao nibs"
+     ],
+     "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B06XSGZKC7",
+    "cluster": "non-dairy milks",
+    "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "da1315ae4f139e5b0ff8c6ea2df3d9b1",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000ISZ310\",[]]",
+     "[\"B000N1ZB6Y\",[]]",
+     "[\"B001JU81ZG\",[]]",
+     "[\"B004JM3ABG\",[]]",
+     "[\"B009IVD4D2\",[]]",
+     "[\"B00DS842HS\",[]]",
+     "[\"B00EFE7R8K\",[]]",
+     "[\"B00G4E3OFY\",[]]",
+     "[\"B00KVM340A\",[]]",
+     "[\"B00P6TUO5G\",[]]",
+     "[\"B00ZDO6KMA\",[]]",
+     "[\"B014VGMLCI\",[]]",
+     "[\"B015QHXVI4\",[]]",
+     "[\"B01D3IVPWM\",[]]",
+     "[\"B01I08JRK2\",[]]",
+     "[\"B06VZ3SRGD\",[]]",
+     "[\"B06XSGZKC7\",[]]",
+     "[\"B071XNPN71\",[]]",
+     "[\"B074WMFNS2\",[]]",
+     "[\"B074XH22W7\",[]]",
+     "[\"B0756D1D39\",[]]",
+     "[\"B07811Q1PR\",[]]",
+     "[\"B07BWHHNF3\",[]]",
+     "[\"B07F28PBPD\",[]]",
+     "[\"B07FT1MK7G\",[]]",
+     "[\"B07NJ7P7S8\",[]]",
+     "[\"B07Q9FNQ32\",[]]",
+     "[\"B07W5X55RV\",[]]",
+     "[\"B07W7NFF7L\",[]]",
+     "[\"B07XM9P3NX\",[]]",
+     "[\"B083XYPK1X\",[]]",
+     "[\"B08F5FGN27\",[]]",
+     "[\"B08FXT47DV\",[]]",
+     "[\"B08JZLN2WL\",[]]",
+     "[\"B08VYDSFV8\",[]]",
+     "[\"B08W1WFQMW\",[]]",
+     "[\"B0971SBWGG\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "1ab4d9e6aa90e05e",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B06XSGZKC7",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B06XSGZKC7",
+    "cluster": "non-dairy milks",
+    "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "1 pound (pack of 6)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "163c41c57aa4d1ef8e7f2a41bdd98e29",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B004JM3ABG\",[[\"size\",\"pack of 3\"]]]",
+     "[\"B009IVD4D2\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+     "[\"B00G4E3OFY\",[[\"size\",\"1.18 pound (pack of 1)\"]]]",
+     "[\"B00P6TUO5G\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+     "[\"B015QHXVI4\",[[\"size\",\"1 pound\"]]]",
+     "[\"B01I08JRK2\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+     "[\"B06XSGZKC7\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+     "[\"B07BWHHNF3\",[[\"size\",\"6-pack\"]]]",
+     "[\"B07Q9FNQ32\",[[\"size\",\"1 pound\"]]]",
+     "[\"B08JZLN2WL\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+     "[\"B08VYDSFV8\",[[\"size\",\"16 ounce (pack of 1)\"]]]",
+     "[\"B0971SBWGG\",[[\"size\",\"1 pound (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "718f5da5d5c4ef46",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B06XSGZKC7",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [
+      "1 pound (pack of 6)"
+     ],
+     "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B06XSGZKC7",
+    "cluster": "non-dairy milks",
+    "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "1 pound"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "38fc24ad4fbe08f93f0c28a4d142ffbb",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B009IVD4D2\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+     "[\"B00G4E3OFY\",[[\"size\",\"1.18 pound (pack of 1)\"]]]",
+     "[\"B00P6TUO5G\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+     "[\"B015QHXVI4\",[[\"size\",\"1 pound\"]]]",
+     "[\"B01I08JRK2\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+     "[\"B06XSGZKC7\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+     "[\"B07Q9FNQ32\",[[\"size\",\"1 pound\"]]]",
+     "[\"B08JZLN2WL\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+     "[\"B0971SBWGG\",[[\"size\",\"1 pound (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "25b6c0760aa901f4",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B06XSGZKC7",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [
+      "1 pound"
+     ],
+     "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B06XSGZKC7",
+    "cluster": "non-dairy milks",
+    "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "cacao nibs"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2dffe4d99c272f21066a35be27c00557",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B06XSGZKC7\",[[\"flavor\",\"cacao nibs\"]]]",
+     "[\"B08VYDSFV8\",[[\"flavor name\",\"cacao nibs\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "b01e98e00df591ed",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B06XSGZKC7",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [
+      "cacao nibs"
+     ],
+     "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+     "price_upper": 1000000,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B089Z2S9XT",
+     "cluster": "non-dairy milks",
+     "name": "DaVinci Gourmet Sugar-Free Egg Nog Syrup, 25.4 Ounce (Pack of 4)",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups"
+    }
+   },
+   "dst": "67237a1870713a0b",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "4de48923debc5582",
+   "src": "a68891af7741449d"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07234YXYJ",
+     "cluster": "non-dairy milks",
+     "name": "Pyure Organic Liquid Vanilla Stevia Drops | Stevia Liquid Sweetener Keto Sugar Substitutes | Zero Calorie, Zero Sugar, Zero Carb | Plant-Based Sugar Free Liquid Stevia Extract |1.8 oz (1 Pack)",
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Syrups, Sugars & Sweeteners › Sugar Substitutes › Stevia"
+    }
+   },
+   "dst": "e5958b68e2938544",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "ba5f5c3dcaa867b3",
+   "src": "a68891af7741449d"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:non gmo",
+      "=",
+      "non gmo"
+     ]
+    ]
+   },
+   "dst": "11ff0c6efeeced73",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "a68891af7741449d"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:hot chocolate",
+      "=",
+      "hot chocolate"
+     ]
+    ]
+   },
+   "dst": "0b50145e807237a5",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "a68891af7741449d"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "cacao nibs"
+     ]
+    ]
+   },
+   "dst": "1ab4d9e6aa90e05e",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "a68891af7741449d"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "cacao nibs",
+      "1 pound (pack of 6)"
+     ]
+    ]
+   },
+   "dst": "718f5da5d5c4ef46",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "a68891af7741449d"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "cacao nibs",
+      "1 pound"
+     ]
+    ]
+   },
+   "dst": "25b6c0760aa901f4",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "a68891af7741449d"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      20
+     ]
+    ]
+   },
+   "dst": "b01e98e00df591ed",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "a68891af7741449d"
+  }
+ ],
+ "env_id": "webshop_9d7f93bba691e1ed",
+ "env_spec": {
+  "cluster": "non-dairy milks",
+  "env_id": "webshop_9d7f93bba691e1ed",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B06XSGZKC7",
+   "cluster": "non-dairy milks",
+   "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+   "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+  },
+  "bound_slots": [
+   "attr:certified organic",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:certified organic",
+    "=",
+    "certified organic"
+   ],
+   [
+    "option:0",
+    "=",
+    "cacao nibs"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "ground_truth": {
+   "hash": "2dffe4d99c272f21066a35be27c00557",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B06XSGZKC7\",[[\"flavor\",\"cacao nibs\"]]]",
+    "[\"B08VYDSFV8\",[[\"flavor name\",\"cacao nibs\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "a68891af7741449d",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "non-dairy milks",
+   "goal": {
+    "asin": "B06XSGZKC7",
+    "attributes": [
+     "certified organic"
+    ],
+    "category": "",
+    "goal_options": [
+     "cacao nibs"
+    ],
+    "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+    "price_upper": 20,
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa",
+    "query": "non-dairy milks"
+   }
+  },
+  "source_record": "1d47f577b27cc337",
+  "unbound_slots": [
+   "attr:hot chocolate",
+   "attr:non gmo",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "7e03f38aa847204b"
+}

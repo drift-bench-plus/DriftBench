@@ -1,0 +1,174 @@
+{
+ "adapter": "webshop",
+ "cluster": "body care",
+ "fidelity_notes": [],
+ "goal_idx": 10,
+ "ground_truth": {
+  "cardinality": 9,
+  "hash": "1dfd531d953bd15d0f3978c308a1cdf6",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00OQ1ZKO0\",[[\"scent\",\"fresh\"]]]",
+   "[\"B07NNXYHNM\",[[\"scent\",\"invigorating ocean-fresh fragrance\"]]]",
+   "[\"B07TFHZT47\",[[\"scent\",\"fresh sea salt\"]]]",
+   "[\"B0837311RV\",[[\"scent\",\"active + fresh\"]]]",
+   "[\"B086K1S96X\",[[\"scent\",\"extra fresh\"]]]",
+   "[\"B0875R9D9Q\",[[\"style\",\"fresh and fruity\"]]]",
+   "[\"B087Y28XLM\",[[\"scent\",\"fresh\"]]]",
+   "[\"B08DDYN4GB\",[[\"style\",\"fresh fusion\"]]]",
+   "[\"B08ZG91F9V\",[[\"scent\",\"fresh pomelo\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:dry skin",
+    "=",
+    "dry skin"
+   ],
+   [
+    "option:0",
+    "=",
+    "fresh"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "e528bc01f86f4414"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "fresh"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent an hour trying to fix my wobbly bookshelf last night, and I swear every screw I grabbed was the wrong size. My cat kept batting at the washers I laid out, making it take twice as long as it should have. I even knocked over a potted succulent and got dirt all over my rug, which I had to vacuum up mid-project. Anyway,",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:dry skin",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent an hour trying to fix my wobbly bookshelf last night, and I swear every screw I grabbed was the wrong size. My cat kept batting at the washers I laid out, making it take twice as long as it should have. I even knocked over a potted succulent and got dirt all over my rug, which I had to vacuum up mid-project. Anyway, I’m looking for body care products for dry skin, I’d prefer a fresh option, and my budget is under $20.",
+ "render_attempts": 1,
+ "sample_id": "55bfd8623346e94d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the body care instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "44da8667d447c513"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the body care instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b7549c1d6038c0f0"
+  },
+  {
+   "announcement": "Also, it needs to be gluten free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "472cbbfd796b790d"
+  },
+  {
+   "announcement": "Also, it needs to be clinically proven.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "89313d391a559d1d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6aa9bbbf0d6a16e5"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b7898de2d8a7134d"
+  },
+  {
+   "announcement": "Actually, make it 101.2 ounce instead of fresh.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "887ef28075d55a56"
+  },
+  {
+   "announcement": "Actually, make it 12 fl oz (pack of 1) instead of fresh.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c5cf16a76ef4d72c"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 9,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 9,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking fresh scent body lotion for dry skin.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "6a8dd7045af7540c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

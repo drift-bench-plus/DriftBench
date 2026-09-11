@@ -1,0 +1,185 @@
+{
+ "adapter": "webshop",
+ "cluster": "beds",
+ "fidelity_notes": [],
+ "goal_idx": 357,
+ "ground_truth": {
+  "cardinality": 20,
+  "hash": "4348cdc67aeebb7fb1ea60035b441e23",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07423LL3H\",[[\"color\",\"deep blue\"]]]",
+   "[\"B07MBLBPC4\",[[\"color\",\"blue - faux velvet\"]]]",
+   "[\"B07THG63LT\",[[\"color\",\"blue velvet\"]]]",
+   "[\"B07WVW9RYD\",[[\"color\",\"blue velvet\"]]]",
+   "[\"B08W57CYQM\",[[\"color\",\"blue line\"]]]",
+   "[\"B08ZS646HV\",[[\"color\",\"b-blue\"]]]",
+   "[\"B091L91HP8\",[[\"color\",\"blue\"]]]",
+   "[\"B092VQFRTC\",[[\"color\",\"blue\"]]]",
+   "[\"B0943N4ZJH\",[[\"color\",\"dark blue velvet\"]]]",
+   "[\"B09784LHM6\",[[\"color\",\"blue\"]]]",
+   "[\"B097GJG1RR\",[[\"color\",\"blue\"]]]",
+   "[\"B09997ZQKB\",[[\"color\",\"blue\"]]]",
+   "[\"B099Z8LLSF\",[[\"color\",\"blue\"]]]",
+   "[\"B09K43T2JT\",[[\"color\",\"blue\"]]]",
+   "[\"B09KN56VFY\",[[\"color\",\"blue bunk bed\"]]]",
+   "[\"B09M8HFXDJ\",[[\"color\",\"blue\"]]]",
+   "[\"B09NQXDCJM\",[[\"color\",\"blue +trundle\"]]]",
+   "[\"B09Q8DRTQH\",[[\"color\",\"blue\"]]]",
+   "[\"B09QFYRHN5\",[[\"color\",\"blue\"]]]",
+   "[\"B09QFZ2HZ8\",[[\"color\",\"blue\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "blue velvet"
+   ],
+   [
+    "price_upper",
+    "<=",
+    470
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "c9335cd7ae304a11"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "blue velvet"
+    ],
+    [
+     "price_upper",
+     "<=",
+     470
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning trying to train my new tabby cat to stop knocking over my potted snake plants, and I swear he’s figured out how to open the snack cabinet to steal tuna treats. My neighbor also dropped off a jar of homemade peach jam yesterday that’s so sweet it’s perfect on warm toast with butter. I’ve been meaning to pick up a new yoga mat too, since my old one got all scuffed up when I took it to the park last weekend.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:living room",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning trying to train my new tabby cat to stop knocking over my potted snake plants, and I swear he’s figured out how to open the snack cabinet to steal tuna treats. My neighbor also dropped off a jar of homemade peach jam yesterday that’s so sweet it’s perfect on warm toast with butter. I’ve been meaning to pick up a new yoga mat too, since my old one got all scuffed up when I took it to the park last weekend. I’m looking for a blue velvet piece for my living room, with a price limit of $470.",
+ "render_attempts": 1,
+ "sample_id": "f9e2148e4c132807",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beds instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "76981513bf93d917"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beds instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b41f437a8930bf97"
+  },
+  {
+   "announcement": "Also, it needs to be coated steel.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4ddcbc4c842a41e4"
+  },
+  {
+   "announcement": "Also, it needs to be dining room.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "741b7c4b9ea7771c"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "22f609db418a4ac4"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "85e28a76865c4767"
+  },
+  {
+   "announcement": "Actually, make it #1 white instead of blue velvet.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "368b3006d9b2290c"
+  },
+  {
+   "announcement": "Actually, make it 3pc king(102\"x90\") instead of blue velvet.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "eb9bd9130bb873c8"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 20,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 20,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a futon set that is blue velvet",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "55123162223a05bb",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

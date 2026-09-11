@@ -1,0 +1,205 @@
+{
+ "sample_id": "842a470fc673cc98",
+ "tree_id": "6a8dd7045af7540c",
+ "adapter": "webshop",
+ "cluster": "body care",
+ "goal_idx": 10,
+ "split": "test",
+ "source_instruction": "i am looking fresh scent body lotion for dry skin.",
+ "query": "Hey, I\u2019m looking through the body care section right now. I need something formulated for combination skin that works for my needs, right around that $20 price cap I have in mind. Can you pull up the options that fit? I don\u2019t really have a specific preference for what kind of scent or finish it has, as long as it works well and stays in my budget.",
+ "strategy_ids": [
+  "factual_error",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+insufficient_information",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:dry skin",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:dry skin",
+    "dry skin",
+    "combination skin"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:dry skin",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dry skin",
+     "=",
+     "combination skin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "a99fe9166e8ca3a9"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 9,
+  "lit_card": 14,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 9,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 454,
+    "true_card": 9,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "e528bc01f86f4414",
+  "conditions": [
+   [
+    "attr:dry skin",
+    "=",
+    "dry skin"
+   ],
+   [
+    "option:0",
+    "=",
+    "fresh"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:dry skin",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 9,
+  "value": [
+   "[\"B00OQ1ZKO0\",[[\"scent\",\"fresh\"]]]",
+   "[\"B07NNXYHNM\",[[\"scent\",\"invigorating ocean-fresh fragrance\"]]]",
+   "[\"B07TFHZT47\",[[\"scent\",\"fresh sea salt\"]]]",
+   "[\"B0837311RV\",[[\"scent\",\"active + fresh\"]]]",
+   "[\"B086K1S96X\",[[\"scent\",\"extra fresh\"]]]",
+   "[\"B0875R9D9Q\",[[\"style\",\"fresh and fruity\"]]]",
+   "[\"B087Y28XLM\",[[\"scent\",\"fresh\"]]]",
+   "[\"B08DDYN4GB\",[[\"style\",\"fresh fusion\"]]]",
+   "[\"B08ZG91F9V\",[[\"scent\",\"fresh pomelo\"]]]"
+  ],
+  "hash": "1dfd531d953bd15d0f3978c308a1cdf6"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "44da8667d447c513",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the body care instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b7549c1d6038c0f0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the body care instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "472cbbfd796b790d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gluten free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "89313d391a559d1d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be clinically proven."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6aa9bbbf0d6a16e5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b7898de2d8a7134d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "887ef28075d55a56",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 101.2 ounce instead of fresh."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c5cf16a76ef4d72c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 12 fl oz (pack of 1) instead of fresh."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

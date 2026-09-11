@@ -1,0 +1,216 @@
+{
+ "adapter": "webshop",
+ "cluster": "home office furniture sets",
+ "fidelity_notes": [],
+ "goal_idx": 220,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "d9bc3fd271c22601f01ce8e34d8be738",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B0842NKZ44\",[[\"color\",\"pink\"]]]",
+   "[\"B08M5M4772\",[[\"color\",\"pink - set of 1\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:heavy duty",
+    "=",
+    "heavy duty"
+   ],
+   [
+    "attr:height adjustable",
+    "=",
+    "height adjustable"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "attr:heavy duty"
+  ],
+  "intent_id": "5f20a10afb50c82d"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "attr:heavy duty",
+      "heavy duty"
+     ],
+     [
+      "attr:heavy duty",
+      null
+     ]
+    ],
+    "surface": "light"
+   }
+  ],
+  "attempt": 7,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:heavy duty"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   [
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:height adjustable",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "0bad06c0b0f0fe0b",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a home office furniture set that’s light, height adjustable, pink, and under $60.",
+ "render_attempts": 7,
+ "sample_id": "fd2c1020c9475a88",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office furniture sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "563c8ea629ef4032"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office furniture sets instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7308c010a919a9c0"
+  },
+  {
+   "announcement": "Also, it needs to be computer desk.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "60d06e20a56d9dc3"
+  },
+  {
+   "announcement": "Also, it needs to be high density.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f5f77464e4b38db9"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1c8a3ff356eccdc3"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "91d5d51e8ac6e642"
+  },
+  {
+   "announcement": "Actually, make it *blue grotto instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9c2f6c2ad4070cae"
+  },
+  {
+   "announcement": "Actually, make it *biscay green instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d3e7ab742b677176"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   2,
+   30
+  ],
+  "rule": "ambiguous",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a heavy duty, height adjustable office chair in pink color",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "68c8fa2c101a3818",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

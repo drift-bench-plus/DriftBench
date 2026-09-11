@@ -1,0 +1,93 @@
+{
+ "sample_id": "360e7a9719da280d__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "360e7a9719da280d",
+ "query": "I was out walking my golden retriever this morning and he chased a squirrel right into a community garden, trampled a whole bed of marigolds, and I ended up apologizing to the gardener for twenty minutes. On the way home I stopped at the corner bakeshop and picked up a loaf of sourdough and a blueberry scone, the scone was still warm and I ate half of it before I even got back to my apartment. I just sat down to make a work call but my mobile service isn\u2019t working at all\u2014my APN settings seem to be glitching out, I think my line might be suspended because I had an overdue bill and my contract just ended, and also my SIM card is locked with a PIN I can\u2019t remember right now, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was out walking my golden retriever this morning and he chased a squirrel right into a community garden, trampled a whole bed of marigolds, and I ended up apologizing to the gardener for twenty minutes. On the way home I stopped at the corner bakeshop and picked up a loaf of sourdough and a blueberry scone, the scone was still warm and I ate half of it before I even got back to my apartment.",
+  "retained": [
+   "fault:break_apn_settings",
+   "fault:contract_end_suspension",
+   "fault:lock_sim_card_pin"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:contract_end_suspension",
+     "=",
+     "contract_end_suspension"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:contract_end_suspension",
+    "=",
+    "contract_end_suspension"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

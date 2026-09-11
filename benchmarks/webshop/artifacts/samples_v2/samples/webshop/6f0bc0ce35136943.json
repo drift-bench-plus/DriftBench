@@ -1,0 +1,196 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's sandals",
+ "fidelity_notes": [],
+ "goal_idx": 40,
+ "ground_truth": {
+  "cardinality": 7,
+  "hash": "284e2b85893cab880cd23276f352bd42",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B073XRX1HL\",[[\"color\",\"tan vegan suede\"],[\"size\",\"9\"]]]",
+   "[\"B087KJ7WC9\",[[\"color\",\"tan vegan suede\"],[\"size\",\"5\"]]]",
+   "[\"B08G1B3LFJ\",[[\"color\",\"tan leather metallic synthetic\"],[\"size\",\"5.5\"]]]",
+   "[\"B08GN96D17\",[[\"color\",\"tan leather\"],[\"size\",\"5\"]]]",
+   "[\"B08GNJ2VYG\",[[\"color\",\"tan leather\"],[\"size\",\"5\"]]]",
+   "[\"B08NTX278C\",[[\"color\",\"himalayan tan\"],[\"size\",\"5\"]]]",
+   "[\"B08WJNQS52\",[[\"color\",\"tan leather\"],[\"size\",\"5\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:ethylene vinyl",
+    "=",
+    "ethylene vinyl"
+   ],
+   [
+    "option:0",
+    "=",
+    "tan leather metallic synthetic"
+   ],
+   [
+    "option:1",
+    "=",
+    "9.5 narrow"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "d916d3e1a1b32446"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ethylene vinyl",
+     "=",
+     "tan leather metallic synthetic"
+    ],
+    [
+     "option:0",
+     "=",
+     "tan leather metallic synthetic"
+    ],
+    [
+     "option:1",
+     "=",
+     "9.5 narrow"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:ethylene vinyl",
+     "ethylene vinyl"
+    ],
+    "alternative": [
+     "attr:ethylene vinyl",
+     "tan leather metallic synthetic"
+    ],
+    "condition": null,
+    "text": "Since you probably don't have women's sandals with ethylene vinyl"
+   }
+  ],
+  "retained": [
+   "attr:ethylene vinyl",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "b96bde4c6f83efdf",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don't have women's sandals with ethylene vinyl, I'm looking for tan leather metallic synthetic ones in size 9.5 narrow, and my price limit is $50.",
+ "render_attempts": 2,
+ "sample_id": "6f0bc0ce35136943",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's sandals instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "21d7c0d4c3070864"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's sandals instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "ca885584e9846ffe"
+  },
+  {
+   "announcement": "Also, it needs to be ankle strap.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "028a9bd0f86e3264"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ad37f5ad0e207d65"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7f9124e51c2b2f7e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8470b17e2d3906f8"
+  },
+  {
+   "announcement": "Actually, make it 01-pink instead of tan leather metallic synthetic.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1872b3ac02cba1e0"
+  },
+  {
+   "announcement": "Actually, make it 02-rose gold instead of tan leather metallic synthetic.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b68390cca00d5513"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 7,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a flats made of ethylene vinyl. choose the ones in tan color and size 9.5 narrow.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "cf05c9f17732c0ab",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

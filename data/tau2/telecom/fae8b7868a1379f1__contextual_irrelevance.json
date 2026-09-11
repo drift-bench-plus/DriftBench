@@ -1,0 +1,82 @@
+{
+ "sample_id": "fae8b7868a1379f1__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "fae8b7868a1379f1",
+ "query": "I spent this morning baking sourdough bread for the first time in months, and I was so proud of how the crust turned out perfectly crisp with just the right tangy flavor. After that I took my dog for a long walk around the park, and we stopped to watch a group of kids playing soccer who were having so much fun they barely noticed when their ball rolled right past us. Oh, and I was just rearranging the photo albums on my bookshelf earlier, I found a bunch of old vacation pictures from my trip to the coast last summer that I\u2019d completely forgotten about. Anyway, I\u2019m having some issues with my phone right now\u2014airplane mode is turned on and my SIM card is unseated, so I can\u2019t get any cell service at all, can you help me figure out how to fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent this morning baking sourdough bread for the first time in months, and I was so proud of how the crust turned out perfectly crisp with just the right tangy flavor. After that I took my dog for a long walk around the park, and we stopped to watch a group of kids playing soccer who were having so much fun they barely noticed when their ball rolled right past us. Oh, and I was just rearranging the photo albums on my bookshelf earlier, I found a bunch of old vacation pictures from my trip to the coast last summer that I\u2019d completely forgotten about.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,202 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's sandals",
+ "fidelity_notes": [],
+ "goal_idx": 419,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "3f208400ceb6621b1d071c0ab7b4e3ba",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B085LSYPYK\",[[\"color\",\"dark clay\"]]]",
+   "[\"B08C2YHSY3\",[[\"color\",\"dark sand nubuck\"]]]",
+   "[\"B08CDQMTTS\",[[\"color\",\"dark olive\"]]]",
+   "[\"B08CDS4MD1\",[[\"color\",\"belay dark olive multi\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:ankle strap",
+    "=",
+    "ankle strap"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark clay"
+   ],
+   [
+    "price_upper",
+    "<=",
+    110
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "9f0661ffef164eff"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "dark clay"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "dark"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ankle strap",
+     "=",
+     "ankle strap"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark clay"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ],
+   [
+    [
+     "attr:ankle strap",
+     "=",
+     "ankle strap"
+    ],
+    [
+     "price_upper",
+     "<=",
+     110
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:ankle strap",
+   "price_upper"
+  ],
+  "spec_id": "3df305c7b5745586",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for men’s sandals under $110, I want a pair with an ankle strap that comes in dark.",
+ "render_attempts": 2,
+ "sample_id": "291710ae8999084a",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's sandals instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "309bb9a748809fa2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's sandals instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "8c9a80f8d507cbca"
+  },
+  {
+   "announcement": "Also, it needs to be price_band under_100.",
+   "gt_moved": false,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "89cd36c85f99b02d"
+  },
+  {
+   "announcement": "Also, it needs to be rubber outsole.",
+   "gt_moved": false,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a8bea1071004ee3e"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "581f41bcbfe7342d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a86f3722e8d71f27"
+  },
+  {
+   "announcement": "Actually, make it 10 narrow instead of dark clay.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3c0f8f1546a7ff17"
+  },
+  {
+   "announcement": "Actually, make it 1-1.5 big kid instead of dark clay.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c1be8db284c11098"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   4,
+   100
+  ],
+  "rule": "ambiguous",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for men's dark clay color ankle strap sandals.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "c424f4486fa5b143",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

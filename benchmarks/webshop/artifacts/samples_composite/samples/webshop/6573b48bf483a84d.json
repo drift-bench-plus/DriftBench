@@ -1,0 +1,195 @@
+{
+ "sample_id": "6573b48bf483a84d",
+ "tree_id": "e097d56fdb93c062",
+ "adapter": "webshop",
+ "cluster": "cell phones",
+ "goal_idx": 344,
+ "split": "test",
+ "source_instruction": "i am looking for a heavy duty red case for a galaxy s21 fe that is easy to install.",
+ "query": "I spent 20 minutes this morning trying to hang a floating shelf in my bathroom and the cheap plastic wall anchors I had snapped right in half, leaving a crumbly hole in the drywall I had to spackle over while my cat kept trying to bat the spackle knife off the counter. My roommate walked in halfway through laughing so hard he spilled his oat milk latte all over the bath mat, which meant I had to throw that in the wash too before I could even finish patching the wall. I\u2019ve heard that the cell phones over here are super easy to install, built heavy duty to hold up to all kinds of rough daily use, and come in a nice red finish, all for under $40.",
+ "strategy_ids": [
+  "indirect_intent",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I spent 20 minutes this morning trying to hang a floating shelf in my bathroom and the cheap plastic wall anchors I had snapped right in half, leaving a crumbly hole in the drywall I had to spackle over while my cat kept trying to bat the spackle knife off the counter. My roommate walked in halfway through laughing so hard he spilled his oat milk latte all over the bath mat, which meant I had to throw that in the wash too before I could even finish patching the wall.",
+  "retained": [
+   "attr:easy install",
+   "attr:heavy duty",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:easy install",
+     "=",
+     "easy install"
+    ],
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "option:0",
+     "=",
+     "red"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "75a95a36daae8081"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 15,
+  "lit_card": 15,
+  "components": {}
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "7907c2a6d7786af0",
+  "conditions": [
+   [
+    "attr:easy install",
+    "=",
+    "easy install"
+   ],
+   [
+    "attr:heavy duty",
+    "=",
+    "heavy duty"
+   ],
+   [
+    "option:0",
+    "=",
+    "red"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 15,
+  "value": [
+   "[\"B08JQ9NV4B\",[[\"color\",\"red\"]]]",
+   "[\"B08JQBLDP2\",[[\"color\",\"red\"]]]",
+   "[\"B08L34W8T6\",[[\"color\",\"moto one 5g case red\"]]]",
+   "[\"B08P5KN51K\",[[\"color\",\"red\"]]]",
+   "[\"B08R3WH9TR\",[[\"color\",\"red\"]]]",
+   "[\"B08R42B4BN\",[[\"color\",\"red\"]]]",
+   "[\"B08XV19YVX\",[[\"color\",\"red\"]]]",
+   "[\"B08Y5BY912\",[[\"color\",\"moto one 5g ace case red\"]]]",
+   "[\"B091P8P9C9\",[[\"color\",\"thin red line flag\"]]]",
+   "[\"B0929F81YJ\",[[\"color\",\"rose red\"]]]",
+   "[\"B0936LL1JY\",[[\"color\",\"red\"]]]",
+   "[\"B09938FMC6\",[[\"color\",\"red\"]]]",
+   "[\"B09BQZWN12\",[[\"color\",\"red\"]]]",
+   "[\"B09FDPMSB4\",[[\"color\",\"red\"]]]",
+   "[\"B09HT6GWPG\",[[\"color\",\"screen protector & red\"]]]"
+  ],
+  "hash": "888704a38194ee469718d69383627363"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "a3129e71579b943d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the cell phones instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "c6e44be7212f2b06",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the cell phones instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "29ea05728bc0ac22",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cell phone."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "dcfa5b0f6b2cca39",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be iphone pro."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "7e28a78089681531",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e0779395b5125246",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3b805df213b20ed3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it *rose gold instead of red."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3dc77b8412a44c92",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it !matte navy - upgraded instead of red."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

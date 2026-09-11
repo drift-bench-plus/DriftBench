@@ -1,0 +1,173 @@
+{
+ "adapter": "webshop",
+ "cluster": "makeup remover",
+ "fidelity_notes": [],
+ "goal_idx": 234,
+ "ground_truth": {
+  "cardinality": 8,
+  "hash": "53ff36aed83a1b343a3b675006b0349d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07DNK9Q41\",[]]",
+   "[\"B07KQSQ7K2\",[]]",
+   "[\"B07PCTJ4Y1\",[]]",
+   "[\"B083VRVSRL\",[]]",
+   "[\"B0897YWVW2\",[]]",
+   "[\"B0897ZFHX2\",[]]",
+   "[\"B08WXDVCDT\",[]]",
+   "[\"B09GTMYYYR\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:cruelty free",
+    "=",
+    "cruelty free"
+   ],
+   [
+    "attr:hyaluronic acid",
+    "=",
+    "hyaluronic acid"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "2c13fb2e30f2e9f3"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:cruelty free",
+     "=",
+     "cruelty free"
+    ],
+    [
+     "attr:hyaluronic acid",
+     "=",
+     "hyaluronic acid"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning trying to teach my tabby cat to knock over a stack of paper cups for treats, and he kept getting distracted by a sunbeam on the floor instead. Then I remembered I need to water my succulent collection later, because the little zebra haworthia on my windowsill has been looking a bit shriveled lately. Oh, and I also finished that new cozy fantasy novel I borrowed from the library last night, and the ending with the forest spymaker was so much sweeter than I expected.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:cruelty free",
+   "attr:hyaluronic acid",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning trying to teach my tabby cat to knock over a stack of paper cups for treats, and he kept getting distracted by a sunbeam on the floor instead. Then I remembered I need to water my succulent collection later, because the little zebra haworthia on my windowsill has been looking a bit shriveled lately. Oh, and I also finished that new cozy fantasy novel I borrowed from the library last night, and the ending with the forest spymaker was so much sweeter than I expected. Anyway, I’m looking for a makeup remover that’s cruelty free and has hyaluronic acid, and my price limit is 30.",
+ "render_attempts": 1,
+ "sample_id": "c38e92f65d3ff523",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the makeup remover instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "563f7da942ffae49"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the makeup remover instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7a729cb9fdff023f"
+  },
+  {
+   "announcement": "Also, it needs to be face wash.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a7ef73e0cddac4e7"
+  },
+  {
+   "announcement": "Also, it needs to be tea tree.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f6fe8eff1c9f9c55"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3dafc78b2bf9cb08"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ef460974a372bc04"
+  },
+  {
+   "announcement": "Actually, make it 60 instead of 30.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8a0f5406fcada828"
+  },
+  {
+   "announcement": "Actually, make it 50 instead of 30.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b2dc2738d3e6372d"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 8,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 8,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for hyaluronic acid  for skin care moisturizers.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "30e10c7e03627f9c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

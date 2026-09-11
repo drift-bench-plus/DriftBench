@@ -1,0 +1,223 @@
+{
+ "sample_id": "b27eef7e21443d87",
+ "tree_id": "cf05c9f17732c0ab",
+ "adapter": "webshop",
+ "cluster": "women's sandals",
+ "goal_idx": 40,
+ "split": "test",
+ "source_instruction": "i'm looking for a flats made of ethylene vinyl. choose the ones in tan color and size 9.5 narrow.",
+ "query": "I stopped by the community garden on my walk over this morning, and the raised beds are absolutely bursting right now\u2014someone planted a whole row of sunflowers that are already taller than I am, their big golden heads turned straight toward the bright mid-morning sun, and a handful of bumblebees were bumbling around so slow and fuzzy I could\u2019ve leaned in to count the little pollen dust stripes on their backs if I\u2019d wanted to. The old guy who tends the tomato plot next to the entrance handed me a warm, sun-ripened cherry tomato straight off the vine when I paused to look, and it was so sweet it tasted like summer concentrated into one tiny, juicy pop, no salt or seasoning needed at all. A group of little kids from the nearby rec center was clustered around the herb bed too, passing around crinkly mint leaves and sniffing them with these over-the-top dramatic faces, laughing so loud when one kid took a big bite of a leaf and made a silly sour expression that a couple of sparrows hopped off the garden fence to see what all the noise was about. I\u2019m browsing the women\u2019s sandals section right now, and I\u2019ve heard pairs that use ethylene propylene as the key material, with a tan leather metallic synthetic upper in a size 9.5 narrow, are out there. I\u2019ve also heard that options at a good price point, none way out of a typical affordable range for this style, are the ones that land in line with that exact set of specs first.",
+ "strategy_ids": [
+  "vagueness_subjectivity",
+  "indirect_intent",
+  "contextual_irrelevance",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "vagueness_subjectivity+indirect_intent+contextual_irrelevance+factual_error",
+  "family": "expression+intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "vagueness_subjectivity",
+   "indirect_intent",
+   "contextual_irrelevance",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "factual_error": "attr:ethylene vinyl"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:ethylene vinyl",
+    "ethylene vinyl",
+    "ethylene propylene"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the community garden on my walk over this morning, and the raised beds are absolutely bursting right now\u2014someone planted a whole row of sunflowers that are already taller than I am, their big golden heads turned straight toward the bright mid-morning sun, and a handful of bumblebees were bumbling around so slow and fuzzy I could\u2019ve leaned in to count the little pollen dust stripes on their backs if I\u2019d wanted to. The old guy who tends the tomato plot next to the entrance handed me a warm, sun-ripened cherry tomato straight off the vine when I paused to look, and it was so sweet it tasted like summer concentrated into one tiny, juicy pop, no salt or seasoning needed at all. A group of little kids from the nearby rec center was clustered around the herb bed too, passing around crinkly mint leaves and sniffing them with these over-the-top dramatic faces, laughing so loud when one kid took a big bite of a leaf and made a silly sour expression that a couple of sparrows hopped off the garden fence to see what all the noise was about.",
+  "retained": [
+   "option:0",
+   "option:1"
+  ],
+  "hidden_slots": [
+   "attr:ethylene vinyl",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ethylene vinyl",
+     "=",
+     "ethylene propylene"
+    ],
+    [
+     "option:0",
+     "=",
+     "tan leather metallic synthetic"
+    ],
+    [
+     "option:1",
+     "=",
+     "9.5 narrow"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "8950bb5a4e6f5af1"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 7,
+  "lit_card": 0,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 8,
+    "true_card": 7,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 7,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "d916d3e1a1b32446",
+  "conditions": [
+   [
+    "attr:ethylene vinyl",
+    "=",
+    "ethylene vinyl"
+   ],
+   [
+    "option:0",
+    "=",
+    "tan leather metallic synthetic"
+   ],
+   [
+    "option:1",
+    "=",
+    "9.5 narrow"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "attr:ethylene vinyl",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 7,
+  "value": [
+   "[\"B073XRX1HL\",[[\"color\",\"tan vegan suede\"],[\"size\",\"9\"]]]",
+   "[\"B087KJ7WC9\",[[\"color\",\"tan vegan suede\"],[\"size\",\"5\"]]]",
+   "[\"B08G1B3LFJ\",[[\"color\",\"tan leather metallic synthetic\"],[\"size\",\"5.5\"]]]",
+   "[\"B08GN96D17\",[[\"color\",\"tan leather\"],[\"size\",\"5\"]]]",
+   "[\"B08GNJ2VYG\",[[\"color\",\"tan leather\"],[\"size\",\"5\"]]]",
+   "[\"B08NTX278C\",[[\"color\",\"himalayan tan\"],[\"size\",\"5\"]]]",
+   "[\"B08WJNQS52\",[[\"color\",\"tan leather\"],[\"size\",\"5\"]]]"
+  ],
+  "hash": "284e2b85893cab880cd23276f352bd42"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "21d7c0d4c3070864",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's sandals instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ca885584e9846ffe",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's sandals instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "028a9bd0f86e3264",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ankle strap."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ad37f5ad0e207d65",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "7f9124e51c2b2f7e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8470b17e2d3906f8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1872b3ac02cba1e0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 01-pink instead of tan leather metallic synthetic."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b68390cca00d5513",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 02-rose gold instead of tan leather metallic synthetic."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

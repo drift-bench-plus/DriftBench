@@ -1,0 +1,918 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B00ZQEN1U6",
+    "cluster": "men's pants",
+    "name": "prAna Men's Stretch Zion Pant",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Pants › Casual"
+   },
+   "bound_slots": [
+    "attr:nylon spandex",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:nylon spandex",
+     "=",
+     "nylon spandex"
+    ],
+    [
+     "option:0",
+     "=",
+     "grey"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ],
+   "ground_truth": {
+    "hash": "01b18d7308540e0229ebbd145764c084",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00ZQEN1U6\",[[\"color\",\"grey\"]]]",
+     "[\"B07NPGL7C5\",[[\"color\",\"grey\"]]]",
+     "[\"B07RPYV3W3\",[[\"color\",\"grey\"]]]",
+     "[\"B07T2HZ4HH\",[[\"color\",\"grey\"]]]",
+     "[\"B07TJS32VJ\",[[\"color\",\"grey\"]]]",
+     "[\"B07V5TSWB3\",[[\"color\",\"a- light grey\"]]]",
+     "[\"B08BP7P4MH\",[[\"color\",\"grey\"]]]",
+     "[\"B08QFZQLZT\",[[\"color\",\"grey\"]]]",
+     "[\"B098XB21R7\",[[\"color\",\"grey\"]]]",
+     "[\"B0995BCX51\",[[\"color\",\"grey\"]]]",
+     "[\"B09RCD5GWX\",[[\"color\",\"light smoke grey | ice silver | white | white\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "4ee5bcb65c855728",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's pants",
+    "goal": {
+     "asin": "B00ZQEN1U6",
+     "attributes": [
+      "nylon spandex"
+     ],
+     "category": "",
+     "goal_options": [
+      "grey"
+     ],
+     "name": "prAna Men's Stretch Zion Pant",
+     "price_upper": 70,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Pants › Casual",
+     "query": "men's pants"
+    }
+   },
+   "source_record": "80db55adaee047f4",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07MWSX8Z7",
+    "cluster": "men's pants",
+    "name": "Wrangler Men's Retro Relaxed Fit Boot Cut Jean",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:machine wash",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:machine wash",
+     "=",
+     "machine wash"
+    ],
+    [
+     "option:0",
+     "=",
+     "slim"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2d910db3e50f50c99f714f2e0d7570d3",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B078SX7N2Z\",[[\"fit type\",\"slim\"]]]",
+     "[\"B07MWSX8Z7\",[[\"fit type\",\"slim\"]]]",
+     "[\"B097GX2C8S\",[[\"fit type\",\"slim fit_28\\\"\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "354b3a976ed3b528",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's pants",
+    "goal": {
+     "asin": "B07MWSX8Z7",
+     "attributes": [
+      "machine wash"
+     ],
+     "category": "",
+     "goal_options": [
+      "slim"
+     ],
+     "name": "Wrangler Men's Retro Relaxed Fit Boot Cut Jean",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's pants"
+    }
+   },
+   "source_record": "a487eaa85ae86503",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B099231V35",
+    "cluster": "men's pants",
+    "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+    "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants"
+   },
+   "bound_slots": [
+    "attr:daily casual",
+    "attr:everyday wear",
+    "attr:relaxed fit",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:daily casual",
+     "=",
+     "daily casual"
+    ],
+    [
+     "attr:everyday wear",
+     "=",
+     "everyday wear"
+    ],
+    [
+     "attr:relaxed fit",
+     "=",
+     "relaxed fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "orange"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0caf9ecdaaccc06618c15e893f7aeb3a",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09NW4J43Z\",[[\"color\",\"orange\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9edf06491897e6bb",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's pants",
+    "goal": {
+     "asin": "B099231V35",
+     "attributes": [
+      "daily casual",
+      "everyday wear",
+      "relaxed fit"
+     ],
+     "category": "",
+     "goal_options": [
+      "orange"
+     ],
+     "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants",
+     "query": "men's pants"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B099231V35",
+    "cluster": "men's pants",
+    "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+    "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants"
+   },
+   "bound_slots": [
+    "attr:athletic shorts",
+    "attr:everyday wear",
+    "attr:relaxed fit",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:athletic shorts",
+     "=",
+     "athletic shorts"
+    ],
+    [
+     "attr:everyday wear",
+     "=",
+     "everyday wear"
+    ],
+    [
+     "attr:relaxed fit",
+     "=",
+     "relaxed fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "orange"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "7e355bd32c8d71d1548aa4cf0a062a0c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09N3CGBPM\",[[\"color\",\"orange\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "3cad581498d1d5cc",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's pants",
+    "goal": {
+     "asin": "B099231V35",
+     "attributes": [
+      "athletic shorts",
+      "everyday wear",
+      "relaxed fit"
+     ],
+     "category": "",
+     "goal_options": [
+      "orange"
+     ],
+     "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants",
+     "query": "men's pants"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B099231V35",
+    "cluster": "men's pants",
+    "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+    "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants"
+   },
+   "bound_slots": [
+    "attr:everyday wear",
+    "attr:relaxed fit",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:everyday wear",
+     "=",
+     "everyday wear"
+    ],
+    [
+     "attr:relaxed fit",
+     "=",
+     "relaxed fit"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "15cac008fffba4acd5cd72563bc0bbda",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B072KKJMDG\",[]]",
+     "[\"B07Z8PVDF5\",[]]",
+     "[\"B085S3QFD7\",[]]",
+     "[\"B08MTV7DQS\",[]]",
+     "[\"B08ZN4HFTX\",[]]",
+     "[\"B096FBR25D\",[]]",
+     "[\"B098NFK4KT\",[]]",
+     "[\"B098R2KK2F\",[]]",
+     "[\"B0991XNKQ3\",[]]",
+     "[\"B099231V35\",[]]",
+     "[\"B099N65R1X\",[]]",
+     "[\"B09FLJX24V\",[]]",
+     "[\"B09KLJ1YVK\",[]]",
+     "[\"B09KLJTXM1\",[]]",
+     "[\"B09M8BWN35\",[]]",
+     "[\"B09MFTJWVF\",[]]",
+     "[\"B09MVH5PYC\",[]]",
+     "[\"B09N3CGBPM\",[]]",
+     "[\"B09N3DBQPN\",[]]",
+     "[\"B09N74YKDN\",[]]",
+     "[\"B09N75L4RD\",[]]",
+     "[\"B09N7K833V\",[]]",
+     "[\"B09NW4J43Z\",[]]",
+     "[\"B09NYHQCCV\",[]]",
+     "[\"B09P8DSXXJ\",[]]",
+     "[\"B09PBPXNQV\",[]]",
+     "[\"B09PDQGWX4\",[]]",
+     "[\"B09PDRLVGH\",[]]",
+     "[\"B09PDSJZ25\",[]]",
+     "[\"B09PHH11DG\",[]]",
+     "[\"B09PY58M4Q\",[]]",
+     "[\"B09QK1X45N\",[]]",
+     "[\"B09QK25F62\",[]]",
+     "[\"B09R3WHDPF\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c0ec30c3b3242899",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's pants",
+    "goal": {
+     "asin": "B099231V35",
+     "attributes": [
+      "everyday wear",
+      "relaxed fit"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants",
+     "query": "men's pants"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B099231V35",
+    "cluster": "men's pants",
+    "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+    "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants"
+   },
+   "bound_slots": [
+    "attr:relaxed fit",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:relaxed fit",
+     "=",
+     "relaxed fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "orange"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "dda9e3e8547a385f6001127c8e1b4a62",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07HGN1QXZ\",[[\"color\",\"1ih02_orange\"]]]",
+     "[\"B07MYBQ7HB\",[[\"color\",\"orange-4\"]]]",
+     "[\"B07X92R51T\",[[\"color\",\"orange\"]]]",
+     "[\"B08GSKR8YY\",[[\"color\",\"orange\"]]]",
+     "[\"B093ZS7KKS\",[[\"color\",\"orange\"]]]",
+     "[\"B099231V35\",[[\"color\",\"orange\"]]]",
+     "[\"B09C5R29BW\",[[\"color\",\"orange\"]]]",
+     "[\"B09FPFVJ8C\",[[\"color\",\"orange\"]]]",
+     "[\"B09G27CWLV\",[[\"color\",\"orange\"]]]",
+     "[\"B09HZN8TYW\",[[\"color\",\"orange 5\"]]]",
+     "[\"B09JW25M8X\",[[\"color\",\"orange\"]]]",
+     "[\"B09JZ9WM9S\",[[\"color\",\"307-orange\"]]]",
+     "[\"B09KLJTXM1\",[[\"color\",\"orange\"]]]",
+     "[\"B09LLKC28Z\",[[\"color\",\"e-orange\"]]]",
+     "[\"B09LZ1HGKG\",[[\"color\",\"01-orange\"]]]",
+     "[\"B09M8BWN35\",[[\"color\",\"d06-orange\"]]]",
+     "[\"B09MDB3H44\",[[\"color\",\"orange\"]]]",
+     "[\"B09MT3W55M\",[[\"color\",\"orange\"]]]",
+     "[\"B09MYV5PRT\",[[\"color\",\"orange\"]]]",
+     "[\"B09N3CGBPM\",[[\"color\",\"orange\"]]]",
+     "[\"B09NDTKGC9\",[[\"color\",\"orange\"]]]",
+     "[\"B09NVTDGPB\",[[\"color\",\"orange\"]]]",
+     "[\"B09NW4J43Z\",[[\"color\",\"orange\"]]]",
+     "[\"B09P611RFV\",[[\"color\",\"orange\"]]]",
+     "[\"B09P8F994N\",[[\"color\",\"orange\"]]]",
+     "[\"B09P8LJ4F3\",[[\"color\",\"orange\"]]]",
+     "[\"B09PBPXNQV\",[[\"color\",\"a-orange\"]]]",
+     "[\"B09PBTPFGD\",[[\"color\",\"orange\"]]]",
+     "[\"B09PDRLVGH\",[[\"color\",\"orange\"]]]",
+     "[\"B09PHHZSG4\",[[\"color\",\"orange\"]]]",
+     "[\"B09PLCMRV4\",[[\"color\",\"orange\"]]]",
+     "[\"B09PNLFRTV\",[[\"color\",\"orange\"]]]",
+     "[\"B09PQ96VG3\",[[\"color\",\"orange\"]]]",
+     "[\"B09PQWHK2W\",[[\"color\",\"orange\"]]]",
+     "[\"B09PR9PXTX\",[[\"color\",\"orange\"]]]",
+     "[\"B09PV5FHCN\",[[\"color\",\"312-orange\"]]]",
+     "[\"B09PYV47DB\",[[\"color\",\"orange\"]]]",
+     "[\"B09QCWP9V3\",[[\"color\",\"01-orange\"]]]",
+     "[\"B09QLZ7B7Y\",[[\"color\",\"orange\"]]]",
+     "[\"B09S6CYDB4\",[[\"color\",\"orange\"]]]",
+     "[\"B09SHJFPTS\",[[\"color\",\"orange\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "124cfc0048c389e6",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's pants",
+    "goal": {
+     "asin": "B099231V35",
+     "attributes": [
+      "relaxed fit"
+     ],
+     "category": "",
+     "goal_options": [
+      "orange"
+     ],
+     "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants",
+     "query": "men's pants"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B099231V35",
+    "cluster": "men's pants",
+    "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+    "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants"
+   },
+   "bound_slots": [
+    "attr:everyday wear",
+    "attr:relaxed fit",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:everyday wear",
+     "=",
+     "everyday wear"
+    ],
+    [
+     "attr:relaxed fit",
+     "=",
+     "relaxed fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "#1 black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "020184808e0243b1d49ffb0ca679a5f8",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B072KKJMDG\",[[\"color\",\"black\"]]]",
+     "[\"B07Z8PVDF5\",[[\"color\",\"#03 black\"]]]",
+     "[\"B08MTV7DQS\",[[\"color\",\"black\"]]]",
+     "[\"B08ZN4HFTX\",[[\"color\",\"h-black\"]]]",
+     "[\"B096FBR25D\",[[\"color\",\"black\"]]]",
+     "[\"B098NFK4KT\",[[\"color\",\"black\"]]]",
+     "[\"B0991XNKQ3\",[[\"color\",\"black\"]]]",
+     "[\"B099231V35\",[[\"color\",\"black\"]]]",
+     "[\"B099N65R1X\",[[\"color\",\"01#black\"]]]",
+     "[\"B09FLJX24V\",[[\"color\",\"black\"]]]",
+     "[\"B09KLJ1YVK\",[[\"color\",\"05 black\"]]]",
+     "[\"B09M8BWN35\",[[\"color\",\"b01-black\"]]]",
+     "[\"B09MFTJWVF\",[[\"color\",\"black\"]]]",
+     "[\"B09MVH5PYC\",[[\"color\",\"black\"]]]",
+     "[\"B09N3CGBPM\",[[\"color\",\"black\"]]]",
+     "[\"B09N3DBQPN\",[[\"color\",\"01-black\"]]]",
+     "[\"B09N74YKDN\",[[\"color\",\"black\"]]]",
+     "[\"B09N75L4RD\",[[\"color\",\"black\"]]]",
+     "[\"B09NW4J43Z\",[[\"color\",\"black\"]]]",
+     "[\"B09NYHQCCV\",[[\"color\",\"black\"]]]",
+     "[\"B09P8DSXXJ\",[[\"color\",\"black\"]]]",
+     "[\"B09PBPXNQV\",[[\"color\",\"b-black\"]]]",
+     "[\"B09PDQGWX4\",[[\"color\",\"black\"]]]",
+     "[\"B09PDRLVGH\",[[\"color\",\"black\"]]]",
+     "[\"B09PDSJZ25\",[[\"color\",\"black\"]]]",
+     "[\"B09PHH11DG\",[[\"color\",\"black\"]]]",
+     "[\"B09PY58M4Q\",[[\"color\",\"01 black\"]]]",
+     "[\"B09QK25F62\",[[\"color\",\"black\"]]]",
+     "[\"B09R3WHDPF\",[[\"color\",\"black\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "84665cb2adf6beb2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's pants",
+    "goal": {
+     "asin": "B099231V35",
+     "attributes": [
+      "everyday wear",
+      "relaxed fit"
+     ],
+     "category": "",
+     "goal_options": [
+      "#1 black"
+     ],
+     "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants",
+     "query": "men's pants"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B099231V35",
+    "cluster": "men's pants",
+    "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+    "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants"
+   },
+   "bound_slots": [
+    "attr:everyday wear",
+    "attr:relaxed fit",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:everyday wear",
+     "=",
+     "everyday wear"
+    ],
+    [
+     "attr:relaxed fit",
+     "=",
+     "relaxed fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "#1black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "020184808e0243b1d49ffb0ca679a5f8",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B072KKJMDG\",[[\"color\",\"black\"]]]",
+     "[\"B07Z8PVDF5\",[[\"color\",\"#03 black\"]]]",
+     "[\"B08MTV7DQS\",[[\"color\",\"black\"]]]",
+     "[\"B08ZN4HFTX\",[[\"color\",\"h-black\"]]]",
+     "[\"B096FBR25D\",[[\"color\",\"black\"]]]",
+     "[\"B098NFK4KT\",[[\"color\",\"black\"]]]",
+     "[\"B0991XNKQ3\",[[\"color\",\"black\"]]]",
+     "[\"B099231V35\",[[\"color\",\"black\"]]]",
+     "[\"B099N65R1X\",[[\"color\",\"01#black\"]]]",
+     "[\"B09FLJX24V\",[[\"color\",\"black\"]]]",
+     "[\"B09KLJ1YVK\",[[\"color\",\"05 black\"]]]",
+     "[\"B09M8BWN35\",[[\"color\",\"b01-black\"]]]",
+     "[\"B09MFTJWVF\",[[\"color\",\"black\"]]]",
+     "[\"B09MVH5PYC\",[[\"color\",\"black\"]]]",
+     "[\"B09N3CGBPM\",[[\"color\",\"black\"]]]",
+     "[\"B09N3DBQPN\",[[\"color\",\"01-black\"]]]",
+     "[\"B09N74YKDN\",[[\"color\",\"black\"]]]",
+     "[\"B09N75L4RD\",[[\"color\",\"black\"]]]",
+     "[\"B09NW4J43Z\",[[\"color\",\"black\"]]]",
+     "[\"B09NYHQCCV\",[[\"color\",\"black\"]]]",
+     "[\"B09P8DSXXJ\",[[\"color\",\"black\"]]]",
+     "[\"B09PBPXNQV\",[[\"color\",\"b-black\"]]]",
+     "[\"B09PDQGWX4\",[[\"color\",\"black\"]]]",
+     "[\"B09PDRLVGH\",[[\"color\",\"black\"]]]",
+     "[\"B09PDSJZ25\",[[\"color\",\"black\"]]]",
+     "[\"B09PHH11DG\",[[\"color\",\"black\"]]]",
+     "[\"B09PY58M4Q\",[[\"color\",\"01 black\"]]]",
+     "[\"B09QK25F62\",[[\"color\",\"black\"]]]",
+     "[\"B09R3WHDPF\",[[\"color\",\"black\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "4c4361cccf851f0c",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's pants",
+    "goal": {
+     "asin": "B099231V35",
+     "attributes": [
+      "everyday wear",
+      "relaxed fit"
+     ],
+     "category": "",
+     "goal_options": [
+      "#1black"
+     ],
+     "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants",
+     "query": "men's pants"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B00ZQEN1U6",
+     "cluster": "men's pants",
+     "name": "prAna Men's Stretch Zion Pant",
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Pants › Casual"
+    }
+   },
+   "dst": "4ee5bcb65c855728",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "80db55adaee047f4",
+   "src": "4daabf1e1f26c0d6"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07MWSX8Z7",
+     "cluster": "men's pants",
+     "name": "Wrangler Men's Retro Relaxed Fit Boot Cut Jean",
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+    }
+   },
+   "dst": "354b3a976ed3b528",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "a487eaa85ae86503",
+   "src": "4daabf1e1f26c0d6"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:daily casual",
+      "=",
+      "daily casual"
+     ]
+    ]
+   },
+   "dst": "9edf06491897e6bb",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "4daabf1e1f26c0d6"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:athletic shorts",
+      "=",
+      "athletic shorts"
+     ]
+    ]
+   },
+   "dst": "3cad581498d1d5cc",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "4daabf1e1f26c0d6"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "orange"
+     ]
+    ]
+   },
+   "dst": "c0ec30c3b3242899",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "4daabf1e1f26c0d6"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:everyday wear",
+      "=",
+      "everyday wear"
+     ]
+    ]
+   },
+   "dst": "124cfc0048c389e6",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "4daabf1e1f26c0d6"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "orange",
+      "#1 black"
+     ]
+    ]
+   },
+   "dst": "84665cb2adf6beb2",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "4daabf1e1f26c0d6"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "orange",
+      "#1black"
+     ]
+    ]
+   },
+   "dst": "4c4361cccf851f0c",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "4daabf1e1f26c0d6"
+  }
+ ],
+ "env_id": "webshop_43f8fe7c263fc117",
+ "env_spec": {
+  "cluster": "men's pants",
+  "env_id": "webshop_43f8fe7c263fc117",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B099231V35",
+   "cluster": "men's pants",
+   "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+   "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants"
+  },
+  "bound_slots": [
+   "attr:everyday wear",
+   "attr:relaxed fit",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:everyday wear",
+    "=",
+    "everyday wear"
+   ],
+   [
+    "attr:relaxed fit",
+    "=",
+    "relaxed fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "orange"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "ground_truth": {
+   "hash": "7a3ae46eb035f1c120bb6756f47a27b9",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B099231V35\",[[\"color\",\"orange\"]]]",
+    "[\"B09KLJTXM1\",[[\"color\",\"orange\"]]]",
+    "[\"B09M8BWN35\",[[\"color\",\"d06-orange\"]]]",
+    "[\"B09N3CGBPM\",[[\"color\",\"orange\"]]]",
+    "[\"B09NW4J43Z\",[[\"color\",\"orange\"]]]",
+    "[\"B09PBPXNQV\",[[\"color\",\"a-orange\"]]]",
+    "[\"B09PDRLVGH\",[[\"color\",\"orange\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "4daabf1e1f26c0d6",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "men's pants",
+   "goal": {
+    "asin": "B099231V35",
+    "attributes": [
+     "relaxed fit",
+     "everyday wear"
+    ],
+    "category": "",
+    "goal_options": [
+     "orange"
+    ],
+    "name": "Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall",
+    "price_upper": 30,
+    "product_category": "Clothing, Shoes & Jewelry › Sport Specific Clothing › Running › Men › Pants",
+    "query": "men's pants"
+   }
+  },
+  "source_record": "91afb62790c0a812",
+  "unbound_slots": [
+   "attr:athletic shorts",
+   "attr:daily casual",
+   "attr:everyday wear",
+   "option:0"
+  ]
+ },
+ "tree_id": "ca3b22b5b50b5046"
+}

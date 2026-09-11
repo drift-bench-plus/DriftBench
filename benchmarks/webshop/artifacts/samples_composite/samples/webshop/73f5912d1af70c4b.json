@@ -1,0 +1,249 @@
+{
+ "sample_id": "73f5912d1af70c4b",
+ "tree_id": "788c0162a429f9fc",
+ "adapter": "webshop",
+ "cluster": "meat substitutes",
+ "goal_idx": 24,
+ "split": "test",
+ "source_instruction": "find me a jar of baby food that is certified organic. it should also be non gmo.",
+ "query": "I\u2019ve heard the certified organic meat substitute options around here are all sold out this week, since I saw a sign earlier saying that whole certification batch got held up at the distribution center. The non-GMO plant-based patties and crumbles I\u2019ve spotted on the shelves so far all sit right around that $120 total mark when I add up what I\u2019d grab for the month, too. A friend mentioned the ones that skip the organic certification still work really well for weeknight stir fries and burger nights when you don\u2019t want to wait for a restock.",
+ "strategy_ids": [
+  "indirect_intent",
+  "false_presupposition"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+false_presupposition",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "false_presupposition"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "the certified organic meat substitute options around here are all sold out this week, since I saw a sign earlier saying that whole certification batch got held up at the distribution center",
+    "condition": null,
+    "about": [
+     "attr:certified organic",
+     "certified organic"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:certified organic",
+   "attr:non gmo",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "02015ae0ad439ca4"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 66,
+  "lit_card": 337,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 337,
+    "true_card": 66,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "de951c0d97b3bbf5",
+  "conditions": [
+   [
+    "attr:certified organic",
+    "=",
+    "certified organic"
+   ],
+   [
+    "attr:non gmo",
+    "=",
+    "non gmo"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 66,
+  "value": [
+   "[\"B000LL0RFQ\",[]]",
+   "[\"B000QSPX58\",[]]",
+   "[\"B000QSTJYO\",[]]",
+   "[\"B000R7X3JG\",[]]",
+   "[\"B0019L8JSO\",[]]",
+   "[\"B00654O1BY\",[]]",
+   "[\"B0078DU1CY\",[]]",
+   "[\"B007QVUYNY\",[]]",
+   "[\"B00822ZE2M\",[]]",
+   "[\"B00BBSRK2Q\",[]]",
+   "[\"B00JB2QS7C\",[]]",
+   "[\"B00JM1DAE6\",[]]",
+   "[\"B00MACNU9Y\",[]]",
+   "[\"B00MU749LW\",[]]",
+   "[\"B00NB8T4H8\",[]]",
+   "[\"B00NO1OZDA\",[]]",
+   "[\"B00U688JNG\",[]]",
+   "[\"B016NAS8X6\",[]]",
+   "[\"B016NE5DBM\",[]]",
+   "[\"B01C8DQUBY\",[]]",
+   "[\"B01CT721A8\",[]]",
+   "[\"B01DAK5ECU\",[]]",
+   "[\"B01DPSC5PG\",[]]",
+   "[\"B01DUC0MD4\",[]]",
+   "[\"B01EK4OL10\",[]]",
+   "[\"B01FN6GQTO\",[]]",
+   "[\"B01H4LBIVC\",[]]",
+   "[\"B01JJ9GPUG\",[]]",
+   "[\"B01N1JM9UN\",[]]",
+   "[\"B06WGZRT1B\",[]]",
+   "[\"B06XCJFVHH\",[]]",
+   "[\"B06XNV8FT6\",[]]",
+   "[\"B071RRKZZ4\",[]]",
+   "[\"B0723B9YHF\",[]]",
+   "[\"B073X42DVF\",[]]",
+   "[\"B073XNBWQQ\",[]]",
+   "[\"B074H55NBT\",[]]",
+   "[\"B0759VP59C\",[]]",
+   "[\"B075M6J8LR\",[]]",
+   "[\"B0769Z2YMZ\",[]]",
+   "[\"B079VV8BS6\",[]]",
+   "[\"B07CPZBXXN\",[]]",
+   "[\"B07GSLD925\",[]]",
+   "[\"B07GT9XBDK\",[]]",
+   "[\"B07JNMMNHH\",[]]",
+   "[\"B07L9JQCY7\",[]]",
+   "[\"B07M9H5NZV\",[]]",
+   "[\"B07NBTVFWB\",[]]",
+   "[\"B07NS7THWB\",[]]",
+   "[\"B07R4P3R7D\",[]]",
+   "[\"B07TTJW9HL\",[]]",
+   "[\"B07TZX1TR5\",[]]",
+   "[\"B07WZW7ZM4\",[]]",
+   "[\"B083JZJHB8\",[]]",
+   "[\"B0844B81XM\",[]]",
+   "[\"B0848JFW4N\",[]]",
+   "[\"B088VVHYYT\",[]]",
+   "[\"B08FRWDFQ7\",[]]",
+   "[\"B08JJL9WCY\",[]]",
+   "[\"B08LBZ378C\",[]]",
+   "[\"B08PT2JSYS\",[]]",
+   "[\"B08PT3NMHH\",[]]",
+   "[\"B08W2QY9VS\",[]]",
+   "[\"B08WJM25TN\",[]]",
+   "[\"B0954NVVHM\",[]]",
+   "[\"B098XQM24V\",[]]"
+  ],
+  "hash": "d230879e5871abcfacfe20a52725c00d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "9a8613fdefb55398",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the meat substitutes instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "d29543b3c1976c5c",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the meat substitutes instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "10c0007f036ad967",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be caffeine free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f8fd765670e7581a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy prepare."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4c05c5a12e280c1e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4db99de1521bb94d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "9b3be898ddd5c657",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 120."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "a14be18385464ccd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 120."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

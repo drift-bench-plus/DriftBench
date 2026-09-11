@@ -1,0 +1,205 @@
+{
+ "sample_id": "10d11f714fd88ed7",
+ "tree_id": "ad256d2ea858759d",
+ "adapter": "webshop",
+ "cluster": "home office chairs",
+ "goal_idx": 387,
+ "split": "test",
+ "source_instruction": "i'm looking for a mid century home office desk chair that is easy to assemble. please choose the grey velvet one.",
+ "query": "I spent 20 minutes this morning trying to hang a vintage wall clock above my desk, dropped the drywall anchor twice, and had to run to the hardware store for a replacement pack that ended up being the wrong size. My cat also knocked over my potted snake plant right as I was leaving, so I had to sweep up dirt from the rug before I could even sit down to shop. Since you probably don\u2019t have any mid century home office chairs in stock anyway, just show me easy to assemble grey options under $160, yeah?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "false_presupposition"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+false_presupposition",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "false_presupposition"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you probably don\u2019t have any mid century home office chairs in stock anyway",
+    "condition": null,
+    "about": [
+     "attr:mid century",
+     "mid century"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent 20 minutes this morning trying to hang a vintage wall clock above my desk, dropped the drywall anchor twice, and had to run to the hardware store for a replacement pack that ended up being the wrong size. My cat also knocked over my potted snake plant right as I was leaving, so I had to sweep up dirt from the rug before I could even sit down to shop.",
+  "retained": [
+   "attr:easy assemble",
+   "attr:mid century",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:easy assemble",
+     "=",
+     "easy assemble"
+    ],
+    [
+     "option:0",
+     "=",
+     "grey"
+    ],
+    [
+     "price_upper",
+     "<=",
+     160
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "c7d61e57b08f6737"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 11,
+  "lit_card": 197,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 197,
+    "true_card": 11,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "7d3190a0898ecd17",
+  "conditions": [
+   [
+    "attr:easy assemble",
+    "=",
+    "easy assemble"
+   ],
+   [
+    "attr:mid century",
+    "=",
+    "mid century"
+   ],
+   [
+    "option:0",
+    "=",
+    "grey"
+   ],
+   [
+    "price_upper",
+    "<=",
+    160
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 11,
+  "value": [
+   "[\"B0843SFXGL\",[[\"color\",\"3011-grey\"]]]",
+   "[\"B08JTRCSR2\",[[\"color\",\"light grey\"]]]",
+   "[\"B08QV9M623\",[[\"color\",\"grey\"]]]",
+   "[\"B08S3LDF8K\",[[\"color\",\"grey\"]]]",
+   "[\"B098L6VVZK\",[[\"color\",\"grey\"]]]",
+   "[\"B09KC4VQWG\",[[\"color\",\"fossil grey\"]]]",
+   "[\"B09KLWDXWQ\",[[\"color\",\"grey\"]]]",
+   "[\"B09L41ZP46\",[[\"color\",\"grey\"]]]",
+   "[\"B09MW1RFVQ\",[[\"color\",\"grey-3\"]]]",
+   "[\"B09NRDW9ZK\",[[\"color\",\"grey\"]]]",
+   "[\"B09PN9WXPB\",[[\"color\",\"grey\"]]]"
+  ],
+  "hash": "7088edd52cdddf9f73f55aa114f53364"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1410d19fdd6bf8b2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the home office chairs instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a8a0e1fd3281152f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the home office chairs instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7705bff68cd9fd8a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be non slip."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e81c3c6963bcf206",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "20fad2416e9881e2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f22bc499ecb7427d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "53f712376a2da3d7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 6030blue instead of grey."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c3b357773a299a9b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 6422yellow instead of grey."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

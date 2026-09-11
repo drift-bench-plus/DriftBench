@@ -1,0 +1,126 @@
+{
+ "sample_id": "82b13532e7b3d7ee__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "82b13532e7b3d7ee",
+ "query": "I just picked up a new lavender scented candle on my way home today, it fills the whole living room with such a soft, calming fragrance, I\u2019ve been lighting it while I catch up on my favorite drama series all afternoon. The latest episode had such a surprising plot twist, I didn\u2019t even see it coming at all, I had to pause and rewatch that scene twice to make sure I didn\u2019t miss anything. Oh, and my cat just knocked over a mug of iced tea onto the couch earlier, I just finished mopping up the mess and I\u2019m still a little flustered about it. Anyway, I\u2019m having some issues with my phone right now: I keep getting bad network connection, my wifi calling isn\u2019t working at all, my SMS app seems to be having permission problems so I can\u2019t send or receive texts, my mobile data mode is off, I think my SIM card might be unseated, and I\u2019m currently abroad with roaming turned off, I need help figuring out how to fix these issues.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just picked up a new lavender scented candle on my way home today, it fills the whole living room with such a soft, calming fragrance, I\u2019ve been lighting it while I catch up on my favorite drama series all afternoon. The latest episode had such a surprising plot twist, I didn\u2019t even see it coming at all, I had to pause and rewatch that scene twice to make sure I didn\u2019t miss anything. Oh, and my cat just knocked over a mug of iced tea onto the couch earlier, I just finished mopping up the mess and I\u2019m still a little flustered about it. Anyway, ",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:bad_wifi_calling",
+   "fault:break_app_sms_permission",
+   "fault:data_mode_off",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_app_sms_permission",
+     "=",
+     "break_app_sms_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_app_sms_permission",
+    "=",
+    "break_app_sms_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,220 @@
+{
+ "sample_id": "003d8d1e821c966c",
+ "tree_id": "ae56922c737a52f7",
+ "adapter": "webshop",
+ "cluster": "bathing accessories",
+ "goal_idx": 209,
+ "split": "test",
+ "source_instruction": "i'm looking for a light pink long handle back loofah shower brush.",
+ "query": "I\u2019m looking for bathing accessories with a long handle, please, and I want the light one, my budget is under $20. Oh, and it absolutely has to come with a detachable hanging suction cup hook too, that\u2019s non-negotiable for me.",
+ "strategy_ids": [
+  "lexical_ambiguity",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "lexical_ambiguity+irrelevant_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "lexical_ambiguity",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "the light one",
+    "placements": [
+     [
+      "option:0",
+      "light pink"
+     ],
+     [
+      "option:0",
+      "light in weight"
+     ]
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "text": "it absolutely has to come with a detachable hanging suction cup hook too, that\u2019s non-negotiable for me",
+    "condition": [
+     "attr:accessory",
+     "=",
+     "detachable hanging suction cup hook"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:long handle",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:long handle",
+     "=",
+     "long handle"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ],
+    [
+     "attr:accessory",
+     "=",
+     "detachable hanging suction cup hook"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "a71a22da96a34262"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 0,
+  "components": {
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     3,
+     2
+    ],
+    "true_card": 3,
+    "readings": 2
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "71a6a9b91d6775b6",
+  "conditions": [
+   [
+    "attr:long handle",
+    "=",
+    "long handle"
+   ],
+   [
+    "option:0",
+    "=",
+    "light pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B08R9GV397\",[[\"color\",\"light pink\"]]]",
+   "[\"B08XXQHZS1\",[[\"color\",\"light pink\"]]]",
+   "[\"B08Y6VZFT6\",[[\"scent\",\"2 pack-light pink\"]]]"
+  ],
+  "hash": "2c816d607110daa9aefa71414b757cf4"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "874df47adf6060c1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bathing accessories instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "af15b930ca3ad6b5",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bathing accessories instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "4a19ed42826d492f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be non toxic."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cd07b8fc34b2b57f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be shower gel."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8dcba4e6eedf9624",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b46c34f0af3fda2d",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1829cc730df8e907",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it (6 packs)-blackx6 instead of light pink."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "40751f6f00e8cf26",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #3 instead of light pink."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

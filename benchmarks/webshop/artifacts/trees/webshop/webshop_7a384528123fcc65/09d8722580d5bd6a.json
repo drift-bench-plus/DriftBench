@@ -1,0 +1,1358 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B09MJXZ9PQ",
+    "cluster": "salon & spa equipment",
+    "name": "Classic Styling Salon Chair Hair Hydraulic Barber Chair for Hair Salon with Wider Seat & Heavy Duty Hydraulic Pump, Beauty Salon Spa Shampoo Equipment (Color : Gold)",
+    "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Salon & Spa Chairs"
+   },
+   "bound_slots": [
+    "attr:beauty salon",
+    "attr:easy clean",
+    "attr:hair salon",
+    "attr:heavy duty",
+    "attr:high quality",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:beauty salon",
+     "=",
+     "beauty salon"
+    ],
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "attr:hair salon",
+     "=",
+     "hair salon"
+    ],
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "price_upper",
+     "<=",
+     900
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0342513a74d438bb460aad1eb9511402",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07ZD86SXT\",[]]",
+     "[\"B07ZD8TVB4\",[]]",
+     "[\"B07ZT8QDW2\",[]]",
+     "[\"B07ZT9TQKH\",[]]",
+     "[\"B08CTZPP19\",[]]",
+     "[\"B08H1QDMY1\",[]]",
+     "[\"B08LN2TC5P\",[]]",
+     "[\"B08RJ38P3P\",[]]",
+     "[\"B08TT8XVMT\",[]]",
+     "[\"B08Y8GB6TF\",[]]",
+     "[\"B08ZYBL3H3\",[]]",
+     "[\"B0912RVTBD\",[]]",
+     "[\"B09135KRVM\",[]]",
+     "[\"B091KS7GHN\",[]]",
+     "[\"B0952S8NJ2\",[]]",
+     "[\"B098F1FM1Z\",[]]",
+     "[\"B09B5558C9\",[]]",
+     "[\"B09B55W3SX\",[]]",
+     "[\"B09B7GKTWH\",[]]",
+     "[\"B09CKHV4N8\",[]]",
+     "[\"B09DFGC6J3\",[]]",
+     "[\"B09DSVNXBK\",[]]",
+     "[\"B09F9JM9ZD\",[]]",
+     "[\"B09FJYLVKW\",[]]",
+     "[\"B09FXR2KMF\",[]]",
+     "[\"B09FY387CL\",[]]",
+     "[\"B09FY5JX5K\",[]]",
+     "[\"B09G64MMNW\",[]]",
+     "[\"B09GG234BZ\",[]]",
+     "[\"B09GPBZDV8\",[]]",
+     "[\"B09HJQQH9P\",[]]",
+     "[\"B09HJRQNF5\",[]]",
+     "[\"B09HJTH62D\",[]]",
+     "[\"B09HJTNRL4\",[]]",
+     "[\"B09HPJSHQ1\",[]]",
+     "[\"B09HT8CWHW\",[]]",
+     "[\"B09HT8GCN9\",[]]",
+     "[\"B09HT91973\",[]]",
+     "[\"B09HWY278W\",[]]",
+     "[\"B09HX7QLFW\",[]]",
+     "[\"B09HXCFP1G\",[]]",
+     "[\"B09HYTCT9G\",[]]",
+     "[\"B09HZ1ZV8G\",[]]",
+     "[\"B09J21KGGV\",[]]",
+     "[\"B09J81JYYJ\",[]]",
+     "[\"B09J8HQ32M\",[]]",
+     "[\"B09JP9NNS9\",[]]",
+     "[\"B09JVKWLD3\",[]]",
+     "[\"B09JVT19KB\",[]]",
+     "[\"B09JW15ZM9\",[]]",
+     "[\"B09K43FNFF\",[]]",
+     "[\"B09L112BGC\",[]]",
+     "[\"B09LQ6JB9Y\",[]]",
+     "[\"B09LQ7ZKH8\",[]]",
+     "[\"B09LQJVD1B\",[]]",
+     "[\"B09LQMNSFS\",[]]",
+     "[\"B09LRS7H7S\",[]]",
+     "[\"B09MJXZ9PQ\",[]]",
+     "[\"B09MJYDG2Q\",[]]",
+     "[\"B09MT96W4Y\",[]]",
+     "[\"B09MYRB37Q\",[]]",
+     "[\"B09N33LGK1\",[]]",
+     "[\"B09NBG5H2K\",[]]",
+     "[\"B09NBGY5Z3\",[]]",
+     "[\"B09NFLFMQ8\",[]]",
+     "[\"B09NJHZ3YW\",[]]",
+     "[\"B09NKDFPWD\",[]]",
+     "[\"B09NKFNG45\",[]]",
+     "[\"B09NKFNX15\",[]]",
+     "[\"B09NKH9KFK\",[]]",
+     "[\"B09NKJ3LGH\",[]]",
+     "[\"B09NNQY33S\",[]]",
+     "[\"B09NQZPJVV\",[]]",
+     "[\"B09NQZSVSK\",[]]",
+     "[\"B09NRBPS2L\",[]]",
+     "[\"B09NVM2F3L\",[]]",
+     "[\"B09P5VCDL8\",[]]",
+     "[\"B09P5X2SKN\",[]]",
+     "[\"B09P5XNNJC\",[]]",
+     "[\"B09QKFLPLR\",[]]",
+     "[\"B09SDG3D14\",[]]",
+     "[\"B09T361DKB\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c4f221801f6143f6",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "salon & spa equipment",
+    "goal": {
+     "asin": "B09MJXZ9PQ",
+     "attributes": [
+      "heavy duty",
+      "easy clean",
+      "high quality",
+      "hair salon",
+      "beauty salon"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Classic Styling Salon Chair Hair Hydraulic Barber Chair for Hair Salon with Wider Seat & Heavy Duty Hydraulic Pump, Beauty Salon Spa Shampoo Equipment (Color : Gold)",
+     "price_upper": 900,
+     "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Salon & Spa Chairs",
+     "query": "salon & spa equipment"
+    }
+   },
+   "source_record": "46bbf8f357549906",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B010JEDXAU",
+    "cluster": "salon & spa equipment",
+    "name": "Master Massage Maxking Deluxe 4 Section Electric Lift Spa Salon Stationary Table, 30\", Beige",
+    "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Spa Beds & Tables"
+   },
+   "bound_slots": [
+    "attr:water resistant",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "beige"
+    ],
+    [
+     "option:1",
+     "=",
+     "1 count (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "14f9075f87a2cf4ab23f19db00969694",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B010JEDXAU\",[[\"color\",\"beige\"],[\"size\",\"1 count (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9cddc82766c5a0bc",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "salon & spa equipment",
+    "goal": {
+     "asin": "B010JEDXAU",
+     "attributes": [
+      "water resistant"
+     ],
+     "category": "",
+     "goal_options": [
+      "beige",
+      "1 count (pack of 1)"
+     ],
+     "name": "Master Massage Maxking Deluxe 4 Section Electric Lift Spa Salon Stationary Table, 30\", Beige",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Spa Beds & Tables",
+     "query": "salon & spa equipment"
+    }
+   },
+   "source_record": "14700bdab532da2c",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09T2Z324R",
+    "cluster": "salon & spa equipment",
+    "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+    "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens"
+   },
+   "bound_slots": [
+    "attr:barber chair",
+    "attr:easy clean",
+    "attr:high quality",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:barber chair",
+     "=",
+     "barber chair"
+    ],
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "purple"
+    ],
+    [
+     "price_upper",
+     "<=",
+     170
+    ]
+   ],
+   "ground_truth": {
+    "hash": "642b7b150d5e3155d80b208864d7986c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08TG5XYXN\",[[\"color\",\"purple\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f9e2b1562593519b",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "salon & spa equipment",
+    "goal": {
+     "asin": "B09T2Z324R",
+     "attributes": [
+      "barber chair",
+      "easy clean",
+      "high quality"
+     ],
+     "category": "",
+     "goal_options": [
+      "purple"
+     ],
+     "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+     "price_upper": 170,
+     "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens",
+     "query": "salon & spa equipment"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09T2Z324R",
+    "cluster": "salon & spa equipment",
+    "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+    "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens"
+   },
+   "bound_slots": [
+    "attr:easy clean",
+    "attr:high quality",
+    "attr:non slip",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "attr:non slip",
+     "=",
+     "non slip"
+    ],
+    [
+     "option:0",
+     "=",
+     "purple"
+    ],
+    [
+     "price_upper",
+     "<=",
+     170
+    ]
+   ],
+   "ground_truth": {
+    "hash": "642b7b150d5e3155d80b208864d7986c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08TG5XYXN\",[[\"color\",\"purple\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "23a01aff52db7797",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "salon & spa equipment",
+    "goal": {
+     "asin": "B09T2Z324R",
+     "attributes": [
+      "easy clean",
+      "high quality",
+      "non slip"
+     ],
+     "category": "",
+     "goal_options": [
+      "purple"
+     ],
+     "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+     "price_upper": 170,
+     "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens",
+     "query": "salon & spa equipment"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09T2Z324R",
+    "cluster": "salon & spa equipment",
+    "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+    "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens"
+   },
+   "bound_slots": [
+    "attr:easy clean",
+    "attr:high quality",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "price_upper",
+     "<=",
+     170
+    ]
+   ],
+   "ground_truth": {
+    "hash": "7ad2fdbe75464366f7574438417c4860",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B073HPWXQF\",[]]",
+     "[\"B07GR3MFFM\",[]]",
+     "[\"B07HRK41SN\",[]]",
+     "[\"B07HWCY34K\",[]]",
+     "[\"B07LCFZFKM\",[]]",
+     "[\"B07PNB13FL\",[]]",
+     "[\"B07RQSB2TY\",[]]",
+     "[\"B07SG55ZJG\",[]]",
+     "[\"B07SVVBZC9\",[]]",
+     "[\"B07TK2GHMJ\",[]]",
+     "[\"B07TTWTXQH\",[]]",
+     "[\"B07TW812X4\",[]]",
+     "[\"B07VMG7QK8\",[]]",
+     "[\"B07X2T2JYQ\",[]]",
+     "[\"B07XCZBQTX\",[]]",
+     "[\"B07XFTHM2T\",[]]",
+     "[\"B07XNTV4YW\",[]]",
+     "[\"B07Y1R8SR4\",[]]",
+     "[\"B07YDHSFRR\",[]]",
+     "[\"B07Z875HGL\",[]]",
+     "[\"B07ZSCNN4R\",[]]",
+     "[\"B07ZXQD8NK\",[]]",
+     "[\"B0829N6RB9\",[]]",
+     "[\"B082MXQ4SP\",[]]",
+     "[\"B0831DYXND\",[]]",
+     "[\"B0841KWNRD\",[]]",
+     "[\"B084LBGPG8\",[]]",
+     "[\"B084LDSCGS\",[]]",
+     "[\"B084VJGX14\",[]]",
+     "[\"B085RN1NFG\",[]]",
+     "[\"B085TS6HPZ\",[]]",
+     "[\"B08721L4BG\",[]]",
+     "[\"B0876LJM8H\",[]]",
+     "[\"B087ZWXVJK\",[]]",
+     "[\"B0894HJF68\",[]]",
+     "[\"B08CHJCR89\",[]]",
+     "[\"B08CTZPP19\",[]]",
+     "[\"B08CZY2WPY\",[]]",
+     "[\"B08D3V9Y1H\",[]]",
+     "[\"B08D6FKLFX\",[]]",
+     "[\"B08FB98CB2\",[]]",
+     "[\"B08FML1C1Q\",[]]",
+     "[\"B08FML6N29\",[]]",
+     "[\"B08FR7YB28\",[]]",
+     "[\"B08G1QMBB3\",[]]",
+     "[\"B08G4XGS9F\",[]]",
+     "[\"B08GK5QG29\",[]]",
+     "[\"B08GKP976G\",[]]",
+     "[\"B08GKPPPLQ\",[]]",
+     "[\"B08GZ63XZR\",[]]",
+     "[\"B08H7XL21H\",[]]",
+     "[\"B08HH9QJDB\",[]]",
+     "[\"B08J7WJW9K\",[]]",
+     "[\"B08J7Z35LP\",[]]",
+     "[\"B08JHCP28Q\",[]]",
+     "[\"B08JHDYJJS\",[]]",
+     "[\"B08K3998S5\",[]]",
+     "[\"B08K94PJQQ\",[]]",
+     "[\"B08KXNGL19\",[]]",
+     "[\"B08L4HWB9W\",[]]",
+     "[\"B08L77B5HN\",[]]",
+     "[\"B08LHCY83M\",[]]",
+     "[\"B08LN2TC5P\",[]]",
+     "[\"B08MZZYC63\",[]]",
+     "[\"B08N5228Q5\",[]]",
+     "[\"B08N6FGND2\",[]]",
+     "[\"B08NG9KXV6\",[]]",
+     "[\"B08NSDYBNP\",[]]",
+     "[\"B08NSZJMDY\",[]]",
+     "[\"B08NVVDSY3\",[]]",
+     "[\"B08NWVCBHZ\",[]]",
+     "[\"B08PBXXZ22\",[]]",
+     "[\"B08PFGXKFJ\",[]]",
+     "[\"B08PKGVQFF\",[]]",
+     "[\"B08PKTY2DC\",[]]",
+     "[\"B08PKXRPPJ\",[]]",
+     "[\"B08PP946ZN\",[]]",
+     "[\"B08PQCWDLM\",[]]",
+     "[\"B08Q2Y6G5X\",[]]",
+     "[\"B08QJ28VHB\",[]]",
+     "[\"B08R643YTL\",[]]",
+     "[\"B08RRLPDFJ\",[]]",
+     "[\"B08RYK1324\",[]]",
+     "[\"B08S7DCTR5\",[]]",
+     "[\"B08SBRQPLF\",[]]",
+     "[\"B08SC8HQRN\",[]]",
+     "[\"B08T1NVQR2\",[]]",
+     "[\"B08TG5XYXN\",[]]",
+     "[\"B08THB6XVP\",[]]",
+     "[\"B08TLR8M4V\",[]]",
+     "[\"B08TR6GR75\",[]]",
+     "[\"B08TTLRMQC\",[]]",
+     "[\"B08TTQH8M2\",[]]",
+     "[\"B08VJ81ZRC\",[]]",
+     "[\"B08VJJ5TVM\",[]]",
+     "[\"B08VN6FSJD\",[]]",
+     "[\"B08VNW6CG4\",[]]",
+     "[\"B08W3BS494\",[]]",
+     "[\"B08WCCZDFP\",[]]",
+     "[\"B08WS5PWG2\",[]]",
+     "[\"B08X9YCZZM\",[]]",
+     "[\"B08XBRN1MJ\",[]]",
+     "[\"B08XPYTXZP\",[]]",
+     "[\"B08Y6NJV8K\",[]]",
+     "[\"B08YN6Z5DQ\",[]]",
+     "[\"B08YNT5X77\",[]]",
+     "[\"B08YR2HCFL\",[]]",
+     "[\"B08Z47TYSZ\",[]]",
+     "[\"B08ZH9BC2W\",[]]",
+     "[\"B08ZL4R6C3\",[]]",
+     "[\"B08ZYBL3H3\",[]]",
+     "[\"B092D7YQ1K\",[]]",
+     "[\"B092DNCCRS\",[]]",
+     "[\"B092H5BJF2\",[]]",
+     "[\"B093H9KRW4\",[]]",
+     "[\"B093P7S2Y6\",[]]",
+     "[\"B094DDMW77\",[]]",
+     "[\"B094FPYPXJ\",[]]",
+     "[\"B094QWY3L3\",[]]",
+     "[\"B094QYBTRF\",[]]",
+     "[\"B094QZV7ST\",[]]",
+     "[\"B094R1WV4B\",[]]",
+     "[\"B095CH1NKW\",[]]",
+     "[\"B0963T4LBW\",[]]",
+     "[\"B09694BZBN\",[]]",
+     "[\"B096FLWHRZ\",[]]",
+     "[\"B096FVMNDK\",[]]",
+     "[\"B096TR43BB\",[]]",
+     "[\"B096VZQD8X\",[]]",
+     "[\"B096ZC5HMY\",[]]",
+     "[\"B0979BH1CY\",[]]",
+     "[\"B0982R51RF\",[]]",
+     "[\"B098KJSWYF\",[]]",
+     "[\"B09922KSCR\",[]]",
+     "[\"B099248Q1B\",[]]",
+     "[\"B0997PF95C\",[]]",
+     "[\"B099R9RT9Y\",[]]",
+     "[\"B09B6WVF6T\",[]]",
+     "[\"B09B7GKTWH\",[]]",
+     "[\"B09BCKQ51S\",[]]",
+     "[\"B09BCRBRGH\",[]]",
+     "[\"B09BF4ZZ6G\",[]]",
+     "[\"B09BL9C9G3\",[]]",
+     "[\"B09BNFNVZ3\",[]]",
+     "[\"B09BQWBLZR\",[]]",
+     "[\"B09BYH9HWR\",[]]",
+     "[\"B09C3V6XB1\",[]]",
+     "[\"B09C8HSKTR\",[]]",
+     "[\"B09C8VTY6S\",[]]",
+     "[\"B09CCVJ63S\",[]]",
+     "[\"B09CLBQDVB\",[]]",
+     "[\"B09CLBZQN6\",[]]",
+     "[\"B09CMR3XMH\",[]]",
+     "[\"B09CMR7RX9\",[]]",
+     "[\"B09CNVRXJB\",[]]",
+     "[\"B09CP936GX\",[]]",
+     "[\"B09CPBX9T4\",[]]",
+     "[\"B09CTC4VMV\",[]]",
+     "[\"B09CTHYCB2\",[]]",
+     "[\"B09CYPQN7X\",[]]",
+     "[\"B09DKVQT8D\",[]]",
+     "[\"B09DPPC1F4\",[]]",
+     "[\"B09DTYZSF3\",[]]",
+     "[\"B09F3H9Q9K\",[]]",
+     "[\"B09F6JKS35\",[]]",
+     "[\"B09FY387CL\",[]]",
+     "[\"B09FY3DCCH\",[]]",
+     "[\"B09FY4P42C\",[]]",
+     "[\"B09FY4XBDT\",[]]",
+     "[\"B09FY4Y8S9\",[]]",
+     "[\"B09FY4ZCVJ\",[]]",
+     "[\"B09FY51L6B\",[]]",
+     "[\"B09FY5JX5K\",[]]",
+     "[\"B09FZ5NGRL\",[]]",
+     "[\"B09G2BQ8CQ\",[]]",
+     "[\"B09G2VB1FN\",[]]",
+     "[\"B09G9W7QWR\",[]]",
+     "[\"B09GBK14LR\",[]]",
+     "[\"B09GG234BZ\",[]]",
+     "[\"B09GK2ZGRW\",[]]",
+     "[\"B09GY4MX8H\",[]]",
+     "[\"B09H2M6H4L\",[]]",
+     "[\"B09H2QFSKP\",[]]",
+     "[\"B09H2QPDVB\",[]]",
+     "[\"B09H6F9Z57\",[]]",
+     "[\"B09H6FC7M1\",[]]",
+     "[\"B09HBFQ2Z8\",[]]",
+     "[\"B09HBH2B9K\",[]]",
+     "[\"B09HBJC1KQ\",[]]",
+     "[\"B09HBJL6JV\",[]]",
+     "[\"B09HBTX7LP\",[]]",
+     "[\"B09HH91477\",[]]",
+     "[\"B09HHCC8S2\",[]]",
+     "[\"B09HJTNRL4\",[]]",
+     "[\"B09HT7G7VJ\",[]]",
+     "[\"B09HT9F17Z\",[]]",
+     "[\"B09HT9FYHN\",[]]",
+     "[\"B09HWXHVRM\",[]]",
+     "[\"B09HX2WSQR\",[]]",
+     "[\"B09HX3GNVM\",[]]",
+     "[\"B09HX4ZNN8\",[]]",
+     "[\"B09HX5PLHW\",[]]",
+     "[\"B09HX6YZ9Z\",[]]",
+     "[\"B09HX7WB7R\",[]]",
+     "[\"B09HZVVMWR\",[]]",
+     "[\"B09J17H45Y\",[]]",
+     "[\"B09J1ZVSYR\",[]]",
+     "[\"B09J211MWN\",[]]",
+     "[\"B09J21295W\",[]]",
+     "[\"B09J215ZC6\",[]]",
+     "[\"B09J2176KZ\",[]]",
+     "[\"B09J219XDK\",[]]",
+     "[\"B09J21H9N9\",[]]",
+     "[\"B09J2238R1\",[]]",
+     "[\"B09J4S6VC4\",[]]",
+     "[\"B09J7VZJCP\",[]]",
+     "[\"B09J81M46T\",[]]",
+     "[\"B09J83XW63\",[]]",
+     "[\"B09J85J1H9\",[]]",
+     "[\"B09J88ZVYR\",[]]",
+     "[\"B09J8BQDHQ\",[]]",
+     "[\"B09J8D7N1H\",[]]",
+     "[\"B09J8DXZJ8\",[]]",
+     "[\"B09JB794RM\",[]]",
+     "[\"B09JBPQD9Y\",[]]",
+     "[\"B09JBPR4DC\",[]]",
+     "[\"B09JC9BCXD\",[]]",
+     "[\"B09JCB2QQ2\",[]]",
+     "[\"B09JCB786V\",[]]",
+     "[\"B09JF5H264\",[]]",
+     "[\"B09JFNH5Z6\",[]]",
+     "[\"B09JP9NNS9\",[]]",
+     "[\"B09JVXVRMC\",[]]",
+     "[\"B09K7N3NHR\",[]]",
+     "[\"B09K7R343K\",[]]",
+     "[\"B09KBMYC8D\",[]]",
+     "[\"B09KBSPRQS\",[]]",
+     "[\"B09KGJBDT6\",[]]",
+     "[\"B09KLMPPMP\",[]]",
+     "[\"B09KLSJGMB\",[]]",
+     "[\"B09KNCV5JY\",[]]",
+     "[\"B09KRP73M2\",[]]",
+     "[\"B09KX78FPS\",[]]",
+     "[\"B09KXJZL45\",[]]",
+     "[\"B09L81GFNN\",[]]",
+     "[\"B09LQ7ZKH8\",[]]",
+     "[\"B09LQF8565\",[]]",
+     "[\"B09LQJVD1B\",[]]",
+     "[\"B09LQLMBZK\",[]]",
+     "[\"B09LQLWFV6\",[]]",
+     "[\"B09LQMNSFS\",[]]",
+     "[\"B09LQNQ51Z\",[]]",
+     "[\"B09LQNSN9X\",[]]",
+     "[\"B09LRQYDJ7\",[]]",
+     "[\"B09LRRRCZ1\",[]]",
+     "[\"B09LRS7H7S\",[]]",
+     "[\"B09LRSC4YB\",[]]",
+     "[\"B09LRSSV2P\",[]]",
+     "[\"B09LTS1PWM\",[]]",
+     "[\"B09LTS922R\",[]]",
+     "[\"B09M3XR2XS\",[]]",
+     "[\"B09M8CM3RG\",[]]",
+     "[\"B09MLZ7FJD\",[]]",
+     "[\"B09MMTDLYW\",[]]",
+     "[\"B09MMVH1RN\",[]]",
+     "[\"B09MRZ3P3M\",[]]",
+     "[\"B09MRZQWQB\",[]]",
+     "[\"B09MYRB37Q\",[]]",
+     "[\"B09N6R8RPC\",[]]",
+     "[\"B09N6WWV7V\",[]]",
+     "[\"B09NBBHPQN\",[]]",
+     "[\"B09ND4X1V9\",[]]",
+     "[\"B09NJHZ3YW\",[]]",
+     "[\"B09NKDFPWD\",[]]",
+     "[\"B09NKFNG45\",[]]",
+     "[\"B09NKFNX15\",[]]",
+     "[\"B09NKH9KFK\",[]]",
+     "[\"B09NKJ3LGH\",[]]",
+     "[\"B09NNKCXKM\",[]]",
+     "[\"B09NQZ986Q\",[]]",
+     "[\"B09NQZPJVV\",[]]",
+     "[\"B09NQZSVSK\",[]]",
+     "[\"B09NR9PD7L\",[]]",
+     "[\"B09NSJB449\",[]]",
+     "[\"B09NSSWKV2\",[]]",
+     "[\"B09NVD3XLF\",[]]",
+     "[\"B09NVD6QCR\",[]]",
+     "[\"B09NVDC1BY\",[]]",
+     "[\"B09NVDGRF8\",[]]",
+     "[\"B09NVDGZ4J\",[]]",
+     "[\"B09NVDH359\",[]]",
+     "[\"B09NVDNLZP\",[]]",
+     "[\"B09NVDRMC1\",[]]",
+     "[\"B09NVDWDS9\",[]]",
+     "[\"B09NVF59NK\",[]]",
+     "[\"B09NVF6FCL\",[]]",
+     "[\"B09NVF8FL8\",[]]",
+     "[\"B09NVFF9K6\",[]]",
+     "[\"B09NVFLL9R\",[]]",
+     "[\"B09NVFP96Z\",[]]",
+     "[\"B09NVFV183\",[]]",
+     "[\"B09NVYTC21\",[]]",
+     "[\"B09P5VCDL8\",[]]",
+     "[\"B09P5X2SKN\",[]]",
+     "[\"B09P5XJ6B9\",[]]",
+     "[\"B09P5XNNJC\",[]]",
+     "[\"B09P7VQWV7\",[]]",
+     "[\"B09PG21PBT\",[]]",
+     "[\"B09PQS9JNW\",[]]",
+     "[\"B09PTWWFT7\",[]]",
+     "[\"B09PYDH7ZD\",[]]",
+     "[\"B09PYRFKT9\",[]]",
+     "[\"B09PZTPH8W\",[]]",
+     "[\"B09PZWYQM2\",[]]",
+     "[\"B09Q2TZZXP\",[]]",
+     "[\"B09Q33YRSY\",[]]",
+     "[\"B09QBSYFQT\",[]]",
+     "[\"B09QGJSQ5Z\",[]]",
+     "[\"B09QHRCF6M\",[]]",
+     "[\"B09QHRQ89B\",[]]",
+     "[\"B09QPNQ1JR\",[]]",
+     "[\"B09QRQBPRL\",[]]",
+     "[\"B09R1SSZ5B\",[]]",
+     "[\"B09R1V5RJ1\",[]]",
+     "[\"B09RWQ4ZP8\",[]]",
+     "[\"B09SGBM8DL\",[]]",
+     "[\"B09SP4Q2MX\",[]]",
+     "[\"B09SP6JMDN\",[]]",
+     "[\"B09SW1YMQ1\",[]]",
+     "[\"B09SW2Z7FL\",[]]",
+     "[\"B09SWL81F8\",[]]",
+     "[\"B09SYR99W6\",[]]",
+     "[\"B09SYRW4N3\",[]]",
+     "[\"B09SYSBNWR\",[]]",
+     "[\"B09SYSCK1Y\",[]]",
+     "[\"B09SYSFFB2\",[]]",
+     "[\"B09SYSG8DM\",[]]",
+     "[\"B09SYSJ62R\",[]]",
+     "[\"B09SYSKBYJ\",[]]",
+     "[\"B09SYSNRPZ\",[]]",
+     "[\"B09SYSPBJQ\",[]]",
+     "[\"B09SYSPJNW\",[]]",
+     "[\"B09SYSR3TF\",[]]",
+     "[\"B09SYSRDKP\",[]]",
+     "[\"B09SYSSW6G\",[]]",
+     "[\"B09SYSXTR5\",[]]",
+     "[\"B09SYSY425\",[]]",
+     "[\"B09SYSZDSC\",[]]",
+     "[\"B09SYT13VQ\",[]]",
+     "[\"B09SYT4L6G\",[]]",
+     "[\"B09SYT5CX8\",[]]",
+     "[\"B09SYT6RB8\",[]]",
+     "[\"B09SYT8BWH\",[]]",
+     "[\"B09SYTC63V\",[]]",
+     "[\"B09SYTN5MK\",[]]",
+     "[\"B09SYTR26S\",[]]",
+     "[\"B09SYZ7925\",[]]",
+     "[\"B09T2W1R3L\",[]]",
+     "[\"B09T2WJDTG\",[]]",
+     "[\"B09T2WQNXX\",[]]",
+     "[\"B09T2Z324R\",[]]",
+     "[\"B09T31P5H7\",[]]",
+     "[\"B09T32QJKV\",[]]",
+     "[\"B09T337P4C\",[]]",
+     "[\"B09T33MHLV\",[]]",
+     "[\"B09T33MSTJ\",[]]",
+     "[\"B09T33NQZ8\",[]]",
+     "[\"B09T33XH9P\",[]]",
+     "[\"B09T33YPT1\",[]]",
+     "[\"B09T33ZMZK\",[]]",
+     "[\"B09T341WVC\",[]]",
+     "[\"B09T34LZ65\",[]]",
+     "[\"B09T361DKB\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "e052bdc293934234",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "salon & spa equipment",
+    "goal": {
+     "asin": "B09T2Z324R",
+     "attributes": [
+      "easy clean",
+      "high quality"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+     "price_upper": 170,
+     "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens",
+     "query": "salon & spa equipment"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09T2Z324R",
+    "cluster": "salon & spa equipment",
+    "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+    "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens"
+   },
+   "bound_slots": [
+    "attr:high quality",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "purple"
+    ],
+    [
+     "price_upper",
+     "<=",
+     170
+    ]
+   ],
+   "ground_truth": {
+    "hash": "05dffb68ac5d869caf355a1e946fe352",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07ZXQD8NK\",[[\"color\",\"purple\"]]]",
+     "[\"B08DJ71M41\",[[\"color\",\"purple\"]]]",
+     "[\"B08FD279R7\",[[\"color\",\"purple\"]]]",
+     "[\"B08GKPPPLQ\",[[\"color\",\"purple\"]]]",
+     "[\"B08JPC9H1N\",[[\"color\",\"purple\"]]]",
+     "[\"B08TG5XYXN\",[[\"color\",\"purple\"]]]",
+     "[\"B08VNW6CG4\",[[\"color\",\"white + purple\"]]]",
+     "[\"B08WCCZDFP\",[[\"color\",\"purple\"]]]",
+     "[\"B08XVPKCLS\",[[\"color\",\"smoked purple\"]]]",
+     "[\"B08YFL6XJQ\",[[\"color\",\"purple 150cm\"]]]",
+     "[\"B08ZMLG2JW\",[[\"color\",\"purple\"]]]",
+     "[\"B092DHPDGB\",[[\"color\",\"purple\"]]]",
+     "[\"B093LPFZBV\",[[\"color\",\"purple\"]]]",
+     "[\"B096LRCVTF\",[[\"color\",\"purple\"]]]",
+     "[\"B098JM8G12\",[[\"color\",\"purple\"]]]",
+     "[\"B099J8H8PY\",[[\"color\",\"white+purple\"]]]",
+     "[\"B099K9DT5V\",[[\"color\",\"purple\"]]]",
+     "[\"B09CMR3XMH\",[[\"color\",\"purple\"]]]",
+     "[\"B09CYPQN7X\",[[\"color\",\"purple\"]]]",
+     "[\"B09DD36SLQ\",[[\"color\",\"purple\"]]]",
+     "[\"B09DKVQT8D\",[[\"color\",\"purple\"]]]",
+     "[\"B09GK2ZGRW\",[[\"color\",\"purple\"]]]",
+     "[\"B09H2QFSKP\",[[\"color\",\"purple\"]]]",
+     "[\"B09HBG4Q97\",[[\"color\",\"purple\"]]]",
+     "[\"B09HBTX7LP\",[[\"color\",\"purple\"]]]",
+     "[\"B09J1ZVF4J\",[[\"color\",\"purple\"]]]",
+     "[\"B09JS5Z58M\",[[\"color\",\"purple\"]]]",
+     "[\"B09KNCV5JY\",[[\"color\",\"purple\"]]]",
+     "[\"B09LQNSDB6\",[[\"color\",\"purple\"]]]",
+     "[\"B09NVDGZ4J\",[[\"color\",\"purple\"]]]",
+     "[\"B09NVDH359\",[[\"color\",\"purple\"]]]",
+     "[\"B09NVF8FL8\",[[\"color\",\"purple\"]]]",
+     "[\"B09PYDH7ZD\",[[\"color\",\"purple\"]]]",
+     "[\"B09Q2SVGMX\",[[\"color\",\"purple\"]]]",
+     "[\"B09Q2TZZXP\",[[\"color\",\"purple\"]]]",
+     "[\"B09Q33YRSY\",[[\"color\",\"purple\"]]]",
+     "[\"B09QHRCF6M\",[[\"color\",\"purple\"]]]",
+     "[\"B09QHRQ89B\",[[\"color\",\"deep purple\"]]]",
+     "[\"B09QPNQ1JR\",[[\"color\",\"purple\"]]]",
+     "[\"B09R4R72WB\",[[\"color\",\"purple solid\"]]]",
+     "[\"B09SL1TZPW\",[[\"color\",\"purple\"]]]",
+     "[\"B09STF5JVV\",[[\"color\",\"purple\"]]]",
+     "[\"B09STF5VSG\",[[\"color\",\"purple\"]]]",
+     "[\"B09STH8MJW\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYRW4N3\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYSBNWR\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYSJ62R\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYSKBYJ\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYSNRPZ\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYSXTR5\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYSZDSC\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYT13VQ\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYT5CX8\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYT6RB8\",[[\"color\",\"purple\"]]]",
+     "[\"B09SYTR26S\",[[\"color\",\"purple\"]]]",
+     "[\"B09T2WQNXX\",[[\"color\",\"purple\"]]]",
+     "[\"B09T2Z324R\",[[\"color\",\"purple\"]]]",
+     "[\"B09T31P5H7\",[[\"color\",\"purple\"]]]",
+     "[\"B09T32QJKV\",[[\"color\",\"purple\"]]]",
+     "[\"B09T33MHLV\",[[\"color\",\"purple\"]]]",
+     "[\"B09T33NQZ8\",[[\"color\",\"purple\"]]]",
+     "[\"B09T341WVC\",[[\"color\",\"purple\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "035f2099b4a0d437",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "salon & spa equipment",
+    "goal": {
+     "asin": "B09T2Z324R",
+     "attributes": [
+      "high quality"
+     ],
+     "category": "",
+     "goal_options": [
+      "purple"
+     ],
+     "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+     "price_upper": 170,
+     "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens",
+     "query": "salon & spa equipment"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09T2Z324R",
+    "cluster": "salon & spa equipment",
+    "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+    "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens"
+   },
+   "bound_slots": [
+    "attr:easy clean",
+    "attr:high quality",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "190x70cm(75x28inch)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     170
+    ]
+   ],
+   "ground_truth": {
+    "hash": "38026f4b6acb0794a20da6290c11d42c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09CYPQN7X\",[[\"size\",\"190x70cm(75x28inch)\"]]]",
+     "[\"B09NVD6QCR\",[[\"size\",\"190x70cm\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "b781e358eddda197",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "salon & spa equipment",
+    "goal": {
+     "asin": "B09T2Z324R",
+     "attributes": [
+      "easy clean",
+      "high quality"
+     ],
+     "category": "",
+     "goal_options": [
+      "190x70cm(75x28inch)"
+     ],
+     "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+     "price_upper": 170,
+     "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens",
+     "query": "salon & spa equipment"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09T2Z324R",
+    "cluster": "salon & spa equipment",
+    "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+    "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens"
+   },
+   "bound_slots": [
+    "attr:easy clean",
+    "attr:high quality",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "190*70cm"
+    ],
+    [
+     "price_upper",
+     "<=",
+     170
+    ]
+   ],
+   "ground_truth": {
+    "hash": "50c070e5f6aa9434f0e4bd43a151bba6",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09GK2ZGRW\",[[\"size\",\"190*70cm round head\"]]]",
+     "[\"B09H2QPDVB\",[[\"size\",\"190*70cm round head\"]]]",
+     "[\"B09KLSJGMB\",[[\"size\",\"190*70cm square head\"]]]",
+     "[\"B09KNCV5JY\",[[\"size\",\"190*70cm square head\"]]]",
+     "[\"B09NVD6QCR\",[[\"size\",\"190x70cm\"]]]",
+     "[\"B09PTWWFT7\",[[\"size\",\"190*70cm round head\"]]]",
+     "[\"B09Q2TZZXP\",[[\"size\",\"190*70cm round head\"]]]",
+     "[\"B09QHRCF6M\",[[\"size\",\"190*70cm round head\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c9bb067247c16776",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "salon & spa equipment",
+    "goal": {
+     "asin": "B09T2Z324R",
+     "attributes": [
+      "easy clean",
+      "high quality"
+     ],
+     "category": "",
+     "goal_options": [
+      "190*70cm"
+     ],
+     "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+     "price_upper": 170,
+     "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens",
+     "query": "salon & spa equipment"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B09MJXZ9PQ",
+     "cluster": "salon & spa equipment",
+     "name": "Classic Styling Salon Chair Hair Hydraulic Barber Chair for Hair Salon with Wider Seat & Heavy Duty Hydraulic Pump, Beauty Salon Spa Shampoo Equipment (Color : Gold)",
+     "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Salon & Spa Chairs"
+    }
+   },
+   "dst": "c4f221801f6143f6",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "46bbf8f357549906",
+   "src": "2372f416912ab196"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B010JEDXAU",
+     "cluster": "salon & spa equipment",
+     "name": "Master Massage Maxking Deluxe 4 Section Electric Lift Spa Salon Stationary Table, 30\", Beige",
+     "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Spa Beds & Tables"
+    }
+   },
+   "dst": "9cddc82766c5a0bc",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "14700bdab532da2c",
+   "src": "2372f416912ab196"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:barber chair",
+      "=",
+      "barber chair"
+     ]
+    ]
+   },
+   "dst": "f9e2b1562593519b",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2372f416912ab196"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:non slip",
+      "=",
+      "non slip"
+     ]
+    ]
+   },
+   "dst": "23a01aff52db7797",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2372f416912ab196"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "purple"
+     ]
+    ]
+   },
+   "dst": "e052bdc293934234",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2372f416912ab196"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:easy clean",
+      "=",
+      "easy clean"
+     ]
+    ]
+   },
+   "dst": "035f2099b4a0d437",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2372f416912ab196"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "purple",
+      "190x70cm(75x28inch)"
+     ]
+    ]
+   },
+   "dst": "b781e358eddda197",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2372f416912ab196"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "purple",
+      "190*70cm"
+     ]
+    ]
+   },
+   "dst": "c9bb067247c16776",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "2372f416912ab196"
+  }
+ ],
+ "env_id": "webshop_7a384528123fcc65",
+ "env_spec": {
+  "cluster": "salon & spa equipment",
+  "env_id": "webshop_7a384528123fcc65",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B09T2Z324R",
+   "cluster": "salon & spa equipment",
+   "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+   "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens"
+  },
+  "bound_slots": [
+   "attr:easy clean",
+   "attr:high quality",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:easy clean",
+    "=",
+    "easy clean"
+   ],
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "option:0",
+    "=",
+    "purple"
+   ],
+   [
+    "price_upper",
+    "<=",
+    170
+   ]
+  ],
+  "ground_truth": {
+   "hash": "206afec9887e848d63666c851d05a1f4",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B07ZXQD8NK\",[[\"color\",\"purple\"]]]",
+    "[\"B08GKPPPLQ\",[[\"color\",\"purple\"]]]",
+    "[\"B08TG5XYXN\",[[\"color\",\"purple\"]]]",
+    "[\"B08VNW6CG4\",[[\"color\",\"white + purple\"]]]",
+    "[\"B08WCCZDFP\",[[\"color\",\"purple\"]]]",
+    "[\"B09CMR3XMH\",[[\"color\",\"purple\"]]]",
+    "[\"B09CYPQN7X\",[[\"color\",\"purple\"]]]",
+    "[\"B09DKVQT8D\",[[\"color\",\"purple\"]]]",
+    "[\"B09GK2ZGRW\",[[\"color\",\"purple\"]]]",
+    "[\"B09H2QFSKP\",[[\"color\",\"purple\"]]]",
+    "[\"B09HBTX7LP\",[[\"color\",\"purple\"]]]",
+    "[\"B09KNCV5JY\",[[\"color\",\"purple\"]]]",
+    "[\"B09NVDGZ4J\",[[\"color\",\"purple\"]]]",
+    "[\"B09NVDH359\",[[\"color\",\"purple\"]]]",
+    "[\"B09NVF8FL8\",[[\"color\",\"purple\"]]]",
+    "[\"B09PYDH7ZD\",[[\"color\",\"purple\"]]]",
+    "[\"B09Q2TZZXP\",[[\"color\",\"purple\"]]]",
+    "[\"B09Q33YRSY\",[[\"color\",\"purple\"]]]",
+    "[\"B09QHRCF6M\",[[\"color\",\"purple\"]]]",
+    "[\"B09QHRQ89B\",[[\"color\",\"deep purple\"]]]",
+    "[\"B09QPNQ1JR\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYRW4N3\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYSBNWR\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYSJ62R\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYSKBYJ\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYSNRPZ\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYSXTR5\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYSZDSC\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYT13VQ\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYT5CX8\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYT6RB8\",[[\"color\",\"purple\"]]]",
+    "[\"B09SYTR26S\",[[\"color\",\"purple\"]]]",
+    "[\"B09T2WQNXX\",[[\"color\",\"purple\"]]]",
+    "[\"B09T2Z324R\",[[\"color\",\"purple\"]]]",
+    "[\"B09T31P5H7\",[[\"color\",\"purple\"]]]",
+    "[\"B09T32QJKV\",[[\"color\",\"purple\"]]]",
+    "[\"B09T33MHLV\",[[\"color\",\"purple\"]]]",
+    "[\"B09T33NQZ8\",[[\"color\",\"purple\"]]]",
+    "[\"B09T341WVC\",[[\"color\",\"purple\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "2372f416912ab196",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "salon & spa equipment",
+   "goal": {
+    "asin": "B09T2Z324R",
+    "attributes": [
+     "high quality",
+     "easy clean"
+    ],
+    "category": "",
+    "goal_options": [
+     "purple"
+    ],
+    "name": "ZHANGNA Massage Table Sheets, Salon Hotel SPA Bed Cover, Beauty Bedspread 4-Piece Cotton High-end Simple Beauty Salon Dedicated Massage Physiotherapy Bed Cover (Color : Green, Size : 60 * 180cm)",
+    "price_upper": 170,
+    "product_category": "Beauty & Personal Care › Salon & Spa Equipment › Professional Massage Equipment › Linens",
+    "query": "salon & spa equipment"
+   }
+  },
+  "source_record": "252d75426e1b658f",
+  "unbound_slots": [
+   "attr:barber chair",
+   "attr:easy clean",
+   "attr:non slip",
+   "option:0"
+  ]
+ },
+ "tree_id": "09d8722580d5bd6a"
+}

@@ -1,0 +1,104 @@
+{
+ "sample_id": "a43d99d35b03f301__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "a43d99d35b03f301",
+ "query": "I was walking my golden retriever puppy this morning and he stopped to sniff every single dandelion on the sidewalk, it was so cute I took like 20 photos of him holding one in his mouth. Then on the way home I popped into the corner bakery and got a fresh blueberry scone, it was still warm and crumbled all over my jacket when I took a bite. I also just remembered I need to pick up a new plant pot this weekend for the snake plant I got last month, its current pot is way too small and it's starting to tip over. Anyway, I'm having issues with my phone service right now, I checked and airplane mode is turned on, my APN settings seem to be broken, my line is suspended because of an overdue bill I forgot to pay, and I think my SIM card might be unseated too, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever puppy this morning and he stopped to sniff every single dandelion on the sidewalk, it was so cute I took like 20 photos of him holding one in his mouth. Then on the way home I popped into the corner bakery and got a fresh blueberry scone, it was still warm and crumbled all over my jacket when I took a bite. I also just remembered I need to pick up a new plant pot this weekend for the snake plant I got last month, its current pot is way too small and it's starting to tip over.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_settings",
+   "fault:overdue_bill_suspension",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:overdue_bill_suspension",
+     "=",
+     "overdue_bill_suspension"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

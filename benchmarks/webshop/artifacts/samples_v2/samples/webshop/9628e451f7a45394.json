@@ -1,0 +1,188 @@
+{
+ "adapter": "webshop",
+ "cluster": "bathing accessories",
+ "fidelity_notes": [],
+ "goal_idx": 428,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "f3b26d222c1b98e79f872c1a57cf5b25",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08MXTT8GD\",[[\"size\",\"35.4 inch\"]]]",
+   "[\"B09NKX8NK2\",[[\"color\",\"4\"]]]",
+   "[\"B09PJXZBSQ\",[[\"color\",\"4\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy clean",
+    "=",
+    "easy clean"
+   ],
+   [
+    "attr:non toxic",
+    "=",
+    "non toxic"
+   ],
+   [
+    "option:0",
+    "=",
+    "4"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:non toxic"
+  ],
+  "intent_id": "6656f40fb250fd25"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 7,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "attr:non toxic"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "attr:non toxic",
+     "=",
+     "non-flammable"
+    ],
+    [
+     "option:0",
+     "=",
+     "4"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy clean",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "5c18783e8b283b50",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "attr:non toxic",
+    "non toxic",
+    "non-flammable"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for bathing accessories that are easy to clean and non-flammable, I want option 4, and my price limit is 20.",
+ "render_attempts": 7,
+ "sample_id": "9628e451f7a45394",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bathing accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "874df47adf6060c1"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bathing accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "af15b930ca3ad6b5"
+  },
+  {
+   "announcement": "Also, it needs to be eco friendly.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9c939fb96813a4a8"
+  },
+  {
+   "announcement": "Also, it needs to be bath brush.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bb9162b47c4ec4ce"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a279649fc7a73a97"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d46bd7a631f30213"
+  },
+  {
+   "announcement": "Actually, make it (2 packs)-navy blue,black instead of 4.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4011e10894cf476e"
+  },
+  {
+   "announcement": "Actually, make it (2 packs)-red,black instead of 4.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5503e93e1c9c9e4c"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like a #4 bath sponge that is non toxic and easy to keep clean.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "e62d90d19a98bad1",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

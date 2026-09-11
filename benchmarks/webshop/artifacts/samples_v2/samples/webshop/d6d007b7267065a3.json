@@ -1,0 +1,217 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's bodysuit tops",
+ "fidelity_notes": [],
+ "goal_idx": 286,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "0d323c6731fea472e23e4ad1e62bbf7e",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08123ZP7W\",[[\"color\",\"pink\"],[\"size\",\"10-12\"]]]",
+   "[\"B09B3RQZLM\",[[\"color\",\"pink\"],[\"size\",\"12\"]]]",
+   "[\"B09KCF2QJB\",[[\"color\",\"pink\"],[\"size\",\"12\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:long sleeve",
+    "=",
+    "long sleeve"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "option:1",
+    "=",
+    "12"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "8402376b426f61f8"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "pink"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "light pick"
+   }
+  ],
+  "attempt": 5,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:long sleeve",
+     "=",
+     "long sleeve"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "option:1",
+     "=",
+     "12"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   [
+    [
+     "attr:long sleeve",
+     "=",
+     "long sleeve"
+    ],
+    [
+     "option:1",
+     "=",
+     "12"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:long sleeve",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "30622f512bb93a4e",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a long sleeve women’s bodysuit top that’s a light pick, fits like a 12, and costs no more than 20 dollars.",
+ "render_attempts": 5,
+ "sample_id": "d6d007b7267065a3",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's bodysuit tops instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "9b4b7f42aaa14a17"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's bodysuit tops instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "d9a633f6a08b34d0"
+  },
+  {
+   "announcement": "Also, it needs to be dry clean.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0ce8282955ee6aad"
+  },
+  {
+   "announcement": "Also, it needs to be hand wash.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "308707d6c1e4b2ef"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9e3ee18ff05aacc9"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a1f0c952afe0eb05"
+  },
+  {
+   "announcement": "Actually, make it #01 green instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ab85581bac70d1c6"
+  },
+  {
+   "announcement": "Actually, make it #01-green instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b016bec65ce25923"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   3,
+   14
+  ],
+  "rule": "ambiguous",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want a pink long sleeved t-shirt in size 12.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "32b446ed5ef17c4c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

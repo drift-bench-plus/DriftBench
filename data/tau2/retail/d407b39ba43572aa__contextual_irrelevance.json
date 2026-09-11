@@ -1,0 +1,258 @@
+{
+ "sample_id": "d407b39ba43572aa__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "d407b39ba43572aa",
+ "query": "I just spent the entire weekend planting native wildflower seeds in my backyard, and I\u2019m so excited to watch them attract bees and butterflies once they bloom. I even picked up a cute new bird feeder yesterday and filled it with sunflower seeds, already spotted a pair of cardinals stopping by this morning. Oh, and I finally got around to watching that popular baking show everyone\u2019s been talking about last night, the chocolate lava cake challenge made me immediately place an order for a set of high-quality mixing bowls. Now, I need to make a few changes to my pending order #W1603792: first, update the shipping address to 592 Elm Avenue, Suite 978, Houston, TX 77242, USA, also please update my saved user address under user ID sophia_martin_8570 to that same address. Second, swap item 6501071631 in the order for item 2106335193, and charge the price difference to my saved payment method credit_card_5694100.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the entire weekend planting native wildflower seeds in my backyard, and I\u2019m so excited to watch them attract bees and butterflies once they bloom. I even picked up a cute new bird feeder yesterday and filled it with sunflower seeds, already spotted a pair of cardinals stopping by this morning. Oh, and I finally got around to watching that popular baking show everyone\u2019s been talking about last night, the chocolate lava cake challenge made me immediately place an order for a set of high-quality mixing bowls.",
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_user_address:address1",
+   "arg:1:modify_user_address:address2",
+   "arg:1:modify_user_address:city",
+   "arg:1:modify_user_address:country",
+   "arg:1:modify_user_address:state",
+   "arg:1:modify_user_address:user_id",
+   "arg:1:modify_user_address:zip",
+   "arg:2:modify_pending_order_items:item_ids",
+   "arg:2:modify_pending_order_items:new_item_ids",
+   "arg:2:modify_pending_order_items:order_id",
+   "arg:2:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"592 Elm Avenue\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 978\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"Houston\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W1603792\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"77242\""
+    ],
+    [
+     "arg:1:modify_user_address:address1",
+     "=",
+     "\"592 Elm Avenue\""
+    ],
+    [
+     "arg:1:modify_user_address:address2",
+     "=",
+     "\"Suite 978\""
+    ],
+    [
+     "arg:1:modify_user_address:city",
+     "=",
+     "\"Houston\""
+    ],
+    [
+     "arg:1:modify_user_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:1:modify_user_address:state",
+     "=",
+     "\"TX\""
+    ],
+    [
+     "arg:1:modify_user_address:user_id",
+     "=",
+     "\"sophia_martin_8570\""
+    ],
+    [
+     "arg:1:modify_user_address:zip",
+     "=",
+     "\"77242\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:item_ids",
+     "=",
+     "[\"6501071631\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"2106335193\"]"
+    ],
+    [
+     "arg:2:modify_pending_order_items:order_id",
+     "=",
+     "\"#W1603792\""
+    ],
+    [
+     "arg:2:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_5694100\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"592 Elm Avenue\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 978\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"Houston\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W1603792\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"77242\""
+   ],
+   [
+    "arg:1:modify_user_address:address1",
+    "=",
+    "\"592 Elm Avenue\""
+   ],
+   [
+    "arg:1:modify_user_address:address2",
+    "=",
+    "\"Suite 978\""
+   ],
+   [
+    "arg:1:modify_user_address:city",
+    "=",
+    "\"Houston\""
+   ],
+   [
+    "arg:1:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_user_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:1:modify_user_address:user_id",
+    "=",
+    "\"sophia_martin_8570\""
+   ],
+   [
+    "arg:1:modify_user_address:zip",
+    "=",
+    "\"77242\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:item_ids",
+    "=",
+    "[\"6501071631\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"2106335193\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:order_id",
+    "=",
+    "\"#W1603792\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_5694100\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

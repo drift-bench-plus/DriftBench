@@ -1,0 +1,167 @@
+{
+ "adapter": "webshop",
+ "cluster": "pantry staples",
+ "fidelity_notes": [],
+ "goal_idx": 449,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "d47d6235cf44a431fc54d8e9a1f48589",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B002ZOPTGY\",[[\"size\",\"18 fl oz (pack of 1)\"]]]",
+   "[\"B010NBE6HI\",[[\"size\",\"30 fl oz (pack of 1)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:simple ingredients",
+    "=",
+    "simple ingredients"
+   ],
+   [
+    "option:0",
+    "=",
+    "30 fl oz (pack of 1) - set of 2 new (two..."
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "6b650a927e8cac22"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:simple ingredients",
+     "=",
+     "simple ingredients"
+    ],
+    [
+     "option:0",
+     "=",
+     "30 fl oz (pack of 1) - set of 2 new (two..."
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I’ve been trying to train my tabby cat to knock over empty cardboard toilet paper rolls on command this week, and she’s actually gotten pretty good at it as long as I reward her with tiny bits of freeze-dried chicken treats after every successful attempt. I also spent an hour last night rearranging my houseplant shelf to make sure all my pothos and snake plants get the right amount of indirect sunlight from the living room window. On top of that, I’ve been binging a silly DIY craft show about turning old mason jars into decorative candle holders and I’m already halfway through the second season.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:simple ingredients",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve been trying to train my tabby cat to knock over empty cardboard toilet paper rolls on command this week, and she’s actually gotten pretty good at it as long as I reward her with tiny bits of freeze-dried chicken treats after every successful attempt. I also spent an hour last night rearranging my houseplant shelf to make sure all my pothos and snake plants get the right amount of indirect sunlight from the living room window. On top of that, I’ve been binging a silly DIY craft show about turning old mason jars into decorative candle holders and I’m already halfway through the second season. I’m looking for pantry staples with simple ingredients, specifically the 30 fl oz (pack of 1) - set of 2 new option, and my price limit is $20.",
+ "render_attempts": 1,
+ "sample_id": "095b80ddbb721c73",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the pantry staples instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e8bafccb35e5707"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the pantry staples instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b6215ee8575f5182"
+  },
+  {
+   "announcement": "Also, it needs to be price_band under_10.",
+   "gt_moved": false,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "363c79dfc7aecb31"
+  },
+  {
+   "announcement": "Also, it needs to be price_band under_25.",
+   "gt_moved": false,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bc8e210d05d2c92a"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2ff9904880d9a03a"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "43f6e904fbc9c94d"
+  },
+  {
+   "announcement": "Actually, make it .2 set(36 count (pack of 1)) instead of 30 fl oz (pack of 1) - set of 2 new (two....",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "28818dacab33f05c"
+  },
+  {
+   "announcement": "Actually, make it .3 set(36 count (pack of 1)) instead of 30 fl oz (pack of 1) - set of 2 new (two....",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3397645244841134"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 2,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for  30 fl oz (pack of 1) - set of 2 new (two... size simple ingredients mayonnaise",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "cb5d8167a948b471",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,221 @@
+{
+ "sample_id": "322d303a49b1908e",
+ "tree_id": "b2894a281f6aafa7",
+ "adapter": "webshop",
+ "cluster": "toothpaste",
+ "goal_idx": 457,
+ "split": "test",
+ "source_instruction": "i'm looking for a toothpaste for teeth whitening in blueberry scent",
+ "query": "Hey, can you help me grab a toothpaste from this section? I need one that does teeth polishing, and I want the blueberry flavor one. I don\u2019t wanna spend too much, so just grab something that fits what I\u2019m looking for, yeah?",
+ "strategy_ids": [
+  "insufficient_information",
+  "factual_error"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+factual_error",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:teeth whitening",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:teeth whitening",
+    "teeth whitening",
+    "teeth polishing"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:teeth whitening",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:teeth whitening",
+     "=",
+     "teeth polishing"
+    ],
+    [
+     "option:0",
+     "=",
+     "blueberry"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "40e95edd32d76c6b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 25,
+  "lit_card": 1,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 31,
+    "true_card": 25,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 25,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 4,
+ "hidden_intent": {
+  "intent_id": "a010ac81c363ca1d",
+  "conditions": [
+   [
+    "attr:teeth whitening",
+    "=",
+    "teeth whitening"
+   ],
+   [
+    "option:0",
+    "=",
+    "blueberry"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:teeth whitening",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 25,
+  "value": [
+   "[\"B08LPPWQSH\",[[\"color\",\"blueberry taste\"]]]",
+   "[\"B09CN4ZPZQ\",[[\"flavor name\",\"blueberry\"]]]",
+   "[\"B09D96J2HR\",[[\"color\",\"blueberries\"]]]",
+   "[\"B09DGNDBRM\",[[\"color\",\"12 lower 8 inlaid blue drill set\"]]]",
+   "[\"B09L56MK6J\",[[\"color\",\"blue\"]]]",
+   "[\"B09L5LDQK6\",[[\"color\",\"blue\"]]]",
+   "[\"B09M2SWDNB\",[[\"color\",\"blue\"]]]",
+   "[\"B09NC681PJ\",[[\"color\",\"blue\"]]]",
+   "[\"B09P3LB83H\",[[\"pattern name\",\"blueberry\"]]]",
+   "[\"B09PHL4214\",[[\"color\",\"blueberry\"]]]",
+   "[\"B09PHLSFCP\",[[\"scent\",\"blueberry\"]]]",
+   "[\"B09QPHM761\",[[\"color\",\"blue\"]]]",
+   "[\"B09QQL7S3P\",[[\"color\",\"1pc blue\"]]]",
+   "[\"B09QQM4W65\",[[\"color\",\"blueberry\"]]]",
+   "[\"B09QQMVZ37\",[[\"color\",\"blueberry + passion fruit\"]]]",
+   "[\"B09QXG91MS\",[[\"flavor name\",\"blueberry\"]]]",
+   "[\"B09R3MZ2RT\",[[\"color\",\"blue\"]]]",
+   "[\"B09R3VJLZZ\",[[\"color\",\"2pcs blue\"]]]",
+   "[\"B09R42YXKG\",[[\"color\",\"1pcs blue\"]]]",
+   "[\"B09R9MYMCH\",[[\"color\",\"blue\"]]]",
+   "[\"B09S6JJ43N\",[[\"size\",\"blueberry-bright white\"]]]",
+   "[\"B09S6MW1K1\",[[\"color\",\"blue\"]]]",
+   "[\"B09SB8QZLD\",[[\"color\",\"(blueberry + passion fruit)\"]]]",
+   "[\"B09SCVVTYX\",[[\"color\",\"blueberry + passion fruit\"]]]",
+   "[\"B09SZ5K381\",[[\"color\",\"blueberry\"]]]"
+  ],
+  "hash": "97eb677077ab1e1eecf550f5dccbfea9"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6131833197b2580f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ee2213fe4b5062d6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "22fb45aa9d62758a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy use."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c65b1d3c17f173ee",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be electric toothbrush."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6a2bd68117e8855d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b91cb9d2e07ccb07",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "af7f9d25c95f43f1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 2pcs 50ml instead of blueberry."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cb90bdf142c22029",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 2pcsteeth repair instead of blueberry."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

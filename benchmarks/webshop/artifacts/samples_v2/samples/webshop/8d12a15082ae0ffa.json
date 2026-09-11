@@ -1,0 +1,203 @@
+{
+ "adapter": "webshop",
+ "cluster": "flashes",
+ "fidelity_notes": [],
+ "goal_idx": 329,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "cd9bd30b6e98dc40e47462ac1afc7c00",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07MCZDLCZ\",[[\"capacity\",\"8gb ddr4 ram, 1tb ssd\"]]]",
+   "[\"B09LMC74TM\",[[\"capacity\",\"8gb ddr4 ram, 1tb pcie ssd\"]]]",
+   "[\"B09MR5ZD7L\",[[\"size\",\"8gb ddr4 ram, 1tb hdd\"]]]",
+   "[\"B09P426GJD\",[[\"capacity\",\"8gb ddr4 ram, 1tb pcie ssd\"]]]",
+   "[\"B09SD9SYTL\",[[\"capacity\",\"8gb ddr4 ram, 1tb hdd\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:quad core",
+    "=",
+    "quad core"
+   ],
+   [
+    "option:0",
+    "=",
+    "8gb ddr4 ram, 1tb hdd"
+   ],
+   [
+    "price_upper",
+    "<=",
+    770
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "54217a4a3af1953f"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "8gb ddr4 ram, 1tb hdd"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "the right core memory"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:quad core",
+     "=",
+     "quad core"
+    ],
+    [
+     "option:0",
+     "=",
+     "8gb ddr4 ram, 1tb hdd"
+    ],
+    [
+     "price_upper",
+     "<=",
+     770
+    ]
+   ],
+   [
+    [
+     "attr:quad core",
+     "=",
+     "quad core"
+    ],
+    [
+     "price_upper",
+     "<=",
+     770
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:quad core",
+   "price_upper"
+  ],
+  "spec_id": "a102308406b289e4",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m browsing the flashes section, can you help me find a computer that has a quad core, the right core memory, and stays under $770?",
+ "render_attempts": 2,
+ "sample_id": "8d12a15082ae0ffa",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the flashes instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "342ebc85ea673c95"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the flashes instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "842a3d2dc6506cec"
+  },
+  {
+   "announcement": "Also, it needs to be core i5.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "78aaf0631b733ab7"
+  },
+  {
+   "announcement": "Also, it needs to be intel core.",
+   "gt_moved": false,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cd242a57d00737f5"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "699058f4393aaeb4"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dbb4014f44650e6f"
+  },
+  {
+   "announcement": "Actually, make it 128gb card instead of 8gb ddr4 ram, 1tb hdd.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3e08723902564836"
+  },
+  {
+   "announcement": "Actually, make it 128gb ddr4 ram, 2tb pcie ssd instead of 8gb ddr4 ram, 1tb hdd.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8bc31a40fe880c51"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   5,
+   61
+  ],
+  "rule": "ambiguous",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a desktop mini computer with quad core and 8 gb of ram.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "ebb60263e4f1f091",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

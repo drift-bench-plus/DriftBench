@@ -1,0 +1,126 @@
+{
+ "sample_id": "140b8238313ebb9c__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "140b8238313ebb9c",
+ "query": "Last weekend I took my golden retriever to the new dog park downtown, and he had the best time chasing a frisbee with a group of other puppies. I even stopped by the little bakery next to the park on the way home and picked up a matcha scone that was so buttery and perfectly sweet, I\u2019m already planning to go back for more this Saturday. Oh, and my neighbor just dropped off a jar of homemade strawberry jam she made from fruit in her backyard, I tried a spoonful this morning and it tastes way better than any store-bought jam I\u2019ve ever had. I need to request returns for some delivered orders, for order #W7553978 I want to return the items 4545791457, 3098764622 and 1631806422 with the refund going to credit_card_5902940, and for order #W3239882 I want to return item 9494281769 with the refund also going to credit_card_5902940.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I took my golden retriever to the new dog park downtown, and he had the best time chasing a frisbee with a group of other puppies. I even stopped by the little bakery next to the park on the way home and picked up a matcha scone that was so buttery and perfectly sweet, I\u2019m already planning to go back for more this Saturday. Oh, and my neighbor just dropped off a jar of homemade strawberry jam she made from fruit in her backyard, I tried a spoonful this morning and it tastes way better than any store-bought jam I\u2019ve ever had.",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id",
+   "arg:1:return_delivered_order_items:item_ids",
+   "arg:1:return_delivered_order_items:order_id",
+   "arg:1:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"4545791457\",\"3098764622\",\"1631806422\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7553978\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_5902940\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:item_ids",
+     "=",
+     "[\"9494281769\"]"
+    ],
+    [
+     "arg:1:return_delivered_order_items:order_id",
+     "=",
+     "\"#W3239882\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_5902940\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"4545791457\",\"3098764622\",\"1631806422\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7553978\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_5902940\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:item_ids",
+    "=",
+    "[\"9494281769\"]"
+   ],
+   [
+    "arg:1:return_delivered_order_items:order_id",
+    "=",
+    "\"#W3239882\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_5902940\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

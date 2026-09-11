@@ -1,0 +1,236 @@
+{
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "fidelity_notes": [],
+ "goal_idx": 320,
+ "ground_truth": {
+  "cardinality": 6,
+  "hash": "aef60d0f10e9c08464c10f288bda8f91",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B073KYYVTR\",[[\"size\",\"180ft\"],[\"style\",\"trishield - black\"]]]",
+   "[\"B073L11212\",[[\"size\",\"180ft\"],[\"style\",\"trishield - black\"]]]",
+   "[\"B0741RSZTQ\",[[\"color\",\"trishield - black\"],[\"size\",\"180ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"material type\",\"trishield - black\"],[\"size\",\"180ft\"]]]",
+   "[\"B07CQB2FZK\",[[\"material type\",\"trishield - black\"],[\"size\",\"180ft\"]]]",
+   "[\"B099RJGRRZ\",[[\"color\",\"black\"],[\"size\",\"10ft\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:coaxial cable",
+    "=",
+    "coaxial cable"
+   ],
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "trishield nickel-plated fitting -black"
+   ],
+   [
+    "option:1",
+    "=",
+    "180ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "a97b0811c1293bf2"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "trishield nickel-plated fitting -black"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "trishield nickel-plated black fittings"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:coaxial cable",
+     "=",
+     "coaxial cable"
+    ],
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "option:0",
+     "=",
+     "trishield nickel-plated fitting -black"
+    ],
+    [
+     "option:1",
+     "=",
+     "180ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   [
+    [
+     "attr:coaxial cable",
+     "=",
+     "coaxial cable"
+    ],
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "option:1",
+     "=",
+     "180ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:coaxial cable",
+   "attr:high speed",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "e3a6b022fa508cc1",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a high-speed coaxial cable for my satellite TV setup and a pack of cable clips, trishield nickel-plated black fittings, 180 feet long under $40.",
+ "render_attempts": 2,
+ "sample_id": "72c7821e033bb09d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0d4271e27a5b21d4"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7845bdf8528c5ec1"
+  },
+  {
+   "announcement": "Also, it needs to be plug play.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "85bd5621240e760a"
+  },
+  {
+   "announcement": "Also, it needs to be tv antenna.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b577976f68268712"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2a96c477821a0237"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "77f9df05cfbdee46"
+  },
+  {
+   "announcement": "Actually, make it quad rg11 aerial w |  weather boot - black instead of trishield nickel-plated fitting -black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "3be879a912e17c9d"
+  },
+  {
+   "announcement": "Actually, make it direct burial w |  weather boot - orange instead of trishield nickel-plated fitting -black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "8f37bd79e98c1f79"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   6,
+   6
+  ],
+  "rule": "ambiguous",
+  "true_card": 6,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a high speed 180 foot coaxial cable with a trishield nickel-plated fitting.",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "5d4fd9ec663a5aa6",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

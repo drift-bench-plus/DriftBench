@@ -1,0 +1,82 @@
+{
+ "sample_id": "6dc22c74878761f1__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "6dc22c74878761f1",
+ "query": "I was out at the community farmers market this morning and picked up the most delicious ripe peaches, they\u2019re so juicy I had to wipe my hand on my jeans twice just now after eating one. On the way home, I stopped at the new dog park to let my golden retriever puppy run around, and he made friends with a tiny corgi that kept stealing his tennis ball. When I got back to my car I realized I forgot to grab a jar of the local honey I wanted, I\u2019ll have to go back next weekend to pick some up. Anyway, I\u2019m having some issues with my phone right now: the storage permission for my apps seems to be broken, and I also got an alert that my mobile data usage has exceeded my plan limit, can you help me fix these issues?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was out at the community farmers market this morning and picked up the most delicious ripe peaches, they\u2019re so juicy I had to wipe my hand on my jeans twice just now after eating one. On the way home, I stopped at the new dog park to let my golden retriever puppy run around, and he made friends with a tiny corgi that kept stealing his tennis ball. When I got back to my car I realized I forgot to grab a jar of the local honey I wanted, I\u2019ll have to go back next weekend to pick some up. Anyway,",
+  "retained": [
+   "fault:break_app_storage_permission",
+   "fault:data_usage_exceeded"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,193 @@
+{
+ "sample_id": "f5a6b478d4e9e6f7",
+ "tree_id": "5b368617daf53a03",
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "goal_idx": 14,
+ "split": "test",
+ "source_instruction": "i am looking for a caffeine free raspberry ice flavored drink mix.",
+ "query": "I swear I spent 20 minutes earlier this morning digging through my junk drawer for my favorite neon pink nail polish, only to remember I left it at my friend\u2019s house after we did each other\u2019s nails last weekend while binging that new vampire reality show. Oh, and I stopped to pet the absolute fluffiest orange tabby cat on my walk over here, it had a little knit sweater with fish patterns on it, I almost stayed to scratch its ears for another ten minutes. Since you probably don\u2019t have any caffeine free beverages in stock right now, just grab me whatever decaf adjacent option you\u2019ve got in the raspberry ice flavor, and make sure it doesn\u2019t go over $60, yeah?",
+ "strategy_ids": [
+  "false_presupposition",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "false_presupposition",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you probably don\u2019t have any caffeine free beverages in stock right now",
+    "condition": null,
+    "about": [
+     "attr:caffeine free",
+     "caffeine free"
+    ],
+    "alternative": [
+     "attr:caffeine free",
+     "decaf adjacent"
+    ]
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I swear I spent 20 minutes earlier this morning digging through my junk drawer for my favorite neon pink nail polish, only to remember I left it at my friend\u2019s house after we did each other\u2019s nails last weekend while binging that new vampire reality show. Oh, and I stopped to pet the absolute fluffiest orange tabby cat on my walk over here, it had a little knit sweater with fish patterns on it, I almost stayed to scratch its ears for another ten minutes.",
+  "retained": [
+   "attr:caffeine free",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:caffeine free",
+     "=",
+     "decaf adjacent"
+    ],
+    [
+     "option:0",
+     "=",
+     "raspberry ice"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "69a8c5301c5b2045"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 0,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 2,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "cfccaba15ac2f0b3",
+  "conditions": [
+   [
+    "attr:caffeine free",
+    "=",
+    "caffeine free"
+   ],
+   [
+    "option:0",
+    "=",
+    "raspberry ice"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B003DNL9XI\",[[\"flavor name\",\"raspberry ice\"]]]",
+   "[\"B004M8TKA2\",[[\"flavor name\",\"raspberry\"]]]"
+  ],
+  "hash": "378e737758ee2fd9d73092ce154074ee"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2398dab1f90987e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "38b64bfd9d3bf2d4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "91eb23f820f2ce8a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gluten free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ec5a60e5c8d12100",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be drink mix."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "594fd1f2b914436e",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c8432e0bba46470c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0431dfb89d394f4a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 0.24 ounce (pack of 30) instead of raspberry ice."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cbbe2c7daf6cee44",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .4 pack - 25.4 fl oz (pack of 1) instead of raspberry ice."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

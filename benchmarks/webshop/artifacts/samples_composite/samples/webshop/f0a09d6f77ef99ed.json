@@ -1,0 +1,252 @@
+{
+ "sample_id": "f0a09d6f77ef99ed",
+ "tree_id": "afd276490054ad37",
+ "adapter": "webshop",
+ "cluster": "women's jeans",
+ "goal_idx": 187,
+ "split": "test",
+ "source_instruction": "i'm looking for a wide leg jeans with regular fit and tummy control. also, choose 3x large zz-zm black colored one.",
+ "query": "I swear the squirrel that\u2019s been camped out on my back porch rail for the last three weeks has fully decided my potted mint plant is its own personal salad bar. I caught it this morning perched right on the edge of the planter, holding a whole sprig of mint like it was a fancy little cocktail garnish, staring straight at me through the kitchen window like it was daring me to come outside and stop it. I\u2019ve left out a little dish of unsalted peanuts for it three days in a row now, but it still keeps going for the mint first, and I\u2019m starting to think it\u2019s just messing with me at this point, it\u2019s so bold I half expect it to tap on the glass tomorrow asking for simple syrup and ice to go with it.\nI\u2019ve heard that women\u2019s jeans that are straight fit, have tummy control, and a wide leg cut, in 3X-large, in that one color I always get, are the ones that fit my usual preferences, right? I\u2019ve heard those options never ring up over $20 for them, too.",
+ "strategy_ids": [
+  "indirect_intent",
+  "contextual_irrelevance",
+  "referential_ambiguity",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+contextual_irrelevance+referential_ambiguity+factual_error",
+  "family": "expression+intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "contextual_irrelevance",
+   "referential_ambiguity",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:regular fit"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:regular fit",
+    "regular fit",
+    "straight fit"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I swear the squirrel that\u2019s been camped out on my back porch rail for the last three weeks has fully decided my potted mint plant is its own personal salad bar. I caught it this morning perched right on the edge of the planter, holding a whole sprig of mint like it was a fancy little cocktail garnish, staring straight at me through the kitchen window like it was daring me to come outside and stop it. I\u2019ve left out a little dish of unsalted peanuts for it three days in a row now, but it still keeps going for the mint first, and I\u2019m starting to think it\u2019s just messing with me at this point, it\u2019s so bold I half expect it to tap on the glass tomorrow asking for simple syrup and ice to go with it.",
+  "retained": [
+   "attr:tummy control",
+   "attr:wide leg",
+   "option:1",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:regular fit",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:regular fit",
+     "=",
+     "straight fit"
+    ],
+    [
+     "attr:tummy control",
+     "=",
+     "tummy control"
+    ],
+    [
+     "attr:wide leg",
+     "=",
+     "wide leg"
+    ],
+    [
+     "option:1",
+     "=",
+     "3x-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "b33c3ab5bd51ea3a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 14,
+  "lit_card": 4,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 16,
+    "true_card": 14,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 4,
+    "true_card": 14,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "5bd22867d5ca40ec",
+  "conditions": [
+   [
+    "attr:regular fit",
+    "=",
+    "regular fit"
+   ],
+   [
+    "attr:tummy control",
+    "=",
+    "tummy control"
+   ],
+   [
+    "attr:wide leg",
+    "=",
+    "wide leg"
+   ],
+   [
+    "option:0",
+    "=",
+    "zz-zmblack"
+   ],
+   [
+    "option:1",
+    "=",
+    "3x-large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:regular fit",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 14,
+  "value": [
+   "[\"B082SZDTBD\",[[\"color\",\"zz-zmblack\"],[\"size\",\"large\"]]]",
+   "[\"B0831NKRD1\",[[\"color\",\"z-black\"],[\"size\",\"large\"]]]",
+   "[\"B0862B9PRX\",[[\"color\",\"z-azblack\"],[\"size\",\"large\"]]]",
+   "[\"B08TRLG75L\",[[\"color\",\"a3-black\"],[\"size\",\"large\"]]]",
+   "[\"B09FY8BW8C\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09G3CKQTK\",[[\"color\",\"z-black\"],[\"size\",\"large\"]]]",
+   "[\"B09NL53BGX\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09NW1GRCX\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09PDVZTC2\",[[\"color\",\"z-xablack\"],[\"size\",\"large\"]]]",
+   "[\"B09Q6KSK33\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09QS643MZ\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09R78GYSC\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09R9Z4FTF\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09S3T5D9P\",[[\"color\",\"black\"],[\"size\",\"large\"]]]"
+  ],
+  "hash": "938126760c08a4a95f65b0f8dd2b933d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "3e364b66ebaf1ae0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's jeans instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f7c6a7ddaa9569bc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's jeans instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ccab9a04e2f2b298",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be faux fur."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ff16305f7d17fa18",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cover ups."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9b89ab0a3eddbe8b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c65173f379274efc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "748bbbfc86394322",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 grey instead of zz-zmblack."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "efbf63abfbaa79e6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 yellow instead of zz-zmblack."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

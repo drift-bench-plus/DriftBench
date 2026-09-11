@@ -1,0 +1,191 @@
+{
+ "adapter": "webshop",
+ "cluster": "snack food gifts",
+ "fidelity_notes": [],
+ "goal_idx": 119,
+ "ground_truth": {
+  "cardinality": 26,
+  "hash": "f29ed3db50d5224f5d524ce4ee098b77",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B000KAN9L2\",[]]",
+   "[\"B003N15JC2\",[]]",
+   "[\"B004W5AU4U\",[]]",
+   "[\"B007JE673E\",[]]",
+   "[\"B00IPQ54KM\",[]]",
+   "[\"B00O06CPJO\",[]]",
+   "[\"B018RW9ELS\",[]]",
+   "[\"B01CPXD1ZU\",[]]",
+   "[\"B06ZYP5L63\",[]]",
+   "[\"B07CNGX5YC\",[]]",
+   "[\"B07TS31WYR\",[]]",
+   "[\"B07ZG1RBX9\",[]]",
+   "[\"B07ZS5QP8D\",[]]",
+   "[\"B07ZYHZ1NK\",[]]",
+   "[\"B07ZZK7LJK\",[]]",
+   "[\"B081SNVCN4\",[]]",
+   "[\"B084XVVPQL\",[]]",
+   "[\"B088NK941W\",[]]",
+   "[\"B08LMNNKFY\",[]]",
+   "[\"B08MBBRFQG\",[]]",
+   "[\"B08TB2D9YH\",[]]",
+   "[\"B08WH7YCMD\",[]]",
+   "[\"B09GYW93X8\",[]]",
+   "[\"B09HWCWDYJ\",[]]",
+   "[\"B09QXH1WVS\",[]]",
+   "[\"B09RKVYNCY\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:chocolate covered",
+    "=",
+    "chocolate covered"
+   ],
+   [
+    "attr:gift basket",
+    "=",
+    "gift basket"
+   ],
+   [
+    "price_upper",
+    "<=",
+    80
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "de1e36915cad848b"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:chocolate covered",
+     "=",
+     "chocolate covered"
+    ],
+    [
+     "attr:gift basket",
+     "=",
+     "gift basket"
+    ],
+    [
+     "price_upper",
+     "<=",
+     80
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:chocolate covered",
+   "attr:gift basket",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that chocolate covered snack food gift baskets under eighty dollars work really well for last-minute presents for coworkers who love sweet treats.",
+ "render_attempts": 1,
+ "sample_id": "10f1010049b8bda9",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the snack food gifts instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0610e8ff0fdd64f7"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the snack food gifts instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "60c6b706db344ae9"
+  },
+  {
+   "announcement": "Also, it needs to be birthday cake.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "40caa2a41304fb3f"
+  },
+  {
+   "announcement": "Also, it needs to be gift set.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ab589c9cf3920076"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "98cbf9a58700107e"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d755f8ec2289bd3a"
+  },
+  {
+   "announcement": "Actually, make it 30 instead of 80.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "16d53fc7ac22d0b1"
+  },
+  {
+   "announcement": "Actually, make it 20 instead of 80.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9d1d4028018a513e"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 26,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 26,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a gift covered with chocolate and should be in a gift basket.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "e1ca5a13cc0515a7",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,191 @@
+{
+ "adapter": "webshop",
+ "cluster": "children's fragrance",
+ "fidelity_notes": [],
+ "goal_idx": 370,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "9f437f8ced2d02d3a5c61cfd27d4b29c",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08KGFBJDF\",[[\"scent\",\"prada luna rossa carbon impression\"]]]",
+   "[\"B097WQNRSP\",[[\"scent\",\"prada luna rossa carbon impression\"]]]",
+   "[\"B097WYZMV6\",[[\"scent\",\"prada luna rossa carbon impression\"]]]",
+   "[\"B097XFZ2LM\",[[\"scent\",\"prada luna rossa carbon impression\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "attr:long lasting",
+    "=",
+    "long lasting"
+   ],
+   [
+    "attr:travel size",
+    "=",
+    "travel size"
+   ],
+   [
+    "option:0",
+    "=",
+    "prada luna rossa impression"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "e318bb9d57e2527c"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "attr:long lasting",
+     "=",
+     "long lasting"
+    ],
+    [
+     "attr:travel size",
+     "=",
+     "travel size"
+    ],
+    [
+     "option:0",
+     "=",
+     "prada luna rossa impression"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning chasing my golden retriever around the local dog park after he stole a frisbee from a group of college students playing ultimate frisbee, and I’m still laughing thinking about how he zoomed past the picnic tables with everyone cheering him on. On the way home, I stopped at the corner bakery and picked up a warm blueberry scone that was still crumbly and sweet from the oven, and I’ve been sipping iced lavender latte while flipping through a new gardening magazine I grabbed at the checkout. I’m even daydreaming about planting a small patch of sunflowers along my backyard fence this weekend to attract bees and brighten up the space.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high quality",
+   "attr:long lasting",
+   "attr:travel size",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning chasing my golden retriever around the local dog park after he stole a frisbee from a group of college students playing ultimate frisbee, and I’m still laughing thinking about how he zoomed past the picnic tables with everyone cheering him on. On the way home, I stopped at the corner bakery and picked up a warm blueberry scone that was still crumbly and sweet from the oven, and I’ve been sipping iced lavender latte while flipping through a new gardening magazine I grabbed at the checkout. I’m even daydreaming about planting a small patch of sunflowers along my backyard fence this weekend to attract bees and brighten up the space. I’m shopping in the children’s fragrance section and looking for a high quality, long lasting, travel size option of the Prada Luna Rossa impression, with a price limit of $30.",
+ "render_attempts": 1,
+ "sample_id": "acb4cd4f312b2b1b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the children's fragrance instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "05f35c18327d1da3"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the children's fragrance instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2f28cf995974b0eb"
+  },
+  {
+   "announcement": "Also, it needs to be eau parfum.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "29dd52be0a49629d"
+  },
+  {
+   "announcement": "Also, it needs to be spray bottle.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "35e057a715a0e792"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a22ea50db84d4755"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ec79bbf1561e436d"
+  },
+  {
+   "announcement": "Actually, make it 2020 best seller men perfume set instead of prada luna rossa impression.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6d44fc0ff652f03c"
+  },
+  {
+   "announcement": "Actually, make it 2020 most attractive men 2oz perfume set instead of prada luna rossa impression.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7810ca9a3b7ad6b5"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 4,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking high quality long lasting travel size parfum prada luna rossa impression",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "13facd448b47d9fc",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

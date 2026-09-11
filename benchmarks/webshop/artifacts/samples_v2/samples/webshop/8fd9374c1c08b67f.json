@@ -1,0 +1,168 @@
+{
+ "adapter": "webshop",
+ "cluster": "alcoholic beverages",
+ "fidelity_notes": [],
+ "goal_idx": 128,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "b3eba65f349c8603c3340dc1587f3f5c",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B005Z6LGYS\",[[\"flavor name\",\"citrus\"]]]",
+   "[\"B07CZLVZ7X\",[[\"flavor name\",\"citrus\"]]]",
+   "[\"B08PW3Y1DM\",[[\"flavor name\",\"dry citrus tonic\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high fructose",
+    "=",
+    "high fructose"
+   ],
+   [
+    "option:0",
+    "=",
+    "citrus"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "89f5663644d6a499"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high fructose",
+     "=",
+     "high fructose"
+    ],
+    [
+     "option:0",
+     "=",
+     "citrus"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning repotting my snake plant and pothos, and I’m pretty sure I overwatered the pothos because its leaves are already looking a little droopy by the windowsill. I also spent twenty minutes chasing my tabby cat away from the new succulent arrangement on the kitchen counter, because he keeps trying to bat the little decorative pebbles off the top. Oh, and I was thinking about stopping by the plant nursery this weekend to pick up a small fiddle leaf fig if they have any in stock.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high fructose",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning repotting my snake plant and pothos, and I’m pretty sure I overwatered the pothos because its leaves are already looking a little droopy by the windowsill. I also spent twenty minutes chasing my tabby cat away from the new succulent arrangement on the kitchen counter, because he keeps trying to bat the little decorative pebbles off the top. Oh, and I was thinking about stopping by the plant nursery this weekend to pick up a small fiddle leaf fig if they have any in stock. Anyway, I’m looking for alcoholic beverages with high fructose, citrus is a nice optional bonus, and my price limit is 120.",
+ "render_attempts": 1,
+ "sample_id": "8fd9374c1c08b67f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the alcoholic beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "700c665f6cd77f27"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the alcoholic beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f29f8904846eb1e5"
+  },
+  {
+   "announcement": "Also, it needs to be gluten free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7429fcc26c217882"
+  },
+  {
+   "announcement": "Also, it needs to be artificial ingredients.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cf9cc98d3dd66929"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bfd10e1b407bd479"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e3813401fec811f4"
+  },
+  {
+   "announcement": "Actually, make it 11.1 fl oz (pack of 24) instead of citrus.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1c76d493f0391058"
+  },
+  {
+   "announcement": "Actually, make it 11.1 fl oz (pack of 6) instead of citrus.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b0eb969773263a76"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need some high fructose citrus tonic water.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "e9e72e3bb8bf1b5b",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

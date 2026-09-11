@@ -1,0 +1,93 @@
+{
+ "sample_id": "a5d0e58557e4009a__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "a5d0e58557e4009a",
+ "query": "I spent my weekend hiking up the local forest trail, and I found the most beautiful patch of wild blueberries growing right off the side of the path, I picked a whole container full and made blueberry pancakes for breakfast this morning that turned out so fluffy and sweet, my cat even tried to steal a bite off my plate when I wasn\u2019t looking. I also finished that mystery novel I\u2019ve been reading for weeks last night, the ending was totally unexpected I never would have guessed the librarian was the culprit. Anyway, I\u2019m having an issue with my phone right now: airplane mode is turned on, my SIM card is locked with a PIN, and my line is suspended because of an overdue bill, can you help me figure out what I need to do to get it working again?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent my weekend hiking up the local forest trail, and I found the most beautiful patch of wild blueberries growing right off the side of the path, I picked a whole container full and made blueberry pancakes for breakfast this morning that turned out so fluffy and sweet, my cat even tried to steal a bite off my plate when I wasn\u2019t looking. I also finished that mystery novel I\u2019ve been reading for weeks last night, the ending was totally unexpected I never would have guessed the librarian was the culprit. Anyway,",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:lock_sim_card_pin",
+   "fault:overdue_bill_suspension"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ],
+    [
+     "fault:overdue_bill_suspension",
+     "=",
+     "overdue_bill_suspension"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

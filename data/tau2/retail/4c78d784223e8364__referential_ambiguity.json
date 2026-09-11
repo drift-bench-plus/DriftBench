@@ -1,0 +1,173 @@
+{
+ "sample_id": "4c78d784223e8364__referential_ambiguity",
+ "domain": "retail",
+ "tree_id": "4c78d784223e8364",
+ "query": "I need to cancel two of my pending orders, #W4836353 and #W7342738, both for the reason that the items are no longer needed. I also want to return items from two delivered orders: first from #W4597054 the items 5669664287, 4900990404, 9862136885, and 6777246137, then from #W7773202 the item 8277474082, and refund them both to the usual one.",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "referential_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "referential_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "arg:2:return_delivered_order_items:payment_method_id",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason",
+   "arg:2:return_delivered_order_items:item_ids",
+   "arg:2:return_delivered_order_items:order_id",
+   "arg:3:return_delivered_order_items:item_ids",
+   "arg:3:return_delivered_order_items:order_id",
+   "arg:3:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [
+   "arg:2:return_delivered_order_items:payment_method_id"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W4836353\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:1:cancel_pending_order:order_id",
+     "=",
+     "\"#W7342738\""
+    ],
+    [
+     "arg:1:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:item_ids",
+     "=",
+     "[\"5669664287\",\"4900990404\",\"9862136885\",\"6777246137\"]"
+    ],
+    [
+     "arg:2:return_delivered_order_items:order_id",
+     "=",
+     "\"#W4597054\""
+    ],
+    [
+     "arg:3:return_delivered_order_items:item_ids",
+     "=",
+     "[\"8277474082\"]"
+    ],
+    [
+     "arg:3:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7773202\""
+    ],
+    [
+     "arg:3:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_3491931\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "5772250dd9c6f68f"
+ },
+ "signature": {
+  "rule": "marked",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W4836353\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:1:cancel_pending_order:order_id",
+    "=",
+    "\"#W7342738\""
+   ],
+   [
+    "arg:1:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:item_ids",
+    "=",
+    "[\"5669664287\",\"4900990404\",\"9862136885\",\"6777246137\"]"
+   ],
+   [
+    "arg:2:return_delivered_order_items:order_id",
+    "=",
+    "\"#W4597054\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_3491931\""
+   ],
+   [
+    "arg:3:return_delivered_order_items:item_ids",
+    "=",
+    "[\"8277474082\"]"
+   ],
+   [
+    "arg:3:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7773202\""
+   ],
+   [
+    "arg:3:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_3491931\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:2:return_delivered_order_items:payment_method_id"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

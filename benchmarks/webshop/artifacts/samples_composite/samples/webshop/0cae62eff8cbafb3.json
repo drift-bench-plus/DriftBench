@@ -1,0 +1,238 @@
+{
+ "sample_id": "0cae62eff8cbafb3",
+ "tree_id": "8d3283e157f8c800",
+ "adapter": "webshop",
+ "cluster": "hair loss products",
+ "goal_idx": 491,
+ "split": "test",
+ "source_instruction": "i'm looking for synthetic hair care for hair loss .",
+ "query": "I was walking over to this part of the store just now and had to stop to laugh at the little golden retriever puppy tied up out front, it was sitting so politely holding its owner\u2019s dropped knit glove in its mouth like it was on official important guard duty, not just a wiggly little guy with floppy ears that kept flopping over its eyes every time it tilted its head to watch people walk by. A kid walking by with their mom stopped to offer it a piece of their goldfish cracker and the puppy got so excited it wiggled its whole back end instead of just its tail, almost tipping over the little plastic water bowl its owner set out for it. It was such a nice little random bright spot in an otherwise super routine errand run, I stood there grinning at it for a full minute before I remembered what I came over to this aisle for in the first place. I\u2019m browsing the hair loss products section right now, and I\u2019ve heard there are options that actually help with hair loss, y\u2019know? For the budget, I don\u2019t go over that one, same as I usually stick to when I look at this kind of stuff. Also, I\u2019ve noticed the options that are the right hair type for me aren\u2019t the real human hair kind, yeah? Wait, no, I only match what I usually get for the hair material, I don\u2019t mess that up.",
+ "strategy_ids": [
+  "indirect_intent",
+  "insufficient_information",
+  "contextual_irrelevance",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+insufficient_information+contextual_irrelevance+referential_ambiguity",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "indirect_intent",
+   "insufficient_information",
+   "contextual_irrelevance",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "attr:synthetic hair"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:synthetic hair"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I was walking over to this part of the store just now and had to stop to laugh at the little golden retriever puppy tied up out front, it was sitting so politely holding its owner\u2019s dropped knit glove in its mouth like it was on official important guard duty, not just a wiggly little guy with floppy ears that kept flopping over its eyes every time it tilted its head to watch people walk by. A kid walking by with their mom stopped to offer it a piece of their goldfish cracker and the puppy got so excited it wiggled its whole back end instead of just its tail, almost tipping over the little plastic water bowl its owner set out for it. It was such a nice little random bright spot in an otherwise super routine errand run, I stood there grinning at it for a full minute before I remembered what I came over to this aisle for in the first place.",
+  "retained": [
+   "attr:hair loss"
+  ],
+  "hidden_slots": [
+   "attr:synthetic hair",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair loss",
+     "=",
+     "hair loss"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "bca047873f5bf185"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 42,
+  "lit_card": 1633,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1267,
+    "true_card": 42,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 77,
+    "true_card": 42,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "7e0918b55ee9dfe8",
+  "conditions": [
+   [
+    "attr:hair loss",
+    "=",
+    "hair loss"
+   ],
+   [
+    "attr:synthetic hair",
+    "=",
+    "synthetic hair"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "attr:synthetic hair",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 42,
+  "value": [
+   "[\"B01N8YVP43\",[]]",
+   "[\"B07427VMRZ\",[]]",
+   "[\"B07429L7WZ\",[]]",
+   "[\"B0742BV2JG\",[]]",
+   "[\"B0742JH3JT\",[]]",
+   "[\"B07K328CPH\",[]]",
+   "[\"B07L3QNWB6\",[]]",
+   "[\"B07MQ8G1LC\",[]]",
+   "[\"B07P8VYDGL\",[]]",
+   "[\"B07PPHZPRV\",[]]",
+   "[\"B07PR7ZNBD\",[]]",
+   "[\"B07PYH7ZVF\",[]]",
+   "[\"B07QXCWLHS\",[]]",
+   "[\"B089M937YX\",[]]",
+   "[\"B089QL1SVF\",[]]",
+   "[\"B08DX5J739\",[]]",
+   "[\"B08FY3WDDJ\",[]]",
+   "[\"B08NYMVR1D\",[]]",
+   "[\"B08PC8QTFB\",[]]",
+   "[\"B08QCL4SB5\",[]]",
+   "[\"B08XND7S6M\",[]]",
+   "[\"B08XNDHHRF\",[]]",
+   "[\"B08ZNR6GW1\",[]]",
+   "[\"B0928MJQCN\",[]]",
+   "[\"B092MJ5ZY3\",[]]",
+   "[\"B095B9DNLL\",[]]",
+   "[\"B095N8WX77\",[]]",
+   "[\"B098DPBD42\",[]]",
+   "[\"B098T89QPQ\",[]]",
+   "[\"B09917NLTG\",[]]",
+   "[\"B09925FV26\",[]]",
+   "[\"B09BCFNMMJ\",[]]",
+   "[\"B09C2L8FFC\",[]]",
+   "[\"B09FXQBB5J\",[]]",
+   "[\"B09HK1C5W5\",[]]",
+   "[\"B09J14LSR4\",[]]",
+   "[\"B09KRXCPP1\",[]]",
+   "[\"B09KX8NW3T\",[]]",
+   "[\"B09MHV1G8W\",[]]",
+   "[\"B09P51BFWM\",[]]",
+   "[\"B09PQQHBS1\",[]]",
+   "[\"B09QLW8N3Z\",[]]"
+  ],
+  "hash": "1af03ccc77c0fb9ccbf19163362a6e2a"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "20cd3e9d9a0c5ee1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair loss products instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f0bfa433247a8172",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair loss products instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b71fdc88f5fcd3ad",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy apply."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e65f1241a6f51d06",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair dryer."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "37c049cf0e61cc49",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a19689aaff681cf2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "a314f3d0acaf0b24",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 60."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "fd0a7a80e77cf09e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 60."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

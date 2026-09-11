@@ -1,0 +1,249 @@
+{
+ "sample_id": "8a2c60c16f8161ee",
+ "tree_id": "582e11e87cd872bd",
+ "adapter": "webshop",
+ "cluster": "binoculars & scopes",
+ "goal_idx": 180,
+ "split": "test",
+ "source_instruction": "i'm looking for binocular for bird watching.",
+ "query": "I went to the community garden yesterday and saw the cutest baby bunny munching on carrot tops, it had the softest floppy ears and didn\u2019t even run when I got within a few feet to take a photo. I\u2019ve also been trying to perfect my sourdough starter lately, it\u2019s been so finicky with the weird spring temperature swings that I\u2019ve had to adjust its feeding schedule twice a day just to keep it from going flat. Oh, and my neighbor dropped off a jar of homemade dill pickles last night that have the perfect crunch, I\u2019ve already snacked on three straight from the jar while watering my windowsill herbs. I\u2019m looking for binoculars or scopes that work great for bird watching and are super easy to use, I don\u2019t have a super strict budget but can you show me options that fit what I\u2019m looking for?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+insufficient_information",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I went to the community garden yesterday and saw the cutest baby bunny munching on carrot tops, it had the softest floppy ears and didn\u2019t even run when I got within a few feet to take a photo. I\u2019ve also been trying to perfect my sourdough starter lately, it\u2019s been so finicky with the weird spring temperature swings that I\u2019ve had to adjust its feeding schedule twice a day just to keep it from going flat. Oh, and my neighbor dropped off a jar of homemade dill pickles last night that have the perfect crunch, I\u2019ve already snacked on three straight from the jar while watering my windowsill herbs.",
+  "retained": [
+   "attr:bird watching",
+   "attr:easy use"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:bird watching",
+     "=",
+     "bird watching"
+    ],
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "51f8f642c2ed08a7"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 69,
+  "lit_card": 273,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 273,
+    "true_card": 69,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "4b9a501c58a8e42e",
+  "conditions": [
+   [
+    "attr:bird watching",
+    "=",
+    "bird watching"
+   ],
+   [
+    "attr:easy use",
+    "=",
+    "easy use"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 69,
+  "value": [
+   "[\"B071PBFT1R\",[]]",
+   "[\"B075NZ72FM\",[]]",
+   "[\"B07H884WJD\",[]]",
+   "[\"B07K7HGCMJ\",[]]",
+   "[\"B07MJT6SMR\",[]]",
+   "[\"B07QD5N347\",[]]",
+   "[\"B07QNNJKDW\",[]]",
+   "[\"B07RGTH3Q9\",[]]",
+   "[\"B07S21DY1V\",[]]",
+   "[\"B07S62VPSC\",[]]",
+   "[\"B07SNR97W8\",[]]",
+   "[\"B07SZBZ4W4\",[]]",
+   "[\"B07Y3BZK6V\",[]]",
+   "[\"B0872P6WRB\",[]]",
+   "[\"B08C597KLX\",[]]",
+   "[\"B08D8X8W5F\",[]]",
+   "[\"B08DCNLF86\",[]]",
+   "[\"B08FMM86JN\",[]]",
+   "[\"B08FMXLH4S\",[]]",
+   "[\"B08H4VHJ6D\",[]]",
+   "[\"B08M62Q3JC\",[]]",
+   "[\"B08QMNSNYG\",[]]",
+   "[\"B08SBF5HM9\",[]]",
+   "[\"B08TLH4679\",[]]",
+   "[\"B08TWJZGYN\",[]]",
+   "[\"B08W2ZYFC6\",[]]",
+   "[\"B08WYKQ5ZS\",[]]",
+   "[\"B08XY82535\",[]]",
+   "[\"B08XZLM4BB\",[]]",
+   "[\"B08YF11QJT\",[]]",
+   "[\"B08YWVP7HT\",[]]",
+   "[\"B091GJQP8Q\",[]]",
+   "[\"B0924P7BHN\",[]]",
+   "[\"B092LYFWX4\",[]]",
+   "[\"B093BJ2SJ8\",[]]",
+   "[\"B093BJ46R7\",[]]",
+   "[\"B094QWTWYR\",[]]",
+   "[\"B09521DY42\",[]]",
+   "[\"B095BMYHWW\",[]]",
+   "[\"B097L5W3NJ\",[]]",
+   "[\"B097YN59KX\",[]]",
+   "[\"B0983CMJ44\",[]]",
+   "[\"B099ZK3XTK\",[]]",
+   "[\"B09BFLCHNY\",[]]",
+   "[\"B09DCYX1PL\",[]]",
+   "[\"B09DKRRPRK\",[]]",
+   "[\"B09DS3RSPK\",[]]",
+   "[\"B09DVP1Z8Q\",[]]",
+   "[\"B09H1XRHBP\",[]]",
+   "[\"B09JG53D7N\",[]]",
+   "[\"B09JKLBHF1\",[]]",
+   "[\"B09K44L8RL\",[]]",
+   "[\"B09KLSDM25\",[]]",
+   "[\"B09KV367BR\",[]]",
+   "[\"B09NSMMFQN\",[]]",
+   "[\"B09P4NMRGL\",[]]",
+   "[\"B09P4PC9XV\",[]]",
+   "[\"B09P6DZDJY\",[]]",
+   "[\"B09P8HTBCC\",[]]",
+   "[\"B09P8JTQZ4\",[]]",
+   "[\"B09PBQ2SCK\",[]]",
+   "[\"B09PDW5XW7\",[]]",
+   "[\"B09PG7KR21\",[]]",
+   "[\"B09PG8G135\",[]]",
+   "[\"B09PRFNBZ8\",[]]",
+   "[\"B09PZ81R8M\",[]]",
+   "[\"B09QFXV91S\",[]]",
+   "[\"B09R46T44J\",[]]",
+   "[\"B09SYL1WTQ\",[]]"
+  ],
+  "hash": "3ef5a5dae25571bd95b7f7abe01509c2"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "302b8f4c0fbfb494",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the binoculars & scopes instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "5679f5ab0e139928",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the binoculars & scopes instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b95074d20046e0b3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be light weight."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f34945ad39851e1c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be power amplifier."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "564f1d4c0a888673",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d45d65ee772dabcf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "a16b2e8a1f07c1d5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 40."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "da7a1952d5cc6a1e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 40."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

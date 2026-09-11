@@ -1,0 +1,195 @@
+{
+ "adapter": "webshop",
+ "cluster": "eyes makeup",
+ "fidelity_notes": [],
+ "goal_idx": 239,
+ "ground_truth": {
+  "cardinality": 17,
+  "hash": "72d922aee114293303d106da73a7b474",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B06XBCFGQM\",[[\"style\",\"20mm\"]]]",
+   "[\"B06XR9JPMR\",[[\"size\",\"20mm\"]]]",
+   "[\"B07CV5RW8W\",[[\"size\",\"20mm\"]]]",
+   "[\"B07PYPGQ8B\",[[\"scent name\",\"0.15-d-mix-13-20mm\"]]]",
+   "[\"B07QY6QD5N\",[[\"size\",\"13-20mm\"]]]",
+   "[\"B083XWN14Q\",[[\"color\",\"d-0.15\"]]]",
+   "[\"B087WYC4L3\",[[\"size\",\"20mm\"]]]",
+   "[\"B089KBVPZV\",[[\"scent\",\"mix\"]]]",
+   "[\"B08DQWMM4J\",[[\"size\",\"13-20mm\"]]]",
+   "[\"B08HB4TNKL\",[[\"style\",\"20mm\"]]]",
+   "[\"B08HMNCB4Y\",[[\"color\",\"mix\"]]]",
+   "[\"B08YZ4MKD3\",[[\"style\",\"20mm\"]]]",
+   "[\"B091MK99ZB\",[[\"style\",\"20mm\"]]]",
+   "[\"B0923TKY62\",[[\"size\",\"20mm\"]]]",
+   "[\"B0923WP7DV\",[[\"size\",\"20mm\"]]]",
+   "[\"B096DHCV7Z\",[[\"style\",\"20mm\"]]]",
+   "[\"B0998FXRNF\",[[\"style\",\"d-15\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "option:0",
+    "=",
+    "0.15-d-mix-13-20mm"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "f616970b8d4caeb8"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high quality",
+     "=",
+     "budget-friendly"
+    ],
+    [
+     "option:0",
+     "=",
+     "0.15-d-mix-13-20mm"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:high quality",
+     "high quality"
+    ],
+    "alternative": [
+     "attr:high quality",
+     "budget-friendly"
+    ],
+    "condition": null,
+    "text": "Since you probably don’t have high quality options in the 0.15-d-mix-13-20mm style"
+   }
+  ],
+  "retained": [
+   "attr:high quality",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "76d5f722b4dca118",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don’t have high quality options in the 0.15-d-mix-13-20mm style, find me budget-friendly eye makeup in that exact size option that stays under $20.",
+ "render_attempts": 2,
+ "sample_id": "54eb7530e324c1a8",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the eyes makeup instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "88ece6ca67c52df7"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the eyes makeup instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "fc030cdb3d955da4"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "01669f1e7d367db7"
+  },
+  {
+   "announcement": "Also, it needs to be makeup brush.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2162dc25c0a3b630"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8f00fbf0e6a35c10"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c09f4e42d249b5f5"
+  },
+  {
+   "announcement": "Actually, make it #2 big stamp instead of 0.15-d-mix-13-20mm.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "60b3bf07dcf34850"
+  },
+  {
+   "announcement": "Actually, make it #10 styles | charming instead of 0.15-d-mix-13-20mm.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cf1ad0d09b8f11b4"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 17,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm trying to find high quality eyelash extensions that are 0.15 millimeters in diameter and 13-20 millimeters long.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "9aeb9bb5da02fb6d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "sample_id": "2d1746fbd9666284__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "2d1746fbd9666284",
+ "query": "I had such a great time trying the new mango sticky rice stall near my hotel yesterday, the coconut sauce was so creamy and not too sweet, I even went back for a second serving before going to the beach. The sunset here was absolutely stunning too, I took so many photos I almost filled up my phone\u2019s camera roll, I can\u2019t wait to show my friends when I get back home. Oh right, I was going to ask you about something with my phone \u2013 I\u2019m abroad right now, my roaming is turned off, I have airplane mode on and my network preference settings are all messed up, so I can\u2019t get any mobile data to work at all, can you help me figure out what to do?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I had such a great time trying the new mango sticky rice stall near my hotel yesterday, the coconut sauce was so creamy and not too sweet, I even went back for a second serving before going to the beach. The sunset here was absolutely stunning too, I took so many photos I almost filled up my phone\u2019s camera roll, I can\u2019t wait to show my friends when I get back home.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

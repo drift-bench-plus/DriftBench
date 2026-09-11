@@ -1,0 +1,211 @@
+{
+ "sample_id": "ac2722203a41a845",
+ "tree_id": "9e6997230fbcbfb5",
+ "adapter": "webshop",
+ "cluster": "toothpaste",
+ "goal_idx": 21,
+ "split": "test",
+ "source_instruction": "i  need fluoide free toothpaste for fresh breath.",
+ "query": "Hey, I need to grab a toothpaste that\u2019s totally fluoride free, y\u2019know? I don\u2019t want to go over that one for the price cap, same as I always stick to when I pick up bathroom stuff. Oh right, it should help with that thing everyone wants their toothpaste to do for their mouth after morning coffee, nothing fancy otherwise.",
+ "strategy_ids": [
+  "insufficient_information",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+referential_ambiguity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "attr:fresh breath"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:fresh breath"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:fluoride free"
+  ],
+  "hidden_slots": [
+   "attr:fresh breath",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:fluoride free",
+     "=",
+     "fluoride free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "4794b8b81d83a46a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 21,
+  "lit_card": 139,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 114,
+    "true_card": 21,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 23,
+    "true_card": 21,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "69dc1296e101714d",
+  "conditions": [
+   [
+    "attr:fluoride free",
+    "=",
+    "fluoride free"
+   ],
+   [
+    "attr:fresh breath",
+    "=",
+    "fresh breath"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:fresh breath",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 21,
+  "value": [
+   "[\"B000E3DX5W\",[]]",
+   "[\"B00692AHS8\",[]]",
+   "[\"B00DZNP1Y4\",[]]",
+   "[\"B01CWYEUWK\",[]]",
+   "[\"B077KJ6LT9\",[]]",
+   "[\"B07GT3YKXK\",[]]",
+   "[\"B07HHBZXSF\",[]]",
+   "[\"B07HJWFCBS\",[]]",
+   "[\"B07MNTKBTH\",[]]",
+   "[\"B07V9PR7LW\",[]]",
+   "[\"B07ZML21XH\",[]]",
+   "[\"B081SGNY71\",[]]",
+   "[\"B0821T9FSW\",[]]",
+   "[\"B0849R7MY1\",[]]",
+   "[\"B08HW1JFR6\",[]]",
+   "[\"B08N1J39Q8\",[]]",
+   "[\"B08Y6F32HY\",[]]",
+   "[\"B09L47X9R6\",[]]",
+   "[\"B09MQQWNJB\",[]]",
+   "[\"B09SCPZ512\",[]]",
+   "[\"B09SCVNW6X\",[]]"
+  ],
+  "hash": "9138c5db994df4fb1209cdb0329a2d97"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6131833197b2580f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ee2213fe4b5062d6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "47a34d0c6c3bc65c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be essential oils."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e7a0f81847ba9e8d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be electric toothbrush."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a58bb0a5beed6f1d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ba8e2e740978484f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "361a770f729a23ac",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 30."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "716c6606d891b77f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 30."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

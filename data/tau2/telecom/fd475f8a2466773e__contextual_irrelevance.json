@@ -1,0 +1,82 @@
+{
+ "sample_id": "fd475f8a2466773e__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "fd475f8a2466773e",
+ "query": "I picked up a new sourdough starter from the local bakery yesterday, and it\u2019s already bubbling so much I had to move it to a bigger jar this morning. I\u2019m planning to bake my first loaf with it this weekend, I even picked up some fancy sea salt and whole grain flour to make it extra flavorful. Oh, and my cat knocked over my houseplant earlier, I spent twenty minutes cleaning potting soil off the kitchen rug before I could grab my phone to call you. Anyway, I\u2019m having some issues with my phone right now\u2014airplane mode is turned on and I can\u2019t get my mobile data to work, it looks like my APN settings are all messed up too, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I picked up a new sourdough starter from the local bakery yesterday, and it\u2019s already bubbling so much I had to move it to a bigger jar this morning. I\u2019m planning to bake my first loaf with it this weekend, I even picked up some fancy sea salt and whole grain flour to make it extra flavorful. Oh, and my cat knocked over my houseplant earlier, I spent twenty minutes cleaning potting soil off the kitchen rug before I could grab my phone to call you. Anyway, ",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_settings"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

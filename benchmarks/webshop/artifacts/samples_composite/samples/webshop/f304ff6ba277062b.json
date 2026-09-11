@@ -1,0 +1,195 @@
+{
+ "sample_id": "f304ff6ba277062b",
+ "tree_id": "12d5734d35c6cd87",
+ "adapter": "webshop",
+ "cluster": "pantry staples",
+ "goal_idx": 489,
+ "split": "test",
+ "source_instruction": "i'm looking for a 32 ounce package of gluten free almond flour.",
+ "query": "Oh man, my cat just knocked over my favorite ceramic succulent pot this morning, dirt got all over the entryway rug and I had to spend 20 minutes vacuuming it up before I could even think about making my grocery list. I also realized I forgot to pick up dry cleaning on my way home yesterday, so my nice work button-down is still sitting there waiting for me, and I need to remember to grab it after this errand run. Also, the new season of that baking competition show dropped last night and I stayed up way too late binging the first three episodes, so I\u2019m running on way too much iced coffee right now. Anyway, I\u2019m looking for pantry staples that are gluten free, come in a 32 ounce size, are kosher certified, and cost no more than $30 total.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+irrelevant_information",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "are kosher certified",
+    "condition": [
+     "attr:kosher certified",
+     "=",
+     "kosher certified"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh man, my cat just knocked over my favorite ceramic succulent pot this morning, dirt got all over the entryway rug and I had to spend 20 minutes vacuuming it up before I could even think about making my grocery list. I also realized I forgot to pick up dry cleaning on my way home yesterday, so my nice work button-down is still sitting there waiting for me, and I need to remember to grab it after this errand run. Also, the new season of that baking competition show dropped last night and I stayed up way too late binging the first three episodes, so I\u2019m running on way too much iced coffee right now.",
+  "retained": [
+   "attr:gluten free",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "32 ounce"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:kosher certified",
+     "=",
+     "kosher certified"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "078f99a0ec875bbb"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 4,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 4,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "08486ec40a329416",
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "option:0",
+    "=",
+    "32 ounce"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 4,
+  "value": [
+   "[\"B001EO5S1C\",[[\"size\",\"32 ounce (pack of 6)\"]]]",
+   "[\"B00S5AZRYG\",[[\"size\",\"24 ounce\"]]]",
+   "[\"B013PTSCWU\",[[\"size\",\"21 ounce\"]]]",
+   "[\"B09913B3WZ\",[[\"size\",\"32 ounce\"]]]"
+  ],
+  "hash": "af976802a7a2caac58116a098c8b9e4b"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7e8bafccb35e5707",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b6215ee8575f5182",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the pantry staples instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "65f2292138e4b7f4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be great gift."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bd35a16081691216",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gift basket."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5b80cf5427dfc468",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ce695cf84de8b47c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1bc641492c1156bd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .2 pack - 1 pound instead of 32 ounce."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5f959bce39642f69",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it .10 set(2 ounce (pack of 1)) instead of 32 ounce."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

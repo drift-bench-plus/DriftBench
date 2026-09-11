@@ -1,0 +1,240 @@
+{
+ "sample_id": "dc7c1f61cb96c8dd",
+ "tree_id": "95360c2378982548",
+ "adapter": "webshop",
+ "cluster": "area rugs",
+ "goal_idx": 437,
+ "split": "test",
+ "source_instruction": "i would like a 8 ft 6 in x 12 ft rectangular navy rug for my living room.",
+ "query": "I spent all last weekend finally tackling the overgrown wildflower patch out behind my apartment building, right? I dragged out my rusted old trowel, pulled up so many dandelion taproots my wrist was sore for two days, and even planted a handful of milkweed starts I picked up from the local community plant swap. A couple of the neighborhood kids stopped by to help for a bit, and we found a tiny little garter snake curled up under a clump of crabgrass that we all gently moved to the shaded edge of the patch so it wouldn\u2019t get disturbed. I\u2019m really hoping the monarchs find the milkweed later this summer, I\u2019ve been checking the patch every evening after work to see if any caterpillars have shown up yet. I\u2019m looking for area rugs for my home office, y\u2019know? I need one that\u2019s that one color I always pick, with the 8 ft 6 in x 12 ft dimensions I measured out for the space, and it definitely can\u2019t go over my $320 budget. I don\u2019t want any weird fussy shapes, just the standard kind I usually go for, nothing too out there. Can you pull up options that match what I\u2019m describing?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "referential_ambiguity",
+  "insufficient_information",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+referential_ambiguity+insufficient_information+factual_error",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "referential_ambiguity",
+   "insufficient_information",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:living room",
+   "insufficient_information": "option:1"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:living room",
+    "living room",
+    "home office"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:1"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent all last weekend finally tackling the overgrown wildflower patch out behind my apartment building, right? I dragged out my rusted old trowel, pulled up so many dandelion taproots my wrist was sore for two days, and even planted a handful of milkweed starts I picked up from the local community plant swap. A couple of the neighborhood kids stopped by to help for a bit, and we found a tiny little garter snake curled up under a clump of crabgrass that we all gently moved to the shaded edge of the patch so it wouldn\u2019t get disturbed. I\u2019m really hoping the monarchs find the milkweed later this summer, I\u2019ve been checking the patch every evening after work to see if any caterpillars have shown up yet.",
+  "retained": [
+   "option:2",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:living room",
+   "option:0",
+   "option:1"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "home office"
+    ],
+    [
+     "option:2",
+     "=",
+     "8 ft 6 in x 12 ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     320
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "fdcd6980011dfed1"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 124,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 143,
+    "true_card": 6,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 22,
+    "true_card": 6,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 3,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "2304ea46e3ffdb25",
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "navy"
+   ],
+   [
+    "option:1",
+    "=",
+    "rectangular"
+   ],
+   [
+    "option:2",
+    "=",
+    "8 ft 6 in x 12 ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    320
+   ]
+  ],
+  "hidden_slots": [
+   "attr:living room",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B00G4ITP30\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft\"]]]",
+   "[\"B00LO5HWME\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft 9 in x 12 ft 3 in\"]]]",
+   "[\"B00NC2HKQK\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"2 ft 3 in x 6 ft\"]]]",
+   "[\"B01LXHXJF9\",[[\"color\",\"navy  |  teal\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft x 8 ft\"]]]",
+   "[\"B079TPQG7M\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"9 ft 2 in x 12 ft 6 in\"]]]",
+   "[\"B084B2ZW9K\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft 10 in x 12 ft\"]]]"
+  ],
+  "hash": "0ff2c2a3cd5b6140dfff63ccf158c662"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "4df8086c9876a888",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the area rugs instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f03cbbdb67ad5c9b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the area rugs instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "8975033846c7a63b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cf94bb81c3ea4884",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be home decor."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1e245f03b3a33abf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6304cfda046f19b2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3437f8891ae16cce",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1' 8\" x 6' instead of navy."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "859007a01baf5e0e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 ft (10 in) x 6 ft (10 in) instead of navy."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

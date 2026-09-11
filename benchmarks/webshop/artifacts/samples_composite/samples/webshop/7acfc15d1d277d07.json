@@ -1,0 +1,233 @@
+{
+ "sample_id": "7acfc15d1d277d07",
+ "tree_id": "95360c2378982548",
+ "adapter": "webshop",
+ "cluster": "area rugs",
+ "goal_idx": 437,
+ "split": "test",
+ "source_instruction": "i would like a 8 ft 6 in x 12 ft rectangular navy rug for my living room.",
+ "query": "I stopped by the little community farmers\u2019 market on my walk home yesterday, right? The air smelled like warm cinnamon roasted nuts and fresh cut peonies the second I stepped through the entry gate, and there was a kid no older than seven set up with a card table selling hand-drawn pictures of dogs wearing silly sun hats for a dollar apiece. I ended up grabbing a jar of wildflower honey from the beekeeper who drives in from the farm 45 minutes outside town, and he told me the hives this honey came from are set up right next to a patch of purple clover that makes the honey taste faintly of vanilla when it\u2019s stirred into tea. The whole walk back I kept smiling thinking about how those little unplanned, slow stops make even the most gray, drizzly weekdays feel a little softer and brighter. I\u2019m in the middle of tweaking my home\u2019s dining nook right now, and there\u2019s an empty spot on the floor that fits a rectangular area rug sized 8 ft 6 in x 12 ft. I\u2019ve always leaned hard into that one color I always pick for soft home furnishings for pieces like that, it just feels the most like me in any space. I\u2019ve heard sticking to pieces that land within a total budget of $320 max for this works well for what I\u2019m working with, and that nothing that goes over that price point lines up with what makes sense for my space right now.",
+ "strategy_ids": [
+  "factual_error",
+  "referential_ambiguity",
+  "contextual_irrelevance",
+  "indirect_intent"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+referential_ambiguity+contextual_irrelevance+indirect_intent",
+  "family": "expression+intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "factual_error",
+   "referential_ambiguity",
+   "contextual_irrelevance",
+   "indirect_intent"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:living room"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:living room",
+    "living room",
+    "dining nook"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the little community farmers\u2019 market on my walk home yesterday, right? The air smelled like warm cinnamon roasted nuts and fresh cut peonies the second I stepped through the entry gate, and there was a kid no older than seven set up with a card table selling hand-drawn pictures of dogs wearing silly sun hats for a dollar apiece. I ended up grabbing a jar of wildflower honey from the beekeeper who drives in from the farm 45 minutes outside town, and he told me the hives this honey came from are set up right next to a patch of purple clover that makes the honey taste faintly of vanilla when it\u2019s stirred into tea. The whole walk back I kept smiling thinking about how those little unplanned, slow stops make even the most gray, drizzly weekdays feel a little softer and brighter.",
+  "retained": [
+   "option:1",
+   "option:2",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:living room",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "dining nook"
+    ],
+    [
+     "option:1",
+     "=",
+     "rectangular"
+    ],
+    [
+     "option:2",
+     "=",
+     "8 ft 6 in x 12 ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     320
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "e45618c2b41b0a6a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 6,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 143,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "2304ea46e3ffdb25",
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "navy"
+   ],
+   [
+    "option:1",
+    "=",
+    "rectangular"
+   ],
+   [
+    "option:2",
+    "=",
+    "8 ft 6 in x 12 ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    320
+   ]
+  ],
+  "hidden_slots": [
+   "attr:living room",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B00G4ITP30\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft\"]]]",
+   "[\"B00LO5HWME\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft 9 in x 12 ft 3 in\"]]]",
+   "[\"B00NC2HKQK\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"2 ft 3 in x 6 ft\"]]]",
+   "[\"B01LXHXJF9\",[[\"color\",\"navy  |  teal\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft x 8 ft\"]]]",
+   "[\"B079TPQG7M\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"9 ft 2 in x 12 ft 6 in\"]]]",
+   "[\"B084B2ZW9K\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft 10 in x 12 ft\"]]]"
+  ],
+  "hash": "0ff2c2a3cd5b6140dfff63ccf158c662"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "4df8086c9876a888",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the area rugs instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f03cbbdb67ad5c9b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the area rugs instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "8975033846c7a63b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cf94bb81c3ea4884",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be home decor."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1e245f03b3a33abf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6304cfda046f19b2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3437f8891ae16cce",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1' 8\" x 6' instead of navy."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "859007a01baf5e0e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 ft (10 in) x 6 ft (10 in) instead of navy."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,223 @@
+{
+ "sample_id": "3637556f7f49a266",
+ "tree_id": "1e87b32fcb9ff367",
+ "adapter": "webshop",
+ "cluster": "skin care tools",
+ "goal_idx": 343,
+ "split": "test",
+ "source_instruction": "i would like a white foot file for dead skin.",
+ "query": "I\u2019ve heard those little skin care tools for sloughing off dead skin work so nicely for at-home pampering, especially the 001-white finish ones. My friend was saying she only picks up ones that land in the light range for her budget, no splurging allowed. I\u2019ve been lingering in the skin care tools section for a bit now, thinking about how my current routine is missing something that gets rid of that dull, flaky buildup.",
+ "strategy_ids": [
+  "indirect_intent",
+  "lexical_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+lexical_ambiguity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "lexical_ambiguity"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "in the light range for her budget, no splurging allowed",
+    "placements": [
+     [
+      "price_upper",
+      "40"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:dead skin",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dead skin",
+     "=",
+     "dead skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "001-white"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "d0afcdeed8f8c85c"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 28,
+  "lit_card": 35,
+  "components": {
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     28,
+     35
+    ],
+    "true_card": 28,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "d564451a04bb3c05",
+  "conditions": [
+   [
+    "attr:dead skin",
+    "=",
+    "dead skin"
+   ],
+   [
+    "option:0",
+    "=",
+    "001-white"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 28,
+  "value": [
+   "[\"B00O82MJOG\",[[\"style name\",\"white\"]]]",
+   "[\"B079JVZHSQ\",[[\"color\",\"001-white\"]]]",
+   "[\"B07MTP9889\",[[\"color\",\"white\"]]]",
+   "[\"B07Q2HVMVY\",[[\"pattern name\",\"white marble\"]]]",
+   "[\"B07Z6BLBLP\",[[\"color\",\"white\"]]]",
+   "[\"B08RZ4LLHW\",[[\"color\",\"white\"]]]",
+   "[\"B08T1MR7DV\",[[\"color\",\"white\"]]]",
+   "[\"B08TWR9M14\",[[\"color\",\"white\"]]]",
+   "[\"B08V8CDGV6\",[[\"color\",\"white\"]]]",
+   "[\"B08ZY4JHBF\",[[\"color\",\"off-white\"]]]",
+   "[\"B091CYF89G\",[[\"color\",\"white\"]]]",
+   "[\"B091F6Q383\",[[\"color\",\"white\"]]]",
+   "[\"B091GGHY4P\",[[\"color\",\"white\"]]]",
+   "[\"B093GK7W7X\",[[\"color\",\"white\"]]]",
+   "[\"B096B2T9YD\",[[\"color\",\"white\"]]]",
+   "[\"B098F31W23\",[[\"color\",\"white\"]]]",
+   "[\"B098XXVHSL\",[[\"color\",\"white\"]]]",
+   "[\"B09BF7H64P\",[[\"color\",\"white\"]]]",
+   "[\"B09BL9GVWS\",[[\"color\",\"white\"]]]",
+   "[\"B09DSMSMRR\",[[\"flavor name\",\"white\"]]]",
+   "[\"B09F3LRK73\",[[\"color\",\"white\"]]]",
+   "[\"B09F94JMHF\",[[\"color\",\"white\"]]]",
+   "[\"B09J88B9G1\",[[\"color\",\"white electric foot file\"]]]",
+   "[\"B09JWYMMBN\",[[\"color\",\"white\"]]]",
+   "[\"B09KY7WCVB\",[[\"color\",\"white\"]]]",
+   "[\"B09LYPKBNG\",[[\"flavor name\",\"white\"]]]",
+   "[\"B09M8HMTSH\",[[\"size\",\"white\"]]]",
+   "[\"B09P8LHLKV\",[[\"color\",\"white\"]]]"
+  ],
+  "hash": "fba4ec9dc69c3b93148ce1d30ea83c44"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1e170a2c01ea8564",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the skin care tools instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "c044886949d905a0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the skin care tools instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "1e1f5267a392a496",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be nail clippers."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "818deb703375829d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a179c99844deca4a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b4a3dbc0c0100cf9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "02615d0320442573",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pound (pack of 2) instead of 001-white."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "50e144c76195873c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10pcs | set instead of 001-white."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

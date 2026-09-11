@@ -1,0 +1,233 @@
+{
+ "sample_id": "a7fde89605ef8489",
+ "tree_id": "8e8ac0bb63f99978",
+ "adapter": "webshop",
+ "cluster": "bedframes",
+ "goal_idx": 474,
+ "split": "test",
+ "source_instruction": "i am looking for a black faux leather bed frames.",
+ "query": "I stopped at that little boba stand right by the mall entrance on my way in today, and the taro milk tea I got has the perfect amount of chewy boba and just the right level of sweetness, not so cloying that it makes my teeth ache halfway through the sip. There was a tiny golden retriever puppy tied to the stand\u2019s railing while its owner waited for their drink, and it kept tilting its head at every person who walked past, wiggling its whole butt so hard its whole body shook like it was personally overjoyed to see every single stranger. I almost spilled my tea leaning down to scratch its ears, and the owner laughed and said it\u2019s only three months old and still thinks every person it meets is there specifically to give it pets. I\u2019ve heard that this section carries bedframes, that there are options made of faux sheepskin, that black is an available color option for those, that there are reasonably priced choices that don\u2019t cost too much.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "factual_error",
+  "indirect_intent",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+factual_error+indirect_intent+insufficient_information",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "factual_error",
+   "indirect_intent",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:faux leather",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:faux leather",
+    "faux leather",
+    "faux sheepskin"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped at that little boba stand right by the mall entrance on my way in today, and the taro milk tea I got has the perfect amount of chewy boba and just the right level of sweetness, not so cloying that it makes my teeth ache halfway through the sip. There was a tiny golden retriever puppy tied to the stand\u2019s railing while its owner waited for their drink, and it kept tilting its head at every person who walked past, wiggling its whole butt so hard its whole body shook like it was personally overjoyed to see every single stranger. I almost spilled my tea leaning down to scratch its ears, and the owner laughed and said it\u2019s only three months old and still thinks every person it meets is there specifically to give it pets.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:faux leather",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:faux leather",
+     "=",
+     "faux sheepskin"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "c3fc15058bf6c5e2"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 31,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 31,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 82,
+    "true_card": 31,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "2383cd6f4249000a",
+  "conditions": [
+   [
+    "attr:faux leather",
+    "=",
+    "faux leather"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    170
+   ]
+  ],
+  "hidden_slots": [
+   "attr:faux leather",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 31,
+  "value": [
+   "[\"B00YCT1C8O\",[[\"color\",\"black\"]]]",
+   "[\"B011PVTX4G\",[[\"color\",\"pearl white | black\"]]]",
+   "[\"B06Y3NQBZL\",[[\"color\",\"black\"]]]",
+   "[\"B07HCN4DC1\",[[\"color\",\"black\"]]]",
+   "[\"B07HCNRLZV\",[[\"color\",\"black\"]]]",
+   "[\"B07S393K3R\",[[\"color\",\"black\"]]]",
+   "[\"B08H821WP6\",[[\"color\",\"black\"]]]",
+   "[\"B08KG4NQ69\",[[\"color\",\"black\"]]]",
+   "[\"B08X188H9G\",[[\"color\",\"black\"]]]",
+   "[\"B08X1NGYGM\",[[\"color\",\"black\"]]]",
+   "[\"B0949LK2WM\",[[\"color\",\"black\"]]]",
+   "[\"B09921NBD4\",[[\"color\",\"black\"]]]",
+   "[\"B09B8LZ3HW\",[[\"color\",\"black\"]]]",
+   "[\"B09DGC6KRY\",[[\"color\",\"black\"]]]",
+   "[\"B09F9YLJQ6\",[[\"color\",\"black pu\"]]]",
+   "[\"B09GR8JT1W\",[[\"color\",\"black\"]]]",
+   "[\"B09H73K8XY\",[[\"color\",\"black\"]]]",
+   "[\"B09H78R7GC\",[[\"color\",\"black\"]]]",
+   "[\"B09HQRH9B8\",[[\"color\",\"black pu\"]]]",
+   "[\"B09J2FZGVK\",[[\"color\",\"black\"]]]",
+   "[\"B09J2Q33C5\",[[\"color\",\"black\"]]]",
+   "[\"B09L896H4M\",[[\"color\",\"black\"]]]",
+   "[\"B09L89W8NK\",[[\"color\",\"black\"]]]",
+   "[\"B09LHNL5NJ\",[[\"color\",\"black\"]]]",
+   "[\"B09M5VTGHG\",[[\"color\",\"black\"]]]",
+   "[\"B09MKMNVQQ\",[[\"color\",\"black\"]]]",
+   "[\"B09MNF6YS7\",[[\"color\",\"black full\"]]]",
+   "[\"B09N822PV9\",[[\"color\",\"black\"]]]",
+   "[\"B09P4P4WV8\",[[\"color\",\"cool black\"]]]",
+   "[\"B09SG9FH6F\",[[\"color\",\"cool black\"]]]",
+   "[\"B09SHHJ49B\",[[\"color\",\"cool black\"]]]"
+  ],
+  "hash": "d14cd025c9ba01d008c3b49fced3bd0c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6b3d47b5a2697e50",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bedframes instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "70cf63e941e60106",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bedframes instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3da0d0e0e91dc648",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7fc2907ed79b72bc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be eco friendly."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1b2b4be0aa26d442",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c6c2b58f382ac0dd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "2db3015db9eec2e2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it beige mattress instead of black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5215585694b8ae31",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it beige instead of black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

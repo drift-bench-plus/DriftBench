@@ -1,0 +1,82 @@
+{
+ "sample_id": "2ac53b549cb48ad7__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "2ac53b549cb48ad7",
+ "query": "I had the most amazing matcha latte at the new caf\u00e9 down my street this morning, they even added a little cat-shaped foam art on top that I almost didn't want to drink. On my way home I ran into my old college roommate, we ended up chatting for almost half an hour about her upcoming hiking trip to the Rockies next month. Oh, and my cat just knocked over a potted succulent on my windowsill, I still haven't cleaned up the soil off the floor yet. Anyway, I need to modify the payment method for my pending order #W4923227, please change it to the credit card ending in 8897086, the payment method ID is credit_card_8897086.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I had the most amazing matcha latte at the new caf\u00e9 down my street this morning, they even added a little cat-shaped foam art on top that I almost didn't want to drink. On my way home I ran into my old college roommate, we ended up chatting for almost half an hour about her upcoming hiking trip to the Rockies next month. Oh, and my cat just knocked over a potted succulent on my windowsill, I still haven't cleaned up the soil off the floor yet. Anyway, ",
+  "retained": [
+   "arg:0:modify_pending_order_payment:order_id",
+   "arg:0:modify_pending_order_payment:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_payment:order_id",
+     "=",
+     "\"#W4923227\""
+    ],
+    [
+     "arg:0:modify_pending_order_payment:payment_method_id",
+     "=",
+     "\"credit_card_8897086\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_payment:order_id",
+    "=",
+    "\"#W4923227\""
+   ],
+   [
+    "arg:0:modify_pending_order_payment:payment_method_id",
+    "=",
+    "\"credit_card_8897086\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

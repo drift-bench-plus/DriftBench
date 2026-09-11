@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "puffed snacks",
+ "fidelity_notes": [],
+ "goal_idx": 149,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "fb124530b817f8c6ac32c8579763d015",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07FFB1KR4\",[]]",
+   "[\"B097QC1R46\",[]]",
+   "[\"B09M968ZCM\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high protein",
+    "=",
+    "high protein"
+   ],
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "attr:low sugar",
+    "=",
+    "low sugar"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "252ee08c0d5f3876"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high protein",
+     "=",
+     "high protein"
+    ],
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high protein",
+   "attr:low carb",
+   "attr:low sugar",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve been sticking to a high protein, low carb, low sugar eating plan lately, and I’m browsing the puffed snacks section with forty dollars to spend.",
+ "render_attempts": 3,
+ "sample_id": "33ff4dc9b71723ee",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the puffed snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "07dfe3067d09168b"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the puffed snacks instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2508133ff4226586"
+  },
+  {
+   "announcement": "Also, it needs to be dietary fiber.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8977ef4b8517936b"
+  },
+  {
+   "announcement": "Also, it needs to be non gmo.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e1b9c512a7aa2577"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0671e049fbda5c48"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a381b9a72687d1f6"
+  },
+  {
+   "announcement": "Actually, make it 30 instead of 40.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3afa82882e8bb29e"
+  },
+  {
+   "announcement": "Actually, make it 20 instead of 40.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b965401fe11713fa"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a high protein energy bar with low sugar and low carb.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "ab6ea16fe365601d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

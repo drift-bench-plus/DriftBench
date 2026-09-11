@@ -1,0 +1,93 @@
+{
+ "sample_id": "c859a2a91f7d31b4__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "c859a2a91f7d31b4",
+ "query": "I was at the local street market this afternoon and tried this amazing homemade mango sticky rice from the little stand run by the elderly couple, it was so sweet and fragrant that I ended up buying two extra portions to take back to my friends I'm traveling with. We also passed a street performer playing the acoustic guitar who did a really lovely cover of my favorite indie song, I even stopped to drop a tip in his case and got to chat with him for a minute about where he gets his song ideas. Oh, and the sunset over the coast here was absolutely breathtaking, I took so many photos I almost filled up my phone's storage. Anyway, I'm currently abroad and I have roaming turned off, my VPN isn't working right and my network connection is really bad, I can't load any webpages or send messages at all, can you help me figure out what's going on?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was at the local street market this afternoon and tried this amazing homemade mango sticky rice from the little stand run by the elderly couple, it was so sweet and fragrant that I ended up buying two extra portions to take back to my friends I'm traveling with. We also passed a street performer playing the acoustic guitar who did a really lovely cover of my favorite indie song, I even stopped to drop a tip in his case and got to chat with him for a minute about where he gets his song ideas. Oh, and the sunset over the coast here was absolutely breathtaking, I took so many photos I almost filled up my phone's storage.",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:bad_vpn",
+   "fault:user_abroad_roaming_enabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_vpn",
+     "=",
+     "bad_vpn"
+    ],
+    [
+     "fault:user_abroad_roaming_enabled_off",
+     "=",
+     "user_abroad_roaming_enabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_vpn",
+    "=",
+    "bad_vpn"
+   ],
+   [
+    "fault:user_abroad_roaming_enabled_off",
+    "=",
+    "user_abroad_roaming_enabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

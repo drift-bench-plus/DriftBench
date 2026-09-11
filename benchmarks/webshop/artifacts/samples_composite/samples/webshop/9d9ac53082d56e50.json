@@ -1,0 +1,197 @@
+{
+ "sample_id": "9d9ac53082d56e50",
+ "tree_id": "107603069bf6983b",
+ "adapter": "webshop",
+ "cluster": "refillable containers",
+ "goal_idx": 136,
+ "split": "test",
+ "source_instruction": "i am finding a eco friendly and leak proof plastic refillable bottle container with  protective case - style 1 color",
+ "query": "Ugh, I totally forgot to water my pothos on the windowsill this morning before leaving the house, and I think my cat knocked over the stack of junk mail by the front door again too. I also need to remember to pick up oat milk on the way home because we ran out yesterday after making lattes. Oh, and I saw the cutest corgi wearing a tiny rain jacket on the walk over here, it made me smile so big. Anyway, I need refillable containers that are eco friendly and leak proof, under $20, and can you grab that one for me?",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I totally forgot to water my pothos on the windowsill this morning before leaving the house, and I think my cat knocked over the stack of junk mail by the front door again too. I also need to remember to pick up oat milk on the way home because we ran out yesterday after making lattes. Oh, and I saw the cutest corgi wearing a tiny rain jacket on the walk over here, it made me smile so big.",
+  "retained": [
+   "attr:eco friendly",
+   "attr:leak proof",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:eco friendly",
+     "=",
+     "eco friendly"
+    ],
+    [
+     "attr:leak proof",
+     "=",
+     "leak proof"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "d1bda2bb3e59592f"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 73,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 73,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "31cb037c5a8231e8",
+  "conditions": [
+   [
+    "attr:eco friendly",
+    "=",
+    "eco friendly"
+   ],
+   [
+    "attr:leak proof",
+    "=",
+    "leak proof"
+   ],
+   [
+    "option:0",
+    "=",
+    "style 1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B083TBC7BW\",[[\"color\",\"#1\"]]]",
+   "[\"B08C7GB6YW\",[[\"color\",\"style 1\"]]]",
+   "[\"B08DXT75G7\",[[\"color\",\"style 1\"]]]"
+  ],
+  "hash": "186156c7e8dcb4d07220a2476004d012"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "38761bc5eb7aeb9a",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the refillable containers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "523e1485ba534c14",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the refillable containers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "1837b2d786a29d52",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be bpa free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c137e259dae90732",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy carry."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9815a40df6a809e4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "f199b8a8b2c789ed",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0df1430969e03ccf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of style 1."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "39e37d2d211d2bdb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100ml | 3.4 ounce instead of style 1."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,199 @@
+{
+ "adapter": "webshop",
+ "cluster": "bedframes",
+ "fidelity_notes": [],
+ "goal_idx": 474,
+ "ground_truth": {
+  "cardinality": 31,
+  "hash": "d14cd025c9ba01d008c3b49fced3bd0c",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00YCT1C8O\",[[\"color\",\"black\"]]]",
+   "[\"B011PVTX4G\",[[\"color\",\"pearl white | black\"]]]",
+   "[\"B06Y3NQBZL\",[[\"color\",\"black\"]]]",
+   "[\"B07HCN4DC1\",[[\"color\",\"black\"]]]",
+   "[\"B07HCNRLZV\",[[\"color\",\"black\"]]]",
+   "[\"B07S393K3R\",[[\"color\",\"black\"]]]",
+   "[\"B08H821WP6\",[[\"color\",\"black\"]]]",
+   "[\"B08KG4NQ69\",[[\"color\",\"black\"]]]",
+   "[\"B08X188H9G\",[[\"color\",\"black\"]]]",
+   "[\"B08X1NGYGM\",[[\"color\",\"black\"]]]",
+   "[\"B0949LK2WM\",[[\"color\",\"black\"]]]",
+   "[\"B09921NBD4\",[[\"color\",\"black\"]]]",
+   "[\"B09B8LZ3HW\",[[\"color\",\"black\"]]]",
+   "[\"B09DGC6KRY\",[[\"color\",\"black\"]]]",
+   "[\"B09F9YLJQ6\",[[\"color\",\"black pu\"]]]",
+   "[\"B09GR8JT1W\",[[\"color\",\"black\"]]]",
+   "[\"B09H73K8XY\",[[\"color\",\"black\"]]]",
+   "[\"B09H78R7GC\",[[\"color\",\"black\"]]]",
+   "[\"B09HQRH9B8\",[[\"color\",\"black pu\"]]]",
+   "[\"B09J2FZGVK\",[[\"color\",\"black\"]]]",
+   "[\"B09J2Q33C5\",[[\"color\",\"black\"]]]",
+   "[\"B09L896H4M\",[[\"color\",\"black\"]]]",
+   "[\"B09L89W8NK\",[[\"color\",\"black\"]]]",
+   "[\"B09LHNL5NJ\",[[\"color\",\"black\"]]]",
+   "[\"B09M5VTGHG\",[[\"color\",\"black\"]]]",
+   "[\"B09MKMNVQQ\",[[\"color\",\"black\"]]]",
+   "[\"B09MNF6YS7\",[[\"color\",\"black full\"]]]",
+   "[\"B09N822PV9\",[[\"color\",\"black\"]]]",
+   "[\"B09P4P4WV8\",[[\"color\",\"cool black\"]]]",
+   "[\"B09SG9FH6F\",[[\"color\",\"cool black\"]]]",
+   "[\"B09SHHJ49B\",[[\"color\",\"cool black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:faux leather",
+    "=",
+    "faux leather"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    170
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "2383cd6f4249000a"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:faux leather",
+     "=",
+     "faux leather"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:faux leather",
+   "option:0"
+  ],
+  "spec_id": "052a6af8410e4ae7",
+  "strategy_id": "vagueness_subjectivity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a black faux leather bedframe that fits a good price point.",
+ "render_attempts": 1,
+ "sample_id": "6a0cab3dc3ad7e7b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bedframes instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "6b3d47b5a2697e50"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bedframes instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "70cf63e941e60106"
+  },
+  {
+   "announcement": "Also, it needs to be easy clean.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3da0d0e0e91dc648"
+  },
+  {
+   "announcement": "Also, it needs to be eco friendly.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7fc2907ed79b72bc"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1b2b4be0aa26d442"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c6c2b58f382ac0dd"
+  },
+  {
+   "announcement": "Actually, make it beige mattress instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2db3015db9eec2e2"
+  },
+  {
+   "announcement": "Actually, make it beige instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5215585694b8ae31"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 82,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 31,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a black faux leather bed frames.",
+ "split": "test",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "tree_id": "8e8ac0bb63f99978",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

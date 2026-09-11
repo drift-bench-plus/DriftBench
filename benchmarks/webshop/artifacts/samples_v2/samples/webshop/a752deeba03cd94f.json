@@ -1,0 +1,245 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair loss products",
+ "fidelity_notes": [],
+ "goal_idx": 491,
+ "ground_truth": {
+  "cardinality": 42,
+  "hash": "1af03ccc77c0fb9ccbf19163362a6e2a",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01N8YVP43\",[]]",
+   "[\"B07427VMRZ\",[]]",
+   "[\"B07429L7WZ\",[]]",
+   "[\"B0742BV2JG\",[]]",
+   "[\"B0742JH3JT\",[]]",
+   "[\"B07K328CPH\",[]]",
+   "[\"B07L3QNWB6\",[]]",
+   "[\"B07MQ8G1LC\",[]]",
+   "[\"B07P8VYDGL\",[]]",
+   "[\"B07PPHZPRV\",[]]",
+   "[\"B07PR7ZNBD\",[]]",
+   "[\"B07PYH7ZVF\",[]]",
+   "[\"B07QXCWLHS\",[]]",
+   "[\"B089M937YX\",[]]",
+   "[\"B089QL1SVF\",[]]",
+   "[\"B08DX5J739\",[]]",
+   "[\"B08FY3WDDJ\",[]]",
+   "[\"B08NYMVR1D\",[]]",
+   "[\"B08PC8QTFB\",[]]",
+   "[\"B08QCL4SB5\",[]]",
+   "[\"B08XND7S6M\",[]]",
+   "[\"B08XNDHHRF\",[]]",
+   "[\"B08ZNR6GW1\",[]]",
+   "[\"B0928MJQCN\",[]]",
+   "[\"B092MJ5ZY3\",[]]",
+   "[\"B095B9DNLL\",[]]",
+   "[\"B095N8WX77\",[]]",
+   "[\"B098DPBD42\",[]]",
+   "[\"B098T89QPQ\",[]]",
+   "[\"B09917NLTG\",[]]",
+   "[\"B09925FV26\",[]]",
+   "[\"B09BCFNMMJ\",[]]",
+   "[\"B09C2L8FFC\",[]]",
+   "[\"B09FXQBB5J\",[]]",
+   "[\"B09HK1C5W5\",[]]",
+   "[\"B09J14LSR4\",[]]",
+   "[\"B09KRXCPP1\",[]]",
+   "[\"B09KX8NW3T\",[]]",
+   "[\"B09MHV1G8W\",[]]",
+   "[\"B09P51BFWM\",[]]",
+   "[\"B09PQQHBS1\",[]]",
+   "[\"B09QLW8N3Z\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair loss",
+    "=",
+    "hair loss"
+   ],
+   [
+    "attr:synthetic hair",
+    "=",
+    "synthetic hair"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "attr:synthetic hair"
+  ],
+  "intent_id": "7e0918b55ee9dfe8"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "attr:synthetic hair",
+      "synthetic hair"
+     ],
+     [
+      "attr:synthetic hair",
+      "good hair fall prevention effect"
+     ]
+    ],
+    "surface": "good fall"
+   }
+  ],
+  "attempt": 4,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:synthetic hair"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair loss",
+     "=",
+     "hair loss"
+    ],
+    [
+     "attr:synthetic hair",
+     "=",
+     "synthetic hair"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   [
+    [
+     "attr:hair loss",
+     "=",
+     "hair loss"
+    ],
+    [
+     "attr:synthetic hair",
+     "=",
+     "good hair fall prevention effect"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair loss",
+   "price_upper"
+  ],
+  "spec_id": "8db150157b9baaa4",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for something to help with hair loss that’s under $60, I want it to have a good fall.",
+ "render_attempts": 4,
+ "sample_id": "a752deeba03cd94f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair loss products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "20cd3e9d9a0c5ee1"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair loss products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f0bfa433247a8172"
+  },
+  {
+   "announcement": "Also, it needs to be easy apply.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b71fdc88f5fcd3ad"
+  },
+  {
+   "announcement": "Also, it needs to be hair dryer.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e65f1241a6f51d06"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "37c049cf0e61cc49"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a19689aaff681cf2"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of 60.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a314f3d0acaf0b24"
+  },
+  {
+   "announcement": "Actually, make it 20 instead of 60.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fd0a7a80e77cf09e"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   42,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 42,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for synthetic hair care for hair loss .",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "8d3283e157f8c800",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

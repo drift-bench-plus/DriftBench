@@ -1,0 +1,182 @@
+{
+ "adapter": "webshop",
+ "cluster": "shave & hair removal",
+ "fidelity_notes": [],
+ "goal_idx": 412,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "5293243be7659c37c8469088ce4e1a85",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08CNFY9ZW\",[[\"color\",\"#1\"]]]",
+   "[\"B08LFZ6LGZ\",[[\"color\",\"style 1\"]]]",
+   "[\"B093DN51B2\",[[\"color\",\"#1\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:non slip",
+    "=",
+    "non slip"
+   ],
+   [
+    "option:0",
+    "=",
+    "style 1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "82d9bd2866b22cf5"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "irrelevant_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [
+   {
+    "condition": [
+     "attr:built-in LED light",
+     "=",
+     "built-in LED light"
+    ],
+    "text": "built-in LED light"
+   }
+  ],
+  "family": "parameter",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:non slip",
+     "=",
+     "non slip"
+    ],
+    [
+     "option:0",
+     "=",
+     "style 1"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:built-in LED light",
+     "=",
+     "built-in LED light"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:non slip",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "ada298b5fda2971a",
+  "strategy_id": "irrelevant_information",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a non-slip style 1 hair removal tool under $30, and it needs to come with a built-in LED light.",
+ "render_attempts": 3,
+ "sample_id": "2f58c534b10d484b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the shave & hair removal instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0dc562e6e1f54ce5"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the shave & hair removal instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "3c127f9d528be99a"
+  },
+  {
+   "announcement": "Also, it needs to be beauty salon.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "213c05f2759eef63"
+  },
+  {
+   "announcement": "Also, it needs to be double sided.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d4906a786043545a"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "062fd32a706d6c99"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cb46732bd10a044c"
+  },
+  {
+   "announcement": "Actually, make it 6 pieces instead of style 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "566e54191838921b"
+  },
+  {
+   "announcement": "Actually, make it 5 scents instead of style 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8fe7397afe3b4876"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "extras",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a set of non slip eyebrow epilator.",
+ "split": "test",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "tree_id": "8c7f581d0ff3a6d1",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

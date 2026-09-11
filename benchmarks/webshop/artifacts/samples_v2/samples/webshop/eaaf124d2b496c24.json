@@ -1,0 +1,170 @@
+{
+ "adapter": "webshop",
+ "cluster": "scrubs & body treatments",
+ "fidelity_notes": [],
+ "goal_idx": 43,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "77599b285767b734096d150fecf2203e",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B099RPD1Y9\",[[\"color\",\"pink\"]]]",
+   "[\"B09N3T6LM3\",[[\"color\",\"hot pink\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:dry skin",
+    "=",
+    "dry skin"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "83262c7c5bbcd058"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:dry skin",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for scrubs and body treatments for dry skin, with that one color option, and my price limit is 20.",
+ "render_attempts": 1,
+ "sample_id": "eaaf124d2b496c24",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the scrubs & body treatments instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "333cec1c9afa1c06"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the scrubs & body treatments instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e4e1a79008f22c72"
+  },
+  {
+   "announcement": "Also, it needs to be high quality.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "33f9d979f2f937fb"
+  },
+  {
+   "announcement": "Also, it needs to be body wash.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7d09944957672edb"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3f46fd43d2b5dc64"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "644c2120b8655b26"
+  },
+  {
+   "announcement": "Actually, make it 1 fl oz (pack of 1) instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0b55fd3337cb0b5a"
+  },
+  {
+   "announcement": "Actually, make it 0.5 fl oz (pack of 1) instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ba79c638cf941c09"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 122,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like a pink body scrub for dry skin.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "8aca6ff9f654be8f",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

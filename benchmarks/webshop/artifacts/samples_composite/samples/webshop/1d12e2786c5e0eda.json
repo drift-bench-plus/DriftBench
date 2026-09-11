@@ -1,0 +1,235 @@
+{
+ "sample_id": "1d12e2786c5e0eda",
+ "tree_id": "f77cd43988662c2f",
+ "adapter": "webshop",
+ "cluster": "decorative mirrors",
+ "goal_idx": 118,
+ "split": "test",
+ "source_instruction": "i need a wall mounted mirror in the color d.",
+ "query": "I was out walking my neighbor\u2019s golden retriever earlier today, and we cut through that little community garden tucked between the laundromat and the old bakery on Oak Street. The sun hit the patch of giant sunflowers right at the edge of the path so perfectly that their petals looked like they were glowing bright enough to cast tiny gold flecks on the crushed gravel under our feet. The dog stopped dead in his tracks to sniff at a bumblebee that was bumbling slow and heavy from one zinnia to the next, and I stood there for a good five minutes just watching, not even checking my phone the whole time. It was the kind of tiny, unplanned nice moment that makes a random Tuesday feel way more special than it has any right to, honestly. I\u2019m browsing the decorative mirrors section right now, and there\u2019s a ceiling mounted one in that section, plus a small pack of heavy-duty adhesive hanging strips that pairs with it for under 180. I\u2019ve heard option d is available when stock levels allow for it, too.",
+ "strategy_ids": [
+  "indirect_intent",
+  "contextual_irrelevance",
+  "factual_error",
+  "syntactic_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+contextual_irrelevance+factual_error+syntactic_ambiguity",
+  "family": "expression+intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "contextual_irrelevance",
+   "factual_error",
+   "syntactic_ambiguity"
+  ],
+  "assigned_slots": {
+   "syntactic_ambiguity": "price_upper",
+   "factual_error": "attr:wall mounted"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:wall mounted",
+    "wall mounted",
+    "ceiling mounted"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "for under 180",
+    "placements": [
+     [
+      "price_upper",
+      "180"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I was out walking my neighbor\u2019s golden retriever earlier today, and we cut through that little community garden tucked between the laundromat and the old bakery on Oak Street. The sun hit the patch of giant sunflowers right at the edge of the path so perfectly that their petals looked like they were glowing bright enough to cast tiny gold flecks on the crushed gravel under our feet. The dog stopped dead in his tracks to sniff at a bumblebee that was bumbling slow and heavy from one zinnia to the next, and I stood there for a good five minutes just watching, not even checking my phone the whole time. It was the kind of tiny, unplanned nice moment that makes a random Tuesday feel way more special than it has any right to, honestly.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:wall mounted",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:wall mounted",
+     "=",
+     "ceiling mounted"
+    ],
+    [
+     "option:0",
+     "=",
+     "d"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "907437d6b6618d12"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 18,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 18,
+    "readings": 1
+   },
+   "syntactic_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     18,
+     60
+    ],
+    "true_card": 18,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "0cd0d9ebc39fe71e",
+  "conditions": [
+   [
+    "attr:wall mounted",
+    "=",
+    "wall mounted"
+   ],
+   [
+    "option:0",
+    "=",
+    "d"
+   ],
+   [
+    "price_upper",
+    "<=",
+    180
+   ]
+  ],
+  "hidden_slots": [
+   "attr:wall mounted",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 18,
+  "value": [
+   "[\"B07LGYJLRX\",[[\"color\",\"d\"]]]",
+   "[\"B07LGZB8W6\",[[\"color\",\"d\"]]]",
+   "[\"B07MMWSSQ2\",[[\"color\",\"d\"]]]",
+   "[\"B0821KNWQF\",[[\"color\",\"d\"]]]",
+   "[\"B0836JV99X\",[[\"color\",\"d\"]]]",
+   "[\"B083CVMM5B\",[[\"color\",\"d\"]]]",
+   "[\"B08CH1977X\",[[\"color\",\"d\"]]]",
+   "[\"B08HS843JX\",[[\"color\",\"d\"]]]",
+   "[\"B08LDM11F4\",[[\"color\",\"d\"]]]",
+   "[\"B08MFH9HQJ\",[[\"color\",\"d\"]]]",
+   "[\"B08NBK6DWF\",[[\"color\",\"d\"]]]",
+   "[\"B08NV9QDQS\",[[\"color\",\"d\"]]]",
+   "[\"B08X9ZVYGL\",[[\"color\",\"d\"]]]",
+   "[\"B08XYX55PB\",[[\"color\",\"d\"]]]",
+   "[\"B08XYZS7MC\",[[\"color\",\"d\"]]]",
+   "[\"B095YLWYCM\",[[\"size\",\"d\"]]]",
+   "[\"B09L76JXWB\",[[\"color\",\"d\"]]]",
+   "[\"B09P4VC71X\",[[\"color\",\"d\"]]]"
+  ],
+  "hash": "66c7afaf210939dfbc3b01bb6c31b18c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "26c7220a1a52f4d2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the decorative mirrors instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "3bdc77f054335cab",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the decorative mirrors instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "21ea7763b00a43eb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dining room."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d24d1df2a7d4f315",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wall art."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c2dc65952e69dab2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d5e068520bf23372",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "008a45e16706f62c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 23.6\" instead of d."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "6980307ade20caaa",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20\" instead of d."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

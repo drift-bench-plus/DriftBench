@@ -1,0 +1,205 @@
+{
+ "sample_id": "62d45ebc68452eaa",
+ "tree_id": "76e72f31b5d9c067",
+ "adapter": "webshop",
+ "cluster": "women's pants",
+ "goal_idx": 127,
+ "split": "test",
+ "source_instruction": "i need to buy some slim fit yoga pants. get the ones that are multicolered in xx large.",
+ "query": "Oh man, I\u2019ve spent the last two hours re-watching those old 2000s skate competition clips and I\u2019m this close to ordering a beat-up used skateboard deck to hang on my apartment wall, plus I just remembered I need to pick up extra cat litter on my way home tonight because my little tabby keeps kicking it all over the bathroom mat. I also can\u2019t stop thinking about how good those sour watermelon candies I had at the movie theater last weekend were, I need to track down a bulk bag of them soon. Anyway, I\u2019m browsing the women\u2019s pants section right now and I need a pair that\u2019s slim fit, multicolor, in size xx-large, for a reasonable price.",
+ "strategy_ids": [
+  "vagueness_subjectivity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "vagueness_subjectivity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "vagueness_subjectivity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh man, I\u2019ve spent the last two hours re-watching those old 2000s skate competition clips and I\u2019m this close to ordering a beat-up used skateboard deck to hang on my apartment wall, plus I just remembered I need to pick up extra cat litter on my way home tonight because my little tabby keeps kicking it all over the bathroom mat. I also can\u2019t stop thinking about how good those sour watermelon candies I had at the movie theater last weekend were, I need to track down a bulk bag of them soon.",
+  "retained": [
+   "attr:slim fit",
+   "option:0",
+   "option:1"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:slim fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "multicolor"
+    ],
+    [
+     "option:1",
+     "=",
+     "xx-large"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "a72bf8967d78077a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 11,
+  "lit_card": 13,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 13,
+    "true_card": 11,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "c1d57292989059b8",
+  "conditions": [
+   [
+    "attr:slim fit",
+    "=",
+    "slim fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "multicolor"
+   ],
+   [
+    "option:1",
+    "=",
+    "xx-large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 11,
+  "value": [
+   "[\"B08RRY7KXD\",[[\"color\",\"s02-multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B08X73254N\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B094975Y71\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09KTVWQ5V\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09MLQPB3K\",[[\"color\",\"a01-multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09NNWRSPK\",[[\"color\",\"1#multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09P8RPSGD\",[[\"color\",\"a03#multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09PC442MZ\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09PC4654F\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09PLBLJHP\",[[\"color\",\"169-multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09Q85RK7L\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]"
+  ],
+  "hash": "561bcd1810ae256c42a8ea0b1b86c92a"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0459ef6c313962b8",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's pants instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7e3cac59d0b62acd",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's pants instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "4e83660f0c5f8109",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be tunic tops."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cf21843ee57323d1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be elastic closure."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2f0992e20654e84a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d7d58581f7676388",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1561f63c739a13c4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01-black instead of multicolor."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "ef6390f2d7e81553",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01-blue instead of multicolor."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

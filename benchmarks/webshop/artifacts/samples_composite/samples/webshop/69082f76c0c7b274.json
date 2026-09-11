@@ -1,0 +1,219 @@
+{
+ "sample_id": "69082f76c0c7b274",
+ "tree_id": "99ee37f57edab9b0",
+ "adapter": "webshop",
+ "cluster": "eyes care",
+ "goal_idx": 112,
+ "split": "test",
+ "source_instruction": "i am looking for anti aging cream with green tea and hyaluronic acid. i want it to be effective for dark circles",
+ "query": "Ugh, I stopped by the bakery on the way over here and they were completely out of my favorite matcha croissants, the ones with the little white chocolate drizzle on top that I get every Saturday after my yoga class. My yoga instructor kept raving about how adding honey to your post-workout smoothie does wonders for your energy levels, too, and I swear I saw a sparrow building a nest in the hanging fern right outside the store entrance when I walked in. I\u2019ve heard that eye care products formulated with green tea and hyaluronic acid work really well for targeting signs of anti aging and reducing the appearance of dark circles, and that nice options under $50 are totally easy to come by in this section.",
+ "strategy_ids": [
+  "indirect_intent",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "Ugh, I stopped by the bakery on the way over here and they were completely out of my favorite matcha croissants, the ones with the little white chocolate drizzle on top that I get every Saturday after my yoga class. My yoga instructor kept raving about how adding honey to your post-workout smoothie does wonders for your energy levels, too, and I swear I saw a sparrow building a nest in the hanging fern right outside the store entrance when I walked in.",
+  "retained": [
+   "attr:anti aging",
+   "attr:dark circles",
+   "attr:green tea",
+   "attr:hyaluronic acid",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:anti aging",
+     "=",
+     "anti aging"
+    ],
+    [
+     "attr:dark circles",
+     "=",
+     "dark circles"
+    ],
+    [
+     "attr:green tea",
+     "=",
+     "green tea"
+    ],
+    [
+     "attr:hyaluronic acid",
+     "=",
+     "hyaluronic acid"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "75a95a36daae8081"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 28,
+  "lit_card": 28,
+  "components": {}
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "8ce16fb1d9f9b7a2",
+  "conditions": [
+   [
+    "attr:anti aging",
+    "=",
+    "anti aging"
+   ],
+   [
+    "attr:dark circles",
+    "=",
+    "dark circles"
+   ],
+   [
+    "attr:green tea",
+    "=",
+    "green tea"
+   ],
+   [
+    "attr:hyaluronic acid",
+    "=",
+    "hyaluronic acid"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 28,
+  "value": [
+   "[\"B00QL67MY4\",[]]",
+   "[\"B00V51DXBG\",[]]",
+   "[\"B01M23Z4LJ\",[]]",
+   "[\"B06XS125JK\",[]]",
+   "[\"B06ZYJ7CQT\",[]]",
+   "[\"B074Q2C6ZP\",[]]",
+   "[\"B0773LK7NN\",[]]",
+   "[\"B07D1S6PLD\",[]]",
+   "[\"B07FB4W274\",[]]",
+   "[\"B07H42C5F9\",[]]",
+   "[\"B07KLWNNY4\",[]]",
+   "[\"B07PJYLM6N\",[]]",
+   "[\"B07Q519L97\",[]]",
+   "[\"B07R7LPLV5\",[]]",
+   "[\"B07V5LG4ZV\",[]]",
+   "[\"B07XV8QS53\",[]]",
+   "[\"B081TQXPLR\",[]]",
+   "[\"B085XM84VT\",[]]",
+   "[\"B08H8MZQV6\",[]]",
+   "[\"B08JP2QL8Y\",[]]",
+   "[\"B08JYJHQJP\",[]]",
+   "[\"B08YFMBZ96\",[]]",
+   "[\"B08YLS39HF\",[]]",
+   "[\"B093VYLMVQ\",[]]",
+   "[\"B095KYX53F\",[]]",
+   "[\"B09JGNN2RW\",[]]",
+   "[\"B09KKSPXMS\",[]]",
+   "[\"B09S5WTZR3\",[]]"
+  ],
+  "hash": "eeb4f3b24c22ac83999074edcda1111c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "31199fda12e2aa6d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the eyes care instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "9e362248c18ad1ea",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the eyes care instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "06bb8b73bfc9f9b4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be certified organic."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "56c8a11bdcf6b182",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dead skin."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a3f11cc0de82ea83",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c1b0f577c1f3d241",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "78fb62fbf4cb28af",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 50."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b3c25188d320575a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 50."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

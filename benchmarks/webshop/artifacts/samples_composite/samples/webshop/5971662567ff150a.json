@@ -1,0 +1,196 @@
+{
+ "sample_id": "5971662567ff150a",
+ "tree_id": "3cce7f25099e220e",
+ "adapter": "webshop",
+ "cluster": "hair coloring products",
+ "goal_idx": 93,
+ "split": "test",
+ "source_instruction": "i'm looking for double sided hair extensions for hair care accessories.",
+ "query": "Ugh, I stopped by the food court on my way over here and got the worst mango boba ever\u2014tapioca was rock hard, the syrup tasted like artificial candy, and they didn\u2019t even put the little mango jelly bits I asked for, total waste of 7 bucks. Also, the mall parking lot was a nightmare today, I circled for 20 minutes before someone pulled out of a spot right by the entrance, and some guy in a pickup almost backed into my car when I was walking in. Oh, and I saw the cutest corgi wearing a little rain jacket trotting by the entrance with its owner, it made the annoying parking situation almost worth it. Anyway, I need double-sided hair extensions in shade #ba2 | 60, and don\u2019t go over that one for the price, yeah?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+referential_ambiguity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I stopped by the food court on my way over here and got the worst mango boba ever\u2014tapioca was rock hard, the syrup tasted like artificial candy, and they didn\u2019t even put the little mango jelly bits I asked for, total waste of 7 bucks. Also, the mall parking lot was a nightmare today, I circled for 20 minutes before someone pulled out of a spot right by the entrance, and some guy in a pickup almost backed into my car when I was walking in. Oh, and I saw the cutest corgi wearing a little rain jacket trotting by the entrance with its owner, it made the annoying parking situation almost worth it. Anyway,",
+  "retained": [
+   "attr:double sided",
+   "attr:hair extensions",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:double sided",
+     "=",
+     "double sided"
+    ],
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "#ba2 | 60"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b00205dbaf178bff"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 5,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 5,
+    "true_card": 2,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "b3f2c66bf82264d9",
+  "conditions": [
+   [
+    "attr:double sided",
+    "=",
+    "double sided"
+   ],
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "option:0",
+    "=",
+    "#ba2 | 60"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B07TTC374M\",[[\"color\",\"#ba2 | 60\"]]]",
+   "[\"B09BF2F9ST\",[[\"color\",\"#60\"]]]"
+  ],
+  "hash": "e776203e5d6e8110943ca8462d359a5d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "31e0c6bb85ba0947",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair coloring products instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e684e06a6212b4e3",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair coloring products instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7d010bb1e5ace1c1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be high quality."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e8db70704155d8e0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair scalp."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e8994ee173cc2d63",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ed96aed7eef1557c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cd65c94edafde9e8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #9a instead of #ba2 | 60."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "fe52a14b8fb76b82",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #56 rich medium brown instead of #ba2 | 60."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

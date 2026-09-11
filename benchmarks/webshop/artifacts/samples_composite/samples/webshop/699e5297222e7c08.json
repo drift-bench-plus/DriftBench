@@ -1,0 +1,230 @@
+{
+ "sample_id": "699e5297222e7c08",
+ "tree_id": "03bdb278505ad2e9",
+ "adapter": "webshop",
+ "cluster": "breads & bakery",
+ "goal_idx": 104,
+ "split": "test",
+ "source_instruction": "i am looking for a gluten free non gmo fig bar packet of 7. and i choose the variety pack",
+ "query": "I saw the silliest thing on my walk over to the store today, a tiny golden retriever puppy wearing a frayed hand-knit neon orange sweater trotting along the sidewalk with a whole plain bagel clamped gently in its mouth, not dropping a crumb even when it stopped to sniff at a dandelion growing through a crack in the concrete. Its owner was trailing a few steps behind, laughing so hard they could barely hold onto the leash, and said the pup had snatched the bagel right off their kitchen counter that morning before they could stop it, fully committed to carrying its own snack for the walk. A couple of kids waiting for the school bus across the street cheered when the puppy sat down for two seconds, still holding tight to the bagel, like it was showing off a prize it had won fair and square. It made the whole gray, drizzly morning feel way warmer and brighter than I thought it would when I first pulled my jacket on to head out the door. Right now I\u2019m over in the breads & bakery section. I\u2019ve heard gluten-reduced, non-GMO options work really well for what lines up with my preferences right now, and I\u2019ve heard the variety pack plus that one size I always grab all come out to totals under $20 total, all matching exactly what fits that set of details.",
+ "strategy_ids": [
+  "indirect_intent",
+  "referential_ambiguity",
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+referential_ambiguity+factual_error+contextual_irrelevance",
+  "family": "expression+intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "referential_ambiguity",
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:1",
+   "factual_error": "attr:gluten free"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:gluten free",
+    "gluten free",
+    "gluten-reduced"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:1",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I saw the silliest thing on my walk over to the store today, a tiny golden retriever puppy wearing a frayed hand-knit neon orange sweater trotting along the sidewalk with a whole plain bagel clamped gently in its mouth, not dropping a crumb even when it stopped to sniff at a dandelion growing through a crack in the concrete. Its owner was trailing a few steps behind, laughing so hard they could barely hold onto the leash, and said the pup had snatched the bagel right off their kitchen counter that morning before they could stop it, fully committed to carrying its own snack for the walk. A couple of kids waiting for the school bus across the street cheered when the puppy sat down for two seconds, still holding tight to the bagel, like it was showing off a prize it had won fair and square. It made the whole gray, drizzly morning feel way warmer and brighter than I thought it would when I first pulled my jacket on to head out the door.",
+  "retained": [
+   "attr:non gmo",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:gluten free",
+   "option:1"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten-reduced"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:0",
+     "=",
+     "variety pack"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "0bc0d11c0e410fed"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 0,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 6,
+    "true_card": 3,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "befb9681ace0d113",
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "attr:non gmo",
+    "=",
+    "non gmo"
+   ],
+   [
+    "option:0",
+    "=",
+    "variety pack"
+   ],
+   [
+    "option:1",
+    "=",
+    "12 count (pack of 7)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:gluten free",
+   "option:1"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B00WFDKDIO\",[[\"flavor name\",\"variety pack\"],[\"size\",\"12 count (pack of 7)\"]]]",
+   "[\"B07YSWL849\",[[\"flavor name\",\"variety\"],[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B08B8ZHBK2\",[[\"flavor name\",\"variety pack\"],[\"size\",\"7 ounce (pack of 1)\"]]]"
+  ],
+  "hash": "f08ab26df53fcc6fc5ab246ee4ca0264"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1f6225fde59968dc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breads & bakery instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "6da6ddcafa09e269",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breads & bakery instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "62eb6218b480cdb2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be 0g trans."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a4f8784d3ca9082e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy use."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "713431c87ef68b7d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a9b210ac95a3c43c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5fd0830c1731bea7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 11 ounce (pack of 12) instead of variety pack."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7443574b220999b8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 12 instead of variety pack."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

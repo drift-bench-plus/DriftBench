@@ -1,0 +1,82 @@
+{
+ "sample_id": "206f72e0c6f0ab11__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "206f72e0c6f0ab11",
+ "query": "Hey, I just wanted to say I had the best iced matcha latte from that new caf\u00e9 down the street this morning, they added a little vanilla foam on top and it was so creamy I\u2019m already thinking about going back tomorrow. Oh and I also picked up the cutest phone pop socket on my way home, it\u2019s shaped like a little avocado and it\u2019s already saved my phone from slipping out of my hand twice today. I had a really great walk with my golden retriever after dinner too, he chased a butterfly all the way across the park and made everyone around laugh. Anyway, I\u2019m having an issue with my phone right now, my data saver mode is turned on and I already used up all my data for the month, and now none of my apps that need internet are working properly, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey, I just wanted to say I had the best iced matcha latte from that new caf\u00e9 down the street this morning, they added a little vanilla foam on top and it was so creamy I\u2019m already thinking about going back tomorrow. Oh and I also picked up the cutest phone pop socket on my way home, it\u2019s shaped like a little avocado and it\u2019s already saved my phone from slipping out of my hand twice today. I had a really great walk with my golden retriever after dinner too, he chased a butterfly all the way across the park and made everyone around laugh.",
+  "retained": [
+   "fault:data_saver_mode_on",
+   "fault:data_usage_exceeded"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

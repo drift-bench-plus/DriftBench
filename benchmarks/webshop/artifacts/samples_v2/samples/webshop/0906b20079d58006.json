@@ -1,0 +1,178 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair loss products",
+ "fidelity_notes": [],
+ "goal_idx": 158,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "c69eaa912388ecbea54de5864fc533d0",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07SKN25VL\",[[\"color\",\"ash blonde-straight(new)\"]]]",
+   "[\"B08Q3P75B4\",[[\"color\",\"3 clips-#18p613 ash blonde&bleach blonde\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "attr:natural hair",
+    "=",
+    "natural hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "ash blonde-straight(new)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "987efa7e02bec6dd"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "ash blonde-straight(new)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair extensions",
+   "attr:natural hair",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that ash blonde straight new hair extensions that match natural hair work well for people browsing hair loss products, and they cost under 30.",
+ "render_attempts": 1,
+ "sample_id": "0906b20079d58006",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair loss products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e0918b55ee9dfe8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair loss products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f0bfa433247a8172"
+  },
+  {
+   "announcement": "Also, it needs to be easy apply.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5973a8db332a940d"
+  },
+  {
+   "announcement": "Also, it needs to be synthetic hair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a284e41e512d47f2"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0d76b3e8809e0095"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "30746340711aa1b8"
+  },
+  {
+   "announcement": "Actually, make it #1b | 18 | 60 black to ash blonde with platinum blonde instead of ash blonde-straight(new).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9148a38d70370cb4"
+  },
+  {
+   "announcement": "Actually, make it #1b | 4 | 27 black to dark brown with caramel blonde instead of ash blonde-straight(new).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9438334d193f4ce5"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 2,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for hair extensions for natural hair and straight hair so need to buy it.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "4da7bb9708eab174",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

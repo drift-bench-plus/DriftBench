@@ -1,0 +1,371 @@
+{
+ "sample_id": "5657bada5b679a59",
+ "tree_id": "ac3faed3b847aa4c",
+ "adapter": "webshop",
+ "cluster": "women's dresses",
+ "goal_idx": 369,
+ "split": "test",
+ "source_instruction": "i need a black dress with an imported zipper.",
+ "query": "I swear my cat has been on the most chaotic little streak this whole week, and I still can\u2019t figure out what\u2019s gotten into him. Yesterday he knocked over my favorite ceramic mug full of iced coffee right onto my living room rug, then immediately zoomed under the couch like he\u2019d done absolutely nothing wrong, and this morning I woke up to find he\u2019d dragged every single one of my fuzzy socks out of the laundry basket and arranged them in a lopsided circle right by my front door. I stopped at the pet store on my walk over here to grab him those salmon treats he goes crazy for, hoping a little snack bribe might get him to stop his tiny household crime spree for at least a couple days, but I\u2019m not holding my breath at this point\u2014he\u2019s got that mischievous glint in his eye every time I look at him lately, like he\u2019s already planning his next silly little stunt the second I turn my back. Hey, I\u2019m browsing the women\u2019s dresses section right now looking for a new everyday option, and I need one that\u2019s black, has a hand-forged brass zipper, and comes with a detachable matching fabric belt for styling different looks. I don\u2019t want to spend too much, obviously, so can you pull up options that fit what I\u2019m after? I was thinking it\u2019d be nice if the hem hits right around the knee too, wait no, no, the main things are the black color, that zipper I mentioned, and the belt add-on, right? Yeah, just show me whatever fits those notes without going over a price I\u2019m comfortable with, thanks.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "insufficient_information",
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+insufficient_information+factual_error+contextual_irrelevance",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "insufficient_information",
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:imported zipper",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:imported zipper",
+    "imported zipper",
+    "hand-forged brass zipper"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "has a hand-forged brass zipper",
+    "condition": [
+     "attr:imported zipper",
+     "=",
+     "hand-forged brass zipper"
+    ]
+   },
+   {
+    "text": "comes with a detachable matching fabric belt for styling different looks",
+    "condition": null
+   },
+   {
+    "text": "it\u2019d be nice if the hem hits right around the knee too",
+    "condition": null
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I swear my cat has been on the most chaotic little streak this whole week, and I still can\u2019t figure out what\u2019s gotten into him. Yesterday he knocked over my favorite ceramic mug full of iced coffee right onto my living room rug, then immediately zoomed under the couch like he\u2019d done absolutely nothing wrong, and this morning I woke up to find he\u2019d dragged every single one of my fuzzy socks out of the laundry basket and arranged them in a lopsided circle right by my front door. I stopped at the pet store on my walk over here to grab him those salmon treats he goes crazy for, hoping a little snack bribe might get him to stop his tiny household crime spree for at least a couple days, but I\u2019m not holding my breath at this point\u2014he\u2019s got that mischievous glint in his eye every time I look at him lately, like he\u2019s already planning his next silly little stunt the second I turn my back.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:imported zipper",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:imported zipper",
+     "=",
+     "hand-forged brass zipper"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "attr:imported zipper",
+     "=",
+     "hand-forged brass zipper"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "774cdfb2b50c9cc6"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 140,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 140,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 152,
+    "true_card": 140,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 140,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "452379291bd26652",
+  "conditions": [
+   [
+    "attr:imported zipper",
+    "=",
+    "imported zipper"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    180
+   ]
+  ],
+  "hidden_slots": [
+   "attr:imported zipper",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 140,
+  "value": [
+   "[\"B00G9B99OM\",[[\"color\",\"black\"]]]",
+   "[\"B00JMBS3D4\",[[\"color\",\"black\"]]]",
+   "[\"B00UT0O43A\",[[\"color\",\"black | soft white\"]]]",
+   "[\"B01FK35KZG\",[[\"color\",\"black\"]]]",
+   "[\"B01I4PRY4W\",[[\"color\",\"black\"]]]",
+   "[\"B01J7EC92Q\",[[\"color\",\"black\"]]]",
+   "[\"B01LWBH9FO\",[[\"color\",\"black\"]]]",
+   "[\"B01N0USXYT\",[[\"color\",\"black\"]]]",
+   "[\"B01N1SGSFV\",[[\"color\",\"jet black\"]]]",
+   "[\"B06XCGWSDT\",[[\"color\",\"copper | black\"]]]",
+   "[\"B06XWB5RG5\",[[\"color\",\"black\"]]]",
+   "[\"B06Y4VZ244\",[[\"color\",\"black | nude\"]]]",
+   "[\"B071YHCJ3S\",[[\"color\",\"black\"]]]",
+   "[\"B0721XXV17\",[[\"color\",\"black silver\"]]]",
+   "[\"B0744K61TQ\",[[\"color\",\"black rosette costes\"]]]",
+   "[\"B075QFCFNV\",[[\"color\",\"black beaded\"]]]",
+   "[\"B075RHZKZC\",[[\"color\",\"black | white\"]]]",
+   "[\"B075YVHN57\",[[\"color\",\"black\"]]]",
+   "[\"B0765HN92C\",[[\"color\",\"black\"]]]",
+   "[\"B076J1TJTV\",[[\"color\",\"black\"]]]",
+   "[\"B0788BWSSV\",[[\"color\",\"black\"]]]",
+   "[\"B078C5MM3W\",[[\"color\",\"black\"]]]",
+   "[\"B078WJJ312\",[[\"color\",\"black\"]]]",
+   "[\"B078XXN813\",[[\"color\",\"black\"]]]",
+   "[\"B079MHDZST\",[[\"color\",\"black\"]]]",
+   "[\"B079MTJV22\",[[\"color\",\"black\"]]]",
+   "[\"B079P5M7QB\",[[\"color\",\"black | nude lace\"]]]",
+   "[\"B079QH8Z6R\",[[\"color\",\"black\"]]]",
+   "[\"B079SZGV3J\",[[\"color\",\"jet black a\"]]]",
+   "[\"B07B2STJY6\",[[\"color\",\"black\"]]]",
+   "[\"B07BSTWTSM\",[[\"color\",\"black |  brown\"]]]",
+   "[\"B07CPVGHMN\",[[\"color\",\"black\"]]]",
+   "[\"B07D3NZJT4\",[[\"color\",\"antique gold | black\"]]]",
+   "[\"B07DK5TP2S\",[[\"color\",\"black\"]]]",
+   "[\"B07DYJTCNP\",[[\"color\",\"black plaid\"]]]",
+   "[\"B07FMKCLR9\",[[\"color\",\"black\"]]]",
+   "[\"B07FWPWTWS\",[[\"color\",\"black | sky multi\"]]]",
+   "[\"B07HRJJX1V\",[[\"color\",\"black\"]]]",
+   "[\"B07J9L991K\",[[\"color\",\"black | black 2\"]]]",
+   "[\"B07JWJLYPS\",[[\"color\",\"black\"]]]",
+   "[\"B07KCKH838\",[[\"color\",\"black\"]]]",
+   "[\"B07L55LMPX\",[[\"color\",\"black\"]]]",
+   "[\"B07L9TFCZ4\",[[\"color\",\"black\"]]]",
+   "[\"B07LFZM92N\",[[\"color\",\"black\"]]]",
+   "[\"B07LH7H1XS\",[[\"color\",\"black\"]]]",
+   "[\"B07MFY9ZJD\",[[\"color\",\"black pearl\"]]]",
+   "[\"B07MVVR8KM\",[[\"color\",\"black\"]]]",
+   "[\"B07MZLVY35\",[[\"color\",\"anne black\"]]]",
+   "[\"B07N4LB73C\",[[\"color\",\"black | khaki\"]]]",
+   "[\"B07NP1Z22M\",[[\"color\",\"black | multi\"]]]",
+   "[\"B07P7YCRH5\",[[\"color\",\"black | rose\"]]]",
+   "[\"B07PBTVS38\",[[\"color\",\"black\"]]]",
+   "[\"B07PSPRKJ8\",[[\"color\",\"black | silver\"]]]",
+   "[\"B07PVYP4H3\",[[\"color\",\"black polka dot\"]]]",
+   "[\"B07QCMSWDY\",[[\"color\",\"black\"]]]",
+   "[\"B07QHHJ6D3\",[[\"color\",\"black | nude\"]]]",
+   "[\"B07QNXYQ1K\",[[\"color\",\"black | charcoal lace\"]]]",
+   "[\"B07QQ1VP62\",[[\"color\",\"black\"]]]",
+   "[\"B07QT6RK3Y\",[[\"color\",\"black\"]]]",
+   "[\"B07QWTNQMY\",[[\"color\",\"black\"]]]",
+   "[\"B07QXKY5H4\",[[\"color\",\"black\"]]]",
+   "[\"B07QZ1K9MY\",[[\"color\",\"black\"]]]",
+   "[\"B07QZZM9B8\",[[\"color\",\"black\"]]]",
+   "[\"B07R125XK2\",[[\"color\",\"ivory | black\"]]]",
+   "[\"B07R611MSS\",[[\"color\",\"black\"]]]",
+   "[\"B07R6XM34X\",[[\"color\",\"red | black\"]]]",
+   "[\"B07R95BPXG\",[[\"color\",\"black | hunter multi\"]]]",
+   "[\"B07RT4YLS6\",[[\"color\",\"black\"]]]",
+   "[\"B07S1BBH5B\",[[\"color\",\"black\"]]]",
+   "[\"B07S1QMMY8\",[[\"color\",\"rich black\"]]]",
+   "[\"B07SVKFWNK\",[[\"color\",\"black\"]]]",
+   "[\"B07SXBYZD3\",[[\"color\",\"evergreen | black\"]]]",
+   "[\"B07T671ZTY\",[[\"color\",\"black\"]]]",
+   "[\"B07TGWZ3B9\",[[\"color\",\"black\"]]]",
+   "[\"B07TK4WKLL\",[[\"color\",\"black\"]]]",
+   "[\"B07TXT272L\",[[\"color\",\"anne black | anne white\"]]]",
+   "[\"B07VJPR7S4\",[[\"color\",\"black\"]]]",
+   "[\"B07VPKG4GW\",[[\"color\",\"black\"]]]",
+   "[\"B07VVRTCGH\",[[\"color\",\"black\"]]]",
+   "[\"B07W5XBDSR\",[[\"color\",\"black\"]]]",
+   "[\"B07XYXDY5Z\",[[\"color\",\"black\"]]]",
+   "[\"B07Y43S2GK\",[[\"color\",\"black\"]]]",
+   "[\"B07Y5LHZMZ\",[[\"color\",\"black\"]]]",
+   "[\"B07Y9RVLZJ\",[[\"color\",\"black\"]]]",
+   "[\"B07YLP6J65\",[[\"color\",\"black\"]]]",
+   "[\"B07YM17NDT\",[[\"color\",\"black | ivory polka dot\"]]]",
+   "[\"B07Z4CCWQ1\",[[\"color\",\"black\"]]]",
+   "[\"B07Z6YVTCV\",[[\"color\",\"black\"]]]",
+   "[\"B07ZK1JR5M\",[[\"color\",\"black | chalk\"]]]",
+   "[\"B07ZK39F4S\",[[\"color\",\"black\"]]]",
+   "[\"B07ZWVVVF3\",[[\"color\",\"black\"]]]",
+   "[\"B0812LXKGK\",[[\"color\",\"black\"]]]",
+   "[\"B0825N8D5Z\",[[\"color\",\"black\"]]]",
+   "[\"B082FXY137\",[[\"color\",\"black\"]]]",
+   "[\"B083JY7VQ7\",[[\"color\",\"black 4\"]]]",
+   "[\"B083ZVYDTS\",[[\"color\",\"black multi\"]]]",
+   "[\"B083ZWKWRK\",[[\"color\",\"black |  coral\"]]]",
+   "[\"B0844MFFTZ\",[[\"color\",\"black | popcorn multi\"]]]",
+   "[\"B0844WFBHH\",[[\"color\",\"black\"]]]",
+   "[\"B0851GP552\",[[\"color\",\"black\"]]]",
+   "[\"B0854PXW5R\",[[\"color\",\"black\"]]]",
+   "[\"B0855G7TG4\",[[\"color\",\"black\"]]]",
+   "[\"B085WVGMNS\",[[\"color\",\"black | multi\"]]]",
+   "[\"B0861ZN43C\",[[\"color\",\"black\"]]]",
+   "[\"B0867HY84L\",[[\"color\",\"black\"]]]",
+   "[\"B086VSRYFM\",[[\"color\",\"black\"]]]",
+   "[\"B087JHKYQS\",[[\"color\",\"black dot\"]]]",
+   "[\"B0895VR7SZ\",[[\"color\",\"black\"]]]",
+   "[\"B08C7QTWCS\",[[\"color\",\"black\"]]]",
+   "[\"B08CT78ZCV\",[[\"color\",\"black\"]]]",
+   "[\"B08DPXJ78C\",[[\"color\",\"black | nude\"]]]",
+   "[\"B08GRRPFHP\",[[\"color\",\"black | silver\"]]]",
+   "[\"B08J4CY8JJ\",[[\"color\",\"black\"]]]",
+   "[\"B08J7VQHG1\",[[\"color\",\"black | cabaret multi\"]]]",
+   "[\"B08JDXKN6Q\",[[\"color\",\"black\"]]]",
+   "[\"B08K7M8HP1\",[[\"color\",\"black\"]]]",
+   "[\"B08L9S4DZR\",[[\"color\",\"powder blue | black\"]]]",
+   "[\"B08LBDNHB9\",[[\"color\",\"black\"]]]",
+   "[\"B08LNYZ237\",[[\"color\",\"black\"]]]",
+   "[\"B08NXV1JNZ\",[[\"color\",\"black\"]]]",
+   "[\"B08R1593VX\",[[\"color\",\"black\"]]]",
+   "[\"B08R55HKR7\",[[\"color\",\"black green\"]]]",
+   "[\"B08VKJZ8RY\",[[\"color\",\"black | oil yellow multi\"]]]",
+   "[\"B08VRQ9DMS\",[[\"color\",\"cabernet | black\"]]]",
+   "[\"B09576WFYS\",[[\"color\",\"black\"]]]",
+   "[\"B096S29LXG\",[[\"color\",\"black\"]]]",
+   "[\"B097FY7SXT\",[[\"color\",\"blk | black\"]]]",
+   "[\"B097NFT33B\",[[\"color\",\"black\"]]]",
+   "[\"B09CD96K3X\",[[\"color\",\"black\"]]]",
+   "[\"B09CD9Q6YH\",[[\"color\",\"blackish green\"]]]",
+   "[\"B09CQ2G1CB\",[[\"color\",\"a-black\"]]]",
+   "[\"B09D8JHX6L\",[[\"color\",\"black\"]]]",
+   "[\"B09DSPK2S7\",[[\"color\",\"black\"]]]",
+   "[\"B09FYGWCKD\",[[\"color\",\"black\"]]]",
+   "[\"B09KTVQHP2\",[[\"color\",\"black | pink\"]]]",
+   "[\"B09M6D88VY\",[[\"color\",\"b black\"]]]",
+   "[\"B09MYZV6M9\",[[\"color\",\"black\"]]]",
+   "[\"B09NMC517Q\",[[\"color\",\"f01#black\"]]]",
+   "[\"B09PHPN2ZN\",[[\"color\",\"black\"]]]",
+   "[\"B09PRDV5DC\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "3b703459fec125f47f94d82a6d78dbb4"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "815da9f7cb04b664",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's dresses instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "cd235621b96a960b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's dresses instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "853a99d6525a11f9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be unique design."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e2d1f5d7284fe4b5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy care."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c875f9a15cab581d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d31a9d6b40fdd0f1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b0e7b96c06299d3e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #03blue instead of black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "fb0dc08022d09bae",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #01blue instead of black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

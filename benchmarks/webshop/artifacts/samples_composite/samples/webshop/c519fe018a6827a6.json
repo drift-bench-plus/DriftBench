@@ -1,0 +1,207 @@
+{
+ "sample_id": "c519fe018a6827a6",
+ "tree_id": "9216f73aedd91c61",
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "goal_idx": 257,
+ "split": "test",
+ "source_instruction": "i would like to buy a sugar free powder drink mix that is a nice source of vitamin.",
+ "query": "I was browsing the beverage section earlier and thought about how I\u2019ve heard that sugar-free options that have a source of vitamins are really nice to pick up lately. I remember I had a rough number in my head for how much I\u2019d be comfortable putting toward a drink run today, though I\u2019m not totally locking that thought in right now. I\u2019ve also seen a few people mention those kinds of picks are way better than the super sugary sodas I used to grab all the time.",
+ "strategy_ids": [
+  "insufficient_information",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+indirect_intent",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "indirect_intent"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:source vitamin",
+   "attr:sugar free"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:source vitamin",
+     "=",
+     "source vitamin"
+    ],
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "83a3751d347b6dec"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 27,
+  "lit_card": 31,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 31,
+    "true_card": 27,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "66ef3824efb73be0",
+  "conditions": [
+   [
+    "attr:source vitamin",
+    "=",
+    "source vitamin"
+   ],
+   [
+    "attr:sugar free",
+    "=",
+    "sugar free"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 27,
+  "value": [
+   "[\"B003L2EYWY\",[]]",
+   "[\"B00AAV8SOY\",[]]",
+   "[\"B00QUEP5AA\",[]]",
+   "[\"B00V994MAK\",[]]",
+   "[\"B01BO1STRE\",[]]",
+   "[\"B077T3SP3V\",[]]",
+   "[\"B07WS1NPBF\",[]]",
+   "[\"B07X4YMXP4\",[]]",
+   "[\"B07X512KZT\",[]]",
+   "[\"B07YBKK1ZH\",[]]",
+   "[\"B07YBKLX1V\",[]]",
+   "[\"B07YBKXWRC\",[]]",
+   "[\"B07YBL7Y7X\",[]]",
+   "[\"B083X5QTF1\",[]]",
+   "[\"B083X82WPD\",[]]",
+   "[\"B083X8316R\",[]]",
+   "[\"B083XFGLB3\",[]]",
+   "[\"B083XK3VQX\",[]]",
+   "[\"B083XNN3N4\",[]]",
+   "[\"B083XPRHHJ\",[]]",
+   "[\"B086M9LK7F\",[]]",
+   "[\"B08HFC5BYW\",[]]",
+   "[\"B0971VV99P\",[]]",
+   "[\"B09BK2GKDL\",[]]",
+   "[\"B09D8MXL3Z\",[]]",
+   "[\"B09D8PZ66T\",[]]",
+   "[\"B09D8RFJSS\",[]]"
+  ],
+  "hash": "46e372c9be71b9151dcfd0d4230a7305"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2398dab1f90987e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "da047bca05a1a6e2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beverages instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "1a62ab686e6b7e59",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be fat free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a52a8a1f5602b3f2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be caffeine free."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5b87a2d67c36e780",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "bd2d989d817143b5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3327c262ffed39a9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 30."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7ae27133249ab1e8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 instead of 30."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,206 @@
+{
+ "sample_id": "70120a9b7fed7821",
+ "tree_id": "9aeb9bb5da02fb6d",
+ "adapter": "webshop",
+ "cluster": "eyes makeup",
+ "goal_idx": 239,
+ "split": "test",
+ "source_instruction": "i'm trying to find high quality eyelash extensions that are 0.15 millimeters in diameter and 13-20 millimeters long.",
+ "query": "Ugh, I swear my cat knocked over my houseplant again this morning and got potting soil all over the throw rug by the couch, and now I\u2019m running late to meet my friend for boba after I finish browsing here. I also can\u2019t stop thinking about how I forgot to pick up laundry detergent on my last grocery run, so I\u2019ll have to make a detour on the way home, plus I need to remember to charge my wireless headphones before my commute tomorrow. Oh right, anyway, I\u2019m looking for eye makeup that\u2019s scratch-resistant, in the 0.15-d-mix-13-20mm option, and I don\u2019t want to spend more than $20 on it.",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:high quality"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:high quality",
+    "high quality",
+    "scratch-resistant"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear my cat knocked over my houseplant again this morning and got potting soil all over the throw rug by the couch, and now I\u2019m running late to meet my friend for boba after I finish browsing here. I also can\u2019t stop thinking about how I forgot to pick up laundry detergent on my last grocery run, so I\u2019ll have to make a detour on the way home, plus I need to remember to charge my wireless headphones before my commute tomorrow. Oh right, anyway,",
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:high quality"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high quality",
+     "=",
+     "scratch-resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "0.15-d-mix-13-20mm"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "f223f73e318f433a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 17,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 17,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "f616970b8d4caeb8",
+  "conditions": [
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "option:0",
+    "=",
+    "0.15-d-mix-13-20mm"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:high quality"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 17,
+  "value": [
+   "[\"B06XBCFGQM\",[[\"style\",\"20mm\"]]]",
+   "[\"B06XR9JPMR\",[[\"size\",\"20mm\"]]]",
+   "[\"B07CV5RW8W\",[[\"size\",\"20mm\"]]]",
+   "[\"B07PYPGQ8B\",[[\"scent name\",\"0.15-d-mix-13-20mm\"]]]",
+   "[\"B07QY6QD5N\",[[\"size\",\"13-20mm\"]]]",
+   "[\"B083XWN14Q\",[[\"color\",\"d-0.15\"]]]",
+   "[\"B087WYC4L3\",[[\"size\",\"20mm\"]]]",
+   "[\"B089KBVPZV\",[[\"scent\",\"mix\"]]]",
+   "[\"B08DQWMM4J\",[[\"size\",\"13-20mm\"]]]",
+   "[\"B08HB4TNKL\",[[\"style\",\"20mm\"]]]",
+   "[\"B08HMNCB4Y\",[[\"color\",\"mix\"]]]",
+   "[\"B08YZ4MKD3\",[[\"style\",\"20mm\"]]]",
+   "[\"B091MK99ZB\",[[\"style\",\"20mm\"]]]",
+   "[\"B0923TKY62\",[[\"size\",\"20mm\"]]]",
+   "[\"B0923WP7DV\",[[\"size\",\"20mm\"]]]",
+   "[\"B096DHCV7Z\",[[\"style\",\"20mm\"]]]",
+   "[\"B0998FXRNF\",[[\"style\",\"d-15\"]]]"
+  ],
+  "hash": "72d922aee114293303d106da73a7b474"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "88ece6ca67c52df7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the eyes makeup instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "fc030cdb3d955da4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the eyes makeup instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "01669f1e7d367db7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "2162dc25c0a3b630",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be makeup brush."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8f00fbf0e6a35c10",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c09f4e42d249b5f5",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "60b3bf07dcf34850",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #2 big stamp instead of 0.15-d-mix-13-20mm."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cf1ad0d09b8f11b4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #10 styles | charming instead of 0.15-d-mix-13-20mm."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

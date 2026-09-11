@@ -1,0 +1,241 @@
+{
+ "sample_id": "5432bb5ad4b08526",
+ "tree_id": "e606b03f74962051",
+ "adapter": "webshop",
+ "cluster": "non-dairy milks",
+ "goal_idx": 150,
+ "split": "test",
+ "source_instruction": "i am looking for a low sugar granola bar that is soy and diary free. pick the pack of 3 weighing 10 ounces.",
+ "query": "Ugh, I just passed the community garden on my walk over and those sunflowers the retired elementary school teacher planted along the fence are finally fully bloomed\u2014they\u2019re taller than I am, heads so heavy with bright gold petals they\u2019re drooping a little over the sidewalk, and a handful of fuzzy bumblebees were bumping around from flower to flower like they couldn\u2019t decide which one had the best nectar. I even stopped for a second to say hi to her, and she pressed a crumpled paper bag full of the sweetest cherry tomatoes I\u2019ve ever tasted into my hands, said her vines are producing way more than she and her cat can eat before they go bad. I popped one in my mouth right there and it was so warm from the sun it tasted like concentrated summer, I almost forgot I had a list of stuff to grab before I head back to the apartment. Hey, I\u2019m browsing the non-dairy milks right now and need something that\u2019s totally dairy free, no soy in it at all, and oh, make sure it\u2019s got that little blue Fair Trade Certified stamp on the carton too\u2014my roommate\u2019s been raving about that lately. I want that one, the size we always grab when we\u2019re restocking the fridge for our morning smoothies, y\u2019know? Don\u2019t grab anything that costs too much, I can\u2019t go over forty bucks total for whatever I end up picking up today. Wait, hold on, actually don\u2019t worry about the sweetener level, I don\u2019t care about that part right now, just make sure it fits the other stuff I mentioned.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "referential_ambiguity",
+  "contextual_irrelevance",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+referential_ambiguity+contextual_irrelevance+insufficient_information",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "referential_ambiguity",
+   "contextual_irrelevance",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "insufficient_information": "attr:low sugar"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:low sugar"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "make sure it\u2019s got that little blue Fair Trade Certified stamp on the carton too",
+    "condition": [
+     "attr:fair trade certified",
+     "=",
+     "true"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I just passed the community garden on my walk over and those sunflowers the retired elementary school teacher planted along the fence are finally fully bloomed\u2014they\u2019re taller than I am, heads so heavy with bright gold petals they\u2019re drooping a little over the sidewalk, and a handful of fuzzy bumblebees were bumping around from flower to flower like they couldn\u2019t decide which one had the best nectar. I even stopped for a second to say hi to her, and she pressed a crumpled paper bag full of the sweetest cherry tomatoes I\u2019ve ever tasted into my hands, said her vines are producing way more than she and her cat can eat before they go bad. I popped one in my mouth right there and it was so warm from the sun it tasted like concentrated summer, I almost forgot I had a list of stuff to grab before I head back to the apartment.",
+  "retained": [
+   "attr:dairy free",
+   "attr:soy free",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:low sugar",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dairy free",
+     "=",
+     "dairy free"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ],
+    [
+     "attr:fair trade certified",
+     "=",
+     "true"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "c7c2d2360eec7d96"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 3,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 2,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 13,
+    "true_card": 2,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 22,
+    "true_card": 2,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "3ccaf14bd0fc63d1",
+  "conditions": [
+   [
+    "attr:dairy free",
+    "=",
+    "dairy free"
+   ],
+   [
+    "attr:low sugar",
+    "=",
+    "low sugar"
+   ],
+   [
+    "attr:soy free",
+    "=",
+    "soy free"
+   ],
+   [
+    "option:0",
+    "=",
+    "10 ounce (pack of 3)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:low sugar",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B08F2QT47F\",[[\"size\",\"10 ounce (pack of 3)\"]]]",
+   "[\"B091M7DJM2\",[[\"size\",\"7 ounce (pack of 3)\"]]]"
+  ],
+  "hash": "fbff7fa1169d5380ab5de66d9531ab9b"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "67237a1870713a0b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the non-dairy milks instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a68891af7741449d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the non-dairy milks instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "dda697bd9deae6fb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be brown rice."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ed7c9fb58d3a1158",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gluten free."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c5e082bb8fd8b331",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "daccff96aed61e91",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "bf626b4ddc70affd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 count instead of 10 ounce (pack of 3)."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c2c2ab0f02ff469a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 count (pack of 1) instead of 10 ounce (pack of 3)."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

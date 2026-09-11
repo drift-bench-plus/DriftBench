@@ -1,0 +1,82 @@
+{
+ "sample_id": "6facc4020372c381__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "6facc4020372c381",
+ "query": "I spent this morning planting a new row of cherry tomato seedlings in my backyard container garden, I even picked up a cute little terracotta plant marker to label them so I don\u2019t mix them up with the basil I put in last week. The forecast says there might be a light drizzle tomorrow, so I\u2019m a little worried the seedlings might get knocked over before their roots take hold, I might go out later to prop some small wooden stakes next to them just to be safe. Oh right, the reason I called is that I can\u2019t make or receive any calls or use mobile data on my phone right now. I noticed airplane mode is turned on, but even when I toggle it off nothing works, could you check if my line is suspended because of an overdue bill?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent this morning planting a new row of cherry tomato seedlings in my backyard container garden, I even picked up a cute little terracotta plant marker to label them so I don\u2019t mix them up with the basil I put in last week. The forecast says there might be a light drizzle tomorrow, so I\u2019m a little worried the seedlings might get knocked over before their roots take hold, I might go out later to prop some small wooden stakes next to them just to be safe.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:overdue_bill_suspension"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:overdue_bill_suspension",
+     "=",
+     "overdue_bill_suspension"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:overdue_bill_suspension",
+    "=",
+    "overdue_bill_suspension"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

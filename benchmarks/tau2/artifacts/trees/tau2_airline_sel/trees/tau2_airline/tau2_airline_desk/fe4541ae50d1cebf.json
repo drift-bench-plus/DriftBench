@@ -1,0 +1,1032 @@
+{
+ "adapter": "tau2_airline",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details"
+    ],
+    "writes": [
+     "cancel_reservation",
+     "cancel_reservation"
+    ]
+   },
+   "bound_slots": [
+    "also:5:update_reservation_baggages",
+    "arg:0:cancel_reservation:reservation_id",
+    "arg:1:cancel_reservation:reservation_id"
+   ],
+   "conditions": [
+    [
+     "also:5:update_reservation_baggages",
+     "=",
+     "{\"nonfree_baggages\":0,\"payment_id\":\"credit_card_1402274\",\"reservation_id\":\"SE9KEL\",\"total_baggages\":1}"
+    ],
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"FDZ0T5\""
+    ],
+    [
+     "arg:1:cancel_reservation:reservation_id",
+     "=",
+     "\"HSR97W\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "20dc5c4e863e32854d7f43e32102b5dc",
+    "kind": "statehash",
+    "value": "{\"db\":\"f0b29df9875210b8c56c231b24a79929414d3225ee50c88a5d0a7ba8a6f35be9\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "3595611edfe7baa8",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "FDZ0T5"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "reservation_id": "HSR97W"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "nonfree_baggages": 0,
+       "payment_id": "credit_card_1402274",
+       "reservation_id": "SE9KEL",
+       "total_baggages": 1
+      },
+      "name": "update_reservation_baggages"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details"
+    ]
+   },
+   "source_record": "42+3595611e",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details"
+    ],
+    "writes": [
+     "cancel_reservation",
+     "cancel_reservation"
+    ]
+   },
+   "bound_slots": [
+    "also:1:update_reservation_baggages",
+    "arg:0:cancel_reservation:reservation_id",
+    "arg:1:cancel_reservation:reservation_id"
+   ],
+   "conditions": [
+    [
+     "also:1:update_reservation_baggages",
+     "=",
+     "{\"nonfree_baggages\":0,\"payment_id\":\"credit_card_1402274\",\"reservation_id\":\"MFRB94\",\"total_baggages\":3}"
+    ],
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"FDZ0T5\""
+    ],
+    [
+     "arg:1:cancel_reservation:reservation_id",
+     "=",
+     "\"HSR97W\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "30fbf123b367decd2782731a02a99f1f",
+    "kind": "statehash",
+    "value": "{\"db\":\"fb17900522380e0fce0f078d03015088d2d6ae492337e67410785f1cc642496a\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "69caaa0175b627a1",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "FDZ0T5"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "reservation_id": "HSR97W"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "nonfree_baggages": 0,
+       "payment_id": "credit_card_1402274",
+       "reservation_id": "MFRB94",
+       "total_baggages": 3
+      },
+      "name": "update_reservation_baggages"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details"
+    ]
+   },
+   "source_record": "42+69caaa01",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details"
+    ],
+    "writes": [
+     "cancel_reservation",
+     "cancel_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:1:cancel_reservation:reservation_id"
+   ],
+   "conditions": [
+    [
+     "arg:1:cancel_reservation:reservation_id",
+     "=",
+     "\"HSR97W\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "3fc2f8d7728746ac9db4c067ed56a1a7",
+    "kind": "statehash",
+    "value": "{\"db\":\"4187e49431cdcc1720cc916467c3da541c8358f97ee35c948c8da6c6156e2eea\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "aeb9dd94a0b6cd4b",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "HSR97W"
+      },
+      "name": "cancel_reservation"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details"
+    ]
+   },
+   "source_record": "42+aeb9dd94",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details"
+    ],
+    "writes": [
+     "cancel_reservation",
+     "cancel_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:cancel_reservation:reservation_id",
+    "arg:1:cancel_reservation:reservation_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"LU15PA\""
+    ],
+    [
+     "arg:1:cancel_reservation:reservation_id",
+     "=",
+     "\"MSJ4OA\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ef5acaa2ea232fd9b8ff87aafc17d391",
+    "kind": "statehash",
+    "value": "{\"db\":\"16cb844668d5965f7c746376ea88ed934a2c8a8710750e764bc950d0b50069e9\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "9ed4b4127e942c24",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "LU15PA"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "reservation_id": "MSJ4OA"
+      },
+      "name": "cancel_reservation"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details"
+    ]
+   },
+   "source_record": "39+9ed4b412",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [],
+    "writes": [
+     "update_reservation_flights"
+    ]
+   },
+   "bound_slots": [
+    "also:2:update_reservation_baggages",
+    "arg:0:update_reservation_flights:cabin",
+    "arg:0:update_reservation_flights:flights",
+    "arg:0:update_reservation_flights:payment_id",
+    "arg:0:update_reservation_flights:reservation_id"
+   ],
+   "conditions": [
+    [
+     "also:2:update_reservation_baggages",
+     "=",
+     "{\"nonfree_baggages\":0,\"payment_id\":\"gift_card_1642017\",\"reservation_id\":\"MQHHT6\",\"total_baggages\":2}"
+    ],
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"basic_economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT003\"},{\"date\":\"2024-05-20\",\"flight_number\":\"HAT290\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_1642017\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"GV1N64\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "00aa7bf02f1da66ccc511643fc636915",
+    "kind": "statehash",
+    "value": "{\"db\":\"d41f8a4659fd8dabbbafa8653de72e7a36182c76a462fd062c3d7154e6a29f2d\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "9fb7f1bfaf8d4df8",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "basic_economy",
+       "flights": [
+        {
+         "date": "2024-05-19",
+         "flight_number": "HAT003"
+        },
+        {
+         "date": "2024-05-20",
+         "flight_number": "HAT290"
+        }
+       ],
+       "payment_id": "gift_card_1642017",
+       "reservation_id": "GV1N64"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "nonfree_baggages": 0,
+       "payment_id": "gift_card_1642017",
+       "reservation_id": "MQHHT6",
+       "total_baggages": 2
+      },
+      "name": "update_reservation_baggages"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "11+9fb7f1bf",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [],
+    "writes": [
+     "cancel_reservation",
+     "book_reservation",
+     "book_reservation",
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:cancel_reservation:reservation_id",
+    "arg:1:book_reservation:cabin",
+    "arg:1:book_reservation:destination",
+    "arg:1:book_reservation:flight_type",
+    "arg:1:book_reservation:flights",
+    "arg:1:book_reservation:insurance",
+    "arg:1:book_reservation:origin",
+    "arg:1:book_reservation:passengers",
+    "arg:1:book_reservation:payment_methods",
+    "arg:1:book_reservation:total_baggages",
+    "arg:1:book_reservation:user_id",
+    "arg:2:book_reservation:cabin",
+    "arg:2:book_reservation:destination",
+    "arg:2:book_reservation:flight_type",
+    "arg:2:book_reservation:flights",
+    "arg:2:book_reservation:insurance",
+    "arg:2:book_reservation:origin",
+    "arg:2:book_reservation:passengers",
+    "arg:2:book_reservation:payment_methods",
+    "arg:2:book_reservation:total_baggages",
+    "arg:2:book_reservation:user_id",
+    "arg:3:book_reservation:cabin",
+    "arg:3:book_reservation:destination",
+    "arg:3:book_reservation:flight_type",
+    "arg:3:book_reservation:flights",
+    "arg:3:book_reservation:insurance",
+    "arg:3:book_reservation:origin",
+    "arg:3:book_reservation:passengers",
+    "arg:3:book_reservation:payment_methods",
+    "arg:3:book_reservation:total_baggages",
+    "arg:3:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"K1NW8N\""
+    ],
+    [
+     "arg:1:book_reservation:cabin",
+     "=",
+     "\"business\""
+    ],
+    [
+     "arg:1:book_reservation:destination",
+     "=",
+     "\"SFO\""
+    ],
+    [
+     "arg:1:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:1:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT023\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT204\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT100\"}]"
+    ],
+    [
+     "arg:1:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:1:book_reservation:origin",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:1:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1960-11-26\",\"first_name\":\"Mohamed\",\"last_name\":\"Silva\"}]"
+    ],
+    [
+     "arg:1:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_3765853\",\"gift_card_8020792\",\"gift_card_6136092\",\"credit_card_2198526\"]"
+    ],
+    [
+     "arg:1:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:1:book_reservation:user_id",
+     "=",
+     "\"mohamed_silva_9265\""
+    ],
+    [
+     "arg:2:book_reservation:cabin",
+     "=",
+     "\"business\""
+    ],
+    [
+     "arg:2:book_reservation:destination",
+     "=",
+     "\"SFO\""
+    ],
+    [
+     "arg:2:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:2:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT023\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT204\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT100\"}]"
+    ],
+    [
+     "arg:2:book_reservation:insurance",
+     "=",
+     "\"yes\""
+    ],
+    [
+     "arg:2:book_reservation:origin",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:2:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1986-09-12\",\"first_name\":\"Raj\",\"last_name\":\"Sanchez\"}]"
+    ],
+    [
+     "arg:2:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_9984806\",\"credit_card_2198526\"]"
+    ],
+    [
+     "arg:2:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:2:book_reservation:user_id",
+     "=",
+     "\"mohamed_silva_9265\""
+    ],
+    [
+     "arg:3:book_reservation:cabin",
+     "=",
+     "\"business\""
+    ],
+    [
+     "arg:3:book_reservation:destination",
+     "=",
+     "\"SFO\""
+    ],
+    [
+     "arg:3:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:3:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT023\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT204\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT100\"}]"
+    ],
+    [
+     "arg:3:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:3:book_reservation:origin",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:3:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1980-03-27\",\"first_name\":\"Liam\",\"last_name\":\"Wilson\"}]"
+    ],
+    [
+     "arg:3:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_2765295\",\"credit_card_2198526\"]"
+    ],
+    [
+     "arg:3:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:3:book_reservation:user_id",
+     "=",
+     "\"mohamed_silva_9265\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "022c4f353ce5d711f7cf4b1cad7cbec3",
+    "kind": "statehash",
+    "value": "{\"db\":\"fb7fbd11a7e3d93d79c6dc7c0bf680f77b7f9de77105849e1a6e63cc8dbb93e1\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "55639391e4bcd589",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "K1NW8N"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "cabin": "business",
+       "destination": "SFO",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT023"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT204"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT100"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "JFK",
+       "passengers": [
+        {
+         "dob": "1960-11-26",
+         "first_name": "Mohamed",
+         "last_name": "Silva"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 500,
+         "payment_id": "certificate_3765853"
+        },
+        {
+         "amount": 198,
+         "payment_id": "gift_card_8020792"
+        },
+        {
+         "amount": 129,
+         "payment_id": "gift_card_6136092"
+        },
+        {
+         "amount": 44,
+         "payment_id": "credit_card_2198526"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "mohamed_silva_9265"
+      },
+      "name": "book_reservation"
+     },
+     {
+      "arguments": {
+       "cabin": "business",
+       "destination": "SFO",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT023"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT204"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT100"
+        }
+       ],
+       "insurance": "yes",
+       "nonfree_baggages": 0,
+       "origin": "JFK",
+       "passengers": [
+        {
+         "dob": "1986-09-12",
+         "first_name": "Raj",
+         "last_name": "Sanchez"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 250,
+         "payment_id": "certificate_9984806"
+        },
+        {
+         "amount": 651,
+         "payment_id": "credit_card_2198526"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "mohamed_silva_9265"
+      },
+      "name": "book_reservation"
+     },
+     {
+      "arguments": {
+       "cabin": "business",
+       "destination": "SFO",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT023"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT204"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT100"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "JFK",
+       "passengers": [
+        {
+         "dob": "1980-03-27",
+         "first_name": "Liam",
+         "last_name": "Wilson"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 250,
+         "payment_id": "certificate_2765295"
+        },
+        {
+         "amount": 621,
+         "payment_id": "credit_card_2198526"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "mohamed_silva_9265"
+      },
+      "name": "book_reservation"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "23+55639391",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details"
+    ],
+    "writes": [
+     "cancel_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:cancel_reservation:reservation_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"FDZ0T5\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "a9556015776e97c21d4ee712e363f89f",
+    "kind": "statehash",
+    "value": "{\"db\":\"b639c432f8e71934af09e96cdec12c1d768daef8258450a25d7aed63ad8e1621\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "71647f130c159891",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "FDZ0T5"
+      },
+      "name": "cancel_reservation"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details",
+     "get_reservation_details"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "min_gt_moved_edges": 1,
+  "require_full_quota": false,
+  "seed": 7
+ },
+ "edges": [
+  {
+   "delta": {
+    "added": [
+     [
+      "also:5:update_reservation_baggages",
+      "=",
+      "{\"nonfree_baggages\":0,\"payment_id\":\"credit_card_1402274\",\"reservation_id\":\"SE9KEL\",\"total_baggages\":1}"
+     ]
+    ]
+   },
+   "dst": "3595611edfe7baa8",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "REAL",
+   "source_record": "42+3595611e",
+   "src": "aa5060295bd68069"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "also:1:update_reservation_baggages",
+      "=",
+      "{\"nonfree_baggages\":0,\"payment_id\":\"credit_card_1402274\",\"reservation_id\":\"MFRB94\",\"total_baggages\":3}"
+     ]
+    ]
+   },
+   "dst": "69caaa0175b627a1",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "REAL",
+   "source_record": "42+69caaa01",
+   "src": "aa5060295bd68069"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "arg:0:cancel_reservation:reservation_id",
+      "=",
+      "\"FDZ0T5\""
+     ]
+    ]
+   },
+   "dst": "aeb9dd94a0b6cd4b",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "REAL",
+   "source_record": "42+aeb9dd94",
+   "src": "aa5060295bd68069"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "arg:0:cancel_reservation:reservation_id",
+      "=",
+      "\"FDZ0T5\"",
+      "\"LU15PA\""
+     ],
+     [
+      "arg:1:cancel_reservation:reservation_id",
+      "=",
+      "\"HSR97W\"",
+      "\"MSJ4OA\""
+     ]
+    ]
+   },
+   "dst": "9ed4b4127e942c24",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "source_record": "39+9ed4b412",
+   "src": "aa5060295bd68069"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "airline_request",
+     "reads": [],
+     "writes": [
+      "update_reservation_flights"
+     ]
+    }
+   },
+   "dst": "9fb7f1bfaf8d4df8",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "11+9fb7f1bf",
+   "src": "aa5060295bd68069"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "airline_request",
+     "reads": [],
+     "writes": [
+      "cancel_reservation",
+      "book_reservation",
+      "book_reservation",
+      "book_reservation"
+     ]
+    }
+   },
+   "dst": "55639391e4bcd589",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "23+55639391",
+   "src": "aa5060295bd68069"
+  },
+  {
+   "delta": {
+    "removed_request": "cancel_reservation"
+   },
+   "dst": "71647f130c159891",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "aa5060295bd68069"
+  }
+ ],
+ "env_id": "tau2_airline_desk",
+ "env_spec": {
+  "domain": "airline",
+  "env_id": "tau2_airline_desk",
+  "env_key": "tau2_airline_desk",
+  "initialization": {},
+  "solo_mode": false
+ },
+ "root": {
+  "base": {
+   "kind": "airline_request",
+   "reads": [
+    "get_user_details",
+    "get_reservation_details",
+    "get_reservation_details",
+    "get_reservation_details",
+    "get_reservation_details",
+    "get_reservation_details",
+    "get_reservation_details",
+    "get_reservation_details"
+   ],
+   "writes": [
+    "cancel_reservation",
+    "cancel_reservation"
+   ]
+  },
+  "bound_slots": [
+   "arg:0:cancel_reservation:reservation_id",
+   "arg:1:cancel_reservation:reservation_id"
+  ],
+  "conditions": [
+   [
+    "arg:0:cancel_reservation:reservation_id",
+    "=",
+    "\"FDZ0T5\""
+   ],
+   [
+    "arg:1:cancel_reservation:reservation_id",
+    "=",
+    "\"HSR97W\""
+   ]
+  ],
+  "ground_truth": {
+   "hash": "ea87297e9140a0628fa02b1295ddead9",
+   "kind": "statehash",
+   "value": "{\"db\":\"768a1bf6bcedc298cdf5f7ce0d7956a12bfd383adcdc6531e8ed1ebfc605374a\",\"errors\":[]}"
+  },
+  "gt_extensional": false,
+  "intent_id": "aa5060295bd68069",
+  "is_seed": true,
+  "recipe": {
+   "actions": [
+    {
+     "arguments": {
+      "reservation_id": "FDZ0T5"
+     },
+     "name": "cancel_reservation"
+    },
+    {
+     "arguments": {
+      "reservation_id": "HSR97W"
+     },
+     "name": "cancel_reservation"
+    }
+   ],
+   "reads": [
+    "get_user_details",
+    "get_reservation_details",
+    "get_reservation_details",
+    "get_reservation_details",
+    "get_reservation_details",
+    "get_reservation_details",
+    "get_reservation_details",
+    "get_reservation_details"
+   ]
+  },
+  "source_record": "42",
+  "unbound_slots": [
+   "also:1:update_reservation_baggages",
+   "also:5:update_reservation_baggages",
+   "arg:0:cancel_reservation:reservation_id",
+   "arg:1:cancel_reservation:reservation_id"
+  ]
+ },
+ "tree_id": "fe4541ae50d1cebf"
+}

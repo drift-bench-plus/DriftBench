@@ -1,0 +1,174 @@
+{
+ "adapter": "webshop",
+ "cluster": "satellite television",
+ "fidelity_notes": [],
+ "goal_idx": 310,
+ "ground_truth": {
+  "cardinality": 9,
+  "hash": "51585a7483d19d81ea0afd27a2c0fed5",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00WD017GQ\",[[\"size\",\"15ft\"]]]",
+   "[\"B0171EUOZI\",[[\"size\",\"15ft\"]]]",
+   "[\"B073KYYVTR\",[[\"size\",\"135ft\"]]]",
+   "[\"B073L11212\",[[\"size\",\"135ft\"]]]",
+   "[\"B0741RSZTQ\",[[\"size\",\"135ft\"]]]",
+   "[\"B07CQ96G4F\",[[\"size\",\"135ft\"]]]",
+   "[\"B07CQB2FZK\",[[\"size\",\"135ft\"]]]",
+   "[\"B07HC46N93\",[[\"size\",\"135ft\"]]]",
+   "[\"B099RJGRRZ\",[[\"size\",\"15ft\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high speed",
+    "=",
+    "high speed"
+   ],
+   [
+    "option:0",
+    "=",
+    "135ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "b9abd5f3ef6187cf"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 4,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high speed",
+     "=",
+     "high speed"
+    ],
+    [
+     "option:0",
+     "=",
+     "135ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I’ve been re-watching old episodes of my favorite 90s space exploration documentary series lately, and I keep getting distracted noticing how grainy the old satellite footage looks compared to modern clips. Last night I even found myself researching the history of early weather satellite launches to pass the time before my favorite late-night talk show came on. I also just finished watering my windowsill herb garden and noticed my basil plant is finally sprouting new leaves after I trimmed it back last week.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:high speed",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve been re-watching old episodes of my favorite 90s space exploration documentary series lately, and I keep getting distracted noticing how grainy the old satellite footage looks compared to modern clips. Last night I even found myself researching the history of early weather satellite launches to pass the time before my favorite late-night talk show came on. I also just finished watering my windowsill herb garden and noticed my basil plant is finally sprouting new leaves after I trimmed it back last week. I’m looking for a satellite TV option with high speed, the 135ft option, and a price limit of $40.",
+ "render_attempts": 4,
+ "sample_id": "463c69d8d31eff48",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0d4271e27a5b21d4"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the satellite television instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7845bdf8528c5ec1"
+  },
+  {
+   "announcement": "Also, it needs to be plug play.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d244a3a5feb61e8b"
+  },
+  {
+   "announcement": "Also, it needs to be tv antenna.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e8c0472ce9ba02a1"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e05fdcce4645d715"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fd0fcccb0007eca5"
+  },
+  {
+   "announcement": "Actually, make it 150 ft instead of 135ft.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "18789ead90bd1547"
+  },
+  {
+   "announcement": "Actually, make it 50 ft instead of 135ft.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "to_intent": "672fc4fef32e57cb"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 9,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 9,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a high speed coaxial cable that is 135 ft long.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "18b7c772e95bbf3e",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

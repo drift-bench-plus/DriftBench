@@ -1,0 +1,224 @@
+{
+ "sample_id": "0131626cc17b8238",
+ "tree_id": "0d7dbc58465c362f",
+ "adapter": "webshop",
+ "cluster": "home office desks",
+ "goal_idx": 208,
+ "split": "test",
+ "source_instruction": "i am looking for a 4.0 rustic brown 1 color home office desk that is easy to assemble.",
+ "query": "Oh man, I spent 20 minutes this morning trying to hang that weird vintage neon cactus sign in my living room and kept dropping drywall anchors all over the carpet, my cat batted one under the couch and I still can\u2019t find it, I even burned my toast mid-hunt because I got so distracted digging through the dust bunnies. Anyway, I\u2019m looking at home office desks right now \u2014 I need one that\u2019s super easy to assemble, specifically the 4.0 rustic brown 1 option, and I\u2019m not going above that one for the price cap.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+referential_ambiguity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh man, I spent 20 minutes this morning trying to hang that weird vintage neon cactus sign in my living room and kept dropping drywall anchors all over the carpet, my cat batted one under the couch and I still can\u2019t find it, I even burned my toast mid-hunt because I got so distracted digging through the dust bunnies.",
+  "retained": [
+   "attr:easy assemble",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy assemble",
+     "=",
+     "easy assemble"
+    ],
+    [
+     "option:0",
+     "=",
+     "4.0 rustic brown 1"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b00205dbaf178bff"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 41,
+  "lit_card": 128,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 128,
+    "true_card": 41,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "a783d0bab577b608",
+  "conditions": [
+   [
+    "attr:easy assemble",
+    "=",
+    "easy assemble"
+   ],
+   [
+    "option:0",
+    "=",
+    "4.0 rustic brown 1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    80
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 41,
+  "value": [
+   "[\"B07KJYY5YB\",[[\"color\",\"brown\"]]]",
+   "[\"B07QQNBXHK\",[[\"color\",\"retro brown\"]]]",
+   "[\"B0828P658S\",[[\"color\",\"4.0 rustic brown 1\"]]]",
+   "[\"B085C75DZM\",[[\"color\",\"brown\"]]]",
+   "[\"B087Q5Q3YT\",[[\"color\",\"brown 1\"]]]",
+   "[\"B08DN8QW11\",[[\"color\",\"47 inch, rustic brown\"]]]",
+   "[\"B08L8QXWGG\",[[\"color\",\"brown\"]]]",
+   "[\"B08MKWKXL6\",[[\"color\",\"deep brown\"]]]",
+   "[\"B08NPD28J9\",[[\"color\",\"brown\"]]]",
+   "[\"B08P1VJC39\",[[\"color\",\"brown\"]]]",
+   "[\"B08QYVY7GH\",[[\"color\",\"rusic brown\"]]]",
+   "[\"B08SCDQBPS\",[[\"color\",\"rustic brown\"]]]",
+   "[\"B08SW62P9V\",[[\"color\",\"brown\"]]]",
+   "[\"B08TB71K41\",[[\"color\",\"rustic brown\"]]]",
+   "[\"B08TM2FHMX\",[[\"color\",\"brown\"]]]",
+   "[\"B08VWZQW7V\",[[\"color\",\"brown\"]]]",
+   "[\"B08W2C7JZ7\",[[\"color\",\"rustic brown\"]]]",
+   "[\"B08WH8SH3G\",[[\"color\",\"brown\"]]]",
+   "[\"B08WPK3VKY\",[[\"color\",\"brown\"]]]",
+   "[\"B08XXD9PT1\",[[\"color\",\"brown# steel\"]]]",
+   "[\"B091KWCVZ8\",[[\"color\",\"brown\"]]]",
+   "[\"B091NWXXP7\",[[\"color\",\"brown\"]]]",
+   "[\"B095K9GPTF\",[[\"color\",\"dark brown\"]]]",
+   "[\"B096898KR7\",[[\"color\",\"rustic brown\"]]]",
+   "[\"B098F6FMKY\",[[\"size\",\"31.5 x 15.7 x 45.9 in brown\"]]]",
+   "[\"B0995PV1KG\",[[\"color\",\"brown-39.4 x 19.5 x 46.3 in\"]]]",
+   "[\"B099K9XHKH\",[[\"color\",\"brown\"]]]",
+   "[\"B09B299RJ3\",[[\"color\",\"brown\"]]]",
+   "[\"B09FJNSG3C\",[[\"color\",\"brown\"]]]",
+   "[\"B09L7NMVG3\",[[\"color\",\"brown\"]]]",
+   "[\"B09LH9WZ4X\",[[\"color\",\"brown\"]]]",
+   "[\"B09MCZG7JH\",[[\"size\",\"47 in brown\"]]]",
+   "[\"B09MFF1BLD\",[[\"size\",\"47 in brown\"]]]",
+   "[\"B09MFWZHPL\",[[\"color\",\"brown#01\"]]]",
+   "[\"B09MH5GL9P\",[[\"color\",\"brown\"]]]",
+   "[\"B09MHB573Z\",[[\"color\",\"brown\"]]]",
+   "[\"B09PKTYCW8\",[[\"color\",\"brown\"]]]",
+   "[\"B09PR9MR59\",[[\"color\",\"brown\"]]]",
+   "[\"B09PZ1HD8W\",[[\"color\",\"brown\"]]]",
+   "[\"B09QG6BK7L\",[[\"color\",\"brown\"]]]",
+   "[\"B09QGX1YDT\",[[\"color\",\"brown 46.5x34.3x18.9 in\"]]]"
+  ],
+  "hash": "10d070ba11e7aa18900c765aac8b755b"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "9591eb6ab0135559",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the home office desks instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "bb76e32558efe4e4",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the home office desks instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "2dbdbc392b0df273",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be non slip."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c920ae1d04f5bf26",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "49e00e01e3ed9879",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e81d6c7093d6ea9c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "38dcd9df964cf20c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 180x80x75cm instead of 4.0 rustic brown 1."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "a6d1720e1c5e6f11",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 160x70x75cm instead of 4.0 rustic brown 1."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

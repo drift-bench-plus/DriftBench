@@ -1,0 +1,201 @@
+{
+ "adapter": "webshop",
+ "cluster": "shave & hair removal",
+ "fidelity_notes": [],
+ "goal_idx": 412,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "5293243be7659c37c8469088ce4e1a85",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08CNFY9ZW\",[[\"color\",\"#1\"]]]",
+   "[\"B08LFZ6LGZ\",[[\"color\",\"style 1\"]]]",
+   "[\"B093DN51B2\",[[\"color\",\"#1\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:non slip",
+    "=",
+    "non slip"
+   ],
+   [
+    "option:0",
+    "=",
+    "style 1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "82d9bd2866b22cf5"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "style 1"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "the light option"
+   }
+  ],
+  "attempt": 8,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:non slip",
+     "=",
+     "non slip"
+    ],
+    [
+     "option:0",
+     "=",
+     "style 1"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   [
+    [
+     "attr:non slip",
+     "=",
+     "non slip"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:non slip",
+   "price_upper"
+  ],
+  "spec_id": "d44c2faac2020297",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a non-slip hair removal product, grab me the light option that’s under $30, thanks.",
+ "render_attempts": 8,
+ "sample_id": "fdc31204ad083a93",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the shave & hair removal instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0dc562e6e1f54ce5"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the shave & hair removal instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "3c127f9d528be99a"
+  },
+  {
+   "announcement": "Also, it needs to be beauty salon.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "213c05f2759eef63"
+  },
+  {
+   "announcement": "Also, it needs to be double sided.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d4906a786043545a"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "062fd32a706d6c99"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cb46732bd10a044c"
+  },
+  {
+   "announcement": "Actually, make it 6 pieces instead of style 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "566e54191838921b"
+  },
+  {
+   "announcement": "Actually, make it 5 scents instead of style 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8fe7397afe3b4876"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   3,
+   276
+  ],
+  "rule": "ambiguous",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a set of non slip eyebrow epilator.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "8c7f581d0ff3a6d1",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,227 @@
+{
+ "sample_id": "0dcc59437e005734",
+ "tree_id": "03bdb278505ad2e9",
+ "adapter": "webshop",
+ "cluster": "breads & bakery",
+ "goal_idx": 104,
+ "split": "test",
+ "source_instruction": "i am looking for a gluten free non gmo fig bar packet of 7. and i choose the variety pack",
+ "query": "I stopped by the little community park on my walk over here this morning, and the whole place was swarmed with the fluffiest baby geese I\u2019ve ever seen in my life. They were waddling in a wobbly little line behind their parents, nipping at dandelion fluff and tripping over their own oversized webbed feet every three or four steps, and a group of tiny kids from the nearby daycare were crouched on the sidewalk a few feet away, gasping so quiet like they were scared they\u2019d scare the whole fuzzy crew off. One of the goslings broke away from the group to peck at a discarded rainbow lollipop stick, and the parent goose puffed up so big and herded it back so fast I almost snort-laughed out loud while I was leaning on the fence watching. I\u2019ve heard the breads & bakery section carries items that are grain free and non-GMO, that there are pack options for those items, and that total costs for those picks don\u2019t go over $20.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "insufficient_information",
+  "indirect_intent",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+insufficient_information+indirect_intent+factual_error",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "insufficient_information",
+   "indirect_intent",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:gluten free",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:gluten free",
+    "gluten free",
+    "grain free"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the little community park on my walk over here this morning, and the whole place was swarmed with the fluffiest baby geese I\u2019ve ever seen in my life. They were waddling in a wobbly little line behind their parents, nipping at dandelion fluff and tripping over their own oversized webbed feet every three or four steps, and a group of tiny kids from the nearby daycare were crouched on the sidewalk a few feet away, gasping so quiet like they were scared they\u2019d scare the whole fuzzy crew off. One of the goslings broke away from the group to peck at a discarded rainbow lollipop stick, and the parent goose puffed up so big and herded it back so fast I almost snort-laughed out loud while I was leaning on the fence watching.",
+  "retained": [
+   "attr:non gmo",
+   "option:1",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:gluten free",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "grain free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "option:1",
+     "=",
+     "12 count (pack of 7)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "cd25a27edab5223d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 1,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 7,
+    "true_card": 3,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "befb9681ace0d113",
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "attr:non gmo",
+    "=",
+    "non gmo"
+   ],
+   [
+    "option:0",
+    "=",
+    "variety pack"
+   ],
+   [
+    "option:1",
+    "=",
+    "12 count (pack of 7)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:gluten free",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B00WFDKDIO\",[[\"flavor name\",\"variety pack\"],[\"size\",\"12 count (pack of 7)\"]]]",
+   "[\"B07YSWL849\",[[\"flavor name\",\"variety\"],[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B08B8ZHBK2\",[[\"flavor name\",\"variety pack\"],[\"size\",\"7 ounce (pack of 1)\"]]]"
+  ],
+  "hash": "f08ab26df53fcc6fc5ab246ee4ca0264"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1f6225fde59968dc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breads & bakery instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "6da6ddcafa09e269",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breads & bakery instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "62eb6218b480cdb2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be 0g trans."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "a4f8784d3ca9082e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy use."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "713431c87ef68b7d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a9b210ac95a3c43c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5fd0830c1731bea7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 11 ounce (pack of 12) instead of variety pack."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7443574b220999b8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 12 instead of variety pack."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

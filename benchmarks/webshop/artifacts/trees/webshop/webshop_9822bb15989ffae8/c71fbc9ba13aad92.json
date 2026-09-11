@@ -1,0 +1,1036 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B088LGSRTG",
+    "cluster": "hair treatment oils",
+    "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+   },
+   "bound_slots": [
+    "attr:natural hair",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:natural hair",
+     "=",
+     "natural hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "7 fl oz (pack of 3)"
+    ],
+    [
+     "option:1",
+     "=",
+     "conditioner"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "691f1072e2b49fe01f86b69d93dc6a7d",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B088LGSRTG\",[[\"size\",\"7 fl oz (pack of 3)\"],[\"style\",\"conditioner\"]]]",
+     "[\"B08JSH5FKJ\",[[\"size\",\"14 fl oz (pack of 3)\"],[\"style\",\"conditioner\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7e6c178f1ef18663",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B088LGSRTG",
+     "attributes": [
+      "natural hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "7 fl oz (pack of 3)",
+      "conditioner"
+     ],
+     "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": "671deca08be5dde0",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B082Q61BS5",
+    "cluster": "hair treatment oils",
+    "name": "Dr. Miracle's Strong & Healthy Detangling Pre-Shampoo Treatment. Infused with Coconut Water, Marshmallow Root and Aloe Vera, hydrates and restores moisture to dry damaged hair.",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+   },
+   "bound_slots": [
+    "attr:damaged hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "pre-shampoo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ac8e1c53af8fd33a28df3cc706d49ade",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00ADR6L08\",[[\"style\",\"shampoo\"]]]",
+     "[\"B075WY457Q\",[[\"style name\",\"shampoo\"]]]",
+     "[\"B07HMVN5HZ\",[[\"style\",\"shampoo\"]]]",
+     "[\"B07NBHJ4BT\",[[\"style\",\"shampoo\"]]]",
+     "[\"B082F2HL6P\",[[\"pattern name\",\"pre shampoo hair oil\"]]]",
+     "[\"B082Q61BS5\",[[\"scent\",\"pre-shampoo\"]]]",
+     "[\"B086CPB3WR\",[[\"style\",\"shampoo\"]]]",
+     "[\"B088KNJ3S8\",[[\"style\",\"shampoo\"]]]",
+     "[\"B08JSH5FKJ\",[[\"style\",\"shampoo\"]]]",
+     "[\"B096ZFGXMJ\",[[\"size\",\"shampoo\"]]]",
+     "[\"B0971BX3V1\",[[\"scent\",\"shampoo\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "53e294edf352a6cf",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B082Q61BS5",
+     "attributes": [
+      "damaged hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "pre-shampoo"
+     ],
+     "name": "Dr. Miracle's Strong & Healthy Detangling Pre-Shampoo Treatment. Infused with Coconut Water, Marshmallow Root and Aloe Vera, hydrates and restores moisture to dry damaged hair.",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": "2250feaaa4fd013b",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B006QN9TFC",
+    "cluster": "hair treatment oils",
+    "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners"
+   },
+   "bound_slots": [
+    "attr:argan oil",
+    "attr:damaged hair",
+    "attr:high quality",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ],
+    [
+     "option:0",
+     "=",
+     "120ml |  4 fl oz"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ],
+   "ground_truth": {
+    "hash": "4302c640f0ce582ed4b551ebb69ee5ef",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07YF3LZVQ\",[[\"size\",\"3.4 fl oz.\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "e53fdf88345c4130",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B006QN9TFC",
+     "attributes": [
+      "argan oil",
+      "damaged hair",
+      "high quality"
+     ],
+     "category": "",
+     "goal_options": [
+      "120ml |  4 fl oz"
+     ],
+     "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+     "price_upper": 70,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B006QN9TFC",
+    "cluster": "hair treatment oils",
+    "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners"
+   },
+   "bound_slots": [
+    "attr:argan oil",
+    "attr:damaged hair",
+    "attr:dry hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "attr:dry hair",
+     "=",
+     "dry hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "120ml |  4 fl oz"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ],
+   "ground_truth": {
+    "hash": "59fb6f78a8975d2dda674c28998b92a0",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B007CKMQOY\",[[\"size\",\"120ml |  4 fl oz\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9278ae29f0fa5b16",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B006QN9TFC",
+     "attributes": [
+      "argan oil",
+      "damaged hair",
+      "dry hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "120ml |  4 fl oz"
+     ],
+     "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+     "price_upper": 70,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B006QN9TFC",
+    "cluster": "hair treatment oils",
+    "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners"
+   },
+   "bound_slots": [
+    "attr:argan oil",
+    "attr:damaged hair",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ],
+   "ground_truth": {
+    "hash": "bb0ceb8c1e2038c1c64fdc4a052e3783",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B001A4HBXO\",[]]",
+     "[\"B002PR2GLM\",[]]",
+     "[\"B0035RKSYS\",[]]",
+     "[\"B003JMYB7Y\",[]]",
+     "[\"B003Y57G7I\",[]]",
+     "[\"B004QQ9VL8\",[]]",
+     "[\"B004Z209HS\",[]]",
+     "[\"B0053UCMP8\",[]]",
+     "[\"B005DYJZ7M\",[]]",
+     "[\"B005ZXH3OS\",[]]",
+     "[\"B006QN9TFC\",[]]",
+     "[\"B0070I9ZSS\",[]]",
+     "[\"B007CKMQOY\",[]]",
+     "[\"B0085LXO0Y\",[]]",
+     "[\"B008VU3Q1Q\",[]]",
+     "[\"B008YQEOMM\",[]]",
+     "[\"B0097FEVBI\",[]]",
+     "[\"B009FL8F3E\",[]]",
+     "[\"B00A2IW4TU\",[]]",
+     "[\"B00ADR6L08\",[]]",
+     "[\"B00ANBJFL6\",[]]",
+     "[\"B00BC3YL2W\",[]]",
+     "[\"B00CHCM4P8\",[]]",
+     "[\"B00DPNKDOC\",[]]",
+     "[\"B00E9YSADW\",[]]",
+     "[\"B00EA9Y3WI\",[]]",
+     "[\"B00FBN2RNY\",[]]",
+     "[\"B00FG9MWIS\",[]]",
+     "[\"B00GMP8Q08\",[]]",
+     "[\"B00GMP8YEG\",[]]",
+     "[\"B00I2EP20O\",[]]",
+     "[\"B00I32AN4K\",[]]",
+     "[\"B00ICXMI8Y\",[]]",
+     "[\"B00IT1HKV4\",[]]",
+     "[\"B00IYMKSGW\",[]]",
+     "[\"B00IZMQGJO\",[]]",
+     "[\"B00KNRN9EY\",[]]",
+     "[\"B00M3CAEJK\",[]]",
+     "[\"B00N2JMSQU\",[]]",
+     "[\"B00N2JN6ZM\",[]]",
+     "[\"B00N30ZWFW\",[]]",
+     "[\"B00N9WPQQO\",[]]",
+     "[\"B00NFUH1AY\",[]]",
+     "[\"B00NFUIR8Y\",[]]",
+     "[\"B00NFULZ6U\",[]]",
+     "[\"B00O82EGFG\",[]]",
+     "[\"B00PG9VPGS\",[]]",
+     "[\"B00R442BRK\",[]]",
+     "[\"B00S9TDWBS\",[]]",
+     "[\"B00SG3BJ7G\",[]]",
+     "[\"B00ZUSIPM2\",[]]",
+     "[\"B012V0TSZE\",[]]",
+     "[\"B013X3IAU2\",[]]",
+     "[\"B014JEPIKE\",[]]",
+     "[\"B014RHM6RG\",[]]",
+     "[\"B014RU0SG4\",[]]",
+     "[\"B016V5H6MM\",[]]",
+     "[\"B016VKNA72\",[]]",
+     "[\"B0177AOT9S\",[]]",
+     "[\"B019WYQM9M\",[]]",
+     "[\"B01B3AY85S\",[]]",
+     "[\"B01BE5MC9G\",[]]",
+     "[\"B01BVVA6OG\",[]]",
+     "[\"B01C6R4FCS\",[]]",
+     "[\"B01F95Z33O\",[]]",
+     "[\"B01GI7Z5S0\",[]]",
+     "[\"B01HWWORC0\",[]]",
+     "[\"B01IPPGE6U\",[]]",
+     "[\"B01JH0T1XU\",[]]",
+     "[\"B01M6DOMO2\",[]]",
+     "[\"B01N5VKHOQ\",[]]",
+     "[\"B01N9FWI0R\",[]]",
+     "[\"B01NBOT9R4\",[]]",
+     "[\"B06VXYCP17\",[]]",
+     "[\"B06VY5D4HH\",[]]",
+     "[\"B06WWLKQX5\",[]]",
+     "[\"B06WWM7QDK\",[]]",
+     "[\"B06Y3HCM22\",[]]",
+     "[\"B06Y3Q5NTT\",[]]",
+     "[\"B0719P1R4D\",[]]",
+     "[\"B072FRDRV4\",[]]",
+     "[\"B072HP7M71\",[]]",
+     "[\"B073DQ45NK\",[]]",
+     "[\"B074TX2HDH\",[]]",
+     "[\"B0757QMVYK\",[]]",
+     "[\"B075D8BW8K\",[]]",
+     "[\"B075L6BL61\",[]]",
+     "[\"B076CP5CYJ\",[]]",
+     "[\"B076FHLQMY\",[]]",
+     "[\"B076Q7L95C\",[]]",
+     "[\"B076QL4WXC\",[]]",
+     "[\"B076RY63MP\",[]]",
+     "[\"B076VX4RBP\",[]]",
+     "[\"B0778SL47R\",[]]",
+     "[\"B077ZBM5NF\",[]]",
+     "[\"B079NFMV97\",[]]",
+     "[\"B079P3MC38\",[]]",
+     "[\"B079YZGLC8\",[]]",
+     "[\"B07B8QQZNK\",[]]",
+     "[\"B07BH5Y9RL\",[]]",
+     "[\"B07BNW39SM\",[]]",
+     "[\"B07CQLGQ6B\",[]]",
+     "[\"B07CZH9S4J\",[]]",
+     "[\"B07D1MKFJL\",[]]",
+     "[\"B07D8KG88B\",[]]",
+     "[\"B07DHVPRZB\",[]]",
+     "[\"B07FN6P6PX\",[]]",
+     "[\"B07FVSQH64\",[]]",
+     "[\"B07G8L5JJ5\",[]]",
+     "[\"B07GSZYLGJ\",[]]",
+     "[\"B07H9J8ML5\",[]]",
+     "[\"B07HF8TQBL\",[]]",
+     "[\"B07HF92B2B\",[]]",
+     "[\"B07HFBMG6R\",[]]",
+     "[\"B07HFK3F2V\",[]]",
+     "[\"B07HFKLTMW\",[]]",
+     "[\"B07JJCNH26\",[]]",
+     "[\"B07KQHYQRT\",[]]",
+     "[\"B07KSK3Z61\",[]]",
+     "[\"B07M9XQPRN\",[]]",
+     "[\"B07MQDMTBN\",[]]",
+     "[\"B07NBHJ4BT\",[]]",
+     "[\"B07NLKFHTT\",[]]",
+     "[\"B07NLNL9HK\",[]]",
+     "[\"B07P9S8RT3\",[]]",
+     "[\"B07PFXDQWV\",[]]",
+     "[\"B07Q18NBWT\",[]]",
+     "[\"B07QGFBBDF\",[]]",
+     "[\"B07QH2YM12\",[]]",
+     "[\"B07R3GDXMW\",[]]",
+     "[\"B07RC2D1BM\",[]]",
+     "[\"B07RK4YFGK\",[]]",
+     "[\"B07SFDV9BY\",[]]",
+     "[\"B07T177MTK\",[]]",
+     "[\"B07VB9SF1G\",[]]",
+     "[\"B07VVBL9BY\",[]]",
+     "[\"B07WHRCLHC\",[]]",
+     "[\"B07X2WHL8H\",[]]",
+     "[\"B07X3MZSGG\",[]]",
+     "[\"B07X5D1J7F\",[]]",
+     "[\"B07XZJ7Z35\",[]]",
+     "[\"B07YF327H7\",[]]",
+     "[\"B07YF3LZVQ\",[]]",
+     "[\"B07YG23XT6\",[]]",
+     "[\"B082WJN666\",[]]",
+     "[\"B082ZPWVBJ\",[]]",
+     "[\"B083DN4D4M\",[]]",
+     "[\"B084BTX4PB\",[]]",
+     "[\"B084C9TY12\",[]]",
+     "[\"B084LWG9HD\",[]]",
+     "[\"B084TMGB5R\",[]]",
+     "[\"B084YVG5NP\",[]]",
+     "[\"B086CCN9WF\",[]]",
+     "[\"B086DXN6ML\",[]]",
+     "[\"B086H4TBG3\",[]]",
+     "[\"B086X4XYM5\",[]]",
+     "[\"B0881YLLJX\",[]]",
+     "[\"B088HJYKYB\",[]]",
+     "[\"B088ND6W5P\",[]]",
+     "[\"B0897C6NCK\",[]]",
+     "[\"B089B7HX43\",[]]",
+     "[\"B089B87R9X\",[]]",
+     "[\"B08B11GNQ9\",[]]",
+     "[\"B08B1VW2ZX\",[]]",
+     "[\"B08CVL43YV\",[]]",
+     "[\"B08DR96P1R\",[]]",
+     "[\"B08F33KXRX\",[]]",
+     "[\"B08FXXP5N7\",[]]",
+     "[\"B08G3SY6KY\",[]]",
+     "[\"B08G7X6S9M\",[]]",
+     "[\"B08GLRBVWR\",[]]",
+     "[\"B08H6S5HR9\",[]]",
+     "[\"B08HRPGTFQ\",[]]",
+     "[\"B08JCJKT5N\",[]]",
+     "[\"B08JYM7LDQ\",[]]",
+     "[\"B08KTGQCGV\",[]]",
+     "[\"B08L6WSQ3Z\",[]]",
+     "[\"B08M33H1CX\",[]]",
+     "[\"B08N2MPKRZ\",[]]",
+     "[\"B08NF21D2H\",[]]",
+     "[\"B08P6RF1MB\",[]]",
+     "[\"B08PHTMRG2\",[]]",
+     "[\"B08PV22GC5\",[]]",
+     "[\"B08QM8H735\",[]]",
+     "[\"B08TRHXVV1\",[]]",
+     "[\"B08TT75FQ9\",[]]",
+     "[\"B08TTPPYZ9\",[]]",
+     "[\"B08WKS2DZ2\",[]]",
+     "[\"B08WPJDSBT\",[]]",
+     "[\"B08XN52LN1\",[]]",
+     "[\"B08XS7GK3M\",[]]",
+     "[\"B08XZSWXTV\",[]]",
+     "[\"B08Y9WHTZZ\",[]]",
+     "[\"B094DX6TDW\",[]]",
+     "[\"B09525DVNY\",[]]",
+     "[\"B095RTJ27X\",[]]",
+     "[\"B096ZFGXMJ\",[]]",
+     "[\"B0971BX3V1\",[]]",
+     "[\"B097BS5C3N\",[]]",
+     "[\"B097XRK8FZ\",[]]",
+     "[\"B0982PB49R\",[]]",
+     "[\"B098LRLMV8\",[]]",
+     "[\"B098QKZ7RW\",[]]",
+     "[\"B0991M683S\",[]]",
+     "[\"B09CXMGL7Y\",[]]",
+     "[\"B09CZK7F6G\",[]]",
+     "[\"B09DCGWSHM\",[]]",
+     "[\"B09DP4R272\",[]]",
+     "[\"B09FQG2JXV\",[]]",
+     "[\"B09FXHJLN3\",[]]",
+     "[\"B09G5VQYRD\",[]]",
+     "[\"B09GS8H3WW\",[]]",
+     "[\"B09HJNLY4P\",[]]",
+     "[\"B09J4V62QB\",[]]",
+     "[\"B09J533TH3\",[]]",
+     "[\"B09JK3C9XK\",[]]",
+     "[\"B09JK9LF76\",[]]",
+     "[\"B09JKKDCSD\",[]]",
+     "[\"B09JZBF7C7\",[]]",
+     "[\"B09M7NVYH8\",[]]",
+     "[\"B09MJSM8FF\",[]]",
+     "[\"B09MVGDTPH\",[]]",
+     "[\"B09MZLN67Y\",[]]",
+     "[\"B09NRS18NJ\",[]]",
+     "[\"B09NZ37Q4T\",[]]",
+     "[\"B09PTXBSFM\",[]]",
+     "[\"B09R7Z5697\",[]]",
+     "[\"B09RM4JXY4\",[]]",
+     "[\"B09RPM58K1\",[]]",
+     "[\"B09SV3JXQL\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "afce7dec83007497",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B006QN9TFC",
+     "attributes": [
+      "argan oil",
+      "damaged hair"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+     "price_upper": 70,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B006QN9TFC",
+    "cluster": "hair treatment oils",
+    "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners"
+   },
+   "bound_slots": [
+    "attr:argan oil",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "option:0",
+     "=",
+     "120ml |  4 fl oz"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ],
+   "ground_truth": {
+    "hash": "88acf4953483d813ad3a7fd5e6be0918",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B006QN9TFC\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+     "[\"B007CKMQOY\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+     "[\"B00E9YSADW\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+     "[\"B00IUY4IRY\",[[\"size\",\"4 fl oz\"]]]",
+     "[\"B017KSB5K8\",[[\"size\",\"8.4 fl oz\"]]]",
+     "[\"B07C7SCB3D\",[[\"size\",\"4 fl oz\"]]]",
+     "[\"B07YF3LZVQ\",[[\"size\",\"3.4 fl oz.\"]]]",
+     "[\"B09GWBYXTX\",[[\"size\",\"4 fl oz\"]]]",
+     "[\"B09PTXBSFM\",[[\"size\",\"4 fl.oz\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "ce2acbabf6a922d6",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B006QN9TFC",
+     "attributes": [
+      "argan oil"
+     ],
+     "category": "",
+     "goal_options": [
+      "120ml |  4 fl oz"
+     ],
+     "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+     "price_upper": 70,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B006QN9TFC",
+    "cluster": "hair treatment oils",
+    "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners"
+   },
+   "bound_slots": [
+    "attr:argan oil",
+    "attr:damaged hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "11 ounce (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ],
+   "ground_truth": {
+    "hash": "02b43214860ddd75ccbbcf4349841b18",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B005DYJZ7M\",[[\"size\",\"1 pack\"]]]",
+     "[\"B07QH2YM12\",[[\"size\",\"8 ounce (pack of 1)\"]]]",
+     "[\"B0881YLLJX\",[[\"size\",\"1 ounce\"]]]",
+     "[\"B098QKZ7RW\",[[\"unit count\",\"1\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "cd29b9bfaa7fe9b2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B006QN9TFC",
+     "attributes": [
+      "argan oil",
+      "damaged hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "11 ounce (pack of 1)"
+     ],
+     "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+     "price_upper": 70,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B006QN9TFC",
+    "cluster": "hair treatment oils",
+    "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners"
+   },
+   "bound_slots": [
+    "attr:argan oil",
+    "attr:damaged hair",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "option:0",
+     "=",
+     "12 ounce (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ],
+   "ground_truth": {
+    "hash": "02b43214860ddd75ccbbcf4349841b18",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B005DYJZ7M\",[[\"size\",\"1 pack\"]]]",
+     "[\"B07QH2YM12\",[[\"size\",\"8 ounce (pack of 1)\"]]]",
+     "[\"B0881YLLJX\",[[\"size\",\"1 ounce\"]]]",
+     "[\"B098QKZ7RW\",[[\"unit count\",\"1\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "e576d6729301f85f",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair treatment oils",
+    "goal": {
+     "asin": "B006QN9TFC",
+     "attributes": [
+      "argan oil",
+      "damaged hair"
+     ],
+     "category": "",
+     "goal_options": [
+      "12 ounce (pack of 1)"
+     ],
+     "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+     "price_upper": 70,
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners",
+     "query": "hair treatment oils"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B088LGSRTG",
+     "cluster": "hair treatment oils",
+     "name": "Tio Nacho Ultra Hydration Coconut Oil Treatment, 7 Ounces",
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+    }
+   },
+   "dst": "7e6c178f1ef18663",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "671deca08be5dde0",
+   "src": "7cc446afb81cc0ac"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B082Q61BS5",
+     "cluster": "hair treatment oils",
+     "name": "Dr. Miracle's Strong & Healthy Detangling Pre-Shampoo Treatment. Infused with Coconut Water, Marshmallow Root and Aloe Vera, hydrates and restores moisture to dry damaged hair.",
+     "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Shampoos"
+    }
+   },
+   "dst": "53e294edf352a6cf",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "2250feaaa4fd013b",
+   "src": "7cc446afb81cc0ac"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:high quality",
+      "=",
+      "high quality"
+     ]
+    ]
+   },
+   "dst": "e53fdf88345c4130",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7cc446afb81cc0ac"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:dry hair",
+      "=",
+      "dry hair"
+     ]
+    ]
+   },
+   "dst": "9278ae29f0fa5b16",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7cc446afb81cc0ac"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "120ml |  4 fl oz"
+     ]
+    ]
+   },
+   "dst": "afce7dec83007497",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7cc446afb81cc0ac"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:damaged hair",
+      "=",
+      "damaged hair"
+     ]
+    ]
+   },
+   "dst": "ce2acbabf6a922d6",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7cc446afb81cc0ac"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "120ml |  4 fl oz",
+      "11 ounce (pack of 1)"
+     ]
+    ]
+   },
+   "dst": "cd29b9bfaa7fe9b2",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7cc446afb81cc0ac"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "120ml |  4 fl oz",
+      "12 ounce (pack of 1)"
+     ]
+    ]
+   },
+   "dst": "e576d6729301f85f",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "7cc446afb81cc0ac"
+  }
+ ],
+ "env_id": "webshop_9822bb15989ffae8",
+ "env_spec": {
+  "cluster": "hair treatment oils",
+  "env_id": "webshop_9822bb15989ffae8",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B006QN9TFC",
+   "cluster": "hair treatment oils",
+   "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+   "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners"
+  },
+  "bound_slots": [
+   "attr:argan oil",
+   "attr:damaged hair",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:argan oil",
+    "=",
+    "argan oil"
+   ],
+   [
+    "attr:damaged hair",
+    "=",
+    "damaged hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "120ml |  4 fl oz"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "ground_truth": {
+   "hash": "354d5889c2fc75af4e08d016eaf58dcd",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B006QN9TFC\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+    "[\"B007CKMQOY\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+    "[\"B00E9YSADW\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+    "[\"B07YF3LZVQ\",[[\"size\",\"3.4 fl oz.\"]]]",
+    "[\"B09PTXBSFM\",[[\"size\",\"4 fl.oz\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "7cc446afb81cc0ac",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "hair treatment oils",
+   "goal": {
+    "asin": "B006QN9TFC",
+    "attributes": [
+     "argan oil",
+     "damaged hair"
+    ],
+    "category": "",
+    "goal_options": [
+     "120ml |  4 fl oz"
+    ],
+    "name": "Keratin Cure Gold and Honey Hair Conditioner Argan Oil Sulfate Free Treatment for Dry and Damaged Hair Silk Proteins & Keratin All Hair Types Women & Men Beards & Teens, Kids Safe Color treated 32 oz",
+    "price_upper": 70,
+    "product_category": "Beauty & Personal Care › Hair Care › Shampoo & Conditioner › Conditioners",
+    "query": "hair treatment oils"
+   }
+  },
+  "source_record": "cdf3235a52427b36",
+  "unbound_slots": [
+   "attr:damaged hair",
+   "attr:dry hair",
+   "attr:high quality",
+   "option:0"
+  ]
+ },
+ "tree_id": "c71fbc9ba13aad92"
+}

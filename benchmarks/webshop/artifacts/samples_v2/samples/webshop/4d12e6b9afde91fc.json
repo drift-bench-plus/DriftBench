@@ -1,0 +1,198 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's socks & hosiery",
+ "fidelity_notes": [],
+ "goal_idx": 397,
+ "ground_truth": {
+  "cardinality": 19,
+  "hash": "f36add6bb5df3b03f70cb3c51193a78b",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00FM6X37E\",[[\"color\",\"black\"]]]",
+   "[\"B00IE0E0TU\",[[\"color\",\"black\"]]]",
+   "[\"B015J9Y5E8\",[[\"color\",\"black with bluish (6 pairs)\"]]]",
+   "[\"B073QF83MW\",[[\"color\",\"black\"]]]",
+   "[\"B07DQ6PSQ4\",[[\"color\",\"black | white vent\"]]]",
+   "[\"B07FXS3R3J\",[[\"color\",\"black\"]]]",
+   "[\"B07JDZD513\",[[\"color\",\"black\"]]]",
+   "[\"B07M6WHT26\",[[\"color\",\"9 pairs |  3*black +3*white +3*light pink\"]]]",
+   "[\"B07V34W82P\",[[\"color\",\"grey | black\"]]]",
+   "[\"B087R6XY9X\",[[\"color\",\"3 black+3 grey\"]]]",
+   "[\"B08FWB2N64\",[[\"color\",\"loose top black\"]]]",
+   "[\"B08J1L1GFD\",[[\"color\",\"black\"]]]",
+   "[\"B08JWD1SKH\",[[\"color\",\"black | signal pink | white\"]]]",
+   "[\"B091DCM8YQ\",[[\"color\",\"black | semi turbo pink | semi mint rush green\"]]]",
+   "[\"B091DFZ99Q\",[[\"color\",\"black | signal pink | white\"]]]",
+   "[\"B093CLPFHY\",[[\"color\",\"black\"]]]",
+   "[\"B0983756Z3\",[[\"color\",\"hiking light heather grey | black - 2 pair pack\"]]]",
+   "[\"B098NRRHSZ\",[[\"color\",\"6 pairs black\"]]]",
+   "[\"B09CJ88Y61\",[[\"color\",\"black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:machine wash",
+    "=",
+    "machine wash"
+   ],
+   [
+    "attr:polyester cotton",
+    "=",
+    "polyester cotton"
+   ],
+   [
+    "option:0",
+    "=",
+    "black | semi turbo pink | semi mint rush green"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "f8ae5d899d5b9541"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:machine wash",
+     "=",
+     "machine wash"
+    ],
+    [
+     "attr:polyester cotton",
+     "=",
+     "polyester cotton"
+    ],
+    [
+     "option:0",
+     "=",
+     "black | semi turbo pink | semi mint rush green"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:machine wash",
+   "attr:polyester cotton",
+   "option:0"
+  ],
+  "spec_id": "052a6af8410e4ae7",
+  "strategy_id": "vagueness_subjectivity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for women's socks and hosiery that are machine washable, made of polyester cotton, and come in black, semi turbo pink, or semi mint rush green, with a good price point.",
+ "render_attempts": 1,
+ "sample_id": "4d12e6b9afde91fc",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's socks & hosiery instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "27d9242830c82b01"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's socks & hosiery instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "81acdd316d3964c7"
+  },
+  {
+   "announcement": "Also, it needs to be closed toe.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "44f9a571749c539d"
+  },
+  {
+   "announcement": "Also, it needs to be casual shoes.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "85795a29038dfeac"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6cef30ec25743dce"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8014cf40a47df239"
+  },
+  {
+   "announcement": "Actually, make it 2x-large (1 pair) instead of black | semi turbo pink | semi mint rush green.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b5d05c2165fb0b9a"
+  },
+  {
+   "announcement": "Actually, make it 2# yellow instead of black | semi turbo pink | semi mint rush green.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e90cb012f287b6df"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 20,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 19,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a women's socks made up of polyester cotton which is washable in machine. also choose black or semi mint rush green color.",
+ "split": "test",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "tree_id": "81761b8dd22467b2",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "sample_id": "4c78d784223e8364__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "4c78d784223e8364",
+ "query": "Oh my gosh, I just got back from walking my golden retriever puppy earlier today, he kept stopping to sniff every dandelion on the sidewalk and even tried to carry a half-eaten popsicle stick home, I had to chase him for three whole minutes to get it away from him. Then I stopped by the neighborhood bakery on the way back, their new matcha croissant is so flaky and not too sweet, I already bought two more to freeze for next week. Oh, and I was rearranging my bookshelf last night and found my old copy of Harry Potter and the Prisoner of Azkaban that I thought I lost three years ago, it even has the little receipt from the school book fair tucked in the pages. Anyway, I need to cancel two pending orders first: order #W4836353 and order #W7342738, both for the reason that they're no longer needed. Then I need to return items from two delivered orders: for order #W4597054, please process the return of items 5669664287, 4900990404, 9862136885 and 6777246137, refund to gift_card_3491931; for order #W7773202, please process the return of item 8277474082, also refund to gift_card_3491931.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh my gosh, I just got back from walking my golden retriever puppy earlier today, he kept stopping to sniff every dandelion on the sidewalk and even tried to carry a half-eaten popsicle stick home, I had to chase him for three whole minutes to get it away from him. Then I stopped by the neighborhood bakery on the way back, their new matcha croissant is so flaky and not too sweet, I already bought two more to freeze for next week. Oh, and I was rearranging my bookshelf last night and found my old copy of Harry Potter and the Prisoner of Azkaban that I thought I lost three years ago, it even has the little receipt from the school book fair tucked in the pages. Anyway, ",
+  "retained": [
+   "arg:0:cancel_pending_order:order_id",
+   "arg:0:cancel_pending_order:reason",
+   "arg:1:cancel_pending_order:order_id",
+   "arg:1:cancel_pending_order:reason",
+   "arg:2:return_delivered_order_items:item_ids",
+   "arg:2:return_delivered_order_items:order_id",
+   "arg:2:return_delivered_order_items:payment_method_id",
+   "arg:3:return_delivered_order_items:item_ids",
+   "arg:3:return_delivered_order_items:order_id",
+   "arg:3:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:cancel_pending_order:order_id",
+     "=",
+     "\"#W4836353\""
+    ],
+    [
+     "arg:0:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:1:cancel_pending_order:order_id",
+     "=",
+     "\"#W7342738\""
+    ],
+    [
+     "arg:1:cancel_pending_order:reason",
+     "=",
+     "\"no longer needed\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:item_ids",
+     "=",
+     "[\"5669664287\",\"4900990404\",\"9862136885\",\"6777246137\"]"
+    ],
+    [
+     "arg:2:return_delivered_order_items:order_id",
+     "=",
+     "\"#W4597054\""
+    ],
+    [
+     "arg:2:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_3491931\""
+    ],
+    [
+     "arg:3:return_delivered_order_items:item_ids",
+     "=",
+     "[\"8277474082\"]"
+    ],
+    [
+     "arg:3:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7773202\""
+    ],
+    [
+     "arg:3:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"gift_card_3491931\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:cancel_pending_order:order_id",
+    "=",
+    "\"#W4836353\""
+   ],
+   [
+    "arg:0:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:1:cancel_pending_order:order_id",
+    "=",
+    "\"#W7342738\""
+   ],
+   [
+    "arg:1:cancel_pending_order:reason",
+    "=",
+    "\"no longer needed\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:item_ids",
+    "=",
+    "[\"5669664287\",\"4900990404\",\"9862136885\",\"6777246137\"]"
+   ],
+   [
+    "arg:2:return_delivered_order_items:order_id",
+    "=",
+    "\"#W4597054\""
+   ],
+   [
+    "arg:2:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_3491931\""
+   ],
+   [
+    "arg:3:return_delivered_order_items:item_ids",
+    "=",
+    "[\"8277474082\"]"
+   ],
+   [
+    "arg:3:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7773202\""
+   ],
+   [
+    "arg:3:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"gift_card_3491931\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

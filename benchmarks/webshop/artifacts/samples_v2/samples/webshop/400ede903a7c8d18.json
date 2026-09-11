@@ -1,0 +1,220 @@
+{
+ "adapter": "webshop",
+ "cluster": "home office chairs",
+ "fidelity_notes": [],
+ "goal_idx": 216,
+ "ground_truth": {
+  "cardinality": 35,
+  "hash": "b4eac04111f454e4f134d6b42eccf754",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B082J2X79B\",[[\"color\",\"grey\"]]]",
+   "[\"B0842N3BX9\",[[\"color\",\"grey\"]]]",
+   "[\"B0842NJ414\",[[\"color\",\"grey\"]]]",
+   "[\"B085Y476KB\",[[\"color\",\"grey\"]]]",
+   "[\"B0862BHBJF\",[[\"color\",\"grey\"]]]",
+   "[\"B08DR3P74Y\",[[\"color\",\"grey\"]]]",
+   "[\"B08FBB4FCN\",[[\"color\",\"grey\"]]]",
+   "[\"B08G1S8W2R\",[[\"color\",\"grey - set of 1\"]]]",
+   "[\"B08M38W51M\",[[\"color\",\"grey\"]]]",
+   "[\"B08M5CN7L2\",[[\"color\",\"grey\"]]]",
+   "[\"B08P1V3N3V\",[[\"color\",\"grey\"]]]",
+   "[\"B08TM8PJBN\",[[\"color\",\"grey\"]]]",
+   "[\"B08ZSSYHHW\",[[\"color\",\"grey\"]]]",
+   "[\"B0948YG9JM\",[[\"color\",\"grey\"]]]",
+   "[\"B094FDGVKJ\",[[\"color\",\"grey\"]]]",
+   "[\"B095KGZ4FT\",[[\"color\",\"grey\"]]]",
+   "[\"B0966GC1XK\",[[\"color\",\"grey\"]]]",
+   "[\"B097DQMN6G\",[[\"color\",\"grey\"]]]",
+   "[\"B09BB4DD8V\",[[\"color\",\"grey\"]]]",
+   "[\"B09BR2CQ7M\",[[\"color\",\"grey\"]]]",
+   "[\"B09CYT3BNS\",[[\"color\",\"grey\"]]]",
+   "[\"B09DNZVKZT\",[[\"color\",\"grey\"]]]",
+   "[\"B09DPSGLJC\",[[\"color\",\"grey\"]]]",
+   "[\"B09GPDJVJ3\",[[\"color\",\"grey\"]]]",
+   "[\"B09HBQ91GC\",[[\"color\",\"grey\"]]]",
+   "[\"B09K6FKQFN\",[[\"color\",\"grey\"]]]",
+   "[\"B09LQXZG4M\",[[\"color\",\"grey\"]]]",
+   "[\"B09M6VG7W6\",[[\"color\",\"grey\"]]]",
+   "[\"B09MK126Y4\",[[\"color\",\"grey\"]]]",
+   "[\"B09N3CH82P\",[[\"color\",\"grey\"]]]",
+   "[\"B09N7Q34ZS\",[[\"color\",\"grey\"]]]",
+   "[\"B09P7T69HT\",[[\"color\",\"grey\"]]]",
+   "[\"B09P7V3K92\",[[\"color\",\"grey\"]]]",
+   "[\"B09PG5MJG1\",[[\"color\",\"grey\"]]]",
+   "[\"B09Q5WXBBP\",[[\"color\",\"grey\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:height adjustable",
+    "=",
+    "height adjustable"
+   ],
+   [
+    "attr:lumbar support",
+    "=",
+    "lumbar support"
+   ],
+   [
+    "option:0",
+    "=",
+    "grey"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "attr:lumbar support"
+  ],
+  "intent_id": "bc28f127447d9643"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "attr:lumbar support"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "attr:lumbar support",
+     "=",
+     "thoracic support"
+    ],
+    [
+     "option:0",
+     "=",
+     "grey"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:height adjustable",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "5b9f827abcf55857",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "attr:lumbar support",
+    "lumbar support",
+    "thoracic support"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a home office chair with height adjustability and thoracic support, in grey, and my budget is $50.",
+ "render_attempts": 1,
+ "sample_id": "400ede903a7c8d18",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office chairs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1410d19fdd6bf8b2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the home office chairs instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a8a0e1fd3281152f"
+  },
+  {
+   "announcement": "Also, it needs to be faux leather.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "890d961a3d7aa4f7"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e30ad22deb911830"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "016a758f073123ba"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bbf51dbb24554c3a"
+  },
+  {
+   "announcement": "Actually, make it #1 instead of grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6b621ae44f8532e4"
+  },
+  {
+   "announcement": "Actually, make it 1 instead of grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a914487da8e95e0c"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 35,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need to buy a height adjustable office chair with lumbar support. i want a grey one.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "22a555287dc9c83d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

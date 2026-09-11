@@ -1,0 +1,220 @@
+{
+ "adapter": "webshop",
+ "cluster": "bar stools",
+ "fidelity_notes": [],
+ "goal_idx": 96,
+ "ground_truth": {
+  "cardinality": 35,
+  "hash": "a2d37654086087b988760763e07a3d9d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B073XK4Y1T\",[[\"color\",\"matte black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07524SWFW\",[[\"color\",\"black\"],[\"size\",\"24 inch\"]]]",
+   "[\"B07525BSV2\",[[\"color\",\"cocoa brown  |  black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B075L7V9NW\",[[\"color\",\"matte black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B076D7Y712\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B076D88WBK\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B076D8VYRJ\",[[\"color\",\"matte black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B076DKRWVC\",[[\"color\",\"matte black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B0779PTJ67\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B0779VP37K\",[[\"color\",\"matte black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B0797MZDFS\",[[\"color\",\"matte black wood top high back\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B079BR6W8J\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07FT473Z2\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07FT9VT92\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07FTC477C\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07J688MBG\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07KY9CWQW\",[[\"color\",\"matte black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B07KZVLN3Y\",[[\"color\",\"black\"],[\"size\",\"24 inch\"]]]",
+   "[\"B07KZVQ3WB\",[[\"color\",\"low back black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B07QDN1P4H\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B07QHSS59Q\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B07VRKX59W\",[[\"color\",\"black\"],[\"size\",\"24 inch\"]]]",
+   "[\"B0855F56QP\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B0869KMKLS\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B088ZRCVHP\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B08DKWGB2T\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B08DKXJXSY\",[[\"color\",\"distressed gold black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B08DXQYWQQ\",[[\"color\",\"distressed black gold\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B08H24GH77\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B08JJ2563H\",[[\"color\",\"black\"],[\"size\",\"26 inch\"]]]",
+   "[\"B08T5Z3HFR\",[[\"color\",\"matte black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B08Y8MG7YH\",[[\"color\",\"black\"],[\"size\",\"65cm(26 inch)\"]]]",
+   "[\"B092Z2WT6W\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]",
+   "[\"B09MLGXK4H\",[[\"color\",\"black\"],[\"size\",\"swivel 26 inch\"]]]",
+   "[\"B09NSQQFLN\",[[\"color\",\"black\"],[\"size\",\"26\\\"\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:dining room",
+    "=",
+    "dining room"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "option:1",
+    "=",
+    "26 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    270
+   ]
+  ],
+  "hidden_slots": [
+   "option:1"
+  ],
+  "intent_id": "0e1b68eaa8ab45a2"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "option:1"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:dining room",
+     "=",
+     "dining room"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "option:1",
+     "=",
+     "24 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     270
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:dining room",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "358df25623db703c",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "option:1",
+    "26 inch",
+    "24 inch"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for a 24 inch black bar stool for my dining room, and my budget is $270.",
+ "render_attempts": 2,
+ "sample_id": "4c1e157e0def69b8",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bar stools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "6ef9144c08537686"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bar stools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b065fa878d7d3391"
+  },
+  {
+   "announcement": "Also, it needs to be white finish.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6f134fd162420572"
+  },
+  {
+   "announcement": "Also, it needs to be easy install.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b5f98ee2ac037c12"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2778d399899c4b9b"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bb21a21723da4f66"
+  },
+  {
+   "announcement": "Actually, make it 26 inch instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6cb5a6a66b4e66ed"
+  },
+  {
+   "announcement": "Actually, make it 26\" counter height instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e59b1b53961a0e6e"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 41,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 35,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need the yongquiang 26\" set of 4 metal bar height stools in black.  i want the ones for a dining room.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "e25643dd0c2ae512",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

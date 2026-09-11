@@ -1,0 +1,285 @@
+{
+ "sample_id": "99cf8e2152bb7033__syntactic_ambiguity",
+ "domain": "retail",
+ "tree_id": "99cf8e2152bb7033",
+ "query": "Hi there, I need to make a couple changes to my pending orders first: please modify order #W5056519 by updating the shipping address to 380 Maple Drive, Suite 960, San Diego, CA 92101, USA, and swap item 7902309762 for 1573035764 using credit_card_3095586 to process any price difference, and cancel order #W5995614 which has a mouse and a mousepad that was ordered by mistake.",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "syntactic_ambiguity",
+  "family": "expression",
+  "mask_kind": "mark",
+  "kinds": [
+   "mark"
+  ],
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "governing_kind": "withhold",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "which has a mouse and a mousepad",
+    "placements": [
+     [
+      "arg:2:cancel_pending_order:reason",
+      "\"ordered by mistake\""
+     ],
+     [
+      "arg:2:cancel_pending_order:reason",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_pending_order_items:item_ids",
+   "arg:1:modify_pending_order_items:new_item_ids",
+   "arg:1:modify_pending_order_items:order_id",
+   "arg:1:modify_pending_order_items:payment_method_id",
+   "arg:2:cancel_pending_order:order_id"
+  ],
+  "hidden_slots": [
+   "arg:2:cancel_pending_order:reason"
+  ],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"380 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 960\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"San Diego\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W5056519\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"CA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"92101\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"7902309762\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"1573035764\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W5056519\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3095586\""
+    ],
+    [
+     "arg:2:cancel_pending_order:order_id",
+     "=",
+     "\"#W5995614\""
+    ],
+    [
+     "arg:2:cancel_pending_order:reason",
+     "=",
+     "\"ordered by mistake\""
+    ]
+   ],
+   [
+    [
+     "arg:0:modify_pending_order_address:address1",
+     "=",
+     "\"380 Maple Drive\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:address2",
+     "=",
+     "\"Suite 960\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:city",
+     "=",
+     "\"San Diego\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:country",
+     "=",
+     "\"USA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:order_id",
+     "=",
+     "\"#W5056519\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:state",
+     "=",
+     "\"CA\""
+    ],
+    [
+     "arg:0:modify_pending_order_address:zip",
+     "=",
+     "\"92101\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:item_ids",
+     "=",
+     "[\"7902309762\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"1573035764\"]"
+    ],
+    [
+     "arg:1:modify_pending_order_items:order_id",
+     "=",
+     "\"#W5056519\""
+    ],
+    [
+     "arg:1:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3095586\""
+    ],
+    [
+     "arg:2:cancel_pending_order:order_id",
+     "=",
+     "\"#W5995614\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "8081bc03f6746219"
+ },
+ "signature": {
+  "rule": "ambiguous",
+  "ok": true,
+  "verdict": "ok",
+  "reading_cards": [
+   1,
+   1
+  ],
+  "true_card": 1,
+  "readings": 2
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"380 Maple Drive\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 960\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"San Diego\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W5056519\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"CA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"92101\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:item_ids",
+    "=",
+    "[\"7902309762\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"1573035764\"]"
+   ],
+   [
+    "arg:1:modify_pending_order_items:order_id",
+    "=",
+    "\"#W5056519\""
+   ],
+   [
+    "arg:1:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_3095586\""
+   ],
+   [
+    "arg:2:cancel_pending_order:order_id",
+    "=",
+    "\"#W5995614\""
+   ],
+   [
+    "arg:2:cancel_pending_order:reason",
+    "=",
+    "\"ordered by mistake\""
+   ]
+  ],
+  "hidden_slots": [
+   "arg:2:cancel_pending_order:reason"
+  ]
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

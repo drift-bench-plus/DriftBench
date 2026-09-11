@@ -1,0 +1,177 @@
+{
+ "adapter": "webshop",
+ "cluster": "dried fruits & raisins",
+ "fidelity_notes": [],
+ "goal_idx": 354,
+ "ground_truth": {
+  "cardinality": 12,
+  "hash": "083b45668c5eb07372138e646400ff87",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00Q04M6FM\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B01CUS63OG\",[[\"size\",\"3 pound (pack of 1)\"]]]",
+   "[\"B01N2GSA7X\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B01N5PCA1R\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B01NBXSDS4\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B071GB5H9C\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07CBKJ7TS\",[[\"size\",\"1.37 pound (pack of 1)\"]]]",
+   "[\"B07M7FCJXZ\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07MQBHYD2\",[[\"size\",\"1 pound (pack of 1)\"]]]",
+   "[\"B07Q56R59Q\",[[\"size\",\"2 pound (pack of 1)\"]]]",
+   "[\"B083VBC1M5\",[[\"size\",\"2.75 pound (pack of 1)\"]]]",
+   "[\"B088MCD3V3\",[[\"size\",\"1 pound (pack of 1)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:resealable bag",
+    "=",
+    "resealable bag"
+   ],
+   [
+    "option:0",
+    "=",
+    "1.37 pound (pack of 1)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "40d15c3b06c56b53"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:resealable bag",
+     "=",
+     "resealable bag"
+    ],
+    [
+     "option:0",
+     "=",
+     "1.37 pound (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:resealable bag",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that dried fruits and raisins in resealable bags work really well for snacking on the go, and the 1.37 pound single pack usually stays under 40 dollars.",
+ "render_attempts": 1,
+ "sample_id": "3c437d4887f56681",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the dried fruits & raisins instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "3be01460388e3c38"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the dried fruits & raisins instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "9358e15f7b0fb3fe"
+  },
+  {
+   "announcement": "Also, it needs to be ready eat.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "42d537842bdf4f38"
+  },
+  {
+   "announcement": "Also, it needs to be artificial colors.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5f499918480179da"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1713cb466a201cb9"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bd584204725efe5b"
+  },
+  {
+   "announcement": "Actually, make it 1 lb instead of 1.37 pound (pack of 1).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1d3e0d4bd20fa9b0"
+  },
+  {
+   "announcement": "Actually, make it 0.75 ounce (pack of 3) instead of 1.37 pound (pack of 1).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "782825495c8b76b0"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 12,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 12,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for resealable snak club antioxidant trail mix. 5.5oz packs of six.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "e3a31a2e05c746f8",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

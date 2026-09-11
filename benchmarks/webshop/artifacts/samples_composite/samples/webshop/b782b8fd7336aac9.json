@@ -1,0 +1,204 @@
+{
+ "sample_id": "b782b8fd7336aac9",
+ "tree_id": "efcdeaccf2e09c86",
+ "adapter": "webshop",
+ "cluster": "iphone accessories",
+ "goal_idx": 393,
+ "split": "test",
+ "source_instruction": "i'm looking for one aluminum alloy magnetic case phor iphone 13 mini in black",
+ "query": "I\u2019ve heard the magnesium-zinc alloy phone cases hold up way better against scuffs and drops than the flimsy plastic ones, especially for the black model made for the iPhone 13 mini. My roommate mentioned she picked up a really solid one last week for under 40 dollars in the iPhone accessories section, and she\u2019s already dropped her phone twice on the sidewalk without a single scratch on the edges. A bunch of people in my campus phone group chat have been raving about how those cases don\u2019t add that annoying extra bulk that makes smaller phones hard to slip into jeans pockets.",
+ "strategy_ids": [
+  "indirect_intent",
+  "factual_error"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+factual_error",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "oblique"
+  ],
+  "components": [
+   "indirect_intent",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:aluminum alloy"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:aluminum alloy",
+    "aluminum alloy",
+    "magnesium-zinc alloy"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:aluminum alloy"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:aluminum alloy",
+     "=",
+     "magnesium-zinc alloy"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "option:1",
+     "=",
+     "iphone 13 mini"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "c0cc343387beb9e0"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 4,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 4,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "14b2abfb13d4ee17",
+  "conditions": [
+   [
+    "attr:aluminum alloy",
+    "=",
+    "aluminum alloy"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "option:1",
+    "=",
+    "iphone 13 mini"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:aluminum alloy"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 4,
+  "value": [
+   "[\"B08P4N9Z9H\",[[\"color\",\"black\"],[\"size\",\"iphone 12 mini\"]]]",
+   "[\"B09FT4RLLS\",[[\"color\",\"black\"],[\"size\",\"iphone 13\"]]]",
+   "[\"B09JSRB9GR\",[[\"color\",\"black\"],[\"size\",\"iphone 13\"]]]",
+   "[\"B09K7DC3HM\",[[\"color\",\"black\"],[\"size\",\"iphone 13\"]]]"
+  ],
+  "hash": "5a098633172004271dcd71e8d5905706"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "b28b8518a196ebfb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the iphone accessories instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e2332715c61df1bb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the iphone accessories instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "0f6793779cec1fae",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be pro max."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e4c87e4dbd22ed02",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be iphone pro."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "062f37020270a7cf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "fcd1e3263d0d0223",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "89d066b4a1fddba5",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 3. black+multicolor ties instead of black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b4bdbdec85649e2d",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1. black instead of black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

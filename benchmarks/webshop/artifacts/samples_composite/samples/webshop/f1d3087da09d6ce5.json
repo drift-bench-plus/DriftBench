@@ -1,0 +1,212 @@
+{
+ "sample_id": "f1d3087da09d6ce5",
+ "tree_id": "3cce7f25099e220e",
+ "adapter": "webshop",
+ "cluster": "hair coloring products",
+ "goal_idx": 93,
+ "split": "test",
+ "source_instruction": "i'm looking for double sided hair extensions for hair care accessories.",
+ "query": "Hey there, I\u2019m browsing the hair coloring products section right now and I\u2019m looking for some nice double coated hair extensions in shade #ba2 | 60, could you help me find some good options that fit what I\u2019m after? I don\u2019t want anything that feels overpriced for what it is, so just point me to picks that have a really reasonable price tag, yeah?",
+ "strategy_ids": [
+  "factual_error",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+vagueness_subjectivity",
+  "family": "expression+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark"
+  ],
+  "components": [
+   "factual_error",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "factual_error": "attr:double sided"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:double sided",
+    "double sided",
+    "double coated"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:hair extensions",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:double sided",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:double sided",
+     "=",
+     "double coated"
+    ],
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:0",
+     "=",
+     "#ba2 | 60"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "0caa741ded558a51"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 2,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 2,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 5,
+    "true_card": 2,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "b3f2c66bf82264d9",
+  "conditions": [
+   [
+    "attr:double sided",
+    "=",
+    "double sided"
+   ],
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "option:0",
+    "=",
+    "#ba2 | 60"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:double sided",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 2,
+  "value": [
+   "[\"B07TTC374M\",[[\"color\",\"#ba2 | 60\"]]]",
+   "[\"B09BF2F9ST\",[[\"color\",\"#60\"]]]"
+  ],
+  "hash": "e776203e5d6e8110943ca8462d359a5d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "31e0c6bb85ba0947",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair coloring products instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "e684e06a6212b4e3",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair coloring products instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7d010bb1e5ace1c1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be high quality."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e8db70704155d8e0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair scalp."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e8994ee173cc2d63",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ed96aed7eef1557c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cd65c94edafde9e8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #9a instead of #ba2 | 60."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "fe52a14b8fb76b82",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #56 rich medium brown instead of #ba2 | 60."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

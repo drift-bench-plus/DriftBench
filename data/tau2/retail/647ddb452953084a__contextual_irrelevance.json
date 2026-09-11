@@ -1,0 +1,104 @@
+{
+ "sample_id": "647ddb452953084a__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "647ddb452953084a",
+ "query": "I started growing cherry tomatoes on my balcony last month, and the first few just turned bright red today, they taste so much sweeter than the ones I buy at the grocery store. I also found a really nice hand-painted ceramic planter at the weekend flea market, it fits perfectly on the windowsill next to the tomato pots and has little sunflower patterns all over it. My cat even tried to sniff the tomato vines this morning, I had to gently shoo her away so she doesn't knock over the planter by accident. Anyway, I need to modify my pending order #W9348897: please change the items 6117189161, 7453605304, and 3799046073 to 6700049080, 5320792178, and 3234800602, and use the payment method credit_card_8853416 for any adjustment fees from this change.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I started growing cherry tomatoes on my balcony last month, and the first few just turned bright red today, they taste so much sweeter than the ones I buy at the grocery store. I also found a really nice hand-painted ceramic planter at the weekend flea market, it fits perfectly on the windowsill next to the tomato pots and has little sunflower patterns all over it. My cat even tried to sniff the tomato vines this morning, I had to gently shoo her away so she doesn't knock over the planter by accident.",
+  "retained": [
+   "arg:0:modify_pending_order_items:item_ids",
+   "arg:0:modify_pending_order_items:new_item_ids",
+   "arg:0:modify_pending_order_items:order_id",
+   "arg:0:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:modify_pending_order_items:item_ids",
+     "=",
+     "[\"6117189161\",\"7453605304\",\"3799046073\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:new_item_ids",
+     "=",
+     "[\"6700049080\",\"5320792178\",\"3234800602\"]"
+    ],
+    [
+     "arg:0:modify_pending_order_items:order_id",
+     "=",
+     "\"#W9348897\""
+    ],
+    [
+     "arg:0:modify_pending_order_items:payment_method_id",
+     "=",
+     "\"credit_card_8853416\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_items:item_ids",
+    "=",
+    "[\"6117189161\",\"7453605304\",\"3799046073\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"6700049080\",\"5320792178\",\"3234800602\"]"
+   ],
+   [
+    "arg:0:modify_pending_order_items:order_id",
+    "=",
+    "\"#W9348897\""
+   ],
+   [
+    "arg:0:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_8853416\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

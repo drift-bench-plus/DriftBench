@@ -1,0 +1,205 @@
+{
+ "adapter": "webshop",
+ "cluster": "makeup remover",
+ "fidelity_notes": [],
+ "goal_idx": 105,
+ "ground_truth": {
+  "cardinality": 2,
+  "hash": "096bae91e6f6a5a6a59c2e59c350482b",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01M7TXD6R\",[[\"size\",\"25 count (pack of 2)\"]]]",
+   "[\"B08V51WBX6\",[[\"size\",\"3 count (pack of 1)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:sulfate free",
+    "=",
+    "sulfate free"
+   ],
+   [
+    "option:0",
+    "=",
+    "25 count (pack of 2)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "563f7da942ffae49"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "25 count (pack of 2)"
+     ],
+     [
+      "option:0",
+      "a pack that is lightweight in physical weight"
+     ]
+    ],
+    "surface": "light pack"
+   }
+  ],
+  "attempt": 3,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:sulfate free",
+     "=",
+     "sulfate free"
+    ],
+    [
+     "option:0",
+     "=",
+     "25 count (pack of 2)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   [
+    [
+     "attr:sulfate free",
+     "=",
+     "sulfate free"
+    ],
+    [
+     "option:0",
+     "=",
+     "a pack that is lightweight in physical weight"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:sulfate free",
+   "price_upper"
+  ],
+  "spec_id": "23cb6ec2ca4f0011",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a sulfate free makeup remover that comes in a light pack, and I don’t want to spend more than $20 on it.",
+ "render_attempts": 3,
+ "sample_id": "2a4961b8139e3277",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the makeup remover instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7a729cb9fdff023f"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the makeup remover instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b2a1a5eacfdd73cd"
+  },
+  {
+   "announcement": "Also, it needs to be eyelash extension.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "76c708d39457424a"
+  },
+  {
+   "announcement": "Also, it needs to be dead skin.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "81afa151fae47c06"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3f03ccd821bbeafa"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6046e34ed7b4c004"
+  },
+  {
+   "announcement": "Actually, make it 0.25 ounce (pack of 1) instead of 25 count (pack of 2).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1e5477dd2aa6adfb"
+  },
+  {
+   "announcement": "Actually, make it 0.4 ounce (pack of 1) instead of 25 count (pack of 2).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f1ca18c4b1a24712"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   2,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 2,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a 25 pack of micellar makeup remover wipes that are sulfate free.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "84db157ad43497ab",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

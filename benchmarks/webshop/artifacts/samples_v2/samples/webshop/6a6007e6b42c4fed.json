@@ -1,0 +1,175 @@
+{
+ "adapter": "webshop",
+ "cluster": "digital cameras",
+ "fidelity_notes": [],
+ "goal_idx": 181,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "9cc52a7e15ea915683b85712867bad44",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07KTCSG5C\",[]]",
+   "[\"B07N96YVSW\",[]]",
+   "[\"B07S5CVRM3\",[]]",
+   "[\"B07T7399JK\",[]]",
+   "[\"B08L5ZGKCZ\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:optical zoom",
+    "=",
+    "optical zoom"
+   ],
+   [
+    "attr:ultra hd",
+    "=",
+    "ultra hd"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "58b28923f0df7081"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ultra hd",
+     "=",
+     "ultra hd"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:optical zoom",
+     "optical zoom"
+    ],
+    "alternative": null,
+    "condition": null,
+    "text": "optical zoom cameras probably aren’t available in this price range"
+   }
+  ],
+  "retained": [
+   "attr:optical zoom",
+   "attr:ultra hd",
+   "price_upper"
+  ],
+  "spec_id": "cad4cce5ae93e5af",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since optical zoom cameras probably aren’t available in this price range, I’m looking for a digital camera under $20 that has ultra HD quality.",
+ "render_attempts": 1,
+ "sample_id": "6a6007e6b42c4fed",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the digital cameras instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "02f79fc486665f81"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the digital cameras instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0fbdc21648c3ecd2"
+  },
+  {
+   "announcement": "Also, it needs to be memory card.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2ab436ac9c205950"
+  },
+  {
+   "announcement": "Also, it needs to be ac adapter.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "da2f908b79213029"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1e0f6db5b43d27f9"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2fc57d4f8542e40f"
+  },
+  {
+   "announcement": "Actually, make it 80 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5e6bd26b4654fa66"
+  },
+  {
+   "announcement": "Actually, make it 100 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "eea9da11b80f248b"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 57,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a ultra hd digital camera with optical zoom lens.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "4bf3161f1925a51d",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

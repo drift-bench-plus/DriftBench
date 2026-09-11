@@ -1,0 +1,261 @@
+{
+ "sample_id": "f0899f2cf10101d0",
+ "tree_id": "b2894a281f6aafa7",
+ "adapter": "webshop",
+ "cluster": "toothpaste",
+ "goal_idx": 457,
+ "split": "test",
+ "source_instruction": "i'm looking for a toothpaste for teeth whitening in blueberry scent",
+ "query": "Man, I swear the walk over here was way wilder than I planned it to be. I stopped to watch a group of elementary school kids chasing a runaway tabby cat that had stolen a whole cheese stick right out of one kid\u2019s lunch bag, and they were all yelling so loud a barista from the corner shop came out holding a little bowl of tuna to try to coax the cat down from a fire hydrant. I ended up standing there for almost ten minutes laughing because the cat kept darting just out of reach every time someone got close, like it thought this was the best game ever. The cat finally dropped the half-eaten cheese stick and trotted right over to the barista like it hadn\u2019t just caused a whole neighborhood commotion, it was so silly.\nHey, can you help me pick out a toothpaste here? I need one that does tooth desensitizing, I want the blueberry flavor, and oh, make sure it has the American Dental Association accepted seal on it too. I don\u2019t want to go over a reasonable price, nothing too expensive, yeah? Let me know what options you\u2019ve got that fit.",
+ "strategy_ids": [
+  "factual_error",
+  "contextual_irrelevance",
+  "irrelevant_information",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+contextual_irrelevance+irrelevant_information+insufficient_information",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "contextual_irrelevance",
+   "irrelevant_information",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:teeth whitening",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:teeth whitening",
+    "teeth whitening",
+    "tooth desensitizing"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "tooth desensitizing",
+    "condition": [
+     "attr:tooth desensitizing",
+     "=",
+     "tooth desensitizing"
+    ]
+   },
+   {
+    "text": "has the American Dental Association accepted seal on it",
+    "condition": [
+     "attr:ADA accepted",
+     "=",
+     "American Dental Association accepted seal"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Man, I swear the walk over here was way wilder than I planned it to be. I stopped to watch a group of elementary school kids chasing a runaway tabby cat that had stolen a whole cheese stick right out of one kid\u2019s lunch bag, and they were all yelling so loud a barista from the corner shop came out holding a little bowl of tuna to try to coax the cat down from a fire hydrant. I ended up standing there for almost ten minutes laughing because the cat kept darting just out of reach every time someone got close, like it thought this was the best game ever. The cat finally dropped the half-eaten cheese stick and trotted right over to the barista like it hadn\u2019t just caused a whole neighborhood commotion, it was so silly.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:teeth whitening",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:teeth whitening",
+     "=",
+     "tooth desensitizing"
+    ],
+    [
+     "option:0",
+     "=",
+     "blueberry"
+    ],
+    [
+     "attr:tooth desensitizing",
+     "=",
+     "tooth desensitizing"
+    ],
+    [
+     "attr:ADA accepted",
+     "=",
+     "American Dental Association accepted seal"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "2479d307c20004fc"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 25,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 25,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 25,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 31,
+    "true_card": 25,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "a010ac81c363ca1d",
+  "conditions": [
+   [
+    "attr:teeth whitening",
+    "=",
+    "teeth whitening"
+   ],
+   [
+    "option:0",
+    "=",
+    "blueberry"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:teeth whitening",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 25,
+  "value": [
+   "[\"B08LPPWQSH\",[[\"color\",\"blueberry taste\"]]]",
+   "[\"B09CN4ZPZQ\",[[\"flavor name\",\"blueberry\"]]]",
+   "[\"B09D96J2HR\",[[\"color\",\"blueberries\"]]]",
+   "[\"B09DGNDBRM\",[[\"color\",\"12 lower 8 inlaid blue drill set\"]]]",
+   "[\"B09L56MK6J\",[[\"color\",\"blue\"]]]",
+   "[\"B09L5LDQK6\",[[\"color\",\"blue\"]]]",
+   "[\"B09M2SWDNB\",[[\"color\",\"blue\"]]]",
+   "[\"B09NC681PJ\",[[\"color\",\"blue\"]]]",
+   "[\"B09P3LB83H\",[[\"pattern name\",\"blueberry\"]]]",
+   "[\"B09PHL4214\",[[\"color\",\"blueberry\"]]]",
+   "[\"B09PHLSFCP\",[[\"scent\",\"blueberry\"]]]",
+   "[\"B09QPHM761\",[[\"color\",\"blue\"]]]",
+   "[\"B09QQL7S3P\",[[\"color\",\"1pc blue\"]]]",
+   "[\"B09QQM4W65\",[[\"color\",\"blueberry\"]]]",
+   "[\"B09QQMVZ37\",[[\"color\",\"blueberry + passion fruit\"]]]",
+   "[\"B09QXG91MS\",[[\"flavor name\",\"blueberry\"]]]",
+   "[\"B09R3MZ2RT\",[[\"color\",\"blue\"]]]",
+   "[\"B09R3VJLZZ\",[[\"color\",\"2pcs blue\"]]]",
+   "[\"B09R42YXKG\",[[\"color\",\"1pcs blue\"]]]",
+   "[\"B09R9MYMCH\",[[\"color\",\"blue\"]]]",
+   "[\"B09S6JJ43N\",[[\"size\",\"blueberry-bright white\"]]]",
+   "[\"B09S6MW1K1\",[[\"color\",\"blue\"]]]",
+   "[\"B09SB8QZLD\",[[\"color\",\"(blueberry + passion fruit)\"]]]",
+   "[\"B09SCVVTYX\",[[\"color\",\"blueberry + passion fruit\"]]]",
+   "[\"B09SZ5K381\",[[\"color\",\"blueberry\"]]]"
+  ],
+  "hash": "97eb677077ab1e1eecf550f5dccbfea9"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6131833197b2580f",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ee2213fe4b5062d6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the toothpaste instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "22fb45aa9d62758a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy use."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c65b1d3c17f173ee",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be electric toothbrush."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6a2bd68117e8855d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b91cb9d2e07ccb07",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "af7f9d25c95f43f1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 2pcs 50ml instead of blueberry."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cb90bdf142c22029",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 2pcsteeth repair instead of blueberry."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

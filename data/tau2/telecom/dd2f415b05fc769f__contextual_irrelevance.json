@@ -1,0 +1,104 @@
+{
+ "sample_id": "dd2f415b05fc769f__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "dd2f415b05fc769f",
+ "query": "I was walking my golden retriever puppy this morning and he stopped to sniff a whole patch of wild strawberries growing by the sidewalk, he even tried to nibble one and it was so cute I had to stop and take three different videos of him to send to my sister. After that I popped into the little corner caf\u00e9 on my way home and got their new lavender honey iced latte, it\u2019s way better than I thought it would be, they even put a tiny edible flower on top as a garnish. I also remembered I need to pick up a new pack of dog chew toys later today because he destroyed his last one last night trying to play tug of war with the couch cushion. Anyway, I was hoping you could help me figure out why my phone can\u2019t connect to the mobile network at all right now. I checked and airplane mode is turned on, my APN settings seem to be acting up, I think my line might be suspended because I have an overdue bill and my contract just ended, and I wonder if the SIM card might have come unseated too.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever puppy this morning and he stopped to sniff a whole patch of wild strawberries growing by the sidewalk, he even tried to nibble one and it was so cute I had to stop and take three different videos of him to send to my sister. After that I popped into the little corner caf\u00e9 on my way home and got their new lavender honey iced latte, it\u2019s way better than I thought it would be, they even put a tiny edible flower on top as a garnish. I also remembered I need to pick up a new pack of dog chew toys later today because he destroyed his last one last night trying to play tug of war with the couch cushion.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_apn_settings",
+   "fault:contract_end_suspension",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:contract_end_suspension",
+     "=",
+     "contract_end_suspension"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:contract_end_suspension",
+    "=",
+    "contract_end_suspension"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,181 @@
+{
+ "adapter": "webshop",
+ "cluster": "iphone accessories",
+ "fidelity_notes": [],
+ "goal_idx": 246,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "9f922a65c847bce1a6968376521b3107",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B081ZJKF2F\",[[\"color\",\"c-grey\"]]]",
+   "[\"B08BP6P1TM\",[[\"color\",\"grey | white marble\"]]]",
+   "[\"B08GP9KQ2L\",[[\"color\",\"grey | rose\"]]]",
+   "[\"B09KZ4FFDP\",[[\"color\",\"d-grey\"]]]",
+   "[\"B09KZNFD8T\",[[\"color\",\"d-grey\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:case cover",
+    "=",
+    "case cover"
+   ],
+   [
+    "attr:compatible apple",
+    "=",
+    "compatible apple"
+   ],
+   [
+    "option:0",
+    "=",
+    "d-grey"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "b28b8518a196ebfb"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:case cover",
+     "=",
+     "case cover"
+    ],
+    [
+     "attr:compatible apple",
+     "=",
+     "compatible apple"
+    ],
+    [
+     "option:0",
+     "=",
+     "d-grey"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just finished planting a batch of rainbow cherry tomato seedlings on my balcony this morning, and I’ve been fussing over whether the small grow light I picked up last week is strong enough to keep them from getting leggy as the weather stays cloudy. I also spent twenty minutes rearranging my succulent shelf to make sure each plant gets just the right amount of indirect sunlight, and I’m thinking about picking up a few tiny decorative garden stakes to mark the tomato rows later this week.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:case cover",
+   "attr:compatible apple",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just finished planting a batch of rainbow cherry tomato seedlings on my balcony this morning, and I’ve been fussing over whether the small grow light I picked up last week is strong enough to keep them from getting leggy as the weather stays cloudy. I also spent twenty minutes rearranging my succulent shelf to make sure each plant gets just the right amount of indirect sunlight, and I’m thinking about picking up a few tiny decorative garden stakes to mark the tomato rows later this week. I’m looking for an iPhone case cover that’s compatible with Apple devices, in dark grey, with a price limit of $20, in the iPhone accessories section.",
+ "render_attempts": 1,
+ "sample_id": "ac7ec68b9678cfbe",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the iphone accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "14b2abfb13d4ee17"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the iphone accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e2332715c61df1bb"
+  },
+  {
+   "announcement": "Also, it needs to be dust proof.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1c3a64b5cea3865b"
+  },
+  {
+   "announcement": "Also, it needs to be easy carry.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b33efdf173634046"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "126d738cf41914b3"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "76eba0de596a9cfd"
+  },
+  {
+   "announcement": "Actually, make it 1. black instead of d-grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "99b1f35e4ede5728"
+  },
+  {
+   "announcement": "Actually, make it 3. black+multicolor ties instead of d-grey.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "aeffce7ddd6eb7bd"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 5,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a  grey protective airpods 3  case cover which is compatible with apple.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "7369755e5ef71902",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

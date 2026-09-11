@@ -1,0 +1,209 @@
+{
+ "sample_id": "f6912b72baa6b335",
+ "tree_id": "1efd6434839f8d4f",
+ "adapter": "webshop",
+ "cluster": "breakfast foods",
+ "goal_idx": 388,
+ "split": "test",
+ "source_instruction": "i am looking for a low carbohydrates protein bar with package of 12 counts.",
+ "query": "The community garden plot I\u2019ve been tending since early spring is finally popping off in the best way this week. The sun-warmed cherry tomato vines are so heavy with fruit I had to prop them up with old paint stirrers I found in my garage last weekend, and the clumps of bright orange marigolds I planted along the edges to keep pests away are drawing so many fuzzy bumblebees I\u2019ve started pausing for five minutes every time I stop by just to watch them bumble from bloom to bloom. Last night I even spotted a tiny baby cottontail rabbit sitting right by the garden fence, munching on a stray dandelion like it owned the whole place, and I had to stand totally still for two whole minutes so I didn\u2019t scare it off before it hopped back into the overgrown empty lot next door. Right now I\u2019m browsing the breakfast foods section, and I know there are 12 count box of low sugar items in this area. I\u2019ve heard those options fit really well for folks who don\u2019t want to spend too much, since they\u2019re the kind of stuff that won\u2019t break the bank. I\u2019ve also heard those exact picks align really well when someone is really trying to stick to their meal plan right now, since the right count and that diet fit are super important for that kind of routine.",
+ "strategy_ids": [
+  "indirect_intent",
+  "contextual_irrelevance",
+  "factual_error",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+contextual_irrelevance+factual_error+insufficient_information",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "indirect_intent",
+   "contextual_irrelevance",
+   "factual_error",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:low carb",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:low carb",
+    "low carb",
+    "low sugar"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "The community garden plot I\u2019ve been tending since early spring is finally popping off in the best way this week. The sun-warmed cherry tomato vines are so heavy with fruit I had to prop them up with old paint stirrers I found in my garage last weekend, and the clumps of bright orange marigolds I planted along the edges to keep pests away are drawing so many fuzzy bumblebees I\u2019ve started pausing for five minutes every time I stop by just to watch them bumble from bloom to bloom. Last night I even spotted a tiny baby cottontail rabbit sitting right by the garden fence, munching on a stray dandelion like it owned the whole place, and I had to stand totally still for two whole minutes so I didn\u2019t scare it off before it hopped back into the overgrown empty lot next door.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:low carb",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low carb",
+     "=",
+     "low sugar"
+    ],
+    [
+     "option:0",
+     "=",
+     "12 count"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "e28db71db220798c"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 7,
+  "lit_card": 6,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 5,
+    "true_card": 7,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 8,
+    "true_card": 7,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "20dd7cfec853f571",
+  "conditions": [
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "option:0",
+    "=",
+    "12 count"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:low carb",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 7,
+  "value": [
+   "[\"B016MEN14O\",[[\"size\",\"12 count\"]]]",
+   "[\"B01LPCLEWY\",[[\"size\",\"12 count\"]]]",
+   "[\"B07GY4FK2W\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B07YSWT2N1\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B082X86HD5\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B084JRK94V\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B08BW4HZ7R\",[[\"size\",\"12 count (pack of 1)\"]]]"
+  ],
+  "hash": "29fdd54f5ee7fe83e5591d3eac7f8638"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "85251a87f89861a6",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breakfast foods instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "c7ffade20e378f4e",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the breakfast foods instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "665882adf42ee6f7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be artificial flavors."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "db6b38f24984e87b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be brown rice."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4ffca32d859a1bed",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "aa9208beee49f9fc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3ccd70b7d7c46649",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pound instead of 12 count."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f2d1ebc23dc8b8e0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pack instead of 12 count."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

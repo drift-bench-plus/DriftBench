@@ -1,0 +1,198 @@
+{
+ "adapter": "webshop",
+ "cluster": "window coverings",
+ "fidelity_notes": [],
+ "goal_idx": 374,
+ "ground_truth": {
+  "cardinality": 33,
+  "hash": "c012ccba8c24ffd5dddb5600e8941fb0",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B004ZD2AL0\",[[\"color\",\"purple\"]]]",
+   "[\"B015KMIG9E\",[[\"color\",\"royal purple\"]]]",
+   "[\"B015SJ7RYY\",[[\"color\",\"royal purple\"]]]",
+   "[\"B018S0G29G\",[[\"color\",\"purple b | 39.4\\\" x 106.3\\\"\"]]]",
+   "[\"B01GSP6K4A\",[[\"color\",\"purple\"]]]",
+   "[\"B01MT490XO\",[[\"color\",\"purple\"]]]",
+   "[\"B01N4I10YJ\",[[\"color\",\"royal purple\"]]]",
+   "[\"B07CCJBGL8\",[[\"color\",\"purple\"]]]",
+   "[\"B07CJH69NS\",[[\"color\",\"royal purple\"]]]",
+   "[\"B07CQZG3H7\",[[\"color\",\"royal purple\"]]]",
+   "[\"B07F32DC8L\",[[\"color\",\"purple\"]]]",
+   "[\"B07HRFXQHB\",[[\"color\",\"purple\"]]]",
+   "[\"B07KG17GP4\",[[\"color\",\"purple\"]]]",
+   "[\"B07RRH1WZ1\",[[\"color\",\"purple\"]]]",
+   "[\"B07SCXJ17G\",[[\"color\",\"purple | rod pocket\"]]]",
+   "[\"B07VLY2YRW\",[[\"color\",\"purple\"]]]",
+   "[\"B07WF9RJD3\",[[\"color\",\"royal purple\"]]]",
+   "[\"B07XBYWBJD\",[[\"color\",\"purple\"]]]",
+   "[\"B08216Z7RW\",[[\"color\",\"purple\"]]]",
+   "[\"B088CZ7FCS\",[[\"color\",\"purple\"]]]",
+   "[\"B08LG7LPB7\",[[\"color\",\"purple\"]]]",
+   "[\"B08MTHDDQJ\",[[\"color\",\"royal purple\"]]]",
+   "[\"B08MVXC9NP\",[[\"color\",\"purple\"]]]",
+   "[\"B08QZJ7W6V\",[[\"color\",\"purple\"]]]",
+   "[\"B08V8HCY21\",[[\"color\",\"purple orchid\"]]]",
+   "[\"B08XM8Z77C\",[[\"color\",\"purple\"]]]",
+   "[\"B09197QTLQ\",[[\"color\",\"purple\"]]]",
+   "[\"B091DP58ZK\",[[\"color\",\"purple\"]]]",
+   "[\"B092M91N7R\",[[\"color\",\"purple\"]]]",
+   "[\"B094DNS9M1\",[[\"color\",\"purple\"]]]",
+   "[\"B095YV2F3S\",[[\"color\",\"3-purple\"]]]",
+   "[\"B09CYFZJ1N\",[[\"color\",\"purple\"]]]",
+   "[\"B09GLWBYY5\",[[\"color\",\"purple\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy install",
+    "=",
+    "easy install"
+   ],
+   [
+    "option:0",
+    "=",
+    "royal purple"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "da7c1d7cc1166522"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "insufficient_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "parameter",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "withhold"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy install",
+     "=",
+     "easy install"
+    ],
+    [
+     "option:0",
+     "=",
+     "royal purple"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "withhold",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy install",
+   "option:0"
+  ],
+  "spec_id": "c823de44de5012d2",
+  "strategy_id": "insufficient_information",
+  "substituted": [],
+  "withheld": [
+   "price_upper"
+  ]
+ },
+ "misalignments": 1,
+ "query": "I'm looking for window coverings that are easy to install in royal purple, could you help me find some options?",
+ "render_attempts": 1,
+ "sample_id": "ac7513b45e76af3b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the window coverings instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4320bc1a7db3f1da"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the window coverings instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "55eaa6a799a5c634"
+  },
+  {
+   "announcement": "Also, it needs to be non slip.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "94b7d15ddd860a51"
+  },
+  {
+   "announcement": "Also, it needs to be contemporary style.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9766c31e2bfc300f"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "96a46e16a898e380"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f9bf3e1aef54cd79"
+  },
+  {
+   "announcement": "Actually, make it (16.5\"x47.2\")42x120cm instead of royal purple.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3ccf0187455d85c8"
+  },
+  {
+   "announcement": "Actually, make it #13 instead of royal purple.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e3c5b0b2d18d3f9c"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 38,
+  "ok": true,
+  "rule": "withheld",
+  "true_card": 33,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for royal purple blackout curtains that are easy to install.",
+ "split": "test",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "tree_id": "be79d2c80db1ccdd",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

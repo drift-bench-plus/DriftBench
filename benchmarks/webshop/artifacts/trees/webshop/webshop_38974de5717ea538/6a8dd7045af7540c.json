@@ -1,0 +1,1279 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B01HHRRDTO",
+    "cluster": "body care",
+    "name": "Dr. Jacobs Naturals Pure Castile Liquid Soap - Vegan, No Palm Oil, GMO Free - Multi-Purpose for Face, Hair, Laundry and Dishes - Hypoallergenic and Dermatologist Approved (Shea Butter Soap, 32 Oz (Pack of 1)",
+    "product_category": "Beauty & Personal Care › Skin Care › Body › Cleansers › Soaps"
+   },
+   "bound_slots": [
+    "attr:dry skin",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "charcoal"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "303a5325e7ab96918d93285d67ac5f82",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00X5JR1RS\",[[\"scent\",\"charcoal\"]]]",
+     "[\"B01HHRRDTO\",[[\"scent\",\"charcoal\"]]]",
+     "[\"B07J2QWJZ8\",[[\"scent\",\"charcoal, kaolin & oatmeal\"]]]",
+     "[\"B07PVL67PJ\",[[\"scent\",\"pink clay & charcoal\"]]]",
+     "[\"B08KXZSVKS\",[[\"scent\",\"activated charcoal\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "b7549c1d6038c0f0",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "body care",
+    "goal": {
+     "asin": "B01HHRRDTO",
+     "attributes": [
+      "dry skin"
+     ],
+     "category": "",
+     "goal_options": [
+      "charcoal"
+     ],
+     "name": "Dr. Jacobs Naturals Pure Castile Liquid Soap - Vegan, No Palm Oil, GMO Free - Multi-Purpose for Face, Hair, Laundry and Dishes - Hypoallergenic and Dermatologist Approved (Shea Butter Soap, 32 Oz (Pack of 1)",
+     "price_upper": 30,
+     "product_category": "Beauty & Personal Care › Skin Care › Body › Cleansers › Soaps",
+     "query": "body care"
+    }
+   },
+   "source_record": "21b4c3373f962722",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07DZW6GQV",
+    "cluster": "body care",
+    "name": "Jergens Deep Restoring Argan Oil Moisturizer, Soothing Body and Hand Lotion, 16.8 Ounce, with Reviving Argan Oil and Vitamin E, Oil-Infused, Dermatologist Tested",
+    "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions"
+   },
+   "bound_slots": [
+    "attr:argan oil",
+    "attr:long lasting",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:long lasting",
+     "=",
+     "long lasting"
+    ],
+    [
+     "option:0",
+     "=",
+     "16.8 fl oz (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "65ce24e671fe587b1a2983664a82bdb3",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07DZW6GQV\",[[\"size\",\"16.8 fl oz (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "44da8667d447c513",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "body care",
+    "goal": {
+     "asin": "B07DZW6GQV",
+     "attributes": [
+      "long lasting",
+      "argan oil"
+     ],
+     "category": "",
+     "goal_options": [
+      "16.8 fl oz (pack of 1)"
+     ],
+     "name": "Jergens Deep Restoring Argan Oil Moisturizer, Soothing Body and Hand Lotion, 16.8 Ounce, with Reviving Argan Oil and Vitamin E, Oil-Infused, Dermatologist Tested",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions",
+     "query": "body care"
+    }
+   },
+   "source_record": "22e77e30f4872971",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B087Y28XLM",
+    "cluster": "body care",
+    "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+    "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions"
+   },
+   "bound_slots": [
+    "attr:clinically proven",
+    "attr:dry skin",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:clinically proven",
+     "=",
+     "clinically proven"
+    ],
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "fresh"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "5392e0027476b9e7cb6b91854482867e",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0837311RV\",[[\"scent\",\"active + fresh\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "89313d391a559d1d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "body care",
+    "goal": {
+     "asin": "B087Y28XLM",
+     "attributes": [
+      "clinically proven",
+      "dry skin"
+     ],
+     "category": "",
+     "goal_options": [
+      "fresh"
+     ],
+     "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions",
+     "query": "body care"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B087Y28XLM",
+    "cluster": "body care",
+    "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+    "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions"
+   },
+   "bound_slots": [
+    "attr:dry skin",
+    "attr:gluten free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "fresh"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "a68f1294733af4f86b17ae85efab2457",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07NNXYHNM\",[[\"scent\",\"invigorating ocean-fresh fragrance\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "472cbbfd796b790d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "body care",
+    "goal": {
+     "asin": "B087Y28XLM",
+     "attributes": [
+      "dry skin",
+      "gluten free"
+     ],
+     "category": "",
+     "goal_options": [
+      "fresh"
+     ],
+     "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions",
+     "query": "body care"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B087Y28XLM",
+    "cluster": "body care",
+    "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+    "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions"
+   },
+   "bound_slots": [
+    "attr:dry skin",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "919e3bb0d6c9bdcea69cd615f8403b81",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000052YOR\",[]]",
+     "[\"B000056W74\",[]]",
+     "[\"B00008BK7H\",[]]",
+     "[\"B0007PJRA2\",[]]",
+     "[\"B0009F3O8Q\",[]]",
+     "[\"B0009VQ8J2\",[]]",
+     "[\"B000ALFTSC\",[]]",
+     "[\"B000FQNP9W\",[]]",
+     "[\"B000GFSQV4\",[]]",
+     "[\"B000NURPK0\",[]]",
+     "[\"B000NW9YTS\",[]]",
+     "[\"B000ODNSR0\",[]]",
+     "[\"B000OYNCES\",[]]",
+     "[\"B000S97N5S\",[]]",
+     "[\"B000URYTTQ\",[]]",
+     "[\"B000UXPBJM\",[]]",
+     "[\"B000YJ2SLG\",[]]",
+     "[\"B00112AEN4\",[]]",
+     "[\"B0011DJICG\",[]]",
+     "[\"B00120XR1G\",[]]",
+     "[\"B00143UYJE\",[]]",
+     "[\"B001441QCW\",[]]",
+     "[\"B001459IEE\",[]]",
+     "[\"B00153BLAO\",[]]",
+     "[\"B00171ETM6\",[]]",
+     "[\"B0017QA4EI\",[]]",
+     "[\"B001B0ZZFS\",[]]",
+     "[\"B001E6OCO4\",[]]",
+     "[\"B001ECQ4IU\",[]]",
+     "[\"B001ECQ51G\",[]]",
+     "[\"B002LM3MXW\",[]]",
+     "[\"B002TSA90C\",[]]",
+     "[\"B002TSA90M\",[]]",
+     "[\"B002TSA90W\",[]]",
+     "[\"B002TSA91Q\",[]]",
+     "[\"B002TSA948\",[]]",
+     "[\"B0030GMBNK\",[]]",
+     "[\"B0034F9K36\",[]]",
+     "[\"B0037LOTQU\",[]]",
+     "[\"B003A86J18\",[]]",
+     "[\"B003BMJGKE\",[]]",
+     "[\"B003MX06ME\",[]]",
+     "[\"B003QXZWYW\",[]]",
+     "[\"B003XX0KG0\",[]]",
+     "[\"B004K0WINI\",[]]",
+     "[\"B004LH2N6C\",[]]",
+     "[\"B004QIVX26\",[]]",
+     "[\"B004U77PZC\",[]]",
+     "[\"B004VR80SW\",[]]",
+     "[\"B004X8IZHU\",[]]",
+     "[\"B005C2NA4E\",[]]",
+     "[\"B005C2NB3O\",[]]",
+     "[\"B005IHMEHM\",[]]",
+     "[\"B005IHSUIE\",[]]",
+     "[\"B005LY63AQ\",[]]",
+     "[\"B005XIM2O6\",[]]",
+     "[\"B0067H6G26\",[]]",
+     "[\"B006G83XG8\",[]]",
+     "[\"B007K8Q6CQ\",[]]",
+     "[\"B0081GQ5K4\",[]]",
+     "[\"B009EE9JFK\",[]]",
+     "[\"B009FKGESI\",[]]",
+     "[\"B009RNUH4A\",[]]",
+     "[\"B00A1D94NU\",[]]",
+     "[\"B00AD46X3Q\",[]]",
+     "[\"B00AHH00MO\",[]]",
+     "[\"B00B1GW7J4\",[]]",
+     "[\"B00B22BCK2\",[]]",
+     "[\"B00BB683XS\",[]]",
+     "[\"B00BQYF21G\",[]]",
+     "[\"B00CBKZ5PM\",[]]",
+     "[\"B00COLNTI8\",[]]",
+     "[\"B00D3OOPGK\",[]]",
+     "[\"B00D7BZNT2\",[]]",
+     "[\"B00D86VL1U\",[]]",
+     "[\"B00DEX61A8\",[]]",
+     "[\"B00DG8EZKO\",[]]",
+     "[\"B00DG8EZY0\",[]]",
+     "[\"B00DG8F02Q\",[]]",
+     "[\"B00DH22OMU\",[]]",
+     "[\"B00DYZDTP6\",[]]",
+     "[\"B00F2IY8HQ\",[]]",
+     "[\"B00FBFCLII\",[]]",
+     "[\"B00FQ1I17M\",[]]",
+     "[\"B00FU78S8E\",[]]",
+     "[\"B00GBH8TBS\",[]]",
+     "[\"B00GGBUKG6\",[]]",
+     "[\"B00GHNYKM8\",[]]",
+     "[\"B00GIACLRQ\",[]]",
+     "[\"B00GXPMRTS\",[]]",
+     "[\"B00H35BV2G\",[]]",
+     "[\"B00HFG0FAM\",[]]",
+     "[\"B00HUDR8Q4\",[]]",
+     "[\"B00IJ6U6UQ\",[]]",
+     "[\"B00J4YWNKI\",[]]",
+     "[\"B00JB9GZMI\",[]]",
+     "[\"B00JB9H6KI\",[]]",
+     "[\"B00JBA87GE\",[]]",
+     "[\"B00JEMRGE8\",[]]",
+     "[\"B00JGQDFQK\",[]]",
+     "[\"B00K881X5A\",[]]",
+     "[\"B00KCDC0EY\",[]]",
+     "[\"B00L5O31W4\",[]]",
+     "[\"B00M1WAH12\",[]]",
+     "[\"B00NAF77I0\",[]]",
+     "[\"B00NFULZW4\",[]]",
+     "[\"B00NTR91UG\",[]]",
+     "[\"B00NWO3HJM\",[]]",
+     "[\"B00O19V5SC\",[]]",
+     "[\"B00OCJ0ZKA\",[]]",
+     "[\"B00OQ1ZKO0\",[]]",
+     "[\"B00OW9OU2O\",[]]",
+     "[\"B00P9FD2KG\",[]]",
+     "[\"B00PCURCYA\",[]]",
+     "[\"B00PISDSJY\",[]]",
+     "[\"B00SF8YKI2\",[]]",
+     "[\"B00SKEBWN2\",[]]",
+     "[\"B00TLVEDQQ\",[]]",
+     "[\"B00VUNFLM8\",[]]",
+     "[\"B00VWLGXQQ\",[]]",
+     "[\"B00VYW89KG\",[]]",
+     "[\"B00X5JR1RS\",[]]",
+     "[\"B00XBGOPEW\",[]]",
+     "[\"B00XWBE0PK\",[]]",
+     "[\"B00YSZPLFW\",[]]",
+     "[\"B00YXXPZLO\",[]]",
+     "[\"B00ZANSQ1W\",[]]",
+     "[\"B0107QOYIK\",[]]",
+     "[\"B0107QOZR0\",[]]",
+     "[\"B010KPYVN6\",[]]",
+     "[\"B0119FXTOS\",[]]",
+     "[\"B011PS7WZG\",[]]",
+     "[\"B01284USLG\",[]]",
+     "[\"B013F43X7O\",[]]",
+     "[\"B013TS9BHM\",[]]",
+     "[\"B0142NBHKM\",[]]",
+     "[\"B014JPFE0W\",[]]",
+     "[\"B014PHT7FW\",[]]",
+     "[\"B014UUZ1FE\",[]]",
+     "[\"B015ORMEP2\",[]]",
+     "[\"B01761062W\",[]]",
+     "[\"B017610BG8\",[]]",
+     "[\"B017WJUNAS\",[]]",
+     "[\"B0186TZYPC\",[]]",
+     "[\"B019HLVEE8\",[]]",
+     "[\"B019VK0NJM\",[]]",
+     "[\"B019XVXWME\",[]]",
+     "[\"B01A1KLOWQ\",[]]",
+     "[\"B01ACX10BW\",[]]",
+     "[\"B01D54LQMS\",[]]",
+     "[\"B01DIXHNUU\",[]]",
+     "[\"B01DPRGZEY\",[]]",
+     "[\"B01DWIKZUQ\",[]]",
+     "[\"B01G74IV30\",[]]",
+     "[\"B01H6OYPU8\",[]]",
+     "[\"B01HE1IXBU\",[]]",
+     "[\"B01HHRRDTO\",[]]",
+     "[\"B01HOHBDT8\",[]]",
+     "[\"B01HOHBEHY\",[]]",
+     "[\"B01HSOCSJQ\",[]]",
+     "[\"B01HTJTS52\",[]]",
+     "[\"B01HTJTV0E\",[]]",
+     "[\"B01HTJTV40\",[]]",
+     "[\"B01HTJTV4U\",[]]",
+     "[\"B01IMEJV5U\",[]]",
+     "[\"B01J5GC24Q\",[]]",
+     "[\"B01J6OD4LC\",[]]",
+     "[\"B01J9S17NW\",[]]",
+     "[\"B01KCJAF3U\",[]]",
+     "[\"B01KJGUUHM\",[]]",
+     "[\"B01LTHZTZS\",[]]",
+     "[\"B01M047N2Q\",[]]",
+     "[\"B01MDLPLB1\",[]]",
+     "[\"B01MG4OX6Q\",[]]",
+     "[\"B01MUQDBOL\",[]]",
+     "[\"B01N212GZ8\",[]]",
+     "[\"B01N23LACY\",[]]",
+     "[\"B01N7TYBKS\",[]]",
+     "[\"B01NCTLD7X\",[]]",
+     "[\"B06X3X7YZC\",[]]",
+     "[\"B06XKWVGQZ\",[]]",
+     "[\"B07174XJ3X\",[]]",
+     "[\"B071LGB9RW\",[]]",
+     "[\"B071VP6155\",[]]",
+     "[\"B071ZND533\",[]]",
+     "[\"B073CXZ8KR\",[]]",
+     "[\"B073CYHHHW\",[]]",
+     "[\"B073CYL9C3\",[]]",
+     "[\"B073TPFHH9\",[]]",
+     "[\"B0746LQ3GC\",[]]",
+     "[\"B074HHKNRT\",[]]",
+     "[\"B07555X71Z\",[]]",
+     "[\"B075CC21KR\",[]]",
+     "[\"B075G3RJDZ\",[]]",
+     "[\"B075X2KL5C\",[]]",
+     "[\"B075X4LYNK\",[]]",
+     "[\"B0769XY12N\",[]]",
+     "[\"B076FZCQ1N\",[]]",
+     "[\"B076G2LGJR\",[]]",
+     "[\"B076G2XGY3\",[]]",
+     "[\"B076MGQ5SW\",[]]",
+     "[\"B076PL38NZ\",[]]",
+     "[\"B076S9XDTJ\",[]]",
+     "[\"B076V5SG5W\",[]]",
+     "[\"B076ZY83R7\",[]]",
+     "[\"B0777R71ZT\",[]]",
+     "[\"B0779BY2S1\",[]]",
+     "[\"B077S5V7NY\",[]]",
+     "[\"B07888JFYW\",[]]",
+     "[\"B078J3XKSH\",[]]",
+     "[\"B078KGWD2P\",[]]",
+     "[\"B078WJ29T8\",[]]",
+     "[\"B078X1SZYM\",[]]",
+     "[\"B07938VPPH\",[]]",
+     "[\"B0795S9VMF\",[]]",
+     "[\"B079GXPL7J\",[]]",
+     "[\"B079LYGBY3\",[]]",
+     "[\"B079Z3NG8R\",[]]",
+     "[\"B07B7FVFBX\",[]]",
+     "[\"B07BDQ2413\",[]]",
+     "[\"B07BYD8JZT\",[]]",
+     "[\"B07C1JKQWJ\",[]]",
+     "[\"B07C38DN2Z\",[]]",
+     "[\"B07C3BHPSX\",[]]",
+     "[\"B07CB6DGMY\",[]]",
+     "[\"B07CGFGY4G\",[]]",
+     "[\"B07CL7VT2D\",[]]",
+     "[\"B07CSZL7H3\",[]]",
+     "[\"B07CT2JL8L\",[]]",
+     "[\"B07DJPC8JB\",[]]",
+     "[\"B07DQX9B7G\",[]]",
+     "[\"B07DZW6GQV\",[]]",
+     "[\"B07F2GTD63\",[]]",
+     "[\"B07FHM1XJC\",[]]",
+     "[\"B07FK8YR27\",[]]",
+     "[\"B07FKQGN7F\",[]]",
+     "[\"B07FPXFX6F\",[]]",
+     "[\"B07FTC3ZPL\",[]]",
+     "[\"B07G7CP2P8\",[]]",
+     "[\"B07G81VJQ8\",[]]",
+     "[\"B07G8LT2PJ\",[]]",
+     "[\"B07GNYY6SK\",[]]",
+     "[\"B07GQ6JRGL\",[]]",
+     "[\"B07H6CF9W6\",[]]",
+     "[\"B07H7DLGSW\",[]]",
+     "[\"B07HG11L24\",[]]",
+     "[\"B07HRJRD5C\",[]]",
+     "[\"B07HS1G1SZ\",[]]",
+     "[\"B07HW27FZ4\",[]]",
+     "[\"B07J2W1QZ6\",[]]",
+     "[\"B07JKZW68H\",[]]",
+     "[\"B07JQGCMXW\",[]]",
+     "[\"B07JRDBY87\",[]]",
+     "[\"B07JYL8GPN\",[]]",
+     "[\"B07KKN3X23\",[]]",
+     "[\"B07KMHDDT5\",[]]",
+     "[\"B07L2GZ1YN\",[]]",
+     "[\"B07LC29N55\",[]]",
+     "[\"B07LCTZJ7G\",[]]",
+     "[\"B07LG9ZSX3\",[]]",
+     "[\"B07M7ZVC89\",[]]",
+     "[\"B07N8XR8C4\",[]]",
+     "[\"B07N9M4N54\",[]]",
+     "[\"B07NFHYCT8\",[]]",
+     "[\"B07NJNZYQT\",[]]",
+     "[\"B07NNXYHNM\",[]]",
+     "[\"B07NQG7QMC\",[]]",
+     "[\"B07NQLWYZB\",[]]",
+     "[\"B07NQMSKJL\",[]]",
+     "[\"B07P6S8LXS\",[]]",
+     "[\"B07PN45P39\",[]]",
+     "[\"B07PVL67PJ\",[]]",
+     "[\"B07Q58TC99\",[]]",
+     "[\"B07Q6D1KM6\",[]]",
+     "[\"B07QJ2CPGF\",[]]",
+     "[\"B07QVKNDHX\",[]]",
+     "[\"B07R8WZR55\",[]]",
+     "[\"B07RDW47T3\",[]]",
+     "[\"B07RS4Y5CS\",[]]",
+     "[\"B07SCHGT9K\",[]]",
+     "[\"B07SGCQCX7\",[]]",
+     "[\"B07SJVNJRL\",[]]",
+     "[\"B07SM1XPPJ\",[]]",
+     "[\"B07SM1XY1F\",[]]",
+     "[\"B07SVQFHYX\",[]]",
+     "[\"B07T6GLP3P\",[]]",
+     "[\"B07TFHZT47\",[]]",
+     "[\"B07TR75W9H\",[]]",
+     "[\"B07TSQCBR4\",[]]",
+     "[\"B07V37Q629\",[]]",
+     "[\"B07WJRNSZB\",[]]",
+     "[\"B07WLP2YV1\",[]]",
+     "[\"B07WX17RZN\",[]]",
+     "[\"B07X5MY8ZW\",[]]",
+     "[\"B07YFB2PB3\",[]]",
+     "[\"B0822ZBSKW\",[]]",
+     "[\"B082BM4Y4C\",[]]",
+     "[\"B082HSL1JT\",[]]",
+     "[\"B082QB23YG\",[]]",
+     "[\"B082QBPDJB\",[]]",
+     "[\"B082QBTGHM\",[]]",
+     "[\"B082QBX9R5\",[]]",
+     "[\"B082QBYY9V\",[]]",
+     "[\"B082QC2MCX\",[]]",
+     "[\"B082QC99ZM\",[]]",
+     "[\"B0837311RV\",[]]",
+     "[\"B083S3PF2J\",[]]",
+     "[\"B083VXCGXM\",[]]",
+     "[\"B083ZLXJKW\",[]]",
+     "[\"B084BZTK2D\",[]]",
+     "[\"B0854FX69C\",[]]",
+     "[\"B085LTMR4L\",[]]",
+     "[\"B08622PXXC\",[]]",
+     "[\"B086DFCS3V\",[]]",
+     "[\"B086K1S96X\",[]]",
+     "[\"B086LJQNB2\",[]]",
+     "[\"B0873QZGH9\",[]]",
+     "[\"B0875R9D9Q\",[]]",
+     "[\"B087J1RF24\",[]]",
+     "[\"B087Y28XLM\",[]]",
+     "[\"B0893678YK\",[]]",
+     "[\"B08938V1B6\",[]]",
+     "[\"B089N6B4ST\",[]]",
+     "[\"B08BB4HXT3\",[]]",
+     "[\"B08BJVHYSC\",[]]",
+     "[\"B08BTG811J\",[]]",
+     "[\"B08BX93ZHP\",[]]",
+     "[\"B08CVTZ9LH\",[]]",
+     "[\"B08D43LHYP\",[]]",
+     "[\"B08DBZ3486\",[]]",
+     "[\"B08DCFRLQ8\",[]]",
+     "[\"B08DDYN4GB\",[]]",
+     "[\"B08DF1N618\",[]]",
+     "[\"B08DJFDRWV\",[]]",
+     "[\"B08DVDRB9C\",[]]",
+     "[\"B08DYGBLBF\",[]]",
+     "[\"B08FBXQLWH\",[]]",
+     "[\"B08FMN2QG8\",[]]",
+     "[\"B08FXDTL9V\",[]]",
+     "[\"B08G63Z72X\",[]]",
+     "[\"B08GCHR39G\",[]]",
+     "[\"B08H5NM3B8\",[]]",
+     "[\"B08HDP7N3Z\",[]]",
+     "[\"B08JN9V2MY\",[]]",
+     "[\"B08JP4P5Y2\",[]]",
+     "[\"B08JRTPCSN\",[]]",
+     "[\"B08JYLSJSH\",[]]",
+     "[\"B08KH83TRT\",[]]",
+     "[\"B08KWPT6QT\",[]]",
+     "[\"B08KXZSVKS\",[]]",
+     "[\"B08LCK7N24\",[]]",
+     "[\"B08LCLKBYQ\",[]]",
+     "[\"B08LCLVGHB\",[]]",
+     "[\"B08LCXTQCV\",[]]",
+     "[\"B08LSM5YLG\",[]]",
+     "[\"B08M5PGXC1\",[]]",
+     "[\"B08N1JL2SM\",[]]",
+     "[\"B08N31JXW3\",[]]",
+     "[\"B08NTX4HVH\",[]]",
+     "[\"B08P7QWYF5\",[]]",
+     "[\"B08PDYSMFK\",[]]",
+     "[\"B08PXHZ9P3\",[]]",
+     "[\"B08PXV12BX\",[]]",
+     "[\"B08R6HVQR7\",[]]",
+     "[\"B08R8YQ2D7\",[]]",
+     "[\"B08R952V2P\",[]]",
+     "[\"B08RK43V7P\",[]]",
+     "[\"B08RTKG4GR\",[]]",
+     "[\"B08T4MWKK5\",[]]",
+     "[\"B08WCV8BS3\",[]]",
+     "[\"B08WTBNR67\",[]]",
+     "[\"B08X21C8N7\",[]]",
+     "[\"B08XB9C2J2\",[]]",
+     "[\"B08XJXJLXN\",[]]",
+     "[\"B08YD9D53Z\",[]]",
+     "[\"B08YDRYV5P\",[]]",
+     "[\"B08YP8V5L4\",[]]",
+     "[\"B08YYZ2DCS\",[]]",
+     "[\"B08ZG91F9V\",[]]",
+     "[\"B08ZN972HL\",[]]",
+     "[\"B091G44S71\",[]]",
+     "[\"B092C7LRNB\",[]]",
+     "[\"B092S1QH9Q\",[]]",
+     "[\"B0931XB7T2\",[]]",
+     "[\"B0932C5LZH\",[]]",
+     "[\"B0932G9WH5\",[]]",
+     "[\"B0933455K2\",[]]",
+     "[\"B093BCHVLK\",[]]",
+     "[\"B0941W2TQ3\",[]]",
+     "[\"B0945F3V63\",[]]",
+     "[\"B095NCLBTG\",[]]",
+     "[\"B095WN28TX\",[]]",
+     "[\"B0969GJZ4X\",[]]",
+     "[\"B096BLQLZB\",[]]",
+     "[\"B096LZR953\",[]]",
+     "[\"B0973L5WZH\",[]]",
+     "[\"B098JLH1BK\",[]]",
+     "[\"B0992NFBF9\",[]]",
+     "[\"B0992PN6XK\",[]]",
+     "[\"B099959RFF\",[]]",
+     "[\"B09B1L339V\",[]]",
+     "[\"B09B6M6MV4\",[]]",
+     "[\"B09BBLTL2S\",[]]",
+     "[\"B09BBMKB2Z\",[]]",
+     "[\"B09BG9CRVC\",[]]",
+     "[\"B09BGBYB2T\",[]]",
+     "[\"B09BTXF3T4\",[]]",
+     "[\"B09BZYTRRV\",[]]",
+     "[\"B09C6DRWTF\",[]]",
+     "[\"B09C6J5W95\",[]]",
+     "[\"B09CD6337W\",[]]",
+     "[\"B09CK58HZQ\",[]]",
+     "[\"B09CS66VL6\",[]]",
+     "[\"B09D8GWF3C\",[]]",
+     "[\"B09DTKB85G\",[]]",
+     "[\"B09F574B6R\",[]]",
+     "[\"B09F5L7756\",[]]",
+     "[\"B09F5LB8D9\",[]]",
+     "[\"B09F5QCW21\",[]]",
+     "[\"B09F5VK6QT\",[]]",
+     "[\"B09F5VKV65\",[]]",
+     "[\"B09F6YFSXK\",[]]",
+     "[\"B09F7116WH\",[]]",
+     "[\"B09F71GKCZ\",[]]",
+     "[\"B09F727NMH\",[]]",
+     "[\"B09FTN1RLN\",[]]",
+     "[\"B09FVQR3BP\",[]]",
+     "[\"B09G596J7V\",[]]",
+     "[\"B09GY6GZ7Q\",[]]",
+     "[\"B09HL554TM\",[]]",
+     "[\"B09HR9KNH6\",[]]",
+     "[\"B09JB4PTF2\",[]]",
+     "[\"B09JGMSMWP\",[]]",
+     "[\"B09JJ1ZP25\",[]]",
+     "[\"B09K4189TQ\",[]]",
+     "[\"B09K4N891F\",[]]",
+     "[\"B09K6WNRZK\",[]]",
+     "[\"B09KL1DX3D\",[]]",
+     "[\"B09KNWDKFT\",[]]",
+     "[\"B09KXZKYSK\",[]]",
+     "[\"B09LQC9JJ4\",[]]",
+     "[\"B09MJM93TN\",[]]",
+     "[\"B09ML4792B\",[]]",
+     "[\"B09NMLV5FY\",[]]",
+     "[\"B09NSH5WPV\",[]]",
+     "[\"B09NXGY2Y9\",[]]",
+     "[\"B09P45QLNS\",[]]",
+     "[\"B09P8L8T44\",[]]",
+     "[\"B09PD65PYC\",[]]",
+     "[\"B09PKHPBQG\",[]]",
+     "[\"B09Q4KFDV8\",[]]",
+     "[\"B09Q59GC1K\",[]]",
+     "[\"B09QKWD9B5\",[]]",
+     "[\"B09R278RJF\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "6aa9bbbf0d6a16e5",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "body care",
+    "goal": {
+     "asin": "B087Y28XLM",
+     "attributes": [
+      "dry skin"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions",
+     "query": "body care"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B087Y28XLM",
+    "cluster": "body care",
+    "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+    "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions"
+   },
+   "bound_slots": [
+    "attr:dry skin",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "fresh"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "115954514e302123e8ec943312f09258",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B004PGQJFK\",[[\"scent\",\"fresh\"]]]",
+     "[\"B00OQ1ZKO0\",[[\"scent\",\"fresh\"]]]",
+     "[\"B07DL5XPLV\",[[\"size\",\"extra fresh, 4 pack\"]]]",
+     "[\"B07NNXYHNM\",[[\"scent\",\"invigorating ocean-fresh fragrance\"]]]",
+     "[\"B07TFHZT47\",[[\"scent\",\"fresh sea salt\"]]]",
+     "[\"B0837311RV\",[[\"scent\",\"active + fresh\"]]]",
+     "[\"B086K1S96X\",[[\"scent\",\"extra fresh\"]]]",
+     "[\"B0875R9D9Q\",[[\"style\",\"fresh and fruity\"]]]",
+     "[\"B087Y28XLM\",[[\"scent\",\"fresh\"]]]",
+     "[\"B08DDYN4GB\",[[\"style\",\"fresh fusion\"]]]",
+     "[\"B08ZG91F9V\",[[\"scent\",\"fresh pomelo\"]]]",
+     "[\"B095J92LGV\",[[\"color\",\"fresh raspberry\"]]]",
+     "[\"B09QWZCRBQ\",[[\"scent\",\"fresh pear\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "b7898de2d8a7134d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "body care",
+    "goal": {
+     "asin": "B087Y28XLM",
+     "attributes": [
+      "dry skin"
+     ],
+     "category": "",
+     "goal_options": [
+      "fresh"
+     ],
+     "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+     "price_upper": 1000000,
+     "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions",
+     "query": "body care"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B087Y28XLM",
+    "cluster": "body care",
+    "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+    "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions"
+   },
+   "bound_slots": [
+    "attr:dry skin",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "12 fl oz (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0dbdcdfbd1604a01b1e3c6df6f66b355",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0009F3O8Q\",[[\"size\",\"13.5 fl oz (pack of 1)\"]]]",
+     "[\"B000GFSQV4\",[[\"size\",\"8 fl oz (pack of 1)\"]]]",
+     "[\"B000NURPK0\",[[\"size\",\"18 fl oz (pack of 1)\"]]]",
+     "[\"B000ODNSR0\",[[\"size\",\"18 fl oz (pack of 1)\"]]]",
+     "[\"B000URYTTQ\",[[\"size\",\"pack of 1\"]]]",
+     "[\"B0011DJICG\",[[\"size\",\"12 fl oz (pack of 1)\"]]]",
+     "[\"B001459IEE\",[[\"size\",\"18 fl oz (pack of 1)\"]]]",
+     "[\"B00171ETM6\",[[\"size\",\"20 fl oz (pack of 1)\"]]]",
+     "[\"B0017QA4EI\",[[\"size\",\"8 fl oz (pack of 1)\"]]]",
+     "[\"B001ECQ4IU\",[[\"size\",\"20.3 fl oz (pack of 1)\"]]]",
+     "[\"B0034F9K36\",[[\"size\",\"32 fl oz (pack of 1)\"]]]",
+     "[\"B003A86J18\",[[\"size\",\"6 fl oz (pack of 1)\"]]]",
+     "[\"B003QXZWYW\",[[\"size\",\"13.52 fl oz (pack of 1)\"]]]",
+     "[\"B004K0WINI\",[[\"size\",\"6 fl oz (pack of 1)\"]]]",
+     "[\"B00B1GW7J4\",[[\"size\",\"5 fl oz (pack of 1)\"]]]",
+     "[\"B00B22BCK2\",[[\"size\",\"13.53 fl oz (pack of 1)\"]]]",
+     "[\"B00DG8F02Q\",[[\"size\",\"6.8 fl oz (pack of 1)\"]]]",
+     "[\"B00FBFCLII\",[[\"size\",\"11 fl oz (pack of 2)\"]]]",
+     "[\"B00GBH8TBS\",[[\"size\",\"6.7 fl oz (pack of 1)\"]]]",
+     "[\"B00HUDR8Q4\",[[\"size\",\"pack of 1\"]]]",
+     "[\"B00NAF77I0\",[[\"size\",\"17 fl oz (pack of 1)\"]]]",
+     "[\"B00OQ1ZKO0\",[[\"size\",\"16.91 fl oz (pack of 1)\"]]]",
+     "[\"B00OW9OU2O\",[[\"style\",\"5.5 oz (pack of 1)\"]]]",
+     "[\"B0107QOYIK\",[[\"size\",\"16.9 fl oz (pack of 1)\"]]]",
+     "[\"B013TS9BHM\",[[\"size\",\"4 fl oz (pack of 1)\"]]]",
+     "[\"B0142NBHKM\",[[\"size\",\"16 fl oz (pack of 1)\"]]]",
+     "[\"B015ORMEP2\",[[\"size\",\"8.5 fl oz (pack of 1)\"]]]",
+     "[\"B019XVXWME\",[[\"size\",\"13.6 fl oz (pack of 1)\"]]]",
+     "[\"B01HHRRDTO\",[[\"size\",\"16 fl oz (pack of 2)\"]]]",
+     "[\"B01HOHBDT8\",[[\"size\",\"18 fl oz (pack of 3)\"]]]",
+     "[\"B01HTJTS52\",[[\"size\",\"10 fl oz (pack of 1)\"]]]",
+     "[\"B01J5GC24Q\",[[\"size\",\"16 fl oz (pack of 2)\"]]]",
+     "[\"B01M047N2Q\",[[\"size\",\"1 pack\"]]]",
+     "[\"B073CYHHHW\",[[\"size\",\"16.9 fl oz (pack of 1)\"]]]",
+     "[\"B073TPFHH9\",[[\"size\",\"4 fl oz (pack of 1)\"]]]",
+     "[\"B0746LQ3GC\",[[\"size\",\"8.45 fl oz (pack of 1)\"]]]",
+     "[\"B076FZCQ1N\",[[\"size\",\"13.5 fl oz (pack of 1)\"]]]",
+     "[\"B076G2XGY3\",[[\"size\",\"6.8 fl oz (pack of 1)\"]]]",
+     "[\"B076PL38NZ\",[[\"size\",\"15.8 fl oz (pack of 1)\"]]]",
+     "[\"B079Z3NG8R\",[[\"size\",\"pack of 1\"]]]",
+     "[\"B07CSZL7H3\",[[\"size\",\"pack of 1\"]]]",
+     "[\"B07DZW6GQV\",[[\"size\",\"10 fl oz (pack of 1)\"]]]",
+     "[\"B07G81VJQ8\",[[\"size\",\"19.5 fl oz (pack of 1)\"]]]",
+     "[\"B07JQGCMXW\",[[\"size\",\"7 fl oz (pack of 1)\"]]]",
+     "[\"B07KKN3X23\",[[\"size\",\"15 fl oz (pack of 2)\"]]]",
+     "[\"B07NFHYCT8\",[[\"size\",\"12 fl oz (pack of 1)\"]]]",
+     "[\"B07NJNZYQT\",[[\"size\",\"24 fl oz (pack of 1)\"]]]",
+     "[\"B07NNXYHNM\",[[\"size\",\"32 fl oz (pack of 1)\"]]]",
+     "[\"B07Q58TC99\",[[\"size\",\"13 fl oz (pack of 1)\"]]]",
+     "[\"B07Q6D1KM6\",[[\"size\",\"13 fl oz (pack of 1)\"]]]",
+     "[\"B07QJ2CPGF\",[[\"size\",\"16 fl oz (pack of 1)\"]]]",
+     "[\"B07SCHGT9K\",[[\"size\",\"10 fl oz (pack of 1)\"]]]",
+     "[\"B07SGCQCX7\",[[\"size\",\"16.9 fl oz (pack of 1)\"]]]",
+     "[\"B07SM1XPPJ\",[[\"size\",\"16 fl oz (pack of 1)\"]]]",
+     "[\"B07SM1XY1F\",[[\"size\",\"21 fl oz (pack of 1)\"]]]",
+     "[\"B07WJRNSZB\",[[\"size\",\"2.53 fl oz (pack of 1)\"]]]",
+     "[\"B07YFB2PB3\",[[\"size\",\"16.91 fl oz (pack of 1)\"]]]",
+     "[\"B082QB23YG\",[[\"size\",\"20 fl oz (pack of 1)\"]]]",
+     "[\"B082QBX9R5\",[[\"size\",\"20 fl oz (pack of 1)\"]]]",
+     "[\"B082QBYY9V\",[[\"size\",\"20 fl oz (pack of 1)\"]]]",
+     "[\"B087Y28XLM\",[[\"size\",\"8.5 fl oz (pack of 1)\"]]]",
+     "[\"B08LSM5YLG\",[[\"size\",\"16 fl oz (pack of 1)\"]]]",
+     "[\"B0992NFBF9\",[[\"size\",\"16 fl oz (pack of 1)\"]]]",
+     "[\"B0992PN6XK\",[[\"size\",\"pack of 1\"]]]",
+     "[\"B09D8GWF3C\",[[\"size\",\"10 fl oz (pack of 2)\"]]]",
+     "[\"B09LQC9JJ4\",[[\"size\",\"1 pack\"]]]",
+     "[\"B09PKHPBQG\",[[\"size\",\"4 fl oz (pack of 1)\"]]]",
+     "[\"B09Q4KFDV8\",[[\"size\",\"1 pack\"]]]",
+     "[\"B09Q59GC1K\",[[\"size\",\"2 fl oz (pack of 1)\"]]]",
+     "[\"B09R278RJF\",[[\"size\",\"4 fl oz (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c5cf16a76ef4d72c",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "body care",
+    "goal": {
+     "asin": "B087Y28XLM",
+     "attributes": [
+      "dry skin"
+     ],
+     "category": "",
+     "goal_options": [
+      "12 fl oz (pack of 1)"
+     ],
+     "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions",
+     "query": "body care"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B087Y28XLM",
+    "cluster": "body care",
+    "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+    "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions"
+   },
+   "bound_slots": [
+    "attr:dry skin",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dry skin",
+     "=",
+     "dry skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "101.2 ounce"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "38bd3c5a310492bbfc9e0a383f1b69f2",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B073TPFHH9\",[[\"size\",\"2 ounce\"]]]",
+     "[\"B07J2W1QZ6\",[[\"unit count\",\"2\"]]]",
+     "[\"B07NNXYHNM\",[[\"size\",\"10.5 ounce\"]]]",
+     "[\"B09Q59GC1K\",[[\"size\",\"2 ounce\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "887ef28075d55a56",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "body care",
+    "goal": {
+     "asin": "B087Y28XLM",
+     "attributes": [
+      "dry skin"
+     ],
+     "category": "",
+     "goal_options": [
+      "101.2 ounce"
+     ],
+     "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+     "price_upper": 20,
+     "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions",
+     "query": "body care"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B01HHRRDTO",
+     "cluster": "body care",
+     "name": "Dr. Jacobs Naturals Pure Castile Liquid Soap - Vegan, No Palm Oil, GMO Free - Multi-Purpose for Face, Hair, Laundry and Dishes - Hypoallergenic and Dermatologist Approved (Shea Butter Soap, 32 Oz (Pack of 1)",
+     "product_category": "Beauty & Personal Care › Skin Care › Body › Cleansers › Soaps"
+    }
+   },
+   "dst": "b7549c1d6038c0f0",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "21b4c3373f962722",
+   "src": "e528bc01f86f4414"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07DZW6GQV",
+     "cluster": "body care",
+     "name": "Jergens Deep Restoring Argan Oil Moisturizer, Soothing Body and Hand Lotion, 16.8 Ounce, with Reviving Argan Oil and Vitamin E, Oil-Infused, Dermatologist Tested",
+     "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions"
+    }
+   },
+   "dst": "44da8667d447c513",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "22e77e30f4872971",
+   "src": "e528bc01f86f4414"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:clinically proven",
+      "=",
+      "clinically proven"
+     ]
+    ]
+   },
+   "dst": "89313d391a559d1d",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "e528bc01f86f4414"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:gluten free",
+      "=",
+      "gluten free"
+     ]
+    ]
+   },
+   "dst": "472cbbfd796b790d",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "e528bc01f86f4414"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "fresh"
+     ]
+    ]
+   },
+   "dst": "6aa9bbbf0d6a16e5",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "e528bc01f86f4414"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      20
+     ]
+    ]
+   },
+   "dst": "b7898de2d8a7134d",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "e528bc01f86f4414"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "fresh",
+      "12 fl oz (pack of 1)"
+     ]
+    ]
+   },
+   "dst": "c5cf16a76ef4d72c",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "e528bc01f86f4414"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "fresh",
+      "101.2 ounce"
+     ]
+    ]
+   },
+   "dst": "887ef28075d55a56",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "e528bc01f86f4414"
+  }
+ ],
+ "env_id": "webshop_38974de5717ea538",
+ "env_spec": {
+  "cluster": "body care",
+  "env_id": "webshop_38974de5717ea538",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B087Y28XLM",
+   "cluster": "body care",
+   "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+   "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions"
+  },
+  "bound_slots": [
+   "attr:dry skin",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:dry skin",
+    "=",
+    "dry skin"
+   ],
+   [
+    "option:0",
+    "=",
+    "fresh"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "ground_truth": {
+   "hash": "1dfd531d953bd15d0f3978c308a1cdf6",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B00OQ1ZKO0\",[[\"scent\",\"fresh\"]]]",
+    "[\"B07NNXYHNM\",[[\"scent\",\"invigorating ocean-fresh fragrance\"]]]",
+    "[\"B07TFHZT47\",[[\"scent\",\"fresh sea salt\"]]]",
+    "[\"B0837311RV\",[[\"scent\",\"active + fresh\"]]]",
+    "[\"B086K1S96X\",[[\"scent\",\"extra fresh\"]]]",
+    "[\"B0875R9D9Q\",[[\"style\",\"fresh and fruity\"]]]",
+    "[\"B087Y28XLM\",[[\"scent\",\"fresh\"]]]",
+    "[\"B08DDYN4GB\",[[\"style\",\"fresh fusion\"]]]",
+    "[\"B08ZG91F9V\",[[\"scent\",\"fresh pomelo\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "e528bc01f86f4414",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "body care",
+   "goal": {
+    "asin": "B087Y28XLM",
+    "attributes": [
+     "dry skin"
+    ],
+    "category": "",
+    "goal_options": [
+     "fresh"
+    ],
+    "name": "Palmer's Mens Body/face Lotion 8.5 Ounce",
+    "price_upper": 20,
+    "product_category": "Beauty & Personal Care › Skin Care › Body › Moisturizers › Lotions",
+    "query": "body care"
+   }
+  },
+  "source_record": "749df163fcfdf07a",
+  "unbound_slots": [
+   "attr:clinically proven",
+   "attr:gluten free",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "6a8dd7045af7540c"
+}

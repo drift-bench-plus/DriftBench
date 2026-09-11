@@ -1,0 +1,275 @@
+{
+ "sample_id": "8a14a2d5d35ba2dd",
+ "tree_id": "5f41369d95d174cb",
+ "adapter": "webshop",
+ "cluster": "shampoo & conditioner",
+ "goal_idx": 473,
+ "split": "test",
+ "source_instruction": "i am looking for a sulfate & paraben free shampoo",
+ "query": "Ugh, you won\u2019t believe the mess I ran into on the walk over here! There was this tiny golden retriever puppy that slipped its leash right by the crosswalk, and it zoomed straight for a puddle that was half melted slush and half spilled iced coffee, and before its owner could catch up it was rolling around like that puddle was the fanciest dog bed on the planet. I stopped to help corral it, got a little slush splattered on the cuff of my jeans, and the owner was so flustered they gave me a whole pack of those sour gummy worms I love as a thank you. I stuffed \u2018em in my bag already, I\u2019ll share a handful with you on the walk home once we\u2019re done grabbing what we need, they\u2019re the extra tangy kind that make your eyes water a little in the best way. Hey, can you help me grab something from the hair care section? I need stuff that\u2019s totally paraben free and sulfate free, and I\u2019m sticking to that one for the max I\u2019ll pay, y\u2019know? Since the paraben free options seem to be totally sold out right now, I guess I can just go with whatever else fits the bill instead, no big deal. I don\u2019t need anything too specific for the type, just whatever works for hair, yeah?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "false_presupposition",
+  "referential_ambiguity",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+false_presupposition+referential_ambiguity+insufficient_information",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "false_presupposition",
+   "referential_ambiguity",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "option:0"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since the paraben free options seem to be totally sold out right now",
+    "condition": null,
+    "about": [
+     "attr:paraben free",
+     "paraben free"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [
+   "option:0"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, you won\u2019t believe the mess I ran into on the walk over here! There was this tiny golden retriever puppy that slipped its leash right by the crosswalk, and it zoomed straight for a puddle that was half melted slush and half spilled iced coffee, and before its owner could catch up it was rolling around like that puddle was the fanciest dog bed on the planet. I stopped to help corral it, got a little slush splattered on the cuff of my jeans, and the owner was so flustered they gave me a whole pack of those sour gummy worms I love as a thank you. I stuffed \u2018em in my bag already, I\u2019ll share a handful with you on the walk home once we\u2019re done grabbing what we need, they\u2019re the extra tangy kind that make your eyes water a little in the best way.",
+  "retained": [
+   "attr:paraben free",
+   "attr:sulfate free"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:sulfate free",
+     "=",
+     "sulfate free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "7a8d8e107bd86d60"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 55,
+  "lit_card": 1086,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 108,
+    "true_card": 55,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 64,
+    "true_card": 55,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 327,
+    "true_card": 55,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "56ea4f78a3c5e812",
+  "conditions": [
+   [
+    "attr:paraben free",
+    "=",
+    "paraben free"
+   ],
+   [
+    "attr:sulfate free",
+    "=",
+    "sulfate free"
+   ],
+   [
+    "option:0",
+    "=",
+    "shampoo"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 55,
+  "value": [
+   "[\"B001NQWDLO\",[[\"color\",\"shampoo\"]]]",
+   "[\"B002KG28PW\",[[\"style\",\"shampoo\"]]]",
+   "[\"B0048F5ATO\",[[\"style\",\"shampoo\"]]]",
+   "[\"B004KATJVC\",[[\"style\",\"shampoo\"]]]",
+   "[\"B00CQ8452S\",[[\"pattern name\",\"shampoo\"]]]",
+   "[\"B00CQ84F0U\",[[\"style\",\"shampoo\"]]]",
+   "[\"B00RIBTBFY\",[[\"style\",\"shampoo - fl oz 11.83\"]]]",
+   "[\"B00RIBX3T4\",[[\"style\",\"shampoo - fl oz 11.8\"]]]",
+   "[\"B00TU2FVKI\",[[\"style\",\"shampoo - fl oz 11.83\"]]]",
+   "[\"B01D554F7A\",[[\"style\",\"shampoo - fl oz 11.83\"]]]",
+   "[\"B01ERGEB34\",[[\"style\",\"dry shampoo - fl oz 3.4\"]]]",
+   "[\"B01HQH8H5E\",[[\"style\",\"shampoo - fl oz 11.8\"]]]",
+   "[\"B01KFU1WZG\",[[\"style\",\"shampoo\"]]]",
+   "[\"B01MTJ4KOF\",[[\"style\",\"shampoo\"]]]",
+   "[\"B01N3K1GPZ\",[[\"style\",\"shampoo\"]]]",
+   "[\"B01N8X4SU4\",[[\"style\",\"shampoo - fl oz 11.83\"]]]",
+   "[\"B0784P7P16\",[[\"style\",\"shampoo & conditioner\"]]]",
+   "[\"B078W7F9R5\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07D5HX9CG\",[[\"color\",\"shampoo\"]]]",
+   "[\"B07H4ZWQZR\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07H533Q6K\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07HMK15G9\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07HMP3GW9\",[[\"style name\",\"dry shampoo\"]]]",
+   "[\"B07J5H8G4Y\",[[\"size\",\"shampoo | conditioner (pack of 2)\"]]]",
+   "[\"B07K92VV2V\",[[\"style\",\"shampoo & conditioner bundle\"]]]",
+   "[\"B07N7LRJZF\",[[\"size\",\"shampoo citrus 2 pack\"]]]",
+   "[\"B07NP2SJMZ\",[[\"color\",\"50:50 shampoo\"]]]",
+   "[\"B07QD2PXHG\",[[\"style\",\"shampoo & conditioner set\"]]]",
+   "[\"B07R4Y4TJW\",[[\"style\",\"shampoo\"]]]",
+   "[\"B07TK36W5Z\",[[\"size\",\"shampoo\"]]]",
+   "[\"B082YG62JM\",[[\"style\",\"shampoo\"]]]",
+   "[\"B0842YD1CX\",[[\"style\",\"shampoo\"]]]",
+   "[\"B0882JHCTC\",[[\"style name\",\"shampoo\"]]]",
+   "[\"B088Y7K59G\",[[\"style\",\"solid shampoo and conditioner bar set (citrus)\"]]]",
+   "[\"B08CYCBCTT\",[[\"size\",\"shampoo 2 pack\"]]]",
+   "[\"B08KXFNV1X\",[[\"style name\",\"shampoo\"]]]",
+   "[\"B08LJ6B1X1\",[[\"style\",\"shampoo & conditioner\"]]]",
+   "[\"B08M4GXGFJ\",[[\"style\",\"dream curls shampoo\"]]]",
+   "[\"B08M7FDBLL\",[[\"style\",\"shampoo\"]]]",
+   "[\"B08M7FN48L\",[[\"style\",\"shampoo\"]]]",
+   "[\"B08NCS66Q1\",[[\"style name\",\"shampoo & conditioner set\"]]]",
+   "[\"B08ZQXKB9R\",[[\"style\",\"shampoo & conditioner\"]]]",
+   "[\"B091G2R6MH\",[[\"style\",\"shampoo - pack of 2\"]]]",
+   "[\"B094KVN6S7\",[[\"style\",\"shampoo\"]]]",
+   "[\"B096SY8Q78\",[[\"pattern name\",\"dry scalp shampoo\"]]]",
+   "[\"B098GS5SF8\",[[\"style\",\"shampoo\"]]]",
+   "[\"B098KJDZJD\",[[\"style\",\"shampoo\"]]]",
+   "[\"B09DJQ1WDT\",[[\"flavor name\",\"shampoo\"]]]",
+   "[\"B09FB1YXF1\",[[\"color\",\"clarifying shampoo bar\"]]]",
+   "[\"B09KQZ9GTK\",[[\"size\",\"shampoo\"]]]",
+   "[\"B09L2CT1PQ\",[[\"style\",\"shampoo\"]]]",
+   "[\"B09LR99XBK\",[[\"style\",\"32 oz shampoo\"]]]",
+   "[\"B09LR9LHPG\",[[\"style\",\"shampoo & conditioner\"]]]",
+   "[\"B09PJ47CQN\",[[\"style\",\"shampoo\"]]]",
+   "[\"B09PZ75KBP\",[[\"style\",\"shampoo\"]]]"
+  ],
+  "hash": "e090f0c2af03d699e23797947d8f3e45"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "8707c7b808a5f4f7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the shampoo & conditioner instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "d19018b0158cfda5",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the shampoo & conditioner instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7f3318ffd3f42ab0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be high quality."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cf3d523dcaea2160",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "00cfff8904fa1faa",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "640955d25d6eb158",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "41ed5b627e1bfef1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1.7 ounce (travel size) instead of shampoo."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "bcd80182c1bb4145",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 12 fl oz instead of shampoo."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

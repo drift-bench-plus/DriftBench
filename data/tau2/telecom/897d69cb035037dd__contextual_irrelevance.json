@@ -1,0 +1,115 @@
+{
+ "sample_id": "897d69cb035037dd__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "897d69cb035037dd",
+ "query": "I spent last weekend trying a new matcha bakery in the neighborhood, their red bean mochi is so chewy and not too sweet, I ended up buying a whole box to share with my coworkers. I also just signed up for a beginner pottery class that starts next Wednesday, I\u2019m really excited to try making my own mug even if it ends up a little lopsided. Oh right, I also just finished binging that new sci-fi miniseries everyone\u2019s talking about, the plot twist in the final episode had me staring at my screen for five minutes straight. Anyway, I\u2019m having issues with my phone right now: my wifi calling is really bad, my APN MMS settings seem to be broken, my data mode is turned off, I\u2019ve exceeded my data usage limit, and I think my SIM card might be unseated.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent last weekend trying a new matcha bakery in the neighborhood, their red bean mochi is so chewy and not too sweet, I ended up buying a whole box to share with my coworkers. I also just signed up for a beginner pottery class that starts next Wednesday, I\u2019m really excited to try making my own mug even if it ends up a little lopsided. Oh right, I also just finished binging that new sci-fi miniseries everyone\u2019s talking about, the plot twist in the final episode had me staring at my screen for five minutes straight.",
+  "retained": [
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

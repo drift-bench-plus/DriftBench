@@ -1,0 +1,237 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's flats",
+ "fidelity_notes": [],
+ "goal_idx": 483,
+ "ground_truth": {
+  "cardinality": 18,
+  "hash": "2cb747eda7141e6cb6eba307cbd45c51",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B015TTK3OE\",[[\"color\",\"red pu\"],[\"size\",\"5\"]]]",
+   "[\"B0771YVBQJ\",[[\"color\",\"premium red pu\"],[\"size\",\"5\"]]]",
+   "[\"B07RX9NS3Y\",[[\"color\",\"8807 red\"],[\"size\",\"5.5\"]]]",
+   "[\"B082WWKN7P\",[[\"color\",\"red\"],[\"size\",\"5.5\"]]]",
+   "[\"B08574R6ZV\",[[\"color\",\"a | red\"],[\"size\",\"10.5\"]]]",
+   "[\"B087938GY9\",[[\"color\",\"red\"],[\"size\",\"5.5\"]]]",
+   "[\"B08N19BQJF\",[[\"color\",\"red\"],[\"size\",\"10\"]]]",
+   "[\"B08T1CYDHZ\",[[\"color\",\"red\"],[\"size\",\"5\"]]]",
+   "[\"B0995XLWYH\",[[\"color\",\"z3 red\"],[\"size\",\"9.5-10\"]]]",
+   "[\"B09HC7FPDC\",[[\"color\",\"z24 red\"],[\"size\",\"9.5-10\"]]]",
+   "[\"B09JNVLVJL\",[[\"color\",\"b red\"],[\"size\",\"5\"]]]",
+   "[\"B09MZGL7QP\",[[\"color\",\"red\"],[\"size\",\"10\"]]]",
+   "[\"B09N353B3M\",[[\"color\",\"red\"],[\"size\",\"5\"]]]",
+   "[\"B09P8C1L89\",[[\"color\",\"red\"],[\"size\",\"10\"]]]",
+   "[\"B09PLH5ZF6\",[[\"color\",\"red\"],[\"size\",\"10.5\"]]]",
+   "[\"B09PVJQXQP\",[[\"color\",\"red\"],[\"size\",\"5\"]]]",
+   "[\"B09PZWNG5S\",[[\"color\",\"red\"],[\"size\",\"5\"]]]",
+   "[\"B09S3TC93G\",[[\"color\",\"red\"],[\"size\",\"5\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:slip resistant",
+    "=",
+    "slip resistant"
+   ],
+   [
+    "option:0",
+    "=",
+    "red"
+   ],
+   [
+    "option:1",
+    "=",
+    "10.5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:slip resistant"
+  ],
+  "intent_id": "9ec03bda172208c6"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "attr:slip resistant",
+      "slip resistant"
+     ],
+     [
+      "attr:slip resistant",
+      "flat-soled (no heel elevation)"
+     ]
+    ],
+    "surface": "flat"
+   }
+  ],
+  "attempt": 2,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:slip resistant"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:slip resistant",
+     "=",
+     "slip resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "red"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   [
+    [
+     "attr:slip resistant",
+     "=",
+     "flat-soled (no heel elevation)"
+    ],
+    [
+     "option:0",
+     "=",
+     "red"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "e9ee2f1f58e3c9d9",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for women’s flats under $40, size 10.5, that are flat and come in red.",
+ "render_attempts": 2,
+ "sample_id": "09fa99ac309e6171",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's flats instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "646f70b4c5c8559d"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's flats instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "78ce867d31453fa0"
+  },
+  {
+   "announcement": "Also, it needs to be quality materials.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6926940401884b10"
+  },
+  {
+   "announcement": "Also, it needs to be comfortable fit.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ce18bd1245263c3e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "63951cb395abd54d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a31e24cc1080b892"
+  },
+  {
+   "announcement": "Actually, make it 002-black instead of red.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "655731a5a5fd574d"
+  },
+  {
+   "announcement": "Actually, make it #02-black instead of red.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f5da159a07ce341a"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   18,
+   0
+  ],
+  "rule": "ambiguous",
+  "true_card": 18,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want a women slip resistant red color shoes with size 10.5",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "299ae50e00363613",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,245 @@
+{
+ "sample_id": "04d08ec132928e63",
+ "tree_id": "065f729de5fb08af",
+ "adapter": "webshop",
+ "cluster": "skin care tools",
+ "goal_idx": 451,
+ "split": "test",
+ "source_instruction": "i am looking for stainless steel hair removal tweezers.",
+ "query": "Hey, I\u2019m looking through the skin care tools section right now and I need something for hair removal, can you help me find one? Oh, and it should come with a free reusable travel storage pouch included, that\u2019s a must for me. I don\u2019t have any extra optional preferences beyond that, by the way.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+insufficient_information",
+  "family": "parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "attr:stainless steel"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:stainless steel"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "it should come with a free reusable travel storage pouch included",
+    "condition": [
+     "attr:free_reusable_travel_storage_pouch",
+     "=",
+     "included"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:hair removal",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:stainless steel"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair removal",
+     "=",
+     "hair removal"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ],
+    [
+     "attr:free_reusable_travel_storage_pouch",
+     "=",
+     "included"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "4e0cddbb2e8d884e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 43,
+  "lit_card": 5,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 5,
+    "true_card": 43,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 56,
+    "true_card": 43,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "7e982c03db63ec12",
+  "conditions": [
+   [
+    "attr:hair removal",
+    "=",
+    "hair removal"
+   ],
+   [
+    "attr:stainless steel",
+    "=",
+    "stainless steel"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:stainless steel"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 43,
+  "value": [
+   "[\"B00BAYWOFY\",[]]",
+   "[\"B0719H8GRT\",[]]",
+   "[\"B07B5DQMM8\",[]]",
+   "[\"B07BRGMW6Z\",[]]",
+   "[\"B07DPS382X\",[]]",
+   "[\"B07FFY2X3Y\",[]]",
+   "[\"B07HLVJ15T\",[]]",
+   "[\"B07KKDNW1C\",[]]",
+   "[\"B07MDD9V75\",[]]",
+   "[\"B07NY5HTB8\",[]]",
+   "[\"B07T94R5QZ\",[]]",
+   "[\"B07TK1S8SK\",[]]",
+   "[\"B07ZX31VK8\",[]]",
+   "[\"B0835Q7QVK\",[]]",
+   "[\"B0842R73BG\",[]]",
+   "[\"B086HPZZBL\",[]]",
+   "[\"B08H2974F2\",[]]",
+   "[\"B08KXWYFG5\",[]]",
+   "[\"B08MWNQZ9T\",[]]",
+   "[\"B08MWP83S7\",[]]",
+   "[\"B08NGC2MJZ\",[]]",
+   "[\"B08PBW2TLB\",[]]",
+   "[\"B08PPJ9DSK\",[]]",
+   "[\"B08PTVDM21\",[]]",
+   "[\"B08R72XBHD\",[]]",
+   "[\"B08XGML5SQ\",[]]",
+   "[\"B08XYN2XCG\",[]]",
+   "[\"B092DQRL6L\",[]]",
+   "[\"B097C8LXHP\",[]]",
+   "[\"B09B1VWRY5\",[]]",
+   "[\"B09C5RN52H\",[]]",
+   "[\"B09D9N1D22\",[]]",
+   "[\"B09DYH91CL\",[]]",
+   "[\"B09H7JPYYS\",[]]",
+   "[\"B09J2H9RS5\",[]]",
+   "[\"B09J84383V\",[]]",
+   "[\"B09M2NF3YB\",[]]",
+   "[\"B09MN7S275\",[]]",
+   "[\"B09NBH7ZTJ\",[]]",
+   "[\"B09P51CZZN\",[]]",
+   "[\"B09QJMDCHT\",[]]",
+   "[\"B09QSD3MD4\",[]]",
+   "[\"B09QY9V9CH\",[]]"
+  ],
+  "hash": "820ec26371ccf5634ccc19979d8abd3d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1e170a2c01ea8564",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the skin care tools instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "c044886949d905a0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the skin care tools instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b1759df0e3facc8d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be nail polish."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cec6697eee41e39c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be nail art."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "124136291e5b4c23",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6f94ae0a8171a11e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "58281c089dceeaed",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 20."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "dbe46c7d8a7dfe52",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 100 instead of 20."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

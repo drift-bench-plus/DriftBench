@@ -1,0 +1,126 @@
+{
+ "sample_id": "fc35e696a65c3750__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "fc35e696a65c3750",
+ "query": "Last weekend I took my golden retriever to the new off-leash dog park near the community center, and he had so much fun chasing after a frisbee with a bunch of other pups that he ended up falling asleep in the car on the way home before I even got his leash unclipped. I also tried that new matcha latte spot downtown on Monday, and their lavender honey topping is so good I\u2019ve already gone back twice this week to get another one, I swear it\u2019s the best iced drink I\u2019ve had all summer. Oh, and I just finished rearranging the succulent planters on my balcony yesterday, I moved the string of pearls to get more sun and it already looks way perkier than it did when it was tucked in the corner. I\u2019m having some issues with my phone right now: wifi calling is really bad, my APN MMS settings seem to be broken, both of my messaging app permissions aren\u2019t working, my data mode is turned off, I\u2019ve exceeded my data usage limit, I\u2019m currently abroad and roaming is switched off so I can\u2019t get any of my mobile services to work properly.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I took my golden retriever to the new off-leash dog park near the community center, and he had so much fun chasing after a frisbee with a bunch of other pups that he ended up falling asleep in the car on the way home before I even got his leash unclipped. I also tried that new matcha latte spot downtown on Monday, and their lavender honey topping is so good I\u2019ve already gone back twice this week to get another one, I swear it\u2019s the best iced drink I\u2019ve had all summer. Oh, and I just finished rearranging the succulent planters on my balcony yesterday, I moved the string of pearls to get more sun and it already looks way perkier than it did when it was tucked in the corner.",
+  "retained": [
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:break_app_both_permissions",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

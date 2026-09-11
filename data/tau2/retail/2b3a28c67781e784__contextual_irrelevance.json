@@ -1,0 +1,104 @@
+{
+ "sample_id": "2b3a28c67781e784__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "2b3a28c67781e784",
+ "query": "Last weekend I took my golden retriever to the new dog park downtown, and he had so much fun chasing after a little border collie that he ended up covered in mud and we had to give him a full bath as soon as we got home. I also tried that new matcha bakery everyone\u2019s been posting about yesterday, their red bean mochi is so chewy and not too sweet, I already bought a box to bring to my colleague\u2019s birthday potluck next week. My tomato plants on the balcony are finally starting to grow little green fruits too, I\u2019ve been watering them every morning before work and I\u2019m so excited to pick the first ripe one soon. Anyway, I need to exchange an item from my delivered order #W1671835: I want to change item 5081446110 to item 3399869890, and use paypal_6918118 as the payment method for any additional fees related to this exchange.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I took my golden retriever to the new dog park downtown, and he had so much fun chasing after a little border collie that he ended up covered in mud and we had to give him a full bath as soon as we got home. I also tried that new matcha bakery everyone\u2019s been posting about yesterday, their red bean mochi is so chewy and not too sweet, I already bought a box to bring to my colleague\u2019s birthday potluck next week. My tomato plants on the balcony are finally starting to grow little green fruits too, I\u2019ve been watering them every morning before work and I\u2019m so excited to pick the first ripe one soon.",
+  "retained": [
+   "arg:0:exchange_delivered_order_items:item_ids",
+   "arg:0:exchange_delivered_order_items:new_item_ids",
+   "arg:0:exchange_delivered_order_items:order_id",
+   "arg:0:exchange_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:exchange_delivered_order_items:item_ids",
+     "=",
+     "[\"5081446110\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:new_item_ids",
+     "=",
+     "[\"3399869890\"]"
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:order_id",
+     "=",
+     "\"#W1671835\""
+    ],
+    [
+     "arg:0:exchange_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_6918118\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:exchange_delivered_order_items:item_ids",
+    "=",
+    "[\"5081446110\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:new_item_ids",
+    "=",
+    "[\"3399869890\"]"
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:order_id",
+    "=",
+    "\"#W1671835\""
+   ],
+   [
+    "arg:0:exchange_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_6918118\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

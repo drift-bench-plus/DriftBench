@@ -1,0 +1,93 @@
+{
+ "sample_id": "5e439777ebf0f287__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "5e439777ebf0f287",
+ "query": "I went to a local pastry shop this morning and tried their new matcha croissant, it was so flaky and the filling wasn\u2019t too sweet at all, I even bought an extra one to save for tomorrow\u2019s breakfast. The weather here is also surprisingly nice, sunny but not too hot, I walked around the nearby park for half an hour after eating and saw a lot of families having picnics on the lawn. I also just picked up a new phone case from the little accessory stall by the park entrance, it has little sunflower prints on it and fits my phone perfectly. I\u2019ve been having some issues with my phone lately, none of my apps are able to save any new data or access the files I already have stored, I got a pop up saying the SIM card isn\u2019t detected even though I didn\u2019t take it out, and I\u2019m traveling abroad right now with roaming turned off so I can\u2019t get any calls or mobile data to work.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I went to a local pastry shop this morning and tried their new matcha croissant, it was so flaky and the filling wasn\u2019t too sweet at all, I even bought an extra one to save for tomorrow\u2019s breakfast. The weather here is also surprisingly nice, sunny but not too hot, I walked around the nearby park for half an hour after eating and saw a lot of families having picnics on the lawn. I also just picked up a new phone case from the little accessory stall by the park entrance, it has little sunflower prints on it and fits my phone perfectly.",
+  "retained": [
+   "fault:break_app_storage_permission",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

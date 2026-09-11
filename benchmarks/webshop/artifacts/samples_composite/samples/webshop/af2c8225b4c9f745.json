@@ -1,0 +1,237 @@
+{
+ "sample_id": "af2c8225b4c9f745",
+ "tree_id": "95360c2378982548",
+ "adapter": "webshop",
+ "cluster": "area rugs",
+ "goal_idx": 437,
+ "split": "test",
+ "source_instruction": "i would like a 8 ft 6 in x 12 ft rectangular navy rug for my living room.",
+ "query": "Hey, I had the wildest little walk over to your shop today! I stopped first at the corner community garden to say hi to the retired guy who tends the sunflower patch out front, and he handed me a handful of the cheeriest bright yellow zinnia seeds he saved from last year\u2019s blooms, said they\u2019ll grow tall enough to peek right over my porch railing if I plant them in the next two weeks. Right after that, a tiny fluffy calico cat darted out from under a parked bakery delivery truck, rubbed all over my sneakers like we were long lost best friends, and followed me half a block before it peeled off to chase a sparrow that hopped across the sidewalk. I even popped into the little used bookstore on the next block for two minutes on my way over, and found a beat-up 90s paperback copy of my favorite childhood camping mystery novel tucked between two tattered cookbooks, for only 75 cents, so that already made my whole day feel like a win before I even got to your door.\nI\u2019m looking for a nice area rug for my living room, navy color, rectangular shape, you know, that one size I always get for that space? Since it seems like the rectangular cut is totally unavailable right now, I guess I\u2019ll just go with whatever other shape you\u2019ve got that fits the vibe, yeah? I don\u2019t want to spend too much, so just show me options that don\u2019t cost an arm and a leg, nothing crazy expensive, thanks so much!",
+ "strategy_ids": [
+  "false_presupposition",
+  "referential_ambiguity",
+  "insufficient_information",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+referential_ambiguity+insufficient_information+contextual_irrelevance",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "false_presupposition",
+   "referential_ambiguity",
+   "insufficient_information",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:2",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since it seems like the rectangular cut is totally unavailable right now",
+    "condition": null,
+    "about": [
+     "option:1",
+     "rectangular"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:2",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey, I had the wildest little walk over to your shop today! I stopped first at the corner community garden to say hi to the retired guy who tends the sunflower patch out front, and he handed me a handful of the cheeriest bright yellow zinnia seeds he saved from last year\u2019s blooms, said they\u2019ll grow tall enough to peek right over my porch railing if I plant them in the next two weeks. Right after that, a tiny fluffy calico cat darted out from under a parked bakery delivery truck, rubbed all over my sneakers like we were long lost best friends, and followed me half a block before it peeled off to chase a sparrow that hopped across the sidewalk. I even popped into the little used bookstore on the next block for two minutes on my way over, and found a beat-up 90s paperback copy of my favorite childhood camping mystery novel tucked between two tattered cookbooks, for only 75 cents, so that already made my whole day feel like a win before I even got to your door.",
+  "retained": [
+   "attr:living room",
+   "option:0",
+   "option:1"
+  ],
+  "hidden_slots": [
+   "option:2",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "navy"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "02c62dcec5499a6d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 62,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 22,
+    "true_card": 6,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 9,
+    "true_card": 6,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 8,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "2304ea46e3ffdb25",
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "navy"
+   ],
+   [
+    "option:1",
+    "=",
+    "rectangular"
+   ],
+   [
+    "option:2",
+    "=",
+    "8 ft 6 in x 12 ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    320
+   ]
+  ],
+  "hidden_slots": [
+   "option:2",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B00G4ITP30\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft\"]]]",
+   "[\"B00LO5HWME\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft 9 in x 12 ft 3 in\"]]]",
+   "[\"B00NC2HKQK\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"2 ft 3 in x 6 ft\"]]]",
+   "[\"B01LXHXJF9\",[[\"color\",\"navy  |  teal\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft x 8 ft\"]]]",
+   "[\"B079TPQG7M\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"9 ft 2 in x 12 ft 6 in\"]]]",
+   "[\"B084B2ZW9K\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft 10 in x 12 ft\"]]]"
+  ],
+  "hash": "0ff2c2a3cd5b6140dfff63ccf158c662"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "4df8086c9876a888",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the area rugs instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f03cbbdb67ad5c9b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the area rugs instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "8975033846c7a63b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cf94bb81c3ea4884",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be home decor."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1e245f03b3a33abf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6304cfda046f19b2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3437f8891ae16cce",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1' 8\" x 6' instead of navy."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "859007a01baf5e0e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 ft (10 in) x 6 ft (10 in) instead of navy."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

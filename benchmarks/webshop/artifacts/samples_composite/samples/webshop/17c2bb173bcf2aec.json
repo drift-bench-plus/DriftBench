@@ -1,0 +1,200 @@
+{
+ "sample_id": "17c2bb173bcf2aec",
+ "tree_id": "1cd4e81b8fbad67c",
+ "adapter": "webshop",
+ "cluster": "bar stools",
+ "goal_idx": 440,
+ "split": "test",
+ "source_instruction": "i want to find a barstool made out of faux leather and stainless steel.  i want the one in black.",
+ "query": "Oh man, I just spent 20 minutes trying to fix my wobbly ceiling fan this morning and I think I stripped a screw on the mount, plus my cat knocked over my favorite ceramic mug right as I was leaving to browse furniture so I\u2019m already a little frazzled from running late. I saw a neighbor walking a super fluffy golden retriever puppy on my way over too, and I almost stopped to ask where they got it because it was so cute I could barely keep walking. Anyway, I\u2019m looking for bar stools that are made with faux leather and stainless steel, specifically the black paired with stainless steel option, at a reasonable price.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+vagueness_subjectivity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Oh man, I just spent 20 minutes trying to fix my wobbly ceiling fan this morning and I think I stripped a screw on the mount, plus my cat knocked over my favorite ceramic mug right as I was leaving to browse furniture so I\u2019m already a little frazzled from running late. I saw a neighbor walking a super fluffy golden retriever puppy on my way over too, and I almost stopped to ask where they got it because it was so cute I could barely keep walking.",
+  "retained": [
+   "attr:faux leather",
+   "attr:stainless steel",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:faux leather",
+     "=",
+     "faux leather"
+    ],
+    [
+     "attr:stainless steel",
+     "=",
+     "stainless steel"
+    ],
+    [
+     "option:0",
+     "=",
+     "black | stainless steel"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "efaa396caa32a58e"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 27,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 27,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "b5da4ff0d66d0ce2",
+  "conditions": [
+   [
+    "attr:faux leather",
+    "=",
+    "faux leather"
+   ],
+   [
+    "attr:stainless steel",
+    "=",
+    "stainless steel"
+   ],
+   [
+    "option:0",
+    "=",
+    "black | stainless steel"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B01DWGRENE\",[[\"color\",\"chrome base finish | black\"]]]",
+   "[\"B01DWGRESY\",[[\"color\",\"chrome finish | black\"]]]",
+   "[\"B071LMB16R\",[[\"color\",\"black\"]]]",
+   "[\"B07TVRWRQR\",[[\"color\",\"black\"]]]",
+   "[\"B07WYL5JTX\",[[\"color\",\"black\"]]]",
+   "[\"B091DG574T\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "8350314bc69f9daf4a2fae6c26b64643"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6ef9144c08537686",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bar stools instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b065fa878d7d3391",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the bar stools instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9784606009c9a950",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wood frame."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d00819d1c929ab77",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be mid century."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9ab988bef87ace79",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b52781acb9726f78",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7d229aef311a0bbe",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 26\" metal footrest instead of black | stainless steel."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "91cb6f4ce841b642",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 26\" height seat instead of black | stainless steel."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

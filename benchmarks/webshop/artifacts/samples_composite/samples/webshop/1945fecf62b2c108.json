@@ -1,0 +1,203 @@
+{
+ "sample_id": "1945fecf62b2c108",
+ "tree_id": "0e753744b15f4583",
+ "adapter": "webshop",
+ "cluster": "headphones",
+ "goal_idx": 213,
+ "split": "test",
+ "source_instruction": "i want silver and noise cancelling earbuds.",
+ "query": "I\u2019ve been trying to fix my kitchen faucet all morning, the spray head keeps leaking no matter how many times I replace the rubber washer, I even binged three plumbing tutorials last night and still can\u2019t get the drip to stop, my cat kept knocking my wrench off the counter the whole time too. Anyway, I\u2019m looking for headphones under $30 that have proper noise cancelling, and I want the light finish option please.",
+ "strategy_ids": [
+  "lexical_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "lexical_ambiguity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "lexical_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "light finish",
+    "placements": [
+     [
+      "option:0",
+      "white-silver"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I\u2019ve been trying to fix my kitchen faucet all morning, the spray head keeps leaking no matter how many times I replace the rubber washer, I even binged three plumbing tutorials last night and still can\u2019t get the drip to stop, my cat kept knocking my wrench off the counter the whole time too.",
+  "retained": [
+   "attr:noise cancelling",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:noise cancelling",
+     "=",
+     "noise cancelling"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "b5764dde504944e0"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 8,
+  "lit_card": 592,
+  "components": {
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     8,
+     592
+    ],
+    "true_card": 8,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "8bc5949360d672c9",
+  "conditions": [
+   [
+    "attr:noise cancelling",
+    "=",
+    "noise cancelling"
+   ],
+   [
+    "option:0",
+    "=",
+    "white-silver"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 8,
+  "value": [
+   "[\"B07TYTJ5M1\",[[\"color\",\"silver\"]]]",
+   "[\"B083ZQGG4R\",[[\"color\",\"silver\"]]]",
+   "[\"B089W5RDKV\",[[\"color\",\"silver\"]]]",
+   "[\"B08Y8G1YZN\",[[\"color\",\"silver\"]]]",
+   "[\"B091DXBFFQ\",[[\"color\",\"silver\"]]]",
+   "[\"B09GJZZDQP\",[[\"color\",\"white-silver\"]]]",
+   "[\"B09LXNRQVZ\",[[\"color\",\"silver\"]]]",
+   "[\"B09S5L57D5\",[[\"color\",\"silver\"]]]"
+  ],
+  "hash": "abd81fb3989f261d17dfcea304be12ad"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7f764ac432fe9619",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the headphones instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a378bd1c6a654d36",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the headphones instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "073c9f6121813974",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wireless earbuds."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7ee209cc2f948a74",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be audio cable."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4b6493956c64e7c4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e6ad588664e893bb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7973db25f4efdd9e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 3 pack instead of white-silver."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "8890af7279bdaa58",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 7-black1 instead of white-silver."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

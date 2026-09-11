@@ -1,0 +1,187 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair cutting tools",
+ "fidelity_notes": [],
+ "goal_idx": 455,
+ "ground_truth": {
+  "cardinality": 9,
+  "hash": "c1a02a4e55022bdcbc0d87f0213f83ae",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B078Y8DS18\",[[\"size\",\"7.0 inch\"]]]",
+   "[\"B07JKXZ8RK\",[[\"style\",\"7.0 inch\"]]]",
+   "[\"B07MJM2ZKY\",[[\"size\",\"7 inch\"]]]",
+   "[\"B07MM86TKP\",[[\"size\",\"7.5 inch\"]]]",
+   "[\"B07TSWKZ6Y\",[[\"size\",\"7 inch\"]]]",
+   "[\"B07WVWPQTQ\",[[\"size\",\"7 inch\"]]]",
+   "[\"B08C9S9B7R\",[[\"size\",\"7.5 inch\"]]]",
+   "[\"B08NLY1NQW\",[[\"size\",\"7.2 inch (pack of 2)\"]]]",
+   "[\"B096ST3W2Q\",[[\"size\",\"7 inch\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:stainless steel",
+    "=",
+    "stainless steel"
+   ],
+   [
+    "option:0",
+    "=",
+    "7 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "5c1c392c4dc71eb5"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:stainless steel",
+     "=",
+     "stainless steel"
+    ],
+    [
+     "option:0",
+     "=",
+     "5 inch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "option:0",
+     "7 inch"
+    ],
+    "alternative": [
+     "option:0",
+     "5 inch"
+    ],
+    "condition": null,
+    "text": "Since you probably don't have 7 inch stainless steel hair cutting tools"
+   }
+  ],
+  "retained": [
+   "attr:stainless steel",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b42d4694dbfb9e99",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don't have 7 inch stainless steel hair cutting tools, could you find me 5 inch stainless steel hair cutting tools that are under $40?",
+ "render_attempts": 1,
+ "sample_id": "ae356433c41bab3b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair cutting tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1c6b31c348bc9e75"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair cutting tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a0bea4fdf149ac03"
+  },
+  {
+   "announcement": "Also, it needs to be hair salon.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "55c45d689c482e66"
+  },
+  {
+   "announcement": "Also, it needs to be easy clean.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ed16b7f969726d47"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9e13a0821bd96ff8"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f034cbff533b85a5"
+  },
+  {
+   "announcement": "Actually, make it 04# instead of 7 inch.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "80227eb0b6e96d92"
+  },
+  {
+   "announcement": "Actually, make it #gold instead of 7 inch.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "caab8805891d3086"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 39,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 9,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for stainless steel hair cutting scissors of 7 inch size.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "8d34a8b9b400f97b",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

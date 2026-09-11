@@ -1,0 +1,208 @@
+{
+ "sample_id": "7249bfa461f6e890",
+ "tree_id": "95360c2378982548",
+ "adapter": "webshop",
+ "cluster": "area rugs",
+ "goal_idx": 437,
+ "split": "test",
+ "source_instruction": "i would like a 8 ft 6 in x 12 ft rectangular navy rug for my living room.",
+ "query": "I spent my whole weekend rearranging my home office closet, sorted out all my old winter sweaters and donated three bags of clothes I haven\u2019t worn in two years, and I even finally fixed that wobbly shelf above my desk that\u2019s been bugging me for months. I also picked up a new lavender candle that makes the whole upstairs smell like a summer meadow, it\u2019s so nice I\u2019ve been lighting it every evening while I fold laundry. Oh right, I\u2019m looking for area rugs for my living room, I want it in navy, sized 8 ft 6 in x 12 ft, and it can\u2019t cost more than $320. Wait, no, hold on\u2014make sure the shape is right, you know, the one that\u2019s not round or square? Yeah, that shape.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+insufficient_information",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "option:1"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "option:1"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent my whole weekend rearranging my home office closet, sorted out all my old winter sweaters and donated three bags of clothes I haven\u2019t worn in two years, and I even finally fixed that wobbly shelf above my desk that\u2019s been bugging me for months. I also picked up a new lavender candle that makes the whole upstairs smell like a summer meadow, it\u2019s so nice I\u2019ve been lighting it every evening while I fold laundry.",
+  "retained": [
+   "attr:living room",
+   "option:0",
+   "option:2",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:1"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "navy"
+    ],
+    [
+     "option:2",
+     "=",
+     "8 ft 6 in x 12 ft"
+    ],
+    [
+     "price_upper",
+     "<=",
+     320
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "1594b67a7319858f"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 22,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 22,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "2304ea46e3ffdb25",
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "navy"
+   ],
+   [
+    "option:1",
+    "=",
+    "rectangular"
+   ],
+   [
+    "option:2",
+    "=",
+    "8 ft 6 in x 12 ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    320
+   ]
+  ],
+  "hidden_slots": [
+   "option:1"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B00G4ITP30\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft\"]]]",
+   "[\"B00LO5HWME\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft 9 in x 12 ft 3 in\"]]]",
+   "[\"B00NC2HKQK\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"2 ft 3 in x 6 ft\"]]]",
+   "[\"B01LXHXJF9\",[[\"color\",\"navy  |  teal\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft x 8 ft\"]]]",
+   "[\"B079TPQG7M\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"9 ft 2 in x 12 ft 6 in\"]]]",
+   "[\"B084B2ZW9K\",[[\"color\",\"navy\"],[\"item shape\",\"rectangular\"],[\"size\",\"8 ft 10 in x 12 ft\"]]]"
+  ],
+  "hash": "0ff2c2a3cd5b6140dfff63ccf158c662"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "4df8086c9876a888",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the area rugs instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f03cbbdb67ad5c9b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the area rugs instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "8975033846c7a63b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cf94bb81c3ea4884",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be home decor."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "1e245f03b3a33abf",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "6304cfda046f19b2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "3437f8891ae16cce",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1' 8\" x 6' instead of navy."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "859007a01baf5e0e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 ft (10 in) x 6 ft (10 in) instead of navy."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

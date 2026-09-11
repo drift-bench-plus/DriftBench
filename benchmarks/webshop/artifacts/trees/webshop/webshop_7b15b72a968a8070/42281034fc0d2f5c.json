@@ -1,0 +1,1472 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B07NDTB7KD",
+    "cluster": "hair masks",
+    "name": "Schwarzkopf Color Ultime Metallic Permanent Hair Color Cream, 6.86 Sparkly Light Brown, 1 Count",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Coloring Products › Hair Color"
+   },
+   "bound_slots": [
+    "attr:hair dye",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair dye",
+     "=",
+     "hair dye"
+    ],
+    [
+     "option:0",
+     "=",
+     "brushed berry"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "3c073f0e62a992d184e36c4c5a58d99f",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07NDTB7KD\",[[\"color\",\"brushed berry\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "4b823fdb647c9844",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair masks",
+    "goal": {
+     "asin": "B07NDTB7KD",
+     "attributes": [
+      "hair dye"
+     ],
+     "category": "",
+     "goal_options": [
+      "brushed berry"
+     ],
+     "name": "Schwarzkopf Color Ultime Metallic Permanent Hair Color Cream, 6.86 Sparkly Light Brown, 1 Count",
+     "price_upper": 30,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Coloring Products › Hair Color",
+     "query": "hair masks"
+    }
+   },
+   "source_record": "17ddad13590c3249",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07QXV6T4K",
+    "cluster": "hair masks",
+    "name": "MAJESTIC PURE Argan Hair Mask with Keratin - Rejuvenating, Hydrating, Smoothing Deep Conditioner Keratin Hair Treatment - Paraben Free, 8 fl oz",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Masks"
+   },
+   "bound_slots": [
+    "attr:argan oil",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "6acce9a89a3f25cae8c51911c132a7eb",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0030GYCXC\",[]]",
+     "[\"B003X3S26U\",[]]",
+     "[\"B004CNFD3K\",[]]",
+     "[\"B004DTQ9L8\",[]]",
+     "[\"B004X8MG16\",[]]",
+     "[\"B0053OZBXO\",[]]",
+     "[\"B0056C2I0W\",[]]",
+     "[\"B005Z4RJY6\",[]]",
+     "[\"B007N6T866\",[]]",
+     "[\"B0085LZD9O\",[]]",
+     "[\"B008RLDHH2\",[]]",
+     "[\"B008VU2HV6\",[]]",
+     "[\"B00A0IWSN4\",[]]",
+     "[\"B00AFV4DVG\",[]]",
+     "[\"B00BB3JYKC\",[]]",
+     "[\"B00BR45PQC\",[]]",
+     "[\"B00BR47Q7S\",[]]",
+     "[\"B00CGPJD28\",[]]",
+     "[\"B00CW7RPI4\",[]]",
+     "[\"B00DFM8WDW\",[]]",
+     "[\"B00E6VGG16\",[]]",
+     "[\"B00FN48LS6\",[]]",
+     "[\"B00H57O890\",[]]",
+     "[\"B00H7H3WZE\",[]]",
+     "[\"B00H7H403M\",[]]",
+     "[\"B00H8JOLG0\",[]]",
+     "[\"B00LI03WR4\",[]]",
+     "[\"B00LJQUUD6\",[]]",
+     "[\"B00LOWISF2\",[]]",
+     "[\"B00NFUHU3W\",[]]",
+     "[\"B00O3GW5M8\",[]]",
+     "[\"B00SXXHAO0\",[]]",
+     "[\"B00TUJWAKK\",[]]",
+     "[\"B00TYL6MBM\",[]]",
+     "[\"B00VTW7OOS\",[]]",
+     "[\"B00Y1EZWXQ\",[]]",
+     "[\"B0118QDDCQ\",[]]",
+     "[\"B0118YIUP8\",[]]",
+     "[\"B01192GBH8\",[]]",
+     "[\"B012P4D5XM\",[]]",
+     "[\"B0140J9QPG\",[]]",
+     "[\"B0144PDFOE\",[]]",
+     "[\"B014EPFKMY\",[]]",
+     "[\"B017GGKR44\",[]]",
+     "[\"B017M2HPAQ\",[]]",
+     "[\"B018SXAG5Y\",[]]",
+     "[\"B0195I9J04\",[]]",
+     "[\"B0195I9JV8\",[]]",
+     "[\"B019F833RO\",[]]",
+     "[\"B01AUJ1UMC\",[]]",
+     "[\"B01AUJ1ZPO\",[]]",
+     "[\"B01B5BCKFA\",[]]",
+     "[\"B01BN0JBS2\",[]]",
+     "[\"B01DPUZZ88\",[]]",
+     "[\"B01DWRUGEM\",[]]",
+     "[\"B01F20MIKC\",[]]",
+     "[\"B01F2O4EZ0\",[]]",
+     "[\"B01G5GLPCO\",[]]",
+     "[\"B01I5QJT84\",[]]",
+     "[\"B01K52XI4M\",[]]",
+     "[\"B01M0AHPEZ\",[]]",
+     "[\"B01M2CSXZ2\",[]]",
+     "[\"B01M9FH029\",[]]",
+     "[\"B01MSYOKPA\",[]]",
+     "[\"B01MXGTZFU\",[]]",
+     "[\"B01N12ZY4B\",[]]",
+     "[\"B01N5XMU82\",[]]",
+     "[\"B01N9C27V5\",[]]",
+     "[\"B01NCZES6L\",[]]",
+     "[\"B06VX6VW7L\",[]]",
+     "[\"B06XHWTL6F\",[]]",
+     "[\"B06XR7KLLK\",[]]",
+     "[\"B0711M5PKL\",[]]",
+     "[\"B0719RSXPQ\",[]]",
+     "[\"B071CV9SP8\",[]]",
+     "[\"B071GVXG5C\",[]]",
+     "[\"B071KGW8BF\",[]]",
+     "[\"B071SGJ533\",[]]",
+     "[\"B071ZZVX5N\",[]]",
+     "[\"B072131L49\",[]]",
+     "[\"B072J4HDCN\",[]]",
+     "[\"B072N98YSP\",[]]",
+     "[\"B072Y3VZBW\",[]]",
+     "[\"B0748K8WJS\",[]]",
+     "[\"B074SXMK12\",[]]",
+     "[\"B075623CFL\",[]]",
+     "[\"B075CWBQCB\",[]]",
+     "[\"B0764KYYNY\",[]]",
+     "[\"B076HGSL3P\",[]]",
+     "[\"B076KVGWZF\",[]]",
+     "[\"B076WZ8T1C\",[]]",
+     "[\"B0778GYN16\",[]]",
+     "[\"B077FHWCXN\",[]]",
+     "[\"B077L6FDP3\",[]]",
+     "[\"B077N9C71S\",[]]",
+     "[\"B077PYQVKX\",[]]",
+     "[\"B077X5Z4JR\",[]]",
+     "[\"B078SRXHLW\",[]]",
+     "[\"B078W7F9R6\",[]]",
+     "[\"B078W7HZYQ\",[]]",
+     "[\"B07915ZWVH\",[]]",
+     "[\"B0799S6WBW\",[]]",
+     "[\"B079G8DHK9\",[]]",
+     "[\"B079RMJDLY\",[]]",
+     "[\"B07B7LXR9Q\",[]]",
+     "[\"B07BDCYPZ9\",[]]",
+     "[\"B07BF5KZW8\",[]]",
+     "[\"B07BWZRXQD\",[]]",
+     "[\"B07CGD8VCL\",[]]",
+     "[\"B07D5PGTTP\",[]]",
+     "[\"B07F1Z7KHV\",[]]",
+     "[\"B07FKRJKJY\",[]]",
+     "[\"B07FL77TVX\",[]]",
+     "[\"B07FPTQDZ9\",[]]",
+     "[\"B07G5PNNWV\",[]]",
+     "[\"B07G8LV7KX\",[]]",
+     "[\"B07GDV6NBW\",[]]",
+     "[\"B07GSV892H\",[]]",
+     "[\"B07GW9WKHL\",[]]",
+     "[\"B07H43Q7QX\",[]]",
+     "[\"B07HQVMYWV\",[]]",
+     "[\"B07JFSF4CM\",[]]",
+     "[\"B07KQGNMPJ\",[]]",
+     "[\"B07L9H27SH\",[]]",
+     "[\"B07LGFT8BW\",[]]",
+     "[\"B07M7PP9KX\",[]]",
+     "[\"B07MDZ1MDV\",[]]",
+     "[\"B07MXKCZHS\",[]]",
+     "[\"B07MZCQDJT\",[]]",
+     "[\"B07N6N5VW7\",[]]",
+     "[\"B07NCGFZNM\",[]]",
+     "[\"B07NDYQJ7B\",[]]",
+     "[\"B07NVYRLXK\",[]]",
+     "[\"B07NZCVDFG\",[]]",
+     "[\"B07PRNRXSS\",[]]",
+     "[\"B07PY96H2Q\",[]]",
+     "[\"B07QXV6T4K\",[]]",
+     "[\"B07RMYRNJF\",[]]",
+     "[\"B07RXPF1GN\",[]]",
+     "[\"B07S9X3LF4\",[]]",
+     "[\"B07SG7BG6P\",[]]",
+     "[\"B07SL9SBKH\",[]]",
+     "[\"B07SPJ2SLT\",[]]",
+     "[\"B07SQZVXZR\",[]]",
+     "[\"B07T8G5WR3\",[]]",
+     "[\"B07TW8KMGJ\",[]]",
+     "[\"B07V2NFJD9\",[]]",
+     "[\"B07V7C3GY1\",[]]",
+     "[\"B07VM1VMZ2\",[]]",
+     "[\"B07W8WWZ1M\",[]]",
+     "[\"B07WCQSGP9\",[]]",
+     "[\"B07WDBCZW7\",[]]",
+     "[\"B07WDXXLWZ\",[]]",
+     "[\"B07WFKYG3Z\",[]]",
+     "[\"B07WGZYB7L\",[]]",
+     "[\"B07WJ6DCMY\",[]]",
+     "[\"B07WRSK5SV\",[]]",
+     "[\"B07X11MNX3\",[]]",
+     "[\"B07X2XTPQ9\",[]]",
+     "[\"B07X32FC7K\",[]]",
+     "[\"B07X3Q8J67\",[]]",
+     "[\"B07X6GS4WP\",[]]",
+     "[\"B07XK19GH1\",[]]",
+     "[\"B07XK2WTKT\",[]]",
+     "[\"B07XRWJMRR\",[]]",
+     "[\"B07XT3WH5K\",[]]",
+     "[\"B07XY1TQXY\",[]]",
+     "[\"B07Y8355ZY\",[]]",
+     "[\"B07YCWLKQR\",[]]",
+     "[\"B07YN8CKY9\",[]]",
+     "[\"B07ZJR9515\",[]]",
+     "[\"B081BBZWS1\",[]]",
+     "[\"B081GVZ7VJ\",[]]",
+     "[\"B081MYB96J\",[]]",
+     "[\"B0821RPBWK\",[]]",
+     "[\"B082BN37TP\",[]]",
+     "[\"B082C591ZL\",[]]",
+     "[\"B082M1Z8BK\",[]]",
+     "[\"B083F3KDMZ\",[]]",
+     "[\"B083Z1CYLR\",[]]",
+     "[\"B084551F9X\",[]]",
+     "[\"B0849KY1T3\",[]]",
+     "[\"B084BY4P7J\",[]]",
+     "[\"B084JLMQXL\",[]]",
+     "[\"B084KX766Z\",[]]",
+     "[\"B084TLGJJ9\",[]]",
+     "[\"B085QB7N1X\",[]]",
+     "[\"B085VTBQ17\",[]]",
+     "[\"B08632RGJT\",[]]",
+     "[\"B0863FYJ9B\",[]]",
+     "[\"B086L8CTLZ\",[]]",
+     "[\"B0874GYM23\",[]]",
+     "[\"B0878V79R8\",[]]",
+     "[\"B087P5B446\",[]]",
+     "[\"B087XD8LM5\",[]]",
+     "[\"B0881J4KNB\",[]]",
+     "[\"B0885SVQPQ\",[]]",
+     "[\"B08884BZYQ\",[]]",
+     "[\"B088NFYJPD\",[]]",
+     "[\"B088NHYBCH\",[]]",
+     "[\"B088NJTW63\",[]]",
+     "[\"B089FPBGYC\",[]]",
+     "[\"B08B5YGF36\",[]]",
+     "[\"B08BW3FTST\",[]]",
+     "[\"B08BW6D5TY\",[]]",
+     "[\"B08BWJDBCD\",[]]",
+     "[\"B08BWP3DPP\",[]]",
+     "[\"B08C813TF1\",[]]",
+     "[\"B08CB2YXM6\",[]]",
+     "[\"B08CKRGZXQ\",[]]",
+     "[\"B08CNFWRSG\",[]]",
+     "[\"B08D3DM64N\",[]]",
+     "[\"B08DJQSWM2\",[]]",
+     "[\"B08F2KBPTL\",[]]",
+     "[\"B08F741KK7\",[]]",
+     "[\"B08FM1C42X\",[]]",
+     "[\"B08GFPZZRB\",[]]",
+     "[\"B08GR6544R\",[]]",
+     "[\"B08H5SLQF1\",[]]",
+     "[\"B08H5VJJW7\",[]]",
+     "[\"B08HSP9Y7W\",[]]",
+     "[\"B08HSPKNV7\",[]]",
+     "[\"B08HSRSCK8\",[]]",
+     "[\"B08J9WQ2LK\",[]]",
+     "[\"B08JNJLFKV\",[]]",
+     "[\"B08JR5MDJ3\",[]]",
+     "[\"B08K3GHBDB\",[]]",
+     "[\"B08KYMK9PF\",[]]",
+     "[\"B08KYMWTLV\",[]]",
+     "[\"B08LBFT4SR\",[]]",
+     "[\"B08M7D6X65\",[]]",
+     "[\"B08MBCVNJJ\",[]]",
+     "[\"B08MZDK9YR\",[]]",
+     "[\"B08MZFVTF7\",[]]",
+     "[\"B08MZG6DDR\",[]]",
+     "[\"B08NF5JL3F\",[]]",
+     "[\"B08NP5JW51\",[]]",
+     "[\"B08P1TYQF7\",[]]",
+     "[\"B08P45FDGZ\",[]]",
+     "[\"B08PDTPRPP\",[]]",
+     "[\"B08QD2DDCW\",[]]",
+     "[\"B08QJH192K\",[]]",
+     "[\"B08R12YPTZ\",[]]",
+     "[\"B08S2RWPVT\",[]]",
+     "[\"B08S3MZC7Z\",[]]",
+     "[\"B08T1KRK7W\",[]]",
+     "[\"B08TM8LWYN\",[]]",
+     "[\"B08TMPX8H2\",[]]",
+     "[\"B08TT6RWFB\",[]]",
+     "[\"B08TT71Q3D\",[]]",
+     "[\"B08TT7XC6M\",[]]",
+     "[\"B08TWW8MPK\",[]]",
+     "[\"B08W6VJY5G\",[]]",
+     "[\"B08X25QZLF\",[]]",
+     "[\"B08X8LB3HJ\",[]]",
+     "[\"B08X9438QR\",[]]",
+     "[\"B08Z3B6B4R\",[]]",
+     "[\"B08Z7713QC\",[]]",
+     "[\"B08ZM7Q2SL\",[]]",
+     "[\"B092HK51GK\",[]]",
+     "[\"B092VP5TBK\",[]]",
+     "[\"B092W4L63X\",[]]",
+     "[\"B092WRWFNH\",[]]",
+     "[\"B093ZXGXHM\",[]]",
+     "[\"B095C1JN2J\",[]]",
+     "[\"B096FXNQ2T\",[]]",
+     "[\"B096LDMNZR\",[]]",
+     "[\"B096MRRMCT\",[]]",
+     "[\"B096PWNFGD\",[]]",
+     "[\"B096WJW938\",[]]",
+     "[\"B097DDQV34\",[]]",
+     "[\"B097NPNS14\",[]]",
+     "[\"B098GS2VXW\",[]]",
+     "[\"B099MWV94C\",[]]",
+     "[\"B099SCBS9V\",[]]",
+     "[\"B099WTLHZ1\",[]]",
+     "[\"B099WV3R3C\",[]]",
+     "[\"B099WX92SK\",[]]",
+     "[\"B09B498SGY\",[]]",
+     "[\"B09CQHLRG6\",[]]",
+     "[\"B09CZ74D4C\",[]]",
+     "[\"B09DKBNFZG\",[]]",
+     "[\"B09DKC3YBZ\",[]]",
+     "[\"B09F6483YF\",[]]",
+     "[\"B09F746MHF\",[]]",
+     "[\"B09F9WRJDF\",[]]",
+     "[\"B09FDDPX96\",[]]",
+     "[\"B09FKMVMLF\",[]]",
+     "[\"B09FWYB1G7\",[]]",
+     "[\"B09FXB8BY5\",[]]",
+     "[\"B09G1K9WF6\",[]]",
+     "[\"B09G25MC3J\",[]]",
+     "[\"B09GK4V3QY\",[]]",
+     "[\"B09GLPXL8V\",[]]",
+     "[\"B09GWD481Z\",[]]",
+     "[\"B09GWDPD1W\",[]]",
+     "[\"B09GWDW53F\",[]]",
+     "[\"B09HGSH1RB\",[]]",
+     "[\"B09HJF1RZB\",[]]",
+     "[\"B09HLBKWPG\",[]]",
+     "[\"B09HTZBDJM\",[]]",
+     "[\"B09HZVV1LK\",[]]",
+     "[\"B09JHWNBFQ\",[]]",
+     "[\"B09JSBM5Y9\",[]]",
+     "[\"B09K3PPFTZ\",[]]",
+     "[\"B09LGX3K9S\",[]]",
+     "[\"B09N6KS9X3\",[]]",
+     "[\"B09NCDVNH6\",[]]",
+     "[\"B09NCDVQQS\",[]]",
+     "[\"B09NRR4J7Z\",[]]",
+     "[\"B09NRRFLFK\",[]]",
+     "[\"B09NRRLX9X\",[]]",
+     "[\"B09NRX7ZTS\",[]]",
+     "[\"B09P7NKMC1\",[]]",
+     "[\"B09QD6L254\",[]]",
+     "[\"B09QHQYYM5\",[]]",
+     "[\"B09SPXLRNX\",[]]",
+     "[\"B09SPXZ2T4\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7123ef47a28d1d28",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair masks",
+    "goal": {
+     "asin": "B07QXV6T4K",
+     "attributes": [
+      "argan oil"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "MAJESTIC PURE Argan Hair Mask with Keratin - Rejuvenating, Hydrating, Smoothing Deep Conditioner Keratin Hair Treatment - Paraben Free, 8 fl oz",
+     "price_upper": 30,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Masks",
+     "query": "hair masks"
+    }
+   },
+   "source_record": "c004e07f6464bb85",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09R4RJSFP",
+    "cluster": "hair masks",
+    "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Masks"
+   },
+   "bound_slots": [
+    "attr:argan oil",
+    "attr:hair treatment",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:hair treatment",
+     "=",
+     "hair treatment"
+    ],
+    [
+     "option:0",
+     "=",
+     "120ml"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "04b48f299414b268f5ea90eb1a25ac1e",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09QHQYYM5\",[[\"color\",\"120ml | 4 oz\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "60065ca6773ebdef",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair masks",
+    "goal": {
+     "asin": "B09R4RJSFP",
+     "attributes": [
+      "argan oil",
+      "hair treatment"
+     ],
+     "category": "",
+     "goal_options": [
+      "120ml"
+     ],
+     "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+     "price_upper": 120,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Masks",
+     "query": "hair masks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09R4RJSFP",
+    "cluster": "hair masks",
+    "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Masks"
+   },
+   "bound_slots": [
+    "attr:damaged hair",
+    "attr:hair treatment",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "attr:hair treatment",
+     "=",
+     "hair treatment"
+    ],
+    [
+     "option:0",
+     "=",
+     "120ml"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "04b48f299414b268f5ea90eb1a25ac1e",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09QHQYYM5\",[[\"color\",\"120ml | 4 oz\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f4dae67bcc315fc0",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair masks",
+    "goal": {
+     "asin": "B09R4RJSFP",
+     "attributes": [
+      "damaged hair",
+      "hair treatment"
+     ],
+     "category": "",
+     "goal_options": [
+      "120ml"
+     ],
+     "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+     "price_upper": 120,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Masks",
+     "query": "hair masks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09R4RJSFP",
+    "cluster": "hair masks",
+    "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Masks"
+   },
+   "bound_slots": [
+    "attr:hair treatment",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair treatment",
+     "=",
+     "hair treatment"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "f8c3bd3eb8385f01e578d0054b9f359e",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000EVEKM4\",[]]",
+     "[\"B000YE439Q\",[]]",
+     "[\"B00127OP1U\",[]]",
+     "[\"B001AQ672I\",[]]",
+     "[\"B003J3YQUK\",[]]",
+     "[\"B003J40Y8W\",[]]",
+     "[\"B003ZSVT1I\",[]]",
+     "[\"B004AI8OTC\",[]]",
+     "[\"B0053CHA8U\",[]]",
+     "[\"B006YJV5MS\",[]]",
+     "[\"B007KOGREM\",[]]",
+     "[\"B007UQ68T4\",[]]",
+     "[\"B0083UE58W\",[]]",
+     "[\"B0085LZD9O\",[]]",
+     "[\"B0089CF3E4\",[]]",
+     "[\"B008OLJW0Q\",[]]",
+     "[\"B009WKMEVC\",[]]",
+     "[\"B009WKMFL6\",[]]",
+     "[\"B00AO5S8AA\",[]]",
+     "[\"B00CW7RPI4\",[]]",
+     "[\"B00EE0X05Y\",[]]",
+     "[\"B00FG4VYMS\",[]]",
+     "[\"B00HM6K6XQ\",[]]",
+     "[\"B00JF5BTF6\",[]]",
+     "[\"B00L1QF43U\",[]]",
+     "[\"B00PIOQPPM\",[]]",
+     "[\"B00Q1X3SV8\",[]]",
+     "[\"B00R42M8OS\",[]]",
+     "[\"B00ZSKFZBG\",[]]",
+     "[\"B0118VITA2\",[]]",
+     "[\"B0118YIUP8\",[]]",
+     "[\"B01192GBH8\",[]]",
+     "[\"B012830S08\",[]]",
+     "[\"B0128QFRD8\",[]]",
+     "[\"B0140J9QPG\",[]]",
+     "[\"B014EPFKMY\",[]]",
+     "[\"B016600DH2\",[]]",
+     "[\"B017GGKR44\",[]]",
+     "[\"B01AX7SIQC\",[]]",
+     "[\"B01BIN8DW4\",[]]",
+     "[\"B01DWRUGEM\",[]]",
+     "[\"B01EQLY67Q\",[]]",
+     "[\"B01FY99EJE\",[]]",
+     "[\"B01IAELU2Y\",[]]",
+     "[\"B01LZK9N44\",[]]",
+     "[\"B01MR0VXVF\",[]]",
+     "[\"B01MXGTZFU\",[]]",
+     "[\"B01MYBBT2B\",[]]",
+     "[\"B01N02XYYY\",[]]",
+     "[\"B01N12ZY4B\",[]]",
+     "[\"B01N2NZ2X1\",[]]",
+     "[\"B01N4VU46S\",[]]",
+     "[\"B01N4WCL9P\",[]]",
+     "[\"B06VX6VW7L\",[]]",
+     "[\"B06XCMXVRM\",[]]",
+     "[\"B06XCXQBKP\",[]]",
+     "[\"B0711M5PKL\",[]]",
+     "[\"B071NLYW2Z\",[]]",
+     "[\"B071PCJQ9C\",[]]",
+     "[\"B071SGJ533\",[]]",
+     "[\"B071Y6TDZW\",[]]",
+     "[\"B071ZFHHSY\",[]]",
+     "[\"B074VM9ZB6\",[]]",
+     "[\"B074YY4TPH\",[]]",
+     "[\"B0752H6HTL\",[]]",
+     "[\"B075623CFL\",[]]",
+     "[\"B07571K9TG\",[]]",
+     "[\"B07572XFXS\",[]]",
+     "[\"B075K45Q9R\",[]]",
+     "[\"B075LQVH3L\",[]]",
+     "[\"B0764KYYNY\",[]]",
+     "[\"B07687X5SV\",[]]",
+     "[\"B076HGSL3P\",[]]",
+     "[\"B076YMVBLF\",[]]",
+     "[\"B07739Y89M\",[]]",
+     "[\"B077BGRBL9\",[]]",
+     "[\"B077N9C71S\",[]]",
+     "[\"B077YS8VY9\",[]]",
+     "[\"B078SXDFR3\",[]]",
+     "[\"B078W7F9R6\",[]]",
+     "[\"B078Y7WJ1X\",[]]",
+     "[\"B079TD4TW7\",[]]",
+     "[\"B07B436DXQ\",[]]",
+     "[\"B07B8JN5NP\",[]]",
+     "[\"B07BDCYPZ9\",[]]",
+     "[\"B07BF5KZW8\",[]]",
+     "[\"B07BK1JRFH\",[]]",
+     "[\"B07BM3BD89\",[]]",
+     "[\"B07BWZRXQD\",[]]",
+     "[\"B07D1QNC2C\",[]]",
+     "[\"B07DLZD66D\",[]]",
+     "[\"B07DLZNCY4\",[]]",
+     "[\"B07DNJBQ83\",[]]",
+     "[\"B07F1Z7KHV\",[]]",
+     "[\"B07FGFXXLS\",[]]",
+     "[\"B07GPGVQXY\",[]]",
+     "[\"B07H5NLWFD\",[]]",
+     "[\"B07JFMDL4D\",[]]",
+     "[\"B07KBD3N2W\",[]]",
+     "[\"B07KMHV6LQ\",[]]",
+     "[\"B07L5PXZV4\",[]]",
+     "[\"B07L9GNH7J\",[]]",
+     "[\"B07M7PP9KX\",[]]",
+     "[\"B07N64BZKV\",[]]",
+     "[\"B07NCGFZNM\",[]]",
+     "[\"B07NT56GFW\",[]]",
+     "[\"B07P9DZQN6\",[]]",
+     "[\"B07Q8VSCW2\",[]]",
+     "[\"B07QC42QDK\",[]]",
+     "[\"B07QXV6T4K\",[]]",
+     "[\"B07RHWG793\",[]]",
+     "[\"B07RXPF1GN\",[]]",
+     "[\"B07S9X3LF4\",[]]",
+     "[\"B07SG7BG6P\",[]]",
+     "[\"B07SL9SBKH\",[]]",
+     "[\"B07T14NT98\",[]]",
+     "[\"B07T1783GR\",[]]",
+     "[\"B07T2F7TSL\",[]]",
+     "[\"B07TJQ35RR\",[]]",
+     "[\"B07TQDR776\",[]]",
+     "[\"B07TRP86D4\",[]]",
+     "[\"B07V3YG1WC\",[]]",
+     "[\"B07V62FFQG\",[]]",
+     "[\"B07VRMCHMD\",[]]",
+     "[\"B07W1Q1F4J\",[]]",
+     "[\"B07W4HY751\",[]]",
+     "[\"B07W6819Z7\",[]]",
+     "[\"B07W8WWZ1M\",[]]",
+     "[\"B07WCPT9XQ\",[]]",
+     "[\"B07WDXXLWZ\",[]]",
+     "[\"B07WGZYB7L\",[]]",
+     "[\"B07WJ6DCMY\",[]]",
+     "[\"B07WZRZVJ9\",[]]",
+     "[\"B07X11MNX3\",[]]",
+     "[\"B07X2XTPQ9\",[]]",
+     "[\"B07X32FC7K\",[]]",
+     "[\"B07X3Q8J67\",[]]",
+     "[\"B07X62X7PS\",[]]",
+     "[\"B07X9SYZ9C\",[]]",
+     "[\"B07XH4J9HW\",[]]",
+     "[\"B07XH53ZB5\",[]]",
+     "[\"B07XK19GH1\",[]]",
+     "[\"B07XK2WTKT\",[]]",
+     "[\"B07XRWJMRR\",[]]",
+     "[\"B07XT3WH5K\",[]]",
+     "[\"B07XY1TQXY\",[]]",
+     "[\"B07Y8355ZY\",[]]",
+     "[\"B07Z7R7H73\",[]]",
+     "[\"B07ZJR9515\",[]]",
+     "[\"B07ZNTM2L5\",[]]",
+     "[\"B07ZY8P4CH\",[]]",
+     "[\"B081VP9D8N\",[]]",
+     "[\"B082GHWZL2\",[]]",
+     "[\"B082M1Z8BK\",[]]",
+     "[\"B082SZY9RT\",[]]",
+     "[\"B082X6RW8B\",[]]",
+     "[\"B083F99PWG\",[]]",
+     "[\"B083JCHLBC\",[]]",
+     "[\"B083XBD127\",[]]",
+     "[\"B083Z1CYLR\",[]]",
+     "[\"B0843NZ7BH\",[]]",
+     "[\"B0843PH6FK\",[]]",
+     "[\"B0844Y31ZH\",[]]",
+     "[\"B0844Z6C1M\",[]]",
+     "[\"B0849KY1T3\",[]]",
+     "[\"B084C3YFPS\",[]]",
+     "[\"B084TLGJJ9\",[]]",
+     "[\"B085636VZ5\",[]]",
+     "[\"B085866SBB\",[]]",
+     "[\"B085J17YTW\",[]]",
+     "[\"B085RGWHT1\",[]]",
+     "[\"B085VGFWXV\",[]]",
+     "[\"B0868KG1FY\",[]]",
+     "[\"B086L8CTLZ\",[]]",
+     "[\"B0871QFXZG\",[]]",
+     "[\"B0876MZCC9\",[]]",
+     "[\"B0876NBHHH\",[]]",
+     "[\"B0878V79R8\",[]]",
+     "[\"B0881J4KNB\",[]]",
+     "[\"B0882T6SM1\",[]]",
+     "[\"B08836JJ4Z\",[]]",
+     "[\"B0885SVQPQ\",[]]",
+     "[\"B0888NTP6Y\",[]]",
+     "[\"B088NFYJPD\",[]]",
+     "[\"B0899F2KTQ\",[]]",
+     "[\"B089B6W8PJ\",[]]",
+     "[\"B089B7QHBF\",[]]",
+     "[\"B08B5Y7N4X\",[]]",
+     "[\"B08B5YGF36\",[]]",
+     "[\"B08BD4L7QX\",[]]",
+     "[\"B08BF8Y5NJ\",[]]",
+     "[\"B08BJSL2YP\",[]]",
+     "[\"B08BKRR1X5\",[]]",
+     "[\"B08BKSSP4Q\",[]]",
+     "[\"B08BP3JRVC\",[]]",
+     "[\"B08BW3FTST\",[]]",
+     "[\"B08BW6D5TY\",[]]",
+     "[\"B08BWJDBCD\",[]]",
+     "[\"B08BWJDHPS\",[]]",
+     "[\"B08BWP3DPP\",[]]",
+     "[\"B08C813TF1\",[]]",
+     "[\"B08CHD8MPJ\",[]]",
+     "[\"B08CXG92VL\",[]]",
+     "[\"B08D3DM64N\",[]]",
+     "[\"B08D4DCB4G\",[]]",
+     "[\"B08D76YWJF\",[]]",
+     "[\"B08DJDS11D\",[]]",
+     "[\"B08DL9XMRG\",[]]",
+     "[\"B08DRWKH22\",[]]",
+     "[\"B08DRYV94S\",[]]",
+     "[\"B08F573Y94\",[]]",
+     "[\"B08F6TD9GH\",[]]",
+     "[\"B08F741KK7\",[]]",
+     "[\"B08F92FNKM\",[]]",
+     "[\"B08F93N25M\",[]]",
+     "[\"B08F996VSV\",[]]",
+     "[\"B08F9BGWYP\",[]]",
+     "[\"B08F9F42RQ\",[]]",
+     "[\"B08F9NM5F5\",[]]",
+     "[\"B08F9R6F5K\",[]]",
+     "[\"B08FCFRTQD\",[]]",
+     "[\"B08FCQ8FYV\",[]]",
+     "[\"B08FDNGM6G\",[]]",
+     "[\"B08FM1C42X\",[]]",
+     "[\"B08FMK1ZRN\",[]]",
+     "[\"B08FR3BGFW\",[]]",
+     "[\"B08FT8YXX9\",[]]",
+     "[\"B08FZ2YZJM\",[]]",
+     "[\"B08G519WHW\",[]]",
+     "[\"B08GCD4ZWD\",[]]",
+     "[\"B08GL289G2\",[]]",
+     "[\"B08GMYCTMK\",[]]",
+     "[\"B08GN4N7BQ\",[]]",
+     "[\"B08GQG9C2M\",[]]",
+     "[\"B08GQPRG19\",[]]",
+     "[\"B08GR6544R\",[]]",
+     "[\"B08GRBWNCR\",[]]",
+     "[\"B08H845NPG\",[]]",
+     "[\"B08HH8N92M\",[]]",
+     "[\"B08HSP9Y7W\",[]]",
+     "[\"B08HSPKNV7\",[]]",
+     "[\"B08HSRSCK8\",[]]",
+     "[\"B08J9WQ2LK\",[]]",
+     "[\"B08JCDRZQ3\",[]]",
+     "[\"B08JSJP3Y6\",[]]",
+     "[\"B08JTXST1K\",[]]",
+     "[\"B08KFQBXJB\",[]]",
+     "[\"B08KG5TXF9\",[]]",
+     "[\"B08KWHLV16\",[]]",
+     "[\"B08L3XW7CW\",[]]",
+     "[\"B08LCKBV33\",[]]",
+     "[\"B08LHCVSCH\",[]]",
+     "[\"B08LLBRT7F\",[]]",
+     "[\"B08LTTN56P\",[]]",
+     "[\"B08M3B2YBF\",[]]",
+     "[\"B08MSYT6KB\",[]]",
+     "[\"B08MTCRBMJ\",[]]",
+     "[\"B08MWSHXLX\",[]]",
+     "[\"B08N471RKG\",[]]",
+     "[\"B08N4YYTHP\",[]]",
+     "[\"B08NHLZY4L\",[]]",
+     "[\"B08P1TYQF7\",[]]",
+     "[\"B08P45FDGZ\",[]]",
+     "[\"B08P848HWC\",[]]",
+     "[\"B08PBBHG6V\",[]]",
+     "[\"B08PGM998K\",[]]",
+     "[\"B08QD2DDCW\",[]]",
+     "[\"B08R12YPTZ\",[]]",
+     "[\"B08RG27PRR\",[]]",
+     "[\"B08RGNDXLC\",[]]",
+     "[\"B08RGWRJRL\",[]]",
+     "[\"B08RJ8T3V6\",[]]",
+     "[\"B08RQD2V38\",[]]",
+     "[\"B08RWK4HY7\",[]]",
+     "[\"B08S2RWPVT\",[]]",
+     "[\"B08S3MZC7Z\",[]]",
+     "[\"B08SB7JDL5\",[]]",
+     "[\"B08SMHSS3Y\",[]]",
+     "[\"B08TM8LWYN\",[]]",
+     "[\"B08TNXRJJV\",[]]",
+     "[\"B08TT6RWFB\",[]]",
+     "[\"B08TWW8MPK\",[]]",
+     "[\"B08W6VJY5G\",[]]",
+     "[\"B08WGD6R81\",[]]",
+     "[\"B08WPWMH75\",[]]",
+     "[\"B08XY8LZMG\",[]]",
+     "[\"B08XYF86JQ\",[]]",
+     "[\"B08Z3B6B4R\",[]]",
+     "[\"B0914LSBSR\",[]]",
+     "[\"B091Y63YSK\",[]]",
+     "[\"B092VP5TBK\",[]]",
+     "[\"B093FZCVBR\",[]]",
+     "[\"B093Q9LM7M\",[]]",
+     "[\"B093WMGFW9\",[]]",
+     "[\"B093ZXGXHM\",[]]",
+     "[\"B0947M164N\",[]]",
+     "[\"B094GBDSG7\",[]]",
+     "[\"B094GG5CQ4\",[]]",
+     "[\"B094L7J4YJ\",[]]",
+     "[\"B094R8MJ6X\",[]]",
+     "[\"B094YKP6QN\",[]]",
+     "[\"B094YL5GB3\",[]]",
+     "[\"B094ZBX7YJ\",[]]",
+     "[\"B0957YX3J6\",[]]",
+     "[\"B09582G9S2\",[]]",
+     "[\"B095H8FXKZ\",[]]",
+     "[\"B095RRMFW4\",[]]",
+     "[\"B095Z53N17\",[]]",
+     "[\"B096FXNQ2T\",[]]",
+     "[\"B096LDMNZR\",[]]",
+     "[\"B096WJW938\",[]]",
+     "[\"B0977WQL7S\",[]]",
+     "[\"B097DDQV34\",[]]",
+     "[\"B097NPNS14\",[]]",
+     "[\"B097PHY3FH\",[]]",
+     "[\"B09832FPGS\",[]]",
+     "[\"B0989WQ7TW\",[]]",
+     "[\"B098GS2VXW\",[]]",
+     "[\"B099MWV94C\",[]]",
+     "[\"B099SC84JT\",[]]",
+     "[\"B099WTLHZ1\",[]]",
+     "[\"B099WV3R3C\",[]]",
+     "[\"B099WX92SK\",[]]",
+     "[\"B09BBR8X3T\",[]]",
+     "[\"B09BG226J7\",[]]",
+     "[\"B09BTBVSXW\",[]]",
+     "[\"B09BVHGJWM\",[]]",
+     "[\"B09BZX1BR8\",[]]",
+     "[\"B09CFK38B1\",[]]",
+     "[\"B09CKVGTVD\",[]]",
+     "[\"B09CMZWX83\",[]]",
+     "[\"B09CYV9XZ1\",[]]",
+     "[\"B09CZ74D4C\",[]]",
+     "[\"B09D3TRXRS\",[]]",
+     "[\"B09D8K1VF4\",[]]",
+     "[\"B09DKBNFZG\",[]]",
+     "[\"B09DX3S4ZH\",[]]",
+     "[\"B09F715H9V\",[]]",
+     "[\"B09F9CV4YV\",[]]",
+     "[\"B09FXB8BY5\",[]]",
+     "[\"B09FY9LQLF\",[]]",
+     "[\"B09FY9VKH9\",[]]",
+     "[\"B09FYB4HZM\",[]]",
+     "[\"B09FYB8NDM\",[]]",
+     "[\"B09FYBZNQL\",[]]",
+     "[\"B09FYCP44W\",[]]",
+     "[\"B09FYCPPRZ\",[]]",
+     "[\"B09FYCSJ87\",[]]",
+     "[\"B09G1J9PKG\",[]]",
+     "[\"B09G1K9WF6\",[]]",
+     "[\"B09G25MC3J\",[]]",
+     "[\"B09G5TRPLH\",[]]",
+     "[\"B09G6WBBWM\",[]]",
+     "[\"B09GGBF76B\",[]]",
+     "[\"B09GV343W1\",[]]",
+     "[\"B09H35Y6DT\",[]]",
+     "[\"B09HTZBDJM\",[]]",
+     "[\"B09HW3S9FB\",[]]",
+     "[\"B09HW8SQNK\",[]]",
+     "[\"B09HWQ4H85\",[]]",
+     "[\"B09HZVV1LK\",[]]",
+     "[\"B09JFJQ225\",[]]",
+     "[\"B09JL6YWMY\",[]]",
+     "[\"B09JSBM5Y9\",[]]",
+     "[\"B09K5DK8NW\",[]]",
+     "[\"B09K9R1F4Q\",[]]",
+     "[\"B09KV549B6\",[]]",
+     "[\"B09KV5BH8V\",[]]",
+     "[\"B09KZ5NDWG\",[]]",
+     "[\"B09LGX3K9S\",[]]",
+     "[\"B09LXJGL2M\",[]]",
+     "[\"B09M167Z8Z\",[]]",
+     "[\"B09M7H6VDD\",[]]",
+     "[\"B09MDHKJ91\",[]]",
+     "[\"B09MW7JRV3\",[]]",
+     "[\"B09MZF5D8S\",[]]",
+     "[\"B09N11QCCX\",[]]",
+     "[\"B09N179LJC\",[]]",
+     "[\"B09N8WMS1C\",[]]",
+     "[\"B09N98M8LQ\",[]]",
+     "[\"B09NCCV468\",[]]",
+     "[\"B09NCDVNH6\",[]]",
+     "[\"B09NCDVQQS\",[]]",
+     "[\"B09NRR4J7Z\",[]]",
+     "[\"B09NRRFLFK\",[]]",
+     "[\"B09NRRLX9X\",[]]",
+     "[\"B09NRX7ZTS\",[]]",
+     "[\"B09NVXY439\",[]]",
+     "[\"B09PDXZ3QF\",[]]",
+     "[\"B09PR8TXPH\",[]]",
+     "[\"B09QHQYYM5\",[]]",
+     "[\"B09QLKRH8P\",[]]",
+     "[\"B09QMLX235\",[]]",
+     "[\"B09QY33RQ5\",[]]",
+     "[\"B09R4RJSFP\",[]]",
+     "[\"B09R82ML19\",[]]",
+     "[\"B09R82SVCG\",[]]",
+     "[\"B09R8CQGJZ\",[]]",
+     "[\"B09RD8P3XB\",[]]",
+     "[\"B09RDBP1JN\",[]]",
+     "[\"B09RNDBC8Y\",[]]",
+     "[\"B09SGBHMWG\",[]]",
+     "[\"B09SHRGQD7\",[]]",
+     "[\"B09SJ49Q52\",[]]",
+     "[\"B09SPXLRNX\",[]]",
+     "[\"B09T5V1M67\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "ef4fa821c157a4b6",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair masks",
+    "goal": {
+     "asin": "B09R4RJSFP",
+     "attributes": [
+      "hair treatment"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+     "price_upper": 120,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Masks",
+     "query": "hair masks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09R4RJSFP",
+    "cluster": "hair masks",
+    "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Masks"
+   },
+   "bound_slots": [
+    "attr:hair treatment",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair treatment",
+     "=",
+     "hair treatment"
+    ],
+    [
+     "option:0",
+     "=",
+     "1"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "09b4b4cd3a863d06aa4caebd083939e5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003ZSVT1I\",[[\"style\",\"pack of 1 - 33.8 fl oz\"]]]",
+     "[\"B0085LZD9O\",[[\"size\",\"250 ml (pack of 1)\"]]]",
+     "[\"B01MYBBT2B\",[[\"pattern name\",\"12 packs of 1 fl oz\"]]]",
+     "[\"B074VM9ZB6\",[[\"size\",\"1 count\"]]]",
+     "[\"B07571K9TG\",[[\"style name\",\"conditioner - pack of 1\"]]]",
+     "[\"B07572XFXS\",[[\"size\",\"2.03 fl oz (pack of 1)\"]]]",
+     "[\"B07QC42QDK\",[[\"size\",\"8.5 fl oz (pack of 1)\"]]]",
+     "[\"B07TRP86D4\",[[\"size\",\"12 fl oz (pack of 1)\"]]]",
+     "[\"B07WDXXLWZ\",[[\"color\",\"1 bottle\"]]]",
+     "[\"B07X2XTPQ9\",[[\"size\",\"2.03 fl oz (pack of 1)\"]]]",
+     "[\"B07XK19GH1\",[[\"size\",\"2.03 fl oz (pack of 1)\"]]]",
+     "[\"B07ZNTM2L5\",[[\"size\",\"4.06 fl oz (pack of 1)\"]]]",
+     "[\"B0876MZCC9\",[[\"size\",\"0.4 fl oz (pack of 1)\"]]]",
+     "[\"B088NFYJPD\",[[\"size\",\"50ml | 1.7 fl oz\"]]]",
+     "[\"B08FR3BGFW\",[[\"size\",\"pack of 1\"]]]",
+     "[\"B08LCKBV33\",[[\"size\",\"2.03 fl oz (pack of 1)\"]]]",
+     "[\"B08MWSHXLX\",[[\"size\",\"5.41 fl oz (pack of 1)\"]]]",
+     "[\"B097PHY3FH\",[[\"style\",\"m9 hair repair treatment 1.01 fl oz x 2\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "fb28fb69f963d471",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair masks",
+    "goal": {
+     "asin": "B09R4RJSFP",
+     "attributes": [
+      "hair treatment"
+     ],
+     "category": "",
+     "goal_options": [
+      "1"
+     ],
+     "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+     "price_upper": 120,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Masks",
+     "query": "hair masks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09R4RJSFP",
+    "cluster": "hair masks",
+    "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Masks"
+   },
+   "bound_slots": [
+    "attr:hair treatment",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:hair treatment",
+     "=",
+     "hair treatment"
+    ],
+    [
+     "option:0",
+     "=",
+     "1 fl oz (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1374fecf36ec9dd6bd1b06ba0e826276",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B003ZSVT1I\",[[\"style\",\"pack of 1 - 33.8 fl oz\"]]]",
+     "[\"B01MYBBT2B\",[[\"pattern name\",\"12 packs of 1 fl oz\"]]]",
+     "[\"B074VM9ZB6\",[[\"size\",\"1 fl oz (pack of 1)\"]]]",
+     "[\"B07572XFXS\",[[\"size\",\"2.03 fl oz (pack of 1)\"]]]",
+     "[\"B07QC42QDK\",[[\"size\",\"8.5 fl oz (pack of 1)\"]]]",
+     "[\"B07TRP86D4\",[[\"size\",\"12 fl oz (pack of 1)\"]]]",
+     "[\"B07X2XTPQ9\",[[\"size\",\"2.03 fl oz (pack of 1)\"]]]",
+     "[\"B07XK19GH1\",[[\"size\",\"2.03 fl oz (pack of 1)\"]]]",
+     "[\"B07ZNTM2L5\",[[\"size\",\"4.06 fl oz (pack of 1)\"]]]",
+     "[\"B0876MZCC9\",[[\"size\",\"0.4 fl oz (pack of 1)\"]]]",
+     "[\"B08FR3BGFW\",[[\"size\",\"pack of 1\"]]]",
+     "[\"B08LCKBV33\",[[\"size\",\"2.03 fl oz (pack of 1)\"]]]",
+     "[\"B08MWSHXLX\",[[\"size\",\"5.41 fl oz (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "902e8b23b07e6366",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair masks",
+    "goal": {
+     "asin": "B09R4RJSFP",
+     "attributes": [
+      "hair treatment"
+     ],
+     "category": "",
+     "goal_options": [
+      "1 fl oz (pack of 1)"
+     ],
+     "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+     "price_upper": 120,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Masks",
+     "query": "hair masks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09R4RJSFP",
+    "cluster": "hair masks",
+    "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Masks"
+   },
+   "bound_slots": [
+    "attr:hair treatment",
+    "option:0"
+   ],
+   "conditions": [
+    [
+     "attr:hair treatment",
+     "=",
+     "hair treatment"
+    ],
+    [
+     "option:0",
+     "=",
+     "120ml"
+    ]
+   ],
+   "ground_truth": {
+    "hash": "eaeed664bc822c58bdbbe1148d954487",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07ZNTM2L5\",[[\"size\",\"120ml\"]]]",
+     "[\"B08MWSHXLX\",[[\"size\",\"120ml+cs\"]]]",
+     "[\"B09QHQYYM5\",[[\"color\",\"120ml | 4 oz\"]]]",
+     "[\"B09R4RJSFP\",[[\"color\",\"120ml\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "6eed8e07f9a1b595",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "hair masks",
+    "goal": {
+     "asin": "B09R4RJSFP",
+     "attributes": [
+      "hair treatment"
+     ],
+     "category": "",
+     "goal_options": [
+      "120ml"
+     ],
+     "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+     "price_upper": 1000000,
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Masks",
+     "query": "hair masks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07NDTB7KD",
+     "cluster": "hair masks",
+     "name": "Schwarzkopf Color Ultime Metallic Permanent Hair Color Cream, 6.86 Sparkly Light Brown, 1 Count",
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Coloring Products › Hair Color"
+    }
+   },
+   "dst": "4b823fdb647c9844",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "17ddad13590c3249",
+   "src": "3f8e6661d251c449"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07QXV6T4K",
+     "cluster": "hair masks",
+     "name": "MAJESTIC PURE Argan Hair Mask with Keratin - Rejuvenating, Hydrating, Smoothing Deep Conditioner Keratin Hair Treatment - Paraben Free, 8 fl oz",
+     "product_category": "Beauty & Personal Care › Hair Care › Hair Masks"
+    }
+   },
+   "dst": "7123ef47a28d1d28",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "c004e07f6464bb85",
+   "src": "3f8e6661d251c449"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:argan oil",
+      "=",
+      "argan oil"
+     ]
+    ]
+   },
+   "dst": "60065ca6773ebdef",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3f8e6661d251c449"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:damaged hair",
+      "=",
+      "damaged hair"
+     ]
+    ]
+   },
+   "dst": "f4dae67bcc315fc0",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3f8e6661d251c449"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "120ml"
+     ]
+    ]
+   },
+   "dst": "ef4fa821c157a4b6",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3f8e6661d251c449"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "120ml",
+      "1"
+     ]
+    ]
+   },
+   "dst": "fb28fb69f963d471",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3f8e6661d251c449"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "120ml",
+      "1 fl oz (pack of 1)"
+     ]
+    ]
+   },
+   "dst": "902e8b23b07e6366",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3f8e6661d251c449"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "price_upper",
+      "<=",
+      120
+     ]
+    ]
+   },
+   "dst": "6eed8e07f9a1b595",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3f8e6661d251c449"
+  }
+ ],
+ "env_id": "webshop_7b15b72a968a8070",
+ "env_spec": {
+  "cluster": "hair masks",
+  "env_id": "webshop_7b15b72a968a8070",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B09R4RJSFP",
+   "cluster": "hair masks",
+   "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+   "product_category": "Beauty & Personal Care › Hair Care › Hair Masks"
+  },
+  "bound_slots": [
+   "attr:hair treatment",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:hair treatment",
+    "=",
+    "hair treatment"
+   ],
+   [
+    "option:0",
+    "=",
+    "120ml"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "ground_truth": {
+   "hash": "eaeed664bc822c58bdbbe1148d954487",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B07ZNTM2L5\",[[\"size\",\"120ml\"]]]",
+    "[\"B08MWSHXLX\",[[\"size\",\"120ml+cs\"]]]",
+    "[\"B09QHQYYM5\",[[\"color\",\"120ml | 4 oz\"]]]",
+    "[\"B09R4RJSFP\",[[\"color\",\"120ml\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "3f8e6661d251c449",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "hair masks",
+   "goal": {
+    "asin": "B09R4RJSFP",
+    "attributes": [
+     "hair treatment"
+    ],
+    "category": "",
+    "goal_options": [
+     "120ml"
+    ],
+    "name": "Magical Hair Treatment Mask 5 Seconds Repairs Damage Hair Advanced Molecular Hair deep Conditioner Roots Treatment Return Bouncy Restore Elasticity Hair Care Essence (60ML)",
+    "price_upper": 120,
+    "product_category": "Beauty & Personal Care › Hair Care › Hair Masks",
+    "query": "hair masks"
+   }
+  },
+  "source_record": "c384b41d8a37d3cf",
+  "unbound_slots": [
+   "attr:argan oil",
+   "attr:damaged hair",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "tree_id": "42281034fc0d2f5c"
+}

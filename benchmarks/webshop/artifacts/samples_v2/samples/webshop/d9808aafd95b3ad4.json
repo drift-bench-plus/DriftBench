@@ -1,0 +1,173 @@
+{
+ "adapter": "webshop",
+ "cluster": "headphones",
+ "fidelity_notes": [],
+ "goal_idx": 213,
+ "ground_truth": {
+  "cardinality": 8,
+  "hash": "abd81fb3989f261d17dfcea304be12ad",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07TYTJ5M1\",[[\"color\",\"silver\"]]]",
+   "[\"B083ZQGG4R\",[[\"color\",\"silver\"]]]",
+   "[\"B089W5RDKV\",[[\"color\",\"silver\"]]]",
+   "[\"B08Y8G1YZN\",[[\"color\",\"silver\"]]]",
+   "[\"B091DXBFFQ\",[[\"color\",\"silver\"]]]",
+   "[\"B09GJZZDQP\",[[\"color\",\"white-silver\"]]]",
+   "[\"B09LXNRQVZ\",[[\"color\",\"silver\"]]]",
+   "[\"B09S5L57D5\",[[\"color\",\"silver\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:noise cancelling",
+    "=",
+    "noise cancelling"
+   ],
+   [
+    "option:0",
+    "=",
+    "white-silver"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "8bc5949360d672c9"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:noise cancelling",
+     "=",
+     "noise cancelling"
+    ],
+    [
+     "option:0",
+     "=",
+     "white-silver"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I’ve been tending to my windowsill herb garden all morning, and my basil plant just sprouted its first set of bright, fragrant new leaves that smell amazing when I brush past them. I also just finished baking a loaf of sourdough bread with a crispy, golden crust that filled my whole apartment with a warm, yeasty aroma. I was even thinking about heading to the local plant nursery later this week to pick up a small rosemary plant to add to my little collection.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:noise cancelling",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve been tending to my windowsill herb garden all morning, and my basil plant just sprouted its first set of bright, fragrant new leaves that smell amazing when I brush past them. I also just finished baking a loaf of sourdough bread with a crispy, golden crust that filled my whole apartment with a warm, yeasty aroma. I was even thinking about heading to the local plant nursery later this week to pick up a small rosemary plant to add to my little collection. I’m looking for noise cancelling headphones in the white-silver color option, with a price limit of $30, in the headphones section.",
+ "render_attempts": 1,
+ "sample_id": "d9808aafd95b3ad4",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the headphones instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7f764ac432fe9619"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the headphones instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a378bd1c6a654d36"
+  },
+  {
+   "announcement": "Also, it needs to be wireless earbuds.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "073c9f6121813974"
+  },
+  {
+   "announcement": "Also, it needs to be audio cable.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7ee209cc2f948a74"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4b6493956c64e7c4"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e6ad588664e893bb"
+  },
+  {
+   "announcement": "Actually, make it 3 pack instead of white-silver.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7973db25f4efdd9e"
+  },
+  {
+   "announcement": "Actually, make it 7-black1 instead of white-silver.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8890af7279bdaa58"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 8,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 8,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want silver and noise cancelling earbuds.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "0e753744b15f4583",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

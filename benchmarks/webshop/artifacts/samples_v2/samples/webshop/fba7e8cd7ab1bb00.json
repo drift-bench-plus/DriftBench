@@ -1,0 +1,252 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair cutting tools",
+ "fidelity_notes": [],
+ "goal_idx": 377,
+ "ground_truth": {
+  "cardinality": 54,
+  "hash": "0a26518ba93ae0494a0b233876129331",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B001M0CHF8\",[[\"color\",\"6\\\" thinning scissors\"]]]",
+   "[\"B00T7T643C\",[[\"size\",\"14 cm - thinning - matt\"]]]",
+   "[\"B07BVZHK11\",[[\"size\",\"6\\\"\"]]]",
+   "[\"B07C783FDH\",[[\"style\",\"d-6 inch-thinning scissor\"]]]",
+   "[\"B07CTFCLHR\",[[\"pattern name\",\"thinning scissor\"]]]",
+   "[\"B07D8RMRPR\",[[\"pattern name\",\"thinning scissor\"]]]",
+   "[\"B07L674PP4\",[[\"pattern name\",\"6\\\" thinning\"]]]",
+   "[\"B07SRWVV96\",[[\"size\",\"6\"]]]",
+   "[\"B07SVHZLWM\",[[\"size\",\"6\"]]]",
+   "[\"B07T1K8LNM\",[[\"color\",\"thinning\"]]]",
+   "[\"B07VCGD82W\",[[\"pattern name\",\"6\\\" thinning\"]]]",
+   "[\"B07Y9KPSY3\",[[\"pattern name\",\"cutting & thinning set\"]]]",
+   "[\"B07ZRHTRPJ\",[[\"pattern name\",\"v teeth thinning scissors\"]]]",
+   "[\"B0868ZNB5W\",[[\"size\",\"barber and thinning shears set\"]]]",
+   "[\"B086DJSJB8\",[[\"pattern name\",\"thinning shears\"]]]",
+   "[\"B086HK5N3D\",[[\"style\",\"thinning scissor\"]]]",
+   "[\"B086QXMQRR\",[[\"style\",\"thinning rate：25%\"]]]",
+   "[\"B086WDQXKT\",[[\"pattern name\",\"straight scissor and thinning scissor\"]]]",
+   "[\"B0872DJJNX\",[[\"pattern name\",\"6\\\" thinning\"]]]",
+   "[\"B087929PCR\",[[\"color\",\"hair thinning shears\"]]]",
+   "[\"B087MWPQZ4\",[[\"pattern name\",\"thinning-scissors\"]]]",
+   "[\"B088ZTYXSB\",[[\"pattern name\",\"thinning scissor\"]]]",
+   "[\"B0892LGPRT\",[[\"color\",\"thinning shears\"]]]",
+   "[\"B0893TC5B1\",[[\"size\",\"6\"]]]",
+   "[\"B08BLJVCN7\",[[\"pattern name\",\"hair thinning scissor\"]]]",
+   "[\"B08BZQFQRV\",[[\"pattern name\",\"hair thinning scissors\"]]]",
+   "[\"B08C9S9B7R\",[[\"size\",\"5.5 inch thinning\"]]]",
+   "[\"B08CSM2MBP\",[[\"size\",\"thinning scissor\"]]]",
+   "[\"B08FDWW8Q9\",[[\"size\",\"7cr hair thinning scissors\"]]]",
+   "[\"B08GBLHSNZ\",[[\"pattern name\",\"thinning scissor\"]]]",
+   "[\"B08GLB61X9\",[[\"size\",\"thinning scissors\"]]]",
+   "[\"B08HRSRS96\",[[\"size\",\"6 inch thinning\"]]]",
+   "[\"B08KG31PBB\",[[\"color\",\"01-thinning scissor\"]]]",
+   "[\"B08MGS5NWK\",[[\"color\",\"thinning shears\"]]]",
+   "[\"B08WJGGJ9J\",[[\"pattern name\",\"thinning scissors\"]]]",
+   "[\"B08XB7T8K7\",[[\"size\",\"6''\"]]]",
+   "[\"B08ZL3SBJQ\",[[\"color\",\"cutting and thinning\"]]]",
+   "[\"B0955SPT3N\",[[\"pattern name\",\"thinning scissor\"]]]",
+   "[\"B095CR53MR\",[[\"pattern name\",\"thinning scissor\"]]]",
+   "[\"B095CX7D57\",[[\"pattern name\",\"thinning scissor\"]]]",
+   "[\"B099J3NKC3\",[[\"pattern name\",\"6\\\" thinning\"]]]",
+   "[\"B09BCDM88M\",[[\"color\",\"5 inch thinning\"]]]",
+   "[\"B09BCDZCPN\",[[\"color\",\"thinning only\"]]]",
+   "[\"B09BFHQ586\",[[\"color\",\"6 inch thinning\"]]]",
+   "[\"B09CYM8S15\",[[\"color\",\"5.5icnh thinning\"]]]",
+   "[\"B09D7DWTFH\",[[\"size\",\"6\"]]]",
+   "[\"B09FLJFB1L\",[[\"color\",\"6 inch thinning\"]]]",
+   "[\"B09GXN7NSL\",[[\"color\",\"thinning\"]]]",
+   "[\"B09J1918DK\",[[\"color\",\"thinning\"]]]",
+   "[\"B09J4PJXCD\",[[\"item package quantity\",\"6\"]]]",
+   "[\"B09JM157DX\",[[\"color\",\"thinning\"]]]",
+   "[\"B09JM42SRG\",[[\"color\",\"thinning scissor\"]]]",
+   "[\"B09JMJP427\",[[\"color\",\"thinning\"]]]",
+   "[\"B09KZZX9PK\",[[\"color\",\"thinning scissors\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair cutting",
+    "=",
+    "hair cutting"
+   ],
+   [
+    "option:0",
+    "=",
+    "6\" thinning"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "1c6b31c348bc9e75"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "price_upper",
+      "50"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ],
+    "surface": "under $50"
+   }
+  ],
+  "attempt": 1,
+  "components": [
+   "syntactic_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair cutting",
+     "=",
+     "hair cutting"
+    ],
+    [
+     "option:0",
+     "=",
+     "6\" thinning"
+    ],
+    [
+     "price_upper",
+     "<=",
+     "50"
+    ]
+   ],
+   [
+    [
+     "attr:hair cutting",
+     "=",
+     "hair cutting"
+    ],
+    [
+     "option:0",
+     "=",
+     "6\" thinning"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair cutting",
+   "option:0"
+  ],
+  "spec_id": "915d69eef82ec625",
+  "strategy_id": "syntactic_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a hair cutting shear and a 6\" thinning shear under $50.",
+ "render_attempts": 1,
+ "sample_id": "fba7e8cd7ab1bb00",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair cutting tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "54e362539dd95968"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair cutting tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a0bea4fdf149ac03"
+  },
+  {
+   "announcement": "Also, it needs to be easy carry.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1561c67da57b162b"
+  },
+  {
+   "announcement": "Also, it needs to be storage box.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f28ac0aeb8d9124e"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "502919ea59c3a55a"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ae8f29dd1f166a0c"
+  },
+  {
+   "announcement": "Actually, make it 16 inch instead of 6\" thinning.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2c186590eba3952f"
+  },
+  {
+   "announcement": "Actually, make it 04# instead of 6\" thinning.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "be0c19b70de7a43f"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   54,
+   100
+  ],
+  "rule": "ambiguous",
+  "true_card": 54,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for some hair cutting shears.",
+ "split": "test",
+ "strategy_ids": [
+  "syntactic_ambiguity"
+ ],
+ "tree_id": "eba05a81bc1c5d29",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

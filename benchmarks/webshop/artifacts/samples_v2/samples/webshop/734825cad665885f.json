@@ -1,0 +1,170 @@
+{
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "fidelity_notes": [],
+ "goal_idx": 282,
+ "ground_truth": {
+  "cardinality": 5,
+  "hash": "f7b0d889b80e2808496e9d82de7e3834",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00XNXCMG6\",[[\"flavor name\",\"strawberry\"]]]",
+   "[\"B01FUI25OU\",[[\"flavor name\",\"strawberry\"]]]",
+   "[\"B07D83MSMZ\",[[\"flavor name\",\"strawberry\"]]]",
+   "[\"B091BFWGXZ\",[[\"flavor name\",\"california strawberry\"]]]",
+   "[\"B091V6DJV5\",[[\"flavor name\",\"strawberry\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:low fat",
+    "=",
+    "low fat"
+   ],
+   [
+    "option:0",
+    "=",
+    "strawberry"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "3097fb1616178baa"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low fat",
+     "=",
+     "low fat"
+    ],
+    [
+     "option:0",
+     "=",
+     "strawberry"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I went hiking with my friends and stumbled on a hidden meadow full of wild clover, we even spotted a small family of deer grazing near the tree line. I’ve been trying to find a good beginner’s watercolor set to paint the scene from memory, since the soft green and gold light there was so pretty. My cat also knocked over my favorite mug this morning and I’ve been moping about it all day.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:low fat",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Last weekend I went hiking with my friends and stumbled on a hidden meadow full of wild clover, we even spotted a small family of deer grazing near the tree line. I’ve been trying to find a good beginner’s watercolor set to paint the scene from memory, since the soft green and gold light there was so pretty. My cat also knocked over my favorite mug this morning and I’ve been moping about it all day. Anyway, I’m looking for strawberry flavored low fat beverages that cost no more than 120.",
+ "render_attempts": 1,
+ "sample_id": "734825cad665885f",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2398dab1f90987e2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "38b64bfd9d3bf2d4"
+  },
+  {
+   "announcement": "Also, it needs to be protein serving.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "089703069f015131"
+  },
+  {
+   "announcement": "Also, it needs to be low carb.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "77416adb5393fd30"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8692a25ef582ce05"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c1a3d217e2d83f3c"
+  },
+  {
+   "announcement": "Actually, make it .3 pack - 25.4 fl oz (pack of 1) instead of strawberry.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d2c6b715c9660675"
+  },
+  {
+   "announcement": "Actually, make it .2 pack instead of strawberry.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d6681206c050660e"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 5,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 5,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a low fat strawberry flavored ultra-filtered milk.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "76094a270aec6923",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

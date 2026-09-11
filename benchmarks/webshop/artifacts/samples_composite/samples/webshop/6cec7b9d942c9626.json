@@ -1,0 +1,300 @@
+{
+ "sample_id": "6cec7b9d942c9626",
+ "tree_id": "afd276490054ad37",
+ "adapter": "webshop",
+ "cluster": "women's jeans",
+ "goal_idx": 187,
+ "split": "test",
+ "source_instruction": "i'm looking for a wide leg jeans with regular fit and tummy control. also, choose 3x large zz-zm black colored one.",
+ "query": "I spent my whole Saturday morning rearranging the overgrown window box out on my fire escape, yanking out the scraggly dead mint that got crispy in last week\u2019s random heat spike and tucking in bright trailing petunias and a few clumps of lemon basil I picked up from the neighborhood plant swap. The old guy running the swap table gave me a free packet of wildflower seeds because I helped him carry a flat of succulents to his beat-up minivan when his bad knee acted up, and I even found a chipped little ceramic frog figurine to prop in the corner of the box for a silly, whimsical touch. I was so covered in potting soil by the time I finished that I tracked dark dirt all across my kitchen rug when I went inside to wash my hands, and my cat immediately hopped up on the windowsill to sniff every new leaf like she was conducting a very serious quality inspection.\nI need a pair of women\u2019s jeans that are slim fit, have tummy control, a wide leg, and come with a removable fabric belt, in the zz-zmblack color and 3x-large size. I don\u2019t want to spend too much on them, so can you pull up options that fit what I\u2019m looking for? I\u2019d prefer pairs that are in stock to ship out quickly too, no backorders please.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "factual_error",
+  "contextual_irrelevance",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+factual_error+contextual_irrelevance+insufficient_information",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "factual_error",
+   "contextual_irrelevance",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:regular fit",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:regular fit",
+    "regular fit",
+    "slim fit"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "slim fit",
+    "condition": [
+     "attr:fit",
+     "=",
+     "slim fit"
+    ]
+   },
+   {
+    "text": "come with a removable fabric belt",
+    "condition": [
+     "attr:design",
+     "=",
+     "removable fabric belt"
+    ]
+   },
+   {
+    "text": "I don't want to spend too much on them",
+    "condition": null
+   },
+   {
+    "text": "I'd prefer pairs that are in stock to ship out quickly too, no backorders please",
+    "condition": [
+     "attr:stock_status",
+     "=",
+     "in stock, no backorders"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent my whole Saturday morning rearranging the overgrown window box out on my fire escape, yanking out the scraggly dead mint that got crispy in last week\u2019s random heat spike and tucking in bright trailing petunias and a few clumps of lemon basil I picked up from the neighborhood plant swap. The old guy running the swap table gave me a free packet of wildflower seeds because I helped him carry a flat of succulents to his beat-up minivan when his bad knee acted up, and I even found a chipped little ceramic frog figurine to prop in the corner of the box for a silly, whimsical touch. I was so covered in potting soil by the time I finished that I tracked dark dirt all across my kitchen rug when I went inside to wash my hands, and my cat immediately hopped up on the windowsill to sniff every new leaf like she was conducting a very serious quality inspection.",
+  "retained": [
+   "attr:tummy control",
+   "attr:wide leg",
+   "option:0",
+   "option:1"
+  ],
+  "hidden_slots": [
+   "attr:regular fit",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:regular fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "attr:tummy control",
+     "=",
+     "tummy control"
+    ],
+    [
+     "attr:wide leg",
+     "=",
+     "wide leg"
+    ],
+    [
+     "option:0",
+     "=",
+     "zz-zmblack"
+    ],
+    [
+     "option:1",
+     "=",
+     "3x-large"
+    ],
+    [
+     "attr:fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "attr:design",
+     "=",
+     "removable fabric belt"
+    ],
+    [
+     "attr:stock_status",
+     "=",
+     "in stock, no backorders"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "beceaec1e556c377"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 14,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 14,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 34,
+    "true_card": 14,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 25,
+    "true_card": 14,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "5bd22867d5ca40ec",
+  "conditions": [
+   [
+    "attr:regular fit",
+    "=",
+    "regular fit"
+   ],
+   [
+    "attr:tummy control",
+    "=",
+    "tummy control"
+   ],
+   [
+    "attr:wide leg",
+    "=",
+    "wide leg"
+   ],
+   [
+    "option:0",
+    "=",
+    "zz-zmblack"
+   ],
+   [
+    "option:1",
+    "=",
+    "3x-large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:regular fit",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 14,
+  "value": [
+   "[\"B082SZDTBD\",[[\"color\",\"zz-zmblack\"],[\"size\",\"large\"]]]",
+   "[\"B0831NKRD1\",[[\"color\",\"z-black\"],[\"size\",\"large\"]]]",
+   "[\"B0862B9PRX\",[[\"color\",\"z-azblack\"],[\"size\",\"large\"]]]",
+   "[\"B08TRLG75L\",[[\"color\",\"a3-black\"],[\"size\",\"large\"]]]",
+   "[\"B09FY8BW8C\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09G3CKQTK\",[[\"color\",\"z-black\"],[\"size\",\"large\"]]]",
+   "[\"B09NL53BGX\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09NW1GRCX\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09PDVZTC2\",[[\"color\",\"z-xablack\"],[\"size\",\"large\"]]]",
+   "[\"B09Q6KSK33\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09QS643MZ\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09R78GYSC\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09R9Z4FTF\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09S3T5D9P\",[[\"color\",\"black\"],[\"size\",\"large\"]]]"
+  ],
+  "hash": "938126760c08a4a95f65b0f8dd2b933d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "3e364b66ebaf1ae0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's jeans instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f7c6a7ddaa9569bc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's jeans instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ccab9a04e2f2b298",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be faux fur."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ff16305f7d17fa18",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cover ups."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9b89ab0a3eddbe8b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c65173f379274efc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "748bbbfc86394322",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 grey instead of zz-zmblack."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "efbf63abfbaa79e6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 yellow instead of zz-zmblack."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

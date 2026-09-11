@@ -1,0 +1,211 @@
+{
+ "adapter": "webshop",
+ "cluster": "skin care tools",
+ "fidelity_notes": [],
+ "goal_idx": 451,
+ "ground_truth": {
+  "cardinality": 43,
+  "hash": "820ec26371ccf5634ccc19979d8abd3d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00BAYWOFY\",[]]",
+   "[\"B0719H8GRT\",[]]",
+   "[\"B07B5DQMM8\",[]]",
+   "[\"B07BRGMW6Z\",[]]",
+   "[\"B07DPS382X\",[]]",
+   "[\"B07FFY2X3Y\",[]]",
+   "[\"B07HLVJ15T\",[]]",
+   "[\"B07KKDNW1C\",[]]",
+   "[\"B07MDD9V75\",[]]",
+   "[\"B07NY5HTB8\",[]]",
+   "[\"B07T94R5QZ\",[]]",
+   "[\"B07TK1S8SK\",[]]",
+   "[\"B07ZX31VK8\",[]]",
+   "[\"B0835Q7QVK\",[]]",
+   "[\"B0842R73BG\",[]]",
+   "[\"B086HPZZBL\",[]]",
+   "[\"B08H2974F2\",[]]",
+   "[\"B08KXWYFG5\",[]]",
+   "[\"B08MWNQZ9T\",[]]",
+   "[\"B08MWP83S7\",[]]",
+   "[\"B08NGC2MJZ\",[]]",
+   "[\"B08PBW2TLB\",[]]",
+   "[\"B08PPJ9DSK\",[]]",
+   "[\"B08PTVDM21\",[]]",
+   "[\"B08R72XBHD\",[]]",
+   "[\"B08XGML5SQ\",[]]",
+   "[\"B08XYN2XCG\",[]]",
+   "[\"B092DQRL6L\",[]]",
+   "[\"B097C8LXHP\",[]]",
+   "[\"B09B1VWRY5\",[]]",
+   "[\"B09C5RN52H\",[]]",
+   "[\"B09D9N1D22\",[]]",
+   "[\"B09DYH91CL\",[]]",
+   "[\"B09H7JPYYS\",[]]",
+   "[\"B09J2H9RS5\",[]]",
+   "[\"B09J84383V\",[]]",
+   "[\"B09M2NF3YB\",[]]",
+   "[\"B09MN7S275\",[]]",
+   "[\"B09NBH7ZTJ\",[]]",
+   "[\"B09P51CZZN\",[]]",
+   "[\"B09QJMDCHT\",[]]",
+   "[\"B09QSD3MD4\",[]]",
+   "[\"B09QY9V9CH\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair removal",
+    "=",
+    "hair removal"
+   ],
+   [
+    "attr:stainless steel",
+    "=",
+    "stainless steel"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:stainless steel"
+  ],
+  "intent_id": "7e982c03db63ec12"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "attr:stainless steel"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair removal",
+     "=",
+     "hair removal"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "attr:stainless steel",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:hair removal",
+   "price_upper"
+  ],
+  "spec_id": "628343e5ae948f21",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for hair removal tools in the skin care tools section that are made of that one material, and my budget is no more than $20.",
+ "render_attempts": 1,
+ "sample_id": "8351acee6d4fba55",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the skin care tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1e170a2c01ea8564"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the skin care tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "c044886949d905a0"
+  },
+  {
+   "announcement": "Also, it needs to be nail polish.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b1759df0e3facc8d"
+  },
+  {
+   "announcement": "Also, it needs to be nail art.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cec6697eee41e39c"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "REAL",
+   "to_intent": "124136291e5b4c23"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6f94ae0a8171a11e"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "58281c089dceeaed"
+  },
+  {
+   "announcement": "Actually, make it 100 instead of 20.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "dbe46c7d8a7dfe52"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 56,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 43,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for stainless steel hair removal tweezers.",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "065f729de5fb08af",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

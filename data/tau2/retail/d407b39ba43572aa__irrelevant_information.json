@@ -1,0 +1,176 @@
+{
+ "sample_id": "d407b39ba43572aa__irrelevant_information",
+ "domain": "retail",
+ "tree_id": "d407b39ba43572aa",
+ "query": "I bought a waterproof Bluetooth speaker from you guys last week, and I need to update the shipping address for my pending order #W1603792 to 592 Elm Avenue, Suite 978, Houston, TX 77242, USA, also update my saved user address under user id sophia_martin_8570 to that same address, swap item 6501071631 in the order for item 2106335193 and charge the difference to credit_card_5694100, and make sure the replacement item has the IP67 water resistance certification.",
+ "strategy_ids": [
+  "irrelevant_information"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "irrelevant_information",
+  "family": "parameter",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information"
+  ],
+  "governing_kind": "falsify",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "waterproof Bluetooth speaker",
+    "condition": null
+   },
+   {
+    "text": "bought from you guys last week",
+    "condition": null
+   },
+   {
+    "text": "make sure the replacement item has the IP67 water resistance certification",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "arg:0:modify_pending_order_address:address1",
+   "arg:0:modify_pending_order_address:address2",
+   "arg:0:modify_pending_order_address:city",
+   "arg:0:modify_pending_order_address:country",
+   "arg:0:modify_pending_order_address:order_id",
+   "arg:0:modify_pending_order_address:state",
+   "arg:0:modify_pending_order_address:zip",
+   "arg:1:modify_user_address:address1",
+   "arg:1:modify_user_address:address2",
+   "arg:1:modify_user_address:city",
+   "arg:1:modify_user_address:country",
+   "arg:1:modify_user_address:state",
+   "arg:1:modify_user_address:user_id",
+   "arg:1:modify_user_address:zip",
+   "arg:2:modify_pending_order_items:item_ids",
+   "arg:2:modify_pending_order_items:new_item_ids",
+   "arg:2:modify_pending_order_items:order_id",
+   "arg:2:modify_pending_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "8e0cdbfdb2a52356"
+ },
+ "signature": {
+  "verdict": "ok_pragmatic_extra",
+  "executable": false,
+  "readings": 0,
+  "note": "extra detail is not expressible as a condition in this domain; string checks only"
+ },
+ "executable_admission": false,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:modify_pending_order_address:address1",
+    "=",
+    "\"592 Elm Avenue\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:address2",
+    "=",
+    "\"Suite 978\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:city",
+    "=",
+    "\"Houston\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:order_id",
+    "=",
+    "\"#W1603792\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:0:modify_pending_order_address:zip",
+    "=",
+    "\"77242\""
+   ],
+   [
+    "arg:1:modify_user_address:address1",
+    "=",
+    "\"592 Elm Avenue\""
+   ],
+   [
+    "arg:1:modify_user_address:address2",
+    "=",
+    "\"Suite 978\""
+   ],
+   [
+    "arg:1:modify_user_address:city",
+    "=",
+    "\"Houston\""
+   ],
+   [
+    "arg:1:modify_user_address:country",
+    "=",
+    "\"USA\""
+   ],
+   [
+    "arg:1:modify_user_address:state",
+    "=",
+    "\"TX\""
+   ],
+   [
+    "arg:1:modify_user_address:user_id",
+    "=",
+    "\"sophia_martin_8570\""
+   ],
+   [
+    "arg:1:modify_user_address:zip",
+    "=",
+    "\"77242\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:item_ids",
+    "=",
+    "[\"6501071631\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:new_item_ids",
+    "=",
+    "[\"2106335193\"]"
+   ],
+   [
+    "arg:2:modify_pending_order_items:order_id",
+    "=",
+    "\"#W1603792\""
+   ],
+   [
+    "arg:2:modify_pending_order_items:payment_method_id",
+    "=",
+    "\"credit_card_5694100\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

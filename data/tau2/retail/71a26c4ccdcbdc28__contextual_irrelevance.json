@@ -1,0 +1,93 @@
+{
+ "sample_id": "71a26c4ccdcbdc28__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "71a26c4ccdcbdc28",
+ "query": "I just got back from walking my golden retriever earlier, he stopped to sniff every single dandelion on the sidewalk and even tried to steal a piece of fried chicken someone dropped on the curb. Then I swung by the corner bakery and picked up a matcha croissant that was still warm, it was so flaky it crumbled all over my jacket when I took the first bite. I also spent half an hour this afternoon rearranging the succulents on my windowsill, one of my echeverias grew a little offshoot that I'm thinking of propagating next weekend. I need to process a return for my delivered order #W4680753, the item I want to return is 9690244451, and please refund the amount to my paypal_2417743 payment method.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from walking my golden retriever earlier, he stopped to sniff every single dandelion on the sidewalk and even tried to steal a piece of fried chicken someone dropped on the curb. Then I swung by the corner bakery and picked up a matcha croissant that was still warm, it was so flaky it crumbled all over my jacket when I took the first bite. I also spent half an hour this afternoon rearranging the succulents on my windowsill, one of my echeverias grew a little offshoot that I'm thinking of propagating next weekend.",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"9690244451\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W4680753\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_2417743\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"9690244451\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W4680753\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_2417743\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,1569 @@
+{
+ "adapter": "tau2_airline",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ],
+    "writes": [
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "also:2:update_reservation_baggages",
+    "arg:0:book_reservation:cabin",
+    "arg:0:book_reservation:destination",
+    "arg:0:book_reservation:flight_type",
+    "arg:0:book_reservation:flights",
+    "arg:0:book_reservation:insurance",
+    "arg:0:book_reservation:origin",
+    "arg:0:book_reservation:passengers",
+    "arg:0:book_reservation:payment_methods",
+    "arg:0:book_reservation:total_baggages",
+    "arg:0:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "also:2:update_reservation_baggages",
+     "=",
+     "{\"nonfree_baggages\":1,\"payment_id\":\"credit_card_4196779\",\"reservation_id\":\"S61CZX\",\"total_baggages\":2}"
+    ],
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"PHL\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT271\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"ORD\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1957-10-05\",\"first_name\":\"Sophia\",\"last_name\":\"Silva\"},{\"dob\":\"2001-04-12\",\"first_name\":\"Kevin\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_8045380\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"sophia_silva_7557\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0891653026b76346c9026fbfbc2b8051",
+    "kind": "statehash",
+    "value": "{\"db\":\"8d97c9c730a0bc6bf2fb62619e5f198ff5c56d41ec66d276eb9bd9dda7d13eaa\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "013746945fa7550a",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "PHL",
+       "flight_type": "one_way",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT271"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "ORD",
+       "passengers": [
+        {
+         "dob": "1957-10-05",
+         "first_name": "Sophia",
+         "last_name": "Silva"
+        },
+        {
+         "dob": "2001-04-12",
+         "first_name": "Kevin",
+         "last_name": "Smith"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 348,
+         "payment_id": "certificate_8045380"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "sophia_silva_7557"
+      },
+      "name": "book_reservation"
+     },
+     {
+      "arguments": {
+       "nonfree_baggages": 1,
+       "payment_id": "credit_card_4196779",
+       "reservation_id": "S61CZX",
+       "total_baggages": 2
+      },
+      "name": "update_reservation_baggages"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ]
+   },
+   "source_record": "8+01374694",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ],
+    "writes": [
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "also:3:update_reservation_baggages",
+    "arg:0:book_reservation:cabin",
+    "arg:0:book_reservation:destination",
+    "arg:0:book_reservation:flight_type",
+    "arg:0:book_reservation:flights",
+    "arg:0:book_reservation:insurance",
+    "arg:0:book_reservation:origin",
+    "arg:0:book_reservation:passengers",
+    "arg:0:book_reservation:payment_methods",
+    "arg:0:book_reservation:total_baggages",
+    "arg:0:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "also:3:update_reservation_baggages",
+     "=",
+     "{\"nonfree_baggages\":1,\"payment_id\":\"credit_card_4196779\",\"reservation_id\":\"H8Q05L\",\"total_baggages\":1}"
+    ],
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"PHL\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT271\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"ORD\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1957-10-05\",\"first_name\":\"Sophia\",\"last_name\":\"Silva\"},{\"dob\":\"2001-04-12\",\"first_name\":\"Kevin\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_8045380\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"sophia_silva_7557\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0d4862105725af458442f80bcfb7cd2d",
+    "kind": "statehash",
+    "value": "{\"db\":\"e82607689fb5972a2eea1f02803cd1db176f64d866258083a02bc6c4daef2335\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "27d2ec2e150abd68",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "PHL",
+       "flight_type": "one_way",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT271"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "ORD",
+       "passengers": [
+        {
+         "dob": "1957-10-05",
+         "first_name": "Sophia",
+         "last_name": "Silva"
+        },
+        {
+         "dob": "2001-04-12",
+         "first_name": "Kevin",
+         "last_name": "Smith"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 348,
+         "payment_id": "certificate_8045380"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "sophia_silva_7557"
+      },
+      "name": "book_reservation"
+     },
+     {
+      "arguments": {
+       "nonfree_baggages": 1,
+       "payment_id": "credit_card_4196779",
+       "reservation_id": "H8Q05L",
+       "total_baggages": 1
+      },
+      "name": "update_reservation_baggages"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ]
+   },
+   "source_record": "8+27d2ec2e",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ],
+    "writes": [
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:book_reservation:cabin",
+    "arg:0:book_reservation:destination",
+    "arg:0:book_reservation:flight_type",
+    "arg:0:book_reservation:flights",
+    "arg:0:book_reservation:insurance",
+    "arg:0:book_reservation:origin",
+    "arg:0:book_reservation:passengers",
+    "arg:0:book_reservation:payment_methods",
+    "arg:0:book_reservation:total_baggages",
+    "arg:0:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"PHL\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT271\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"yes\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"ORD\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1957-10-05\",\"first_name\":\"Sophia\",\"last_name\":\"Silva\"},{\"dob\":\"2001-04-12\",\"first_name\":\"Kevin\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_8045380\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"sophia_silva_7557\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1f540febb6c48795815cd5a64ffedf37",
+    "kind": "statehash",
+    "value": "{\"db\":\"00c97814ec8b3a3f3ca0a0bede99bc35a56f3345682acb5848f09cda1052bb37\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "47c517d75906ddcb",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "PHL",
+       "flight_type": "one_way",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT271"
+        }
+       ],
+       "insurance": "yes",
+       "nonfree_baggages": 0,
+       "origin": "ORD",
+       "passengers": [
+        {
+         "dob": "1957-10-05",
+         "first_name": "Sophia",
+         "last_name": "Silva"
+        },
+        {
+         "dob": "2001-04-12",
+         "first_name": "Kevin",
+         "last_name": "Smith"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 408,
+         "payment_id": "certificate_8045380"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "sophia_silva_7557"
+      },
+      "name": "book_reservation"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ]
+   },
+   "source_record": "8+47c517d7",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ],
+    "writes": [
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:book_reservation:cabin",
+    "arg:0:book_reservation:destination",
+    "arg:0:book_reservation:flight_type",
+    "arg:0:book_reservation:flights",
+    "arg:0:book_reservation:insurance",
+    "arg:0:book_reservation:origin",
+    "arg:0:book_reservation:passengers",
+    "arg:0:book_reservation:payment_methods",
+    "arg:0:book_reservation:total_baggages",
+    "arg:0:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"PHL\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT289\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"ORD\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1957-10-05\",\"first_name\":\"Sophia\",\"last_name\":\"Silva\"},{\"dob\":\"2001-04-12\",\"first_name\":\"Kevin\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_8045380\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"sophia_silva_7557\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "5d0e4e8545496cbf0f291f7012e7746c",
+    "kind": "statehash",
+    "value": "{\"db\":\"4399d2dc9bb56414e5e31fc7e838f608c5fa5042c1fbd8d82e8a9345cee6294f\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "2062e708457bdda2",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "PHL",
+       "flight_type": "one_way",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT289"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "ORD",
+       "passengers": [
+        {
+         "dob": "1957-10-05",
+         "first_name": "Sophia",
+         "last_name": "Silva"
+        },
+        {
+         "dob": "2001-04-12",
+         "first_name": "Kevin",
+         "last_name": "Smith"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 322,
+         "payment_id": "certificate_8045380"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "sophia_silva_7557"
+      },
+      "name": "book_reservation"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ]
+   },
+   "source_record": "8+2062e708",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [],
+    "writes": [
+     "update_reservation_flights"
+    ]
+   },
+   "bound_slots": [
+    "also:2:update_reservation_baggages",
+    "arg:0:update_reservation_flights:cabin",
+    "arg:0:update_reservation_flights:flights",
+    "arg:0:update_reservation_flights:payment_id",
+    "arg:0:update_reservation_flights:reservation_id"
+   ],
+   "conditions": [
+    [
+     "also:2:update_reservation_baggages",
+     "=",
+     "{\"nonfree_baggages\":0,\"payment_id\":\"gift_card_1642017\",\"reservation_id\":\"MQHHT6\",\"total_baggages\":2}"
+    ],
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"basic_economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT003\"},{\"date\":\"2024-05-20\",\"flight_number\":\"HAT290\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_1642017\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"GV1N64\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "00aa7bf02f1da66ccc511643fc636915",
+    "kind": "statehash",
+    "value": "{\"db\":\"d41f8a4659fd8dabbbafa8653de72e7a36182c76a462fd062c3d7154e6a29f2d\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "9fb7f1bfaf8d4df8",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "basic_economy",
+       "flights": [
+        {
+         "date": "2024-05-19",
+         "flight_number": "HAT003"
+        },
+        {
+         "date": "2024-05-20",
+         "flight_number": "HAT290"
+        }
+       ],
+       "payment_id": "gift_card_1642017",
+       "reservation_id": "GV1N64"
+      },
+      "name": "update_reservation_flights"
+     },
+     {
+      "arguments": {
+       "nonfree_baggages": 0,
+       "payment_id": "gift_card_1642017",
+       "reservation_id": "MQHHT6",
+       "total_baggages": 2
+      },
+      "name": "update_reservation_baggages"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "11+9fb7f1bf",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [],
+    "writes": [
+     "cancel_reservation",
+     "book_reservation",
+     "book_reservation",
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:cancel_reservation:reservation_id",
+    "arg:1:book_reservation:cabin",
+    "arg:1:book_reservation:destination",
+    "arg:1:book_reservation:flight_type",
+    "arg:1:book_reservation:flights",
+    "arg:1:book_reservation:insurance",
+    "arg:1:book_reservation:origin",
+    "arg:1:book_reservation:passengers",
+    "arg:1:book_reservation:payment_methods",
+    "arg:1:book_reservation:total_baggages",
+    "arg:1:book_reservation:user_id",
+    "arg:2:book_reservation:cabin",
+    "arg:2:book_reservation:destination",
+    "arg:2:book_reservation:flight_type",
+    "arg:2:book_reservation:flights",
+    "arg:2:book_reservation:insurance",
+    "arg:2:book_reservation:origin",
+    "arg:2:book_reservation:passengers",
+    "arg:2:book_reservation:payment_methods",
+    "arg:2:book_reservation:total_baggages",
+    "arg:2:book_reservation:user_id",
+    "arg:3:book_reservation:cabin",
+    "arg:3:book_reservation:destination",
+    "arg:3:book_reservation:flight_type",
+    "arg:3:book_reservation:flights",
+    "arg:3:book_reservation:insurance",
+    "arg:3:book_reservation:origin",
+    "arg:3:book_reservation:passengers",
+    "arg:3:book_reservation:payment_methods",
+    "arg:3:book_reservation:total_baggages",
+    "arg:3:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"K1NW8N\""
+    ],
+    [
+     "arg:1:book_reservation:cabin",
+     "=",
+     "\"business\""
+    ],
+    [
+     "arg:1:book_reservation:destination",
+     "=",
+     "\"SFO\""
+    ],
+    [
+     "arg:1:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:1:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT023\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT204\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT100\"}]"
+    ],
+    [
+     "arg:1:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:1:book_reservation:origin",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:1:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1960-11-26\",\"first_name\":\"Mohamed\",\"last_name\":\"Silva\"}]"
+    ],
+    [
+     "arg:1:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_3765853\",\"gift_card_8020792\",\"gift_card_6136092\",\"credit_card_2198526\"]"
+    ],
+    [
+     "arg:1:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:1:book_reservation:user_id",
+     "=",
+     "\"mohamed_silva_9265\""
+    ],
+    [
+     "arg:2:book_reservation:cabin",
+     "=",
+     "\"business\""
+    ],
+    [
+     "arg:2:book_reservation:destination",
+     "=",
+     "\"SFO\""
+    ],
+    [
+     "arg:2:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:2:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT023\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT204\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT100\"}]"
+    ],
+    [
+     "arg:2:book_reservation:insurance",
+     "=",
+     "\"yes\""
+    ],
+    [
+     "arg:2:book_reservation:origin",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:2:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1986-09-12\",\"first_name\":\"Raj\",\"last_name\":\"Sanchez\"}]"
+    ],
+    [
+     "arg:2:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_9984806\",\"credit_card_2198526\"]"
+    ],
+    [
+     "arg:2:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:2:book_reservation:user_id",
+     "=",
+     "\"mohamed_silva_9265\""
+    ],
+    [
+     "arg:3:book_reservation:cabin",
+     "=",
+     "\"business\""
+    ],
+    [
+     "arg:3:book_reservation:destination",
+     "=",
+     "\"SFO\""
+    ],
+    [
+     "arg:3:book_reservation:flight_type",
+     "=",
+     "\"round_trip\""
+    ],
+    [
+     "arg:3:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT023\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT204\"},{\"date\":\"2024-05-28\",\"flight_number\":\"HAT100\"}]"
+    ],
+    [
+     "arg:3:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:3:book_reservation:origin",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:3:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1980-03-27\",\"first_name\":\"Liam\",\"last_name\":\"Wilson\"}]"
+    ],
+    [
+     "arg:3:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_2765295\",\"credit_card_2198526\"]"
+    ],
+    [
+     "arg:3:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:3:book_reservation:user_id",
+     "=",
+     "\"mohamed_silva_9265\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "022c4f353ce5d711f7cf4b1cad7cbec3",
+    "kind": "statehash",
+    "value": "{\"db\":\"fb7fbd11a7e3d93d79c6dc7c0bf680f77b7f9de77105849e1a6e63cc8dbb93e1\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "55639391e4bcd589",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "reservation_id": "K1NW8N"
+      },
+      "name": "cancel_reservation"
+     },
+     {
+      "arguments": {
+       "cabin": "business",
+       "destination": "SFO",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT023"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT204"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT100"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "JFK",
+       "passengers": [
+        {
+         "dob": "1960-11-26",
+         "first_name": "Mohamed",
+         "last_name": "Silva"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 500,
+         "payment_id": "certificate_3765853"
+        },
+        {
+         "amount": 198,
+         "payment_id": "gift_card_8020792"
+        },
+        {
+         "amount": 129,
+         "payment_id": "gift_card_6136092"
+        },
+        {
+         "amount": 44,
+         "payment_id": "credit_card_2198526"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "mohamed_silva_9265"
+      },
+      "name": "book_reservation"
+     },
+     {
+      "arguments": {
+       "cabin": "business",
+       "destination": "SFO",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT023"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT204"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT100"
+        }
+       ],
+       "insurance": "yes",
+       "nonfree_baggages": 0,
+       "origin": "JFK",
+       "passengers": [
+        {
+         "dob": "1986-09-12",
+         "first_name": "Raj",
+         "last_name": "Sanchez"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 250,
+         "payment_id": "certificate_9984806"
+        },
+        {
+         "amount": 651,
+         "payment_id": "credit_card_2198526"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "mohamed_silva_9265"
+      },
+      "name": "book_reservation"
+     },
+     {
+      "arguments": {
+       "cabin": "business",
+       "destination": "SFO",
+       "flight_type": "round_trip",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT023"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT204"
+        },
+        {
+         "date": "2024-05-28",
+         "flight_number": "HAT100"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "JFK",
+       "passengers": [
+        {
+         "dob": "1980-03-27",
+         "first_name": "Liam",
+         "last_name": "Wilson"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 250,
+         "payment_id": "certificate_2765295"
+        },
+        {
+         "amount": 621,
+         "payment_id": "credit_card_2198526"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "mohamed_silva_9265"
+      },
+      "name": "book_reservation"
+     }
+    ],
+    "reads": []
+   },
+   "source_record": "23+55639391",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ],
+    "writes": [
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:book_reservation:destination",
+    "arg:0:book_reservation:flight_type",
+    "arg:0:book_reservation:flights",
+    "arg:0:book_reservation:insurance",
+    "arg:0:book_reservation:origin",
+    "arg:0:book_reservation:passengers",
+    "arg:0:book_reservation:payment_methods",
+    "arg:0:book_reservation:total_baggages",
+    "arg:0:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"PHL\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT271\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"ORD\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1957-10-05\",\"first_name\":\"Sophia\",\"last_name\":\"Silva\"},{\"dob\":\"2001-04-12\",\"first_name\":\"Kevin\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_8045380\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"sophia_silva_7557\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "e37e8f648d057284f4f3408ba0f3ec73",
+    "kind": "statehash",
+    "value": "{\"db\":\"00766aa3e0341b497a623f93983c8d951b8d48ad541a15123a1e2b902e644a82\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "d10dc5fcecad058c",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "PHL",
+       "flight_type": "one_way",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT271"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "ORD",
+       "passengers": [
+        {
+         "dob": "1957-10-05",
+         "first_name": "Sophia",
+         "last_name": "Silva"
+        },
+        {
+         "dob": "2001-04-12",
+         "first_name": "Kevin",
+         "last_name": "Smith"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 348,
+         "payment_id": "certificate_8045380"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "sophia_silva_7557"
+      },
+      "name": "book_reservation"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "kind": "airline_request",
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ],
+    "writes": [
+     "book_reservation"
+    ]
+   },
+   "bound_slots": [
+    "arg:0:book_reservation:cabin",
+    "arg:0:book_reservation:destination",
+    "arg:0:book_reservation:flight_type",
+    "arg:0:book_reservation:flights",
+    "arg:0:book_reservation:origin",
+    "arg:0:book_reservation:passengers",
+    "arg:0:book_reservation:payment_methods",
+    "arg:0:book_reservation:total_baggages",
+    "arg:0:book_reservation:user_id"
+   ],
+   "conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"PHL\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT271\"}]"
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"ORD\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1957-10-05\",\"first_name\":\"Sophia\",\"last_name\":\"Silva\"},{\"dob\":\"2001-04-12\",\"first_name\":\"Kevin\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_8045380\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"sophia_silva_7557\""
+    ]
+   ],
+   "ground_truth": {
+    "hash": "e37e8f648d057284f4f3408ba0f3ec73",
+    "kind": "statehash",
+    "value": "{\"db\":\"00766aa3e0341b497a623f93983c8d951b8d48ad541a15123a1e2b902e644a82\",\"errors\":[]}"
+   },
+   "gt_extensional": false,
+   "intent_id": "0e5b31eaed7a12c0",
+   "is_seed": false,
+   "recipe": {
+    "actions": [
+     {
+      "arguments": {
+       "cabin": "economy",
+       "destination": "PHL",
+       "flight_type": "one_way",
+       "flights": [
+        {
+         "date": "2024-05-26",
+         "flight_number": "HAT271"
+        }
+       ],
+       "insurance": "no",
+       "nonfree_baggages": 0,
+       "origin": "ORD",
+       "passengers": [
+        {
+         "dob": "1957-10-05",
+         "first_name": "Sophia",
+         "last_name": "Silva"
+        },
+        {
+         "dob": "2001-04-12",
+         "first_name": "Kevin",
+         "last_name": "Smith"
+        }
+       ],
+       "payment_methods": [
+        {
+         "amount": 348,
+         "payment_id": "certificate_8045380"
+        }
+       ],
+       "total_baggages": 0,
+       "user_id": "sophia_silva_7557"
+      },
+      "name": "book_reservation"
+     }
+    ],
+    "reads": [
+     "get_user_details",
+     "get_reservation_details",
+     "search_direct_flight"
+    ]
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "min_gt_moved_edges": 1,
+  "require_full_quota": false,
+  "seed": 7
+ },
+ "edges": [
+  {
+   "delta": {
+    "added": [
+     [
+      "also:2:update_reservation_baggages",
+      "=",
+      "{\"nonfree_baggages\":1,\"payment_id\":\"credit_card_4196779\",\"reservation_id\":\"S61CZX\",\"total_baggages\":2}"
+     ]
+    ]
+   },
+   "dst": "013746945fa7550a",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "REAL",
+   "source_record": "8+01374694",
+   "src": "93545a30a0060545"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "also:3:update_reservation_baggages",
+      "=",
+      "{\"nonfree_baggages\":1,\"payment_id\":\"credit_card_4196779\",\"reservation_id\":\"H8Q05L\",\"total_baggages\":1}"
+     ]
+    ]
+   },
+   "dst": "27d2ec2e150abd68",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "REAL",
+   "source_record": "8+27d2ec2e",
+   "src": "93545a30a0060545"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "arg:0:book_reservation:insurance",
+      "=",
+      "\"no\"",
+      "\"yes\""
+     ]
+    ]
+   },
+   "dst": "47c517d75906ddcb",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "source_record": "8+47c517d7",
+   "src": "93545a30a0060545"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "arg:0:book_reservation:flights",
+      "=",
+      "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT271\"}]",
+      "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT289\"}]"
+     ]
+    ]
+   },
+   "dst": "2062e708457bdda2",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "REAL",
+   "source_record": "8+2062e708",
+   "src": "93545a30a0060545"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "airline_request",
+     "reads": [],
+     "writes": [
+      "update_reservation_flights"
+     ]
+    }
+   },
+   "dst": "9fb7f1bfaf8d4df8",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "11+9fb7f1bf",
+   "src": "93545a30a0060545"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "kind": "airline_request",
+     "reads": [],
+     "writes": [
+      "cancel_reservation",
+      "book_reservation",
+      "book_reservation",
+      "book_reservation"
+     ]
+    }
+   },
+   "dst": "55639391e4bcd589",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "23+55639391",
+   "src": "93545a30a0060545"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "arg:0:book_reservation:cabin",
+      "=",
+      "\"economy\""
+     ]
+    ]
+   },
+   "dst": "d10dc5fcecad058c",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "93545a30a0060545"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "arg:0:book_reservation:insurance",
+      "=",
+      "\"no\""
+     ]
+    ]
+   },
+   "dst": "0e5b31eaed7a12c0",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "93545a30a0060545"
+  }
+ ],
+ "env_id": "tau2_airline_desk",
+ "env_spec": {
+  "domain": "airline",
+  "env_id": "tau2_airline_desk",
+  "env_key": "tau2_airline_desk",
+  "initialization": {},
+  "solo_mode": false
+ },
+ "root": {
+  "base": {
+   "kind": "airline_request",
+   "reads": [
+    "get_user_details",
+    "get_reservation_details",
+    "search_direct_flight"
+   ],
+   "writes": [
+    "book_reservation"
+   ]
+  },
+  "bound_slots": [
+   "arg:0:book_reservation:cabin",
+   "arg:0:book_reservation:destination",
+   "arg:0:book_reservation:flight_type",
+   "arg:0:book_reservation:flights",
+   "arg:0:book_reservation:insurance",
+   "arg:0:book_reservation:origin",
+   "arg:0:book_reservation:passengers",
+   "arg:0:book_reservation:payment_methods",
+   "arg:0:book_reservation:total_baggages",
+   "arg:0:book_reservation:user_id"
+  ],
+  "conditions": [
+   [
+    "arg:0:book_reservation:cabin",
+    "=",
+    "\"economy\""
+   ],
+   [
+    "arg:0:book_reservation:destination",
+    "=",
+    "\"PHL\""
+   ],
+   [
+    "arg:0:book_reservation:flight_type",
+    "=",
+    "\"one_way\""
+   ],
+   [
+    "arg:0:book_reservation:flights",
+    "=",
+    "[{\"date\":\"2024-05-26\",\"flight_number\":\"HAT271\"}]"
+   ],
+   [
+    "arg:0:book_reservation:insurance",
+    "=",
+    "\"no\""
+   ],
+   [
+    "arg:0:book_reservation:origin",
+    "=",
+    "\"ORD\""
+   ],
+   [
+    "arg:0:book_reservation:passengers",
+    "=",
+    "[{\"dob\":\"1957-10-05\",\"first_name\":\"Sophia\",\"last_name\":\"Silva\"},{\"dob\":\"2001-04-12\",\"first_name\":\"Kevin\",\"last_name\":\"Smith\"}]"
+   ],
+   [
+    "arg:0:book_reservation:payment_methods",
+    "=",
+    "[\"certificate_8045380\"]"
+   ],
+   [
+    "arg:0:book_reservation:total_baggages",
+    "=",
+    "0"
+   ],
+   [
+    "arg:0:book_reservation:user_id",
+    "=",
+    "\"sophia_silva_7557\""
+   ]
+  ],
+  "ground_truth": {
+   "hash": "e37e8f648d057284f4f3408ba0f3ec73",
+   "kind": "statehash",
+   "value": "{\"db\":\"00766aa3e0341b497a623f93983c8d951b8d48ad541a15123a1e2b902e644a82\",\"errors\":[]}"
+  },
+  "gt_extensional": false,
+  "intent_id": "93545a30a0060545",
+  "is_seed": true,
+  "recipe": {
+   "actions": [
+    {
+     "arguments": {
+      "cabin": "economy",
+      "destination": "PHL",
+      "flight_type": "one_way",
+      "flights": [
+       {
+        "date": "2024-05-26",
+        "flight_number": "HAT271"
+       }
+      ],
+      "insurance": "no",
+      "nonfree_baggages": 0,
+      "origin": "ORD",
+      "passengers": [
+       {
+        "dob": "1957-10-05",
+        "first_name": "Sophia",
+        "last_name": "Silva"
+       },
+       {
+        "dob": "2001-04-12",
+        "first_name": "Kevin",
+        "last_name": "Smith"
+       }
+      ],
+      "payment_methods": [
+       {
+        "amount": 348,
+        "payment_id": "certificate_8045380"
+       }
+      ],
+      "total_baggages": 0,
+      "user_id": "sophia_silva_7557"
+     },
+     "name": "book_reservation"
+    }
+   ],
+   "reads": [
+    "get_user_details",
+    "get_reservation_details",
+    "search_direct_flight"
+   ]
+  },
+  "source_record": "8",
+  "unbound_slots": [
+   "also:2:update_reservation_baggages",
+   "also:3:update_reservation_baggages",
+   "arg:0:book_reservation:cabin",
+   "arg:0:book_reservation:flights",
+   "arg:0:book_reservation:insurance"
+  ]
+ },
+ "tree_id": "1bee94409bac0c1a"
+}

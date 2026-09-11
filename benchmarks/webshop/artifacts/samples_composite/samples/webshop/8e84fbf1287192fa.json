@@ -1,0 +1,266 @@
+{
+ "sample_id": "8e84fbf1287192fa",
+ "tree_id": "cad8a0e8ef41124f",
+ "adapter": "webshop",
+ "cluster": "chargers",
+ "goal_idx": 120,
+ "split": "test",
+ "source_instruction": "i am looking for a black fast wireless universal charging stand.",
+ "query": "Hey there, I\u2019m looking for chargers that have fast charging, come in black, and are priced at a good amount, since I know wireless charging options are totally out of stock right now so I don\u2019t even need to bother asking for those.",
+ "strategy_ids": [
+  "false_presupposition",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+vagueness_subjectivity",
+  "family": "expression+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark"
+  ],
+  "components": [
+   "false_presupposition",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "since I know wireless charging options are totally out of stock right now so I don\u2019t even need to bother asking for those",
+    "condition": null,
+    "about": [
+     "attr:wireless charging",
+     "wireless charging"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:fast charging",
+   "attr:wireless charging",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:fast charging",
+     "=",
+     "fast charging"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "8a828ec83e8d1e15"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 59,
+  "lit_card": 470,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 451,
+    "true_card": 59,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 67,
+    "true_card": 59,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "a22d9878f305fb61",
+  "conditions": [
+   [
+    "attr:fast charging",
+    "=",
+    "fast charging"
+   ],
+   [
+    "attr:wireless charging",
+    "=",
+    "wireless charging"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 59,
+  "value": [
+   "[\"B00N63TWE8\",[[\"style\",\"combo black\"]]]",
+   "[\"B0769JN5MG\",[[\"color\",\"classic black\"]]]",
+   "[\"B07BVDX6CB\",[[\"color\",\"black\"]]]",
+   "[\"B07DC2MJR4\",[[\"color\",\"classic black\"]]]",
+   "[\"B07F9RBSP5\",[[\"color\",\"black\"]]]",
+   "[\"B07FM8R7J1\",[[\"color\",\"black\"]]]",
+   "[\"B07H67SD3Z\",[[\"color\",\"classic black\"]]]",
+   "[\"B07RN75TGD\",[[\"color\",\"black\"]]]",
+   "[\"B07VGR2BPY\",[[\"color\",\"black\"]]]",
+   "[\"B07WFB6QMV\",[[\"color\",\"black\"]]]",
+   "[\"B07XYXBWS4\",[[\"color\",\"black\"]]]",
+   "[\"B08239BX6B\",[[\"color\",\"black\"]]]",
+   "[\"B082NLS4HQ\",[[\"color\",\"black\"]]]",
+   "[\"B082V5399K\",[[\"color\",\"black\"]]]",
+   "[\"B085CD6YJQ\",[[\"color\",\"black\"]]]",
+   "[\"B085DQ6WYH\",[[\"color\",\"black\"]]]",
+   "[\"B086JYCNYK\",[[\"color\",\"black\"]]]",
+   "[\"B0871RCMKW\",[[\"color\",\"black\"]]]",
+   "[\"B087T2B7DY\",[[\"color\",\"4 in 1 black\"]]]",
+   "[\"B087WSPFBV\",[[\"color\",\"black\"]]]",
+   "[\"B088NVD287\",[[\"color\",\"black\"]]]",
+   "[\"B08CDH5VCX\",[[\"color\",\"black\"]]]",
+   "[\"B08CRD99SZ\",[[\"color\",\"c.black*\"]]]",
+   "[\"B08HV8PR1B\",[[\"color\",\"space black\"]]]",
+   "[\"B08MTJRM7Y\",[[\"color\",\"dark black\"]]]",
+   "[\"B08PVVBGH4\",[[\"color\",\"black\"]]]",
+   "[\"B08Q46NZV4\",[[\"color\",\"black + qc3.0\"]]]",
+   "[\"B08QZFL6N7\",[[\"color\",\"black\"]]]",
+   "[\"B08RD23N46\",[[\"color\",\"black\"]]]",
+   "[\"B08S6LT3B7\",[[\"color\",\"b-black(for airpods and samsung galaxy buds live)\"]]]",
+   "[\"B08T9QYHLJ\",[[\"color\",\"black with qc 3.0 adapter\"]]]",
+   "[\"B091FPLWHW\",[[\"color\",\"black\"]]]",
+   "[\"B091KT475R\",[[\"color\",\"black\"]]]",
+   "[\"B091T6VKBV\",[[\"color\",\"black\"]]]",
+   "[\"B0965JNZVC\",[[\"color\",\"black\"]]]",
+   "[\"B096L8CY62\",[[\"color\",\"black\"]]]",
+   "[\"B098QC58J9\",[[\"color\",\"black\"]]]",
+   "[\"B09CMM29V9\",[[\"color\",\"black\"]]]",
+   "[\"B09DCCKCNT\",[[\"color\",\"black\"]]]",
+   "[\"B09DKBRJLD\",[[\"color\",\"ablack\"]]]",
+   "[\"B09DSJZPG6\",[[\"color\",\"black\"]]]",
+   "[\"B09F2QT5FZ\",[[\"color\",\"black\"]]]",
+   "[\"B09FDL2H2R\",[[\"color\",\"black\"]]]",
+   "[\"B09G6PRQGY\",[[\"color\",\"black\"]]]",
+   "[\"B09JNTDPZJ\",[[\"color\",\"black\"]]]",
+   "[\"B09JVZNKHD\",[[\"color\",\"black\"]]]",
+   "[\"B09KZYF9BD\",[[\"color\",\"black\"]]]",
+   "[\"B09L4JDNK8\",[[\"color\",\"1 black-with adapter\"]]]",
+   "[\"B09L5THXQC\",[[\"color\",\"a7-black\"]]]",
+   "[\"B09MLH83DJ\",[[\"color\",\"black\"]]]",
+   "[\"B09MQPFXVR\",[[\"color\",\"black\"]]]",
+   "[\"B09MYP2LWH\",[[\"color\",\"black\"]]]",
+   "[\"B09N3VJPLL\",[[\"color\",\"black\"]]]",
+   "[\"B09N6Y23WL\",[[\"color\",\"black vent clip\"]]]",
+   "[\"B09NLX5WFH\",[[\"color\",\"black\"]]]",
+   "[\"B09NVX1TPV\",[[\"color\",\"black\"]]]",
+   "[\"B09PQ8DDXJ\",[[\"color\",\"black\"]]]",
+   "[\"B09Q57QQSN\",[[\"color\",\"black\"]]]",
+   "[\"B09S61NRNK\",[[\"color\",\"black\"]]]"
+  ],
+  "hash": "2cc57ddd08060e908a4cd6f4a14b8cd0"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "13e5f2eaf8658992",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the chargers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "c0de069b11223dd2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the chargers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "29d2231e77f0ea6f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be high power."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bb25c99fa68abe51",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be micro usb."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "3f03b42c3edb02f9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a4f60459d733d69f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "5014ccced0caf6c2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 prot instead of black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "c0fbb7737a966b01",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 white instead of black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

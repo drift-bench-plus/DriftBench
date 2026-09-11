@@ -1,0 +1,93 @@
+{
+ "sample_id": "ead434b5d4c6c16d__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "ead434b5d4c6c16d",
+ "query": "Hey, I just wanted to say I had the best iced lavender latte from the caf\u00e9 down my street this morning, they added just the right amount of honey and it was so creamy I\u2019m already planning to go back tomorrow. Oh and my rescue cat just figured out how to open the snack cabinet last night, I caught her halfway inside trying to steal a bag of tuna treats, it was equal parts impressive and annoying. Also I\u2019m thinking of planting some tomato seedlings on my balcony this weekend, I found a really cute self-watering planter online that\u2019s supposed to be perfect for small spaces. Anyway, I\u2019m having an issue with my phone right now: my wifi calling is really bad, my data mode is turned off, and I got a notification that I\u2019ve exceeded my data usage, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Hey, I just wanted to say I had the best iced lavender latte from the caf\u00e9 down my street this morning, they added just the right amount of honey and it was so creamy I\u2019m already planning to go back tomorrow. Oh and my rescue cat just figured out how to open the snack cabinet last night, I caught her halfway inside trying to steal a bag of tuna treats, it was equal parts impressive and annoying. Also I\u2019m thinking of planting some tomato seedlings on my balcony this weekend, I found a really cute self-watering planter online that\u2019s supposed to be perfect for small spaces. Anyway,",
+  "retained": [
+   "fault:bad_wifi_calling",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,181 @@
+{
+ "adapter": "webshop",
+ "cluster": "alcoholic beverages",
+ "fidelity_notes": [],
+ "goal_idx": 128,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "b3eba65f349c8603c3340dc1587f3f5c",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B005Z6LGYS\",[[\"flavor name\",\"citrus\"]]]",
+   "[\"B07CZLVZ7X\",[[\"flavor name\",\"citrus\"]]]",
+   "[\"B08PW3Y1DM\",[[\"flavor name\",\"dry citrus tonic\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:high fructose",
+    "=",
+    "high fructose"
+   ],
+   [
+    "option:0",
+    "=",
+    "citrus"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "89f5663644d6a499"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high fructose",
+     "=",
+     "citrus"
+    ],
+    [
+     "option:0",
+     "=",
+     "citrus"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:high fructose",
+     "high fructose"
+    ],
+    "alternative": [
+     "attr:high fructose",
+     "citrus"
+    ],
+    "condition": null,
+    "text": "Since you probably don't have high fructose alcoholic beverages"
+   }
+  ],
+  "retained": [
+   "attr:high fructose",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "c645308987a3a36f",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don't have high fructose alcoholic beverages, could you find me citrus alcoholic drinks that cost no more than $120 instead?",
+ "render_attempts": 1,
+ "sample_id": "36bcadd8f195cdfa",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the alcoholic beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "700c665f6cd77f27"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the alcoholic beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f29f8904846eb1e5"
+  },
+  {
+   "announcement": "Also, it needs to be gluten free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7429fcc26c217882"
+  },
+  {
+   "announcement": "Also, it needs to be artificial ingredients.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cf9cc98d3dd66929"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bfd10e1b407bd479"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e3813401fec811f4"
+  },
+  {
+   "announcement": "Actually, make it 11.1 fl oz (pack of 24) instead of citrus.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1c76d493f0391058"
+  },
+  {
+   "announcement": "Actually, make it 11.1 fl oz (pack of 6) instead of citrus.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b0eb969773263a76"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need some high fructose citrus tonic water.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "e9e72e3bb8bf1b5b",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

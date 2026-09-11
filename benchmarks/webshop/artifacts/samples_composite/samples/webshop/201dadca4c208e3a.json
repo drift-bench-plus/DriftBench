@@ -1,0 +1,253 @@
+{
+ "sample_id": "201dadca4c208e3a",
+ "tree_id": "d10615fa3a0d5317",
+ "adapter": "webshop",
+ "cluster": "frozen",
+ "goal_idx": 498,
+ "split": "test",
+ "source_instruction": "i need this product for afternoon snack with friends .rhythm superfoods carrot sticks,1.4 oz (pack of 12), vegan/gluten-free superfood snacks",
+ "query": "Ugh, you won\u2019t believe the mess I dealt with right before I walked into the store today\u2014our golden retriever, Muffin, dug through the bottom of the hall closet this morning, dragged out every single old winter scarf, mitten, and crumpled holiday gift bag we\u2019ve stashed there since 2021, and shredded half a roll of sparkly red wrapping paper all over the entryway rug. I was already running 10 minutes late to drop the kid off at school, so I had to kick all the paper scraps into a pile by the front door, sprint to the car, and I swear I still have a little piece of that glitter stuck to my left cheek even now, I kept catching little flecks of it falling onto my steering wheel on the drive over. The crossing guard even waved extra slow at me when I pulled up to the school drop-off loop, I bet she thought I was covered in some weird craft supply the kid dumped on me before we left the house, it was so embarrassing. Hey, I\u2019m over in the frozen section right now grabbing snacks for my kid\u2019s lunch next week, can you help me track down the nut free ones? I need to grab that one, the pack size I always get when I stock up for the month, y\u2019know? I don\u2019t wanna spend too much, obviously, so just stick to something reasonable that won\u2019t break the bank, yeah? Let me know what you find that fits, I don\u2019t have a ton of time to wander the aisles today.",
+ "strategy_ids": [
+  "insufficient_information",
+  "factual_error",
+  "contextual_irrelevance",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+factual_error+contextual_irrelevance+referential_ambiguity",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "factual_error",
+   "contextual_irrelevance",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:gluten free",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:gluten free",
+    "gluten free",
+    "nut free"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, you won\u2019t believe the mess I dealt with right before I walked into the store today\u2014our golden retriever, Muffin, dug through the bottom of the hall closet this morning, dragged out every single old winter scarf, mitten, and crumpled holiday gift bag we\u2019ve stashed there since 2021, and shredded half a roll of sparkly red wrapping paper all over the entryway rug. I was already running 10 minutes late to drop the kid off at school, so I had to kick all the paper scraps into a pile by the front door, sprint to the car, and I swear I still have a little piece of that glitter stuck to my left cheek even now, I kept catching little flecks of it falling onto my steering wheel on the drive over. The crossing guard even waved extra slow at me when I pulled up to the school drop-off loop, I bet she thought I was covered in some weird craft supply the kid dumped on me before we left the house, it was so embarrassing.",
+  "retained": [],
+  "hidden_slots": [
+   "attr:gluten free",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "nut free"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "5c86535215764a8b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 42,
+  "lit_card": 61,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 95,
+    "true_card": 42,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 11,
+    "true_card": 42,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 226,
+    "true_card": 42,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "e5239a6e2618f00f",
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "option:0",
+    "=",
+    "1.4 ounce (pack of 12)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:gluten free",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 42,
+  "value": [
+   "[\"B001DIH3A8\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B0038B1DEU\",[[\"size\",\"8.9 ounce (pack of 1)\"]]]",
+   "[\"B003SBZDJQ\",[[\"size\",\"5 ounce (pack of 1)\"]]]",
+   "[\"B0049K99RW\",[[\"size\",\"3 ounce (pack of 1)\"]]]",
+   "[\"B007HQNIFO\",[[\"style\",\"1 pack\"]]]",
+   "[\"B007HRFOXM\",[[\"style\",\"1 pack\"]]]",
+   "[\"B008P0BKG0\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B0099LQN0W\",[[\"size\",\"2 ounce (pack of 12)\"]]]",
+   "[\"B00AO7HUSO\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B00BT0LRW0\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+   "[\"B01B1X7R8C\",[[\"size\",\"1 pack\"]]]",
+   "[\"B01B6LJL5Q\",[[\"size\",\"10.5 ounce (pack of 1)\"]]]",
+   "[\"B01HQ6T36M\",[[\"size\",\"1 pack\"]]]",
+   "[\"B01LYHIL99\",[[\"size\",\"14.4 ounce (pack of 12)\"]]]",
+   "[\"B071SM7RLP\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+   "[\"B0773QFLQG\",[[\"size\",\"2.29 ounce (pack of 4)\"]]]",
+   "[\"B079QPZ8KN\",[[\"size\",\"1.4 ounce (pack of 1)\"]]]",
+   "[\"B07H8SVYBR\",[[\"size\",\"4.22 ounce (pack of 12)\"]]]",
+   "[\"B07KBDGVQ1\",[[\"size\",\"8.8 ounce (pack of 1)\"]]]",
+   "[\"B07N1WVS33\",[[\"size\",\"1 pack\"]]]",
+   "[\"B07QGFF2T9\",[[\"size\",\"3.52 ounce (pack of 1)\"]]]",
+   "[\"B07R92BDXS\",[[\"size\",\"pack of 3\"]]]",
+   "[\"B07T15BBGP\",[[\"size\",\"0.52 ounce (pack of 4)\"]]]",
+   "[\"B07T25FKZF\",[[\"size\",\"8 ounce (pack of 2)\"]]]",
+   "[\"B07W7TZ551\",[[\"size\",\"16 ounce (pack of 1)\"]]]",
+   "[\"B07Z34WBR5\",[[\"size\",\"12 pack\"]]]",
+   "[\"B08B8ZRWR1\",[[\"size\",\"7 ounce (pack of 1)\"]]]",
+   "[\"B08DL6BRT9\",[[\"size\",\"4.22 ounce (pack of 12)\"]]]",
+   "[\"B08M4GX3NK\",[[\"size\",\"12 pack\"]]]",
+   "[\"B08MV8ZBC4\",[[\"size\",\"2 ounce (pack of 5)\"]]]",
+   "[\"B08PDQNBPB\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+   "[\"B08WVQT5Y5\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B093G5YTHT\",[[\"size\",\"1\"]]]",
+   "[\"B093SPF3N6\",[[\"size\",\"12.5 ounce (pack of 1)\"]]]",
+   "[\"B09584LKHV\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B0964MKTLH\",[[\"size\",\"pack of 3\"]]]",
+   "[\"B096L9TDBF\",[[\"size\",\"4-pack\"]]]",
+   "[\"B09719XSDT\",[[\"size\",\"7 ounce (pack of 1)\"]]]",
+   "[\"B09BD1QKWG\",[[\"size\",\"1 pack\"]]]",
+   "[\"B09F1WXDMH\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B09NFWR6WD\",[[\"size\",\"2.5 ounce (pack of 18)\"]]]",
+   "[\"B09PRSCYJY\",[[\"size\",\"5 ounce (pack of 4)\"]]]"
+  ],
+  "hash": "733f0e27bf0e452fef32c62eec68f585"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1583fd9ac3ead4cb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the frozen instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "4e92be244bc86a29",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the frozen instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "646ed137da186de1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dietary fiber."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d5c46677fbb47368",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be drink mix."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2bee18d9a6388808",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cdbaa0dccd35effb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "8a5cb4531f82ea4e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10\" round instead of 1.4 ounce (pack of 12)."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "fb77f714d2742fec",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10-count instead of 1.4 ounce (pack of 12)."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

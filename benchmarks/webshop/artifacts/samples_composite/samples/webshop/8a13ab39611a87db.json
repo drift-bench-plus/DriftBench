@@ -1,0 +1,209 @@
+{
+ "sample_id": "8a13ab39611a87db",
+ "tree_id": "a56254d4b3cf9230",
+ "adapter": "webshop",
+ "cluster": "throw blankets",
+ "goal_idx": 176,
+ "split": "test",
+ "source_instruction": "i looking a super soft fleece throw for  small pets size;40*30 inch",
+ "query": "Hey, I\u2019m looking for a super soft throw blanket for my cat to curl up on, the extra small one that\u2019s just the right little size for her to nestle into. I need it to be at a good price point, nothing that feels like a total ripoff for what it is. Can you pull up nice options that\u2019ll work for that?",
+ "strategy_ids": [
+  "insufficient_information",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+vagueness_subjectivity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "insufficient_information": "attr:fleece throw"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:fleece throw"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:super soft",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:fleece throw",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ],
+    [
+     "option:0",
+     "=",
+     "40\"x30\" extra small for pet"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 6,
+  "spec_id": "3916471bec86337a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 8,
+  "lit_card": 44,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 38,
+    "true_card": 8,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 9,
+    "true_card": 8,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 6,
+ "hidden_intent": {
+  "intent_id": "effc50f7f6ddf547",
+  "conditions": [
+   [
+    "attr:fleece throw",
+    "=",
+    "fleece throw"
+   ],
+   [
+    "attr:super soft",
+    "=",
+    "super soft"
+   ],
+   [
+    "option:0",
+    "=",
+    "40\"x30\" extra small for pet"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:fleece throw",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 8,
+  "value": [
+   "[\"B07YBS3MHS\",[[\"size\",\"small\"]]]",
+   "[\"B08PBMT84S\",[[\"size\",\"40\\\"x30\\\"\"]]]",
+   "[\"B097NMSGZ8\",[[\"size\",\"40\\\"x30\\\"\"]]]",
+   "[\"B09B9KGXTW\",[[\"size\",\"40\\\"x30\\\"\"]]]",
+   "[\"B09G6PN6XQ\",[[\"size\",\"40\\\"x30\\\" for pet\"]]]",
+   "[\"B09G9MVGHH\",[[\"size\",\"40\\\"x30\\\" for pet\"]]]",
+   "[\"B09J2RZ26Q\",[[\"size\",\"40\\\"x30\\\" extra small for pet\"]]]",
+   "[\"B09KLQ39BG\",[[\"size\",\"40\\\"x30\\\"\"]]]"
+  ],
+  "hash": "52cd8f01b130b34f2cc6e5b0e8fcd146"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "201005557906bc2d",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the throw blankets instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "76c32a170da78957",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the throw blankets instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "0fe11f4c016b2640",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3151c9764c455e5a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "4b49625a0c019d8c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "98fb445ee491e916",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "dc97be55af2cca89",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 instead of 40\"x30\" extra small for pet."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f92dc287b64ad524",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 photo instead of 40\"x30\" extra small for pet."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

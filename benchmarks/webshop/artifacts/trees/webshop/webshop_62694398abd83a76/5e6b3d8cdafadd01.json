@@ -1,0 +1,938 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B07MWML5S1",
+    "cluster": "men's jeans",
+    "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:machine wash",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:machine wash",
+     "=",
+     "machine wash"
+    ],
+    [
+     "option:0",
+     "=",
+     "granite"
+    ],
+    [
+     "option:1",
+     "=",
+     "33w x 30l"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   "ground_truth": {
+    "hash": "16ac14843e6f701354080a818582177f",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B01MRNDYVF\",[[\"color\",\"granite\"],[\"size\",\"33w x 30l\"]]]",
+     "[\"B01N1IZEXC\",[[\"color\",\"granite\"],[\"size\",\"33w x 30l\"]]]",
+     "[\"B01N97KVM8\",[[\"color\",\"granite\"],[\"size\",\"33w x 30l\"]]]",
+     "[\"B07C2DXQTP\",[[\"color\",\"granite\"],[\"size\",\"33w x 30l\"]]]",
+     "[\"B07C2DXR19\",[[\"color\",\"granite\"],[\"size\",\"33w x 30l\"]]]",
+     "[\"B07C2F29CP\",[[\"color\",\"granite\"],[\"size\",\"33w x 30l\"]]]",
+     "[\"B07MWML5S1\",[[\"color\",\"granite\"],[\"size\",\"33w x 30l\"]]]",
+     "[\"B07MWT9GKP\",[[\"color\",\"granite\"],[\"size\",\"33w x 30l\"]]]",
+     "[\"B07MWTMFX1\",[[\"color\",\"granite\"],[\"size\",\"33w x 30l\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "cc0c20dc6378e118",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B07MWML5S1",
+     "attributes": [
+      "machine wash"
+     ],
+     "category": "",
+     "goal_options": [
+      "granite",
+      "33w x 30l"
+     ],
+     "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+     "price_upper": 30,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": "a4d0e6181ec1005e",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07JB7VQBY",
+    "cluster": "men's jeans",
+    "name": "Lavnis Men’s Vintage Casual Ripped Slim fit Denim Jeans",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:button closure",
+    "attr:slim fit",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:button closure",
+     "=",
+     "button closure"
+    ],
+    [
+     "attr:slim fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "red"
+    ],
+    [
+     "option:1",
+     "=",
+     "28"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "77e6ac71757478b1117ead0794d70bbd",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07JB7VQBY\",[[\"color\",\"red\"],[\"size\",\"28\"]]]",
+     "[\"B07M9CFT8W\",[[\"color\",\"red\"],[\"size\",\"28\"]]]",
+     "[\"B07PJ263YK\",[[\"color\",\"red 1\"],[\"size\",\"28\"]]]",
+     "[\"B08JHSV9GK\",[[\"color\",\"709 wine red\"],[\"size\",\"28\"]]]",
+     "[\"B091GG5VP9\",[[\"color\",\"red\"],[\"size\",\"28\"]]]",
+     "[\"B0972FK2P4\",[[\"color\",\"red\"],[\"size\",\"28\"]]]",
+     "[\"B09F9CFWJR\",[[\"color\",\"a#purplish red\"],[\"size\",\"28\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "51e814878395a864",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B07JB7VQBY",
+     "attributes": [
+      "slim fit",
+      "button closure"
+     ],
+     "category": "",
+     "goal_options": [
+      "red",
+      "28"
+     ],
+     "name": "Lavnis Men’s Vintage Casual Ripped Slim fit Denim Jeans",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": "839630f2ac2fd431",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NL6VC77",
+    "cluster": "men's jeans",
+    "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:cotton spandex",
+    "attr:elastic waist",
+    "attr:machine washable",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:cotton spandex",
+     "=",
+     "cotton spandex"
+    ],
+    [
+     "attr:elastic waist",
+     "=",
+     "elastic waist"
+    ],
+    [
+     "attr:machine washable",
+     "=",
+     "machine washable"
+    ],
+    [
+     "option:0",
+     "=",
+     "navy"
+    ],
+    [
+     "option:1",
+     "=",
+     "x-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "6420d3ee70ed0a17018449ccb06e8dad",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B074N9DJFF\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+     "[\"B081W6BP2Q\",[[\"color\",\"#1 navy\"],[\"size\",\"large\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "e344e8a2b9d05b8c",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B09NL6VC77",
+     "attributes": [
+      "cotton spandex",
+      "elastic waist",
+      "machine washable"
+     ],
+     "category": "",
+     "goal_options": [
+      "navy",
+      "x-large"
+     ],
+     "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NL6VC77",
+    "cluster": "men's jeans",
+    "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:elastic waist",
+    "attr:high waist",
+    "attr:machine washable",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:elastic waist",
+     "=",
+     "elastic waist"
+    ],
+    [
+     "attr:high waist",
+     "=",
+     "high waist"
+    ],
+    [
+     "attr:machine washable",
+     "=",
+     "machine washable"
+    ],
+    [
+     "option:0",
+     "=",
+     "navy"
+    ],
+    [
+     "option:1",
+     "=",
+     "x-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "af211554fa367065a1f22e581dff85f2",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B09KH43JP8\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+     "[\"B09NQ8DMHG\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "ee5f1da28268f00d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B09NL6VC77",
+     "attributes": [
+      "elastic waist",
+      "high waist",
+      "machine washable"
+     ],
+     "category": "",
+     "goal_options": [
+      "navy",
+      "x-large"
+     ],
+     "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NL6VC77",
+    "cluster": "men's jeans",
+    "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:elastic waist",
+    "attr:machine washable",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:elastic waist",
+     "=",
+     "elastic waist"
+    ],
+    [
+     "attr:machine washable",
+     "=",
+     "machine washable"
+    ],
+    [
+     "option:1",
+     "=",
+     "x-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "026908a08cac02bd6974bb9b4e7ba5f9",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00ZR4MZNY\",[[\"size\",\"large\"]]]",
+     "[\"B074N9DJFF\",[[\"size\",\"large\"]]]",
+     "[\"B078VX5242\",[[\"size\",\"large\"]]]",
+     "[\"B07BFQ9N3K\",[[\"size\",\"large\"]]]",
+     "[\"B07PWGKTMF\",[[\"size\",\"large\"]]]",
+     "[\"B07RHWRRPB\",[[\"size\",\"large\"]]]",
+     "[\"B081W6BP2Q\",[[\"size\",\"large\"]]]",
+     "[\"B085S4795M\",[[\"size\",\"large\"]]]",
+     "[\"B086BDYB2T\",[[\"size\",\"large\"]]]",
+     "[\"B08BZ6124N\",[[\"size\",\"large\"]]]",
+     "[\"B08D6CSHPF\",[[\"size\",\"large\"]]]",
+     "[\"B08RJJXKJS\",[[\"size\",\"large\"]]]",
+     "[\"B08SQ185K3\",[[\"size\",\"large\"]]]",
+     "[\"B0972V55KB\",[[\"size\",\"large\"]]]",
+     "[\"B0999L6J9X\",[[\"size\",\"large\"]]]",
+     "[\"B09BBP1TFR\",[[\"size\",\"large\"]]]",
+     "[\"B09CZHF717\",[[\"size\",\"large\"]]]",
+     "[\"B09DRZRC8V\",[[\"size\",\"large\"]]]",
+     "[\"B09GX4PFF9\",[[\"size\",\"large\"]]]",
+     "[\"B09KCK3Z92\",[[\"size\",\"large\"]]]",
+     "[\"B09KH43JP8\",[[\"size\",\"large\"]]]",
+     "[\"B09KPKYNY1\",[[\"size\",\"large\"]]]",
+     "[\"B09LC2V4ZN\",[[\"size\",\"large\"]]]",
+     "[\"B09MT2XCKD\",[[\"size\",\"large\"]]]",
+     "[\"B09MT3R2X6\",[[\"size\",\"large\"]]]",
+     "[\"B09NDS345Q\",[[\"size\",\"large\"]]]",
+     "[\"B09NL6VC77\",[[\"size\",\"large\"]]]",
+     "[\"B09NQ8DMHG\",[[\"size\",\"large\"]]]",
+     "[\"B09P7VPPBK\",[[\"size\",\"large\"]]]",
+     "[\"B09P86JDWL\",[[\"size\",\"large\"]]]",
+     "[\"B09P86LL88\",[[\"size\",\"large\"]]]",
+     "[\"B09P875Q42\",[[\"size\",\"large\"]]]",
+     "[\"B09P87BFK5\",[[\"size\",\"large\"]]]",
+     "[\"B09P87BY6D\",[[\"size\",\"large\"]]]",
+     "[\"B09PDJHZ6T\",[[\"size\",\"large\"]]]",
+     "[\"B09PHLJQ3M\",[[\"size\",\"large\"]]]",
+     "[\"B09PLCR7PV\",[[\"size\",\"large\"]]]",
+     "[\"B09Q91JFZN\",[[\"size\",\"large\"]]]",
+     "[\"B09Q91SR36\",[[\"size\",\"large\"]]]",
+     "[\"B09QL7RXQW\",[[\"size\",\"large\"]]]",
+     "[\"B09QMFM7V8\",[[\"size\",\"large\"]]]",
+     "[\"B09QMGCTCP\",[[\"size\",\"large\"]]]",
+     "[\"B09QMGH811\",[[\"size\",\"large\"]]]",
+     "[\"B09QMJ33QM\",[[\"size\",\"large\"]]]",
+     "[\"B09QMM695M\",[[\"size\",\"large\"]]]",
+     "[\"B09QQ2JKV9\",[[\"size\",\"large\"]]]",
+     "[\"B09QQLS4C2\",[[\"size\",\"large\"]]]",
+     "[\"B09QX3B36D\",[[\"size\",\"large\"]]]",
+     "[\"B09QZP8K28\",[[\"size\",\"large\"]]]",
+     "[\"B09QZQM2DF\",[[\"size\",\"large\"]]]",
+     "[\"B09R7WR8JD\",[[\"size\",\"large\"]]]",
+     "[\"B09RFVBRZT\",[[\"size\",\"large\"]]]",
+     "[\"B09RH335T1\",[[\"size\",\"large\"]]]",
+     "[\"B09RZX3FZ2\",[[\"size\",\"large\"]]]",
+     "[\"B09S5MRL1D\",[[\"size\",\"large\"]]]",
+     "[\"B09S5PLTNS\",[[\"size\",\"large\"]]]",
+     "[\"B09SHHTL7Q\",[[\"size\",\"large\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "909804d1dd9019db",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B09NL6VC77",
+     "attributes": [
+      "elastic waist",
+      "machine washable"
+     ],
+     "category": "",
+     "goal_options": [
+      "x-large"
+     ],
+     "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NL6VC77",
+    "cluster": "men's jeans",
+    "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:elastic waist",
+    "attr:machine washable",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:elastic waist",
+     "=",
+     "elastic waist"
+    ],
+    [
+     "attr:machine washable",
+     "=",
+     "machine washable"
+    ],
+    [
+     "option:0",
+     "=",
+     "navy"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "6a3c157fdc16cee48897575f40ed647e",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B074N9DJFF\",[[\"color\",\"navy\"]]]",
+     "[\"B07GSFX84F\",[[\"color\",\"navy\"]]]",
+     "[\"B081W6BP2Q\",[[\"color\",\"#1 navy\"]]]",
+     "[\"B08BZ6124N\",[[\"color\",\"navy\"]]]",
+     "[\"B08L7PJK7B\",[[\"color\",\"navy\"]]]",
+     "[\"B0999L6J9X\",[[\"color\",\"navy\"]]]",
+     "[\"B09BBP1TFR\",[[\"color\",\"bp0591az- navy w red diagonal side\"]]]",
+     "[\"B09KH43JP8\",[[\"color\",\"navy\"]]]",
+     "[\"B09NL6VC77\",[[\"color\",\"navy\"]]]",
+     "[\"B09NQ8DMHG\",[[\"color\",\"navy\"]]]",
+     "[\"B09P7VPPBK\",[[\"color\",\"navy\"]]]",
+     "[\"B09QL7RXQW\",[[\"color\",\"b-navy\"]]]",
+     "[\"B09RH335T1\",[[\"color\",\"b-navy\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9705922be17bfa19",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B09NL6VC77",
+     "attributes": [
+      "elastic waist",
+      "machine washable"
+     ],
+     "category": "",
+     "goal_options": [
+      "navy"
+     ],
+     "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NL6VC77",
+    "cluster": "men's jeans",
+    "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:elastic waist",
+    "attr:machine washable",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:elastic waist",
+     "=",
+     "elastic waist"
+    ],
+    [
+     "attr:machine washable",
+     "=",
+     "machine washable"
+    ],
+    [
+     "option:0",
+     "=",
+     "#3357 camo 169"
+    ],
+    [
+     "option:1",
+     "=",
+     "x-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "048899f451fe945105e54225147dca6b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00ZR4MZNY\",[[\"color\",\"camo\"],[\"size\",\"large\"]]]",
+     "[\"B07RHWRRPB\",[[\"color\",\"usa camo flag art\"],[\"size\",\"large\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "34b2fb4ed0ddb50c",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B09NL6VC77",
+     "attributes": [
+      "elastic waist",
+      "machine washable"
+     ],
+     "category": "",
+     "goal_options": [
+      "#3357 camo 169",
+      "x-large"
+     ],
+     "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B09NL6VC77",
+    "cluster": "men's jeans",
+    "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+   },
+   "bound_slots": [
+    "attr:elastic waist",
+    "attr:machine washable",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:elastic waist",
+     "=",
+     "elastic waist"
+    ],
+    [
+     "attr:machine washable",
+     "=",
+     "machine washable"
+    ],
+    [
+     "option:0",
+     "=",
+     "#3357 camo m"
+    ],
+    [
+     "option:1",
+     "=",
+     "x-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "048899f451fe945105e54225147dca6b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00ZR4MZNY\",[[\"color\",\"camo\"],[\"size\",\"large\"]]]",
+     "[\"B07RHWRRPB\",[[\"color\",\"usa camo flag art\"],[\"size\",\"large\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "e3359de4c3fb3c9b",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "men's jeans",
+    "goal": {
+     "asin": "B09NL6VC77",
+     "attributes": [
+      "elastic waist",
+      "machine washable"
+     ],
+     "category": "",
+     "goal_options": [
+      "#3357 camo m",
+      "x-large"
+     ],
+     "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+     "price_upper": 40,
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+     "query": "men's jeans"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07MWML5S1",
+     "cluster": "men's jeans",
+     "name": "Wrangler mens 13mwz Cowboy Cut Original Fit Jean",
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+    }
+   },
+   "dst": "cc0c20dc6378e118",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "a4d0e6181ec1005e",
+   "src": "1f3b01e202185b13"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07JB7VQBY",
+     "cluster": "men's jeans",
+     "name": "Lavnis Men’s Vintage Casual Ripped Slim fit Denim Jeans",
+     "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+    }
+   },
+   "dst": "51e814878395a864",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "839630f2ac2fd431",
+   "src": "1f3b01e202185b13"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:cotton spandex",
+      "=",
+      "cotton spandex"
+     ]
+    ]
+   },
+   "dst": "e344e8a2b9d05b8c",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "1f3b01e202185b13"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:high waist",
+      "=",
+      "high waist"
+     ]
+    ]
+   },
+   "dst": "ee5f1da28268f00d",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "1f3b01e202185b13"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "navy"
+     ]
+    ]
+   },
+   "dst": "909804d1dd9019db",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "1f3b01e202185b13"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:1",
+      "=",
+      "x-large"
+     ]
+    ]
+   },
+   "dst": "9705922be17bfa19",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "1f3b01e202185b13"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "navy",
+      "#3357 camo 169"
+     ]
+    ]
+   },
+   "dst": "34b2fb4ed0ddb50c",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "1f3b01e202185b13"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "navy",
+      "#3357 camo m"
+     ]
+    ]
+   },
+   "dst": "e3359de4c3fb3c9b",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "1f3b01e202185b13"
+  }
+ ],
+ "env_id": "webshop_62694398abd83a76",
+ "env_spec": {
+  "cluster": "men's jeans",
+  "env_id": "webshop_62694398abd83a76",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B09NL6VC77",
+   "cluster": "men's jeans",
+   "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+   "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans"
+  },
+  "bound_slots": [
+   "attr:elastic waist",
+   "attr:machine washable",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:elastic waist",
+    "=",
+    "elastic waist"
+   ],
+   [
+    "attr:machine washable",
+    "=",
+    "machine washable"
+   ],
+   [
+    "option:0",
+    "=",
+    "navy"
+   ],
+   [
+    "option:1",
+    "=",
+    "x-large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "ground_truth": {
+   "hash": "66d128db0aa822caa4752a58f9b63c92",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B074N9DJFF\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+    "[\"B081W6BP2Q\",[[\"color\",\"#1 navy\"],[\"size\",\"large\"]]]",
+    "[\"B08BZ6124N\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+    "[\"B0999L6J9X\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+    "[\"B09BBP1TFR\",[[\"color\",\"bp0591az- navy w red diagonal side\"],[\"size\",\"large\"]]]",
+    "[\"B09KH43JP8\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+    "[\"B09NL6VC77\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+    "[\"B09NQ8DMHG\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+    "[\"B09P7VPPBK\",[[\"color\",\"navy\"],[\"size\",\"large\"]]]",
+    "[\"B09QL7RXQW\",[[\"color\",\"b-navy\"],[\"size\",\"large\"]]]",
+    "[\"B09RH335T1\",[[\"color\",\"b-navy\"],[\"size\",\"large\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "1f3b01e202185b13",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "men's jeans",
+   "goal": {
+    "asin": "B09NL6VC77",
+    "attributes": [
+     "machine washable",
+     "elastic waist"
+    ],
+    "category": "",
+    "goal_options": [
+     "navy",
+     "x-large"
+    ],
+    "name": "Satiable Men's Straight Fit Casual Pants Stretch Slim Destroyed Ripped Jeans Fashion Denim Pants - 6 Colors",
+    "price_upper": 40,
+    "product_category": "Clothing, Shoes & Jewelry › Men › Clothing › Jeans",
+    "query": "men's jeans"
+   }
+  },
+  "source_record": "791268f360a1aabe",
+  "unbound_slots": [
+   "attr:cotton spandex",
+   "attr:high waist",
+   "option:0",
+   "option:1"
+  ]
+ },
+ "tree_id": "5e6b3d8cdafadd01"
+}

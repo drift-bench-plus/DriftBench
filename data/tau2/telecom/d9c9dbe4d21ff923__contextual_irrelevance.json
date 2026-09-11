@@ -1,0 +1,126 @@
+{
+ "sample_id": "d9c9dbe4d21ff923__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "d9c9dbe4d21ff923",
+ "query": "I finally tried that new matcha boba shop downtown yesterday, the taro pearls were so chewy and they even had a little lychee jelly topping that I\u2019ve never seen anywhere else before. I ended up staying there for almost two hours reading the new graphic novel I picked up at the bookstore next door, the art style is so vibrant and the story has such a fun cozy mystery vibe. Oh, and on my walk home I saw a golden retriever puppy wearing a tiny little rain boot on one paw because it\u2019d stepped in a mud puddle, it was the cutest thing I\u2019ve seen all week. But anyway, I\u2019m abroad right now and my mobile data isn\u2019t working at all, I checked and airplane mode is turned on, my network preference seems like it\u2019s set wrong, there\u2019s a bad VPN running on my device, data mode is toggled off, data saver mode is enabled, and I also have roaming turned off. Can you help me figure out how to fix this so I can get internet access?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I finally tried that new matcha boba shop downtown yesterday, the taro pearls were so chewy and they even had a little lychee jelly topping that I\u2019ve never seen anywhere else before. I ended up staying there for almost two hours reading the new graphic novel I picked up at the bookstore next door, the art style is so vibrant and the story has such a fun cozy mystery vibe. Oh, and on my walk home I saw a golden retriever puppy wearing a tiny little rain boot on one paw because it\u2019d stepped in a mud puddle, it was the cutest thing I\u2019ve seen all week.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:bad_vpn",
+   "fault:data_mode_off",
+   "fault:data_saver_mode_on",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_vpn",
+     "=",
+     "bad_vpn"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_vpn",
+    "=",
+    "bad_vpn"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,185 @@
+{
+ "adapter": "webshop",
+ "cluster": "breakfast foods",
+ "fidelity_notes": [],
+ "goal_idx": 388,
+ "ground_truth": {
+  "cardinality": 7,
+  "hash": "29fdd54f5ee7fe83e5591d3eac7f8638",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B016MEN14O\",[[\"size\",\"12 count\"]]]",
+   "[\"B01LPCLEWY\",[[\"size\",\"12 count\"]]]",
+   "[\"B07GY4FK2W\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B07YSWT2N1\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B082X86HD5\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B084JRK94V\",[[\"size\",\"12 count (pack of 1)\"]]]",
+   "[\"B08BW4HZ7R\",[[\"size\",\"12 count (pack of 1)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:low carb",
+    "=",
+    "low carb"
+   ],
+   [
+    "option:0",
+    "=",
+    "12 count"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "20dd7cfec853f571"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 3,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:low carb",
+     "=",
+     "regular carb"
+    ],
+    [
+     "option:0",
+     "=",
+     "12 count"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:low carb",
+     "low carb"
+    ],
+    "alternative": [
+     "attr:low carb",
+     "regular carb"
+    ],
+    "condition": null,
+    "text": "Since you probably don’t have low carb breakfast foods"
+   }
+  ],
+  "retained": [
+   "attr:low carb",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "f6ae38866175336a",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don’t have low carb breakfast foods, I’m looking for regular carb breakfast foods that come in a 12 count and stay under $40.",
+ "render_attempts": 3,
+ "sample_id": "ecc313355bfb1173",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the breakfast foods instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "85251a87f89861a6"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the breakfast foods instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "c7ffade20e378f4e"
+  },
+  {
+   "announcement": "Also, it needs to be artificial flavors.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "665882adf42ee6f7"
+  },
+  {
+   "announcement": "Also, it needs to be brown rice.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "db6b38f24984e87b"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4ffca32d859a1bed"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "aa9208beee49f9fc"
+  },
+  {
+   "announcement": "Actually, make it 1 pound instead of 12 count.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3ccd70b7d7c46649"
+  },
+  {
+   "announcement": "Actually, make it 1 pack instead of 12 count.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f2d1ebc23dc8b8e0"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 0,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 7,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for a low carbohydrates protein bar with package of 12 counts.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "1efd6434839f8d4f",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

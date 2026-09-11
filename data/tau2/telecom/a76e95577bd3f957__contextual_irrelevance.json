@@ -1,0 +1,82 @@
+{
+ "sample_id": "a76e95577bd3f957__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "a76e95577bd3f957",
+ "query": "Last weekend I went hiking out at Maple Ridge and found the most perfect patch of wild blackberries, I picked almost a full pound and made a tiny batch of jam that turned out way better than any store-bought one I\u2019ve ever tried. I also finally got around to fixing the wobbly leg on my kitchen table last night, used a couple of leftover wood shims from when I put up my bookshelf and now it doesn\u2019t rock at all even when I lean on it. Oh, and I adopted a little tabby kitten earlier this week, she\u2019s already figured out how to open the cabinet where I keep her treats, it\u2019s equal parts cute and annoying. I actually reached out because my APN settings seem to be broken, and also my SIM card is locked with a PIN so I can\u2019t get my mobile data or calls to work right now.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Last weekend I went hiking out at Maple Ridge and found the most perfect patch of wild blackberries, I picked almost a full pound and made a tiny batch of jam that turned out way better than any store-bought one I\u2019ve ever tried. I also finally got around to fixing the wobbly leg on my kitchen table last night, used a couple of leftover wood shims from when I put up my bookshelf and now it doesn\u2019t rock at all even when I lean on it. Oh, and I adopted a little tabby kitten earlier this week, she\u2019s already figured out how to open the cabinet where I keep her treats, it\u2019s equal parts cute and annoying.",
+  "retained": [
+   "fault:break_apn_settings",
+   "fault:lock_sim_card_pin"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:break_apn_settings",
+     "=",
+     "break_apn_settings"
+    ],
+    [
+     "fault:lock_sim_card_pin",
+     "=",
+     "lock_sim_card_pin"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:break_apn_settings",
+    "=",
+    "break_apn_settings"
+   ],
+   [
+    "fault:lock_sim_card_pin",
+    "=",
+    "lock_sim_card_pin"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

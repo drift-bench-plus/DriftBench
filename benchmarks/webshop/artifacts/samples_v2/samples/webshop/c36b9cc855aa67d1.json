@@ -1,0 +1,212 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's jeans",
+ "fidelity_notes": [],
+ "goal_idx": 187,
+ "ground_truth": {
+  "cardinality": 14,
+  "hash": "938126760c08a4a95f65b0f8dd2b933d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B082SZDTBD\",[[\"color\",\"zz-zmblack\"],[\"size\",\"large\"]]]",
+   "[\"B0831NKRD1\",[[\"color\",\"z-black\"],[\"size\",\"large\"]]]",
+   "[\"B0862B9PRX\",[[\"color\",\"z-azblack\"],[\"size\",\"large\"]]]",
+   "[\"B08TRLG75L\",[[\"color\",\"a3-black\"],[\"size\",\"large\"]]]",
+   "[\"B09FY8BW8C\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09G3CKQTK\",[[\"color\",\"z-black\"],[\"size\",\"large\"]]]",
+   "[\"B09NL53BGX\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09NW1GRCX\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09PDVZTC2\",[[\"color\",\"z-xablack\"],[\"size\",\"large\"]]]",
+   "[\"B09Q6KSK33\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09QS643MZ\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09R78GYSC\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09R9Z4FTF\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09S3T5D9P\",[[\"color\",\"black\"],[\"size\",\"large\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:regular fit",
+    "=",
+    "regular fit"
+   ],
+   [
+    "attr:tummy control",
+    "=",
+    "tummy control"
+   ],
+   [
+    "attr:wide leg",
+    "=",
+    "wide leg"
+   ],
+   [
+    "option:0",
+    "=",
+    "zz-zmblack"
+   ],
+   [
+    "option:1",
+    "=",
+    "3x-large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "5bd22867d5ca40ec"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:regular fit",
+     "=",
+     "regular fit"
+    ],
+    [
+     "attr:tummy control",
+     "=",
+     "tummy control"
+    ],
+    [
+     "attr:wide leg",
+     "=",
+     "wide leg"
+    ],
+    [
+     "option:0",
+     "=",
+     "zz-zmblack"
+    ],
+    [
+     "option:1",
+     "=",
+     "3x-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just finished planting a whole row of sunflower seeds along my backyard fence this morning, and I’m already daydreaming about how tall they’ll grow by mid-summer. I also picked up a new ceramic bird feeder from the garden center yesterday, and I’ve been watching sparrows and chickadees stop by to snack on sunflower seeds every hour. On my way home from the garden center, I stopped at a local bakery and grabbed a warm blueberry scone that was still crumbly and sweet from the oven.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:regular fit",
+   "attr:tummy control",
+   "attr:wide leg",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just finished planting a whole row of sunflower seeds along my backyard fence this morning, and I’m already daydreaming about how tall they’ll grow by mid-summer. I also picked up a new ceramic bird feeder from the garden center yesterday, and I’ve been watching sparrows and chickadees stop by to snack on sunflower seeds every hour. On my way home from the garden center, I stopped at a local bakery and grabbed a warm blueberry scone that was still crumbly and sweet from the oven. I’m looking for women’s jeans with regular fit, tummy control, and wide leg, in zz-zmblack color and 3x-large size, with a price limit of 20.",
+ "render_attempts": 1,
+ "sample_id": "c36b9cc855aa67d1",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "3e364b66ebaf1ae0"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's jeans instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "f7c6a7ddaa9569bc"
+  },
+  {
+   "announcement": "Also, it needs to be faux fur.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ccab9a04e2f2b298"
+  },
+  {
+   "announcement": "Also, it needs to be cover ups.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ff16305f7d17fa18"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9b89ab0a3eddbe8b"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c65173f379274efc"
+  },
+  {
+   "announcement": "Actually, make it #1 grey instead of zz-zmblack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "748bbbfc86394322"
+  },
+  {
+   "announcement": "Actually, make it #1 yellow instead of zz-zmblack.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "efbf63abfbaa79e6"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 14,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 14,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a wide leg jeans with regular fit and tummy control. also, choose 3x large zz-zm black colored one.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "afd276490054ad37",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

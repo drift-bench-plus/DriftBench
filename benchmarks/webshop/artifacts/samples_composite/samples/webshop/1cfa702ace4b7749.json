@@ -1,0 +1,214 @@
+{
+ "sample_id": "1cfa702ace4b7749",
+ "tree_id": "f77cd43988662c2f",
+ "adapter": "webshop",
+ "cluster": "decorative mirrors",
+ "goal_idx": 118,
+ "split": "test",
+ "source_instruction": "i need a wall mounted mirror in the color d.",
+ "query": "I\u2019m looking for decorative mirrors right now, specifically the ceiling-mounted style ones, and I need the option d variant. I don\u2019t want to spend too much on this, so make sure whatever you show me fits what I\u2019m comfortable paying for, yeah? I\u2019m not super set on extra frills as long as it matches the style I mentioned and the right option.",
+ "strategy_ids": [
+  "factual_error",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+insufficient_information",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "withhold"
+  ],
+  "components": [
+   "factual_error",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:wall mounted",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:wall mounted",
+    "wall mounted",
+    "ceiling-mounted"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:wall mounted",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:wall mounted",
+     "=",
+     "ceiling-mounted"
+    ],
+    [
+     "option:0",
+     "=",
+     "d"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "6bcd91271bf2b5c5"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 18,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 18,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 60,
+    "true_card": 18,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "0cd0d9ebc39fe71e",
+  "conditions": [
+   [
+    "attr:wall mounted",
+    "=",
+    "wall mounted"
+   ],
+   [
+    "option:0",
+    "=",
+    "d"
+   ],
+   [
+    "price_upper",
+    "<=",
+    180
+   ]
+  ],
+  "hidden_slots": [
+   "attr:wall mounted",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 18,
+  "value": [
+   "[\"B07LGYJLRX\",[[\"color\",\"d\"]]]",
+   "[\"B07LGZB8W6\",[[\"color\",\"d\"]]]",
+   "[\"B07MMWSSQ2\",[[\"color\",\"d\"]]]",
+   "[\"B0821KNWQF\",[[\"color\",\"d\"]]]",
+   "[\"B0836JV99X\",[[\"color\",\"d\"]]]",
+   "[\"B083CVMM5B\",[[\"color\",\"d\"]]]",
+   "[\"B08CH1977X\",[[\"color\",\"d\"]]]",
+   "[\"B08HS843JX\",[[\"color\",\"d\"]]]",
+   "[\"B08LDM11F4\",[[\"color\",\"d\"]]]",
+   "[\"B08MFH9HQJ\",[[\"color\",\"d\"]]]",
+   "[\"B08NBK6DWF\",[[\"color\",\"d\"]]]",
+   "[\"B08NV9QDQS\",[[\"color\",\"d\"]]]",
+   "[\"B08X9ZVYGL\",[[\"color\",\"d\"]]]",
+   "[\"B08XYX55PB\",[[\"color\",\"d\"]]]",
+   "[\"B08XYZS7MC\",[[\"color\",\"d\"]]]",
+   "[\"B095YLWYCM\",[[\"size\",\"d\"]]]",
+   "[\"B09L76JXWB\",[[\"color\",\"d\"]]]",
+   "[\"B09P4VC71X\",[[\"color\",\"d\"]]]"
+  ],
+  "hash": "66c7afaf210939dfbc3b01bb6c31b18c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "26c7220a1a52f4d2",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the decorative mirrors instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "3bdc77f054335cab",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the decorative mirrors instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "21ea7763b00a43eb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dining room."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d24d1df2a7d4f315",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wall art."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c2dc65952e69dab2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d5e068520bf23372",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "008a45e16706f62c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 23.6\" instead of d."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "6980307ade20caaa",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20\" instead of d."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

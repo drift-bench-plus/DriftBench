@@ -1,0 +1,224 @@
+{
+ "sample_id": "f3de8e1251e5a771",
+ "tree_id": "e277f5aff48a3a3d",
+ "adapter": "webshop",
+ "cluster": "men's boots",
+ "goal_idx": 249,
+ "split": "test",
+ "source_instruction": "searching to purchase a men's zerogrand hiker boot that is water resistant with rubber outsole in a size 10 1/2, either dark coffee or black in coloring.  cole haan.",
+ "query": "Man, I spent 20 minutes this morning trying to get my golden retriever to stop stealing my fuzzy socks off the radiator, he kept trotting around the living room like he\u2019d won some kind of prize, and then I burned my oatmeal so bad the smoke alarm went off and my roommate banged on my door thinking I\u2019d set the whole apartment on fire. Anyway, I\u2019m looking for men\u2019s boots with a rubber outsole that are water resistant, I want them in dark coffee or black, size 10.5, and I don\u2019t want to go over that one for the price.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Man, I spent 20 minutes this morning trying to get my golden retriever to stop stealing my fuzzy socks off the radiator, he kept trotting around the living room like he\u2019d won some kind of prize, and then I burned my oatmeal so bad the smoke alarm went off and my roommate banged on my door thinking I\u2019d set the whole apartment on fire. Anyway,",
+  "retained": [
+   "attr:rubber outsole",
+   "attr:water resistant",
+   "option:0",
+   "option:1"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:rubber outsole",
+     "=",
+     "rubber outsole"
+    ],
+    [
+     "attr:water resistant",
+     "=",
+     "water resistant"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark coffee | black"
+    ],
+    [
+     "option:1",
+     "=",
+     "10.5"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "20cb95785fad166d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 19,
+  "lit_card": 27,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 27,
+    "true_card": 19,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "60e19d3dbe7900f1",
+  "conditions": [
+   [
+    "attr:rubber outsole",
+    "=",
+    "rubber outsole"
+   ],
+   [
+    "attr:water resistant",
+    "=",
+    "water resistant"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark coffee | black"
+   ],
+   [
+    "option:1",
+    "=",
+    "10.5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    110
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 19,
+  "value": [
+   "[\"B008J5F8GE\",[[\"color\",\"slate black | harvest gold\"],[\"size\",\"10\"]]]",
+   "[\"B079DDHSZ8\",[[\"color\",\"black wr | black\"],[\"size\",\"10.5\"]]]",
+   "[\"B07GYJSMW3\",[[\"color\",\"black | black\"],[\"size\",\"10\"]]]",
+   "[\"B07KRJP6K8\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B07LB5G878\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B07MC1Q3XX\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B07T3ZC4F5\",[[\"color\",\"dk.brown black\"],[\"size\",\"10\"]]]",
+   "[\"B08Q8QPCFR\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B08Q8TLWJC\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B08R7KKTJZ\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B08R7M2WPK\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B08SQ738PR\",[[\"color\",\"black water resistant | micro chip\"],[\"size\",\"10\"]]]",
+   "[\"B08SQRZQKF\",[[\"color\",\"black water resistant | black\"],[\"size\",\"10\"]]]",
+   "[\"B08SQYDFDN\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B08SW3M9RQ\",[[\"color\",\"black leather | quilted stretch\"],[\"size\",\"5\"]]]",
+   "[\"B08Y2SSNWJ\",[[\"color\",\"black\"],[\"size\",\"5\"]]]",
+   "[\"B0931VPY1K\",[[\"color\",\"black\"],[\"size\",\"10\"]]]",
+   "[\"B095S946QN\",[[\"color\",\"black milled leather\"],[\"size\",\"10\"]]]",
+   "[\"B09L29JQP7\",[[\"color\",\"black\"],[\"size\",\"10\"]]]"
+  ],
+  "hash": "edd86f062f77dc8c5ef9994ab7429e96"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "3ca6249d4622f681",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's boots instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "5f18ea6ec89f4634",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's boots instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9f8c2cd4eadf64a2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ankle boots."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f692008da3d58819",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be shoes men."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "255db2f6ecc3ed8d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d4ed623bcbc1d0c3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "2b3642a31f1c8dfa",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of dark coffee | black."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f3c78ba93f78f089",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 03-dark brown instead of dark coffee | black."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

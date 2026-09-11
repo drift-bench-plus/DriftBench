@@ -1,0 +1,247 @@
+{
+ "sample_id": "12b9e8c38d92fc56",
+ "tree_id": "d10615fa3a0d5317",
+ "adapter": "webshop",
+ "cluster": "frozen",
+ "goal_idx": 498,
+ "split": "test",
+ "source_instruction": "i need this product for afternoon snack with friends .rhythm superfoods carrot sticks,1.4 oz (pack of 12), vegan/gluten-free superfood snacks",
+ "query": "I\u2019m browsing the frozen section right now trying to track down gluten free items in the 1.4 ounce pack of 12 size, and I need the pricing to be good. Oh, and make sure every single option is certified kosher too, that\u2019s non-negotiable for me right now. I don\u2019t want to waste time looking at stuff that doesn\u2019t check all those boxes.",
+ "strategy_ids": [
+  "irrelevant_information",
+  "vagueness_subjectivity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+vagueness_subjectivity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "irrelevant_information",
+   "vagueness_subjectivity"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "make sure every single option is certified kosher too, that\u2019s non-negotiable for me right now",
+    "condition": [
+     "attr:kosher",
+     "=",
+     "certified kosher"
+    ]
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:gluten free",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "option:0",
+     "=",
+     "1.4 ounce (pack of 12)"
+    ],
+    [
+     "attr:kosher",
+     "=",
+     "certified kosher"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "42fa52b0bbcab437"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 42,
+  "lit_card": 11,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 6,
+    "true_card": 42,
+    "readings": 1
+   },
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 95,
+    "true_card": 42,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "e5239a6e2618f00f",
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "option:0",
+    "=",
+    "1.4 ounce (pack of 12)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 42,
+  "value": [
+   "[\"B001DIH3A8\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B0038B1DEU\",[[\"size\",\"8.9 ounce (pack of 1)\"]]]",
+   "[\"B003SBZDJQ\",[[\"size\",\"5 ounce (pack of 1)\"]]]",
+   "[\"B0049K99RW\",[[\"size\",\"3 ounce (pack of 1)\"]]]",
+   "[\"B007HQNIFO\",[[\"style\",\"1 pack\"]]]",
+   "[\"B007HRFOXM\",[[\"style\",\"1 pack\"]]]",
+   "[\"B008P0BKG0\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B0099LQN0W\",[[\"size\",\"2 ounce (pack of 12)\"]]]",
+   "[\"B00AO7HUSO\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+   "[\"B00BT0LRW0\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+   "[\"B01B1X7R8C\",[[\"size\",\"1 pack\"]]]",
+   "[\"B01B6LJL5Q\",[[\"size\",\"10.5 ounce (pack of 1)\"]]]",
+   "[\"B01HQ6T36M\",[[\"size\",\"1 pack\"]]]",
+   "[\"B01LYHIL99\",[[\"size\",\"14.4 ounce (pack of 12)\"]]]",
+   "[\"B071SM7RLP\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+   "[\"B0773QFLQG\",[[\"size\",\"2.29 ounce (pack of 4)\"]]]",
+   "[\"B079QPZ8KN\",[[\"size\",\"1.4 ounce (pack of 1)\"]]]",
+   "[\"B07H8SVYBR\",[[\"size\",\"4.22 ounce (pack of 12)\"]]]",
+   "[\"B07KBDGVQ1\",[[\"size\",\"8.8 ounce (pack of 1)\"]]]",
+   "[\"B07N1WVS33\",[[\"size\",\"1 pack\"]]]",
+   "[\"B07QGFF2T9\",[[\"size\",\"3.52 ounce (pack of 1)\"]]]",
+   "[\"B07R92BDXS\",[[\"size\",\"pack of 3\"]]]",
+   "[\"B07T15BBGP\",[[\"size\",\"0.52 ounce (pack of 4)\"]]]",
+   "[\"B07T25FKZF\",[[\"size\",\"8 ounce (pack of 2)\"]]]",
+   "[\"B07W7TZ551\",[[\"size\",\"16 ounce (pack of 1)\"]]]",
+   "[\"B07Z34WBR5\",[[\"size\",\"12 pack\"]]]",
+   "[\"B08B8ZRWR1\",[[\"size\",\"7 ounce (pack of 1)\"]]]",
+   "[\"B08DL6BRT9\",[[\"size\",\"4.22 ounce (pack of 12)\"]]]",
+   "[\"B08M4GX3NK\",[[\"size\",\"12 pack\"]]]",
+   "[\"B08MV8ZBC4\",[[\"size\",\"2 ounce (pack of 5)\"]]]",
+   "[\"B08PDQNBPB\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+   "[\"B08WVQT5Y5\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B093G5YTHT\",[[\"size\",\"1\"]]]",
+   "[\"B093SPF3N6\",[[\"size\",\"12.5 ounce (pack of 1)\"]]]",
+   "[\"B09584LKHV\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B0964MKTLH\",[[\"size\",\"pack of 3\"]]]",
+   "[\"B096L9TDBF\",[[\"size\",\"4-pack\"]]]",
+   "[\"B09719XSDT\",[[\"size\",\"7 ounce (pack of 1)\"]]]",
+   "[\"B09BD1QKWG\",[[\"size\",\"1 pack\"]]]",
+   "[\"B09F1WXDMH\",[[\"size\",\"pack of 4\"]]]",
+   "[\"B09NFWR6WD\",[[\"size\",\"2.5 ounce (pack of 18)\"]]]",
+   "[\"B09PRSCYJY\",[[\"size\",\"5 ounce (pack of 4)\"]]]"
+  ],
+  "hash": "733f0e27bf0e452fef32c62eec68f585"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1583fd9ac3ead4cb",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the frozen instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "4e92be244bc86a29",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the frozen instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "646ed137da186de1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dietary fiber."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d5c46677fbb47368",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be drink mix."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "2bee18d9a6388808",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "cdbaa0dccd35effb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "8a5cb4531f82ea4e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10\" round instead of 1.4 ounce (pack of 12)."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "fb77f714d2742fec",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10-count instead of 1.4 ounce (pack of 12)."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

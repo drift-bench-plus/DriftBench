@@ -1,0 +1,93 @@
+{
+ "sample_id": "46159774e72782bb__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "46159774e72782bb",
+ "query": "I just got back from walking my golden retriever puppy, he\u2019s so excited about the new dog park downtown that he kept stopping to chase every squirrel we passed on the way home. I also stopped at that new bubble tea shop on the corner to pick up a taro milk tea with boba, and they gave me an extra serving of taro paste for free which was such a nice surprise. I\u2019ve also been meaning to try that new bakery that opened up down the street, I heard their matcha croissants are absolutely amazing. Anyway, my phone isn\u2019t working right at all right now\u2014my airplane mode is turned on, I think I have my network preferences set wrong, and I also already exceeded my monthly data usage limit, so I need help figuring out how to fix this.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from walking my golden retriever puppy, he\u2019s so excited about the new dog park downtown that he kept stopping to chase every squirrel we passed on the way home. I also stopped at that new bubble tea shop on the corner to pick up a taro milk tea with boba, and they gave me an extra serving of taro paste for free which was such a nice surprise. I\u2019ve also been meaning to try that new bakery that opened up down the street, I heard their matcha croissants are absolutely amazing.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:data_usage_exceeded"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

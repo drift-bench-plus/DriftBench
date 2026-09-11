@@ -1,0 +1,216 @@
+{
+ "sample_id": "ce78c3c9daf2549f",
+ "tree_id": "e1ca5a13cc0515a7",
+ "adapter": "webshop",
+ "cluster": "snack food gifts",
+ "goal_idx": 119,
+ "split": "test",
+ "source_instruction": "i'm looking for a gift covered with chocolate and should be in a gift basket.",
+ "query": "Hey, I\u2019m browsing the snack food gifts section right now looking for something nice to send to my cousin for her birthday. I definitely need all the picks to be chocolate covered, nothing plain or uncoated will work for her sweet tooth. Oh, and make sure whatever you pull up fits that one, you know the spending cap I always stick to for casual friend and family gifts? I don\u2019t want to have to swap things out later to make it fit, so just stick to that right from the start.",
+ "strategy_ids": [
+  "insufficient_information",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+referential_ambiguity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "price_upper",
+   "insufficient_information": "attr:gift basket"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:gift basket"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:chocolate covered"
+  ],
+  "hidden_slots": [
+   "attr:gift basket",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:chocolate covered",
+     "=",
+     "chocolate covered"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b81670951f29bfbf"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 26,
+  "lit_card": 93,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 66,
+    "true_card": 26,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 48,
+    "true_card": 26,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "de1e36915cad848b",
+  "conditions": [
+   [
+    "attr:chocolate covered",
+    "=",
+    "chocolate covered"
+   ],
+   [
+    "attr:gift basket",
+    "=",
+    "gift basket"
+   ],
+   [
+    "price_upper",
+    "<=",
+    80
+   ]
+  ],
+  "hidden_slots": [
+   "attr:gift basket",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 26,
+  "value": [
+   "[\"B000KAN9L2\",[]]",
+   "[\"B003N15JC2\",[]]",
+   "[\"B004W5AU4U\",[]]",
+   "[\"B007JE673E\",[]]",
+   "[\"B00IPQ54KM\",[]]",
+   "[\"B00O06CPJO\",[]]",
+   "[\"B018RW9ELS\",[]]",
+   "[\"B01CPXD1ZU\",[]]",
+   "[\"B06ZYP5L63\",[]]",
+   "[\"B07CNGX5YC\",[]]",
+   "[\"B07TS31WYR\",[]]",
+   "[\"B07ZG1RBX9\",[]]",
+   "[\"B07ZS5QP8D\",[]]",
+   "[\"B07ZYHZ1NK\",[]]",
+   "[\"B07ZZK7LJK\",[]]",
+   "[\"B081SNVCN4\",[]]",
+   "[\"B084XVVPQL\",[]]",
+   "[\"B088NK941W\",[]]",
+   "[\"B08LMNNKFY\",[]]",
+   "[\"B08MBBRFQG\",[]]",
+   "[\"B08TB2D9YH\",[]]",
+   "[\"B08WH7YCMD\",[]]",
+   "[\"B09GYW93X8\",[]]",
+   "[\"B09HWCWDYJ\",[]]",
+   "[\"B09QXH1WVS\",[]]",
+   "[\"B09RKVYNCY\",[]]"
+  ],
+  "hash": "f29ed3db50d5224f5d524ce4ee098b77"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0610e8ff0fdd64f7",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the snack food gifts instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "60c6b706db344ae9",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the snack food gifts instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "40caa2a41304fb3f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be birthday cake."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ab589c9cf3920076",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gift set."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "98cbf9a58700107e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d755f8ec2289bd3a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "16d53fc7ac22d0b1",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 30 instead of 80."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "9d1d4028018a513e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 80."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

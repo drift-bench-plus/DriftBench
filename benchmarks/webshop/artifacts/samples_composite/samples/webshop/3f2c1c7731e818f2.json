@@ -1,0 +1,208 @@
+{
+ "sample_id": "3f2c1c7731e818f2",
+ "tree_id": "cf05c9f17732c0ab",
+ "adapter": "webshop",
+ "cluster": "women's sandals",
+ "goal_idx": 40,
+ "split": "test",
+ "source_instruction": "i'm looking for a flats made of ethylene vinyl. choose the ones in tan color and size 9.5 narrow.",
+ "query": "I\u2019m browsing the women\u2019s sandals section right now and need a pair made with ethylene vinyl, plus I want that one option I always go for, you know the look? I also need a size 9.5 narrow fit, can you pull up matches for me? Don\u2019t show me anything over what I\u2019m comfortable spending, yeah?",
+ "strategy_ids": [
+  "insufficient_information",
+  "referential_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+referential_ambiguity",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:ethylene vinyl",
+   "option:1"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ethylene vinyl",
+     "=",
+     "ethylene vinyl"
+    ],
+    [
+     "option:1",
+     "=",
+     "9.5 narrow"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "dc85bfb71019fc10"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 7,
+  "lit_card": 144,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 8,
+    "true_card": 7,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 105,
+    "true_card": 7,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "d916d3e1a1b32446",
+  "conditions": [
+   [
+    "attr:ethylene vinyl",
+    "=",
+    "ethylene vinyl"
+   ],
+   [
+    "option:0",
+    "=",
+    "tan leather metallic synthetic"
+   ],
+   [
+    "option:1",
+    "=",
+    "9.5 narrow"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 7,
+  "value": [
+   "[\"B073XRX1HL\",[[\"color\",\"tan vegan suede\"],[\"size\",\"9\"]]]",
+   "[\"B087KJ7WC9\",[[\"color\",\"tan vegan suede\"],[\"size\",\"5\"]]]",
+   "[\"B08G1B3LFJ\",[[\"color\",\"tan leather metallic synthetic\"],[\"size\",\"5.5\"]]]",
+   "[\"B08GN96D17\",[[\"color\",\"tan leather\"],[\"size\",\"5\"]]]",
+   "[\"B08GNJ2VYG\",[[\"color\",\"tan leather\"],[\"size\",\"5\"]]]",
+   "[\"B08NTX278C\",[[\"color\",\"himalayan tan\"],[\"size\",\"5\"]]]",
+   "[\"B08WJNQS52\",[[\"color\",\"tan leather\"],[\"size\",\"5\"]]]"
+  ],
+  "hash": "284e2b85893cab880cd23276f352bd42"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "21d7c0d4c3070864",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's sandals instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ca885584e9846ffe",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's sandals instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "028a9bd0f86e3264",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ankle strap."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ad37f5ad0e207d65",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be long lasting."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "7f9124e51c2b2f7e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "8470b17e2d3906f8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1872b3ac02cba1e0",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 01-pink instead of tan leather metallic synthetic."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b68390cca00d5513",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 02-rose gold instead of tan leather metallic synthetic."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

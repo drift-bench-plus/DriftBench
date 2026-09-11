@@ -1,0 +1,229 @@
+{
+ "sample_id": "fd90c6401d6a88f7",
+ "tree_id": "8dfccd58f5038c2a",
+ "adapter": "webshop",
+ "cluster": "lenses",
+ "goal_idx": 72,
+ "split": "test",
+ "source_instruction": "i am looking for a camera lens protector for iphone 13 made up of aluminum alloy. also choose pink color.",
+ "query": "I\u2019m browsing the lenses section right now looking for something for my camera. I need a lens made of magnesium-titanium alloy, I want it in pink, and my budget is $30 max. Oh, and it has to come with a free detachable lens hood cap lanyard too, that\u2019s non-negotiable for me.",
+ "strategy_ids": [
+  "factual_error",
+  "irrelevant_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "factual_error+irrelevant_information",
+  "family": "parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "factual_error",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:aluminum alloy"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [
+   [
+    "attr:aluminum alloy",
+    "aluminum alloy",
+    "magnesium-titanium alloy"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "made of magnesium-titanium alloy",
+    "condition": [
+     "attr:aluminum alloy",
+     "=",
+     "magnesium-titanium alloy"
+    ]
+   },
+   {
+    "text": "come with a free detachable lens hood cap lanyard",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:aluminum alloy"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:aluminum alloy",
+     "=",
+     "magnesium-titanium alloy"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ],
+    [
+     "attr:aluminum alloy",
+     "=",
+     "magnesium-titanium alloy"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "7279dd1a2f256a0c"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 14,
+  "lit_card": 0,
+  "components": {
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 14,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 14,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "85f39e39db8e90bf",
+  "conditions": [
+   [
+    "attr:aluminum alloy",
+    "=",
+    "aluminum alloy"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:aluminum alloy"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 14,
+  "value": [
+   "[\"B09BB8CWYN\",[[\"color\",\"pink\"]]]",
+   "[\"B09DSHDKC5\",[[\"color\",\"diamond pink\"]]]",
+   "[\"B09FF7TJ67\",[[\"color\",\"pink\"]]]",
+   "[\"B09FFF942K\",[[\"color\",\"pink\"]]]",
+   "[\"B09FHHWNQ8\",[[\"color\",\"[for iphone 13  |  13 mini] - pink\"]]]",
+   "[\"B09H7RLPXK\",[[\"color\",\"pink\"]]]",
+   "[\"B09HXL86QD\",[[\"color\",\"pink\"]]]",
+   "[\"B09J7LZBN8\",[[\"color\",\"pink\"]]]",
+   "[\"B09JBL4FQG\",[[\"color\",\"pink\"]]]",
+   "[\"B09JC4Q9BM\",[[\"color\",\"pink\"]]]",
+   "[\"B09JZ8PZ1S\",[[\"color\",\"pink\"]]]",
+   "[\"B09LHV4X28\",[[\"color\",\"pink purple\"]]]",
+   "[\"B09LRPSGXV\",[[\"color\",\"pink\"]]]",
+   "[\"B09QRNDK13\",[[\"*\",\"pink\"]]]"
+  ],
+  "hash": "53cf4e61fb6363827245ff0c5cc6db81"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1517a244d9504ae9",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the lenses instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "a30a8a150afddc1b",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the lenses instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "0f316feb9fee34a2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be wireless charging."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d4acfc5df3b3125f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cell phone."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "691b2eb556016aa5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "7497f2c7fdf0fcc7",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "04351f70df4a600f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 150mm handheld kaleidoscope instead of pink."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "794b3a3fde41830f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it -crystal instead of pink."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

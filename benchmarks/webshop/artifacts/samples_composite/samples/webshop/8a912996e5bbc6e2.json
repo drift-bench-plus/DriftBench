@@ -1,0 +1,310 @@
+{
+ "sample_id": "8a912996e5bbc6e2",
+ "tree_id": "7c323b911382b0cc",
+ "adapter": "webshop",
+ "cluster": "salon & spa equipment",
+ "goal_idx": 242,
+ "split": "test",
+ "source_instruction": "i'm looking for a classic styling salon chair, hydraulic barber chair with wider seat & heavy duty hydraulic pump, also it should have beauty salon spa shampoo equipment, choose the gold color.",
+ "query": "I\u2019ve been binging those silly backyard chicken keeping tutorials all week, I swear I almost ordered a custom embroidered coop nameplate yesterday before remembering my HOA bans farm animals entirely, and I spent 20 minutes last night arguing with my cat about him knocking over my houseplant collection again. Oh, also my cousin keeps texting me nonstop about planning her beach bachelorette next summer and keeps begging me to make custom friendship bracelets for everyone going. Anyway, I\u2019m browsing the salon & spa equipment section right now, and I need stuff that works for both beauty salon and hair salon use, is easy to clean, heavy duty, and super high quality \u2014 I don\u2019t want to go over my note on what I can swing, y\u2019know?",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "lexical_ambiguity"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+lexical_ambiguity",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "lexical_ambiguity"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "my note on what I can swing",
+    "placements": [
+     [
+      "price_upper",
+      "900"
+     ],
+     [
+      "price_upper",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I\u2019ve been binging those silly backyard chicken keeping tutorials all week, I swear I almost ordered a custom embroidered coop nameplate yesterday before remembering my HOA bans farm animals entirely, and I spent 20 minutes last night arguing with my cat about him knocking over my houseplant collection again. Oh, also my cousin keeps texting me nonstop about planning her beach bachelorette next summer and keeps begging me to make custom friendship bracelets for everyone going.",
+  "retained": [
+   "attr:beauty salon",
+   "attr:easy clean",
+   "attr:hair salon",
+   "attr:heavy duty",
+   "attr:high quality"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:beauty salon",
+     "=",
+     "beauty salon"
+    ],
+    [
+     "attr:easy clean",
+     "=",
+     "easy clean"
+    ],
+    [
+     "attr:hair salon",
+     "=",
+     "hair salon"
+    ],
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "attr:high quality",
+     "=",
+     "high quality"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "f65db3c0055e0f7a"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 82,
+  "lit_card": 95,
+  "components": {
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     82,
+     95
+    ],
+    "true_card": 82,
+    "readings": 2
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "c4f221801f6143f6",
+  "conditions": [
+   [
+    "attr:beauty salon",
+    "=",
+    "beauty salon"
+   ],
+   [
+    "attr:easy clean",
+    "=",
+    "easy clean"
+   ],
+   [
+    "attr:hair salon",
+    "=",
+    "hair salon"
+   ],
+   [
+    "attr:heavy duty",
+    "=",
+    "heavy duty"
+   ],
+   [
+    "attr:high quality",
+    "=",
+    "high quality"
+   ],
+   [
+    "price_upper",
+    "<=",
+    900
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 82,
+  "value": [
+   "[\"B07ZD86SXT\",[]]",
+   "[\"B07ZD8TVB4\",[]]",
+   "[\"B07ZT8QDW2\",[]]",
+   "[\"B07ZT9TQKH\",[]]",
+   "[\"B08CTZPP19\",[]]",
+   "[\"B08H1QDMY1\",[]]",
+   "[\"B08LN2TC5P\",[]]",
+   "[\"B08RJ38P3P\",[]]",
+   "[\"B08TT8XVMT\",[]]",
+   "[\"B08Y8GB6TF\",[]]",
+   "[\"B08ZYBL3H3\",[]]",
+   "[\"B0912RVTBD\",[]]",
+   "[\"B09135KRVM\",[]]",
+   "[\"B091KS7GHN\",[]]",
+   "[\"B0952S8NJ2\",[]]",
+   "[\"B098F1FM1Z\",[]]",
+   "[\"B09B5558C9\",[]]",
+   "[\"B09B55W3SX\",[]]",
+   "[\"B09B7GKTWH\",[]]",
+   "[\"B09CKHV4N8\",[]]",
+   "[\"B09DFGC6J3\",[]]",
+   "[\"B09DSVNXBK\",[]]",
+   "[\"B09F9JM9ZD\",[]]",
+   "[\"B09FJYLVKW\",[]]",
+   "[\"B09FXR2KMF\",[]]",
+   "[\"B09FY387CL\",[]]",
+   "[\"B09FY5JX5K\",[]]",
+   "[\"B09G64MMNW\",[]]",
+   "[\"B09GG234BZ\",[]]",
+   "[\"B09GPBZDV8\",[]]",
+   "[\"B09HJQQH9P\",[]]",
+   "[\"B09HJRQNF5\",[]]",
+   "[\"B09HJTH62D\",[]]",
+   "[\"B09HJTNRL4\",[]]",
+   "[\"B09HPJSHQ1\",[]]",
+   "[\"B09HT8CWHW\",[]]",
+   "[\"B09HT8GCN9\",[]]",
+   "[\"B09HT91973\",[]]",
+   "[\"B09HWY278W\",[]]",
+   "[\"B09HX7QLFW\",[]]",
+   "[\"B09HXCFP1G\",[]]",
+   "[\"B09HYTCT9G\",[]]",
+   "[\"B09HZ1ZV8G\",[]]",
+   "[\"B09J21KGGV\",[]]",
+   "[\"B09J81JYYJ\",[]]",
+   "[\"B09J8HQ32M\",[]]",
+   "[\"B09JP9NNS9\",[]]",
+   "[\"B09JVKWLD3\",[]]",
+   "[\"B09JVT19KB\",[]]",
+   "[\"B09JW15ZM9\",[]]",
+   "[\"B09K43FNFF\",[]]",
+   "[\"B09L112BGC\",[]]",
+   "[\"B09LQ6JB9Y\",[]]",
+   "[\"B09LQ7ZKH8\",[]]",
+   "[\"B09LQJVD1B\",[]]",
+   "[\"B09LQMNSFS\",[]]",
+   "[\"B09LRS7H7S\",[]]",
+   "[\"B09MJXZ9PQ\",[]]",
+   "[\"B09MJYDG2Q\",[]]",
+   "[\"B09MT96W4Y\",[]]",
+   "[\"B09MYRB37Q\",[]]",
+   "[\"B09N33LGK1\",[]]",
+   "[\"B09NBG5H2K\",[]]",
+   "[\"B09NBGY5Z3\",[]]",
+   "[\"B09NFLFMQ8\",[]]",
+   "[\"B09NJHZ3YW\",[]]",
+   "[\"B09NKDFPWD\",[]]",
+   "[\"B09NKFNG45\",[]]",
+   "[\"B09NKFNX15\",[]]",
+   "[\"B09NKH9KFK\",[]]",
+   "[\"B09NKJ3LGH\",[]]",
+   "[\"B09NNQY33S\",[]]",
+   "[\"B09NQZPJVV\",[]]",
+   "[\"B09NQZSVSK\",[]]",
+   "[\"B09NRBPS2L\",[]]",
+   "[\"B09NVM2F3L\",[]]",
+   "[\"B09P5VCDL8\",[]]",
+   "[\"B09P5X2SKN\",[]]",
+   "[\"B09P5XNNJC\",[]]",
+   "[\"B09QKFLPLR\",[]]",
+   "[\"B09SDG3D14\",[]]",
+   "[\"B09T361DKB\",[]]"
+  ],
+  "hash": "0342513a74d438bb460aad1eb9511402"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "2372f416912ab196",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the salon & spa equipment instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "9cddc82766c5a0bc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the salon & spa equipment instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bc45483e4038ea13",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be double sided."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c0f89e7764dea989",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be hair dryer."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c8d04651826796ee",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "eb8df299d057c60b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "ce1e79f7927c599a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 900."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "fc0897ac9eabf4a8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 900."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

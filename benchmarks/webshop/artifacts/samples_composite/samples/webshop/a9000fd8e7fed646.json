@@ -1,0 +1,255 @@
+{
+ "sample_id": "a9000fd8e7fed646",
+ "tree_id": "d874232a2b086326",
+ "adapter": "webshop",
+ "cluster": "men's jeans",
+ "goal_idx": 20,
+ "split": "test",
+ "source_instruction": "i am looking for standard sized levi strauss & co. men's carpenter jeans that are machine washable.",
+ "query": "Hey, I\u2019m looking through the men\u2019s jeans section right now and need a pair that\u2019s dry clean only, plus that one fit I always grab, y\u2019know? Oh also make sure they come with a free matching fabric belt, that\u2019d be super handy to have. I don\u2019t wanna spend too much on these, so don\u2019t show me anything over whatever price makes sense for a decent casual pair, yeah? Wait, did I mention I\u2019m just browsing for everyday wear so nothing too fancy?",
+ "strategy_ids": [
+  "irrelevant_information",
+  "insufficient_information",
+  "factual_error",
+  "referential_ambiguity"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+insufficient_information+factual_error+referential_ambiguity",
+  "family": "expression+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "insufficient_information",
+   "factual_error",
+   "referential_ambiguity"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:machine wash",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:machine wash",
+    "machine wash",
+    "dry clean only"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "dry clean only",
+    "condition": [
+     "attr:machine wash",
+     "=",
+     "dry clean only"
+    ]
+   },
+   {
+    "text": "come with a free matching fabric belt",
+    "condition": null
+   },
+   {
+    "text": "everyday wear so nothing too fancy",
+    "condition": null
+   }
+  ],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [],
+  "hidden_slots": [
+   "attr:machine wash",
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:machine wash",
+     "=",
+     "dry clean only"
+    ],
+    [
+     "attr:machine wash",
+     "=",
+     "dry clean only"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "4e3fb121e1cd6f5f"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 14,
+  "lit_card": 16,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 14,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 20,
+    "true_card": 14,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 14,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 582,
+    "true_card": 14,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "033d403b63d1f58f",
+  "conditions": [
+   [
+    "attr:machine wash",
+    "=",
+    "machine wash"
+   ],
+   [
+    "option:0",
+    "=",
+    "standard"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [
+   "attr:machine wash",
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 14,
+  "value": [
+   "[\"B000IBH612\",[[\"color\",\"tan\"]]]",
+   "[\"B005DIGPNA\",[[\"color\",\"tan\"]]]",
+   "[\"B01H7ENCMO\",[[\"special size\",\"standard\"]]]",
+   "[\"B07336HLSP\",[[\"special size\",\"standard\"]]]",
+   "[\"B07336W4MP\",[[\"color\",\"titan - waterless\"]]]",
+   "[\"B073V4382Z\",[[\"fit type\",\"standard\"]]]",
+   "[\"B074KJ5LD3\",[[\"special size\",\"standard\"]]]",
+   "[\"B075CQ3FG6\",[[\"special size\",\"standard\"]]]",
+   "[\"B077PHGLJN\",[[\"fit type\",\"standard\"]]]",
+   "[\"B077R99SVL\",[[\"special size\",\"standard\"]]]",
+   "[\"B07HNYC7W4\",[[\"special size\",\"standard\"]]]",
+   "[\"B07PJ2YHKM\",[[\"color\",\"tan\"]]]",
+   "[\"B082QPZXC6\",[[\"color\",\"tan\"]]]",
+   "[\"B08Q8QYG1L\",[[\"color\",\"tan\"]]]"
+  ],
+  "hash": "b83112cd83b7624bd23c7ca16b0826a4"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "1f3b01e202185b13",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's jeans instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "cc0c20dc6378e118",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's jeans instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e5d073cd91daae11",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy care."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "eb6744886f262701",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be elastic waist."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "5756aafb894501ad",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "913d4bc8df615ab6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0be7b820456a4ada",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #3357 camo m instead of standard."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "825b85dd870decff",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #3357 z green instead of standard."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

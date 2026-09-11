@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "refillable containers",
+ "fidelity_notes": [],
+ "goal_idx": 136,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "186156c7e8dcb4d07220a2476004d012",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B083TBC7BW\",[[\"color\",\"#1\"]]]",
+   "[\"B08C7GB6YW\",[[\"color\",\"style 1\"]]]",
+   "[\"B08DXT75G7\",[[\"color\",\"style 1\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:eco friendly",
+    "=",
+    "eco friendly"
+   ],
+   [
+    "attr:leak proof",
+    "=",
+    "leak proof"
+   ],
+   [
+    "option:0",
+    "=",
+    "style 1"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "31cb037c5a8231e8"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:eco friendly",
+     "=",
+     "eco friendly"
+    ],
+    [
+     "attr:leak proof",
+     "=",
+     "leak proof"
+    ],
+    [
+     "option:0",
+     "=",
+     "style 1"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:eco friendly",
+   "attr:leak proof",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that style 1 refillable containers work really well when they’re both eco friendly and leak proof, and they usually cost around 20 dollars or less.",
+ "render_attempts": 1,
+ "sample_id": "b0cb87aedd418ac8",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the refillable containers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "38761bc5eb7aeb9a"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the refillable containers instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "523e1485ba534c14"
+  },
+  {
+   "announcement": "Also, it needs to be bpa free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1837b2d786a29d52"
+  },
+  {
+   "announcement": "Also, it needs to be easy carry.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c137e259dae90732"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9815a40df6a809e4"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f199b8a8b2c789ed"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of style 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0df1430969e03ccf"
+  },
+  {
+   "announcement": "Actually, make it 100ml | 3.4 ounce instead of style 1.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "39e37d2d211d2bdb"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am finding a eco friendly and leak proof plastic refillable bottle container with  protective case - style 1 color",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "107603069bf6983b",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

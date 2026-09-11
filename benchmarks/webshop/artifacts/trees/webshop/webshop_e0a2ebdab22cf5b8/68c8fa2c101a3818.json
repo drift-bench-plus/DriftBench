@@ -1,0 +1,836 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B01B9A3U6A",
+    "cluster": "home office furniture sets",
+    "name": "SAFAVIEH Adirondack Collection ADR112A Modern Abstract Non-Shedding Living Room Bedroom Dining Home Office Area Rug, 10' x 14', Silver / Black",
+    "product_category": "Home & Kitchen › Home Décor Products › Rugs, Pads & Protectors › Area Rugs"
+   },
+   "bound_slots": [
+    "attr:living room",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "silver | blue"
+    ],
+    [
+     "option:1",
+     "=",
+     "9' square"
+    ],
+    [
+     "price_upper",
+     "<=",
+     320
+    ]
+   ],
+   "ground_truth": {
+    "hash": "28b07dcef280d08db9ce2353e1163c9b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B015ZK3ITE\",[[\"color\",\"blue\"],[\"item shape\",\"square\"]]]",
+     "[\"B01B9A3U6A\",[[\"color\",\"silver | blue\"],[\"size\",\"9' square\"]]]",
+     "[\"B01B9A5V8K\",[[\"color\",\"blue | silver\"],[\"size\",\"4 ft square\"]]]",
+     "[\"B01B9AWXZO\",[[\"color\",\"light blue  |  blue\"],[\"item shape\",\"square\"]]]",
+     "[\"B01GS177TG\",[[\"color\",\"ivory  |  light blue\"],[\"item shape\",\"square\"]]]",
+     "[\"B01GS1BOK4\",[[\"color\",\"ivory  |  blue\"],[\"item shape\",\"square\"]]]",
+     "[\"B01GS1QRQK\",[[\"color\",\"blue  |  ivory\"],[\"item shape\",\"square\"]]]",
+     "[\"B01LXHW02C\",[[\"color\",\"blue  |  grey\"],[\"item shape\",\"square\"]]]",
+     "[\"B073JBV926\",[[\"color\",\"ivory  |  slate blue\"],[\"item shape\",\"square\"]]]",
+     "[\"B0745LSBN9\",[[\"color\",\"light blue  |  ivory\"],[\"item shape\",\"square\"]]]",
+     "[\"B07CHWMXJS\",[[\"color\",\"pink  |  blue\"],[\"item shape\",\"square\"]]]",
+     "[\"B07D35W6NL\",[[\"color\",\"navy blue\"],[\"size\",\"4 x 4 ft square\"]]]",
+     "[\"B07HBJ7Q4Y\",[[\"color\",\"ivory  |  blue\"],[\"item shape\",\"square\"]]]",
+     "[\"B07HBKY1G4\",[[\"color\",\"fuchsia  |  blue\"],[\"size\",\"6 ft 7 in x 6 ft 7 in square\"]]]",
+     "[\"B07L5MCKFB\",[[\"color\",\"sky blue\"],[\"size\",\"square(22x22 inch)\"]]]",
+     "[\"B07QJM4RPP\",[[\"color\",\"ivory  |  blue\"],[\"item shape\",\"square\"]]]",
+     "[\"B07SQGJF19\",[[\"color\",\"fuchsia | blue\"],[\"size\",\"9' square\"]]]",
+     "[\"B07SSXMYPL\",[[\"color\",\"dark blue\"],[\"size\",\"4 x 4 ft square\"]]]",
+     "[\"B07TGF63QG\",[[\"color\",\"red blue\"],[\"item shape\",\"square\"]]]",
+     "[\"B089N1JMKD\",[[\"color\",\"ivory | dark blue\"],[\"item shape\",\"square\"]]]",
+     "[\"B09C31N3YL\",[[\"color\",\"blue\"],[\"size\",\"square\"]]]",
+     "[\"B09D3C1WC2\",[[\"color\",\"blue\"],[\"size\",\"square\"]]]",
+     "[\"B09HYY9QMN\",[[\"color\",\"blue\"],[\"size\",\"square\"]]]",
+     "[\"B09JJTY641\",[[\"color\",\"blue\"],[\"size\",\"square table\"]]]",
+     "[\"B09MMW1JJW\",[[\"color\",\"blue\"],[\"size\",\"square\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "7308c010a919a9c0",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "home office furniture sets",
+    "goal": {
+     "asin": "B01B9A3U6A",
+     "attributes": [
+      "living room"
+     ],
+     "category": "",
+     "goal_options": [
+      "silver | blue",
+      "9' square"
+     ],
+     "name": "SAFAVIEH Adirondack Collection ADR112A Modern Abstract Non-Shedding Living Room Bedroom Dining Home Office Area Rug, 10' x 14', Silver / Black",
+     "price_upper": 320,
+     "product_category": "Home & Kitchen › Home Décor Products › Rugs, Pads & Protectors › Area Rugs",
+     "query": "home office furniture sets"
+    }
+   },
+   "source_record": "87d12c6b3549c7c5",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08B87XSLC",
+    "cluster": "home office furniture sets",
+    "name": "Acacia Kaylin 14 Inch Wood Platform Bed, Bed Frame with Headboard, Queen Size Bed Frame, Chocolate",
+    "product_category": "Home & Kitchen › Furniture › Bedroom Furniture › Beds, Frames & Bases › Beds"
+   },
+   "bound_slots": [
+    "attr:queen size",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:queen size",
+     "=",
+     "queen size"
+    ],
+    [
+     "option:0",
+     "=",
+     "caramel"
+    ],
+    [
+     "price_upper",
+     "<=",
+     510
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2b16dcfe1d058bcb0bc355c41cdb28b6",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08B87XSLC\",[[\"color\",\"caramel\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "563c8ea629ef4032",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "home office furniture sets",
+    "goal": {
+     "asin": "B08B87XSLC",
+     "attributes": [
+      "queen size"
+     ],
+     "category": "",
+     "goal_options": [
+      "caramel"
+     ],
+     "name": "Acacia Kaylin 14 Inch Wood Platform Bed, Bed Frame with Headboard, Queen Size Bed Frame, Chocolate",
+     "price_upper": 510,
+     "product_category": "Home & Kitchen › Furniture › Bedroom Furniture › Beds, Frames & Bases › Beds",
+     "query": "home office furniture sets"
+    }
+   },
+   "source_record": "c8afe34186aa5a6c",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B0842NKZ44",
+    "cluster": "home office furniture sets",
+    "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+    "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs"
+   },
+   "bound_slots": [
+    "attr:computer desk",
+    "attr:heavy duty",
+    "attr:height adjustable",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:computer desk",
+     "=",
+     "computer desk"
+    ],
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "62be774f8eca19982a47f819733d4e4e",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0842NKZ44\",[[\"color\",\"pink\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "60d06e20a56d9dc3",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "home office furniture sets",
+    "goal": {
+     "asin": "B0842NKZ44",
+     "attributes": [
+      "computer desk",
+      "heavy duty",
+      "height adjustable"
+     ],
+     "category": "",
+     "goal_options": [
+      "pink"
+     ],
+     "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+     "price_upper": 60,
+     "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs",
+     "query": "home office furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B0842NKZ44",
+    "cluster": "home office furniture sets",
+    "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+    "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs"
+   },
+   "bound_slots": [
+    "attr:heavy duty",
+    "attr:height adjustable",
+    "attr:high density",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "attr:high density",
+     "=",
+     "high density"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "62be774f8eca19982a47f819733d4e4e",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0842NKZ44\",[[\"color\",\"pink\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f5f77464e4b38db9",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "home office furniture sets",
+    "goal": {
+     "asin": "B0842NKZ44",
+     "attributes": [
+      "heavy duty",
+      "height adjustable",
+      "high density"
+     ],
+     "category": "",
+     "goal_options": [
+      "pink"
+     ],
+     "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+     "price_upper": 60,
+     "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs",
+     "query": "home office furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B0842NKZ44",
+    "cluster": "home office furniture sets",
+    "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+    "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs"
+   },
+   "bound_slots": [
+    "attr:heavy duty",
+    "attr:height adjustable",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "781cb1fd2bb6ac02bb63439c24db8bc9",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0842NKZ44\",[]]",
+     "[\"B08GG2PNYC\",[]]",
+     "[\"B08M5M4772\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "91d5d51e8ac6e642",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "home office furniture sets",
+    "goal": {
+     "asin": "B0842NKZ44",
+     "attributes": [
+      "heavy duty",
+      "height adjustable"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+     "price_upper": 60,
+     "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs",
+     "query": "home office furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B0842NKZ44",
+    "cluster": "home office furniture sets",
+    "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+    "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs"
+   },
+   "bound_slots": [
+    "attr:height adjustable",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "8580fd6caa573d499d547896abf54005",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07ZH2TLC4\",[[\"color\",\"pink\"]]]",
+     "[\"B0842NKZ44\",[[\"color\",\"pink\"]]]",
+     "[\"B08HLG1TMR\",[[\"color\",\"pink\"]]]",
+     "[\"B08HTXLB95\",[[\"color\",\"pink\"]]]",
+     "[\"B08HV5LR9V\",[[\"color\",\"pink\"]]]",
+     "[\"B08LKRBCR1\",[[\"color\",\"pink\"]]]",
+     "[\"B08M5M4772\",[[\"color\",\"pink - set of 1\"]]]",
+     "[\"B08NXCXCJ1\",[[\"color\",\"pink\"]]]",
+     "[\"B08PPVC8VD\",[[\"color\",\"pink\"]]]",
+     "[\"B08ZNM2NB1\",[[\"color\",\"pink\"]]]",
+     "[\"B09FTGNSB4\",[[\"color\",\"pink\"]]]",
+     "[\"B09GYNXG53\",[[\"color\",\"pink\"]]]",
+     "[\"B09M2JRGGM\",[[\"color\",\"pink\"]]]",
+     "[\"B09M3GS5KN\",[[\"color\",\"pink\"]]]",
+     "[\"B09MQ5DLQV\",[[\"color\",\"pink\"]]]",
+     "[\"B09MTYCH9H\",[[\"color\",\"pink\"]]]",
+     "[\"B09N3DGR48\",[[\"color\",\"pink\"]]]",
+     "[\"B09N6ZTQX9\",[[\"color\",\"pink\"]]]",
+     "[\"B09NCVJ3F1\",[[\"color\",\"pink\"]]]",
+     "[\"B09NCVJCBZ\",[[\"color\",\"pink\"]]]",
+     "[\"B09NKWNND4\",[[\"color\",\"pink\"]]]",
+     "[\"B09NL1DNFJ\",[[\"color\",\"pink\"]]]",
+     "[\"B09NL33LCC\",[[\"color\",\"pink\"]]]",
+     "[\"B09NMDQK82\",[[\"color\",\"pink\"]]]",
+     "[\"B09NNBVRJ5\",[[\"color\",\"pink\"]]]",
+     "[\"B09P394YXG\",[[\"color\",\"pink\"]]]",
+     "[\"B09P3D7P29\",[[\"color\",\"pink\"]]]",
+     "[\"B09PD29YPH\",[[\"color\",\"pink\"]]]",
+     "[\"B09PTYB6BV\",[[\"color\",\"pink\"]]]",
+     "[\"B09QL559G5\",[[\"color\",\"pink\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "1c8a3ff356eccdc3",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "home office furniture sets",
+    "goal": {
+     "asin": "B0842NKZ44",
+     "attributes": [
+      "height adjustable"
+     ],
+     "category": "",
+     "goal_options": [
+      "pink"
+     ],
+     "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+     "price_upper": 60,
+     "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs",
+     "query": "home office furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B0842NKZ44",
+    "cluster": "home office furniture sets",
+    "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+    "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs"
+   },
+   "bound_slots": [
+    "attr:heavy duty",
+    "attr:height adjustable",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "option:0",
+     "=",
+     "*blue grotto"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "464af026854bc60db8ecdcc01b0d5f13",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0842NKZ44\",[[\"color\",\"blue\"]]]",
+     "[\"B08GG2PNYC\",[[\"color\",\"blue\"]]]",
+     "[\"B08M5M4772\",[[\"color\",\"blue\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9c2f6c2ad4070cae",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "home office furniture sets",
+    "goal": {
+     "asin": "B0842NKZ44",
+     "attributes": [
+      "heavy duty",
+      "height adjustable"
+     ],
+     "category": "",
+     "goal_options": [
+      "*blue grotto"
+     ],
+     "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+     "price_upper": 60,
+     "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs",
+     "query": "home office furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B0842NKZ44",
+    "cluster": "home office furniture sets",
+    "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+    "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs"
+   },
+   "bound_slots": [
+    "attr:heavy duty",
+    "attr:height adjustable",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:heavy duty",
+     "=",
+     "heavy duty"
+    ],
+    [
+     "attr:height adjustable",
+     "=",
+     "height adjustable"
+    ],
+    [
+     "option:0",
+     "=",
+     "*biscay green"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ff7ecf6a51c1c3b667599692bc84dbd5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08M5M4772\",[[\"color\",\"green\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "d3e7ab742b677176",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "home office furniture sets",
+    "goal": {
+     "asin": "B0842NKZ44",
+     "attributes": [
+      "heavy duty",
+      "height adjustable"
+     ],
+     "category": "",
+     "goal_options": [
+      "*biscay green"
+     ],
+     "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+     "price_upper": 60,
+     "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs",
+     "query": "home office furniture sets"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B01B9A3U6A",
+     "cluster": "home office furniture sets",
+     "name": "SAFAVIEH Adirondack Collection ADR112A Modern Abstract Non-Shedding Living Room Bedroom Dining Home Office Area Rug, 10' x 14', Silver / Black",
+     "product_category": "Home & Kitchen › Home Décor Products › Rugs, Pads & Protectors › Area Rugs"
+    }
+   },
+   "dst": "7308c010a919a9c0",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "87d12c6b3549c7c5",
+   "src": "5f20a10afb50c82d"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B08B87XSLC",
+     "cluster": "home office furniture sets",
+     "name": "Acacia Kaylin 14 Inch Wood Platform Bed, Bed Frame with Headboard, Queen Size Bed Frame, Chocolate",
+     "product_category": "Home & Kitchen › Furniture › Bedroom Furniture › Beds, Frames & Bases › Beds"
+    }
+   },
+   "dst": "563c8ea629ef4032",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "c8afe34186aa5a6c",
+   "src": "5f20a10afb50c82d"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:computer desk",
+      "=",
+      "computer desk"
+     ]
+    ]
+   },
+   "dst": "60d06e20a56d9dc3",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "5f20a10afb50c82d"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:high density",
+      "=",
+      "high density"
+     ]
+    ]
+   },
+   "dst": "f5f77464e4b38db9",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "5f20a10afb50c82d"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "pink"
+     ]
+    ]
+   },
+   "dst": "91d5d51e8ac6e642",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "5f20a10afb50c82d"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:heavy duty",
+      "=",
+      "heavy duty"
+     ]
+    ]
+   },
+   "dst": "1c8a3ff356eccdc3",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "5f20a10afb50c82d"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "pink",
+      "*blue grotto"
+     ]
+    ]
+   },
+   "dst": "9c2f6c2ad4070cae",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "5f20a10afb50c82d"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "pink",
+      "*biscay green"
+     ]
+    ]
+   },
+   "dst": "d3e7ab742b677176",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "5f20a10afb50c82d"
+  }
+ ],
+ "env_id": "webshop_e0a2ebdab22cf5b8",
+ "env_spec": {
+  "cluster": "home office furniture sets",
+  "env_id": "webshop_e0a2ebdab22cf5b8",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B0842NKZ44",
+   "cluster": "home office furniture sets",
+   "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+   "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs"
+  },
+  "bound_slots": [
+   "attr:heavy duty",
+   "attr:height adjustable",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:heavy duty",
+    "=",
+    "heavy duty"
+   ],
+   [
+    "attr:height adjustable",
+    "=",
+    "height adjustable"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "ground_truth": {
+   "hash": "d9bc3fd271c22601f01ce8e34d8be738",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B0842NKZ44\",[[\"color\",\"pink\"]]]",
+    "[\"B08M5M4772\",[[\"color\",\"pink - set of 1\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "5f20a10afb50c82d",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "home office furniture sets",
+   "goal": {
+    "asin": "B0842NKZ44",
+    "attributes": [
+     "height adjustable",
+     "heavy duty"
+    ],
+    "category": "",
+    "goal_options": [
+     "pink"
+    ],
+    "name": "Meet Perfect Office Chair, Mid Back Mesh Lumbar Support Home Office Computer Desk Chair Swivel Task Chair, Ergonomic Executive Chair on Rolling Wheels Height Adjustable for Men Women Back Pain-Blue",
+    "price_upper": 60,
+    "product_category": "Home & Kitchen › Furniture › Home Office Furniture › Home Office Chairs › Home Office Desk Chairs",
+    "query": "home office furniture sets"
+   }
+  },
+  "source_record": "c3ff10926aae7b4b",
+  "unbound_slots": [
+   "attr:computer desk",
+   "attr:heavy duty",
+   "attr:high density",
+   "option:0"
+  ]
+ },
+ "tree_id": "68c8fa2c101a3818"
+}

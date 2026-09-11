@@ -1,0 +1,197 @@
+{
+ "sample_id": "db5f5d685e315bfb",
+ "tree_id": "0dace2897e600df4",
+ "adapter": "webshop",
+ "cluster": "men's athletic shoes",
+ "goal_idx": 254,
+ "split": "test",
+ "source_instruction": "i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men",
+ "query": "I was browsing the men's athletic shoes section earlier, and I remember hearing that pairs made with ethylene vinyl hold up way better for regular gym use and outdoor runs than the other material blends I\u2019ve looked at so far. My friend was telling me the other day that he saw some really nice pairs in dark denim with red orange accents at the store last week, and he mentioned something about a numeric option that fits him perfectly, plus none of the pairs he was looking at went over a really reasonable budget cap he set for himself for new workout gear.",
+ "strategy_ids": [
+  "indirect_intent",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+insufficient_information",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "indirect_intent",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "option:1"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "option:1"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:ethylene vinyl",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:1"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ethylene vinyl",
+     "=",
+     "ethylene vinyl"
+    ],
+    [
+     "option:0",
+     "=",
+     "dark denim | red orange"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "1af146ff569a4707"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 7,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 7,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "bb4678ed5513f5d0",
+  "conditions": [
+   [
+    "attr:ethylene vinyl",
+    "=",
+    "ethylene vinyl"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark denim | red orange"
+   ],
+   [
+    "option:1",
+    "=",
+    "10"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "option:1"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B07L5DX8GP\",[[\"color\",\"02 | dark | grey\"],[\"size\",\"10\"]]]",
+   "[\"B07SHWM3BX\",[[\"color\",\"white | dark silver metallic\"],[\"size\",\"10\"]]]",
+   "[\"B08B1MCFKL\",[[\"color\",\"dark denim | red orange\"],[\"size\",\"10\"]]]",
+   "[\"B08QBHDRC1\",[[\"color\",\"dark gray | red\"],[\"size\",\"10\"]]]",
+   "[\"B097R39VPH\",[[\"color\",\"dark green022\"],[\"size\",\"10\"]]]",
+   "[\"B09BFMY58R\",[[\"color\",\"dark grey\"],[\"size\",\"10\"]]]"
+  ],
+  "hash": "c5bf660792b81a9dc40598124a5c8177"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "36e60c9cbfb05597",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's athletic shoes instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "5464523a27a90747",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's athletic shoes instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "4917911363dffea9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be anti slip."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e7ceba1fead480e6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be arch support."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "0aea792080e4756e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b408ba44b9a10e4c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "32a041a56ad124c2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 women | 10 men instead of dark denim | red orange."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "a30ce134fa3d3734",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10-11 women | 8-9 men instead of dark denim | red orange."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

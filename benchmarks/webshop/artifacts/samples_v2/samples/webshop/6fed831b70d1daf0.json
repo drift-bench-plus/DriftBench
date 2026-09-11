@@ -1,0 +1,187 @@
+{
+ "adapter": "webshop",
+ "cluster": "hdmi cables",
+ "fidelity_notes": [],
+ "goal_idx": 464,
+ "ground_truth": {
+  "cardinality": 22,
+  "hash": "99c92516a6bf32ba989802910b24b24f",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B071YDFZ3P\",[]]",
+   "[\"B077SZKGRY\",[]]",
+   "[\"B077Y1YVVJ\",[]]",
+   "[\"B07BKVRPWV\",[]]",
+   "[\"B07D1HVDX1\",[]]",
+   "[\"B07D2HSH4D\",[]]",
+   "[\"B07F9GFZYD\",[]]",
+   "[\"B07JF9LVW4\",[]]",
+   "[\"B07K7CK998\",[]]",
+   "[\"B07NSY4R1X\",[]]",
+   "[\"B07RL7GGXP\",[]]",
+   "[\"B08731PN5T\",[]]",
+   "[\"B088YP6TDQ\",[]]",
+   "[\"B08CRPRG2S\",[]]",
+   "[\"B08CXDZ1CC\",[]]",
+   "[\"B08L8RNHT2\",[]]",
+   "[\"B08QD8418Z\",[]]",
+   "[\"B08YRPL65H\",[]]",
+   "[\"B093X3K7SF\",[]]",
+   "[\"B0991J7Y3Y\",[]]",
+   "[\"B09MLSBV6C\",[]]",
+   "[\"B09PHGHCBX\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy use",
+    "=",
+    "easy use"
+   ],
+   [
+    "attr:high performance",
+    "=",
+    "high performance"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "9797c32faf70ba0b"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "indirect_intent"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "oblique"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ],
+    [
+     "attr:high performance",
+     "=",
+     "high performance"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "oblique",
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy use",
+   "attr:high performance",
+   "price_upper"
+  ],
+  "spec_id": "8d9ebde1bce95b92",
+  "strategy_id": "indirect_intent",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’ve heard that HDMI cables with easy use and high performance work really well for most home setups, and there are solid options available for under 40 dollars.",
+ "render_attempts": 1,
+ "sample_id": "6fed831b70d1daf0",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hdmi cables instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "024281688ee7612e"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hdmi cables instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "857ccfb5d204e736"
+  },
+  {
+   "announcement": "Also, it needs to be light weight.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "12e252ea4188bdba"
+  },
+  {
+   "announcement": "Also, it needs to be ultra hd.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "f5f63a5d07b137cc"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "790aa44e4234f068"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b1c12af62517b899"
+  },
+  {
+   "announcement": "Actually, make it 20 instead of 40.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0a900d5e7fde9f87"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of 40.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "514d8aa6c30f16a4"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 22,
+  "ok": true,
+  "rule": "oblique",
+  "true_card": 22,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a high performance hdmi to displayport adapter cable that's easy to use.",
+ "split": "test",
+ "strategy_ids": [
+  "indirect_intent"
+ ],
+ "tree_id": "c2ab603af1b7f24f",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

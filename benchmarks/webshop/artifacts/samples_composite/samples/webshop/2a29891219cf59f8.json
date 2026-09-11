@@ -1,0 +1,228 @@
+{
+ "sample_id": "2a29891219cf59f8",
+ "tree_id": "605cd47c1d0bcc72",
+ "adapter": "webshop",
+ "cluster": "men's slippers",
+ "goal_idx": 182,
+ "split": "test",
+ "source_instruction": "i need grey memory foam slippers with open toes.",
+ "query": "I stopped by the community park on my walk over this morning, right as the local elementary school\u2019s annual fall fair was setting up. The air smelled like spiced cider simmering in big metal pots and caramel apples being dipped, and a group of third graders was hauling armfuls of painted pumpkins to line the entrance path. One of the teachers even waved me over to look at the hand-painted tote bags the kids made for a fundraiser, all covered in goofy doodles of dogs and dinosaurs and rainbows, and I almost grabbed one before I remembered I already have three canvas totes crumpled in the backseat of my car that I never remember to bring into the store. I\u2019ve heard the men\u2019s slippers in stock right now include memory foam open toe styles, there\u2019s that one color option I always go for that\u2019s available too, and none of the options that show up cross over the amount I'm comfortable spending.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "indirect_intent",
+  "referential_ambiguity",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+indirect_intent+referential_ambiguity+insufficient_information",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "indirect_intent",
+   "referential_ambiguity",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped by the community park on my walk over this morning, right as the local elementary school\u2019s annual fall fair was setting up. The air smelled like spiced cider simmering in big metal pots and caramel apples being dipped, and a group of third graders was hauling armfuls of painted pumpkins to line the entrance path. One of the teachers even waved me over to look at the hand-painted tote bags the kids made for a fundraiser, all covered in goofy doodles of dogs and dinosaurs and rainbows, and I almost grabbed one before I remembered I already have three canvas totes crumpled in the backseat of my car that I never remember to bring into the store.",
+  "retained": [
+   "attr:memory foam",
+   "attr:open toe"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:memory foam",
+     "=",
+     "memory foam"
+    ],
+    [
+     "attr:open toe",
+     "=",
+     "open toe"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "44edb59ea9ceb8b4"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 21,
+  "lit_card": 146,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 103,
+    "true_card": 21,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 26,
+    "true_card": 21,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "5f8dc065bfa386ba",
+  "conditions": [
+   [
+    "attr:memory foam",
+    "=",
+    "memory foam"
+   ],
+   [
+    "attr:open toe",
+    "=",
+    "open toe"
+   ],
+   [
+    "option:0",
+    "=",
+    "c-gray"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 21,
+  "value": [
+   "[\"B08FYC36G1\",[[\"color\",\"gray leopard\"]]]",
+   "[\"B098T7T4ZD\",[[\"color\",\"c gray\"]]]",
+   "[\"B09BRDRZX2\",[[\"color\",\"z01-gray\"]]]",
+   "[\"B09DD8KHVN\",[[\"color\",\"b-gray-male\"]]]",
+   "[\"B09DFHY4CK\",[[\"color\",\"gray-b\"]]]",
+   "[\"B09DGCQL47\",[[\"color\",\"01#gray\"]]]",
+   "[\"B09DPD473C\",[[\"color\",\"gray\"]]]",
+   "[\"B09DRZ2M2T\",[[\"color\",\"gray\"]]]",
+   "[\"B09HHJ1M7D\",[[\"color\",\"a-gray\"]]]",
+   "[\"B09JF3D6D3\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09JFDGWC8\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09JFLMKBY\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09JFMHVYR\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09KBS2K6V\",[[\"color\",\"gray2\"]]]",
+   "[\"B09KCCDRX2\",[[\"color\",\"a gray\"]]]",
+   "[\"B09LYT6QVC\",[[\"color\",\"gray-c\"]]]",
+   "[\"B09LYZTMVR\",[[\"color\",\"c-gray\"]]]",
+   "[\"B09MDLG3PC\",[[\"color\",\"gray#a1\"]]]",
+   "[\"B09MHZGCBD\",[[\"color\",\"gray#a1\"]]]",
+   "[\"B09PJH8VZF\",[[\"color\",\"z01# gray\"]]]",
+   "[\"B09PN2BFG8\",[[\"color\",\"a-gray\"]]]"
+  ],
+  "hash": "6cf2f6f7e629d8e1bcc10a634f242b5d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "43214916f8a9cc81",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's slippers instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "aa8882388e062e56",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's slippers instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "3eb33d3ad5a5bab3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be boots women."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "bc69617a5bb809a3",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be fleece lined."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "85320c11a5b32ffd",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d42d4c51807773b7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "7547c8327599e33d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10-10.5 women | 8.5-9 men instead of c-gray."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "942e03922a9fa987",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it (us7-8) instead of c-gray."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

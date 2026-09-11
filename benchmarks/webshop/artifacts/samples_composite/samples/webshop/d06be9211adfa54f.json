@@ -1,0 +1,246 @@
+{
+ "sample_id": "d06be9211adfa54f",
+ "tree_id": "e9e72e3bb8bf1b5b",
+ "adapter": "webshop",
+ "cluster": "alcoholic beverages",
+ "goal_idx": 128,
+ "split": "test",
+ "source_instruction": "i need some high fructose citrus tonic water.",
+ "query": "Dude, you will not believe the squirrel that just darted across the grocery store parking lot five minutes ago\u2014he was hauling an entire half-eaten glazed donut clamped tight in his tiny jaws, hopped right up the trunk of the big oak by the cart return like he didn\u2019t have a care in the world, and even paused on a low branch to stare me down like he was daring me to try and take his snack. I stood there for a full minute just cackling because he had little smears of powdered sugar dusted all over his fuzzy little cheeks, and a lady loading reusable bags into her minivan next to me started laughing too when I pointed him out. It was such a silly, random little moment that it totally made my otherwise boring errand run feel way brighter, I swear I\u2019m still grinning thinking about how proud he looked of his stolen pastry prize. Hey, I\u2019m grabbing some drinks from the alcoholic beverage section right now\u2014can you help me pick something out? I need a bottle that has high maltose listed as an ingredient, max budget is $120, and also make sure it\u2019s that one flavor I always grab, y\u2019know the usual? Oh, and it absolutely has to come with a free branded metal bottle opener attached to the neck, that\u2019s non-negotiable for me right now. Wait, did I mention I\u2019m heading to a casual backyard cookout later? No, never mind that, just stick to what I said about the drink specs.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "irrelevant_information",
+  "referential_ambiguity",
+  "factual_error"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+irrelevant_information+referential_ambiguity+factual_error",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "irrelevant_information",
+   "referential_ambiguity",
+   "factual_error"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "factual_error": "attr:high fructose"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:high fructose",
+    "high fructose",
+    "high maltose"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "has high maltose listed as an ingredient",
+    "condition": [
+     "attr:high fructose",
+     "=",
+     "high maltose"
+    ]
+   },
+   {
+    "text": "it absolutely has to come with a free branded metal bottle opener attached to the neck",
+    "condition": null
+   },
+   {
+    "text": "make sure it\u2019s that one flavor I always grab, y\u2019know the usual?",
+    "condition": [
+     "option:0",
+     "=",
+     "the usual flavor the shopper always grabs"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Dude, you will not believe the squirrel that just darted across the grocery store parking lot five minutes ago\u2014he was hauling an entire half-eaten glazed donut clamped tight in his tiny jaws, hopped right up the trunk of the big oak by the cart return like he didn\u2019t have a care in the world, and even paused on a low branch to stare me down like he was daring me to try and take his snack. I stood there for a full minute just cackling because he had little smears of powdered sugar dusted all over his fuzzy little cheeks, and a lady loading reusable bags into her minivan next to me started laughing too when I pointed him out. It was such a silly, random little moment that it totally made my otherwise boring errand run feel way brighter, I swear I\u2019m still grinning thinking about how proud he looked of his stolen pastry prize.",
+  "retained": [
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "attr:high fructose",
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:high fructose",
+     "=",
+     "high maltose"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ],
+    [
+     "attr:high fructose",
+     "=",
+     "high maltose"
+    ],
+    [
+     "option:0",
+     "=",
+     "the usual flavor the shopper always grabs"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "39851a25904eb51b"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 3,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 100,
+    "true_card": 3,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 3,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "89f5663644d6a499",
+  "conditions": [
+   [
+    "attr:high fructose",
+    "=",
+    "high fructose"
+   ],
+   [
+    "option:0",
+    "=",
+    "citrus"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "attr:high fructose",
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 3,
+  "value": [
+   "[\"B005Z6LGYS\",[[\"flavor name\",\"citrus\"]]]",
+   "[\"B07CZLVZ7X\",[[\"flavor name\",\"citrus\"]]]",
+   "[\"B08PW3Y1DM\",[[\"flavor name\",\"dry citrus tonic\"]]]"
+  ],
+  "hash": "b3eba65f349c8603c3340dc1587f3f5c"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "700c665f6cd77f27",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the alcoholic beverages instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f29f8904846eb1e5",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the alcoholic beverages instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7429fcc26c217882",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be gluten free."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "cf9cc98d3dd66929",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be artificial ingredients."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "bfd10e1b407bd479",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "e3813401fec811f4",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "1c76d493f0391058",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 11.1 fl oz (pack of 24) instead of citrus."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "b0eb969773263a76",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 11.1 fl oz (pack of 6) instead of citrus."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,3148 @@
+{
+ "summary": {
+  "split": "learn",
+  "rule": "sha1(cluster) mod 100 < 30 = learn",
+  "samples": 27,
+  "clusters": 4,
+  "trees": 6,
+  "by_strategy": {
+   "indirect_intent": 5,
+   "contextual_irrelevance": 6,
+   "factual_error": 3,
+   "insufficient_information": 2,
+   "irrelevant_information": 6,
+   "syntactic_ambiguity": 1,
+   "referential_ambiguity": 2,
+   "vagueness_subjectivity": 1,
+   "lexical_ambiguity": 1
+  }
+ },
+ "results": [
+  {
+   "tree": "1a0cc1281f29259a",
+   "strategy": "indirect_intent",
+   "status": "admitted",
+   "query": "I\u2019ve got reservation HXDUBJ, and I\u2019ve heard that switching to the May 19, 2024 flight HAT072 and May 23, 2024 flight HAT278 in economy class, plus updating my booking to include 2 checked bags, all paid for with gift card number gift_card_6941833, is a pretty straightforward process for this airline.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "indirect_intent",
+    "family": "intention",
+    "mask_kind": "oblique",
+    "kinds": [
+     "oblique"
+    ],
+    "components": [
+     "indirect_intent"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": true,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:flights",
+     "arg:0:update_reservation_flights:payment_id",
+     "arg:0:update_reservation_flights:reservation_id",
+     "arg:1:update_reservation_baggages:payment_id",
+     "arg:1:update_reservation_baggages:reservation_id",
+     "arg:1:update_reservation_baggages:total_baggages"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_flights:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:total_baggages",
+       "=",
+       "2"
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "8d9ebde1bce95b92"
+   },
+   "signature": {
+    "rule": "oblique",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 0.2,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights",
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "1a0cc1281f29259a",
+   "strategy": "contextual_irrelevance",
+   "status": "admitted",
+   "query": "Oh, I was so frustrated earlier when I got to the airport parking lot and realized I\u2019d left my favorite travel neck pillow, the one with the memory foam and the cute little sheep print on it, on the kitchen counter at home. I even drove all the way back to grab it because I can never sleep on flights without it, and I ended up missing the pre-security coffee I\u2019d been looking forward to all morning. Also, the snack stand by the terminal entrance was out of my go-to salted caramel granola bars, which felt like a really bad start to this whole travel day. Anyway, I need to make a couple changes to my reservation under confirmation code HXDUBJ: first, switch my flights to the economy cabin on flight HAT072 for 2024-05-19 and flight HAT278 for 2024-05-23, paying for that flight change with gift card ending in 6941833, and second, update my checked baggage allowance to 2 bags for that same reservation, covering that baggage fee with the same gift card_6941833.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "contextual_irrelevance",
+    "family": "intention",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "contextual_irrelevance"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": true,
+    "oblique": false,
+    "offtopic_span": "Oh, I was so frustrated earlier when I got to the airport parking lot and realized I\u2019d left my favorite travel neck pillow, the one with the memory foam and the cute little sheep print on it, on the kitchen counter at home. I even drove all the way back to grab it because I can never sleep on flights without it, and I ended up missing the pre-security coffee I\u2019d been looking forward to all morning. Also, the snack stand by the terminal entrance was out of my go-to salted caramel granola bars, which felt like a really bad start to this whole travel day.",
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:flights",
+     "arg:0:update_reservation_flights:payment_id",
+     "arg:0:update_reservation_flights:reservation_id",
+     "arg:1:update_reservation_baggages:payment_id",
+     "arg:1:update_reservation_baggages:reservation_id",
+     "arg:1:update_reservation_baggages:total_baggages"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_flights:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:total_baggages",
+       "=",
+       "2"
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "b2ca5366d4f08f07"
+   },
+   "signature": {
+    "rule": "noise",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 0.2,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights",
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "1a0cc1281f29259a",
+   "strategy": "factual_error",
+   "status": "admitted",
+   "query": "I need to modify my reservation HXDUBJ: first change my flights to the economy cabin, taking flight HAT072 on 2024-05-19 and flight HAT277 on 2024-05-23, paying the change fee with gift_card_6941833, then add 2 checked bags to this same reservation, covering that baggage fee with the same gift_card_6941833.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "factual_error",
+    "family": "premise",
+    "mask_kind": "falsify",
+    "kinds": [
+     "falsify"
+    ],
+    "components": [
+     "factual_error"
+    ],
+    "governing_kind": "falsify",
+    "substituted": [
+     [
+      "arg:0:update_reservation_flights:flights",
+      "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]",
+      "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT277\"}]"
+     ]
+    ],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:payment_id",
+     "arg:0:update_reservation_flights:reservation_id",
+     "arg:1:update_reservation_baggages:payment_id",
+     "arg:1:update_reservation_baggages:reservation_id",
+     "arg:1:update_reservation_baggages:total_baggages"
+    ],
+    "hidden_slots": [
+     "arg:0:update_reservation_flights:flights"
+    ],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_flights:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT277\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:total_baggages",
+       "=",
+       "2"
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 8,
+    "spec_id": "a482290edeb602ab"
+   },
+   "signature": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 9,
+   "sec": 1.0,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights",
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "1a0cc1281f29259a",
+   "strategy": "insufficient_information",
+   "status": "admitted",
+   "query": "I need to make changes to my reservation HXDUBJ: switch my flights to HAT072 on 2024-05-19 and HAT278 on 2024-05-23 using gift_card_6941833 for payment, and also update my checked baggage for reservation HXDUBJ to be paid for with gift_card_6941833.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "insufficient_information",
+    "family": "parameter",
+    "mask_kind": "withhold",
+    "kinds": [
+     "withhold"
+    ],
+    "components": [
+     "insufficient_information"
+    ],
+    "governing_kind": "withhold",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:1:update_reservation_baggages:total_baggages"
+    ],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_flights:flights",
+     "arg:0:update_reservation_flights:payment_id",
+     "arg:0:update_reservation_flights:reservation_id",
+     "arg:1:update_reservation_baggages:payment_id",
+     "arg:1:update_reservation_baggages:reservation_id"
+    ],
+    "hidden_slots": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:1:update_reservation_baggages:total_baggages"
+    ],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 2,
+    "spec_id": "f576bef83083f66a"
+   },
+   "signature": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 3,
+   "sec": 16.7,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights",
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "1a0cc1281f29259a",
+   "strategy": "irrelevant_information",
+   "status": "admitted",
+   "query": "I\u2019m still laughing thinking about how my friend accidentally packed their pet goldfish in their carry-on for a trip last year, but I need to change my reservation HXDUBJ to economy class on flights HAT072 for 2024-05-19 and HAT278 for 2024-05-23, pay for that change with gift_card_6941833, and also update that same reservation to add 2 checked bags, covering that baggage fee with gift_card_6941833 too.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "irrelevant_information",
+    "family": "parameter",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "irrelevant_information"
+    ],
+    "governing_kind": "falsify",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [
+     {
+      "text": "I\u2019m still laughing thinking about how my friend accidentally packed their pet goldfish in their carry-on for a trip last year",
+      "condition": null
+     }
+    ],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:flights",
+     "arg:0:update_reservation_flights:payment_id",
+     "arg:0:update_reservation_flights:reservation_id",
+     "arg:1:update_reservation_baggages:payment_id",
+     "arg:1:update_reservation_baggages:reservation_id",
+     "arg:1:update_reservation_baggages:total_baggages"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "52a6bbd5b67c59fb"
+   },
+   "signature": {
+    "verdict": "ok_pragmatic_extra",
+    "executable": false,
+    "readings": 0,
+    "note": "extra detail is not expressible as a condition in this domain; string checks only"
+   },
+   "attempts": 2,
+   "sec": 0.0,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights",
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "1a0cc1281f29259a",
+   "strategy": "syntactic_ambiguity",
+   "status": "admitted",
+   "query": "I need to change my reservation HXDUBJ to economy class on flights HAT072 for 2024-05-19 and HAT278 for 2024-05-23, and add 2 checked bags to it using gift_card_6941833.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "syntactic_ambiguity",
+    "family": "expression",
+    "mask_kind": "mark",
+    "kinds": [
+     "mark"
+    ],
+    "components": [
+     "syntactic_ambiguity"
+    ],
+    "governing_kind": "withhold",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [
+     {
+      "surface": "using gift_card_6941833",
+      "placements": [
+       [
+        "arg:0:update_reservation_flights:payment_id",
+        "\"gift_card_6941833\""
+       ],
+       [
+        "arg:0:update_reservation_flights:payment_id",
+        null
+       ]
+      ]
+     }
+    ],
+    "extras": [],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:flights",
+     "arg:0:update_reservation_flights:reservation_id",
+     "arg:1:update_reservation_baggages:payment_id",
+     "arg:1:update_reservation_baggages:reservation_id",
+     "arg:1:update_reservation_baggages:total_baggages"
+    ],
+    "hidden_slots": [
+     "arg:0:update_reservation_flights:payment_id"
+    ],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_flights:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:total_baggages",
+       "=",
+       "2"
+      ]
+     ],
+     [
+      [
+       "arg:0:update_reservation_flights:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:total_baggages",
+       "=",
+       "2"
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "516cf8334c382fce"
+   },
+   "signature": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     1,
+     1
+    ],
+    "true_card": 1,
+    "readings": 2
+   },
+   "attempts": 2,
+   "sec": 7.9,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights",
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "1a0cc1281f29259a",
+   "strategy": "referential_ambiguity",
+   "status": "admitted",
+   "query": "Hi, I need to change my reservation HXDUBJ to economy class for flights HAT072 on 2024-05-19 and HAT278 on 2024-05-23, and also update this reservation to add 2 checked bags; put the baggage fee on my gift card ending 6941833, and cover the flight change fare difference on the usual one.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "referential_ambiguity",
+    "family": "expression",
+    "mask_kind": "mark",
+    "kinds": [
+     "mark"
+    ],
+    "components": [
+     "referential_ambiguity"
+    ],
+    "governing_kind": "withhold",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [
+     [
+      "arg:0:update_reservation_flights:payment_id",
+      "deictic"
+     ]
+    ],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:flights",
+     "arg:0:update_reservation_flights:reservation_id",
+     "arg:1:update_reservation_baggages:payment_id",
+     "arg:1:update_reservation_baggages:reservation_id",
+     "arg:1:update_reservation_baggages:total_baggages"
+    ],
+    "hidden_slots": [
+     "arg:0:update_reservation_flights:payment_id"
+    ],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_flights:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:1:update_reservation_baggages:total_baggages",
+       "=",
+       "2"
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 3,
+    "spec_id": "dcff5f1f14291001"
+   },
+   "signature": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 4,
+   "sec": 23.8,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:1:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights",
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "62ec69eb49a15c77",
+   "strategy": "indirect_intent",
+   "status": "admitted",
+   "query": "I have an upcoming reservation under the code HXDUBJ, and I\u2019ve got 2 checked bags I\u2019ll be bringing on my trip, plus I\u2019ve heard the payment method labeled gift_card_6941833 works really well for covering any baggage-related adjustments to existing bookings.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "indirect_intent",
+    "family": "intention",
+    "mask_kind": "oblique",
+    "kinds": [
+     "oblique"
+    ],
+    "components": [
+     "indirect_intent"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": true,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_baggages:payment_id",
+     "arg:0:update_reservation_baggages:reservation_id",
+     "arg:0:update_reservation_baggages:total_baggages"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:0:update_reservation_baggages:total_baggages",
+       "=",
+       "2"
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 2,
+    "spec_id": "8d9ebde1bce95b92"
+   },
+   "signature": {
+    "rule": "oblique",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 3,
+   "sec": 12.4,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:0:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "62ec69eb49a15c77",
+   "strategy": "contextual_irrelevance",
+   "status": "admitted",
+   "query": "I spent almost an hour browsing in the airport bookstore earlier and almost bought that new bestselling hiking guide about the Rockies, but I talked myself out of it since I already packed three other books for this trip. I also stopped by the coffee shop next to the gate and they were running a special on lavender lattes, which I\u2019d never tried before, so I grabbed one and it was way sweeter than I expected. I even ran into a former high school classmate I hadn\u2019t seen in eight years who was flying to Calgary for a work conference, and we chatted for a few minutes about how much our old neighborhood has changed since we graduated. Can you help me update my reservation under confirmation code HXDUBJ to add 2 checked bags, and apply the gift card with ID gift_card_6941833 as the payment method for this baggage change?",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "contextual_irrelevance",
+    "family": "intention",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "contextual_irrelevance"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": true,
+    "oblique": false,
+    "offtopic_span": "I spent almost an hour browsing in the airport bookstore earlier and almost bought that new bestselling hiking guide about the Rockies, but I talked myself out of it since I already packed three other books for this trip. I also stopped by the coffee shop next to the gate and they were running a special on lavender lattes, which I\u2019d never tried before, so I grabbed one and it was way sweeter than I expected. I even ran into a former high school classmate I hadn\u2019t seen in eight years who was flying to Calgary for a work conference, and we chatted for a few minutes about how much our old neighborhood has changed since we graduated.",
+    "retained": [
+     "arg:0:update_reservation_baggages:payment_id",
+     "arg:0:update_reservation_baggages:reservation_id",
+     "arg:0:update_reservation_baggages:total_baggages"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ],
+      [
+       "arg:0:update_reservation_baggages:total_baggages",
+       "=",
+       "2"
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "b2ca5366d4f08f07"
+   },
+   "signature": {
+    "rule": "noise",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 13.8,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:0:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "62ec69eb49a15c77",
+   "strategy": "insufficient_information",
+   "status": "admitted",
+   "query": "Hi there, I need to add checked bags to my reservation HXDUBJ, and I\u2019ll be using gift_card_6941833 to cover the cost of this baggage update.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "insufficient_information",
+    "family": "parameter",
+    "mask_kind": "withhold",
+    "kinds": [
+     "withhold"
+    ],
+    "components": [
+     "insufficient_information"
+    ],
+    "governing_kind": "withhold",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [
+     "arg:0:update_reservation_baggages:total_baggages"
+    ],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_baggages:payment_id",
+     "arg:0:update_reservation_baggages:reservation_id"
+    ],
+    "hidden_slots": [
+     "arg:0:update_reservation_baggages:total_baggages"
+    ],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "f3bd8af7f65f29be"
+   },
+   "signature": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 6.1,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:0:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "62ec69eb49a15c77",
+   "strategy": "irrelevant_information",
+   "status": "admitted",
+   "query": "I\u2019m so excited to finally visit my best friend who moved abroad last year, can you add 2 checked bags to my reservation HXDUBJ using the payment method gift_card_6941833?",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "irrelevant_information",
+    "family": "parameter",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "irrelevant_information"
+    ],
+    "governing_kind": "falsify",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [
+     {
+      "text": "I\u2019m so excited to finally visit my best friend who moved abroad last year",
+      "condition": null
+     }
+    ],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_baggages:payment_id",
+     "arg:0:update_reservation_baggages:reservation_id",
+     "arg:0:update_reservation_baggages:total_baggages"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "f0d6dcb339d6e722"
+   },
+   "signature": {
+    "verdict": "ok_pragmatic_extra",
+    "executable": false,
+    "readings": 0,
+    "note": "extra detail is not expressible as a condition in this domain; string checks only"
+   },
+   "attempts": 2,
+   "sec": 5.9,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:0:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "62ec69eb49a15c77",
+   "strategy": "vagueness_subjectivity",
+   "status": "admitted",
+   "query": "I want to add a reasonable number of checked bags to my reservation HXDUBJ, and I\u2019ll pay for the baggage update using gift_card_6941833.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "vagueness_subjectivity",
+    "family": "expression",
+    "mask_kind": "mark",
+    "kinds": [
+     "mark"
+    ],
+    "components": [
+     "vagueness_subjectivity"
+    ],
+    "governing_kind": "withhold",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [
+     [
+      "arg:0:update_reservation_baggages:total_baggages",
+      "vague"
+     ]
+    ],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_baggages:payment_id",
+     "arg:0:update_reservation_baggages:reservation_id"
+    ],
+    "hidden_slots": [
+     "arg:0:update_reservation_baggages:total_baggages"
+    ],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_baggages:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_baggages:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 4,
+    "spec_id": "ae17efffbbe8c5c3"
+   },
+   "signature": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 5,
+   "sec": 184.5,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_baggages:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_baggages:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ],
+    [
+     "arg:0:update_reservation_baggages:total_baggages",
+     "=",
+     "2"
+    ]
+   ],
+   "writes": [
+    "update_reservation_baggages"
+   ]
+  },
+  {
+   "tree": "be52b8acd2475722",
+   "strategy": "indirect_intent",
+   "status": "admitted",
+   "query": "I\u2019ve got a reservation under code HXDUBJ, and I heard switching to the economy cabin for flight HAT072 on 2024-05-19 and flight HAT278 on 2024-05-23 works smoothly when using the gift card linked to number gift_card_6941833.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "indirect_intent",
+    "family": "intention",
+    "mask_kind": "oblique",
+    "kinds": [
+     "oblique"
+    ],
+    "components": [
+     "indirect_intent"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": true,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:flights",
+     "arg:0:update_reservation_flights:payment_id",
+     "arg:0:update_reservation_flights:reservation_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_flights:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "8d9ebde1bce95b92"
+   },
+   "signature": {
+    "rule": "oblique",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 7.1,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights"
+   ]
+  },
+  {
+   "tree": "be52b8acd2475722",
+   "strategy": "contextual_irrelevance",
+   "status": "admitted",
+   "query": "I spent the entire morning trying to track down my lost carry-on toiletry bag that had my favorite lavender lip balm, the fancy hand cream my sister got me for my birthday, and a tiny travel-sized bottle of that pine-scented candle I love so much. I even stopped by the airport lost and found on my way to grab a pre-flight coffee, and the attendant there told me they\u2019d hold any matching items for 30 days before donating unclaimed things. I also spent 20 minutes scrolling through the airport\u2019s lost item portal while waiting in the security line, and I kept getting distracted by all the weird random things people leave behind, like a full set of ceramic mixing bowls and a taxidermied squirrel wearing a tiny pilot hat. Anyway, I need to change my reservation under confirmation code HXDUBJ to economy class, taking flight HAT072 on 2024-05-19 and flight HAT278 on 2024-05-23, and I want to pay the change fees with my gift card number gift_card_6941833.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "contextual_irrelevance",
+    "family": "intention",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "contextual_irrelevance"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": true,
+    "oblique": false,
+    "offtopic_span": "I spent the entire morning trying to track down my lost carry-on toiletry bag that had my favorite lavender lip balm, the fancy hand cream my sister got me for my birthday, and a tiny travel-sized bottle of that pine-scented candle I love so much. I even stopped by the airport lost and found on my way to grab a pre-flight coffee, and the attendant there told me they\u2019d hold any matching items for 30 days before donating unclaimed things. I also spent 20 minutes scrolling through the airport\u2019s lost item portal while waiting in the security line, and I kept getting distracted by all the weird random things people leave behind, like a full set of ceramic mixing bowls and a taxidermied squirrel wearing a tiny pilot hat.",
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:flights",
+     "arg:0:update_reservation_flights:payment_id",
+     "arg:0:update_reservation_flights:reservation_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_flights:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "b2ca5366d4f08f07"
+   },
+   "signature": {
+    "rule": "noise",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 15.0,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights"
+   ]
+  },
+  {
+   "tree": "be52b8acd2475722",
+   "strategy": "factual_error",
+   "status": "admitted",
+   "query": "Hi, I'd like to change my reservation HXDUBJ to economy class, taking flight HAT072 on 2024-05-19 and flight HAT278 on 2024-05-24, and pay for the change using gift_card_6941833.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "factual_error",
+    "family": "premise",
+    "mask_kind": "falsify",
+    "kinds": [
+     "falsify"
+    ],
+    "components": [
+     "factual_error"
+    ],
+    "governing_kind": "falsify",
+    "substituted": [
+     [
+      "arg:0:update_reservation_flights:flights",
+      "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]",
+      "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-24\",\"flight_number\":\"HAT278\"}]"
+     ]
+    ],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:payment_id",
+     "arg:0:update_reservation_flights:reservation_id"
+    ],
+    "hidden_slots": [
+     "arg:0:update_reservation_flights:flights"
+    ],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_flights:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-24\",\"flight_number\":\"HAT278\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:payment_id",
+       "=",
+       "\"gift_card_6941833\""
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 4,
+    "spec_id": "9f5eeabf8682e311"
+   },
+   "signature": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 5,
+   "sec": 37.0,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights"
+   ]
+  },
+  {
+   "tree": "be52b8acd2475722",
+   "strategy": "irrelevant_information",
+   "status": "admitted",
+   "query": "I\u2019m still a little sad I forgot to pack the souvenir keychain I picked up on my last trip when I headed out this time, but I need to change my reservation under confirmation code HXDUBJ to economy class flights HAT072 on 2024-05-19 and HAT278 on 2024-05-23, covering the change cost with gift card number gift_card_6941833.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "irrelevant_information",
+    "family": "parameter",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "irrelevant_information"
+    ],
+    "governing_kind": "falsify",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [
+     {
+      "text": "I\u2019m still a little sad I forgot to pack the souvenir keychain I picked up on my last trip when I headed out this time",
+      "condition": null
+     }
+    ],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:flights",
+     "arg:0:update_reservation_flights:payment_id",
+     "arg:0:update_reservation_flights:reservation_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "78e90de72b3c224e"
+   },
+   "signature": {
+    "verdict": "ok_pragmatic_extra",
+    "executable": false,
+    "readings": 0,
+    "note": "extra detail is not expressible as a condition in this domain; string checks only"
+   },
+   "attempts": 2,
+   "sec": 8.5,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights"
+   ]
+  },
+  {
+   "tree": "be52b8acd2475722",
+   "strategy": "referential_ambiguity",
+   "status": "admitted",
+   "query": "Hi, I need to change my reservation with confirmation code HXDUBJ: I want to switch to economy class, take flight HAT072 on 2024-05-19 and flight HAT278 on 2024-05-23, and put any fare difference for this change on the usual one.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "referential_ambiguity",
+    "family": "expression",
+    "mask_kind": "mark",
+    "kinds": [
+     "mark"
+    ],
+    "components": [
+     "referential_ambiguity"
+    ],
+    "governing_kind": "withhold",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [
+     [
+      "arg:0:update_reservation_flights:payment_id",
+      "deictic"
+     ]
+    ],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:update_reservation_flights:cabin",
+     "arg:0:update_reservation_flights:flights",
+     "arg:0:update_reservation_flights:reservation_id"
+    ],
+    "hidden_slots": [
+     "arg:0:update_reservation_flights:payment_id"
+    ],
+    "literal_readings": [
+     [
+      [
+       "arg:0:update_reservation_flights:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:update_reservation_flights:flights",
+       "=",
+       "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+      ],
+      [
+       "arg:0:update_reservation_flights:reservation_id",
+       "=",
+       "\"HXDUBJ\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "dcff5f1f14291001"
+   },
+   "signature": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 6.3,
+   "root_conditions": [
+    [
+     "arg:0:update_reservation_flights:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:update_reservation_flights:flights",
+     "=",
+     "[{\"date\":\"2024-05-19\",\"flight_number\":\"HAT072\"},{\"date\":\"2024-05-23\",\"flight_number\":\"HAT278\"}]"
+    ],
+    [
+     "arg:0:update_reservation_flights:payment_id",
+     "=",
+     "\"gift_card_6941833\""
+    ],
+    [
+     "arg:0:update_reservation_flights:reservation_id",
+     "=",
+     "\"HXDUBJ\""
+    ]
+   ],
+   "writes": [
+    "update_reservation_flights"
+   ]
+  },
+  {
+   "tree": "e01d0bdad52cd3e7",
+   "strategy": "indirect_intent",
+   "status": "admitted",
+   "query": "I heard that a one-way economy trip from DTW to SEA on 2024-05-17 taking flights HAT097 and HAT251, with zero checked bags, no travel insurance, for passenger Ivan Smith born 1986-03-14 under account ivan_muller_7015, paid for with gift_card_8516878 and credit_card_3563913, is a common way to book travel for that route.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "indirect_intent",
+    "family": "intention",
+    "mask_kind": "oblique",
+    "kinds": [
+     "oblique"
+    ],
+    "components": [
+     "indirect_intent"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": true,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:book_reservation:cabin",
+     "arg:0:book_reservation:destination",
+     "arg:0:book_reservation:flight_type",
+     "arg:0:book_reservation:flights",
+     "arg:0:book_reservation:insurance",
+     "arg:0:book_reservation:origin",
+     "arg:0:book_reservation:passengers",
+     "arg:0:book_reservation:payment_methods",
+     "arg:0:book_reservation:total_baggages",
+     "arg:0:book_reservation:user_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:book_reservation:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:book_reservation:destination",
+       "=",
+       "\"SEA\""
+      ],
+      [
+       "arg:0:book_reservation:flight_type",
+       "=",
+       "\"one_way\""
+      ],
+      [
+       "arg:0:book_reservation:flights",
+       "=",
+       "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT097\"},{\"date\":\"2024-05-17\",\"flight_number\":\"HAT251\"}]"
+      ],
+      [
+       "arg:0:book_reservation:insurance",
+       "=",
+       "\"no\""
+      ],
+      [
+       "arg:0:book_reservation:origin",
+       "=",
+       "\"DTW\""
+      ],
+      [
+       "arg:0:book_reservation:passengers",
+       "=",
+       "[{\"dob\":\"1986-03-14\",\"first_name\":\"Ivan\",\"last_name\":\"Smith\"}]"
+      ],
+      [
+       "arg:0:book_reservation:payment_methods",
+       "=",
+       "[\"gift_card_8516878\",\"credit_card_3563913\"]"
+      ],
+      [
+       "arg:0:book_reservation:total_baggages",
+       "=",
+       "0"
+      ],
+      [
+       "arg:0:book_reservation:user_id",
+       "=",
+       "\"ivan_muller_7015\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "8d9ebde1bce95b92"
+   },
+   "signature": {
+    "rule": "oblique",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 0.5,
+   "root_conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"SEA\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT097\"},{\"date\":\"2024-05-17\",\"flight_number\":\"HAT251\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1986-03-14\",\"first_name\":\"Ivan\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"gift_card_8516878\",\"credit_card_3563913\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"ivan_muller_7015\""
+    ]
+   ],
+   "writes": [
+    "book_reservation"
+   ]
+  },
+  {
+   "tree": "e01d0bdad52cd3e7",
+   "strategy": "contextual_irrelevance",
+   "status": "admitted",
+   "query": "Oh, I just remembered that last week I spent three hours picking out the perfect sunhat, waterproof hiking boots, and a stack of paperback mystery novels for the beach trip I\u2019m taking later this summer. I also stopped by the neighborhood bakery yesterday to try their new lavender honey croissants, and they were so buttery and fragrant that I ended up bringing a whole dozen home to share with my next-door neighbor who\u2019s been helping me water my tomato plants while I\u2019m out. Oh, and I\u2019ve been binging this new documentary series about competitive birdwatching lately, and I can\u2019t stop gushing to everyone I know about how surprisingly tense and heartfelt the episodes are. Anyway, I need to book a one-way economy flight for myself, Ivan Smith with date of birth 1986-03-14, traveling from DTW to SEA on May 17, 2024, taking flights HAT097 and HAT251 that same day, I don\u2019t want to add any travel insurance, I\u2019ll check zero bags, please use the payment methods gift_card_8516878 and credit_card_3563913 for the booking under my user id ivan_muller_7015.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "contextual_irrelevance",
+    "family": "intention",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "contextual_irrelevance"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": true,
+    "oblique": false,
+    "offtopic_span": "Oh, I just remembered that last week I spent three hours picking out the perfect sunhat, waterproof hiking boots, and a stack of paperback mystery novels for the beach trip I\u2019m taking later this summer. I also stopped by the neighborhood bakery yesterday to try their new lavender honey croissants, and they were so buttery and fragrant that I ended up bringing a whole dozen home to share with my next-door neighbor who\u2019s been helping me water my tomato plants while I\u2019m out. Oh, and I\u2019ve been binging this new documentary series about competitive birdwatching lately, and I can\u2019t stop gushing to everyone I know about how surprisingly tense and heartfelt the episodes are.",
+    "retained": [
+     "arg:0:book_reservation:cabin",
+     "arg:0:book_reservation:destination",
+     "arg:0:book_reservation:flight_type",
+     "arg:0:book_reservation:flights",
+     "arg:0:book_reservation:insurance",
+     "arg:0:book_reservation:origin",
+     "arg:0:book_reservation:passengers",
+     "arg:0:book_reservation:payment_methods",
+     "arg:0:book_reservation:total_baggages",
+     "arg:0:book_reservation:user_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:book_reservation:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:book_reservation:destination",
+       "=",
+       "\"SEA\""
+      ],
+      [
+       "arg:0:book_reservation:flight_type",
+       "=",
+       "\"one_way\""
+      ],
+      [
+       "arg:0:book_reservation:flights",
+       "=",
+       "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT097\"},{\"date\":\"2024-05-17\",\"flight_number\":\"HAT251\"}]"
+      ],
+      [
+       "arg:0:book_reservation:insurance",
+       "=",
+       "\"no\""
+      ],
+      [
+       "arg:0:book_reservation:origin",
+       "=",
+       "\"DTW\""
+      ],
+      [
+       "arg:0:book_reservation:passengers",
+       "=",
+       "[{\"dob\":\"1986-03-14\",\"first_name\":\"Ivan\",\"last_name\":\"Smith\"}]"
+      ],
+      [
+       "arg:0:book_reservation:payment_methods",
+       "=",
+       "[\"gift_card_8516878\",\"credit_card_3563913\"]"
+      ],
+      [
+       "arg:0:book_reservation:total_baggages",
+       "=",
+       "0"
+      ],
+      [
+       "arg:0:book_reservation:user_id",
+       "=",
+       "\"ivan_muller_7015\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "b2ca5366d4f08f07"
+   },
+   "signature": {
+    "rule": "noise",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 0.6,
+   "root_conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"SEA\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT097\"},{\"date\":\"2024-05-17\",\"flight_number\":\"HAT251\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1986-03-14\",\"first_name\":\"Ivan\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"gift_card_8516878\",\"credit_card_3563913\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"ivan_muller_7015\""
+    ]
+   ],
+   "writes": [
+    "book_reservation"
+   ]
+  },
+  {
+   "tree": "e01d0bdad52cd3e7",
+   "strategy": "factual_error",
+   "status": "admitted",
+   "query": "I want to book a one-way economy trip from DTW to PDX for Ivan Smith, born 1986-03-14, on 2024-05-17 for flights HAT097 and HAT251, with 0 checked bags, no travel insurance, paying with gift_card_8516878 and credit_card_3563913 under my account ivan_muller_7015.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "factual_error",
+    "family": "premise",
+    "mask_kind": "falsify",
+    "kinds": [
+     "falsify"
+    ],
+    "components": [
+     "factual_error"
+    ],
+    "governing_kind": "falsify",
+    "substituted": [
+     [
+      "arg:0:book_reservation:destination",
+      "\"SEA\"",
+      "PDX"
+     ]
+    ],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:book_reservation:cabin",
+     "arg:0:book_reservation:flight_type",
+     "arg:0:book_reservation:flights",
+     "arg:0:book_reservation:insurance",
+     "arg:0:book_reservation:origin",
+     "arg:0:book_reservation:passengers",
+     "arg:0:book_reservation:payment_methods",
+     "arg:0:book_reservation:total_baggages",
+     "arg:0:book_reservation:user_id"
+    ],
+    "hidden_slots": [
+     "arg:0:book_reservation:destination"
+    ],
+    "literal_readings": [
+     [
+      [
+       "arg:0:book_reservation:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:book_reservation:destination",
+       "=",
+       "PDX"
+      ],
+      [
+       "arg:0:book_reservation:flight_type",
+       "=",
+       "\"one_way\""
+      ],
+      [
+       "arg:0:book_reservation:flights",
+       "=",
+       "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT097\"},{\"date\":\"2024-05-17\",\"flight_number\":\"HAT251\"}]"
+      ],
+      [
+       "arg:0:book_reservation:insurance",
+       "=",
+       "\"no\""
+      ],
+      [
+       "arg:0:book_reservation:origin",
+       "=",
+       "\"DTW\""
+      ],
+      [
+       "arg:0:book_reservation:passengers",
+       "=",
+       "[{\"dob\":\"1986-03-14\",\"first_name\":\"Ivan\",\"last_name\":\"Smith\"}]"
+      ],
+      [
+       "arg:0:book_reservation:payment_methods",
+       "=",
+       "[\"gift_card_8516878\",\"credit_card_3563913\"]"
+      ],
+      [
+       "arg:0:book_reservation:total_baggages",
+       "=",
+       "0"
+      ],
+      [
+       "arg:0:book_reservation:user_id",
+       "=",
+       "\"ivan_muller_7015\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 7,
+    "spec_id": "fe180016cc2a64b0"
+   },
+   "signature": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 8,
+   "sec": 3.0,
+   "root_conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"SEA\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT097\"},{\"date\":\"2024-05-17\",\"flight_number\":\"HAT251\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1986-03-14\",\"first_name\":\"Ivan\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"gift_card_8516878\",\"credit_card_3563913\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"ivan_muller_7015\""
+    ]
+   ],
+   "writes": [
+    "book_reservation"
+   ]
+  },
+  {
+   "tree": "e01d0bdad52cd3e7",
+   "strategy": "irrelevant_information",
+   "status": "admitted",
+   "query": "I\u2019m so excited to see my old college roommate who moved out to Seattle last year, can you please book a one-way economy flight for me under account ivan_muller_7015, flying from DTW to SEA on 2024-05-17 with flights HAT097 and HAT251, no travel insurance, zero checked bags, for passenger Ivan Smith born 1986-03-14, and pay using gift_card_8516878 and credit_card_3563913?",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "irrelevant_information",
+    "family": "parameter",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "irrelevant_information"
+    ],
+    "governing_kind": "falsify",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [
+     {
+      "text": "I\u2019m so excited to see my old college roommate who moved out to Seattle last year",
+      "condition": null
+     }
+    ],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:book_reservation:cabin",
+     "arg:0:book_reservation:destination",
+     "arg:0:book_reservation:flight_type",
+     "arg:0:book_reservation:flights",
+     "arg:0:book_reservation:insurance",
+     "arg:0:book_reservation:origin",
+     "arg:0:book_reservation:passengers",
+     "arg:0:book_reservation:payment_methods",
+     "arg:0:book_reservation:total_baggages",
+     "arg:0:book_reservation:user_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "6386eba1763985e9"
+   },
+   "signature": {
+    "verdict": "ok_pragmatic_extra",
+    "executable": false,
+    "readings": 0,
+    "note": "extra detail is not expressible as a condition in this domain; string checks only"
+   },
+   "attempts": 2,
+   "sec": 0.5,
+   "root_conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"SEA\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT097\"},{\"date\":\"2024-05-17\",\"flight_number\":\"HAT251\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1986-03-14\",\"first_name\":\"Ivan\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"gift_card_8516878\",\"credit_card_3563913\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"ivan_muller_7015\""
+    ]
+   ],
+   "writes": [
+    "book_reservation"
+   ]
+  },
+  {
+   "tree": "e01d0bdad52cd3e7",
+   "strategy": "lexical_ambiguity",
+   "status": "admitted",
+   "query": "Hi there, I\u2019m user ivan_muller_7015 looking to book a one-way economy trip from DTW to SEA on 2024-05-17 for Ivan Smith, whose date of birth is 1986-03-14. I\u2019ll take flights HAT097 and HAT251 that day, I don\u2019t need travel insurance, I\u2019ll pay with my card, and I won\u2019t bring any extra bags with me for this trip.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "lexical_ambiguity",
+    "family": "expression",
+    "mask_kind": "mark",
+    "kinds": [
+     "mark"
+    ],
+    "components": [
+     "lexical_ambiguity"
+    ],
+    "governing_kind": "withhold",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [
+     {
+      "surface": "my card",
+      "placements": [
+       [
+        "arg:0:book_reservation:payment_methods",
+        "[\"gift_card_8516878\",\"credit_card_3563913\"]"
+       ],
+       [
+        "arg:0:book_reservation:payment_methods",
+        "[\"credit_card_3563913\"]"
+       ]
+      ]
+     }
+    ],
+    "extras": [],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:book_reservation:cabin",
+     "arg:0:book_reservation:destination",
+     "arg:0:book_reservation:flight_type",
+     "arg:0:book_reservation:flights",
+     "arg:0:book_reservation:insurance",
+     "arg:0:book_reservation:origin",
+     "arg:0:book_reservation:passengers",
+     "arg:0:book_reservation:total_baggages",
+     "arg:0:book_reservation:user_id"
+    ],
+    "hidden_slots": [
+     "arg:0:book_reservation:payment_methods"
+    ],
+    "literal_readings": [
+     [
+      [
+       "arg:0:book_reservation:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:book_reservation:destination",
+       "=",
+       "\"SEA\""
+      ],
+      [
+       "arg:0:book_reservation:flight_type",
+       "=",
+       "\"one_way\""
+      ],
+      [
+       "arg:0:book_reservation:flights",
+       "=",
+       "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT097\"},{\"date\":\"2024-05-17\",\"flight_number\":\"HAT251\"}]"
+      ],
+      [
+       "arg:0:book_reservation:insurance",
+       "=",
+       "\"no\""
+      ],
+      [
+       "arg:0:book_reservation:origin",
+       "=",
+       "\"DTW\""
+      ],
+      [
+       "arg:0:book_reservation:passengers",
+       "=",
+       "[{\"dob\":\"1986-03-14\",\"first_name\":\"Ivan\",\"last_name\":\"Smith\"}]"
+      ],
+      [
+       "arg:0:book_reservation:payment_methods",
+       "=",
+       "[\"gift_card_8516878\",\"credit_card_3563913\"]"
+      ],
+      [
+       "arg:0:book_reservation:total_baggages",
+       "=",
+       "0"
+      ],
+      [
+       "arg:0:book_reservation:user_id",
+       "=",
+       "\"ivan_muller_7015\""
+      ]
+     ],
+     [
+      [
+       "arg:0:book_reservation:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:book_reservation:destination",
+       "=",
+       "\"SEA\""
+      ],
+      [
+       "arg:0:book_reservation:flight_type",
+       "=",
+       "\"one_way\""
+      ],
+      [
+       "arg:0:book_reservation:flights",
+       "=",
+       "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT097\"},{\"date\":\"2024-05-17\",\"flight_number\":\"HAT251\"}]"
+      ],
+      [
+       "arg:0:book_reservation:insurance",
+       "=",
+       "\"no\""
+      ],
+      [
+       "arg:0:book_reservation:origin",
+       "=",
+       "\"DTW\""
+      ],
+      [
+       "arg:0:book_reservation:passengers",
+       "=",
+       "[{\"dob\":\"1986-03-14\",\"first_name\":\"Ivan\",\"last_name\":\"Smith\"}]"
+      ],
+      [
+       "arg:0:book_reservation:payment_methods",
+       "=",
+       "[\"credit_card_3563913\"]"
+      ],
+      [
+       "arg:0:book_reservation:total_baggages",
+       "=",
+       "0"
+      ],
+      [
+       "arg:0:book_reservation:user_id",
+       "=",
+       "\"ivan_muller_7015\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 2,
+    "spec_id": "922655c56399a322"
+   },
+   "signature": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     1,
+     1
+    ],
+    "true_card": 1,
+    "readings": 2
+   },
+   "attempts": 3,
+   "sec": 16.7,
+   "root_conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"SEA\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-17\",\"flight_number\":\"HAT097\"},{\"date\":\"2024-05-17\",\"flight_number\":\"HAT251\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"DTW\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1986-03-14\",\"first_name\":\"Ivan\",\"last_name\":\"Smith\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"gift_card_8516878\",\"credit_card_3563913\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "0"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"ivan_muller_7015\""
+    ]
+   ],
+   "writes": [
+    "book_reservation"
+   ]
+  },
+  {
+   "tree": "e446883a0e29028b",
+   "strategy": "contextual_irrelevance",
+   "status": "admitted",
+   "query": "I\u2019ve spent all week researching portable camping stoves for my upcoming backcountry trip next month, and I still can\u2019t decide between the lightweight titanium model and the more durable stainless steel one that works better in high wind. I also spent three hours last night comparing different trail mix recipes to make sure I pack enough high-calorie snacks that don\u2019t get too mushy in my pack, and I even ordered a new pair of wool hiking socks that are supposed to prevent blisters on long uphill stretches. Oh, and I just remembered I need to book a one-way economy flight from JFK to SEA for May 20, 2024, for passenger Mia Li with date of birth 1990-04-05, take flights HAT136 and HAT039 that day, check 3 bags, decline travel insurance, pay with certificate_7504069 and credit_card_4421486, and link the booking to my account user id mia_li_3668.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "contextual_irrelevance",
+    "family": "intention",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "contextual_irrelevance"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": true,
+    "oblique": false,
+    "offtopic_span": "I\u2019ve spent all week researching portable camping stoves for my upcoming backcountry trip next month, and I still can\u2019t decide between the lightweight titanium model and the more durable stainless steel one that works better in high wind. I also spent three hours last night comparing different trail mix recipes to make sure I pack enough high-calorie snacks that don\u2019t get too mushy in my pack, and I even ordered a new pair of wool hiking socks that are supposed to prevent blisters on long uphill stretches.",
+    "retained": [
+     "arg:0:book_reservation:cabin",
+     "arg:0:book_reservation:destination",
+     "arg:0:book_reservation:flight_type",
+     "arg:0:book_reservation:flights",
+     "arg:0:book_reservation:insurance",
+     "arg:0:book_reservation:origin",
+     "arg:0:book_reservation:passengers",
+     "arg:0:book_reservation:payment_methods",
+     "arg:0:book_reservation:total_baggages",
+     "arg:0:book_reservation:user_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:book_reservation:cabin",
+       "=",
+       "\"economy\""
+      ],
+      [
+       "arg:0:book_reservation:destination",
+       "=",
+       "\"SEA\""
+      ],
+      [
+       "arg:0:book_reservation:flight_type",
+       "=",
+       "\"one_way\""
+      ],
+      [
+       "arg:0:book_reservation:flights",
+       "=",
+       "[{\"date\":\"2024-05-20\",\"flight_number\":\"HAT136\"},{\"date\":\"2024-05-20\",\"flight_number\":\"HAT039\"}]"
+      ],
+      [
+       "arg:0:book_reservation:insurance",
+       "=",
+       "\"no\""
+      ],
+      [
+       "arg:0:book_reservation:origin",
+       "=",
+       "\"JFK\""
+      ],
+      [
+       "arg:0:book_reservation:passengers",
+       "=",
+       "[{\"dob\":\"1990-04-05\",\"first_name\":\"Mia\",\"last_name\":\"Li\"}]"
+      ],
+      [
+       "arg:0:book_reservation:payment_methods",
+       "=",
+       "[\"certificate_7504069\",\"credit_card_4421486\"]"
+      ],
+      [
+       "arg:0:book_reservation:total_baggages",
+       "=",
+       "3"
+      ],
+      [
+       "arg:0:book_reservation:user_id",
+       "=",
+       "\"mia_li_3668\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "b2ca5366d4f08f07"
+   },
+   "signature": {
+    "rule": "noise",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 0.6,
+   "root_conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"SEA\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-20\",\"flight_number\":\"HAT136\"},{\"date\":\"2024-05-20\",\"flight_number\":\"HAT039\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1990-04-05\",\"first_name\":\"Mia\",\"last_name\":\"Li\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_7504069\",\"credit_card_4421486\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "3"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"mia_li_3668\""
+    ]
+   ],
+   "writes": [
+    "book_reservation"
+   ]
+  },
+  {
+   "tree": "e446883a0e29028b",
+   "strategy": "irrelevant_information",
+   "status": "admitted",
+   "query": "I\u2019m booking a one-way economy flight from JFK to SEA for Mia Li, who was born on 1990-04-05, and I want to take flights HAT136 and HAT039 both on 2024-05-20, skip travel insurance, check 3 bags, pay with certificate_7504069 and credit_card_4421486 under account mia_li_3668, I still remember I forgot my favorite travel neck pillow on my last work trip to Chicago and was so annoyed the whole flight.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "irrelevant_information",
+    "family": "parameter",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "irrelevant_information"
+    ],
+    "governing_kind": "falsify",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [
+     {
+      "text": "I still remember I forgot my favorite travel neck pillow on my last work trip to Chicago and was so annoyed the whole flight.",
+      "condition": null
+     }
+    ],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:book_reservation:cabin",
+     "arg:0:book_reservation:destination",
+     "arg:0:book_reservation:flight_type",
+     "arg:0:book_reservation:flights",
+     "arg:0:book_reservation:insurance",
+     "arg:0:book_reservation:origin",
+     "arg:0:book_reservation:passengers",
+     "arg:0:book_reservation:payment_methods",
+     "arg:0:book_reservation:total_baggages",
+     "arg:0:book_reservation:user_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "aafc357ce3af3279"
+   },
+   "signature": {
+    "verdict": "ok_pragmatic_extra",
+    "executable": false,
+    "readings": 0,
+    "note": "extra detail is not expressible as a condition in this domain; string checks only"
+   },
+   "attempts": 2,
+   "sec": 0.6,
+   "root_conditions": [
+    [
+     "arg:0:book_reservation:cabin",
+     "=",
+     "\"economy\""
+    ],
+    [
+     "arg:0:book_reservation:destination",
+     "=",
+     "\"SEA\""
+    ],
+    [
+     "arg:0:book_reservation:flight_type",
+     "=",
+     "\"one_way\""
+    ],
+    [
+     "arg:0:book_reservation:flights",
+     "=",
+     "[{\"date\":\"2024-05-20\",\"flight_number\":\"HAT136\"},{\"date\":\"2024-05-20\",\"flight_number\":\"HAT039\"}]"
+    ],
+    [
+     "arg:0:book_reservation:insurance",
+     "=",
+     "\"no\""
+    ],
+    [
+     "arg:0:book_reservation:origin",
+     "=",
+     "\"JFK\""
+    ],
+    [
+     "arg:0:book_reservation:passengers",
+     "=",
+     "[{\"dob\":\"1990-04-05\",\"first_name\":\"Mia\",\"last_name\":\"Li\"}]"
+    ],
+    [
+     "arg:0:book_reservation:payment_methods",
+     "=",
+     "[\"certificate_7504069\",\"credit_card_4421486\"]"
+    ],
+    [
+     "arg:0:book_reservation:total_baggages",
+     "=",
+     "3"
+    ],
+    [
+     "arg:0:book_reservation:user_id",
+     "=",
+     "\"mia_li_3668\""
+    ]
+   ],
+   "writes": [
+    "book_reservation"
+   ]
+  },
+  {
+   "tree": "fb3c80ff6119f52a",
+   "strategy": "indirect_intent",
+   "status": "admitted",
+   "query": "I have an existing airline reservation booked under the confirmation code Z7GOZK, and I\u2019ve been going back and forth about adjusting my upcoming travel arrangements lately.",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "indirect_intent",
+    "family": "intention",
+    "mask_kind": "oblique",
+    "kinds": [
+     "oblique"
+    ],
+    "components": [
+     "indirect_intent"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": false,
+    "oblique": true,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:cancel_reservation:reservation_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:cancel_reservation:reservation_id",
+       "=",
+       "\"Z7GOZK\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "8d9ebde1bce95b92"
+   },
+   "signature": {
+    "rule": "oblique",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 0.6,
+   "root_conditions": [
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"Z7GOZK\""
+    ]
+   ],
+   "writes": [
+    "cancel_reservation"
+   ]
+  },
+  {
+   "tree": "fb3c80ff6119f52a",
+   "strategy": "contextual_irrelevance",
+   "status": "admitted",
+   "query": "I spent the whole weekend trying to perfect my homemade matcha scone recipe, adjusting the ratio of white chocolate chips to dried cranberries at least four times because my roommate kept saying the first batches were either too sweet or not crumbly enough. I also stopped by the neighborhood plant shop yesterday and picked up a tiny variegated pothos that I\u2019m planning to hang in my kitchen window, since the last succulent I kept there got too much direct sun and shriveled up last month. Oh, and I binged the first three episodes of that new cozy travel documentary about small coastal towns in Portugal last night, and now I\u2019m already daydreaming about booking a leisure trip there sometime next year once I sort out my current travel mess. I need to cancel the reservation under confirmation code Z7GOZK, can you help me with that?",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "contextual_irrelevance",
+    "family": "intention",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "contextual_irrelevance"
+    ],
+    "governing_kind": "noise",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [],
+    "noise": true,
+    "oblique": false,
+    "offtopic_span": "I spent the whole weekend trying to perfect my homemade matcha scone recipe, adjusting the ratio of white chocolate chips to dried cranberries at least four times because my roommate kept saying the first batches were either too sweet or not crumbly enough. I also stopped by the neighborhood plant shop yesterday and picked up a tiny variegated pothos that I\u2019m planning to hang in my kitchen window, since the last succulent I kept there got too much direct sun and shriveled up last month. Oh, and I binged the first three episodes of that new cozy travel documentary about small coastal towns in Portugal last night, and now I\u2019m already daydreaming about booking a leisure trip there sometime next year once I sort out my current travel mess.",
+    "retained": [
+     "arg:0:cancel_reservation:reservation_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [
+     [
+      [
+       "arg:0:cancel_reservation:reservation_id",
+       "=",
+       "\"Z7GOZK\""
+      ]
+     ]
+    ],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "b2ca5366d4f08f07"
+   },
+   "signature": {
+    "rule": "noise",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 1,
+    "true_card": 1,
+    "readings": 1
+   },
+   "attempts": 2,
+   "sec": 0.5,
+   "root_conditions": [
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"Z7GOZK\""
+    ]
+   ],
+   "writes": [
+    "cancel_reservation"
+   ]
+  },
+  {
+   "tree": "fb3c80ff6119f52a",
+   "strategy": "irrelevant_information",
+   "status": "admitted",
+   "query": "I was really looking forward to trying the in-flight matcha shortbread I saw advertised last month, can you please cancel the reservation under confirmation code Z7GOZK?",
+   "mask": {
+    "pipeline": "v2",
+    "strategy_id": "irrelevant_information",
+    "family": "parameter",
+    "mask_kind": "noise",
+    "kinds": [
+     "noise"
+    ],
+    "components": [
+     "irrelevant_information"
+    ],
+    "governing_kind": "falsify",
+    "substituted": [],
+    "presupposed": [],
+    "withheld": [],
+    "marked": [],
+    "ambiguous": [],
+    "extras": [
+     {
+      "text": "I was really looking forward to trying the in-flight matcha shortbread I saw advertised last month",
+      "condition": null
+     }
+    ],
+    "noise": false,
+    "oblique": false,
+    "offtopic_span": null,
+    "retained": [
+     "arg:0:cancel_reservation:reservation_id"
+    ],
+    "hidden_slots": [],
+    "literal_readings": [],
+    "extractor_agreement": true,
+    "attempt": 1,
+    "spec_id": "316bc4d71b5456b2"
+   },
+   "signature": {
+    "verdict": "ok_pragmatic_extra",
+    "executable": false,
+    "readings": 0,
+    "note": "extra detail is not expressible as a condition in this domain; string checks only"
+   },
+   "attempts": 2,
+   "sec": 0.3,
+   "root_conditions": [
+    [
+     "arg:0:cancel_reservation:reservation_id",
+     "=",
+     "\"Z7GOZK\""
+    ]
+   ],
+   "writes": [
+    "cancel_reservation"
+   ]
+  }
+ ]
+}

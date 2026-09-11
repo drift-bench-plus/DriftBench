@@ -1,0 +1,199 @@
+{
+ "adapter": "webshop",
+ "cluster": "body care",
+ "fidelity_notes": [],
+ "goal_idx": 163,
+ "ground_truth": {
+  "cardinality": 31,
+  "hash": "6a67e9ccffd0e987ab81e7d33591164c",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B000HGIQRG\",[[\"size\",\"4 ounce (pack of 6)\"]]]",
+   "[\"B000ODNSR0\",[[\"size\",\"12 ounce pack of 3\"]]]",
+   "[\"B000URYTTQ\",[[\"size\",\"pack of 3\"]]]",
+   "[\"B00171ETM6\",[[\"size\",\"20 ounce (pack of 2)\"]]]",
+   "[\"B001ET7E8M\",[[\"size\",\"8 ounce, 2-pack\"]]]",
+   "[\"B00ECV6E0S\",[[\"size\",\"3.5 ounce (pack of 3)\"]]]",
+   "[\"B00X5JR1RS\",[[\"size\",\"3.5 ounce (pack of 3)\"]]]",
+   "[\"B0124PRYOI\",[[\"size\",\"4.5 ounce (pack of 1)\"]]]",
+   "[\"B016OPV3GO\",[[\"size\",\"5 ounce (pack of 2)\"]]]",
+   "[\"B0177DRIEI\",[[\"size\",\"4.5 ounce (pack of 2)\"]]]",
+   "[\"B01HOHBDT8\",[[\"size\",\"pack of 3\"]]]",
+   "[\"B01MUQDBOL\",[[\"size\",\"2 ounce (pack of 12)\"]]]",
+   "[\"B01N32ZNU4\",[[\"size\",\"2 ounce (pack of 1)\"]]]",
+   "[\"B01N8QHSED\",[[\"size\",\"15 ounce (pack of 1)\"]]]",
+   "[\"B075WDDKFL\",[[\"size\",\"4 ounce (pack of 3)\"]]]",
+   "[\"B0769XY12N\",[[\"size\",\"3.88 ounce (pack of 2)\"]]]",
+   "[\"B076CRXSNY\",[[\"size\",\"3.5 ounce (pack of 1)\"]]]",
+   "[\"B079YXPSMQ\",[[\"size\",\"4 ounce (pack of 5)\"]]]",
+   "[\"B07B3XCPJM\",[[\"unit count\",\"2\"]]]",
+   "[\"B07CKM95BZ\",[[\"size\",\"2 ounce (pack of 1)\"]]]",
+   "[\"B07P75D56V\",[[\"size\",\"2 ounce (pack of 1)\"]]]",
+   "[\"B07PJX9VGC\",[[\"size\",\"4.5 ounce (pack of 2)\"]]]",
+   "[\"B07YZTN7TX\",[[\"size\",\"4 ounce (pack of 1)\"]]]",
+   "[\"B086DCNBDV\",[[\"size\",\"5 ounce(pack of 3)\"]]]",
+   "[\"B0897ZLQZM\",[[\"size\",\"3 ounce (pack of 1)\"]]]",
+   "[\"B08C5MB8MY\",[[\"size\",\"8 ounce (pack of 1)\"]]]",
+   "[\"B08CYC876Y\",[[\"size\",\"2.5 ounce\"]]]",
+   "[\"B08W1PT99P\",[[\"size\",\"3.4 ounce (pack of 2)\"]]]",
+   "[\"B09379X15P\",[[\"size\",\"2 pack 16 ounce\"]]]",
+   "[\"B096T5R6L2\",[[\"size\",\"3.53 ounce bar (pack of 1)\"]]]",
+   "[\"B099N2SLT9\",[[\"size\",\"16 ounce (pack of 2)\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:sensitive skin",
+    "=",
+    "sensitive skin"
+   ],
+   [
+    "option:0",
+    "=",
+    "5 ounce (pack of 2)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "ebc59c4791a3b3b5"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "vagueness_subjectivity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:sensitive skin",
+     "=",
+     "sensitive skin"
+    ],
+    [
+     "option:0",
+     "=",
+     "5 ounce (pack of 2)"
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:sensitive skin",
+   "option:0"
+  ],
+  "spec_id": "052a6af8410e4ae7",
+  "strategy_id": "vagueness_subjectivity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for body care products suitable for sensitive skin, in the 5 ounce pack of 2 option, at a reasonable price.",
+ "render_attempts": 1,
+ "sample_id": "4308c0f0dbb186f7",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the body care instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b7549c1d6038c0f0"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the body care instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e528bc01f86f4414"
+  },
+  {
+   "announcement": "Also, it needs to be argan oil.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "547897455a150083"
+  },
+  {
+   "announcement": "Also, it needs to be eco friendly.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bc549870c547285b"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5b88f5bbdf241084"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d0dd6523a36e6dc0"
+  },
+  {
+   "announcement": "Actually, make it 10 fl oz (pack of 1) instead of 5 ounce (pack of 2).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "26ee8b7fe1f43748"
+  },
+  {
+   "announcement": "Actually, make it 1.7 fl oz (pack of 1) instead of 5 ounce (pack of 2).",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "98e9afc45482c766"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 36,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 31,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need a soap that is for sensitive skin and that comes in a pack of two.",
+ "split": "test",
+ "strategy_ids": [
+  "vagueness_subjectivity"
+ ],
+ "tree_id": "8be3003d9fe131a5",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

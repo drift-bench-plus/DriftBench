@@ -1,0 +1,237 @@
+{
+ "sample_id": "a38152ceadfb82d4",
+ "tree_id": "afd276490054ad37",
+ "adapter": "webshop",
+ "cluster": "women's jeans",
+ "goal_idx": 187,
+ "split": "test",
+ "source_instruction": "i'm looking for a wide leg jeans with regular fit and tummy control. also, choose 3x large zz-zm black colored one.",
+ "query": "Hey, can you help me pick out a nice pair of women\u2019s jeans? I need them to be regular fit with tummy control, and I want them in that zz-zmblack color in a 3X-large size. I\u2019m looking for a good price, nothing too crazy, and I\u2019d really like a cut that feels nice and roomy through the legs, y\u2019know?",
+ "strategy_ids": [
+  "vagueness_subjectivity",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "vagueness_subjectivity+insufficient_information",
+  "family": "expression+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "withhold"
+  ],
+  "components": [
+   "vagueness_subjectivity",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "vagueness_subjectivity": "price_upper",
+   "insufficient_information": "attr:wide leg"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "attr:wide leg"
+  ],
+  "marked": [
+   [
+    "price_upper",
+    "vague"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "retained": [
+   "attr:regular fit",
+   "attr:tummy control",
+   "option:0",
+   "option:1"
+  ],
+  "hidden_slots": [
+   "attr:wide leg",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:regular fit",
+     "=",
+     "regular fit"
+    ],
+    [
+     "attr:tummy control",
+     "=",
+     "tummy control"
+    ],
+    [
+     "option:0",
+     "=",
+     "zz-zmblack"
+    ],
+    [
+     "option:1",
+     "=",
+     "3x-large"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 3,
+  "spec_id": "fc24a3401a0632d8"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 14,
+  "lit_card": 27,
+  "components": {
+   "vagueness_subjectivity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 25,
+    "true_card": 14,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 16,
+    "true_card": 14,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 3,
+ "hidden_intent": {
+  "intent_id": "5bd22867d5ca40ec",
+  "conditions": [
+   [
+    "attr:regular fit",
+    "=",
+    "regular fit"
+   ],
+   [
+    "attr:tummy control",
+    "=",
+    "tummy control"
+   ],
+   [
+    "attr:wide leg",
+    "=",
+    "wide leg"
+   ],
+   [
+    "option:0",
+    "=",
+    "zz-zmblack"
+   ],
+   [
+    "option:1",
+    "=",
+    "3x-large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "attr:wide leg",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 14,
+  "value": [
+   "[\"B082SZDTBD\",[[\"color\",\"zz-zmblack\"],[\"size\",\"large\"]]]",
+   "[\"B0831NKRD1\",[[\"color\",\"z-black\"],[\"size\",\"large\"]]]",
+   "[\"B0862B9PRX\",[[\"color\",\"z-azblack\"],[\"size\",\"large\"]]]",
+   "[\"B08TRLG75L\",[[\"color\",\"a3-black\"],[\"size\",\"large\"]]]",
+   "[\"B09FY8BW8C\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09G3CKQTK\",[[\"color\",\"z-black\"],[\"size\",\"large\"]]]",
+   "[\"B09NL53BGX\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09NW1GRCX\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09PDVZTC2\",[[\"color\",\"z-xablack\"],[\"size\",\"large\"]]]",
+   "[\"B09Q6KSK33\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09QS643MZ\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09R78GYSC\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09R9Z4FTF\",[[\"color\",\"black\"],[\"size\",\"large\"]]]",
+   "[\"B09S3T5D9P\",[[\"color\",\"black\"],[\"size\",\"large\"]]]"
+  ],
+  "hash": "938126760c08a4a95f65b0f8dd2b933d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "3e364b66ebaf1ae0",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's jeans instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f7c6a7ddaa9569bc",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the women's jeans instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ccab9a04e2f2b298",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be faux fur."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "ff16305f7d17fa18",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be cover ups."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9b89ab0a3eddbe8b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c65173f379274efc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "748bbbfc86394322",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 grey instead of zz-zmblack."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "efbf63abfbaa79e6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 yellow instead of zz-zmblack."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

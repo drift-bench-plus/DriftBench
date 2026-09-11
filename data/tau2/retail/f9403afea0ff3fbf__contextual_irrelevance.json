@@ -1,0 +1,126 @@
+{
+ "sample_id": "f9403afea0ff3fbf__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "f9403afea0ff3fbf",
+ "query": "My sourdough starter finally doubled in size this morning after I fed it twice a day for a whole week, I\u2019m so excited to bake my first loaf of crusty bread tomorrow. I also just picked up that new indoor cat tree I ordered last week, and my kitten has been zooming up and down it nonstop for the past hour, she loves it way more than I thought she would. Oh, and I finally got around to watching that popular fantasy series everyone\u2019s been talking about, the season finale had such a wild plot twist I didn\u2019t see coming at all. But anyway, I need to request returns for two of my delivered orders. For order #W5490111, I\u2019d like to return items 4579334072, 1421289881, 6117189161 and 4947717507, with the refund going to credit_card_3124723. For order #W7387996, I want to return item 5796612084, please send that refund to paypal_9497703.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "My sourdough starter finally doubled in size this morning after I fed it twice a day for a whole week, I\u2019m so excited to bake my first loaf of crusty bread tomorrow. I also just picked up that new indoor cat tree I ordered last week, and my kitten has been zooming up and down it nonstop for the past hour, she loves it way more than I thought she would. Oh, and I finally got around to watching that popular fantasy series everyone\u2019s been talking about, the season finale had such a wild plot twist I didn\u2019t see coming at all. But anyway,",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id",
+   "arg:1:return_delivered_order_items:item_ids",
+   "arg:1:return_delivered_order_items:order_id",
+   "arg:1:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"4579334072\",\"1421289881\",\"6117189161\",\"4947717507\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W5490111\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_3124723\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:item_ids",
+     "=",
+     "[\"5796612084\"]"
+    ],
+    [
+     "arg:1:return_delivered_order_items:order_id",
+     "=",
+     "\"#W7387996\""
+    ],
+    [
+     "arg:1:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"paypal_9497703\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"4579334072\",\"1421289881\",\"6117189161\",\"4947717507\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W5490111\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_3124723\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:item_ids",
+    "=",
+    "[\"5796612084\"]"
+   ],
+   [
+    "arg:1:return_delivered_order_items:order_id",
+    "=",
+    "\"#W7387996\""
+   ],
+   [
+    "arg:1:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"paypal_9497703\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,206 @@
+{
+ "sample_id": "82f6f1d91acece74",
+ "tree_id": "5899d060122a55a0",
+ "adapter": "webshop",
+ "cluster": "furniture sets",
+ "goal_idx": 56,
+ "split": "test",
+ "source_instruction": "i want a super soft jay franco disney minnie mouse twin bed set.",
+ "query": "I\u2019m browsing the furniture sets section right now, and I\u2019ve heard the super soft twin options are always the coziest pick for a small bedroom setup. My roommate mentioned she grabbed something similar a while back and it worked out perfectly for her space. I don\u2019t really have a clear number in mind for what makes sense to spend, honestly.",
+ "strategy_ids": [
+  "indirect_intent",
+  "insufficient_information"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+insufficient_information",
+  "family": "intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "indirect_intent",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": false,
+  "oblique": true,
+  "offtopic_span": null,
+  "retained": [
+   "attr:super soft",
+   "option:0"
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:super soft",
+     "=",
+     "super soft"
+    ],
+    [
+     "option:0",
+     "=",
+     "twin"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "ecb18e262673080d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 26,
+  "lit_card": 28,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 28,
+    "true_card": 26,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "b61ee25dbfa1ae5c",
+  "conditions": [
+   [
+    "attr:super soft",
+    "=",
+    "super soft"
+   ],
+   [
+    "option:0",
+    "=",
+    "twin"
+   ],
+   [
+    "price_upper",
+    "<=",
+    100
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 26,
+  "value": [
+   "[\"B00CWCUTVE\",[[\"size\",\"twin | twin xl\"]]]",
+   "[\"B00Q7OAKV2\",[[\"size\",\"twin\"]]]",
+   "[\"B01L90K32E\",[[\"size\",\"twin\"]]]",
+   "[\"B01NBVU4D6\",[[\"size\",\"twin\"]]]",
+   "[\"B073Q36J45\",[[\"size\",\"twin\"]]]",
+   "[\"B0756DPJDV\",[[\"size\",\"twin\"]]]",
+   "[\"B076X4M2QX\",[[\"size\",\"twin\"]]]",
+   "[\"B0778S9QW7\",[[\"size\",\"twin\"]]]",
+   "[\"B077KJ8K99\",[[\"size\",\"twin\"]]]",
+   "[\"B0785KGPB6\",[[\"size\",\"twin\"]]]",
+   "[\"B07G2SNWHD\",[[\"size\",\"twin\"]]]",
+   "[\"B07G9P3XHM\",[[\"size\",\"twin\"]]]",
+   "[\"B07KKH48DG\",[[\"size\",\"twin size\"]]]",
+   "[\"B07PYFK5BB\",[[\"color\",\"batman emblem comforter twin 68'' x 86''\"]]]",
+   "[\"B07QMCZB76\",[[\"size\",\"twin(68-by-88-inches)\"]]]",
+   "[\"B07RLQYCSC\",[[\"size\",\"twin\"]]]",
+   "[\"B07RRZ5GCK\",[[\"size\",\"twin\"]]]",
+   "[\"B07RT28DLG\",[[\"size\",\"twin\"]]]",
+   "[\"B07TSHZKL1\",[[\"size\",\"twin\"]]]",
+   "[\"B07TZL55G6\",[[\"size\",\"5 piece twin size\"]]]",
+   "[\"B08228LTKC\",[[\"size\",\"twin (flat sheets only)\"]]]",
+   "[\"B084C1B9MY\",[[\"size\",\"twin\"]]]",
+   "[\"B084ZXSD65\",[[\"size\",\"twin\"]]]",
+   "[\"B08539JP33\",[[\"size\",\"5 piece twin size\"]]]",
+   "[\"B08S9RPTNV\",[[\"size\",\"twin\"]]]",
+   "[\"B09CB4MXZN\",[[\"size\",\"(3 piece) twin size\"]]]"
+  ],
+  "hash": "d877fc362546d018ff5e724077da519d"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "0ae5c48b2903e9fa",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the furniture sets instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "974edfde024964de",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the furniture sets instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "7b8179935897d332",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be faux leather."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "caa736e1395318ea",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be white item."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "aa36a6f7f86fb9da",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ddb1cf3c2cc154d7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "bd8e7fa9d9f6abc7",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 04 dove grey instead of twin."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "f5d148477a59901e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 08 midnight black instead of twin."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

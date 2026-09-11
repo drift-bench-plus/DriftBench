@@ -1,0 +1,126 @@
+{
+ "sample_id": "8af6bdf264cfc8d7__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "8af6bdf264cfc8d7",
+ "query": "I was out walking my golden retriever this morning and he managed to dig up a whole patch of wild strawberries in the park, they were so tiny and sweet I popped a few in my mouth right there. On the way home I stopped at that new little bakery on 5th Street and picked up a sourdough loaf, their garlic butter spread is honestly the best I\u2019ve ever had, I could eat the whole jar in one sitting. I also spent last night binging that new space drama show everyone\u2019s talking about, the season finale cliffhanger was so wild I stayed up an extra hour just reading fan theories about what might happen next. Anyway, I\u2019m having some issues with my phone service right now, I have airplane mode turned on, my network preferences are set incorrectly, both of the permissions for the app I\u2019m trying to use are disabled, I\u2019ve gone over my data usage limit, my SIM card isn\u2019t seated properly, I\u2019m currently abroad and have roaming turned off, can you help me figure out how to fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was out walking my golden retriever this morning and he managed to dig up a whole patch of wild strawberries in the park, they were so tiny and sweet I popped a few in my mouth right there. On the way home I stopped at that new little bakery on 5th Street and picked up a sourdough loaf, their garlic butter spread is honestly the best I\u2019ve ever had, I could eat the whole jar in one sitting. I also spent last night binging that new space drama show everyone\u2019s talking about, the season finale cliffhanger was so wild I stayed up an extra hour just reading fan theories about what might happen next.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:break_app_both_permissions",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card",
+   "fault:user_abroad_roaming_disabled_on"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_on",
+     "=",
+     "user_abroad_roaming_disabled_on"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_on",
+    "=",
+    "user_abroad_roaming_disabled_on"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

@@ -1,0 +1,225 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's pants",
+ "fidelity_notes": [],
+ "goal_idx": 127,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "561bcd1810ae256c42a8ea0b1b86c92a",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08RRY7KXD\",[[\"color\",\"s02-multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B08X73254N\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B094975Y71\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09KTVWQ5V\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09MLQPB3K\",[[\"color\",\"a01-multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09NNWRSPK\",[[\"color\",\"1#multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09P8RPSGD\",[[\"color\",\"a03#multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09PC442MZ\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09PC4654F\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09PLBLJHP\",[[\"color\",\"169-multicolor\"],[\"size\",\"large\"]]]",
+   "[\"B09Q85RK7L\",[[\"color\",\"multicolor\"],[\"size\",\"large\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:slim fit",
+    "=",
+    "slim fit"
+   ],
+   [
+    "option:0",
+    "=",
+    "multicolor"
+   ],
+   [
+    "option:1",
+    "=",
+    "xx-large"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "c1d57292989059b8"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "multicolor"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ],
+    "surface": "fun print"
+   }
+  ],
+  "attempt": 1,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:slim fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "option:0",
+     "=",
+     "multicolor"
+    ],
+    [
+     "option:1",
+     "=",
+     "xx-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ],
+   [
+    [
+     "attr:slim fit",
+     "=",
+     "slim fit"
+    ],
+    [
+     "option:1",
+     "=",
+     "xx-large"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:slim fit",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "209b4c534e3d044e",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for women’s pants that are slim fit, come in a fun print, size xx-large, and are under $30—can you find me some that are light?",
+ "render_attempts": 1,
+ "sample_id": "0595cfc73c542c18",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's pants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "0459ef6c313962b8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's pants instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e3cac59d0b62acd"
+  },
+  {
+   "announcement": "Also, it needs to be tunic tops.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4e83660f0c5f8109"
+  },
+  {
+   "announcement": "Also, it needs to be elastic closure.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cf21843ee57323d1"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "2f0992e20654e84a"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d7d58581f7676388"
+  },
+  {
+   "announcement": "Actually, make it #01-black instead of multicolor.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1561f63c739a13c4"
+  },
+  {
+   "announcement": "Actually, make it #01-blue instead of multicolor.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ef6390f2d7e81553"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   11,
+   413
+  ],
+  "rule": "ambiguous",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need to buy some slim fit yoga pants. get the ones that are multicolered in xx large.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "76e72f31b5d9c067",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

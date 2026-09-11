@@ -1,0 +1,82 @@
+{
+ "sample_id": "90f0adc4f82f4fdf__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "90f0adc4f82f4fdf",
+ "query": "I was walking my golden retriever puppy this morning and he stopped to sniff a whole patch of wild clover by the sidewalk, he even tried to nibble a little white flower off one of the stems before I could stop him. Then on my way home I popped into the corner caf\u00e9 and got a lavender honey latte that was perfectly foamy on top, the barista even drew a little heart in the foam this time. I just got home and realized something's off with my phone, so I wanted to reach out for help. My airplane mode is turned on right now, and I need to break both permissions for this app I have installed.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever puppy this morning and he stopped to sniff a whole patch of wild clover by the sidewalk, he even tried to nibble a little white flower off one of the stems before I could stop him. Then on my way home I popped into the corner caf\u00e9 and got a lavender honey latte that was perfectly foamy on top, the barista even drew a little heart in the foam this time. I just got home and realized something's off with my phone, so I wanted to reach out for help.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:break_app_both_permissions"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:break_app_both_permissions",
+     "=",
+     "break_app_both_permissions"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:break_app_both_permissions",
+    "=",
+    "break_app_both_permissions"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

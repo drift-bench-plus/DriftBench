@@ -1,0 +1,187 @@
+{
+ "adapter": "webshop",
+ "cluster": "window coverings",
+ "fidelity_notes": [],
+ "goal_idx": 439,
+ "ground_truth": {
+  "cardinality": 22,
+  "hash": "4b331b5b0d28401664446caf1945de3d",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B01INGEKN0\",[[\"color\",\"cream\"]]]",
+   "[\"B01M9IRS20\",[[\"color\",\"cream\"]]]",
+   "[\"B06WW48MCF\",[[\"color\",\"peach cream\"]]]",
+   "[\"B06ZYTNYYC\",[[\"color\",\"cream red\"]]]",
+   "[\"B071FWQ9CW\",[[\"color\",\"cream tan\"]]]",
+   "[\"B072DWFLDR\",[[\"color\",\"cream tan\"]]]",
+   "[\"B0743KQWP2\",[[\"color\",\"cream pink\"]]]",
+   "[\"B07B69784T\",[[\"color\",\"pink cream\"]]]",
+   "[\"B07FMBPB68\",[[\"color\",\"cream teal\"]]]",
+   "[\"B07H3HFGVG\",[[\"color\",\"adorn cream (sheer)\"]]]",
+   "[\"B07VZLMXCP\",[[\"color\",\"cream\"]]]",
+   "[\"B07Y39ZP71\",[[\"color\",\"pink cream\"]]]",
+   "[\"B0833DHKSR\",[[\"color\",\"cream\"]]]",
+   "[\"B089Q361F2\",[[\"color\",\"cream\"]]]",
+   "[\"B08BNCY5GD\",[[\"color\",\"ivory cream\"]]]",
+   "[\"B08J9XVK69\",[[\"color\",\"cream\"]]]",
+   "[\"B08Q846GP6\",[[\"color\",\"cream\"]]]",
+   "[\"B08RRK6Q9G\",[[\"color\",\"both sides same color-082 yolk cream\"]]]",
+   "[\"B08YJH4Y14\",[[\"color\",\"cream\"]]]",
+   "[\"B09JZ84S8D\",[[\"color\",\"creamy\"]]]",
+   "[\"B09KV26B8S\",[[\"color\",\"creamy\"]]]",
+   "[\"B09NBQ9WG3\",[[\"color\",\"creamy-white\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "creamy"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "intent_id": "4db0c3c46df0f0be"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "insufficient_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "parameter",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "price_upper"
+  ],
+  "kinds": [
+   "withhold"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "living room"
+    ],
+    [
+     "option:0",
+     "=",
+     "creamy"
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "withhold",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:living room",
+   "option:0"
+  ],
+  "spec_id": "c823de44de5012d2",
+  "strategy_id": "insufficient_information",
+  "substituted": [],
+  "withheld": [
+   "price_upper"
+  ]
+ },
+ "misalignments": 1,
+ "query": "I’m looking for creamy window coverings for my living room, can you help me find some options?",
+ "render_attempts": 1,
+ "sample_id": "7a7724447274e710",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the window coverings instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "4320bc1a7db3f1da"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the window coverings instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "55eaa6a799a5c634"
+  },
+  {
+   "announcement": "Also, it needs to be high density.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "639dcf06b345290c"
+  },
+  {
+   "announcement": "Also, it needs to be super soft.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a7d407f808aa72e2"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1d16325d6d864c63"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cf1c99b30325c198"
+  },
+  {
+   "announcement": "Actually, make it #13 instead of creamy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "25cc1a0cd59fde33"
+  },
+  {
+   "announcement": "Actually, make it #08 instead of creamy.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "e02055f9b8408550"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 43,
+  "ok": true,
+  "rule": "withheld",
+  "true_card": 22,
+  "verdict": "ok"
+ },
+ "source_instruction": "i need creamy shades for the living room.",
+ "split": "test",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "tree_id": "c840069a83637d0f",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

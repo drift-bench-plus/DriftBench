@@ -1,0 +1,203 @@
+{
+ "adapter": "webshop",
+ "cluster": "film photography",
+ "fidelity_notes": [],
+ "goal_idx": 383,
+ "ground_truth": {
+  "cardinality": 27,
+  "hash": "af89e01ab813928ab1bf5112e25d1b9c",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B075CXSFKK\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B075S4JSMJ\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B075S7BMFD\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B075S8W8QT\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B075SBWSVP\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B076J6YDYX\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07BMX5D9H\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07DXRTFVH\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07FPX3XJD\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07G32DPBJ\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07JW8KJP8\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07KLX2JD3\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07KP5R1QV\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07KR6G587\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07KTZRJZY\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07KVHC1YV\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07N1DMVXJ\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07NRBDZ4R\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B07SQ6846S\",[[\"size\",\"8x6.5ft-vinyl\"]]]",
+   "[\"B07V3CQLDY\",[[\"size\",\"8x6.5ft-vinyl\"]]]",
+   "[\"B07VHHCFM6\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B089GRDSCZ\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B08MJ7Q4LM\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B08MZQ8GBF\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B08R3H9C5M\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B08R3K4B35\",[[\"size\",\"8x6.5ft\"]]]",
+   "[\"B09LHJ16Y4\",[[\"size\",\"8x6\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy carry",
+    "=",
+    "easy carry"
+   ],
+   [
+    "attr:high resolution",
+    "=",
+    "high resolution"
+   ],
+   [
+    "option:0",
+    "=",
+    "8x6.5ft"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "c69a800865cdb5ba"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "insufficient_information"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "parameter",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "withhold"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy carry",
+     "=",
+     "easy carry"
+    ],
+    [
+     "attr:high resolution",
+     "=",
+     "high resolution"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "withhold",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:easy carry",
+   "attr:high resolution",
+   "price_upper"
+  ],
+  "spec_id": "2e1382d33bcd995b",
+  "strategy_id": "insufficient_information",
+  "substituted": [],
+  "withheld": [
+   "option:0"
+  ]
+ },
+ "misalignments": 1,
+ "query": "I'm looking for a film photography item that's easy to carry and has high resolution, with a price limit of $20.",
+ "render_attempts": 1,
+ "sample_id": "9be1de569addf34b",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the film photography instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1effb6a3036c09c1"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the film photography instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "6a2fc50f100c014b"
+  },
+  {
+   "announcement": "Also, it needs to be digital photography.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ab24a4d61f7a5617"
+  },
+  {
+   "announcement": "Also, it needs to be price_band under_25.",
+   "gt_moved": false,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d8062b1bef2d7f60"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "33b23cb36b85b425"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7d8fd24a25219c7d"
+  },
+  {
+   "announcement": "Actually, make it 10.6.5ft instead of 8x6.5ft.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "62c3b87e69ee2d17"
+  },
+  {
+   "announcement": "Actually, make it 15x10ft instead of 8x6.5ft.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "66178ff6181360cc"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 189,
+  "ok": true,
+  "rule": "withheld",
+  "true_card": 27,
+  "verdict": "ok"
+ },
+ "source_instruction": "camera is easy carry and it's high resolution photo are there ,also size:8x6.5ft.",
+ "split": "test",
+ "strategy_ids": [
+  "insufficient_information"
+ ],
+ "tree_id": "5ce5fb471d0a0706",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

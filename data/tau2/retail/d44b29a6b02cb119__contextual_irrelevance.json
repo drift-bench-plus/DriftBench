@@ -1,0 +1,93 @@
+{
+ "sample_id": "d44b29a6b02cb119__contextual_irrelevance",
+ "domain": "retail",
+ "tree_id": "d44b29a6b02cb119",
+ "query": "I just got back from walking my dog this morning, he chased a squirrel all the way across the park and even knocked over a kid's bubble machine, I felt so bad I ended up buying the family a new pack of bubble solution to apologize. Then on the way home I stopped at the coffee shop and they gave me the wrong drink, I ordered an iced oat milk latte but got a hot caramel macchiato instead, it was way too sweet for my taste. Oh right, I actually reached out because I need to return an item from my delivered order #W4689314, the item I want to return is 5996159312, and I'd like the refund to go back to my credit_card_8105988 please.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from walking my dog this morning, he chased a squirrel all the way across the park and even knocked over a kid's bubble machine, I felt so bad I ended up buying the family a new pack of bubble solution to apologize. Then on the way home I stopped at the coffee shop and they gave me the wrong drink, I ordered an iced oat milk latte but got a hot caramel macchiato instead, it was way too sweet for my taste.",
+  "retained": [
+   "arg:0:return_delivered_order_items:item_ids",
+   "arg:0:return_delivered_order_items:order_id",
+   "arg:0:return_delivered_order_items:payment_method_id"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "arg:0:return_delivered_order_items:item_ids",
+     "=",
+     "[\"5996159312\"]"
+    ],
+    [
+     "arg:0:return_delivered_order_items:order_id",
+     "=",
+     "\"#W4689314\""
+    ],
+    [
+     "arg:0:return_delivered_order_items:payment_method_id",
+     "=",
+     "\"credit_card_8105988\""
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "arg:0:return_delivered_order_items:item_ids",
+    "=",
+    "[\"5996159312\"]"
+   ],
+   [
+    "arg:0:return_delivered_order_items:order_id",
+    "=",
+    "\"#W4689314\""
+   ],
+   [
+    "arg:0:return_delivered_order_items:payment_method_id",
+    "=",
+    "\"credit_card_8105988\""
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_retail",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

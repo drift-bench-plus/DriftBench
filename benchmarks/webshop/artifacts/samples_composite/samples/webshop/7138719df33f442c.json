@@ -1,0 +1,199 @@
+{
+ "sample_id": "7138719df33f442c",
+ "tree_id": "c71fbc9ba13aad92",
+ "adapter": "webshop",
+ "cluster": "hair treatment oils",
+ "goal_idx": 461,
+ "split": "test",
+ "source_instruction": "i need a 4oz size hair conditioner that has argan oil and is for damged hair.",
+ "query": "Ugh, I swear my neighbor\u2019s tabby keeps sneaking onto my balcony to knock over my potted mint, I had to move all my herb planters up to the highest shelf this morning and still found chewed leaves when I got home. Oh, and I burned my toast so bad the smoke alarm went off right as I was rushing out the door, I had to wave a dish towel at it for five whole minutes before it stopped beeping. Also, the corner boba shop messed up my order yesterday and gave me taro instead of matcha, I didn\u2019t even notice until I was already halfway to work. Anyway, I\u2019m looking for hair treatment oils with argan oil for damaged hair, grab that one size, and make sure it\u2019s under $70, yeah?",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear my neighbor\u2019s tabby keeps sneaking onto my balcony to knock over my potted mint, I had to move all my herb planters up to the highest shelf this morning and still found chewed leaves when I got home. Oh, and I burned my toast so bad the smoke alarm went off right as I was rushing out the door, I had to wave a dish towel at it for five whole minutes before it stopped beeping. Also, the corner boba shop messed up my order yesterday and gave me taro instead of matcha, I didn\u2019t even notice until I was already halfway to work.",
+  "retained": [
+   "attr:argan oil",
+   "attr:damaged hair",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:argan oil",
+     "=",
+     "argan oil"
+    ],
+    [
+     "attr:damaged hair",
+     "=",
+     "damaged hair"
+    ],
+    [
+     "price_upper",
+     "<=",
+     70
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d1bda2bb3e59592f"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 5,
+  "lit_card": 230,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 230,
+    "true_card": 5,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "7cc446afb81cc0ac",
+  "conditions": [
+   [
+    "attr:argan oil",
+    "=",
+    "argan oil"
+   ],
+   [
+    "attr:damaged hair",
+    "=",
+    "damaged hair"
+   ],
+   [
+    "option:0",
+    "=",
+    "120ml |  4 fl oz"
+   ],
+   [
+    "price_upper",
+    "<=",
+    70
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 5,
+  "value": [
+   "[\"B006QN9TFC\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+   "[\"B007CKMQOY\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+   "[\"B00E9YSADW\",[[\"size\",\"120ml |  4 fl oz\"]]]",
+   "[\"B07YF3LZVQ\",[[\"size\",\"3.4 fl oz.\"]]]",
+   "[\"B09PTXBSFM\",[[\"size\",\"4 fl.oz\"]]]"
+  ],
+  "hash": "354d5889c2fc75af4e08d016eaf58dcd"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "53e294edf352a6cf",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair treatment oils instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "7e6c178f1ef18663",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair treatment oils instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "9278ae29f0fa5b16",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dry hair."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e53fdf88345c4130",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be high quality."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "afce7dec83007497",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ce2acbabf6a922d6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "cd29b9bfaa7fe9b2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 11 ounce (pack of 1) instead of 120ml |  4 fl oz."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "e576d6729301f85f",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 12 ounce (pack of 1) instead of 120ml |  4 fl oz."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

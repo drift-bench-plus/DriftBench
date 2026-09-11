@@ -1,0 +1,1469 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B077T3SP3V",
+    "cluster": "beverages",
+    "name": "Wyler’s Light Singles-To-Go Sugar Free Drink Mix, Cherry, 8 CT Per Box (Pack of 1)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "fruit punch"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "0d38337340cca11181055d15b608b268",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00D3A828Q\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B077T3SP3V\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B07PGLHYB6\",[[\"flavor\",\"fruit punch\"]]]",
+     "[\"B07SXBW9ZC\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B086XHTQMS\",[[\"flavor name\",\"fruit-puch\"]]]",
+     "[\"B08L9S4K39\",[[\"flavor name\",\"fruit punch\"]]]",
+     "[\"B099H8D9XZ\",[[\"flavor name\",\"fruit-puch\"]]]",
+     "[\"B09GK16X81\",[[\"flavor name\",\"fruit punch\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "2398dab1f90987e2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B077T3SP3V",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "fruit punch"
+     ],
+     "name": "Wyler’s Light Singles-To-Go Sugar Free Drink Mix, Cherry, 8 CT Per Box (Pack of 1)",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes",
+     "query": "beverages"
+    }
+   },
+   "source_record": "a25c9d6c424dcb8b",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B07GBGZZLC",
+    "cluster": "beverages",
+    "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "lemon ginger"
+    ],
+    [
+     "option:1",
+     "=",
+     "2 ounce (pack of 36)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ],
+   "ground_truth": {
+    "hash": "344d6e67dda09e270b6f683d3e2d33c3",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07GBGZZLC\",[[\"flavor\",\"apple cider vinegar lemon ginger\"],[\"size\",\"36-pack\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "da047bca05a1a6e2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B07GBGZZLC",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [
+      "lemon ginger",
+      "2 ounce (pack of 36)"
+     ],
+     "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+     "price_upper": 60,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": "810cb0e894ab0f92",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B091WP1BT5",
+    "cluster": "beverages",
+    "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:lactose free",
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:lactose free",
+     "=",
+     "lactose free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "f08bf01d662050a8d20783485a95e2c3",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B019TUCOM8\",[]]",
+     "[\"B06XNRV1ZN\",[]]",
+     "[\"B079PHG9HB\",[]]",
+     "[\"B07DVRFHKT\",[]]",
+     "[\"B07FYPSNH8\",[]]",
+     "[\"B07PML33Q3\",[]]",
+     "[\"B07WSHWHQV\",[]]",
+     "[\"B08ZT1WNPL\",[]]",
+     "[\"B0918XPB2Q\",[]]",
+     "[\"B09493PT9N\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "29cdee4b73f86192",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B091WP1BT5",
+     "attributes": [
+      "gluten free",
+      "lactose free",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B091WP1BT5",
+    "cluster": "beverages",
+    "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:energy drink",
+    "attr:gluten free",
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:energy drink",
+     "=",
+     "energy drink"
+    ],
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "4eda2758087055d44df9f9f1abaeda52",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B008JA73RG\",[]]",
+     "[\"B012ADZGSA\",[]]",
+     "[\"B083Z8KYJT\",[]]",
+     "[\"B08PZDSTS1\",[]]",
+     "[\"B0929HT4T6\",[]]",
+     "[\"B0929L6X2K\",[]]",
+     "[\"B09493PT9N\",[]]",
+     "[\"B095ZY19W3\",[]]",
+     "[\"B09BJR3LQ2\",[]]",
+     "[\"B09BJYPMD5\",[]]",
+     "[\"B09JZZT2TR\",[]]",
+     "[\"B09PTMLSSZ\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f75160bdf4dd0d1f",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B091WP1BT5",
+     "attributes": [
+      "energy drink",
+      "gluten free",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B091WP1BT5",
+    "cluster": "beverages",
+    "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "01f96acfda9bda30f4f30ecbd215e7f4",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0000DC32S\",[]]",
+     "[\"B000BH1NR6\",[]]",
+     "[\"B000BH3K6I\",[]]",
+     "[\"B000CHIIUA\",[]]",
+     "[\"B000FV8LPU\",[]]",
+     "[\"B000O3D2KS\",[]]",
+     "[\"B001JK8P5M\",[]]",
+     "[\"B002HQSWJ6\",[]]",
+     "[\"B003948C04\",[]]",
+     "[\"B004EI1DXW\",[]]",
+     "[\"B004LCBR1Y\",[]]",
+     "[\"B004LK7IWS\",[]]",
+     "[\"B004LKEU0Q\",[]]",
+     "[\"B004LV4GBS\",[]]",
+     "[\"B004QXEYM2\",[]]",
+     "[\"B004QXMO7O\",[]]",
+     "[\"B005EGR96S\",[]]",
+     "[\"B005MR15G4\",[]]",
+     "[\"B0070AJMFC\",[]]",
+     "[\"B00748X58A\",[]]",
+     "[\"B00748X760\",[]]",
+     "[\"B008JA73RG\",[]]",
+     "[\"B00A2PRTMU\",[]]",
+     "[\"B00CLVXWTC\",[]]",
+     "[\"B00EAJ7UIW\",[]]",
+     "[\"B00H1QGH44\",[]]",
+     "[\"B00HS5AN8O\",[]]",
+     "[\"B00IED4YNE\",[]]",
+     "[\"B00IN9EXHQ\",[]]",
+     "[\"B00M1X58LU\",[]]",
+     "[\"B00PAQ7CQ4\",[]]",
+     "[\"B00PAQ7KS4\",[]]",
+     "[\"B00R60Q6W8\",[]]",
+     "[\"B00R61JRZU\",[]]",
+     "[\"B00RHSWXEY\",[]]",
+     "[\"B00U32D7AU\",[]]",
+     "[\"B00U32DT44\",[]]",
+     "[\"B00U32GBM6\",[]]",
+     "[\"B00U5FLIRE\",[]]",
+     "[\"B00U5FR0K8\",[]]",
+     "[\"B00W4SOSEA\",[]]",
+     "[\"B011ABPWOG\",[]]",
+     "[\"B011ABQE98\",[]]",
+     "[\"B012ADZGSA\",[]]",
+     "[\"B016L2A3BG\",[]]",
+     "[\"B016LHNC8M\",[]]",
+     "[\"B01796N5IG\",[]]",
+     "[\"B019TUCOM8\",[]]",
+     "[\"B01BO1STRE\",[]]",
+     "[\"B01CI57V2O\",[]]",
+     "[\"B01EVO7FR6\",[]]",
+     "[\"B01KMS37RC\",[]]",
+     "[\"B01M32Q21Y\",[]]",
+     "[\"B01M5F6KCV\",[]]",
+     "[\"B01MDRVJVP\",[]]",
+     "[\"B01MQ033DO\",[]]",
+     "[\"B01MZE5Y50\",[]]",
+     "[\"B01N99ANDH\",[]]",
+     "[\"B01NBTQG8P\",[]]",
+     "[\"B06XBRB8XV\",[]]",
+     "[\"B06XBS5319\",[]]",
+     "[\"B06XNJ7P97\",[]]",
+     "[\"B06XNRV1ZN\",[]]",
+     "[\"B06XW94P17\",[]]",
+     "[\"B071G976CP\",[]]",
+     "[\"B071WM815V\",[]]",
+     "[\"B072NH6B36\",[]]",
+     "[\"B07419F6KS\",[]]",
+     "[\"B0742KPKZD\",[]]",
+     "[\"B0749X7R9S\",[]]",
+     "[\"B074SQKP3T\",[]]",
+     "[\"B0756W745C\",[]]",
+     "[\"B075RC2MYY\",[]]",
+     "[\"B076BM2ZXD\",[]]",
+     "[\"B076CPF943\",[]]",
+     "[\"B076JL33G5\",[]]",
+     "[\"B0786YK9DJ\",[]]",
+     "[\"B079PHG9HB\",[]]",
+     "[\"B07BLZLKRX\",[]]",
+     "[\"B07D2LFHKR\",[]]",
+     "[\"B07DTNKRND\",[]]",
+     "[\"B07DVRFHKT\",[]]",
+     "[\"B07DZ1JD13\",[]]",
+     "[\"B07F3BY6S8\",[]]",
+     "[\"B07FYPSNH8\",[]]",
+     "[\"B07GFPT1X9\",[]]",
+     "[\"B07H5QZZSM\",[]]",
+     "[\"B07H8CMS8Y\",[]]",
+     "[\"B07HD8PTHL\",[]]",
+     "[\"B07J54MHMC\",[]]",
+     "[\"B07KFQ5WN3\",[]]",
+     "[\"B07KL71RG9\",[]]",
+     "[\"B07L4X38XD\",[]]",
+     "[\"B07L4YJ897\",[]]",
+     "[\"B07NZ6M515\",[]]",
+     "[\"B07PGQTY5N\",[]]",
+     "[\"B07PJ181K3\",[]]",
+     "[\"B07PML33Q3\",[]]",
+     "[\"B07Q6LDTWW\",[]]",
+     "[\"B07QBHYGYL\",[]]",
+     "[\"B07QR4BWZB\",[]]",
+     "[\"B07R81FV3L\",[]]",
+     "[\"B07RJTQ88X\",[]]",
+     "[\"B07SC175Y1\",[]]",
+     "[\"B07STMB2S3\",[]]",
+     "[\"B07T9GB8WD\",[]]",
+     "[\"B07T9GBCP5\",[]]",
+     "[\"B07TVKT1PB\",[]]",
+     "[\"B07VYHWF8M\",[]]",
+     "[\"B07W8XBZGZ\",[]]",
+     "[\"B07WBY7ZW1\",[]]",
+     "[\"B07WDYJWH4\",[]]",
+     "[\"B07WSHWHQV\",[]]",
+     "[\"B07YXB1M9R\",[]]",
+     "[\"B07YXGDMHG\",[]]",
+     "[\"B07ZXMXZF6\",[]]",
+     "[\"B082DKHYKZ\",[]]",
+     "[\"B082MPSR1R\",[]]",
+     "[\"B083D74DQJ\",[]]",
+     "[\"B083Z8KYJT\",[]]",
+     "[\"B0842BCXBK\",[]]",
+     "[\"B0842BTX2D\",[]]",
+     "[\"B084HLXLKG\",[]]",
+     "[\"B084KMVJXC\",[]]",
+     "[\"B084NV8ZJ3\",[]]",
+     "[\"B085XJR95K\",[]]",
+     "[\"B086GMKFYX\",[]]",
+     "[\"B086RR977W\",[]]",
+     "[\"B0875X8HYL\",[]]",
+     "[\"B087VW3KCD\",[]]",
+     "[\"B087YVBDT5\",[]]",
+     "[\"B088BQKV7V\",[]]",
+     "[\"B088XFCPR6\",[]]",
+     "[\"B088XFFXSV\",[]]",
+     "[\"B088Y6PGLW\",[]]",
+     "[\"B088YBQQH6\",[]]",
+     "[\"B08959NN62\",[]]",
+     "[\"B08B1VMWVV\",[]]",
+     "[\"B08BGQ8LV1\",[]]",
+     "[\"B08BNRF65G\",[]]",
+     "[\"B08CZQKRKX\",[]]",
+     "[\"B08DJD78L4\",[]]",
+     "[\"B08DYDRTV1\",[]]",
+     "[\"B08FGFDVY9\",[]]",
+     "[\"B08FV8RR9Y\",[]]",
+     "[\"B08GP451PQ\",[]]",
+     "[\"B08HQ4563F\",[]]",
+     "[\"B08HR6L7NB\",[]]",
+     "[\"B08HTR6M9M\",[]]",
+     "[\"B08HVLLMLY\",[]]",
+     "[\"B08HYMVDVF\",[]]",
+     "[\"B08JDVNG2R\",[]]",
+     "[\"B08K3KCCJP\",[]]",
+     "[\"B08K3KMZ3B\",[]]",
+     "[\"B08K3PNDV3\",[]]",
+     "[\"B08KDPSJYK\",[]]",
+     "[\"B08L827F48\",[]]",
+     "[\"B08LG9MN12\",[]]",
+     "[\"B08LGWPMH1\",[]]",
+     "[\"B08MYDBTQW\",[]]",
+     "[\"B08ND12G4C\",[]]",
+     "[\"B08NXTDCKV\",[]]",
+     "[\"B08NXV74VN\",[]]",
+     "[\"B08P9SKBH6\",[]]",
+     "[\"B08PZDSTS1\",[]]",
+     "[\"B08QW6W2FJ\",[]]",
+     "[\"B08R43V7XN\",[]]",
+     "[\"B08SJ6QMX3\",[]]",
+     "[\"B08TMCV5QV\",[]]",
+     "[\"B08V94QB25\",[]]",
+     "[\"B08VRN2X9Y\",[]]",
+     "[\"B08VRW875P\",[]]",
+     "[\"B08W21F5HG\",[]]",
+     "[\"B08W23C41D\",[]]",
+     "[\"B08WRCCVZH\",[]]",
+     "[\"B08XDPKZRT\",[]]",
+     "[\"B08XZXPK93\",[]]",
+     "[\"B08YWZMGM1\",[]]",
+     "[\"B08Z9T5D8T\",[]]",
+     "[\"B08Z9V1QYQ\",[]]",
+     "[\"B08ZBCSSGL\",[]]",
+     "[\"B08ZT1WNPL\",[]]",
+     "[\"B0912FMJMZ\",[]]",
+     "[\"B0912L9PTK\",[]]",
+     "[\"B09133G83G\",[]]",
+     "[\"B0915D8JJQ\",[]]",
+     "[\"B0917KB343\",[]]",
+     "[\"B0918XPB2Q\",[]]",
+     "[\"B091BK6L57\",[]]",
+     "[\"B091FFNM3T\",[]]",
+     "[\"B091PX9GL1\",[]]",
+     "[\"B091PXTP3M\",[]]",
+     "[\"B091PXV3XC\",[]]",
+     "[\"B091PXX19T\",[]]",
+     "[\"B091WP1BT5\",[]]",
+     "[\"B0929HT4T6\",[]]",
+     "[\"B0929L6X2K\",[]]",
+     "[\"B093B5SQ3V\",[]]",
+     "[\"B09493PT9N\",[]]",
+     "[\"B095FPR617\",[]]",
+     "[\"B095SYJPWT\",[]]",
+     "[\"B095XKXG92\",[]]",
+     "[\"B095ZY19W3\",[]]",
+     "[\"B096G58XK9\",[]]",
+     "[\"B096TKJDTK\",[]]",
+     "[\"B096WVC99P\",[]]",
+     "[\"B096Y9NPBR\",[]]",
+     "[\"B096YDNDTV\",[]]",
+     "[\"B096YP7VKG\",[]]",
+     "[\"B097CN6LKG\",[]]",
+     "[\"B098SQFFJR\",[]]",
+     "[\"B09972VLHF\",[]]",
+     "[\"B099XXLR94\",[]]",
+     "[\"B09BJR3LQ2\",[]]",
+     "[\"B09BJYPMD5\",[]]",
+     "[\"B09BSTSM5B\",[]]",
+     "[\"B09CLN9HV2\",[]]",
+     "[\"B09DND6V9Q\",[]]",
+     "[\"B09F2HDDKN\",[]]",
+     "[\"B09FNTKLD4\",[]]",
+     "[\"B09HNYDHRQ\",[]]",
+     "[\"B09HQ6BYK8\",[]]",
+     "[\"B09J1SSZDR\",[]]",
+     "[\"B09JHYGJZV\",[]]",
+     "[\"B09JL1PPBC\",[]]",
+     "[\"B09JV7W9RS\",[]]",
+     "[\"B09JXVR3W7\",[]]",
+     "[\"B09JZZT2TR\",[]]",
+     "[\"B09KCKMQH9\",[]]",
+     "[\"B09KVK6CF5\",[]]",
+     "[\"B09KY6JFZD\",[]]",
+     "[\"B09L7P8832\",[]]",
+     "[\"B09LZ2QQ6J\",[]]",
+     "[\"B09LZ2X6Y1\",[]]",
+     "[\"B09MC41T51\",[]]",
+     "[\"B09MC462KF\",[]]",
+     "[\"B09MC51NYR\",[]]",
+     "[\"B09MYHVRGP\",[]]",
+     "[\"B09NCH4XBQ\",[]]",
+     "[\"B09NRZYKYB\",[]]",
+     "[\"B09NS4L9CC\",[]]",
+     "[\"B09P22H48H\",[]]",
+     "[\"B09P2WZSXH\",[]]",
+     "[\"B09PFZ8WC1\",[]]",
+     "[\"B09PRD3G45\",[]]",
+     "[\"B09PTMLSSZ\",[]]",
+     "[\"B09QCGWBZW\",[]]",
+     "[\"B09QLCVQ2Q\",[]]",
+     "[\"B09QPMCZ4L\",[]]",
+     "[\"B09QRN8FQN\",[]]",
+     "[\"B09QSJSD9P\",[]]",
+     "[\"B09R5YDJ3D\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "366379d7242156c0",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B091WP1BT5",
+     "attributes": [
+      "gluten free"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B091WP1BT5",
+    "cluster": "beverages",
+    "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "bad09d99c4e545ad8955e09ecb0222b3",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0000DC32S\",[]]",
+     "[\"B000BH1NR6\",[]]",
+     "[\"B000BH3K6I\",[]]",
+     "[\"B000CHIIUA\",[]]",
+     "[\"B000FV8LPU\",[]]",
+     "[\"B000O3D2KS\",[]]",
+     "[\"B001JK8P5M\",[]]",
+     "[\"B002IYDXXC\",[]]",
+     "[\"B003948C04\",[]]",
+     "[\"B00401OY6Q\",[]]",
+     "[\"B004LCBR1Y\",[]]",
+     "[\"B004LK7IWS\",[]]",
+     "[\"B004LKEU0Q\",[]]",
+     "[\"B004LV4GBS\",[]]",
+     "[\"B004QXEYM2\",[]]",
+     "[\"B004QXMO7O\",[]]",
+     "[\"B005EGR96S\",[]]",
+     "[\"B005MR15G4\",[]]",
+     "[\"B0070AJMFC\",[]]",
+     "[\"B00748X58A\",[]]",
+     "[\"B00748X760\",[]]",
+     "[\"B008JA73RG\",[]]",
+     "[\"B00A2PRTMU\",[]]",
+     "[\"B00CLVXWTC\",[]]",
+     "[\"B00HS5AN8O\",[]]",
+     "[\"B00IED4YNE\",[]]",
+     "[\"B00IN9EXHQ\",[]]",
+     "[\"B00M1X58LU\",[]]",
+     "[\"B00PAQ7KS4\",[]]",
+     "[\"B00R60Q6W8\",[]]",
+     "[\"B00RHSWXEY\",[]]",
+     "[\"B00U32D7AU\",[]]",
+     "[\"B00U5FLIRE\",[]]",
+     "[\"B00U5FR0K8\",[]]",
+     "[\"B00W4SOSEA\",[]]",
+     "[\"B011ABPWOG\",[]]",
+     "[\"B011ABQE98\",[]]",
+     "[\"B012ADZGSA\",[]]",
+     "[\"B016L2A3BG\",[]]",
+     "[\"B016LHNC8M\",[]]",
+     "[\"B019TUCOM8\",[]]",
+     "[\"B01CI57V2O\",[]]",
+     "[\"B01JV3WI9C\",[]]",
+     "[\"B01M5F6KCV\",[]]",
+     "[\"B01MZE5Y50\",[]]",
+     "[\"B01NBTQG8P\",[]]",
+     "[\"B06XNRV1ZN\",[]]",
+     "[\"B06XR3JDJF\",[]]",
+     "[\"B06XW94P17\",[]]",
+     "[\"B071P6J1ZR\",[]]",
+     "[\"B071WM815V\",[]]",
+     "[\"B07238WLLR\",[]]",
+     "[\"B07238WLLT\",[]]",
+     "[\"B0742KPKZD\",[]]",
+     "[\"B0749X7R9S\",[]]",
+     "[\"B074JGJ6VC\",[]]",
+     "[\"B074PZXWGS\",[]]",
+     "[\"B074SQKP3T\",[]]",
+     "[\"B0756W745C\",[]]",
+     "[\"B075RC2MYY\",[]]",
+     "[\"B076BM2ZXD\",[]]",
+     "[\"B077XPNFQX\",[]]",
+     "[\"B079PHG9HB\",[]]",
+     "[\"B07BLZLKRX\",[]]",
+     "[\"B07BPBS29J\",[]]",
+     "[\"B07C2DFTF6\",[]]",
+     "[\"B07D2LFHKR\",[]]",
+     "[\"B07DVRFHKT\",[]]",
+     "[\"B07DZ1JD13\",[]]",
+     "[\"B07FYPSNH8\",[]]",
+     "[\"B07GPP5MDK\",[]]",
+     "[\"B07HW1BD1N\",[]]",
+     "[\"B07J9Q4RN1\",[]]",
+     "[\"B07KFQ5WN3\",[]]",
+     "[\"B07KL71RG9\",[]]",
+     "[\"B07NZ6M515\",[]]",
+     "[\"B07P3H1872\",[]]",
+     "[\"B07PGQTY5N\",[]]",
+     "[\"B07PJ181K3\",[]]",
+     "[\"B07PML33Q3\",[]]",
+     "[\"B07PMSL2Z8\",[]]",
+     "[\"B07Q6LDTWW\",[]]",
+     "[\"B07QBHYGYL\",[]]",
+     "[\"B07QR4BWZB\",[]]",
+     "[\"B07R81FV3L\",[]]",
+     "[\"B07RJTQ88X\",[]]",
+     "[\"B07S4P9CBS\",[]]",
+     "[\"B07STMB2S3\",[]]",
+     "[\"B07SVHDQ83\",[]]",
+     "[\"B07T9GB8WD\",[]]",
+     "[\"B07T9GBCP5\",[]]",
+     "[\"B07V6RYBTR\",[]]",
+     "[\"B07VYHWF8M\",[]]",
+     "[\"B07W4HW1L9\",[]]",
+     "[\"B07WBY7ZW1\",[]]",
+     "[\"B07WDYJWH4\",[]]",
+     "[\"B07WSHWHQV\",[]]",
+     "[\"B07YXGDMHG\",[]]",
+     "[\"B07ZXMXZF6\",[]]",
+     "[\"B0815Y3JJV\",[]]",
+     "[\"B082MPSR1R\",[]]",
+     "[\"B083D74DQJ\",[]]",
+     "[\"B083Z8KYJT\",[]]",
+     "[\"B0842BCXBK\",[]]",
+     "[\"B0842BTX2D\",[]]",
+     "[\"B084PZVCDP\",[]]",
+     "[\"B086GMKFYX\",[]]",
+     "[\"B086RR977W\",[]]",
+     "[\"B0875X8HYL\",[]]",
+     "[\"B087YVBDT5\",[]]",
+     "[\"B0888S4JF4\",[]]",
+     "[\"B088BQKV7V\",[]]",
+     "[\"B088RMJXM7\",[]]",
+     "[\"B088YBQQH6\",[]]",
+     "[\"B08B1VMWVV\",[]]",
+     "[\"B08B7QJ21D\",[]]",
+     "[\"B08CZQKRKX\",[]]",
+     "[\"B08DJD78L4\",[]]",
+     "[\"B08DYDRTV1\",[]]",
+     "[\"B08FV8RR9Y\",[]]",
+     "[\"B08GP451PQ\",[]]",
+     "[\"B08HL2VCVC\",[]]",
+     "[\"B08HTR6M9M\",[]]",
+     "[\"B08K3KCCJP\",[]]",
+     "[\"B08K3KMZ3B\",[]]",
+     "[\"B08K3PNDV3\",[]]",
+     "[\"B08KDPSJYK\",[]]",
+     "[\"B08MYDBTQW\",[]]",
+     "[\"B08ND12G4C\",[]]",
+     "[\"B08NTXN8K5\",[]]",
+     "[\"B08P9SKBH6\",[]]",
+     "[\"B08PZDSTS1\",[]]",
+     "[\"B08QW6W2FJ\",[]]",
+     "[\"B08R4V7PB9\",[]]",
+     "[\"B08SJ6QMX3\",[]]",
+     "[\"B08TMCV5QV\",[]]",
+     "[\"B08WJM8Z2V\",[]]",
+     "[\"B08XDPKZRT\",[]]",
+     "[\"B08XZXPK93\",[]]",
+     "[\"B08YHRY6PJ\",[]]",
+     "[\"B08YWZMGM1\",[]]",
+     "[\"B08Z31ZL1V\",[]]",
+     "[\"B08Z9T5D8T\",[]]",
+     "[\"B08Z9V1QYQ\",[]]",
+     "[\"B08ZBCSSGL\",[]]",
+     "[\"B08ZT1WNPL\",[]]",
+     "[\"B0912FMJMZ\",[]]",
+     "[\"B09133G83G\",[]]",
+     "[\"B0915D8JJQ\",[]]",
+     "[\"B0917KB343\",[]]",
+     "[\"B0918XPB2Q\",[]]",
+     "[\"B091FFNM3T\",[]]",
+     "[\"B091JD99S3\",[]]",
+     "[\"B091PX9GL1\",[]]",
+     "[\"B091PXTP3M\",[]]",
+     "[\"B091PXV3XC\",[]]",
+     "[\"B091PXX19T\",[]]",
+     "[\"B091WP1BT5\",[]]",
+     "[\"B0929HT4T6\",[]]",
+     "[\"B0929L6X2K\",[]]",
+     "[\"B092MZLG4B\",[]]",
+     "[\"B093B5SQ3V\",[]]",
+     "[\"B093QJLJSG\",[]]",
+     "[\"B09493PT9N\",[]]",
+     "[\"B095FPR617\",[]]",
+     "[\"B095ZY19W3\",[]]",
+     "[\"B096G58XK9\",[]]",
+     "[\"B096TKJDTK\",[]]",
+     "[\"B097CN6LKG\",[]]",
+     "[\"B098B4X53V\",[]]",
+     "[\"B098SQFFJR\",[]]",
+     "[\"B09972VLHF\",[]]",
+     "[\"B099BXTSDR\",[]]",
+     "[\"B099XXLR94\",[]]",
+     "[\"B09BJR3LQ2\",[]]",
+     "[\"B09BJYPMD5\",[]]",
+     "[\"B09BSTSM5B\",[]]",
+     "[\"B09CLN9HV2\",[]]",
+     "[\"B09GD8W58V\",[]]",
+     "[\"B09J1SSZDR\",[]]",
+     "[\"B09JHYGJZV\",[]]",
+     "[\"B09JL1PPBC\",[]]",
+     "[\"B09JV7W9RS\",[]]",
+     "[\"B09JZZT2TR\",[]]",
+     "[\"B09KVK6CF5\",[]]",
+     "[\"B09L7P8832\",[]]",
+     "[\"B09LRL7RQD\",[]]",
+     "[\"B09LZ2QQ6J\",[]]",
+     "[\"B09LZ2X6Y1\",[]]",
+     "[\"B09M3K9R34\",[]]",
+     "[\"B09MC41T51\",[]]",
+     "[\"B09MC462KF\",[]]",
+     "[\"B09MC51NYR\",[]]",
+     "[\"B09MF3WBG6\",[]]",
+     "[\"B09MWMQ5WW\",[]]",
+     "[\"B09NCH4XBQ\",[]]",
+     "[\"B09NRTYQ5L\",[]]",
+     "[\"B09NRZYKYB\",[]]",
+     "[\"B09P2WZSXH\",[]]",
+     "[\"B09P48HDMK\",[]]",
+     "[\"B09P6NXHMC\",[]]",
+     "[\"B09PG5GNQ9\",[]]",
+     "[\"B09PRD3G45\",[]]",
+     "[\"B09PTMLSSZ\",[]]",
+     "[\"B09QCGWBZW\",[]]",
+     "[\"B09QL9RKKJ\",[]]",
+     "[\"B09R1P72GN\",[]]",
+     "[\"B09R5YDJ3D\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "5f645c5db09e2157",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B091WP1BT5",
+     "attributes": [
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B091WP1BT5",
+    "cluster": "beverages",
+    "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     10
+    ]
+   ],
+   "ground_truth": {
+    "hash": "ee1294efa00996fbc17c983e4da214b5",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000O3D2KS\",[]]",
+     "[\"B0070AJMFC\",[]]",
+     "[\"B00748X58A\",[]]",
+     "[\"B00748X760\",[]]",
+     "[\"B00R60Q6W8\",[]]",
+     "[\"B00U5FLIRE\",[]]",
+     "[\"B00U5FR0K8\",[]]",
+     "[\"B07VYHWF8M\",[]]",
+     "[\"B07ZXMXZF6\",[]]",
+     "[\"B086RR977W\",[]]",
+     "[\"B08PZDSTS1\",[]]",
+     "[\"B08XDPKZRT\",[]]",
+     "[\"B091FFNM3T\",[]]",
+     "[\"B0929L6X2K\",[]]",
+     "[\"B09L7P8832\",[]]",
+     "[\"B09NRZYKYB\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "395209983f85e4ef",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B091WP1BT5",
+     "attributes": [
+      "gluten free",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+     "price_upper": 10,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B091WP1BT5",
+    "cluster": "beverages",
+    "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+   },
+   "bound_slots": [
+    "attr:gluten free",
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "40cdc9a00900a51cd5332f5e22e0d51a",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0000DC32S\",[]]",
+     "[\"B000BH1NR6\",[]]",
+     "[\"B000BH3K6I\",[]]",
+     "[\"B000CHIIUA\",[]]",
+     "[\"B000FV8LPU\",[]]",
+     "[\"B000O3D2KS\",[]]",
+     "[\"B001JK8P5M\",[]]",
+     "[\"B003948C04\",[]]",
+     "[\"B004LCBR1Y\",[]]",
+     "[\"B004LK7IWS\",[]]",
+     "[\"B004LKEU0Q\",[]]",
+     "[\"B004LV4GBS\",[]]",
+     "[\"B004QXMO7O\",[]]",
+     "[\"B005MR15G4\",[]]",
+     "[\"B0070AJMFC\",[]]",
+     "[\"B00748X58A\",[]]",
+     "[\"B00748X760\",[]]",
+     "[\"B008JA73RG\",[]]",
+     "[\"B00A2PRTMU\",[]]",
+     "[\"B00CLVXWTC\",[]]",
+     "[\"B00HS5AN8O\",[]]",
+     "[\"B00M1X58LU\",[]]",
+     "[\"B00PAQ7KS4\",[]]",
+     "[\"B00R60Q6W8\",[]]",
+     "[\"B00RHSWXEY\",[]]",
+     "[\"B00U32D7AU\",[]]",
+     "[\"B00U5FLIRE\",[]]",
+     "[\"B00U5FR0K8\",[]]",
+     "[\"B00W4SOSEA\",[]]",
+     "[\"B011ABPWOG\",[]]",
+     "[\"B011ABQE98\",[]]",
+     "[\"B016LHNC8M\",[]]",
+     "[\"B019TUCOM8\",[]]",
+     "[\"B01M5F6KCV\",[]]",
+     "[\"B06XW94P17\",[]]",
+     "[\"B0742KPKZD\",[]]",
+     "[\"B0749X7R9S\",[]]",
+     "[\"B074SQKP3T\",[]]",
+     "[\"B075RC2MYY\",[]]",
+     "[\"B07D2LFHKR\",[]]",
+     "[\"B07DZ1JD13\",[]]",
+     "[\"B07FYPSNH8\",[]]",
+     "[\"B07KFQ5WN3\",[]]",
+     "[\"B07NZ6M515\",[]]",
+     "[\"B07Q6LDTWW\",[]]",
+     "[\"B07STMB2S3\",[]]",
+     "[\"B07T9GB8WD\",[]]",
+     "[\"B07VYHWF8M\",[]]",
+     "[\"B07YXGDMHG\",[]]",
+     "[\"B07ZXMXZF6\",[]]",
+     "[\"B0842BTX2D\",[]]",
+     "[\"B086GMKFYX\",[]]",
+     "[\"B086RR977W\",[]]",
+     "[\"B088YBQQH6\",[]]",
+     "[\"B08B1VMWVV\",[]]",
+     "[\"B08CZQKRKX\",[]]",
+     "[\"B08DYDRTV1\",[]]",
+     "[\"B08K3PNDV3\",[]]",
+     "[\"B08KDPSJYK\",[]]",
+     "[\"B08P9SKBH6\",[]]",
+     "[\"B08PZDSTS1\",[]]",
+     "[\"B08SJ6QMX3\",[]]",
+     "[\"B08TMCV5QV\",[]]",
+     "[\"B08XDPKZRT\",[]]",
+     "[\"B0912FMJMZ\",[]]",
+     "[\"B0915D8JJQ\",[]]",
+     "[\"B0918XPB2Q\",[]]",
+     "[\"B091FFNM3T\",[]]",
+     "[\"B091PX9GL1\",[]]",
+     "[\"B091PXTP3M\",[]]",
+     "[\"B091PXV3XC\",[]]",
+     "[\"B091PXX19T\",[]]",
+     "[\"B0929L6X2K\",[]]",
+     "[\"B09493PT9N\",[]]",
+     "[\"B096G58XK9\",[]]",
+     "[\"B097CN6LKG\",[]]",
+     "[\"B098SQFFJR\",[]]",
+     "[\"B09972VLHF\",[]]",
+     "[\"B09BJYPMD5\",[]]",
+     "[\"B09BSTSM5B\",[]]",
+     "[\"B09CLN9HV2\",[]]",
+     "[\"B09JHYGJZV\",[]]",
+     "[\"B09JL1PPBC\",[]]",
+     "[\"B09L7P8832\",[]]",
+     "[\"B09LZ2X6Y1\",[]]",
+     "[\"B09NRZYKYB\",[]]",
+     "[\"B09PRD3G45\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "0848c5fcec37b3f2",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "beverages",
+    "goal": {
+     "asin": "B091WP1BT5",
+     "attributes": [
+      "gluten free",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+     "query": "beverages"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B077T3SP3V",
+     "cluster": "beverages",
+     "name": "Wyler’s Light Singles-To-Go Sugar Free Drink Mix, Cherry, 8 CT Per Box (Pack of 1)",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Powdered Drink Mixes & Flavorings › Soft Drink Mixes"
+    }
+   },
+   "dst": "2398dab1f90987e2",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "a25c9d6c424dcb8b",
+   "src": "88a6d8697e352c0f"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B07GBGZZLC",
+     "cluster": "beverages",
+     "name": "Tulua Turmeric Vitality Shots, 12-Pack",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+    }
+   },
+   "dst": "da047bca05a1a6e2",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "810cb0e894ab0f92",
+   "src": "88a6d8697e352c0f"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:lactose free",
+      "=",
+      "lactose free"
+     ]
+    ]
+   },
+   "dst": "29cdee4b73f86192",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "88a6d8697e352c0f"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:energy drink",
+      "=",
+      "energy drink"
+     ]
+    ]
+   },
+   "dst": "f75160bdf4dd0d1f",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "88a6d8697e352c0f"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:non gmo",
+      "=",
+      "non gmo"
+     ]
+    ]
+   },
+   "dst": "366379d7242156c0",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "88a6d8697e352c0f"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:gluten free",
+      "=",
+      "gluten free"
+     ]
+    ]
+   },
+   "dst": "5f645c5db09e2157",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "88a6d8697e352c0f"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "price_upper",
+      "<=",
+      40,
+      10
+     ]
+    ]
+   },
+   "dst": "395209983f85e4ef",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "88a6d8697e352c0f"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "price_upper",
+      "<=",
+      40,
+      20
+     ]
+    ]
+   },
+   "dst": "0848c5fcec37b3f2",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "88a6d8697e352c0f"
+  }
+ ],
+ "env_id": "webshop_f88bf6b57df18466",
+ "env_spec": {
+  "cluster": "beverages",
+  "env_id": "webshop_f88bf6b57df18466",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B091WP1BT5",
+   "cluster": "beverages",
+   "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+   "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice"
+  },
+  "bound_slots": [
+   "attr:gluten free",
+   "attr:non gmo",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "attr:non gmo",
+    "=",
+    "non gmo"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "ground_truth": {
+   "hash": "98b794fbb4d7bdaac2bf1fcfd146d727",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B0000DC32S\",[]]",
+    "[\"B000BH1NR6\",[]]",
+    "[\"B000BH3K6I\",[]]",
+    "[\"B000CHIIUA\",[]]",
+    "[\"B000FV8LPU\",[]]",
+    "[\"B000O3D2KS\",[]]",
+    "[\"B001JK8P5M\",[]]",
+    "[\"B003948C04\",[]]",
+    "[\"B004LCBR1Y\",[]]",
+    "[\"B004LK7IWS\",[]]",
+    "[\"B004LKEU0Q\",[]]",
+    "[\"B004LV4GBS\",[]]",
+    "[\"B004QXEYM2\",[]]",
+    "[\"B004QXMO7O\",[]]",
+    "[\"B005EGR96S\",[]]",
+    "[\"B005MR15G4\",[]]",
+    "[\"B0070AJMFC\",[]]",
+    "[\"B00748X58A\",[]]",
+    "[\"B00748X760\",[]]",
+    "[\"B008JA73RG\",[]]",
+    "[\"B00A2PRTMU\",[]]",
+    "[\"B00CLVXWTC\",[]]",
+    "[\"B00HS5AN8O\",[]]",
+    "[\"B00IED4YNE\",[]]",
+    "[\"B00IN9EXHQ\",[]]",
+    "[\"B00M1X58LU\",[]]",
+    "[\"B00PAQ7KS4\",[]]",
+    "[\"B00R60Q6W8\",[]]",
+    "[\"B00RHSWXEY\",[]]",
+    "[\"B00U32D7AU\",[]]",
+    "[\"B00U5FLIRE\",[]]",
+    "[\"B00U5FR0K8\",[]]",
+    "[\"B00W4SOSEA\",[]]",
+    "[\"B011ABPWOG\",[]]",
+    "[\"B011ABQE98\",[]]",
+    "[\"B012ADZGSA\",[]]",
+    "[\"B016L2A3BG\",[]]",
+    "[\"B016LHNC8M\",[]]",
+    "[\"B019TUCOM8\",[]]",
+    "[\"B01CI57V2O\",[]]",
+    "[\"B01M5F6KCV\",[]]",
+    "[\"B01MZE5Y50\",[]]",
+    "[\"B01NBTQG8P\",[]]",
+    "[\"B06XNRV1ZN\",[]]",
+    "[\"B06XW94P17\",[]]",
+    "[\"B071WM815V\",[]]",
+    "[\"B0742KPKZD\",[]]",
+    "[\"B0749X7R9S\",[]]",
+    "[\"B074SQKP3T\",[]]",
+    "[\"B0756W745C\",[]]",
+    "[\"B075RC2MYY\",[]]",
+    "[\"B076BM2ZXD\",[]]",
+    "[\"B079PHG9HB\",[]]",
+    "[\"B07BLZLKRX\",[]]",
+    "[\"B07D2LFHKR\",[]]",
+    "[\"B07DVRFHKT\",[]]",
+    "[\"B07DZ1JD13\",[]]",
+    "[\"B07FYPSNH8\",[]]",
+    "[\"B07KFQ5WN3\",[]]",
+    "[\"B07KL71RG9\",[]]",
+    "[\"B07NZ6M515\",[]]",
+    "[\"B07PGQTY5N\",[]]",
+    "[\"B07PJ181K3\",[]]",
+    "[\"B07PML33Q3\",[]]",
+    "[\"B07Q6LDTWW\",[]]",
+    "[\"B07QBHYGYL\",[]]",
+    "[\"B07QR4BWZB\",[]]",
+    "[\"B07R81FV3L\",[]]",
+    "[\"B07RJTQ88X\",[]]",
+    "[\"B07STMB2S3\",[]]",
+    "[\"B07T9GB8WD\",[]]",
+    "[\"B07T9GBCP5\",[]]",
+    "[\"B07VYHWF8M\",[]]",
+    "[\"B07WBY7ZW1\",[]]",
+    "[\"B07WDYJWH4\",[]]",
+    "[\"B07WSHWHQV\",[]]",
+    "[\"B07YXGDMHG\",[]]",
+    "[\"B07ZXMXZF6\",[]]",
+    "[\"B082MPSR1R\",[]]",
+    "[\"B083D74DQJ\",[]]",
+    "[\"B083Z8KYJT\",[]]",
+    "[\"B0842BCXBK\",[]]",
+    "[\"B0842BTX2D\",[]]",
+    "[\"B086GMKFYX\",[]]",
+    "[\"B086RR977W\",[]]",
+    "[\"B0875X8HYL\",[]]",
+    "[\"B087YVBDT5\",[]]",
+    "[\"B088BQKV7V\",[]]",
+    "[\"B088YBQQH6\",[]]",
+    "[\"B08B1VMWVV\",[]]",
+    "[\"B08CZQKRKX\",[]]",
+    "[\"B08DJD78L4\",[]]",
+    "[\"B08DYDRTV1\",[]]",
+    "[\"B08FV8RR9Y\",[]]",
+    "[\"B08GP451PQ\",[]]",
+    "[\"B08HTR6M9M\",[]]",
+    "[\"B08K3KCCJP\",[]]",
+    "[\"B08K3KMZ3B\",[]]",
+    "[\"B08K3PNDV3\",[]]",
+    "[\"B08KDPSJYK\",[]]",
+    "[\"B08MYDBTQW\",[]]",
+    "[\"B08ND12G4C\",[]]",
+    "[\"B08P9SKBH6\",[]]",
+    "[\"B08PZDSTS1\",[]]",
+    "[\"B08QW6W2FJ\",[]]",
+    "[\"B08SJ6QMX3\",[]]",
+    "[\"B08TMCV5QV\",[]]",
+    "[\"B08XDPKZRT\",[]]",
+    "[\"B08XZXPK93\",[]]",
+    "[\"B08YWZMGM1\",[]]",
+    "[\"B08Z9T5D8T\",[]]",
+    "[\"B08Z9V1QYQ\",[]]",
+    "[\"B08ZBCSSGL\",[]]",
+    "[\"B08ZT1WNPL\",[]]",
+    "[\"B0912FMJMZ\",[]]",
+    "[\"B09133G83G\",[]]",
+    "[\"B0915D8JJQ\",[]]",
+    "[\"B0917KB343\",[]]",
+    "[\"B0918XPB2Q\",[]]",
+    "[\"B091FFNM3T\",[]]",
+    "[\"B091PX9GL1\",[]]",
+    "[\"B091PXTP3M\",[]]",
+    "[\"B091PXV3XC\",[]]",
+    "[\"B091PXX19T\",[]]",
+    "[\"B091WP1BT5\",[]]",
+    "[\"B0929HT4T6\",[]]",
+    "[\"B0929L6X2K\",[]]",
+    "[\"B093B5SQ3V\",[]]",
+    "[\"B09493PT9N\",[]]",
+    "[\"B095FPR617\",[]]",
+    "[\"B095ZY19W3\",[]]",
+    "[\"B096G58XK9\",[]]",
+    "[\"B096TKJDTK\",[]]",
+    "[\"B097CN6LKG\",[]]",
+    "[\"B098SQFFJR\",[]]",
+    "[\"B09972VLHF\",[]]",
+    "[\"B099XXLR94\",[]]",
+    "[\"B09BJR3LQ2\",[]]",
+    "[\"B09BJYPMD5\",[]]",
+    "[\"B09BSTSM5B\",[]]",
+    "[\"B09CLN9HV2\",[]]",
+    "[\"B09J1SSZDR\",[]]",
+    "[\"B09JHYGJZV\",[]]",
+    "[\"B09JL1PPBC\",[]]",
+    "[\"B09JV7W9RS\",[]]",
+    "[\"B09JZZT2TR\",[]]",
+    "[\"B09KVK6CF5\",[]]",
+    "[\"B09L7P8832\",[]]",
+    "[\"B09LZ2QQ6J\",[]]",
+    "[\"B09LZ2X6Y1\",[]]",
+    "[\"B09MC41T51\",[]]",
+    "[\"B09MC462KF\",[]]",
+    "[\"B09MC51NYR\",[]]",
+    "[\"B09NCH4XBQ\",[]]",
+    "[\"B09NRZYKYB\",[]]",
+    "[\"B09P2WZSXH\",[]]",
+    "[\"B09PRD3G45\",[]]",
+    "[\"B09PTMLSSZ\",[]]",
+    "[\"B09QCGWBZW\",[]]",
+    "[\"B09R5YDJ3D\",[]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "88a6d8697e352c0f",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "beverages",
+   "goal": {
+    "asin": "B091WP1BT5",
+    "attributes": [
+     "non gmo",
+     "gluten free"
+    ],
+    "category": "",
+    "goal_options": [],
+    "name": "Mango Aseptic Purée 4.4 Lb | Create All-Natural Juices, Smoothies, Cocktails, Beers, Desserts, And So Much More | Natural, Vegan, Non-GMO, Gluten-Free, Kosher | Create your favorite drink……",
+    "price_upper": 40,
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Juices › Fruit Juice",
+    "query": "beverages"
+   }
+  },
+  "source_record": "d9cacbc2e0bc5c0a",
+  "unbound_slots": [
+   "attr:energy drink",
+   "attr:gluten free",
+   "attr:lactose free",
+   "attr:non gmo",
+   "price_upper"
+  ]
+ },
+ "tree_id": "6916da72aff83673"
+}

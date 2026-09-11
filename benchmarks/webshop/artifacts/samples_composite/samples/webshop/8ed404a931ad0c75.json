@@ -1,0 +1,175 @@
+{
+ "sample_id": "8ed404a931ad0c75",
+ "tree_id": "1cef1282d58c59b6",
+ "adapter": "webshop",
+ "cluster": "dairy, cheese & eggs",
+ "goal_idx": 266,
+ "split": "test",
+ "source_instruction": "i am looking for a individual wrapped birthday cakes and chocolate chip blondies that come in a 12 pack.",
+ "query": "Ugh, my neighbor\u2019s cat keeps sneaking onto my back porch to knock over the potted mint I\u2019ve been trying to grow for iced tea all summer, and the grocery store\u2019s self-checkout line was so backed up when I walked in I almost turned around to leave, plus I just remembered I forgot to pick up my dry cleaning on the way over and the shop closes in 45 minutes. I\u2019ve heard that the individually wrapped treats in the birthday cake and chocolate chip blondie flavors are really popular for the potluck I\u2019m going to next weekend, and that none of the options I was looking at run over $60 total.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "indirect_intent"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+indirect_intent",
+  "family": "intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "noise",
+   "oblique"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "indirect_intent"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "Ugh, my neighbor\u2019s cat keeps sneaking onto my back porch to knock over the potted mint I\u2019ve been trying to grow for iced tea all summer, and the grocery store\u2019s self-checkout line was so backed up when I walked in I almost turned around to leave, plus I just remembered I forgot to pick up my dry cleaning on the way over and the shop closes in 45 minutes.",
+  "retained": [
+   "attr:individually wrapped",
+   "option:0",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:individually wrapped",
+     "=",
+     "individually wrapped"
+    ],
+    [
+     "option:0",
+     "=",
+     "birthday cake & chocolate chip blondie"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "02bc26d92e3e4721"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 6,
+  "components": {}
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "0b2e52ba71bde3ef",
+  "conditions": [
+   [
+    "attr:individually wrapped",
+    "=",
+    "individually wrapped"
+   ],
+   [
+    "option:0",
+    "=",
+    "birthday cake & chocolate chip blondie"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B01B22W5JS\",[[\"flavor name\",\"oatmeal chocolate chip\"]]]",
+   "[\"B07B7BV15N\",[[\"flavor name\",\"birthday cake & chocolate chip blondie\"]]]",
+   "[\"B0863J835N\",[[\"flavor name\",\"chocolate\"]]]",
+   "[\"B08R3V9K9B\",[[\"flavor name\",\"cocoa & chocolate\"]]]",
+   "[\"B08VZWT34G\",[[\"flavor name\",\"peanut butter dark chocolate\"]]]",
+   "[\"B08XB8SQ4P\",[[\"flavor name\",\"peanut butter dark chocolate\"]]]"
+  ],
+  "hash": "f074c901efae68ce48cc14dce424c33a"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "31593c3e27e9c9a1",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the dairy, cheese & eggs instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "ea20cb6fefb97a92",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the dairy, cheese & eggs instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "020d455a76a5d3b2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dietary fiber."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e5cee811883bc46d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be low calorie."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "413dc7dfbc38420e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c34bdc093142353b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "024c6584d82202ef",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1.6 ounce (pack of 12) instead of birthday cake & chocolate chip blondie."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "d3d534ee1db13989",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 1 pound (pack of 2) instead of birthday cake & chocolate chip blondie."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

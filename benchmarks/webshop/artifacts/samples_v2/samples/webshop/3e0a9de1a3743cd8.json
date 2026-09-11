@@ -1,0 +1,192 @@
+{
+ "adapter": "webshop",
+ "cluster": "beverages",
+ "fidelity_notes": [],
+ "goal_idx": 257,
+ "ground_truth": {
+  "cardinality": 27,
+  "hash": "46e372c9be71b9151dcfd0d4230a7305",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B003L2EYWY\",[]]",
+   "[\"B00AAV8SOY\",[]]",
+   "[\"B00QUEP5AA\",[]]",
+   "[\"B00V994MAK\",[]]",
+   "[\"B01BO1STRE\",[]]",
+   "[\"B077T3SP3V\",[]]",
+   "[\"B07WS1NPBF\",[]]",
+   "[\"B07X4YMXP4\",[]]",
+   "[\"B07X512KZT\",[]]",
+   "[\"B07YBKK1ZH\",[]]",
+   "[\"B07YBKLX1V\",[]]",
+   "[\"B07YBKXWRC\",[]]",
+   "[\"B07YBL7Y7X\",[]]",
+   "[\"B083X5QTF1\",[]]",
+   "[\"B083X82WPD\",[]]",
+   "[\"B083X8316R\",[]]",
+   "[\"B083XFGLB3\",[]]",
+   "[\"B083XK3VQX\",[]]",
+   "[\"B083XNN3N4\",[]]",
+   "[\"B083XPRHHJ\",[]]",
+   "[\"B086M9LK7F\",[]]",
+   "[\"B08HFC5BYW\",[]]",
+   "[\"B0971VV99P\",[]]",
+   "[\"B09BK2GKDL\",[]]",
+   "[\"B09D8MXL3Z\",[]]",
+   "[\"B09D8PZ66T\",[]]",
+   "[\"B09D8RFJSS\",[]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:source vitamin",
+    "=",
+    "source vitamin"
+   ],
+   [
+    "attr:sugar free",
+    "=",
+    "sugar free"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "66ef3824efb73be0"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:source vitamin",
+     "=",
+     "source vitamin"
+    ],
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning repotting my succulent collection, and I swear my favorite echeveria has grown three new leaves since last week. I also tried a new lavender candle last night that made my whole apartment smell like a summer garden. Oh, and I finally figured out how to fix the wobbly leg on my kitchen table with a small rubber wedge.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:source vitamin",
+   "attr:sugar free",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning repotting my succulent collection, and I swear my favorite echeveria has grown three new leaves since last week. I also tried a new lavender candle last night that made my whole apartment smell like a summer garden. Oh, and I finally figured out how to fix the wobbly leg on my kitchen table with a small rubber wedge. Anyway, I’m looking for beverages that are a source of vitamins and sugar free, with a price limit of 30.",
+ "render_attempts": 1,
+ "sample_id": "3e0a9de1a3743cd8",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "2398dab1f90987e2"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the beverages instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "da047bca05a1a6e2"
+  },
+  {
+   "announcement": "Also, it needs to be fat free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1a62ab686e6b7e59"
+  },
+  {
+   "announcement": "Also, it needs to be caffeine free.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a52a8a1f5602b3f2"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5b87a2d67c36e780"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bd2d989d817143b5"
+  },
+  {
+   "announcement": "Actually, make it 10 instead of 30.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3327c262ffed39a9"
+  },
+  {
+   "announcement": "Actually, make it 100 instead of 30.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "7ae27133249ab1e8"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 27,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 27,
+  "verdict": "ok"
+ },
+ "source_instruction": "i would like to buy a sugar free powder drink mix that is a nice source of vitamin.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "9216f73aedd91c61",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

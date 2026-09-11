@@ -1,0 +1,205 @@
+{
+ "sample_id": "502a5599356904f2",
+ "tree_id": "c2ab603af1b7f24f",
+ "adapter": "webshop",
+ "cluster": "hdmi cables",
+ "goal_idx": 464,
+ "split": "test",
+ "source_instruction": "i'm looking for a high performance hdmi to displayport adapter cable that's easy to use.",
+ "query": "I spent my whole walk over here replaying that last round of my neighborhood cornhole league in my head, can you believe I missed that last toss by three whole inches because a squirrel darted across the board? I stopped on the way for a blue raspberry slushie that gave me immediate brain freeze so bad I had to sit on a curb for two minutes, and I\u2019m still low-key mad the corner bodega was all out of the spicy pickle chips I\u2019ve been craving all week. Since you probably don\u2019t have any high performance HDMI cables in stock right now, just show me easy to use options that are $40 or less, yeah?",
+ "strategy_ids": [
+  "false_presupposition",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "false_presupposition+contextual_irrelevance",
+  "family": "intention+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise"
+  ],
+  "components": [
+   "false_presupposition",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {},
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [
+   {
+    "text": "Since you probably don't have any high performance HDMI cables in stock right now",
+    "condition": null,
+    "about": [
+     "attr:high performance",
+     "high performance"
+    ],
+    "alternative": null
+   }
+  ],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I spent my whole walk over here replaying that last round of my neighborhood cornhole league in my head, can you believe I missed that last toss by three whole inches because a squirrel darted across the board? I stopped on the way for a blue raspberry slushie that gave me immediate brain freeze so bad I had to sit on a curb for two minutes, and I\u2019m still low-key mad the corner bodega was all out of the spicy pickle chips I\u2019ve been craving all week.",
+  "retained": [
+   "attr:easy use",
+   "attr:high performance",
+   "price_upper"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "ea1864be8950f41d"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 22,
+  "lit_card": 209,
+  "components": {
+   "false_presupposition": {
+    "rule": "presupposed",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 209,
+    "true_card": 22,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "9797c32faf70ba0b",
+  "conditions": [
+   [
+    "attr:easy use",
+    "=",
+    "easy use"
+   ],
+   [
+    "attr:high performance",
+    "=",
+    "high performance"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 22,
+  "value": [
+   "[\"B071YDFZ3P\",[]]",
+   "[\"B077SZKGRY\",[]]",
+   "[\"B077Y1YVVJ\",[]]",
+   "[\"B07BKVRPWV\",[]]",
+   "[\"B07D1HVDX1\",[]]",
+   "[\"B07D2HSH4D\",[]]",
+   "[\"B07F9GFZYD\",[]]",
+   "[\"B07JF9LVW4\",[]]",
+   "[\"B07K7CK998\",[]]",
+   "[\"B07NSY4R1X\",[]]",
+   "[\"B07RL7GGXP\",[]]",
+   "[\"B08731PN5T\",[]]",
+   "[\"B088YP6TDQ\",[]]",
+   "[\"B08CRPRG2S\",[]]",
+   "[\"B08CXDZ1CC\",[]]",
+   "[\"B08L8RNHT2\",[]]",
+   "[\"B08QD8418Z\",[]]",
+   "[\"B08YRPL65H\",[]]",
+   "[\"B093X3K7SF\",[]]",
+   "[\"B0991J7Y3Y\",[]]",
+   "[\"B09MLSBV6C\",[]]",
+   "[\"B09PHGHCBX\",[]]"
+  ],
+  "hash": "99c92516a6bf32ba989802910b24b24f"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "024281688ee7612e",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hdmi cables instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "857ccfb5d204e736",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hdmi cables instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "12e252ea4188bdba",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be light weight."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "f5f63a5d07b137cc",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be ultra hd."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "790aa44e4234f068",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b1c12af62517b899",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, a product feature you require doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0a900d5e7fde9f87",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 20 instead of 40."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "514d8aa6c30f16a4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 instead of 40."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,1303 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B08X3R2V9S",
+    "cluster": "meat substitutes",
+    "name": "GiftWorld Imported Spanish Meat and Cheese Gift Basket – Delicious Cheese Sampler Gift Box | Gourmet Food Gift Basket, for Family, Birthday, Sympathy, Congratulations Gifts, Thinking of you and Business Gifts - Over 2 Lbs.",
+    "product_category": "Grocery & Gourmet Food › Dairy, Cheese & Eggs › Cheese Assortments & Samplers"
+   },
+   "bound_slots": [
+    "attr:gift basket",
+    "attr:valentine day",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gift basket",
+     "=",
+     "gift basket"
+    ],
+    [
+     "attr:valentine day",
+     "=",
+     "valentine day"
+    ],
+    [
+     "price_upper",
+     "<=",
+     90
+    ]
+   ],
+   "ground_truth": {
+    "hash": "18fec51a1d245f5e473d3412f4587f01",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08X3R2V9S\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "d29543b3c1976c5c",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "meat substitutes",
+    "goal": {
+     "asin": "B08X3R2V9S",
+     "attributes": [
+      "gift basket",
+      "valentine day"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "GiftWorld Imported Spanish Meat and Cheese Gift Basket – Delicious Cheese Sampler Gift Box | Gourmet Food Gift Basket, for Family, Birthday, Sympathy, Congratulations Gifts, Thinking of you and Business Gifts - Over 2 Lbs.",
+     "price_upper": 90,
+     "product_category": "Grocery & Gourmet Food › Dairy, Cheese & Eggs › Cheese Assortments & Samplers",
+     "query": "meat substitutes"
+    }
+   },
+   "source_record": "b6a51f04965428c0",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08C742D94",
+    "cluster": "meat substitutes",
+    "name": "Vegan Organic Plant Protein Powder and Meal Replacement Shake - By 310 Nutrition - Gluten, Dairy and Soy Free - 0g of Sugar | Keto and Paleo Friendly… (Vanilla, 28 Servings)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Meal Replacement & Protein Drinks › Meal Replacement Drinks"
+   },
+   "bound_slots": [
+    "attr:gmo free",
+    "attr:keto friendly",
+    "attr:low carb",
+    "attr:soy free",
+    "option:0",
+    "option:1",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:gmo free",
+     "=",
+     "gmo free"
+    ],
+    [
+     "attr:keto friendly",
+     "=",
+     "keto friendly"
+    ],
+    [
+     "attr:low carb",
+     "=",
+     "low carb"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "option:0",
+     "=",
+     "peppermint swirl"
+    ],
+    [
+     "option:1",
+     "=",
+     "1 servings (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     80
+    ]
+   ],
+   "ground_truth": {
+    "hash": "c6602114a4004d7074d1af5695ce1fdd",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08C742D94\",[[\"flavor name\",\"peppermint swirl\"],[\"size\",\"1 servings (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9a8613fdefb55398",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "meat substitutes",
+    "goal": {
+     "asin": "B08C742D94",
+     "attributes": [
+      "low carb",
+      "gmo free",
+      "soy free",
+      "keto friendly"
+     ],
+     "category": "",
+     "goal_options": [
+      "peppermint swirl",
+      "1 servings (pack of 1)"
+     ],
+     "name": "Vegan Organic Plant Protein Powder and Meal Replacement Shake - By 310 Nutrition - Gluten, Dairy and Soy Free - 0g of Sugar | Keto and Paleo Friendly… (Vanilla, 28 Servings)",
+     "price_upper": 80,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Meal Replacement & Protein Drinks › Meal Replacement Drinks",
+     "query": "meat substitutes"
+    }
+   },
+   "source_record": "51d7befc9b247ff3",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B000QSPX58",
+    "cluster": "meat substitutes",
+    "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+    "product_category": "Baby Products › Feeding › Baby Foods › Meals"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "attr:easy prepare",
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "attr:easy prepare",
+     "=",
+     "easy prepare"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "1a9866d085f54202f3a42bfc21953c6b",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B07CPZBXXN\",[]]",
+     "[\"B0844B81XM\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "f8fd765670e7581a",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "meat substitutes",
+    "goal": {
+     "asin": "B000QSPX58",
+     "attributes": [
+      "certified organic",
+      "easy prepare",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+     "price_upper": 120,
+     "product_category": "Baby Products › Feeding › Baby Foods › Meals",
+     "query": "meat substitutes"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B000QSPX58",
+    "cluster": "meat substitutes",
+    "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+    "product_category": "Baby Products › Feeding › Baby Foods › Meals"
+   },
+   "bound_slots": [
+    "attr:caffeine free",
+    "attr:certified organic",
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:caffeine free",
+     "=",
+     "caffeine free"
+    ],
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "35c1d7197bb76e05187b27e07d9fcd5e",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B06WGZRT1B\",[]]",
+     "[\"B088VVHYYT\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "10c0007f036ad967",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "meat substitutes",
+    "goal": {
+     "asin": "B000QSPX58",
+     "attributes": [
+      "caffeine free",
+      "certified organic",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+     "price_upper": 120,
+     "product_category": "Baby Products › Feeding › Baby Foods › Meals",
+     "query": "meat substitutes"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B000QSPX58",
+    "cluster": "meat substitutes",
+    "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+    "product_category": "Baby Products › Feeding › Baby Foods › Meals"
+   },
+   "bound_slots": [
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "5d8865d2e019490f5332288eb65177c2",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B00023EBFK\",[]]",
+     "[\"B00023G2S4\",[]]",
+     "[\"B00073ILFG\",[]]",
+     "[\"B000LKU3A6\",[]]",
+     "[\"B000LL0RFQ\",[]]",
+     "[\"B000O160KE\",[]]",
+     "[\"B000O6I9YY\",[]]",
+     "[\"B000QSPX58\",[]]",
+     "[\"B000QSTJYO\",[]]",
+     "[\"B000R7X3JG\",[]]",
+     "[\"B000REGYRC\",[]]",
+     "[\"B000RELUOE\",[]]",
+     "[\"B000VK2LPQ\",[]]",
+     "[\"B00113WW10\",[]]",
+     "[\"B0019L8JSO\",[]]",
+     "[\"B001PNYKO8\",[]]",
+     "[\"B002BCE9JS\",[]]",
+     "[\"B002DQP04U\",[]]",
+     "[\"B002DQP054\",[]]",
+     "[\"B0039KEQUI\",[]]",
+     "[\"B003FDC2I2\",[]]",
+     "[\"B003XB5LMU\",[]]",
+     "[\"B003ZUMHMQ\",[]]",
+     "[\"B0047FEMPI\",[]]",
+     "[\"B0048IDMRS\",[]]",
+     "[\"B004ZATSCW\",[]]",
+     "[\"B0055T5VB4\",[]]",
+     "[\"B005CD3Q7Y\",[]]",
+     "[\"B005HH0T3O\",[]]",
+     "[\"B0064EHVQM\",[]]",
+     "[\"B00654O1BY\",[]]",
+     "[\"B006NIPC5Q\",[]]",
+     "[\"B0078DU1CY\",[]]",
+     "[\"B007QVUYNY\",[]]",
+     "[\"B00822ZE2M\",[]]",
+     "[\"B0090G9DAI\",[]]",
+     "[\"B00BBSRK2Q\",[]]",
+     "[\"B00BKL4KKY\",[]]",
+     "[\"B00BNIVOJO\",[]]",
+     "[\"B00BOXK4RQ\",[]]",
+     "[\"B00BP36RTY\",[]]",
+     "[\"B00CC0VSR0\",[]]",
+     "[\"B00CMYMRL2\",[]]",
+     "[\"B00CUQQON4\",[]]",
+     "[\"B00EP65A3M\",[]]",
+     "[\"B00G8Y3PRM\",[]]",
+     "[\"B00GR9JK5O\",[]]",
+     "[\"B00HAS1SVU\",[]]",
+     "[\"B00HKIBEEG\",[]]",
+     "[\"B00HKLK3X6\",[]]",
+     "[\"B00IV6PVRC\",[]]",
+     "[\"B00JB2QS7C\",[]]",
+     "[\"B00JGXF99E\",[]]",
+     "[\"B00JM1DAE6\",[]]",
+     "[\"B00KW0POQ8\",[]]",
+     "[\"B00L3N5TCM\",[]]",
+     "[\"B00LW4FVSO\",[]]",
+     "[\"B00LXV749K\",[]]",
+     "[\"B00MACNU9Y\",[]]",
+     "[\"B00MU749LW\",[]]",
+     "[\"B00MWDAQFW\",[]]",
+     "[\"B00NB8T4H8\",[]]",
+     "[\"B00NO1OZDA\",[]]",
+     "[\"B00OQYWG1W\",[]]",
+     "[\"B00P2DKCHG\",[]]",
+     "[\"B00PJ4PG88\",[]]",
+     "[\"B00PM7685C\",[]]",
+     "[\"B00Q7ALXEO\",[]]",
+     "[\"B00QGWLZGY\",[]]",
+     "[\"B00QGWM57M\",[]]",
+     "[\"B00T83BLAS\",[]]",
+     "[\"B00U32E696\",[]]",
+     "[\"B00U32GMYI\",[]]",
+     "[\"B00U688JNG\",[]]",
+     "[\"B00UXI6A8U\",[]]",
+     "[\"B00VKR3HWK\",[]]",
+     "[\"B00XC9ZIX0\",[]]",
+     "[\"B00XMZIQR4\",[]]",
+     "[\"B00YPQDKXY\",[]]",
+     "[\"B00ZE6DJYE\",[]]",
+     "[\"B00ZE6DLEC\",[]]",
+     "[\"B01516LOTS\",[]]",
+     "[\"B016NAS8X6\",[]]",
+     "[\"B016NE5DBM\",[]]",
+     "[\"B018LLKHAC\",[]]",
+     "[\"B01936PVS2\",[]]",
+     "[\"B019EHK3IS\",[]]",
+     "[\"B01B9MZI36\",[]]",
+     "[\"B01C8DQUBY\",[]]",
+     "[\"B01CT721A8\",[]]",
+     "[\"B01CYW9ZI4\",[]]",
+     "[\"B01D3N8K2A\",[]]",
+     "[\"B01DAK5ECU\",[]]",
+     "[\"B01DG9RIEC\",[]]",
+     "[\"B01DGA2F9O\",[]]",
+     "[\"B01DPSC5PG\",[]]",
+     "[\"B01DUC0MD4\",[]]",
+     "[\"B01EK4OL10\",[]]",
+     "[\"B01EM79OJY\",[]]",
+     "[\"B01EP6AGUI\",[]]",
+     "[\"B01EVY6BOY\",[]]",
+     "[\"B01FN6GQTO\",[]]",
+     "[\"B01GUKR1XC\",[]]",
+     "[\"B01H4LBIVC\",[]]",
+     "[\"B01I9D2MXW\",[]]",
+     "[\"B01IU2JGXG\",[]]",
+     "[\"B01JJ9GPUG\",[]]",
+     "[\"B01LAX4HTA\",[]]",
+     "[\"B01LXS7YAM\",[]]",
+     "[\"B01LZN1YEK\",[]]",
+     "[\"B01M35HNQN\",[]]",
+     "[\"B01MZIRIYQ\",[]]",
+     "[\"B01N1JM9UN\",[]]",
+     "[\"B01N8SLC7N\",[]]",
+     "[\"B01N9QFI0U\",[]]",
+     "[\"B06WGZRT1B\",[]]",
+     "[\"B06XCJFVHH\",[]]",
+     "[\"B06XNV8FT6\",[]]",
+     "[\"B06XPMLSPM\",[]]",
+     "[\"B071QXCQK4\",[]]",
+     "[\"B071RRKZZ4\",[]]",
+     "[\"B07228DH8K\",[]]",
+     "[\"B0723B9YHF\",[]]",
+     "[\"B073X42DVF\",[]]",
+     "[\"B073X64F4T\",[]]",
+     "[\"B073XNBWQQ\",[]]",
+     "[\"B073ZJ2QYL\",[]]",
+     "[\"B0741TGWVB\",[]]",
+     "[\"B074F4732K\",[]]",
+     "[\"B074H55NBT\",[]]",
+     "[\"B074ZMCTLS\",[]]",
+     "[\"B0759VP59C\",[]]",
+     "[\"B075JNF3DB\",[]]",
+     "[\"B075M6J8LR\",[]]",
+     "[\"B0765C9TM2\",[]]",
+     "[\"B0765CVR5W\",[]]",
+     "[\"B07693FJFS\",[]]",
+     "[\"B0769Z2YMZ\",[]]",
+     "[\"B076GGGZZ8\",[]]",
+     "[\"B076MG6NR6\",[]]",
+     "[\"B0773SZ92J\",[]]",
+     "[\"B0773W79DR\",[]]",
+     "[\"B077SSNNJW\",[]]",
+     "[\"B078K4V73J\",[]]",
+     "[\"B0795XSYZC\",[]]",
+     "[\"B079VP4D9N\",[]]",
+     "[\"B079VV8BS6\",[]]",
+     "[\"B07B6PLG16\",[]]",
+     "[\"B07BQL8913\",[]]",
+     "[\"B07BRJXRFJ\",[]]",
+     "[\"B07CLX2HGX\",[]]",
+     "[\"B07CPZBXXN\",[]]",
+     "[\"B07CTZ3XHK\",[]]",
+     "[\"B07CZPZL45\",[]]",
+     "[\"B07CZQWH4V\",[]]",
+     "[\"B07DGK683K\",[]]",
+     "[\"B07DSKWHR5\",[]]",
+     "[\"B07DT1KJND\",[]]",
+     "[\"B07F3G19L3\",[]]",
+     "[\"B07FH1SPRS\",[]]",
+     "[\"B07FTR2GRD\",[]]",
+     "[\"B07GSLD925\",[]]",
+     "[\"B07GT9XBDK\",[]]",
+     "[\"B07H3ZCTR2\",[]]",
+     "[\"B07H9DV3T8\",[]]",
+     "[\"B07H9DV79T\",[]]",
+     "[\"B07HPF49FT\",[]]",
+     "[\"B07J1H37ZF\",[]]",
+     "[\"B07JKLQ66F\",[]]",
+     "[\"B07JM23RCB\",[]]",
+     "[\"B07JM2MKZ2\",[]]",
+     "[\"B07JNMMNHH\",[]]",
+     "[\"B07K8S2STS\",[]]",
+     "[\"B07K8SX7Q6\",[]]",
+     "[\"B07KCNW83G\",[]]",
+     "[\"B07L9JQCY7\",[]]",
+     "[\"B07LCFYKZD\",[]]",
+     "[\"B07M5JNBGB\",[]]",
+     "[\"B07M8FJX1R\",[]]",
+     "[\"B07M8Q4QYN\",[]]",
+     "[\"B07M8Q55JZ\",[]]",
+     "[\"B07M8SRDRV\",[]]",
+     "[\"B07M8ZLN8B\",[]]",
+     "[\"B07M8ZLVJK\",[]]",
+     "[\"B07M98L759\",[]]",
+     "[\"B07M996YGT\",[]]",
+     "[\"B07M99FSX9\",[]]",
+     "[\"B07M9H5NZV\",[]]",
+     "[\"B07MK3LBPR\",[]]",
+     "[\"B07NBTVFWB\",[]]",
+     "[\"B07NPDPMGV\",[]]",
+     "[\"B07NQTRNNC\",[]]",
+     "[\"B07NS7THWB\",[]]",
+     "[\"B07P7267HF\",[]]",
+     "[\"B07P96X6YB\",[]]",
+     "[\"B07PBFJDN7\",[]]",
+     "[\"B07PBXL3L2\",[]]",
+     "[\"B07PCS3VHQ\",[]]",
+     "[\"B07QH7GLFC\",[]]",
+     "[\"B07QM8GSGL\",[]]",
+     "[\"B07QQV25S2\",[]]",
+     "[\"B07R4P3R7D\",[]]",
+     "[\"B07RH7FN4Z\",[]]",
+     "[\"B07RL8VTLB\",[]]",
+     "[\"B07RM8RWYV\",[]]",
+     "[\"B07SV2WKQV\",[]]",
+     "[\"B07SZKD3LY\",[]]",
+     "[\"B07TJ2NQBT\",[]]",
+     "[\"B07TK5WFYX\",[]]",
+     "[\"B07TKD14DK\",[]]",
+     "[\"B07TTJW9HL\",[]]",
+     "[\"B07TZX1TR5\",[]]",
+     "[\"B07V1K2JY2\",[]]",
+     "[\"B07V3GC5V8\",[]]",
+     "[\"B07V3GDNN3\",[]]",
+     "[\"B07VF988JD\",[]]",
+     "[\"B07W4M4R6Z\",[]]",
+     "[\"B07W7Q59FY\",[]]",
+     "[\"B07W7QKJ46\",[]]",
+     "[\"B07W7QLSXB\",[]]",
+     "[\"B07W7VVV29\",[]]",
+     "[\"B07W8Z81FH\",[]]",
+     "[\"B07WZW7ZM4\",[]]",
+     "[\"B07XYNVRZ5\",[]]",
+     "[\"B07ZQQSV8N\",[]]",
+     "[\"B07ZTJF2WW\",[]]",
+     "[\"B081TK4K37\",[]]",
+     "[\"B081TL8Z46\",[]]",
+     "[\"B081TM4C6G\",[]]",
+     "[\"B081TMDX3B\",[]]",
+     "[\"B081TMW8DP\",[]]",
+     "[\"B081VVRVKG\",[]]",
+     "[\"B0828HVRCD\",[]]",
+     "[\"B082LV7QBP\",[]]",
+     "[\"B082VWPBH6\",[]]",
+     "[\"B083HH4KC4\",[]]",
+     "[\"B083JZJHB8\",[]]",
+     "[\"B0844B81XM\",[]]",
+     "[\"B0845NN18Q\",[]]",
+     "[\"B08486P46B\",[]]",
+     "[\"B0848JFW4N\",[]]",
+     "[\"B084J97HSG\",[]]",
+     "[\"B085RJF5KK\",[]]",
+     "[\"B086MFKZ32\",[]]",
+     "[\"B086PB1PV8\",[]]",
+     "[\"B086Q8HGHK\",[]]",
+     "[\"B0872FQ6LS\",[]]",
+     "[\"B088VVHYYT\",[]]",
+     "[\"B088W3KRKH\",[]]",
+     "[\"B088W7LSWX\",[]]",
+     "[\"B088W89YLX\",[]]",
+     "[\"B088WBKPLZ\",[]]",
+     "[\"B088WD4KGS\",[]]",
+     "[\"B088WG4LJ8\",[]]",
+     "[\"B088WLXZ5L\",[]]",
+     "[\"B088WMNH23\",[]]",
+     "[\"B088WQHBXW\",[]]",
+     "[\"B08912N8CM\",[]]",
+     "[\"B0898X1ZY8\",[]]",
+     "[\"B089KX7WZF\",[]]",
+     "[\"B08B9SJ3SP\",[]]",
+     "[\"B08BY5QLD8\",[]]",
+     "[\"B08C4S95GR\",[]]",
+     "[\"B08C5JYP4X\",[]]",
+     "[\"B08C742D94\",[]]",
+     "[\"B08CBYCLWZ\",[]]",
+     "[\"B08CHJ96GQ\",[]]",
+     "[\"B08CY3RBDN\",[]]",
+     "[\"B08FCTWYBG\",[]]",
+     "[\"B08FJK1K4W\",[]]",
+     "[\"B08FK1XZPQ\",[]]",
+     "[\"B08FRWDFQ7\",[]]",
+     "[\"B08G38N77M\",[]]",
+     "[\"B08GJWXRYW\",[]]",
+     "[\"B08H5YV6ZD\",[]]",
+     "[\"B08H6XXKSN\",[]]",
+     "[\"B08H78NKGT\",[]]",
+     "[\"B08HR5T357\",[]]",
+     "[\"B08J49J2NW\",[]]",
+     "[\"B08J4DDBT2\",[]]",
+     "[\"B08J4J6H71\",[]]",
+     "[\"B08JCX6NHH\",[]]",
+     "[\"B08JJL9WCY\",[]]",
+     "[\"B08KC3CB1R\",[]]",
+     "[\"B08KHLDF46\",[]]",
+     "[\"B08KWDZP71\",[]]",
+     "[\"B08L1W9C65\",[]]",
+     "[\"B08LBZ378C\",[]]",
+     "[\"B08LR4T2Z6\",[]]",
+     "[\"B08LSZZW7J\",[]]",
+     "[\"B08N2P8SZX\",[]]",
+     "[\"B08NWDG49N\",[]]",
+     "[\"B08P4W266C\",[]]",
+     "[\"B08PT2JSYS\",[]]",
+     "[\"B08PT3NMHH\",[]]",
+     "[\"B08PVW5Q5T\",[]]",
+     "[\"B08QSMLY5L\",[]]",
+     "[\"B08QYG6D2J\",[]]",
+     "[\"B08QYWMQVG\",[]]",
+     "[\"B08QYXWDFX\",[]]",
+     "[\"B08R6JDZ8W\",[]]",
+     "[\"B08S338V6T\",[]]",
+     "[\"B08W2QY9VS\",[]]",
+     "[\"B08WC45XHY\",[]]",
+     "[\"B08WJM25TN\",[]]",
+     "[\"B08WN2DBQ4\",[]]",
+     "[\"B08XYDQQYP\",[]]",
+     "[\"B08YT2WLV7\",[]]",
+     "[\"B08ZVRKQHM\",[]]",
+     "[\"B091QB4FZN\",[]]",
+     "[\"B091RPBCK3\",[]]",
+     "[\"B091Y8S4RL\",[]]",
+     "[\"B092Q1LRS9\",[]]",
+     "[\"B093CXCBQY\",[]]",
+     "[\"B093Y37V9W\",[]]",
+     "[\"B094F42MBJ\",[]]",
+     "[\"B094MH5CJ1\",[]]",
+     "[\"B0953WSCP5\",[]]",
+     "[\"B0954NVVHM\",[]]",
+     "[\"B09692G6H5\",[]]",
+     "[\"B0977S1KSY\",[]]",
+     "[\"B097S5KCJ6\",[]]",
+     "[\"B098G98RZG\",[]]",
+     "[\"B098QY21TS\",[]]",
+     "[\"B098XQM24V\",[]]",
+     "[\"B09CJRFY3F\",[]]",
+     "[\"B09G2ZWYLM\",[]]",
+     "[\"B09G2ZYB1G\",[]]",
+     "[\"B09GZZ3FVV\",[]]",
+     "[\"B09HYS96L5\",[]]",
+     "[\"B09KQ8WY9S\",[]]",
+     "[\"B09LKVSZYB\",[]]",
+     "[\"B09M7G1CTY\",[]]",
+     "[\"B09NH4GK6R\",[]]",
+     "[\"B09P47C47K\",[]]",
+     "[\"B09QZRVLV7\",[]]",
+     "[\"B09RQ7GWQW\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "4db99de1521bb94d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "meat substitutes",
+    "goal": {
+     "asin": "B000QSPX58",
+     "attributes": [
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+     "price_upper": 120,
+     "product_category": "Baby Products › Feeding › Baby Foods › Meals",
+     "query": "meat substitutes"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B000QSPX58",
+    "cluster": "meat substitutes",
+    "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+    "product_category": "Baby Products › Feeding › Baby Foods › Meals"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ],
+   "ground_truth": {
+    "hash": "96c32e0130f6c05ff3da908ece211b6c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0007SMLUM\",[]]",
+     "[\"B000LL0RFQ\",[]]",
+     "[\"B000QSPX58\",[]]",
+     "[\"B000QSTJYO\",[]]",
+     "[\"B000R7X3JG\",[]]",
+     "[\"B000VK109Y\",[]]",
+     "[\"B000WR8TYK\",[]]",
+     "[\"B000WS1KH2\",[]]",
+     "[\"B0019L8JSO\",[]]",
+     "[\"B001HTI708\",[]]",
+     "[\"B001HTIZI2\",[]]",
+     "[\"B001HTN1DQ\",[]]",
+     "[\"B001VNEB3C\",[]]",
+     "[\"B001XWNELQ\",[]]",
+     "[\"B002HQSNCW\",[]]",
+     "[\"B003UKF4LC\",[]]",
+     "[\"B005WDVQHG\",[]]",
+     "[\"B00654O1BY\",[]]",
+     "[\"B006L82G0W\",[]]",
+     "[\"B0078DU1CY\",[]]",
+     "[\"B007QVUYNY\",[]]",
+     "[\"B0081JBNMG\",[]]",
+     "[\"B00822ZE2M\",[]]",
+     "[\"B0085E6HIC\",[]]",
+     "[\"B008XPPRCA\",[]]",
+     "[\"B00AY8PV7U\",[]]",
+     "[\"B00BBSRK2Q\",[]]",
+     "[\"B00CQ7K9J2\",[]]",
+     "[\"B00D1Z4KPM\",[]]",
+     "[\"B00DOQ9J0O\",[]]",
+     "[\"B00JB2QS7C\",[]]",
+     "[\"B00JM1DAE6\",[]]",
+     "[\"B00MACNU9Y\",[]]",
+     "[\"B00MU749LW\",[]]",
+     "[\"B00NB8T4H8\",[]]",
+     "[\"B00NO1OZDA\",[]]",
+     "[\"B00U688JNG\",[]]",
+     "[\"B00YLUK2YO\",[]]",
+     "[\"B00ZWA7LQ4\",[]]",
+     "[\"B013EBRCDY\",[]]",
+     "[\"B016NAS8X6\",[]]",
+     "[\"B016NE5DBM\",[]]",
+     "[\"B01C8DQUBY\",[]]",
+     "[\"B01CT721A8\",[]]",
+     "[\"B01DAK5ECU\",[]]",
+     "[\"B01DPSC5PG\",[]]",
+     "[\"B01DUC0MD4\",[]]",
+     "[\"B01EK4OL10\",[]]",
+     "[\"B01F62BPKU\",[]]",
+     "[\"B01FN6GQTO\",[]]",
+     "[\"B01H4LBIVC\",[]]",
+     "[\"B01JJ9GPUG\",[]]",
+     "[\"B01LAX5HLC\",[]]",
+     "[\"B01N1JM9UN\",[]]",
+     "[\"B01N3WB603\",[]]",
+     "[\"B01N5TK6NZ\",[]]",
+     "[\"B06WGZRT1B\",[]]",
+     "[\"B06XCJFVHH\",[]]",
+     "[\"B06XNV8FT6\",[]]",
+     "[\"B071RRKZZ4\",[]]",
+     "[\"B0723B9YHF\",[]]",
+     "[\"B073J16H19\",[]]",
+     "[\"B073X42DVF\",[]]",
+     "[\"B073XNBWQQ\",[]]",
+     "[\"B074H55NBT\",[]]",
+     "[\"B074J2GW2X\",[]]",
+     "[\"B074VBLF7R\",[]]",
+     "[\"B0759VP59C\",[]]",
+     "[\"B075CTT83V\",[]]",
+     "[\"B075M6J8LR\",[]]",
+     "[\"B0769Z2YMZ\",[]]",
+     "[\"B079VV8BS6\",[]]",
+     "[\"B07BQFR96V\",[]]",
+     "[\"B07CPZBXXN\",[]]",
+     "[\"B07DFMP341\",[]]",
+     "[\"B07DKT57ZK\",[]]",
+     "[\"B07GSLD925\",[]]",
+     "[\"B07GT9XBDK\",[]]",
+     "[\"B07JNMMNHH\",[]]",
+     "[\"B07KXNTQSX\",[]]",
+     "[\"B07L9JQCY7\",[]]",
+     "[\"B07M7FFHDH\",[]]",
+     "[\"B07M83JXDL\",[]]",
+     "[\"B07M9H5NZV\",[]]",
+     "[\"B07NBTVFWB\",[]]",
+     "[\"B07NS7THWB\",[]]",
+     "[\"B07R4P3R7D\",[]]",
+     "[\"B07RF19KD7\",[]]",
+     "[\"B07S316QK8\",[]]",
+     "[\"B07TTJW9HL\",[]]",
+     "[\"B07TZX1TR5\",[]]",
+     "[\"B07WZW7ZM4\",[]]",
+     "[\"B083JZJHB8\",[]]",
+     "[\"B0844B81XM\",[]]",
+     "[\"B0848JFW4N\",[]]",
+     "[\"B084KJC5S1\",[]]",
+     "[\"B084KVSZ51\",[]]",
+     "[\"B084WL7VV4\",[]]",
+     "[\"B085LNZMKQ\",[]]",
+     "[\"B088VVHYYT\",[]]",
+     "[\"B08FRSCQ7T\",[]]",
+     "[\"B08FRWDFQ7\",[]]",
+     "[\"B08JJL9WCY\",[]]",
+     "[\"B08LBZ378C\",[]]",
+     "[\"B08PT2JSYS\",[]]",
+     "[\"B08PT3NMHH\",[]]",
+     "[\"B08W2QY9VS\",[]]",
+     "[\"B08WJM25TN\",[]]",
+     "[\"B0954NVVHM\",[]]",
+     "[\"B098XQM24V\",[]]",
+     "[\"B09MGRX3PH\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "4c05c5a12e280c1e",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "meat substitutes",
+    "goal": {
+     "asin": "B000QSPX58",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+     "price_upper": 120,
+     "product_category": "Baby Products › Feeding › Baby Foods › Meals",
+     "query": "meat substitutes"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B000QSPX58",
+    "cluster": "meat substitutes",
+    "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+    "product_category": "Baby Products › Feeding › Baby Foods › Meals"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     10
+    ]
+   ],
+   "ground_truth": {
+    "hash": "696ee2bba873bce2e1016e748a451f86",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000QSTJYO\",[]]",
+     "[\"B00654O1BY\",[]]",
+     "[\"B0078DU1CY\",[]]",
+     "[\"B00822ZE2M\",[]]",
+     "[\"B00MU749LW\",[]]",
+     "[\"B00NO1OZDA\",[]]",
+     "[\"B016NAS8X6\",[]]",
+     "[\"B016NE5DBM\",[]]",
+     "[\"B01C8DQUBY\",[]]",
+     "[\"B01DPSC5PG\",[]]",
+     "[\"B01DUC0MD4\",[]]",
+     "[\"B01JJ9GPUG\",[]]",
+     "[\"B075M6J8LR\",[]]",
+     "[\"B07R4P3R7D\",[]]",
+     "[\"B07TZX1TR5\",[]]",
+     "[\"B0844B81XM\",[]]",
+     "[\"B08WJM25TN\",[]]",
+     "[\"B0954NVVHM\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "9b3be898ddd5c657",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "meat substitutes",
+    "goal": {
+     "asin": "B000QSPX58",
+     "attributes": [
+      "certified organic",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+     "price_upper": 10,
+     "product_category": "Baby Products › Feeding › Baby Foods › Meals",
+     "query": "meat substitutes"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B000QSPX58",
+    "cluster": "meat substitutes",
+    "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+    "product_category": "Baby Products › Feeding › Baby Foods › Meals"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "attr:non gmo",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "attr:non gmo",
+     "=",
+     "non gmo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "4f83921fc8c5f3027630fe6c6da7c83c",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000QSTJYO\",[]]",
+     "[\"B00654O1BY\",[]]",
+     "[\"B0078DU1CY\",[]]",
+     "[\"B007QVUYNY\",[]]",
+     "[\"B00822ZE2M\",[]]",
+     "[\"B00JM1DAE6\",[]]",
+     "[\"B00MU749LW\",[]]",
+     "[\"B00NO1OZDA\",[]]",
+     "[\"B00U688JNG\",[]]",
+     "[\"B016NAS8X6\",[]]",
+     "[\"B016NE5DBM\",[]]",
+     "[\"B01C8DQUBY\",[]]",
+     "[\"B01DPSC5PG\",[]]",
+     "[\"B01DUC0MD4\",[]]",
+     "[\"B01JJ9GPUG\",[]]",
+     "[\"B06XNV8FT6\",[]]",
+     "[\"B073XNBWQQ\",[]]",
+     "[\"B075M6J8LR\",[]]",
+     "[\"B0769Z2YMZ\",[]]",
+     "[\"B07GSLD925\",[]]",
+     "[\"B07JNMMNHH\",[]]",
+     "[\"B07NS7THWB\",[]]",
+     "[\"B07R4P3R7D\",[]]",
+     "[\"B07TZX1TR5\",[]]",
+     "[\"B083JZJHB8\",[]]",
+     "[\"B0844B81XM\",[]]",
+     "[\"B08JJL9WCY\",[]]",
+     "[\"B08WJM25TN\",[]]",
+     "[\"B0954NVVHM\",[]]",
+     "[\"B098XQM24V\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "a14be18385464ccd",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "meat substitutes",
+    "goal": {
+     "asin": "B000QSPX58",
+     "attributes": [
+      "certified organic",
+      "non gmo"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+     "price_upper": 20,
+     "product_category": "Baby Products › Feeding › Baby Foods › Meals",
+     "query": "meat substitutes"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B08X3R2V9S",
+     "cluster": "meat substitutes",
+     "name": "GiftWorld Imported Spanish Meat and Cheese Gift Basket – Delicious Cheese Sampler Gift Box | Gourmet Food Gift Basket, for Family, Birthday, Sympathy, Congratulations Gifts, Thinking of you and Business Gifts - Over 2 Lbs.",
+     "product_category": "Grocery & Gourmet Food › Dairy, Cheese & Eggs › Cheese Assortments & Samplers"
+    }
+   },
+   "dst": "d29543b3c1976c5c",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "b6a51f04965428c0",
+   "src": "de951c0d97b3bbf5"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B08C742D94",
+     "cluster": "meat substitutes",
+     "name": "Vegan Organic Plant Protein Powder and Meal Replacement Shake - By 310 Nutrition - Gluten, Dairy and Soy Free - 0g of Sugar | Keto and Paleo Friendly… (Vanilla, 28 Servings)",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Meal Replacement & Protein Drinks › Meal Replacement Drinks"
+    }
+   },
+   "dst": "9a8613fdefb55398",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "51d7befc9b247ff3",
+   "src": "de951c0d97b3bbf5"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:easy prepare",
+      "=",
+      "easy prepare"
+     ]
+    ]
+   },
+   "dst": "f8fd765670e7581a",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "de951c0d97b3bbf5"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:caffeine free",
+      "=",
+      "caffeine free"
+     ]
+    ]
+   },
+   "dst": "10c0007f036ad967",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "de951c0d97b3bbf5"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:certified organic",
+      "=",
+      "certified organic"
+     ]
+    ]
+   },
+   "dst": "4db99de1521bb94d",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "de951c0d97b3bbf5"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:non gmo",
+      "=",
+      "non gmo"
+     ]
+    ]
+   },
+   "dst": "4c05c5a12e280c1e",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "de951c0d97b3bbf5"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "price_upper",
+      "<=",
+      120,
+      10
+     ]
+    ]
+   },
+   "dst": "9b3be898ddd5c657",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "de951c0d97b3bbf5"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "price_upper",
+      "<=",
+      120,
+      20
+     ]
+    ]
+   },
+   "dst": "a14be18385464ccd",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "de951c0d97b3bbf5"
+  }
+ ],
+ "env_id": "webshop_6f6a00bbe48da8e2",
+ "env_spec": {
+  "cluster": "meat substitutes",
+  "env_id": "webshop_6f6a00bbe48da8e2",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B000QSPX58",
+   "cluster": "meat substitutes",
+   "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+   "product_category": "Baby Products › Feeding › Baby Foods › Meals"
+  },
+  "bound_slots": [
+   "attr:certified organic",
+   "attr:non gmo",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:certified organic",
+    "=",
+    "certified organic"
+   ],
+   [
+    "attr:non gmo",
+    "=",
+    "non gmo"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "ground_truth": {
+   "hash": "d230879e5871abcfacfe20a52725c00d",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B000LL0RFQ\",[]]",
+    "[\"B000QSPX58\",[]]",
+    "[\"B000QSTJYO\",[]]",
+    "[\"B000R7X3JG\",[]]",
+    "[\"B0019L8JSO\",[]]",
+    "[\"B00654O1BY\",[]]",
+    "[\"B0078DU1CY\",[]]",
+    "[\"B007QVUYNY\",[]]",
+    "[\"B00822ZE2M\",[]]",
+    "[\"B00BBSRK2Q\",[]]",
+    "[\"B00JB2QS7C\",[]]",
+    "[\"B00JM1DAE6\",[]]",
+    "[\"B00MACNU9Y\",[]]",
+    "[\"B00MU749LW\",[]]",
+    "[\"B00NB8T4H8\",[]]",
+    "[\"B00NO1OZDA\",[]]",
+    "[\"B00U688JNG\",[]]",
+    "[\"B016NAS8X6\",[]]",
+    "[\"B016NE5DBM\",[]]",
+    "[\"B01C8DQUBY\",[]]",
+    "[\"B01CT721A8\",[]]",
+    "[\"B01DAK5ECU\",[]]",
+    "[\"B01DPSC5PG\",[]]",
+    "[\"B01DUC0MD4\",[]]",
+    "[\"B01EK4OL10\",[]]",
+    "[\"B01FN6GQTO\",[]]",
+    "[\"B01H4LBIVC\",[]]",
+    "[\"B01JJ9GPUG\",[]]",
+    "[\"B01N1JM9UN\",[]]",
+    "[\"B06WGZRT1B\",[]]",
+    "[\"B06XCJFVHH\",[]]",
+    "[\"B06XNV8FT6\",[]]",
+    "[\"B071RRKZZ4\",[]]",
+    "[\"B0723B9YHF\",[]]",
+    "[\"B073X42DVF\",[]]",
+    "[\"B073XNBWQQ\",[]]",
+    "[\"B074H55NBT\",[]]",
+    "[\"B0759VP59C\",[]]",
+    "[\"B075M6J8LR\",[]]",
+    "[\"B0769Z2YMZ\",[]]",
+    "[\"B079VV8BS6\",[]]",
+    "[\"B07CPZBXXN\",[]]",
+    "[\"B07GSLD925\",[]]",
+    "[\"B07GT9XBDK\",[]]",
+    "[\"B07JNMMNHH\",[]]",
+    "[\"B07L9JQCY7\",[]]",
+    "[\"B07M9H5NZV\",[]]",
+    "[\"B07NBTVFWB\",[]]",
+    "[\"B07NS7THWB\",[]]",
+    "[\"B07R4P3R7D\",[]]",
+    "[\"B07TTJW9HL\",[]]",
+    "[\"B07TZX1TR5\",[]]",
+    "[\"B07WZW7ZM4\",[]]",
+    "[\"B083JZJHB8\",[]]",
+    "[\"B0844B81XM\",[]]",
+    "[\"B0848JFW4N\",[]]",
+    "[\"B088VVHYYT\",[]]",
+    "[\"B08FRWDFQ7\",[]]",
+    "[\"B08JJL9WCY\",[]]",
+    "[\"B08LBZ378C\",[]]",
+    "[\"B08PT2JSYS\",[]]",
+    "[\"B08PT3NMHH\",[]]",
+    "[\"B08W2QY9VS\",[]]",
+    "[\"B08WJM25TN\",[]]",
+    "[\"B0954NVVHM\",[]]",
+    "[\"B098XQM24V\",[]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "de951c0d97b3bbf5",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "meat substitutes",
+   "goal": {
+    "asin": "B000QSPX58",
+    "attributes": [
+     "certified organic",
+     "non gmo"
+    ],
+    "category": "",
+    "goal_options": [],
+    "name": "Earth's Best Organic Stage 2 Baby Food, Apples, 4 oz. Jar",
+    "price_upper": 120,
+    "product_category": "Baby Products › Feeding › Baby Foods › Meals",
+    "query": "meat substitutes"
+   }
+  },
+  "source_record": "c30cee149116999f",
+  "unbound_slots": [
+   "attr:caffeine free",
+   "attr:certified organic",
+   "attr:easy prepare",
+   "attr:non gmo",
+   "price_upper"
+  ]
+ },
+ "tree_id": "788c0162a429f9fc"
+}

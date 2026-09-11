@@ -1,0 +1,225 @@
+{
+ "sample_id": "338cf556469add95",
+ "tree_id": "0dace2897e600df4",
+ "adapter": "webshop",
+ "cluster": "men's athletic shoes",
+ "goal_idx": 254,
+ "split": "test",
+ "source_instruction": "i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men",
+ "query": "I stopped at the food cart right outside the mall entrance on my way in, and the guy working there was grilling up these spicy mango chicken skewers that smelled so good I almost bailed on my whole errand to sit on the curb and eat a whole plate. A golden retriever trotted by with its owner while I was lingering, carrying a tiny neon tennis ball in its mouth that matched the bright orange awning over the pretzel stand a few storefronts down, and it stopped to wag at me like it knew I was already fighting the urge to blow my budget on snacks instead of the thing I came for. The weather\u2019s been so weird lately too\u2014one minute it\u2019s pouring rain so hard you can\u2019t see across the parking lot, the next the sun\u2019s blazing so bright you\u2019re squinting and regretting leaving your sunglasses in the car, so my walk over had me dodging puddles and wiping sweat off my forehead in equal measure. I\u2019m looking through the men\u2019s athletic shoes here, and I\u2019ve heard pairs made with ethylene vinyl material, right? I\u2019ve heard about the one that\u2019s got that dark wash and bright pop colorway people keep talking about, y\u2019know? I\u2019ve also heard those pairs align with the usual size I have for my casual kicks, and I\u2019ve heard none of those options ring in over 120 bucks total.",
+ "strategy_ids": [
+  "indirect_intent",
+  "lexical_ambiguity",
+  "contextual_irrelevance",
+  "insufficient_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "indirect_intent+lexical_ambiguity+contextual_irrelevance+insufficient_information",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "oblique",
+   "withhold"
+  ],
+  "components": [
+   "indirect_intent",
+   "lexical_ambiguity",
+   "contextual_irrelevance",
+   "insufficient_information"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "option:0",
+   "insufficient_information": "option:1"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "option:1"
+  ],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "that dark wash and bright pop colorway",
+    "placements": [
+     [
+      "option:0",
+      "dark denim | red orange"
+     ],
+     [
+      "option:0",
+      null
+     ]
+    ]
+   }
+  ],
+  "extras": [],
+  "noise": true,
+  "oblique": true,
+  "offtopic_span": "I stopped at the food cart right outside the mall entrance on my way in, and the guy working there was grilling up these spicy mango chicken skewers that smelled so good I almost bailed on my whole errand to sit on the curb and eat a whole plate. A golden retriever trotted by with its owner while I was lingering, carrying a tiny neon tennis ball in its mouth that matched the bright orange awning over the pretzel stand a few storefronts down, and it stopped to wag at me like it knew I was already fighting the urge to blow my budget on snacks instead of the thing I came for. The weather\u2019s been so weird lately too\u2014one minute it\u2019s pouring rain so hard you can\u2019t see across the parking lot, the next the sun\u2019s blazing so bright you\u2019re squinting and regretting leaving your sunglasses in the car, so my walk over had me dodging puddles and wiping sweat off my forehead in equal measure.",
+  "retained": [
+   "attr:ethylene vinyl",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "option:1"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:ethylene vinyl",
+     "=",
+     "ethylene vinyl"
+    ],
+    [
+     "price_upper",
+     "<=",
+     120
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "ffc36397aba800e4"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 6,
+  "lit_card": 67,
+  "components": {
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     6,
+     58
+    ],
+    "true_card": 6,
+    "readings": 2
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 7,
+    "true_card": 6,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "bb4678ed5513f5d0",
+  "conditions": [
+   [
+    "attr:ethylene vinyl",
+    "=",
+    "ethylene vinyl"
+   ],
+   [
+    "option:0",
+    "=",
+    "dark denim | red orange"
+   ],
+   [
+    "option:1",
+    "=",
+    "10"
+   ],
+   [
+    "price_upper",
+    "<=",
+    120
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "option:1"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 6,
+  "value": [
+   "[\"B07L5DX8GP\",[[\"color\",\"02 | dark | grey\"],[\"size\",\"10\"]]]",
+   "[\"B07SHWM3BX\",[[\"color\",\"white | dark silver metallic\"],[\"size\",\"10\"]]]",
+   "[\"B08B1MCFKL\",[[\"color\",\"dark denim | red orange\"],[\"size\",\"10\"]]]",
+   "[\"B08QBHDRC1\",[[\"color\",\"dark gray | red\"],[\"size\",\"10\"]]]",
+   "[\"B097R39VPH\",[[\"color\",\"dark green022\"],[\"size\",\"10\"]]]",
+   "[\"B09BFMY58R\",[[\"color\",\"dark grey\"],[\"size\",\"10\"]]]"
+  ],
+  "hash": "c5bf660792b81a9dc40598124a5c8177"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "36e60c9cbfb05597",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's athletic shoes instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "5464523a27a90747",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's athletic shoes instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "4917911363dffea9",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be anti slip."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "e7ceba1fead480e6",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be arch support."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "0aea792080e4756e",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b408ba44b9a10e4c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "32a041a56ad124c2",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10 women | 10 men instead of dark denim | red orange."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "a30ce134fa3d3734",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 10-11 women | 8-9 men instead of dark denim | red orange."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

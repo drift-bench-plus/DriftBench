@@ -1,0 +1,275 @@
+{
+ "sample_id": "d05369c68ad53216",
+ "tree_id": "55123162223a05bb",
+ "adapter": "webshop",
+ "cluster": "beds",
+ "goal_idx": 357,
+ "split": "test",
+ "source_instruction": "i need a futon set that is blue velvet",
+ "query": "I just got back from walking my neighbor\u2019s goofy golden retriever, Muffin, who decided halfway through the route that every single fire hydrant on Oak Street required a full two-minute snuffle investigation, plus she stopped to beg a whole cheese stick from the food cart guy by the laundromat before we even made it to the park. By the time we looped back to her place, my socks were soaked through from stepping in that weird puddle that always forms by the cracked sidewalk by the library, and she\u2019d slobbered all over the cuff of my favorite canvas jacket so bad I had to scrub it in her kitchen sink before I headed out. I swear that dog could charm a squirrel out of its acorn stash, though, because she gave me that big dopey grin when I left and pressed her favorite slobbery tennis ball into my hand as a thank you, so I can\u2019t even be mad about the wet socks or the slobber.\nHey there, I\u2019m browsing the beds section right now and need to find a nice blue velvet piece for my bathroom that works for the space, plus it should come with a matching detachable storage ottoman. I don\u2019t want to go over four bills, right? Wait, no, actually the max I\u2019m comfortable shelling out is a note\u2014you know, the standard amount people usually mean when they say that for mid-range bedroom furniture? Let me know what options you have that check all those boxes for me.",
+ "strategy_ids": [
+  "contextual_irrelevance",
+  "lexical_ambiguity",
+  "factual_error",
+  "irrelevant_information"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "contextual_irrelevance+lexical_ambiguity+factual_error+irrelevant_information",
+  "family": "expression+intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance",
+   "lexical_ambiguity",
+   "factual_error",
+   "irrelevant_information"
+  ],
+  "assigned_slots": {
+   "lexical_ambiguity": "price_upper",
+   "factual_error": "attr:living room"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:living room",
+    "living room",
+    "bathroom"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [
+   {
+    "surface": "a note",
+    "placements": [
+     [
+      "price_upper",
+      "470"
+     ],
+     [
+      "price_upper",
+      "100"
+     ]
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "text": "for my bathroom",
+    "condition": [
+     "attr:living room",
+     "=",
+     "bathroom"
+    ]
+   },
+   {
+    "text": "it should come with a matching detachable storage ottoman",
+    "condition": null
+   },
+   {
+    "text": "I don\u2019t want to go over four bills, right? Wait, no, actually the max I\u2019m comfortable shelling out is a note\u2014you know, the standard amount people usually mean when they say that for mid-range bedroom furniture?",
+    "condition": [
+     "price_upper",
+     "=",
+     "a note (standard amount for mid-range bedroom furniture, initially stated as 400)"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from walking my neighbor\u2019s goofy golden retriever, Muffin, who decided halfway through the route that every single fire hydrant on Oak Street required a full two-minute snuffle investigation, plus she stopped to beg a whole cheese stick from the food cart guy by the laundromat before we even made it to the park. By the time we looped back to her place, my socks were soaked through from stepping in that weird puddle that always forms by the cracked sidewalk by the library, and she\u2019d slobbered all over the cuff of my favorite canvas jacket so bad I had to scrub it in her kitchen sink before I headed out. I swear that dog could charm a squirrel out of its acorn stash, though, because she gave me that big dopey grin when I left and pressed her favorite slobbery tennis ball into my hand as a thank you, so I can\u2019t even be mad about the wet socks or the slobber.",
+  "retained": [
+   "option:0"
+  ],
+  "hidden_slots": [
+   "attr:living room",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:living room",
+     "=",
+     "bathroom"
+    ],
+    [
+     "option:0",
+     "=",
+     "blue velvet"
+    ],
+    [
+     "attr:living room",
+     "=",
+     "bathroom"
+    ],
+    [
+     "price_upper",
+     "=",
+     "a note (standard amount for mid-range bedroom furniture, initially stated as 400)"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 2,
+  "spec_id": "c1e4d9693b10f001"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 20,
+  "lit_card": null,
+  "components": {
+   "lexical_ambiguity": {
+    "rule": "ambiguous",
+    "ok": true,
+    "verdict": "ok",
+    "reading_cards": [
+     20,
+     4
+    ],
+    "true_card": 20,
+    "readings": 2
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 20,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 20,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 2,
+ "hidden_intent": {
+  "intent_id": "c9335cd7ae304a11",
+  "conditions": [
+   [
+    "attr:living room",
+    "=",
+    "living room"
+   ],
+   [
+    "option:0",
+    "=",
+    "blue velvet"
+   ],
+   [
+    "price_upper",
+    "<=",
+    470
+   ]
+  ],
+  "hidden_slots": [
+   "attr:living room",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 20,
+  "value": [
+   "[\"B07423LL3H\",[[\"color\",\"deep blue\"]]]",
+   "[\"B07MBLBPC4\",[[\"color\",\"blue - faux velvet\"]]]",
+   "[\"B07THG63LT\",[[\"color\",\"blue velvet\"]]]",
+   "[\"B07WVW9RYD\",[[\"color\",\"blue velvet\"]]]",
+   "[\"B08W57CYQM\",[[\"color\",\"blue line\"]]]",
+   "[\"B08ZS646HV\",[[\"color\",\"b-blue\"]]]",
+   "[\"B091L91HP8\",[[\"color\",\"blue\"]]]",
+   "[\"B092VQFRTC\",[[\"color\",\"blue\"]]]",
+   "[\"B0943N4ZJH\",[[\"color\",\"dark blue velvet\"]]]",
+   "[\"B09784LHM6\",[[\"color\",\"blue\"]]]",
+   "[\"B097GJG1RR\",[[\"color\",\"blue\"]]]",
+   "[\"B09997ZQKB\",[[\"color\",\"blue\"]]]",
+   "[\"B099Z8LLSF\",[[\"color\",\"blue\"]]]",
+   "[\"B09K43T2JT\",[[\"color\",\"blue\"]]]",
+   "[\"B09KN56VFY\",[[\"color\",\"blue bunk bed\"]]]",
+   "[\"B09M8HFXDJ\",[[\"color\",\"blue\"]]]",
+   "[\"B09NQXDCJM\",[[\"color\",\"blue +trundle\"]]]",
+   "[\"B09Q8DRTQH\",[[\"color\",\"blue\"]]]",
+   "[\"B09QFYRHN5\",[[\"color\",\"blue\"]]]",
+   "[\"B09QFZ2HZ8\",[[\"color\",\"blue\"]]]"
+  ],
+  "hash": "4348cdc67aeebb7fb1ea60035b441e23"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "76981513bf93d917",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beds instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b41f437a8930bf97",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beds instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "4ddcbc4c842a41e4",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be coated steel."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "741b7c4b9ea7771c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be dining room."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "22f609db418a4ac4",
+   "gt_moved": false,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the most I want to spend doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "85e28a76865c4767",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "368b3006d9b2290c",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 white instead of blue velvet."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "eb9bd9130bb873c8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 3pc king(102\"x90\") instead of blue velvet."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

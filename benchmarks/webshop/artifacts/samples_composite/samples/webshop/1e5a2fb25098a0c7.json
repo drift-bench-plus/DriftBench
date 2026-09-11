@@ -1,0 +1,447 @@
+{
+ "sample_id": "1e5a2fb25098a0c7",
+ "tree_id": "42ec58a8ce496c53",
+ "adapter": "webshop",
+ "cluster": "men's loafers & slip-ons",
+ "goal_idx": 251,
+ "split": "test",
+ "source_instruction": "i would like a size 11 brown suede loafer with a rubber sole.",
+ "query": "Ugh, I swear my neighbor\u2019s golden retriever has made it his personal mission to dig up every last dandelion root along our shared fence line this week. Yesterday I stepped out to grab my mail and found a whole mound of clumpy dirt and half-chewed dandelion stems piled right on top of my welcome mat, and the little guy just sat there wagging his tail like he\u2019d left me a fancy prize. I had to rush to sweep it all up before my landlord stopped by for that scheduled porch inspection I almost forgot about, and I still found a crumb of dried mud stuck to the cuff of my work slacks when I got to the office this morning. It\u2019s been such a chaotic, silly start to the week that I barely had time to knock out the quick errand I need to sort right now. Hey, I\u2019m browsing the men\u2019s loafers & slip-ons section right now and need a pair quick. I\u2019m looking for a pair with a cork sole, the brown suede with black sole style, size 11, and they need to be treated with a waterproof stain-repellent coating right out of the box. I don\u2019t want to spend too much, so can you pull up options that fit what I\u2019m after? I\u2019ve been scrolling for ages and keep running into pairs that don\u2019t match the look I want for work.",
+ "strategy_ids": [
+  "insufficient_information",
+  "factual_error",
+  "irrelevant_information",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "insufficient_information+factual_error+irrelevant_information+contextual_irrelevance",
+  "family": "intention+parameter+premise",
+  "mask_kind": "composite",
+  "kinds": [
+   "falsify",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "insufficient_information",
+   "factual_error",
+   "irrelevant_information",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "factual_error": "attr:rubber sole",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [
+   [
+    "attr:rubber sole",
+    "rubber sole",
+    "cork sole"
+   ]
+  ],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "cork sole",
+    "condition": [
+     "attr:rubber sole",
+     "=",
+     "cork sole"
+    ]
+   },
+   {
+    "text": "treated with a waterproof stain-repellent coating right out of the box",
+    "condition": null
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear my neighbor\u2019s golden retriever has made it his personal mission to dig up every last dandelion root along our shared fence line this week. Yesterday I stepped out to grab my mail and found a whole mound of clumpy dirt and half-chewed dandelion stems piled right on top of my welcome mat, and the little guy just sat there wagging his tail like he\u2019d left me a fancy prize. I had to rush to sweep it all up before my landlord stopped by for that scheduled porch inspection I almost forgot about, and I still found a crumb of dried mud stuck to the cuff of my work slacks when I got to the office this morning. It\u2019s been such a chaotic, silly start to the week that I barely had time to knock out the quick errand I need to sort right now.",
+  "retained": [
+   "option:0",
+   "option:1"
+  ],
+  "hidden_slots": [
+   "attr:rubber sole",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:rubber sole",
+     "=",
+     "cork sole"
+    ],
+    [
+     "option:0",
+     "=",
+     "brown suede | black sole"
+    ],
+    [
+     "option:1",
+     "=",
+     "11"
+    ],
+    [
+     "attr:rubber sole",
+     "=",
+     "cork sole"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 5,
+  "spec_id": "9b900c56e05fe570"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 209,
+  "lit_card": 0,
+  "components": {
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 572,
+    "true_card": 209,
+    "readings": 1
+   },
+   "factual_error": {
+    "rule": "substituted",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 209,
+    "readings": 1
+   },
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 209,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 5,
+ "hidden_intent": {
+  "intent_id": "7718457710cef909",
+  "conditions": [
+   [
+    "attr:rubber sole",
+    "=",
+    "rubber sole"
+   ],
+   [
+    "option:0",
+    "=",
+    "brown suede | black sole"
+   ],
+   [
+    "option:1",
+    "=",
+    "11"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "attr:rubber sole",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 209,
+  "value": [
+   "[\"B000H31KBS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B005BLTC9S\",[[\"color\",\"black multi nubuck\"],[\"size\",\"11\"]]]",
+   "[\"B005HELLJS\",[[\"color\",\"black | indigo\"],[\"size\",\"11\"]]]",
+   "[\"B009K4Z01Q\",[[\"color\",\"camo | black\"],[\"size\",\"11\"]]]",
+   "[\"B00CBJVW9Q\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B00M9GK6SE\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B00MD4CX06\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B00MQDFWS4\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B00N8JGCKC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B011MPOP6G\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B014LGW5D8\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B015C3C0LQ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B019FB13ZK\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B01D8U9L6C\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B01IDYP3UG\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B01IO6R3DS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B01JC9B9NQ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B01LYQYS27\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B01N76PEJ4\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B01N9625UN\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B01NBIE3PI\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B071WLFHD5\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B072C3S6TY\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+   "[\"B072F1S277\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07349FPZ3\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B073RNV1ZH\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B074KN7SGH\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B074NYNHWX\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B074TWFZZ1\",[[\"color\",\"black plain\"],[\"size\",\"11\"]]]",
+   "[\"B075X96R9D\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B075X9VW2N\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B075XMLXQ6\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B076CTWDDS\",[[\"color\",\"black smooth\"],[\"size\",\"11\"]]]",
+   "[\"B076CWC8K7\",[[\"color\",\"black | multi\"],[\"size\",\"11\"]]]",
+   "[\"B077YXYLH6\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B079FYW1JS\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+   "[\"B07BCRZRZH\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07BHFC4D9\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07C65TFSM\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07CK7DZKW\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+   "[\"B07CL8BLRK\",[[\"color\",\"black leather\"],[\"size\",\"11.5\"]]]",
+   "[\"B07CSY562L\",[[\"color\",\"black grainy\"],[\"size\",\"11\"]]]",
+   "[\"B07DHY6XMZ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07DK5QN45\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07DSCQ4KN\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07F8SSRQP\",[[\"color\",\"black\"],[\"size\",\"11 d(m) us\"]]]",
+   "[\"B07FL4W16K\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07G4PB9PS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07G5JFH6K\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07H1LGVQ2\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07H9PXL88\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07HSLJZGQ\",[[\"color\",\"black | gold\"],[\"size\",\"11\"]]]",
+   "[\"B07HSSPY7S\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07K3SM8SV\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07K3WZMPD\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07K43NH5L\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07K8P97PD\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07K8QX3ZV\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07KBFG8R7\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07KF653HS\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07KQ4JKC1\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07KXMPGBT\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07L6NZFSB\",[[\"color\",\"black | black | black\"],[\"size\",\"11\"]]]",
+   "[\"B07MRN8SJ7\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07MTK1W8B\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07MVNR48M\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07MVVCJTH\",[[\"color\",\"a-black\"],[\"size\",\"11\"]]]",
+   "[\"B07MVYPLFM\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07NDXP8TM\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07P2B7ZY9\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07PMLFJCG\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07Q33L44N\",[[\"color\",\"black nappa\"],[\"size\",\"11\"]]]",
+   "[\"B07Q3DGMFP\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07Q55K685\",[[\"color\",\"black nappa\"],[\"size\",\"11\"]]]",
+   "[\"B07Q55KDM3\",[[\"color\",\"black nappa\"],[\"size\",\"11\"]]]",
+   "[\"B07Q8QV2VC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07QC37GMY\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07QPBXVDM\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07QPC2N3T\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07QQZMNKL\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07R4BY8H2\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07R8JPZ4V\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07RWKNMGF\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07RXC42CT\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07S1NGC3B\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07S2KBQTQ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07TWJ8QGP\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07VCGTYY4\",[[\"color\",\"black nappa\"],[\"size\",\"11\"]]]",
+   "[\"B07VDGSMMT\",[[\"color\",\"black nappa\"],[\"size\",\"11\"]]]",
+   "[\"B07VJF112L\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07VQPBDQJ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07VXR5XD8\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07VYSHVFF\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07VYSKVHN\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07WZRRZ2T\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07X614T3Y\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07X8WDZTC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07X9ZZ1J4\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07XB388ZV\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07XC398Q9\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07XH3YN8X\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07XH58SY5\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B07XMJ8F4Y\",[[\"color\",\"black grainy | natural sole\"],[\"size\",\"11\"]]]",
+   "[\"B07XSDB983\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07XSDCG6V\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07XSRVBH2\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07YJMBDWJ\",[[\"color\",\"d_black grey9\"],[\"size\",\"11.5\"]]]",
+   "[\"B07YSWDW85\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07Z81VX1B\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B07ZJLDJKP\",[[\"color\",\"black | henry-1\"],[\"size\",\"11\"]]]",
+   "[\"B0811R5NSP\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B0811R8QWS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B0811RX9TZ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B083DQG7Q2\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B083HVJ3MZ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08411CZ6F\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B084LN5P88\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B085274HQF\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B0855GMCYG\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B085L6RCXX\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B085Q5PQ7T\",[[\"color\",\"b | w black\"],[\"size\",\"11\"]]]",
+   "[\"B085Q7V9HY\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B085VB2HQL\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B086PJH2CG\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B086W1D4K7\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08737QR2R\",[[\"color\",\"black nubuck\"],[\"size\",\"11\"]]]",
+   "[\"B0877972R5\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B087CN64B2\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B0894LC3P3\",[[\"color\",\"my802b-black\"],[\"size\",\"11\"]]]",
+   "[\"B0894QLHRJ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B089FCC5LH\",[[\"color\",\"dark stone | black\"],[\"size\",\"11\"]]]",
+   "[\"B08BNXHFRL\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08DF7JVDQ\",[[\"color\",\"black leather\"],[\"size\",\"11\"]]]",
+   "[\"B08F31TWHF\",[[\"color\",\"b black\"],[\"size\",\"11\"]]]",
+   "[\"B08G4XYX87\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08G6MFYC7\",[[\"color\",\"black slubby woven\"],[\"size\",\"11\"]]]",
+   "[\"B08GQDRY6R\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08GS2HJCR\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+   "[\"B08JDXS63W\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08JH674VC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08KNWYW16\",[[\"color\",\"black stitchlite | gold\"],[\"size\",\"11\"]]]",
+   "[\"B08M3K51K8\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08MTMFZZ5\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08NPG1BYJ\",[[\"color\",\"black suede\"],[\"size\",\"11\"]]]",
+   "[\"B08P28DHQ2\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08P5RRDG7\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08P6TQ6Y6\",[[\"color\",\"a | black\"],[\"size\",\"11\"]]]",
+   "[\"B08QMSDPSS\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08QSMLPXV\",[[\"color\",\"all black\"],[\"size\",\"11\"]]]",
+   "[\"B08R8D9CQN\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08RD71RRY\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08S479Y9L\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08SC1PFHK\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+   "[\"B08SG6PCFB\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08SPBSD2R\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08SQTPXS7\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08SR4ZDJS\",[[\"color\",\"black | wasted talent\"],[\"size\",\"11\"]]]",
+   "[\"B08T69XFLW\",[[\"color\",\"c-black\"],[\"size\",\"11\"]]]",
+   "[\"B08VKWMZH1\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08YK9LMYQ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08ZGY3VQ4\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08ZSVYTTD\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B08ZYHWCBY\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09119JD4D\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B092CG8GS3\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B092ZLNG5K\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B0937DNCJD\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B093DGDTP9\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B093QSGZKM\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B0942NDJPN\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B094JMBS31\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B094NZXQML\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B094Y7ZCV1\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B095CR8QPT\",[[\"color\",\"black multi ll\"],[\"size\",\"11\"]]]",
+   "[\"B095KXHCJD\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B097JJWM13\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B098775VQB\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B098JWCPGX\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B099PP2XRM\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09B18WR8L\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09B3K2GFQ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09BJ5SF67\",[[\"color\",\"# black\"],[\"size\",\"11.5\"]]]",
+   "[\"B09BJ7SJ1K\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09BQYGPZB\",[[\"color\",\"a51 | black\"],[\"size\",\"11\"]]]",
+   "[\"B09BRBGLLJ\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09C36HPQ5\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+   "[\"B09C7TN9RR\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09DG358PR\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09GPCJWK2\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+   "[\"B09GPXLB7B\",[[\"color\",\"black canvas\"],[\"size\",\"11\"]]]",
+   "[\"B09H2F7L2C\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09HGW1WNL\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09HJQQ62H\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09KLKXPWG\",[[\"color\",\"black\"],[\"size\",\"11.5\"]]]",
+   "[\"B09LHVWL2B\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09M6RKXF5\",[[\"color\",\"black 1\"],[\"size\",\"11\"]]]",
+   "[\"B09M8FS9WB\",[[\"color\",\"a | black\"],[\"size\",\"11\"]]]",
+   "[\"B09N75JZL1\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09N7CF4WX\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09PGZV48H\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09PNF3MR1\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09Q61XL6C\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09Q8G4MMC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09Q8JPD65\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09QC8J5F7\",[[\"color\",\"charcoal black\"],[\"size\",\"11\"]]]",
+   "[\"B09QCBS39S\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09QRXWWXC\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09QS5M5VG\",[[\"color\",\"black\"],[\"size\",\"11\"]]]",
+   "[\"B09R7HG92Q\",[[\"color\",\"black\"],[\"size\",\"11\"]]]"
+  ],
+  "hash": "6761cd2018bb61ef624430930d2fedab"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "6113100690571140",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's loafers & slip-ons instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "c5ca8322630baf83",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the men's loafers & slip-ons instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "4fae0f7a65790fa5",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be synthetic sole."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "b00ff651f026c56b",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be leather sole."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "a52fe5b7a67a869a",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "b8b252b35b459964",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "2f9f5ee2c12b4c81",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it (checkerboard) ethereal | true white instead of brown suede | black sole."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "e86b1c45244c6420",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it (love me | love me not) daisy | true white instead of brown suede | black sole."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

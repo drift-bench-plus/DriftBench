@@ -1,0 +1,206 @@
+{
+ "adapter": "webshop",
+ "cluster": "bathing accessories",
+ "fidelity_notes": [],
+ "goal_idx": 209,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "2c816d607110daa9aefa71414b757cf4",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08R9GV397\",[[\"color\",\"light pink\"]]]",
+   "[\"B08XXQHZS1\",[[\"color\",\"light pink\"]]]",
+   "[\"B08Y6VZFT6\",[[\"scent\",\"2 pack-light pink\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:long handle",
+    "=",
+    "long handle"
+   ],
+   [
+    "option:0",
+    "=",
+    "light pink"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "71a6a9b91d6775b6"
+ },
+ "mask": {
+  "ambiguous": [
+   {
+    "placements": [
+     [
+      "option:0",
+      "light pink"
+     ],
+     [
+      "option:0",
+      "light in weight"
+     ]
+    ],
+    "surface": "light"
+   }
+  ],
+  "attempt": 1,
+  "components": [
+   "lexical_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:long handle",
+     "=",
+     "long handle"
+    ],
+    [
+     "option:0",
+     "=",
+     "light pink"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   [
+    [
+     "attr:long handle",
+     "=",
+     "long handle"
+    ],
+    [
+     "option:0",
+     "=",
+     "light in weight"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:long handle",
+   "price_upper"
+  ],
+  "spec_id": "9d998ec2d2722150",
+  "strategy_id": "lexical_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I need a bathing accessory with a long handle, and I want it to be light, all for under 20 dollars.",
+ "render_attempts": 1,
+ "sample_id": "a877d501cfcb960d",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bathing accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "874df47adf6060c1"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the bathing accessories instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "af15b930ca3ad6b5"
+  },
+  {
+   "announcement": "Also, it needs to be non toxic.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4a19ed42826d492f"
+  },
+  {
+   "announcement": "Also, it needs to be shower gel.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "cd07b8fc34b2b57f"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "8dcba4e6eedf9624"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b46c34f0af3fda2d"
+  },
+  {
+   "announcement": "Actually, make it (6 packs)-blackx6 instead of light pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "1829cc730df8e907"
+  },
+  {
+   "announcement": "Actually, make it #3 instead of light pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "40751f6f00e8cf26"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": null,
+  "ok": true,
+  "reading_cards": [
+   3,
+   2
+  ],
+  "rule": "ambiguous",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a light pink long handle back loofah shower brush.",
+ "split": "test",
+ "strategy_ids": [
+  "lexical_ambiguity"
+ ],
+ "tree_id": "ae56922c737a52f7",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

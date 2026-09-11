@@ -1,0 +1,82 @@
+{
+ "sample_id": "49244fd965866a64__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "49244fd965866a64",
+ "query": "I just picked up the new limited-edition matcha scented phone case I ordered last week, it fits so perfectly and the texture is so soft I can barely put my phone down. I also tried the new taro milk tea from the boba shop down the street this afternoon, it had just the right amount of sweetness and the taro bits were super chewy. Oh right, I also booked a weekend hiking trip to the nearby national park yesterday, I've been looking forward to walking the forest trails and taking photos of the autumn leaves for ages. Anyway, my phone's network has been really bad lately, I just realized airplane mode is turned on and I think my network preference settings are off, can you help me figure out how to fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just picked up the new limited-edition matcha scented phone case I ordered last week, it fits so perfectly and the texture is so soft I can barely put my phone down. I also tried the new taro milk tea from the boba shop down the street this afternoon, it had just the right amount of sweetness and the taro bits were super chewy. Oh right, I also booked a weekend hiking trip to the nearby national park yesterday, I've been looking forward to walking the forest trails and taking photos of the autumn leaves for ages.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

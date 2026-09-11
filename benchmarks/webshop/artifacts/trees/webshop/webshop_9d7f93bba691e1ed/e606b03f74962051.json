@@ -1,0 +1,855 @@
+{
+ "adapter": "webshop",
+ "adapter_version": "1",
+ "children": [
+  {
+   "base": {
+    "asin": "B089Z2S9XT",
+    "cluster": "non-dairy milks",
+    "name": "DaVinci Gourmet Sugar-Free Egg Nog Syrup, 25.4 Ounce (Pack of 4)",
+    "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups"
+   },
+   "bound_slots": [
+    "attr:sugar free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:sugar free",
+     "=",
+     "sugar free"
+    ],
+    [
+     "option:0",
+     "=",
+     "egg nog"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "18e99b3e2fb9e702fec43e70fc7d3287",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B089Z2S9XT\",[[\"flavor name\",\"egg nog\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "67237a1870713a0b",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B089Z2S9XT",
+     "attributes": [
+      "sugar free"
+     ],
+     "category": "",
+     "goal_options": [
+      "egg nog"
+     ],
+     "name": "DaVinci Gourmet Sugar-Free Egg Nog Syrup, 25.4 Ounce (Pack of 4)",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": "4de48923debc5582",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B06XSGZKC7",
+    "cluster": "non-dairy milks",
+    "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+    "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+   },
+   "bound_slots": [
+    "attr:certified organic",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:certified organic",
+     "=",
+     "certified organic"
+    ],
+    [
+     "option:0",
+     "=",
+     "cacao nibs"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2dffe4d99c272f21066a35be27c00557",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B06XSGZKC7\",[[\"flavor\",\"cacao nibs\"]]]",
+     "[\"B08VYDSFV8\",[[\"flavor name\",\"cacao nibs\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "a68891af7741449d",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B06XSGZKC7",
+     "attributes": [
+      "certified organic"
+     ],
+     "category": "",
+     "goal_options": [
+      "cacao nibs"
+     ],
+     "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+     "price_upper": 20,
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": "1d47f577b27cc337",
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08F2QT47F",
+    "cluster": "non-dairy milks",
+    "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+    "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola"
+   },
+   "bound_slots": [
+    "attr:brown rice",
+    "attr:dairy free",
+    "attr:low sugar",
+    "attr:soy free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:brown rice",
+     "=",
+     "brown rice"
+    ],
+    [
+     "attr:dairy free",
+     "=",
+     "dairy free"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "option:0",
+     "=",
+     "10 ounce (pack of 3)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "67c11472827f2e9d8b832c8104b39d40",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B091M7DJM2\",[[\"size\",\"7 ounce (pack of 3)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "dda697bd9deae6fb",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B08F2QT47F",
+     "attributes": [
+      "brown rice",
+      "dairy free",
+      "low sugar",
+      "soy free"
+     ],
+     "category": "",
+     "goal_options": [
+      "10 ounce (pack of 3)"
+     ],
+     "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08F2QT47F",
+    "cluster": "non-dairy milks",
+    "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+    "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola"
+   },
+   "bound_slots": [
+    "attr:dairy free",
+    "attr:gluten free",
+    "attr:low sugar",
+    "attr:soy free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dairy free",
+     "=",
+     "dairy free"
+    ],
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "option:0",
+     "=",
+     "10 ounce (pack of 3)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "67c11472827f2e9d8b832c8104b39d40",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B091M7DJM2\",[[\"size\",\"7 ounce (pack of 3)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "ed7c9fb58d3a1158",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B08F2QT47F",
+     "attributes": [
+      "dairy free",
+      "gluten free",
+      "low sugar",
+      "soy free"
+     ],
+     "category": "",
+     "goal_options": [
+      "10 ounce (pack of 3)"
+     ],
+     "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08F2QT47F",
+    "cluster": "non-dairy milks",
+    "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+    "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola"
+   },
+   "bound_slots": [
+    "attr:dairy free",
+    "attr:low sugar",
+    "attr:soy free",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dairy free",
+     "=",
+     "dairy free"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "7f5a506f55595da405490b13fd98aa77",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B0046HCDMG\",[]]",
+     "[\"B01DCT9Y4I\",[]]",
+     "[\"B077G3B4MK\",[]]",
+     "[\"B07RHL6LGT\",[]]",
+     "[\"B08CDP994X\",[]]",
+     "[\"B08DJB6GYX\",[]]",
+     "[\"B08F2QT47F\",[]]",
+     "[\"B08MH1VFH8\",[]]",
+     "[\"B08ZSZCPR5\",[]]",
+     "[\"B091M7DJM2\",[]]",
+     "[\"B09HJTDRQF\",[]]",
+     "[\"B09LVRPLV9\",[]]",
+     "[\"B09LVSS14C\",[]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c5e082bb8fd8b331",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B08F2QT47F",
+     "attributes": [
+      "dairy free",
+      "low sugar",
+      "soy free"
+     ],
+     "category": "",
+     "goal_options": [],
+     "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08F2QT47F",
+    "cluster": "non-dairy milks",
+    "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+    "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola"
+   },
+   "bound_slots": [
+    "attr:dairy free",
+    "attr:soy free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dairy free",
+     "=",
+     "dairy free"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "option:0",
+     "=",
+     "10 ounce (pack of 3)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "00d6878cbf48d67c929e353d2b103e46",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B000HDJXGW\",[[\"size\",\"1 ounce (pack of 36)\"]]]",
+     "[\"B004SET0ZA\",[[\"size\",\".10 pack\"]]]",
+     "[\"B00DZMFN9I\",[[\"size\",\"0.7 ounce (pack of 36)\"]]]",
+     "[\"B00RETHPKI\",[[\"flavor name\",\"3 pack\"]]]",
+     "[\"B012IATDUC\",[[\"size\",\"32 ounce (pack of 3)\"]]]",
+     "[\"B01LAX6N74\",[[\"size\",\".10 pack - 6.34 ounce (pack of 1)\"]]]",
+     "[\"B01MA1YBV0\",[[\"size\",\"10 pack\"]]]",
+     "[\"B06XDLBC6L\",[[\"size\",\"0.9 ounce (pack of 3)\"]]]",
+     "[\"B06ZYDJ41T\",[[\"size\",\"8 ounce (pack of 1)\"]]]",
+     "[\"B07BBM9MSL\",[[\"size\",\"3-pack\"]]]",
+     "[\"B07CM7Y3D7\",[[\"size\",\"3 pack\"]]]",
+     "[\"B07N1W42LY\",[[\"size\",\"3 pack\"]]]",
+     "[\"B07N1X9Q3J\",[[\"size\",\"12 ounce (pack of 3)\"]]]",
+     "[\"B07P7D6YBL\",[[\"size\",\"1.4 ounce (pack of 7)\"]]]",
+     "[\"B07ZHVH6KJ\",[[\"size\",\"3-pack\"]]]",
+     "[\"B086KTBTTT\",[[\"size\",\"2 ounce (pack of 3)\"]]]",
+     "[\"B08BK85QK7\",[[\"size\",\"3 count (pack of 1)\"]]]",
+     "[\"B08F2QT47F\",[[\"size\",\"10 ounce (pack of 3)\"]]]",
+     "[\"B08L6X1V9J\",[[\"size\",\"4 ounce (pack of 4)\"]]]",
+     "[\"B091M7DJM2\",[[\"size\",\"7 ounce (pack of 3)\"]]]",
+     "[\"B095HY5JSH\",[[\"size\",\"12 ounce (pack of 1)\"]]]",
+     "[\"B09KLDKHZ1\",[[\"size\",\"15.5 ounce (pack of 3)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "daccff96aed61e91",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B08F2QT47F",
+     "attributes": [
+      "dairy free",
+      "soy free"
+     ],
+     "category": "",
+     "goal_options": [
+      "10 ounce (pack of 3)"
+     ],
+     "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08F2QT47F",
+    "cluster": "non-dairy milks",
+    "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+    "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola"
+   },
+   "bound_slots": [
+    "attr:dairy free",
+    "attr:low sugar",
+    "attr:soy free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dairy free",
+     "=",
+     "dairy free"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "option:0",
+     "=",
+     "1 count"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2481d70c62272ee8b1073ded6e213203",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08CDP994X\",[[\"size\",\"1 count (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "bf626b4ddc70affd",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B08F2QT47F",
+     "attributes": [
+      "dairy free",
+      "low sugar",
+      "soy free"
+     ],
+     "category": "",
+     "goal_options": [
+      "1 count"
+     ],
+     "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  },
+  {
+   "base": {
+    "asin": "B08F2QT47F",
+    "cluster": "non-dairy milks",
+    "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+    "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola"
+   },
+   "bound_slots": [
+    "attr:dairy free",
+    "attr:low sugar",
+    "attr:soy free",
+    "option:0",
+    "price_upper"
+   ],
+   "conditions": [
+    [
+     "attr:dairy free",
+     "=",
+     "dairy free"
+    ],
+    [
+     "attr:low sugar",
+     "=",
+     "low sugar"
+    ],
+    [
+     "attr:soy free",
+     "=",
+     "soy free"
+    ],
+    [
+     "option:0",
+     "=",
+     "1 count (pack of 1)"
+    ],
+    [
+     "price_upper",
+     "<=",
+     40
+    ]
+   ],
+   "ground_truth": {
+    "hash": "2481d70c62272ee8b1073ded6e213203",
+    "kind": "purchaseset",
+    "value": [
+     "[\"B08CDP994X\",[[\"size\",\"1 count (pack of 1)\"]]]"
+    ]
+   },
+   "gt_extensional": true,
+   "intent_id": "c2c2ab0f02ff469a",
+   "is_seed": false,
+   "recipe": {
+    "cluster": "non-dairy milks",
+    "goal": {
+     "asin": "B08F2QT47F",
+     "attributes": [
+      "dairy free",
+      "low sugar",
+      "soy free"
+     ],
+     "category": "",
+     "goal_options": [
+      "1 count (pack of 1)"
+     ],
+     "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+     "price_upper": 40,
+     "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola",
+     "query": "non-dairy milks"
+    }
+   },
+   "source_record": null,
+   "unbound_slots": []
+  }
+ ],
+ "config": {
+  "balanced_branching": true,
+  "branching": 8,
+  "depth": 1,
+  "docker": {
+   "cpus": 2,
+   "exec_timeout_s": 30,
+   "label": "intent-tree",
+   "memory": "1g",
+   "mysql_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+   "mysql_image": "mysql:8",
+   "mysql_password": "password",
+   "mysql_port": 33060,
+   "os_apt_packages_installed": false,
+   "os_base_digest": "sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f",
+   "os_image": "intent-tree/os:v1",
+   "sql_timeout_s": 60
+  },
+  "min_gt_moved_edges": 1,
+  "repos": {
+   "agentbench": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+   "webshop": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd"
+  },
+  "require_full_quota": true,
+  "seed": 42,
+  "webshop": {
+   "max_resident_clusters": 2,
+   "retrieval_splits": [
+    "test",
+    "eval"
+   ],
+   "root_splits": [
+    "test"
+   ]
+  }
+ },
+ "edges": [
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B089Z2S9XT",
+     "cluster": "non-dairy milks",
+     "name": "DaVinci Gourmet Sugar-Free Egg Nog Syrup, 25.4 Ounce (Pack of 4)",
+     "product_category": "Grocery & Gourmet Food › Beverages › Bottled Beverages, Water & Drink Mixes › Flavor Syrups"
+    }
+   },
+   "dst": "67237a1870713a0b",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "4de48923debc5582",
+   "src": "3ccaf14bd0fc63d1"
+  },
+  {
+   "delta": {
+    "pivot_to": {
+     "asin": "B06XSGZKC7",
+     "cluster": "non-dairy milks",
+     "name": "Organic Cacao Powder, 8 Ounces - Certified, Non-GMO, Kosher, Raw, Unsweetened, Sirtfood, Bulk",
+     "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Baking Chocolates, Carob & Cocoa › Cocoa"
+    }
+   },
+   "dst": "a68891af7741449d",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "source_record": "1d47f577b27cc337",
+   "src": "3ccaf14bd0fc63d1"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:brown rice",
+      "=",
+      "brown rice"
+     ]
+    ]
+   },
+   "dst": "dda697bd9deae6fb",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3ccaf14bd0fc63d1"
+  },
+  {
+   "delta": {
+    "added": [
+     [
+      "attr:gluten free",
+      "=",
+      "gluten free"
+     ]
+    ]
+   },
+   "dst": "ed7c9fb58d3a1158",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3ccaf14bd0fc63d1"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "option:0",
+      "=",
+      "10 ounce (pack of 3)"
+     ]
+    ]
+   },
+   "dst": "c5e082bb8fd8b331",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3ccaf14bd0fc63d1"
+  },
+  {
+   "delta": {
+    "removed": [
+     [
+      "attr:low sugar",
+      "=",
+      "low sugar"
+     ]
+    ]
+   },
+   "dst": "daccff96aed61e91",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3ccaf14bd0fc63d1"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "10 ounce (pack of 3)",
+      "1 count"
+     ]
+    ]
+   },
+   "dst": "bf626b4ddc70affd",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3ccaf14bd0fc63d1"
+  },
+  {
+   "delta": {
+    "changed": [
+     [
+      "option:0",
+      "=",
+      "10 ounce (pack of 3)",
+      "1 count (pack of 1)"
+     ]
+    ]
+   },
+   "dst": "c2c2ab0f02ff469a",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "source_record": null,
+   "src": "3ccaf14bd0fc63d1"
+  }
+ ],
+ "env_id": "webshop_9d7f93bba691e1ed",
+ "env_spec": {
+  "cluster": "non-dairy milks",
+  "env_id": "webshop_9d7f93bba691e1ed",
+  "kind": "webshop"
+ },
+ "root": {
+  "base": {
+   "asin": "B08F2QT47F",
+   "cluster": "non-dairy milks",
+   "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+   "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola"
+  },
+  "bound_slots": [
+   "attr:dairy free",
+   "attr:low sugar",
+   "attr:soy free",
+   "option:0",
+   "price_upper"
+  ],
+  "conditions": [
+   [
+    "attr:dairy free",
+    "=",
+    "dairy free"
+   ],
+   [
+    "attr:low sugar",
+    "=",
+    "low sugar"
+   ],
+   [
+    "attr:soy free",
+    "=",
+    "soy free"
+   ],
+   [
+    "option:0",
+    "=",
+    "10 ounce (pack of 3)"
+   ],
+   [
+    "price_upper",
+    "<=",
+    40
+   ]
+  ],
+  "ground_truth": {
+   "hash": "fbff7fa1169d5380ab5de66d9531ab9b",
+   "kind": "purchaseset",
+   "value": [
+    "[\"B08F2QT47F\",[[\"size\",\"10 ounce (pack of 3)\"]]]",
+    "[\"B091M7DJM2\",[[\"size\",\"7 ounce (pack of 3)\"]]]"
+   ]
+  },
+  "gt_extensional": true,
+  "intent_id": "3ccaf14bd0fc63d1",
+  "is_seed": true,
+  "recipe": {
+   "cluster": "non-dairy milks",
+   "goal": {
+    "asin": "B08F2QT47F",
+    "attributes": [
+     "low sugar",
+     "soy free",
+     "dairy free"
+    ],
+    "category": "",
+    "goal_options": [
+     "10 ounce (pack of 3)"
+    ],
+    "name": "gr8nola Granola Cereal - 3 PACK - THE ORIGINAL - Healthy, Low Sugar Granola - Made with Superfoods Whole Almonds, Honey, Cinnamon & Flaxseed - Soy Free, Dairy Free & No Refined Sugar - 10 ounces each",
+    "price_upper": 40,
+    "product_category": "Grocery & Gourmet Food › Breakfast Foods › Cereals › Granola",
+    "query": "non-dairy milks"
+   }
+  },
+  "source_record": "6c9bfd142544e967",
+  "unbound_slots": [
+   "attr:brown rice",
+   "attr:gluten free",
+   "attr:low sugar",
+   "option:0"
+  ]
+ },
+ "tree_id": "e606b03f74962051"
+}

@@ -1,0 +1,233 @@
+{
+ "sample_id": "c041bddc7ea26f51",
+ "tree_id": "3753532cdccbf261",
+ "adapter": "webshop",
+ "cluster": "hair loss products",
+ "goal_idx": 468,
+ "split": "test",
+ "source_instruction": "i am looking for light blonde hair extensions that are 18 inches long.",
+ "query": "I swear the weirdest thing happened to me on my walk over to the store today! I cut through the little community park like I always do, and there was a group of tiny kids clustered around the base of the big old oak tree by the playground, all oohing and ahhing so loud I had to stop and see what was up. Turns out they\u2019d found a baby squirrel that\u2019d tumbled out of its nest, all fuzzy and wobbly, and none of them dared touch it even though they were all dying to make sure it was okay. I ended up hanging out for ten minutes helping them corral it into a shoeboxox one of the kids ran home to grab, and waited with them until a local wildlife rehab volunteer showed up to take it in and make sure it didn\u2019t have any injuries. It was such a sweet, random little detour that totally made my whole morning feel brighter, honestly.\nHey, I\u2019m browsing the hair loss products section right now looking for hair extensions, can you help me out? I need them to be 18 inch long, and I want that one shade I always get, you know the one I\u2019m talking about right? Also make sure they come with a free satin storage pouch to keep them from getting tangled when I\u2019m not wearing them, that\u2019s a must-have for me. Let me know what options you\u2019ve got that fit, yeah?",
+ "strategy_ids": [
+  "irrelevant_information",
+  "insufficient_information",
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 4,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "irrelevant_information+insufficient_information+referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention+parameter",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise",
+   "withhold"
+  ],
+  "components": [
+   "irrelevant_information",
+   "insufficient_information",
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0",
+   "insufficient_information": "price_upper"
+  },
+  "governing_kind": "composite_k4",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [
+   "price_upper"
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [
+   {
+    "text": "Also make sure they come with a free satin storage pouch to keep them from getting tangled when I\u2019m not wearing them, that\u2019s a must-have for me.",
+    "condition": [
+     "attr:hair extensions",
+     "=",
+     "comes with free satin storage pouch"
+    ]
+   }
+  ],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I swear the weirdest thing happened to me on my walk over to the store today! I cut through the little community park like I always do, and there was a group of tiny kids clustered around the base of the big old oak tree by the playground, all oohing and ahhing so loud I had to stop and see what was up. Turns out they\u2019d found a baby squirrel that\u2019d tumbled out of its nest, all fuzzy and wobbly, and none of them dared touch it even though they were all dying to make sure it was okay. I ended up hanging out for ten minutes helping them corral it into a shoeboxox one of the kids ran home to grab, and waited with them until a local wildlife rehab volunteer showed up to take it in and make sure it didn\u2019t have any injuries. It was such a sweet, random little detour that totally made my whole morning feel brighter, honestly.",
+  "retained": [
+   "attr:hair extensions",
+   "option:1"
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair extensions",
+     "=",
+     "hair extensions"
+    ],
+    [
+     "option:1",
+     "=",
+     "18 inch"
+    ],
+    [
+     "attr:hair extensions",
+     "=",
+     "comes with free satin storage pouch"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "9de90efd8373f2b1"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 5,
+  "lit_card": 0,
+  "components": {
+   "irrelevant_information": {
+    "rule": "extras",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 0,
+    "true_card": 5,
+    "readings": 1
+   },
+   "insufficient_information": {
+    "rule": "withheld",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 10,
+    "true_card": 5,
+    "readings": 1
+   },
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 57,
+    "true_card": 5,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "d4d04a4538409427",
+  "conditions": [
+   [
+    "attr:hair extensions",
+    "=",
+    "hair extensions"
+   ],
+   [
+    "option:0",
+    "=",
+    "ba#16 | 22 light blonde highlighted golden blonde"
+   ],
+   [
+    "option:1",
+    "=",
+    "18 inch"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [
+   "option:0",
+   "price_upper"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 5,
+  "value": [
+   "[\"B0785YLFQX\",[[\"color\",\"p-light blonde highlighted golden blonde #16 | 22\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+   "[\"B07CZKHLV6\",[[\"color\",\"golden blonde  | beach blonde\"],[\"size\",\"18 inch (pack of 1)\"]]]",
+   "[\"B08KVNKJFL\",[[\"color\",\"golden blonde  | beach blonde\"],[\"size\",\"16 inch\"]]]",
+   "[\"B096M319FV\",[[\"color\",\"light golden blonde\"],[\"size\",\"18 inch\"]]]",
+   "[\"B09GXZJLB1\",[[\"color\",\"ba#16 | 22 light blonde highlighted golden blonde\"],[\"size\",\"18 inch\"]]]"
+  ],
+  "hash": "76a3435f4415464d46dd8b92f9a99afc"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "7e0918b55ee9dfe8",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair loss products instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "f0bfa433247a8172",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the hair loss products instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "413d3d3eff4b4c43",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be high quality."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "d82b080ff531d397",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy use."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "c9a30ee8e610e928",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "d5d50deca78eed6d",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "0165c8246d7b9169",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 jet black instead of ba#16 | 22 light blonde highlighted golden blonde."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "47f06a1a49fc0177",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #2 | 6 | 12 dark brown to medium brown with golden blonde instead of ba#16 | 22 light blonde highlighted golden blonde."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

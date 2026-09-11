@@ -1,0 +1,174 @@
+{
+ "adapter": "webshop",
+ "cluster": "pantry staples",
+ "fidelity_notes": [],
+ "goal_idx": 9,
+ "ground_truth": {
+  "cardinality": 6,
+  "hash": "f287045db01c4839c004b2f70003e7be",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B000ZH04KY\",[[\"flavor name\",\"maple pecan\"]]]",
+   "[\"B003I567W4\",[[\"flavor name\",\"pecan\"]]]",
+   "[\"B01JKMPZ8U\",[[\"flavor name\",\"almond pecan\"]]]",
+   "[\"B072MHDHDY\",[[\"flavor name\",\"crunchy cookies - toasted pecan\"]]]",
+   "[\"B07NQZFPDV\",[[\"flavor name\",\"pecan shortbread\"]]]",
+   "[\"B09913B3WZ\",[[\"flavor name\",\"pecan\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:gluten free",
+    "=",
+    "gluten free"
+   ],
+   [
+    "option:0",
+    "=",
+    "pecan"
+   ],
+   [
+    "price_upper",
+    "<=",
+    50
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "intent_id": "1e678eee4eed310f"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 4,
+  "components": [
+   "referential_ambiguity"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "expression",
+  "governing_kind": "withhold",
+  "hidden_slots": [
+   "option:0"
+  ],
+  "kinds": [
+   "mark"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:gluten free",
+     "=",
+     "gluten free"
+    ],
+    [
+     "price_upper",
+     "<=",
+     50
+    ]
+   ]
+  ],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "mask_kind": "mark",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:gluten free",
+   "price_upper"
+  ],
+  "spec_id": "f47f03a52949c9d2",
+  "strategy_id": "referential_ambiguity",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I’m looking for gluten free pantry staples with pecans that are under $50, plus that one.",
+ "render_attempts": 4,
+ "sample_id": "7061f8f80e2c9a43",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the pantry staples instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7e8bafccb35e5707"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the pantry staples instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "b6215ee8575f5182"
+  },
+  {
+   "announcement": "Also, it needs to be protein serving.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "696728e528328c9d"
+  },
+  {
+   "announcement": "Also, it needs to be sea salt.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ccfc2c2c30a5ae8d"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0d748175aacf964b"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4427342e33c1a30c"
+  },
+  {
+   "announcement": "Actually, make it .10 pack - 1 pound instead of pecan.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "04d77a6b572808c8"
+  },
+  {
+   "announcement": "Actually, make it \"cheeze\" variety puffs instead of pecan.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a7c18dabbfee9b26"
+  }
+ ],
+ "signature": {
+  "governing_kind": "withhold",
+  "lit_card": 450,
+  "ok": true,
+  "rule": "marked",
+  "true_card": 6,
+  "verdict": "ok"
+ },
+ "source_instruction": "place order for a pack of 12 blue diamond almonds that is gluten free and has the pecan flavor",
+ "split": "test",
+ "strategy_ids": [
+  "referential_ambiguity"
+ ],
+ "tree_id": "0a67dc92d85066c8",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

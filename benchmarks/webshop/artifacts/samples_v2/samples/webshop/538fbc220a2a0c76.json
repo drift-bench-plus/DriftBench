@@ -1,0 +1,183 @@
+{
+ "adapter": "webshop",
+ "cluster": "men's work & safety footwear",
+ "fidelity_notes": [],
+ "goal_idx": 340,
+ "ground_truth": {
+  "cardinality": 18,
+  "hash": "909c95fbf925cae324aca1b511a05f4c",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B074PFPGHC\",[[\"color\",\"black\"]]]",
+   "[\"B07T8JJV8T\",[[\"color\",\"black\"]]]",
+   "[\"B08BP3FY3J\",[[\"color\",\"797-black\"]]]",
+   "[\"B08W3CNDLD\",[[\"color\",\"black | red\"]]]",
+   "[\"B0957JDVLS\",[[\"color\",\"023-black\"]]]",
+   "[\"B096JQX63Z\",[[\"color\",\"black-21\"]]]",
+   "[\"B097PJ8ZRF\",[[\"color\",\"a01_black\"]]]",
+   "[\"B098JSTV4D\",[[\"color\",\"black\"]]]",
+   "[\"B09B1M5RHG\",[[\"color\",\"black b\"]]]",
+   "[\"B09JPDCKBX\",[[\"color\",\"striped black\"]]]",
+   "[\"B09NPXK3BZ\",[[\"color\",\"black\"]]]",
+   "[\"B09NPXTCGX\",[[\"color\",\"black\"]]]",
+   "[\"B09NPXVGHG\",[[\"color\",\"black\"]]]",
+   "[\"B09NPXWNMY\",[[\"color\",\"black\"]]]",
+   "[\"B09NPXZC6S\",[[\"color\",\"black\"]]]",
+   "[\"B09NY645T9\",[[\"color\",\"black\"]]]",
+   "[\"B09PG34DTS\",[[\"color\",\"black\"]]]",
+   "[\"B09PG36QGC\",[[\"color\",\"black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:light weight",
+    "=",
+    "light weight"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    60
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "b3421f41fdef2b80"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:light weight",
+     "=",
+     "light weight"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     60
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the morning trying to train my new goldfish to swim through tiny plastic hoops I picked up at the pet store, and I swear he’s getting better at recognizing the hand signal I use to cue him to start. I also spent way too long last night rearranging my collection of vintage band tees by color and decade, and I found a faded 90s punk shirt I thought I’d lost years ago. On top of that, I’ve been experimenting with making sourdough croutons from my leftover loaf, and I think I finally nailed the perfect ratio of garlic powder and olive oil for them.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:light weight",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the morning trying to train my new goldfish to swim through tiny plastic hoops I picked up at the pet store, and I swear he’s getting better at recognizing the hand signal I use to cue him to start. I also spent way too long last night rearranging my collection of vintage band tees by color and decade, and I found a faded 90s punk shirt I thought I’d lost years ago. On top of that, I’ve been experimenting with making sourdough croutons from my leftover loaf, and I think I finally nailed the perfect ratio of garlic powder and olive oil for them. I’m looking for men’s work and safety footwear that’s lightweight, comes in black, and costs no more than 60 dollars.",
+ "render_attempts": 1,
+ "sample_id": "538fbc220a2a0c76",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's work & safety footwear instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "7dea39dd9a077edd"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the men's work & safety footwear instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "ecd05ee6ce66071b"
+  },
+  {
+   "announcement": "Also, it needs to be quick drying.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "166babd4693798cf"
+  },
+  {
+   "announcement": "Also, it needs to be memory foam.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "c631d84d33eb22a5"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4d6b71b29d81c8bb"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "72f12476cf3e136a"
+  },
+  {
+   "announcement": "Actually, make it 10.5 wide instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "38229d04ab5c6a70"
+  },
+  {
+   "announcement": "Actually, make it 11 narrow instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "bc2f9add26b21668"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 18,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 18,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for light weight safety shoes for men of black color.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "1630e71d8eaa84b7",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

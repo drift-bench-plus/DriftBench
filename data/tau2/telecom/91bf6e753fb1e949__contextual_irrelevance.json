@@ -1,0 +1,104 @@
+{
+ "sample_id": "91bf6e753fb1e949__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "91bf6e753fb1e949",
+ "query": "I just got back from trying the new matcha croissant at the bakery down the street, it was so flaky and the matcha filling wasn\u2019t too sweet at all, I\u2019m already planning to go back tomorrow to try their lavender latte too. My cat also knocked over my potted succulent this morning, I had to clean soil off the kitchen counter for ten minutes, he\u2019s lucky he\u2019s so cute. Oh right, the reason I called is that I\u2019m traveling abroad right now and my mobile data isn\u2019t working at all\u2014airplane mode is accidentally turned on, I think I picked the wrong network preference earlier, I also already used up all my data for the month, and I haven\u2019t turned on roaming either, can you help me fix this?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just got back from trying the new matcha croissant at the bakery down the street, it was so flaky and the matcha filling wasn\u2019t too sweet at all, I\u2019m already planning to go back tomorrow to try their lavender latte too. My cat also knocked over my potted succulent this morning, I had to clean soil off the kitchen counter for ten minutes, he\u2019s lucky he\u2019s so cute.",
+  "retained": [
+   "fault:airplane_mode_on",
+   "fault:bad_network_preference",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:airplane_mode_on",
+     "=",
+     "airplane_mode_on"
+    ],
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:airplane_mode_on",
+    "=",
+    "airplane_mode_on"
+   ],
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

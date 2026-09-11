@@ -1,0 +1,189 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair cutting tools",
+ "fidelity_notes": [],
+ "goal_idx": 39,
+ "ground_truth": {
+  "cardinality": 11,
+  "hash": "d01f613c99fa9b62195b0dd1902d8deb",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07JN1MH5K\",[[\"size\",\"5.5''\"]]]",
+   "[\"B07P5NMTVZ\",[[\"color\",\"space starry sky printing\"]]]",
+   "[\"B07SRWVV96\",[[\"size\",\"5.5\"]]]",
+   "[\"B07SVHZLWM\",[[\"size\",\"5\"]]]",
+   "[\"B07Y8533L4\",[[\"color\",\"5\"]]]",
+   "[\"B0876H6VLH\",[[\"size\",\"5.5\"]]]",
+   "[\"B0893TC5B1\",[[\"size\",\"5.5\"]]]",
+   "[\"B08DXSZZP7\",[[\"color\",\"5\"]]]",
+   "[\"B08SHJ266Q\",[[\"size\",\"5\"]]]",
+   "[\"B08XJ2PT2C\",[[\"color\",\"starry sky 5\"]]]",
+   "[\"B09JWDDFB7\",[[\"color\",\"#5\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:hair cutting",
+    "=",
+    "hair cutting"
+   ],
+   [
+    "option:0",
+    "=",
+    "starry sky 5"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "ef83bf0a76b2e786"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:hair cutting",
+     "=",
+     "hair cutting"
+    ],
+    [
+     "option:0",
+     "=",
+     "cloud print 3"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "option:0",
+     "starry sky 5"
+    ],
+    "alternative": [
+     "option:0",
+     "cloud print 3"
+    ],
+    "condition": null,
+    "text": "Since you probably don't have hair cutting tools with the \"starry sky 5\" option within a 30 price limit"
+   }
+  ],
+  "retained": [
+   "attr:hair cutting",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "878c45b2cd21e556",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don't have hair cutting tools with the \"starry sky 5\" option within a 30 price limit, I'll settle for hair cutting tools with a \"cloud print 3\" option instead, as long as they still work for hair cutting and stay under 30.",
+ "render_attempts": 2,
+ "sample_id": "16d9bd4a65732834",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair cutting tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "1c6b31c348bc9e75"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair cutting tools instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "a0bea4fdf149ac03"
+  },
+  {
+   "announcement": "Also, it needs to be hair scalp.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5fd679b025cb913a"
+  },
+  {
+   "announcement": "Also, it needs to be water resistant.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fed1be588b649d26"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "19c1f8138dd89dcb"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "42510a0d0a13762e"
+  },
+  {
+   "announcement": "Actually, make it 12 inch (pack of 1) instead of starry sky 5.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "12c18b3b2156d716"
+  },
+  {
+   "announcement": "Actually, make it 1.0 instead of starry sky 5.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4ea74ed2a0d47793"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 9,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 11,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a skull king barber cape with hook sucker.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "189d5a54446d1aa3",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

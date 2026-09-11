@@ -1,0 +1,187 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's activewear",
+ "fidelity_notes": [],
+ "goal_idx": 217,
+ "ground_truth": {
+  "cardinality": 13,
+  "hash": "04fd9564000833b8ae904dc074abc740",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B00L8LXSG8\",[[\"color\",\"lagoon camo palm\"]]]",
+   "[\"B081PBSJCQ\",[[\"color\",\"ojog128  |  153 camo\"]]]",
+   "[\"B08F3GG7R4\",[[\"color\",\"camouflage\"]]]",
+   "[\"B08GPS1Q34\",[[\"color\",\"army green camo\"]]]",
+   "[\"B08JYGZZ8C\",[[\"color\",\"camo\"]]]",
+   "[\"B08K89ZK4Q\",[[\"color\",\"a-camo gray\"]]]",
+   "[\"B08MLLGHPH\",[[\"color\",\"kdf201-grey camo\"]]]",
+   "[\"B08N3XLLC3\",[[\"color\",\"camo multi 6-c\"]]]",
+   "[\"B08R9TJPK6\",[[\"color\",\"camo\"]]]",
+   "[\"B08TQQC152\",[[\"color\",\"08-camo army\"]]]",
+   "[\"B08VDDMTHD\",[[\"color\",\"army green camo\"]]]",
+   "[\"B09J2Y79WS\",[[\"color\",\"green camo\"]]]",
+   "[\"B09QC3MDM9\",[[\"color\",\"b-camouflage\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:elastic waistband",
+    "=",
+    "elastic waistband"
+   ],
+   [
+    "option:0",
+    "=",
+    "camo"
+   ],
+   [
+    "price_upper",
+    "<=",
+    30
+   ]
+  ],
+  "hidden_slots": [
+   "attr:elastic waistband"
+  ],
+  "intent_id": "3a0ea8182a83c78a"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "factual_error"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [
+   "attr:elastic waistband"
+  ],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:elastic waistband",
+     "=",
+     "drawstring waistband"
+    ],
+    [
+     "option:0",
+     "=",
+     "camo"
+    ],
+    [
+     "price_upper",
+     "<=",
+     30
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "e9c041d8c67b2da0",
+  "strategy_id": "factual_error",
+  "substituted": [
+   [
+    "attr:elastic waistband",
+    "elastic waistband",
+    "drawstring waistband"
+   ]
+  ],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I'm looking for women's activewear with a drawstring waistband, I'd prefer a camo print if that's available, and my budget is $30.",
+ "render_attempts": 1,
+ "sample_id": "28aa861a59969217",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's activewear instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "8ea567891c2117c8"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's activewear instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "e834125cf8ec9848"
+  },
+  {
+   "announcement": "Also, it needs to be drawstring waist.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "20a9af9e2b8cfddd"
+  },
+  {
+   "announcement": "Also, it needs to be athletic shorts.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "fcad5883709f6e26"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4ca46e5cfae189bd"
+  },
+  {
+   "announcement": "Actually, the most I want to spend doesn't matter after all.",
+   "gt_moved": false,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "d4f566e1b2b81abe"
+  },
+  {
+   "announcement": "Actually, make it #4 green instead of camo.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3f45315a07dfc50a"
+  },
+  {
+   "announcement": "Actually, make it #2 black instead of camo.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ea212883d44807dd"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 2,
+  "ok": true,
+  "rule": "substituted",
+  "true_card": 13,
+  "verdict": "ok"
+ },
+ "source_instruction": "i am looking for camo colored women's running shorts with an elastic waistband.",
+ "split": "test",
+ "strategy_ids": [
+  "factual_error"
+ ],
+ "tree_id": "0f4133136a896b20",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

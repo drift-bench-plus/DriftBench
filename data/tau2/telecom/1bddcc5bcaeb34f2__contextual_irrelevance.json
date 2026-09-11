@@ -1,0 +1,115 @@
+{
+ "sample_id": "1bddcc5bcaeb34f2__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "1bddcc5bcaeb34f2",
+ "query": "I was walking my golden retriever this morning and he chased a squirrel up an oak tree, ended up getting his leash all tangled around the trunk, I had to spend ten minutes trying to untie it while a bunch of kids on bikes stopped to laugh at us. Then I stopped at the corner caf\u00e9 on my way home, they just rolled out a new lavender honey latte that tastes way better than the vanilla one I usually get, I even grabbed a blueberry scone that was still warm from the oven. Hey, I\u2019ve been having trouble with my phone lately, I prefer not to connect to Wi-Fi since the network is really bad, my data mode is turned off, data saver mode is on, I already exceeded my data usage limit for the month, I\u2019m traveling abroad right now and roaming is turned off too, so my mobile internet won\u2019t work at all, can you help me figure this out?",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I was walking my golden retriever this morning and he chased a squirrel up an oak tree, ended up getting his leash all tangled around the trunk, I had to spend ten minutes trying to untie it while a bunch of kids on bikes stopped to laugh at us. Then I stopped at the corner caf\u00e9 on my way home, they just rolled out a new lavender honey latte that tastes way better than the vanilla one I usually get, I even grabbed a blueberry scone that was still warm from the oven.",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:data_mode_off",
+   "fault:data_saver_mode_on",
+   "fault:data_usage_exceeded",
+   "fault:user_abroad_roaming_disabled_off"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_saver_mode_on",
+     "=",
+     "data_saver_mode_on"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:user_abroad_roaming_disabled_off",
+     "=",
+     "user_abroad_roaming_disabled_off"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_saver_mode_on",
+    "=",
+    "data_saver_mode_on"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:user_abroad_roaming_disabled_off",
+    "=",
+    "user_abroad_roaming_disabled_off"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

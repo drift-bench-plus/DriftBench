@@ -1,0 +1,260 @@
+{
+ "sample_id": "e080b6b8061218ce",
+ "tree_id": "1d0c4903f3b10f7e",
+ "adapter": "webshop",
+ "cluster": "beds",
+ "goal_idx": 177,
+ "split": "test",
+ "source_instruction": "looking for one bed for kids in grey color, size twin and of easy assemble in wood.",
+ "query": "Ugh, I swear my neighbor\u2019s tabby keeps sneaking onto my back porch to knock over my potted mint, I had to move three whole planters yesterday just to keep it from chewing the leaves, and I still haven\u2019t figured out if I should pick up that citrus cat repellent spray from the corner store later or just lay down pinecones around the patio edge. Oh right, I\u2019m looking at beds here\u2014can you show me twin size options that are super easy to assemble, cost no more than $280, and come in that one color/finish I always go for? Wait, actually hold on, I also need to remember to pick up extra cat litter on my way home tonight, the last bag I got was that dusty clumping kind that gets all tracked across the entryway rug, I swear I\u2019m gonna switch to the corn-based stuff next time I restock.",
+ "strategy_ids": [
+  "referential_ambiguity",
+  "contextual_irrelevance"
+ ],
+ "misalignments": 2,
+ "mask": {
+  "pipeline": "v2-composite",
+  "strategy_id": "referential_ambiguity+contextual_irrelevance",
+  "family": "expression+intention",
+  "mask_kind": "composite",
+  "kinds": [
+   "mark",
+   "noise"
+  ],
+  "components": [
+   "referential_ambiguity",
+   "contextual_irrelevance"
+  ],
+  "assigned_slots": {
+   "referential_ambiguity": "option:0"
+  },
+  "governing_kind": "composite_k2",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [
+   [
+    "option:0",
+    "deictic"
+   ]
+  ],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "Ugh, I swear my neighbor\u2019s tabby keeps sneaking onto my back porch to knock over my potted mint, I had to move three whole planters yesterday just to keep it from chewing the leaves, and I still haven\u2019t figured out if I should pick up that citrus cat repellent spray from the corner store later or just lay down pinecones around the patio edge. Wait, actually hold on, I also need to remember to pick up extra cat litter on my way home tonight, the last bag I got was that dusty clumping kind that gets all tracked across the entryway rug, I swear I\u2019m gonna switch to the corn-based stuff next time I restock.",
+  "retained": [
+   "attr:easy assemble",
+   "option:1",
+   "price_upper"
+  ],
+  "hidden_slots": [
+   "option:0"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy assemble",
+     "=",
+     "easy assemble"
+    ],
+    [
+     "option:1",
+     "=",
+     "twin"
+    ],
+    [
+     "price_upper",
+     "<=",
+     280
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 1,
+  "spec_id": "d1bda2bb3e59592f"
+ },
+ "signature": {
+  "rule": "composite",
+  "ok": true,
+  "verdict": "ok",
+  "true_card": 66,
+  "lit_card": 181,
+  "components": {
+   "referential_ambiguity": {
+    "rule": "marked",
+    "ok": true,
+    "verdict": "ok",
+    "lit_card": 181,
+    "true_card": 66,
+    "readings": 1
+   }
+  }
+ },
+ "fidelity_notes": [],
+ "render_attempts": 1,
+ "hidden_intent": {
+  "intent_id": "028c25c5557dd842",
+  "conditions": [
+   [
+    "attr:easy assemble",
+    "=",
+    "easy assemble"
+   ],
+   [
+    "option:0",
+    "=",
+    "grey(triangle)"
+   ],
+   [
+    "option:1",
+    "=",
+    "twin"
+   ],
+   [
+    "price_upper",
+    "<=",
+    280
+   ]
+  ],
+  "hidden_slots": [
+   "option:0"
+  ]
+ },
+ "ground_truth": {
+  "kind": "purchaseset",
+  "cardinality": 66,
+  "value": [
+   "[\"B07577TD5Z\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B07WJ6X4DS\",[[\"color\",\"grey\"],[\"size\",\"twin bunk with roof\"]]]",
+   "[\"B0819LYM6Q\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B0836SM54K\",[[\"color\",\"grey\"],[\"size\",\"twin-1\"]]]",
+   "[\"B083FL2M1Q\",[[\"color\",\"grey (with 6 casters)\"],[\"size\",\"twin over twin\"]]]",
+   "[\"B084DQNB4X\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B088FSHXRY\",[[\"color\",\"grey\"],[\"size\",\"twin over full with stairs\"]]]",
+   "[\"B088Z9D2RQ\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B089SNCQX6\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B08FX6KF7W\",[[\"color\",\"light grey\"],[\"size\",\"twin\"]]]",
+   "[\"B08GX4SGH9\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B08P89SB2H\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B08PBF4Q9T\",[[\"color\",\"grey\"],[\"size\",\"twin with drawers\"]]]",
+   "[\"B08R86Q7SJ\",[[\"color\",\"upholstered grey\"],[\"size\",\"twin\"]]]",
+   "[\"B08SHXMBJ3\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B08SM3WGSM\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B08SQHYNNL\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B08XX57CP4\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B091611887\",[[\"color\",\"grey+trunlde\"],[\"size\",\"twin\"]]]",
+   "[\"B091F2FMHP\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B094FRK1RF\",[[\"color\",\"grey\"],[\"size\",\"twin bunk bed\"]]]",
+   "[\"B097QTNS8W\",[[\"color\",\"grey\"],[\"size\",\"twin with trundle\"]]]",
+   "[\"B09837P4QX\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09839F4V1\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B099K1KP3N\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09B524T4G\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09BCK6CPH\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09BCSG8WS\",[[\"color\",\"grey\"],[\"style\",\"twin over full bunk bed\"]]]",
+   "[\"B09BQW5ZR7\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09BYQGP6C\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09DQ5RC9X\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09DSXT7GH\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09F39XYT4\",[[\"color\",\"grey\"],[\"size\",\"twin over full +trundle\"]]]",
+   "[\"B09FJWB31W\",[[\"color\",\"grey\"],[\"size\",\"twin over twin\"]]]",
+   "[\"B09FLKTCGW\",[[\"color\",\"grey\"],[\"size\",\"twin-1\"]]]",
+   "[\"B09G2VQSZ9\",[[\"color\",\"grey\"],[\"size\",\"twin with footboard\"]]]",
+   "[\"B09GKH7MPR\",[[\"color\",\"grey\"],[\"size\",\"loft bed (twin size)\"]]]",
+   "[\"B09GLX5THJ\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09GN1ZR6S\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09GV86TJ2\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09GVQPR6Z\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09GXBFX68\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09HGFX31X\",[[\"color\",\"grey\"],[\"size\",\"twin with trundle and 3 drawers\"]]]",
+   "[\"B09HTQBWD3\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09J1D48GB\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09JLKBTD2\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09K52LV3H\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09KGYK6MC\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09KXTHK3W\",[[\"color\",\"light grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09L11K6XG\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09LD536JL\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09M6F9FP4\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09MFJYZX5\",[[\"color\",\"light grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09MHP842H\",[[\"color\",\"grey\"],[\"size\",\"l-shaped twin triple\"]]]",
+   "[\"B09MVTGQYV\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09ND3YB61\",[[\"color\",\"grey\"],[\"size\",\"twin with slide\"]]]",
+   "[\"B09NND8N44\",[[\"color\",\"grey\"],[\"size\",\"twin over twin\"]]]",
+   "[\"B09NPK985J\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09P1SKWG5\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09P9L7NQN\",[[\"color\",\"grey (b style)\"],[\"size\",\"twin (with drawers\uff09\"]]]",
+   "[\"B09PFPLGNV\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09PHLRP6C\",[[\"color\",\"grey\"],[\"size\",\"twin with trundle\"]]]",
+   "[\"B09Q53ZK7T\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09Q5Y72WY\",[[\"color\",\"grey\"],[\"style\",\"stairway twin over twin with storage\"]]]",
+   "[\"B09Q8CZL7N\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]",
+   "[\"B09RB32D1R\",[[\"color\",\"grey\"],[\"size\",\"twin\"]]]"
+  ],
+  "hash": "8cca7a25268fc10ee244fd61b45d5f9f"
+ },
+ "shift_options": [
+  {
+   "operator": "PIVOT",
+   "to_intent": "76981513bf93d917",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beds instead."
+  },
+  {
+   "operator": "PIVOT",
+   "to_intent": "b41f437a8930bf97",
+   "gt_moved": true,
+   "provenance": "REAL",
+   "announcement": "Forget that \u2014 I've changed my mind, I need something else from the beds instead."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "04f299ad62724055",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be button tufted."
+  },
+  {
+   "operator": "REFINEMENT",
+   "to_intent": "c735d95bdde6b737",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Also, it needs to be easy clean."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "9fa48760344bc9fb",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "RELAXATION",
+   "to_intent": "ac577bf8ce675877",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "50d37304add048e8",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it 3 instead of grey(triangle)."
+  },
+  {
+   "operator": "SUBSTITUTION",
+   "to_intent": "83a9ecaa98838453",
+   "gt_moved": true,
+   "provenance": "SYNTHETIC",
+   "announcement": "Actually, make it #1 gray instead of grey(triangle)."
+  }
+ ],
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

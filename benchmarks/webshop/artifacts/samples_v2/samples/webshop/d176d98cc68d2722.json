@@ -1,0 +1,179 @@
+{
+ "adapter": "webshop",
+ "cluster": "women's bodysuit tops",
+ "fidelity_notes": [],
+ "goal_idx": 286,
+ "ground_truth": {
+  "cardinality": 3,
+  "hash": "0d323c6731fea472e23e4ad1e62bbf7e",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B08123ZP7W\",[[\"color\",\"pink\"],[\"size\",\"10-12\"]]]",
+   "[\"B09B3RQZLM\",[[\"color\",\"pink\"],[\"size\",\"12\"]]]",
+   "[\"B09KCF2QJB\",[[\"color\",\"pink\"],[\"size\",\"12\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:long sleeve",
+    "=",
+    "long sleeve"
+   ],
+   [
+    "option:0",
+    "=",
+    "pink"
+   ],
+   [
+    "option:1",
+    "=",
+    "12"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "8402376b426f61f8"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 1,
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "intention",
+  "governing_kind": "noise",
+  "hidden_slots": [],
+  "kinds": [
+   "noise"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:long sleeve",
+     "=",
+     "long sleeve"
+    ],
+    [
+     "option:0",
+     "=",
+     "pink"
+    ],
+    [
+     "option:1",
+     "=",
+     "12"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "noise",
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I just spent the afternoon repotting my new string of pearls succulent, and I’m pretty sure I overwatered it a little bit because the leaves near the base are starting to look a little plump and mushy. I also spent way too long rearranging my shelf of vintage band tees to make space for the new succulent pot, and now I can’t find my favorite faded Fleetwood Mac shirt anywhere. Oh, and I just remembered I have to pick up a new lavender candle on my way home from work tomorrow because my old one burned all the way down last night.",
+  "pipeline": "v2",
+  "presupposed": [],
+  "retained": [
+   "attr:long sleeve",
+   "option:0",
+   "option:1",
+   "price_upper"
+  ],
+  "spec_id": "b2ca5366d4f08f07",
+  "strategy_id": "contextual_irrelevance",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "I just spent the afternoon repotting my new string of pearls succulent, and I’m pretty sure I overwatered it a little bit because the leaves near the base are starting to look a little plump and mushy. I also spent way too long rearranging my shelf of vintage band tees to make space for the new succulent pot, and now I can’t find my favorite faded Fleetwood Mac shirt anywhere. Oh, and I just remembered I have to pick up a new lavender candle on my way home from work tomorrow because my old one burned all the way down last night. Anyway, I’m looking for a long sleeve women’s bodysuit top, I’d like it in pink in a size 12, and my budget is no more than $20.",
+ "render_attempts": 1,
+ "sample_id": "d176d98cc68d2722",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's bodysuit tops instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "9b4b7f42aaa14a17"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the women's bodysuit tops instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "d9a633f6a08b34d0"
+  },
+  {
+   "announcement": "Also, it needs to be dry clean.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "0ce8282955ee6aad"
+  },
+  {
+   "announcement": "Also, it needs to be hand wash.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "308707d6c1e4b2ef"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "9e3ee18ff05aacc9"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a1f0c952afe0eb05"
+  },
+  {
+   "announcement": "Actually, make it #01 green instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "ab85581bac70d1c6"
+  },
+  {
+   "announcement": "Actually, make it #01-green instead of pink.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "b016bec65ce25923"
+  }
+ ],
+ "signature": {
+  "governing_kind": "noise",
+  "lit_card": 3,
+  "ok": true,
+  "rule": "noise",
+  "true_card": 3,
+  "verdict": "ok"
+ },
+ "source_instruction": "i want a pink long sleeved t-shirt in size 12.",
+ "split": "test",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "tree_id": "32b446ed5ef17c4c",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "sample_id": "6758a87324bc7a59__contextual_irrelevance",
+ "domain": "telecom",
+ "tree_id": "6758a87324bc7a59",
+ "query": "I planted some new cherry tomato seedlings on my balcony yesterday, and I\u2019m so excited to watch them grow\u2014 I even bought a little mini watering can that fits perfectly in the corner of the shelf next to them. This morning I noticed a tiny ladybug crawling on one of the leaves, it was bright red with those classic black spots, I hope it sticks around to eat any aphids that might pop up later. Oh and I was also baking chocolate chip cookies last night, I accidentally added a little extra sea salt on top of half the batch and they turned out way better than the regular ones, I\u2019m definitely making that mistake again next time. Anyway, I\u2019m having a bunch of issues with my phone right now: the network connection is really bad, my Wi-Fi calling won\u2019t work at all, my MMS messages won\u2019t send I think my APN settings are messed up, some of my apps are crashing because they can\u2019t access their storage, my mobile data mode is toggled off right now I can\u2019t even turn it back on, I got a notification that I\u2019ve exceeded my data usage limit, and I keep getting an error saying my SIM card isn\u2019t detected so I think it might have come unseated.",
+ "strategy_ids": [
+  "contextual_irrelevance"
+ ],
+ "mask": {
+  "pipeline": "v2",
+  "strategy_id": "contextual_irrelevance",
+  "family": "intention",
+  "mask_kind": "noise",
+  "kinds": [
+   "noise"
+  ],
+  "components": [
+   "contextual_irrelevance"
+  ],
+  "governing_kind": "noise",
+  "substituted": [],
+  "presupposed": [],
+  "withheld": [],
+  "marked": [],
+  "ambiguous": [],
+  "extras": [],
+  "noise": true,
+  "oblique": false,
+  "offtopic_span": "I planted some new cherry tomato seedlings on my balcony yesterday, and I\u2019m so excited to watch them grow\u2014 I even bought a little mini watering can that fits perfectly in the corner of the shelf next to them. This morning I noticed a tiny ladybug crawling on one of the leaves, it was bright red with those classic black spots, I hope it sticks around to eat any aphids that might pop up later. Oh and I was also baking chocolate chip cookies last night, I accidentally added a little extra sea salt on top of half the batch and they turned out way better than the regular ones, I\u2019m definitely making that mistake again next time. Anyway,",
+  "retained": [
+   "fault:bad_network_preference",
+   "fault:bad_wifi_calling",
+   "fault:break_apn_mms_setting",
+   "fault:break_app_storage_permission",
+   "fault:data_mode_off",
+   "fault:data_usage_exceeded",
+   "fault:unseat_sim_card"
+  ],
+  "hidden_slots": [],
+  "literal_readings": [
+   [
+    [
+     "fault:bad_network_preference",
+     "=",
+     "bad_network_preference"
+    ],
+    [
+     "fault:bad_wifi_calling",
+     "=",
+     "bad_wifi_calling"
+    ],
+    [
+     "fault:break_apn_mms_setting",
+     "=",
+     "break_apn_mms_setting"
+    ],
+    [
+     "fault:break_app_storage_permission",
+     "=",
+     "break_app_storage_permission"
+    ],
+    [
+     "fault:data_mode_off",
+     "=",
+     "data_mode_off"
+    ],
+    [
+     "fault:data_usage_exceeded",
+     "=",
+     "data_usage_exceeded"
+    ],
+    [
+     "fault:unseat_sim_card",
+     "=",
+     "unseat_sim_card"
+    ]
+   ]
+  ],
+  "extractor_agreement": true,
+  "attempt": 4,
+  "spec_id": "b2ca5366d4f08f07"
+ },
+ "signature": {
+  "rule": "noise",
+  "ok": true,
+  "verdict": "ok",
+  "lit_card": 1,
+  "true_card": 1,
+  "readings": 1
+ },
+ "executable_admission": true,
+ "hidden_intent": {
+  "conditions": [
+   [
+    "fault:bad_network_preference",
+    "=",
+    "bad_network_preference"
+   ],
+   [
+    "fault:bad_wifi_calling",
+    "=",
+    "bad_wifi_calling"
+   ],
+   [
+    "fault:break_apn_mms_setting",
+    "=",
+    "break_apn_mms_setting"
+   ],
+   [
+    "fault:break_app_storage_permission",
+    "=",
+    "break_app_storage_permission"
+   ],
+   [
+    "fault:data_mode_off",
+    "=",
+    "data_mode_off"
+   ],
+   [
+    "fault:data_usage_exceeded",
+    "=",
+    "data_usage_exceeded"
+   ],
+   [
+    "fault:unseat_sim_card",
+    "=",
+    "unseat_sim_card"
+   ]
+  ],
+  "hidden_slots": []
+ },
+ "verifier": {
+  "kind": "adapter_accepts",
+  "adapter": "tau2_telecom",
+  "note": "acceptance re-executes the intent's own tau2 checks against the live environment"
+ }
+}

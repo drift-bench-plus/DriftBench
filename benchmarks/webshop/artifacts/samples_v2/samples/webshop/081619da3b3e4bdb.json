@@ -1,0 +1,196 @@
+{
+ "adapter": "webshop",
+ "cluster": "hair coloring products",
+ "fidelity_notes": [],
+ "goal_idx": 77,
+ "ground_truth": {
+  "cardinality": 4,
+  "hash": "27dc2ec6d7d71f42623ed5769af49692",
+  "kind": "purchaseset",
+  "value": [
+   "[\"B07JFRBHB8\",[[\"color\",\"black\"]]]",
+   "[\"B07ZQ15PXM\",[[\"color\",\"black\"]]]",
+   "[\"B08KT4WGMD\",[[\"color\",\"black\"]]]",
+   "[\"B093GPTS4W\",[[\"color\",\"black\"]]]"
+  ]
+ },
+ "hidden_intent": {
+  "conditions": [
+   [
+    "attr:easy use",
+    "=",
+    "easy use"
+   ],
+   [
+    "attr:hair styling",
+    "=",
+    "hair styling"
+   ],
+   [
+    "attr:natural ingredients",
+    "=",
+    "natural ingredients"
+   ],
+   [
+    "option:0",
+    "=",
+    "black"
+   ],
+   [
+    "price_upper",
+    "<=",
+    20
+   ]
+  ],
+  "hidden_slots": [],
+  "intent_id": "e684e06a6212b4e3"
+ },
+ "mask": {
+  "ambiguous": [],
+  "attempt": 2,
+  "components": [
+   "false_presupposition"
+  ],
+  "extractor_agreement": true,
+  "extras": [],
+  "family": "premise",
+  "governing_kind": "falsify",
+  "hidden_slots": [],
+  "kinds": [
+   "falsify"
+  ],
+  "literal_readings": [
+   [
+    [
+     "attr:easy use",
+     "=",
+     "easy use"
+    ],
+    [
+     "attr:hair styling",
+     "=",
+     "hair styling"
+    ],
+    [
+     "option:0",
+     "=",
+     "black"
+    ],
+    [
+     "price_upper",
+     "<=",
+     20
+    ]
+   ]
+  ],
+  "marked": [],
+  "mask_kind": "falsify",
+  "noise": false,
+  "oblique": false,
+  "offtopic_span": null,
+  "pipeline": "v2",
+  "presupposed": [
+   {
+    "about": [
+     "attr:natural ingredients",
+     "natural ingredients"
+    ],
+    "alternative": null,
+    "condition": null,
+    "text": "Since you probably don’t have hair coloring products with all natural ingredients"
+   }
+  ],
+  "retained": [
+   "attr:easy use",
+   "attr:hair styling",
+   "attr:natural ingredients",
+   "option:0",
+   "price_upper"
+  ],
+  "spec_id": "db2e0222dc11e768",
+  "strategy_id": "false_presupposition",
+  "substituted": [],
+  "withheld": []
+ },
+ "misalignments": 1,
+ "query": "Since you probably don’t have hair coloring products with all natural ingredients, I’m looking for easy-to-use black hair coloring products that work well for hair styling and cost under $20.",
+ "render_attempts": 2,
+ "sample_id": "081619da3b3e4bdb",
+ "shift_options": [
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair coloring products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "31e0c6bb85ba0947"
+  },
+  {
+   "announcement": "Forget that — I've changed my mind, I need something else from the hair coloring products instead.",
+   "gt_moved": true,
+   "operator": "PIVOT",
+   "provenance": "REAL",
+   "to_intent": "489a6b6fdbd440c3"
+  },
+  {
+   "announcement": "Also, it needs to be long lasting.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "5e2654a7ca7bce32"
+  },
+  {
+   "announcement": "Also, it needs to be permanent hair.",
+   "gt_moved": true,
+   "operator": "REFINEMENT",
+   "provenance": "SYNTHETIC",
+   "to_intent": "a2657fac3289a412"
+  },
+  {
+   "announcement": "Actually, the product option (size, flavour, colour and so on) doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "4d65319ae7bf9854"
+  },
+  {
+   "announcement": "Actually, a product feature you require doesn't matter after all.",
+   "gt_moved": true,
+   "operator": "RELAXATION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "6cfd508d64e9a117"
+  },
+  {
+   "announcement": "Actually, make it #2 instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "3de8939c3b14a14e"
+  },
+  {
+   "announcement": "Actually, make it #1 instead of black.",
+   "gt_moved": true,
+   "operator": "SUBSTITUTION",
+   "provenance": "SYNTHETIC",
+   "to_intent": "eca98f9e9a3f39a8"
+  }
+ ],
+ "signature": {
+  "governing_kind": "falsify",
+  "lit_card": 11,
+  "ok": true,
+  "rule": "presupposed",
+  "true_card": 4,
+  "verdict": "ok"
+ },
+ "source_instruction": "i'm looking for a black hair styling product that is made from natural ingredients and easy to use.",
+ "split": "test",
+ "strategy_ids": [
+  "false_presupposition"
+ ],
+ "tree_id": "714b6ea685ff861a",
+ "verifier": {
+  "adapter": "webshop",
+  "kind": "adapter_accepts",
+  "note": "acceptance is executable via the benchmark's own comparison"
+ }
+}
